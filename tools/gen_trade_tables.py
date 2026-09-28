@@ -15,7 +15,8 @@ levels itself, and a cumulative tier would duplicate every trade.
 Each emitted file is one profession plus one cured variant (`_cured`). The cured
 table is identical but every wants quantity is trimmed by 30% -- the flat
 discount a cured trader offers. Vanilla wants/gives/price_multiplier/functions
-blocks (including "choice" arrays) are preserved verbatim; only trader_exp is
+blocks are preserved verbatim, except that "choice" lines are split into one
+trade per option so the machine sells every variant; only trader_exp is
 kept, max_uses is made permanent, and reward_exp is forced on so every trade
 still feeds the XP bar.
 
@@ -145,15 +146,35 @@ def _emit_trade(trade, cured):
     return out
 
 
+def _expand_choices(trade):
+    """Split a vanilla trade with a "choice" line into one trade per option.
+
+    Vanilla rolls one option per villager (the stone mason's polished stone
+    variants, 16 terracotta colours, 16 glazed terracottas...). A vending machine
+    should sell every variant, so each option becomes its own trade.
+    """
+    for key in ("wants", "gives"):
+        for i, line in enumerate(trade.get(key) or []):
+            if "choice" in line:
+                out = []
+                for option in line["choice"]:
+                    variant = copy.deepcopy(trade)
+                    variant[key][i] = copy.deepcopy(option)
+                    out.extend(_expand_choices(variant))
+                return out
+    return [trade]
+
+
 def build_table(data, cured):
     """Return the five-tier table for a profession, cured or not.
 
     Each tier carries vanilla's own total_exp_required and holds one group per
-    vanilla tier-N trade, so the engine accumulates and levels on its own.
+    vanilla tier-N trade (choices split into one trade per option), so the
+    engine accumulates and levels on its own.
     """
     tiers = []
     for index, xp in enumerate(TIER_XP):
-        trades = _tier_trades(data["tiers"][index])
+        trades = [t for trade in _tier_trades(data["tiers"][index]) for t in _expand_choices(trade)]
         groups = [{"num_to_select": 1, "trades": [_emit_trade(trade, cured)]} for trade in trades]
         tiers.append({"total_exp_required": xp, "groups": groups})
     return {"tiers": tiers}

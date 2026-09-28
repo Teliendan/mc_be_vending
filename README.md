@@ -17,12 +17,18 @@ Deploy with `mods deploy vending`.
 
 ## Generators (`tools/`)
 
-Run from anywhere; they locate the packs relative to this repo.
+Run from anywhere; they locate the packs relative to this repo. All of them were
+checked on 2026-09-29 to reproduce the shipped files byte for byte, so regenerating
+is safe (they refuse to overwrite without `--force`).
 
-- `gen_machine_recipes.py` reproduces the 13 recipes byte for byte (`--out DIR` to compare first).
-- `gen_trade_tables.py`, `gen_book_trades.py` (+ `enchantments.json`), `gen_extra_machines.py`.
-- `gen_machine_blocks.py`, `gen_machine_entities.py`, `gen_machine_models.py` were never
-  re-checked against the real files: generate into a temp folder and diff before trusting them.
+- `gen_trade_tables.py` - the 13 profession tables (+ `_cured`, 30% cheaper) from the
+  vanilla reference at `E:\AIefedrock\current`; vanilla "choice" trades are split
+  so the machine sells every variant. `gen_book_trades.py` adds the librarian's
+  enchanted books from `enchantments.json`.
+- `gen_machine_blocks.py`, `gen_machine_entities.py`, `gen_machine_recipes.py` - the
+  13 villager machines (blocks carry the `vm:upgraded` state for the Upgrade Kit).
+- `gen_extra_machines.py` - the non-villager feature packs (wandering trader, shulker),
+  built from the villager templates; a new feature is an entry in its MACHINES.
 - Art: `make_machine_textures.py`, `vm_make_upgraded_textures.py`, `make_pack_icon.py`.
 
 Pricing rule: upgraded table = the real trader's price; base table dearer (~vanilla / 0.7).

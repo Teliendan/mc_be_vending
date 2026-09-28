@@ -67,6 +67,7 @@ def verify_textures():
     """
     names = ["vm_machine_body", "vm_machine_top"]
     names += ["vm_machine_head_{}".format(p) for p in PROFESSIONS]
+    names += [n + "_upgraded" for n in names]  # the Upgrade Kit swaps every texture
     missing = [n for n in names if not os.path.exists(_sprite_png(n))]
     if missing:
         lines = ["texture verification FAILED -- these PNGs are not on disk:"]
@@ -94,7 +95,7 @@ def build(profession):
             "description": {
                 "identifier": "vm:machine_{}".format(profession),
                 "menu_category": {"category": "items"},
-                "states": {"vm:half": [0, 1]},
+                "states": {"vm:half": [0, 1], "vm:upgraded": [False, True]},
             },
             "components": {
                 "minecraft:destructible_by_mining": {"seconds_to_destroy": 8},
@@ -119,10 +120,33 @@ def build(profession):
                     "components": {
                         "minecraft:selection_box": False,
                         "minecraft:destructible_by_mining": False,
+                    },
+                },
+                {
+                    "condition": "q.block_state('vm:half') == 0 && q.block_state('vm:upgraded')",
+                    "components": {
+                        "minecraft:material_instances": {
+                            "*": {"texture": "vm_machine_body_upgraded", "render_method": "opaque"},
+                        },
+                    },
+                },
+                {
+                    "condition": "q.block_state('vm:half') == 1 && !q.block_state('vm:upgraded')",
+                    "components": {
                         "minecraft:material_instances": {
                             "*": {"texture": "vm_machine_head_{}".format(profession),
                                   "render_method": "opaque"},
                             "up": {"texture": "vm_machine_top", "render_method": "opaque"},
+                        },
+                    },
+                },
+                {
+                    "condition": "q.block_state('vm:half') == 1 && q.block_state('vm:upgraded')",
+                    "components": {
+                        "minecraft:material_instances": {
+                            "*": {"texture": "vm_machine_head_{}_upgraded".format(profession),
+                                  "render_method": "opaque"},
+                            "up": {"texture": "vm_machine_top_upgraded", "render_method": "opaque"},
                         },
                     },
                 },

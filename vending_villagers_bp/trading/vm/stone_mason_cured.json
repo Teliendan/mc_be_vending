@@ -181,7 +181,7 @@
               "wants": [
                 {
                   "item": "minecraft:stone:1",
-                  "quantity": 16,
+                  "quantity": 11,
                   "price_multiplier": 0.05
                 }
               ],
@@ -204,7 +204,7 @@
               "wants": [
                 {
                   "item": "minecraft:stone:3",
-                  "quantity": 16,
+                  "quantity": 11,
                   "price_multiplier": 0.05
                 }
               ],
@@ -227,7 +227,7 @@
               "wants": [
                 {
                   "item": "minecraft:stone:5",
-                  "quantity": 16,
+                  "quantity": 11,
                   "price_multiplier": 0.05
                 }
               ],
