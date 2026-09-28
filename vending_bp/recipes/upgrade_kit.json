@@ -1,0 +1,42 @@
+{
+    "format_version": "1.20.10",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "vm:upgrade_kit"
+        },
+        "tags": [
+            "crafting_table"
+        ],
+        "pattern": [
+            "B B",
+            "GAG",
+            "ESE"
+        ],
+        "key": {
+            "B": {
+                "item": "minecraft:blaze_powder"
+            },
+            "G": {
+                "item": "minecraft:gold_ingot"
+            },
+            "A": {
+                "item": "minecraft:golden_apple"
+            },
+            "S": {
+                "item": "minecraft:fermented_spider_eye"
+            },
+            "E": {
+                "item": "minecraft:emerald"
+            }
+        },
+        "unlock": [
+            {
+                "item": "minecraft:golden_apple"
+            }
+        ],
+        "result": {
+            "item": "vm:upgrade_kit",
+            "count": 1
+        }
+    }
+}

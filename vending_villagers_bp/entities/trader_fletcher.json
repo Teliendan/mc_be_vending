@@ -1,0 +1,57 @@
+{
+  "format_version": "1.13.0",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "vm:trader_fletcher",
+      "is_spawnable": true,
+      "is_summonable": true,
+      "is_experimental": false
+    },
+    "components": {
+      "minecraft:collision_box": {
+        "width": 0.9,
+        "height": 0.9
+      },
+      "minecraft:pushable": {
+        "is_pushable": false,
+        "is_pushable_by_piston": false
+      },
+      "minecraft:knockback_resistance": {
+        "value": 100,
+        "max": 100
+      },
+      "minecraft:damage_sensor": {
+        "triggers": {
+          "cause": "all",
+          "deals_damage": false
+        }
+      },
+      "minecraft:persistent": {},
+      "minecraft:economy_trade_table": {
+        "display_name": "entity.vm:trader_fletcher.name",
+        "table": "trading/vm/fletcher.json",
+        "new_screen": true,
+        "persist_trades": false
+      }
+    },
+    "component_groups": {
+      "vm:upgraded": {
+        "minecraft:economy_trade_table": {
+          "display_name": "entity.vm:trader_fletcher.name",
+          "table": "trading/vm/fletcher_cured.json",
+          "new_screen": true,
+          "persist_trades": false
+        }
+      }
+    },
+    "events": {
+      "vm:apply_upgrade": {
+        "add": {
+          "component_groups": [
+            "vm:upgraded"
+          ]
+        }
+      }
+    }
+  }
+}

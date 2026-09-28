@@ -1,0 +1,101 @@
+{
+  "format_version": "1.21.120",
+  "minecraft:block": {
+    "description": {
+      "identifier": "vm:machine_shulker",
+      "menu_category": {
+        "category": "items"
+      },
+      "states": {
+        "vm:half": [
+          0,
+          1
+        ],
+        "vm:upgraded": [
+          false,
+          true
+        ]
+      }
+    },
+    "components": {
+      "minecraft:destructible_by_mining": {
+        "seconds_to_destroy": 8
+      },
+      "minecraft:destructible_by_explosion": {
+        "explosion_resistance": 1200
+      },
+      "minecraft:movable": {
+        "movement_type": "immovable"
+      },
+      "minecraft:map_color": "#8f8f8f",
+      "minecraft:geometry": "minecraft:geometry.full_block",
+      "minecraft:material_instances": {
+        "*": {
+          "texture": "vm_machine_body",
+          "render_method": "opaque"
+        }
+      },
+      "minecraft:item_visual": {
+        "geometry": {
+          "identifier": "minecraft:geometry.full_block"
+        },
+        "material_instances": {
+          "*": {
+            "texture": "vm_machine_head_shulker",
+            "render_method": "opaque"
+          }
+        }
+      }
+    },
+    "permutations": [
+      {
+        "condition": "q.block_state('vm:half') == 1",
+        "components": {
+          "minecraft:selection_box": false,
+          "minecraft:destructible_by_mining": false
+        }
+      },
+      {
+        "condition": "q.block_state('vm:half') == 0 && q.block_state('vm:upgraded')",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "vm_machine_body_upgraded",
+              "render_method": "opaque"
+            }
+          }
+        }
+      },
+      {
+        "condition": "q.block_state('vm:half') == 1 && !q.block_state('vm:upgraded')",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "vm_machine_head_shulker",
+              "render_method": "opaque"
+            },
+            "up": {
+              "texture": "vm_machine_top",
+              "render_method": "opaque"
+            }
+          }
+        }
+      },
+      {
+        "condition": "q.block_state('vm:half') == 1 && q.block_state('vm:upgraded')",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "vm_machine_head_shulker_upgraded",
+              "render_method": "opaque"
+            },
+            "up": {
+              "texture": "vm_machine_top_upgraded",
+              "render_method": "opaque"
+            }
+          }
+        }
+      }
+    ]
+  }
+}

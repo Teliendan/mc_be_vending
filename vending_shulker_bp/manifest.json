@@ -1,0 +1,39 @@
+{
+    "format_version": 2,
+    "header": {
+        "name": "Vending Machines - Shulker",
+        "description": "A vending machine that sells shulker shells and shulker boxes. Needs Vending Machines - Core.",
+        "uuid": "d26720a2-7a2e-432c-8c46-a30c252a4961",
+        "version": [
+            1,
+            0,
+            0
+        ],
+        "min_engine_version": [
+            1,
+            21,
+            120
+        ]
+    },
+    "modules": [
+        {
+            "type": "data",
+            "uuid": "19b4b379-46c9-467d-8c28-05f5657ff1d5",
+            "version": [
+                1,
+                0,
+                0
+            ]
+        }
+    ],
+    "dependencies": [
+        {
+            "uuid": "5fc97fe3-1929-4b22-adfc-1f8105db5bbf",
+            "version": [
+                1,
+                0,
+                0
+            ]
+        }
+    ]
+}

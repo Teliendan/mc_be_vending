@@ -1,0 +1,12 @@
+{
+  "resource_pack_name": "vending_rp",
+  "texture_name": "atlas.items",
+  "texture_data": {
+    "vm_upgrade_kit": {
+      "textures": "textures/items/vm_upgrade_kit"
+    },
+    "vm_shulker_core": {
+      "textures": "textures/items/vm_shulker_core"
+    }
+  }
+}

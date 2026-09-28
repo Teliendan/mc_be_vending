@@ -1,0 +1,42 @@
+{
+    "format_version": "1.20.10",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "vm:machine_cartographer_recipe"
+        },
+        "tags": [
+            "crafting_table"
+        ],
+        "pattern": [
+            "GTG",
+            "IWI",
+            "EEE"
+        ],
+        "key": {
+            "I": {
+                "item": "minecraft:iron_block"
+            },
+            "G": {
+                "item": "minecraft:gold_block"
+            },
+            "T": {
+                "item": "minecraft:compass"
+            },
+            "E": {
+                "item": "minecraft:emerald_block"
+            },
+            "W": {
+                "item": "minecraft:cartography_table"
+            }
+        },
+        "unlock": [
+            {
+                "item": "minecraft:cartography_table"
+            }
+        ],
+        "result": {
+            "item": "vm:machine_cartographer",
+            "count": 1
+        }
+    }
+}

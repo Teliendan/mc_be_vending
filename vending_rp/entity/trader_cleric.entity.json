@@ -1,0 +1,20 @@
+{
+    "format_version": "1.10.0",
+    "minecraft:client_entity": {
+        "description": {
+            "identifier": "vm:trader_cleric",
+            "materials": {
+                "default": "entity_alphatest"
+            },
+            "textures": {
+                "default": "textures/blocks/vm_machine_head_cleric"
+            },
+            "geometry": {
+                "default": "geometry.vm_invisible"
+            },
+            "render_controllers": [
+                "controller.render.default"
+            ]
+        }
+    }
+}

@@ -1,0 +1,39 @@
+{
+    "format_version": 2,
+    "header": {
+        "name": "Vending Machines - Wandering Trader",
+        "description": "A vending machine that sells the wandering trader's wares. Needs Vending Machines - Core.",
+        "uuid": "7d564340-4922-4030-9df4-2864511a801a",
+        "version": [
+            1,
+            0,
+            0
+        ],
+        "min_engine_version": [
+            1,
+            21,
+            120
+        ]
+    },
+    "modules": [
+        {
+            "type": "data",
+            "uuid": "5378cdcc-149a-4360-a3a5-ef5ead81271e",
+            "version": [
+                1,
+                0,
+                0
+            ]
+        }
+    ],
+    "dependencies": [
+        {
+            "uuid": "5fc97fe3-1929-4b22-adfc-1f8105db5bbf",
+            "version": [
+                1,
+                0,
+                0
+            ]
+        }
+    ]
+}

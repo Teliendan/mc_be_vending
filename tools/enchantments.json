@@ -1,0 +1,245 @@
+{
+  "captured_from": "https://wiki.bedrock.dev/items/enchantments",
+  "captured_date": "2026-09-21",
+  "verified_on_disk": [
+    "aqua_affinity",
+    "binding",
+    "blast_protection",
+    "depth_strider",
+    "efficiency",
+    "feather_falling",
+    "fire_protection",
+    "frost_walker",
+    "knockback",
+    "mending",
+    "power",
+    "projectile_protection",
+    "protection",
+    "punch",
+    "quick_charge",
+    "respiration",
+    "sharpness",
+    "soul_speed",
+    "swift_sneak",
+    "thorns",
+    "unbreaking"
+  ],
+  "enchants": {
+    "respiration": {
+      "max_level": 3,
+      "treasure": false,
+      "curse": false,
+      "tier": 0
+    },
+    "aqua_affinity": {
+      "max_level": 1,
+      "treasure": false,
+      "curse": false,
+      "tier": 0
+    },
+    "depth_strider": {
+      "max_level": 3,
+      "treasure": false,
+      "curse": false,
+      "tier": 0
+    },
+    "feather_falling": {
+      "max_level": 4,
+      "treasure": false,
+      "curse": false,
+      "tier": 0
+    },
+    "efficiency": {
+      "max_level": 5,
+      "treasure": false,
+      "curse": false,
+      "tier": 1
+    },
+    "unbreaking": {
+      "max_level": 3,
+      "treasure": false,
+      "curse": false,
+      "tier": 1
+    },
+    "protection": {
+      "max_level": 4,
+      "treasure": false,
+      "curse": false,
+      "tier": 1
+    },
+    "sharpness": {
+      "max_level": 5,
+      "treasure": false,
+      "curse": false,
+      "tier": 1
+    },
+    "power": {
+      "max_level": 5,
+      "treasure": false,
+      "curse": false,
+      "tier": 1
+    },
+    "fortune": {
+      "max_level": 3,
+      "treasure": false,
+      "curse": false,
+      "tier": 2
+    },
+    "looting": {
+      "max_level": 3,
+      "treasure": false,
+      "curse": false,
+      "tier": 2
+    },
+    "smite": {
+      "max_level": 5,
+      "treasure": false,
+      "curse": false,
+      "tier": 2
+    },
+    "bane_of_arthropods": {
+      "max_level": 5,
+      "treasure": false,
+      "curse": false,
+      "tier": 2
+    },
+    "punch": {
+      "max_level": 2,
+      "treasure": false,
+      "curse": false,
+      "tier": 2
+    },
+    "flame": {
+      "max_level": 1,
+      "treasure": false,
+      "curse": false,
+      "tier": 2
+    },
+    "luck_of_the_sea": {
+      "max_level": 3,
+      "treasure": false,
+      "curse": false,
+      "tier": 2
+    },
+    "lure": {
+      "max_level": 3,
+      "treasure": false,
+      "curse": false,
+      "tier": 2
+    },
+    "knockback": {
+      "max_level": 2,
+      "treasure": false,
+      "curse": false,
+      "tier": 2
+    },
+    "projectile_protection": {
+      "max_level": 4,
+      "treasure": false,
+      "curse": false,
+      "tier": 2
+    },
+    "fire_protection": {
+      "max_level": 4,
+      "treasure": false,
+      "curse": false,
+      "tier": 2
+    },
+    "blast_protection": {
+      "max_level": 4,
+      "treasure": false,
+      "curse": false,
+      "tier": 2
+    },
+    "mending": {
+      "max_level": 1,
+      "treasure": true,
+      "curse": false,
+      "tier": 3
+    },
+    "silk_touch": {
+      "max_level": 1,
+      "treasure": false,
+      "curse": false,
+      "tier": 3
+    },
+    "infinity": {
+      "max_level": 1,
+      "treasure": false,
+      "curse": false,
+      "tier": 3
+    },
+    "fire_aspect": {
+      "max_level": 2,
+      "treasure": false,
+      "curse": false,
+      "tier": 3
+    },
+    "thorns": {
+      "max_level": 3,
+      "treasure": false,
+      "curse": false,
+      "tier": 3
+    },
+    "soul_speed": {
+      "max_level": 3,
+      "treasure": true,
+      "curse": false,
+      "tier": 4
+    },
+    "frost_walker": {
+      "max_level": 2,
+      "treasure": true,
+      "curse": false,
+      "tier": 4
+    },
+    "channeling": {
+      "max_level": 1,
+      "treasure": false,
+      "curse": false,
+      "tier": 4
+    },
+    "riptide": {
+      "max_level": 3,
+      "treasure": false,
+      "curse": false,
+      "tier": 4
+    },
+    "impaling": {
+      "max_level": 5,
+      "treasure": false,
+      "curse": false,
+      "tier": 4
+    },
+    "loyalty": {
+      "max_level": 3,
+      "treasure": false,
+      "curse": false,
+      "tier": 4
+    },
+    "multishot": {
+      "max_level": 1,
+      "treasure": false,
+      "curse": false,
+      "tier": 4
+    },
+    "quick_charge": {
+      "max_level": 3,
+      "treasure": false,
+      "curse": false,
+      "tier": 4
+    },
+    "piercing": {
+      "max_level": 4,
+      "treasure": false,
+      "curse": false,
+      "tier": 4
+    },
+    "swift_sneak": {
+      "max_level": 3,
+      "treasure": false,
+      "curse": false,
+      "tier": 4
+    }
+  }
+}

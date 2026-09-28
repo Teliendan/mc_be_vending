@@ -1,0 +1,63 @@
+{
+  "format_version": "1.21.40",
+  "vm:machine_farmer": {
+    "sound": "stone",
+    "textures": "vm_machine_body"
+  },
+  "vm:machine_fisherman": {
+    "sound": "stone",
+    "textures": "vm_machine_body"
+  },
+  "vm:machine_shepherd": {
+    "sound": "stone",
+    "textures": "vm_machine_body"
+  },
+  "vm:machine_fletcher": {
+    "sound": "stone",
+    "textures": "vm_machine_body"
+  },
+  "vm:machine_librarian": {
+    "sound": "stone",
+    "textures": "vm_machine_body"
+  },
+  "vm:machine_cartographer": {
+    "sound": "stone",
+    "textures": "vm_machine_body"
+  },
+  "vm:machine_cleric": {
+    "sound": "stone",
+    "textures": "vm_machine_body"
+  },
+  "vm:machine_armorer": {
+    "sound": "stone",
+    "textures": "vm_machine_body"
+  },
+  "vm:machine_weapon_smith": {
+    "sound": "stone",
+    "textures": "vm_machine_body"
+  },
+  "vm:machine_tool_smith": {
+    "sound": "stone",
+    "textures": "vm_machine_body"
+  },
+  "vm:machine_butcher": {
+    "sound": "stone",
+    "textures": "vm_machine_body"
+  },
+  "vm:machine_leather_worker": {
+    "sound": "stone",
+    "textures": "vm_machine_body"
+  },
+  "vm:machine_stone_mason": {
+    "sound": "stone",
+    "textures": "vm_machine_body"
+  },
+  "vm:machine_wandering_trader": {
+    "sound": "stone",
+    "textures": "vm_machine_body"
+  },
+  "vm:machine_shulker": {
+    "sound": "stone",
+    "textures": "vm_machine_body"
+  }
+}

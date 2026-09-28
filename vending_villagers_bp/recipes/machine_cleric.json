@@ -1,0 +1,42 @@
+{
+    "format_version": "1.20.10",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "vm:machine_cleric_recipe"
+        },
+        "tags": [
+            "crafting_table"
+        ],
+        "pattern": [
+            "GTG",
+            "IWI",
+            "EEE"
+        ],
+        "key": {
+            "I": {
+                "item": "minecraft:iron_block"
+            },
+            "G": {
+                "item": "minecraft:gold_block"
+            },
+            "T": {
+                "item": "minecraft:ender_pearl"
+            },
+            "E": {
+                "item": "minecraft:emerald_block"
+            },
+            "W": {
+                "item": "minecraft:brewing_stand"
+            }
+        },
+        "unlock": [
+            {
+                "item": "minecraft:brewing_stand"
+            }
+        ],
+        "result": {
+            "item": "vm:machine_cleric",
+            "count": 1
+        }
+    }
+}
