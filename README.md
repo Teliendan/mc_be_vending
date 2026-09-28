@@ -27,6 +27,9 @@ is safe (they refuse to overwrite without `--force`).
   enchanted books from `enchantments.json`.
 - `gen_machine_blocks.py`, `gen_machine_entities.py`, `gen_machine_recipes.py` - the
   13 villager machines (blocks carry the `vm:upgraded` state for the Upgrade Kit).
+- `gen_machine_models.py` - their RP side: the empty trader model, client entities,
+  `blocks.json`, atlases and lang. It rewrites those shared files with the villager
+  entries only, so run `gen_extra_machines.py` after it.
 - `gen_extra_machines.py` - the non-villager feature packs (wandering trader, shulker),
   built from the villager templates; a new feature is an entry in its MACHINES.
 - Art: `make_machine_textures.py`, `vm_make_upgraded_textures.py`, `make_pack_icon.py`.
