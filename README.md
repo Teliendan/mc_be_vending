@@ -22,7 +22,7 @@ checked on 2026-09-29 to reproduce the shipped files byte for byte, so regenerat
 is safe (they refuse to overwrite without `--force`).
 
 - `gen_trade_tables.py` - the 13 profession tables (+ `_cured`, 30% cheaper) from the
-  vanilla reference at `E:\AIefedrock\current`; vanilla "choice" trades are split
+  vanilla reference at `E:\AI\ref\bedrock\current`; vanilla "choice" trades are split
   so the machine sells every variant. `gen_book_trades.py` adds the librarian's
   enchanted books from `enchantments.json`.
 - `gen_machine_blocks.py`, `gen_machine_entities.py`, `gen_machine_recipes.py` - the
