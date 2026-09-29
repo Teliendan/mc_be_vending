@@ -29,6 +29,7 @@
       },
       "minecraft:map_color": "#8f8f8f",
       "minecraft:geometry": "minecraft:geometry.full_block",
+      "minecraft:redstone_conductivity": { "redstone_conductor": true },
       "minecraft:material_instances": {
         "*": {
           "texture": "vm_machine_body",
