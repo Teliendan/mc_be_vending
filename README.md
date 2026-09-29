@@ -22,7 +22,9 @@ checked on 2026-09-29 to reproduce the shipped files byte for byte, so regenerat
 is safe (they refuse to overwrite without `--force`).
 
 - `gen_trade_tables.py` - the 13 profession tables (+ `_cured`, 30% cheaper) from the
-  vanilla reference at `C:\mcmods\reference\vanilla\current`; vanilla "choice" trades are split
+  vanilla reference at `C:\mcmods\reference\vanilla\current` (1.26 ships those files as
+  binary, so it falls back to the newest launcher install with plain JSON, or
+  `--vanilla-root`); vanilla "choice" trades are split
   so the machine sells every variant. `gen_book_trades.py` adds the librarian's
   enchanted books from `enchantments.json`.
 - `gen_machine_blocks.py`, `gen_machine_entities.py`, `gen_machine_recipes.py` - the

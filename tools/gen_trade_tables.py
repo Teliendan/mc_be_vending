@@ -32,6 +32,11 @@ import sys
 
 VANILLA_ROOT = r"C:\mcmods\reference\vanilla\current\behavior_packs\vanilla\trading\economy_trades"
 
+# From 1.26 several vanilla trade files ship as binary JSON (they start with this magic),
+# which json.load cannot read. The launcher installs of older versions keep plain text.
+BINARY_JSON_MAGIC = b"\x7fMCB"
+LAUNCHER_VERSIONS = os.path.join(os.environ.get("APPDATA", ""), ".minecraft_bedrock", "versions")
+
 OUTPUT_DIR = os.path.join(MOD, "vending_villagers_bp", "trading", "vm")
 
 # The 13 profession trade tables this tool consumes. Iterate this list to drive
@@ -80,8 +85,54 @@ EXPECTED_TRADE_COUNTS = {
 }
 
 
-def _input_path(profession):
-    return os.path.join(VANILLA_ROOT, profession + "_trades.json")
+def _input_path(profession, root=None):
+    return os.path.join(root or VANILLA_ROOT, profession + "_trades.json")
+
+
+def _is_text_root(root):
+    """True if every profession file exists under root and is plain JSON."""
+    for profession in PROFESSIONS:
+        path = _input_path(profession, root)
+        if not os.path.exists(path):
+            return False
+        with open(path, "rb") as fh:
+            if fh.read(4) == BINARY_JSON_MAGIC:
+                return False
+    return True
+
+
+def _launcher_trade_roots():
+    """economy_trades dirs of the launcher's installed versions, newest game first."""
+    found = []
+    if not os.path.isdir(LAUNCHER_VERSIONS):
+        return found
+    for guid in os.listdir(LAUNCHER_VERSIONS):
+        bp = os.path.join(LAUNCHER_VERSIONS, guid, "data", "behavior_packs")
+        if not os.path.isdir(bp):
+            continue
+        versions = []
+        for name in os.listdir(bp):
+            parts = name[len("vanilla_"):].split(".") if name.startswith("vanilla_") else []
+            if len(parts) == 3 and all(p.isdigit() for p in parts):
+                versions.append(tuple(int(p) for p in parts))
+        if versions:
+            found.append((max(versions), os.path.join(bp, "vanilla", "trading", "economy_trades")))
+    return [root for _, root in sorted(found, reverse=True)]
+
+
+def _pick_vanilla_root(explicit):
+    if explicit:
+        if not _is_text_root(explicit):
+            sys.exit("{} lacks readable (plain JSON) trade files".format(explicit))
+        return explicit
+    if _is_text_root(VANILLA_ROOT):
+        return VANILLA_ROOT
+    for root in _launcher_trade_roots():
+        if _is_text_root(root):
+            print("note: {} has binary 1.26 trade files; using {}".format(VANILLA_ROOT, root))
+            return root
+    sys.exit("no plain-JSON vanilla trade files found: {} is binary (1.26+) and no launcher "
+             "version under {} has them. Pass --vanilla-root.".format(VANILLA_ROOT, LAUNCHER_VERSIONS))
 
 
 def _load(profession):
@@ -201,13 +252,13 @@ def main():
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--force", action="store_true",
                     help="overwrite outputs that already exist")
+    ap.add_argument("--vanilla-root",
+                    help="economy_trades dir to read (default: the workspace reference, "
+                         "falling back to a launcher install when that is binary)")
     args = ap.parse_args()
 
-    if not os.path.isdir(VANILLA_ROOT):
-        sys.exit("vanilla reference dir not found at {}".format(VANILLA_ROOT))
-    for profession in PROFESSIONS:
-        if not os.path.exists(_input_path(profession)):
-            sys.exit("missing input file for profession {}".format(profession))
+    global VANILLA_ROOT
+    VANILLA_ROOT = _pick_vanilla_root(args.vanilla_root)
 
     os.makedirs(OUTPUT_DIR, exist_ok=True)
     for profession in PROFESSIONS:
