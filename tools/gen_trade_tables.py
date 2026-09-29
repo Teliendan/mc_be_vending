@@ -30,7 +30,7 @@ import os
 MOD = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))  # this mod's repo root
 import sys
 
-VANILLA_ROOT = r"E:\AI\ref\bedrock\current\behavior_packs\vanilla\trading\economy_trades"
+VANILLA_ROOT = r"C:\mcmods\reference\vanilla\current\behavior_packs\vanilla\trading\economy_trades"
 
 OUTPUT_DIR = os.path.join(MOD, "vending_villagers_bp", "trading", "vm")
 

@@ -25,7 +25,7 @@ except ImportError:
 RP = os.path.join(MOD, "vending_rp")
 BP = os.path.join(MOD, "vending_bp")
 BLOCKS = os.path.join(RP, "textures", "blocks")
-EMERALD = r"E:\AI\ref\bedrock\current\resource_packs\vanilla\textures\items\emerald.png"
+EMERALD = r"C:\mcmods\reference\vanilla\current\resource_packs\vanilla\textures\items\emerald.png"
 
 ICON = 256
 A, B, H = 4, 2, 5          # per texel: X/Z step (A right, B down), Y step (H up)

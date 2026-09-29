@@ -59,7 +59,7 @@ try:
 except ImportError:
     sys.exit("Pillow is required: python -m pip install Pillow")
 
-VANILLA_ROOT = r"E:\AI\ref\bedrock\current\resource_packs\vanilla\textures"
+VANILLA_ROOT = r"C:\mcmods\reference\vanilla\current\resource_packs\vanilla\textures"
 BLOCKS_SRC = os.path.join(VANILLA_ROOT, "blocks")
 ITEMS_SRC = os.path.join(VANILLA_ROOT, "items")
 
@@ -356,7 +356,7 @@ def main():
 
     if not os.path.isdir(BLOCKS_SRC):
         sys.exit("vanilla reference not found at {} -- run "
-                 r"E:\AI\ref\bedrock\refresh_bedrock_ref.ps1".format(BLOCKS_SRC))
+                 r"C:\mcmods\tools\refresh_vanilla_ref.ps1".format(BLOCKS_SRC))
 
     for name, grid in (("HEAD", HEAD), ("BODY", BODY), ("TOP", TOP), ("WRENCH", WRENCH)):
         if len(grid) != SIZE or any(len(row) != SIZE for row in grid):
