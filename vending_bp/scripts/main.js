@@ -1,3 +1,4 @@
+import { message } from "./messages.js";
 import { world, system, ItemStack, BlockPermutation } from "@minecraft/server";
 
 // ---------------------------------------------------------------------------
@@ -89,7 +90,7 @@ world.afterEvents.playerPlaceBlock.subscribe((e) => {
         const typeId = block.typeId;
         block.setType("minecraft:air");
         block.dimension.spawnItem(new ItemStack(typeId, 1), traderSpot(block));
-        e.player.sendMessage("\u00a7cA vending machine needs two blocks of space.");
+        e.player.sendMessage(message("space"));
         return;
     }
 
@@ -130,7 +131,7 @@ system.beforeEvents.startup.subscribe((init) => {
 
                 if (trader.getDynamicProperty("vm:upgraded") === true) {
                     showUpgraded(block);
-                    player.sendMessage("\u00a7eThis machine is already upgraded.");
+                    player.sendMessage(message("upgraded"));
                     return;
                 }
 
@@ -139,7 +140,7 @@ system.beforeEvents.startup.subscribe((init) => {
                 showUpgraded(block);
                 sparkle(block);
                 block.dimension.playSound("random.anvil_use", traderSpot(block), { volume: 0.8, pitch: 1.2 });
-                player.sendMessage("\u00a7aUpgraded \u2014 this machine now trades at a discount.");
+                player.sendMessage(message("upgrade"));
 
                 const equippable = player.getComponent("minecraft:equippable");
                 const held = equippable ? equippable.getEquipment("Mainhand") : undefined;

@@ -1,8 +1,8 @@
 {
     "format_version": 2,
     "header": {
-        "name": "Vending Machines - Core",
-        "description": "Script logic and the Upgrade Kit shared by every vending machine. Add the feature packs (Villagers, Wandering Trader, Shulker) for the machines you want in this world.",
+        "name": "pack.name",
+        "description": "pack.description",
         "uuid": "5fc97fe3-1929-4b22-adfc-1f8105db5bbf",
         "version": [1, 0, 0],
         "min_engine_version": [1, 21, 120]

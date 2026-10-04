@@ -20,7 +20,7 @@ vanilla price -- asserted below. The shulker tables are written out by hand
 because 24 * 0.7 does not round to 16.
 
 The RP entries (terrain atlas, blocks.json, item atlas, lang) are MERGED, so
-this is safe to re-run. gen_machine_models.py rewrites en_US.lang from scratch;
+this is safe to re-run. language names are maintained in localization/catalog.json;
 run this tool again after it.
 
 Run:  python mods\vending\tools\gen_extra_machines.py
@@ -211,11 +211,8 @@ def build_rp():
         wanted["entity.vm:trader_%s.name" % machine] = spec["name"] + " Machine"
     wanted["item.vm:shulker_core"] = "Shulker Core"
     path = os.path.join(RP, "texts", "en_US.lang")
-    with open(path, encoding="utf-8") as fh:
-        lines = [l for l in fh.read().splitlines() if l.split("=", 1)[0] not in wanted]
-    lines += ["%s=%s" % kv for kv in wanted.items()]
-    with open(path, "w", encoding="utf-8") as fh:
-        fh.write("\n".join(lines) + "\n")
+    from localization_support import merge_localized_names
+    merge_localized_names(wanted)
     print("wrote", path)
 
 

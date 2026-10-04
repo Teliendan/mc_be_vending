@@ -23,8 +23,9 @@ verify_addon.py names the missing file so the entry is fixed, never the art.
 The profession list is imported from gen_trade_tables so the wandering-trader line stays a one-liner
 in exactly one place.
 
-It rewrites the shared RP files (blocks.json, atlases, en_US.lang) with the villager entries
-only, so run gen_extra_machines.py afterwards to add the feature-pack machines back.
+It rewrites blocks.json and atlases with the villager entries; run gen_extra_machines.py
+afterwards for feature-pack machines. Language names are declared through the catalog adapter,
+which preserves reviewed wording and rebuilds every locale.
 
 Run:  python mods\vending\tools\gen_machine_models.py [--force]
 """
@@ -178,11 +179,8 @@ def write_lang(force):
         lines.append("entity.vm:trader_%s.name=%s Machine" % (prof, prof.title()))
     # Item: key "item.<ns>:<id>" WITHOUT the .name suffix -- see bedrock-items skill.
     lines.append("item.vm:upgrade_kit=Upgrade Kit")
-    if os.path.exists(LANG_FILE) and not force:
-        sys.exit("%s already exists; pass --force to overwrite it" % LANG_FILE)
-    with open(LANG_FILE, "w", encoding="utf-8") as fh:
-        fh.write("\n".join(lines) + "\n")
-    return len(lines)
+    from localization_support import merge_localized_names
+    return merge_localized_names(lines)
 
 
 def delete_dead():

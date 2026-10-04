@@ -1,0 +1,2639 @@
+{
+  "version": 1,
+  "locales": [
+    "en_US",
+    "cs_CZ",
+    "es_ES",
+    "es_MX",
+    "pt_PT",
+    "pt_BR",
+    "de_DE",
+    "fr_FR",
+    "pl_PL"
+  ],
+  "policy": "AI-authored contextual translations; independent language review and in-game layout testing pending. en_GB aliases en_US and fr_CA aliases fr_FR. Preserve lore names and mod brands.",
+  "packs": {
+    "vending_bp": {
+      "kind": "behavior",
+      "entries": {
+        "pack.name": {
+          "source": "Vending Machines — Core",
+          "context": {
+            "meaning": "Pack title or description for vending_bp. BP means behavior pack; RP means resource pack. Keep mod brands unchanged.",
+            "location": "vending_bp: pack selection screen",
+            "trigger": "Shown when the player views or uses this content.",
+            "tone": "Clear Minecraft UI",
+            "grammar": "Pack title or a complete description; localize pack type and descriptive words.",
+            "constraints": "Preserve namespace IDs, commands, coordinates, color codes, placeholder order and lore proper names. Action-bar labels must stay short; no assumed player gender."
+          },
+          "placeholders": [],
+          "translations": {
+            "cs_CZ": {
+              "text": "Vending Machines — Základ",
+              "based_on": "cc7f2a586153cb71df19811edf25739aca5b55522d7128acb9740dde795b2e10",
+              "status": "ai-draft"
+            },
+            "es_ES": {
+              "text": "Vending Machines — Núcleo",
+              "based_on": "cc7f2a586153cb71df19811edf25739aca5b55522d7128acb9740dde795b2e10",
+              "status": "ai-draft"
+            },
+            "es_MX": {
+              "text": "Vending Machines — Núcleo",
+              "based_on": "cc7f2a586153cb71df19811edf25739aca5b55522d7128acb9740dde795b2e10",
+              "status": "ai-draft"
+            },
+            "pt_PT": {
+              "text": "Vending Machines — Base",
+              "based_on": "cc7f2a586153cb71df19811edf25739aca5b55522d7128acb9740dde795b2e10",
+              "status": "ai-draft"
+            },
+            "pt_BR": {
+              "text": "Vending Machines — Base",
+              "based_on": "cc7f2a586153cb71df19811edf25739aca5b55522d7128acb9740dde795b2e10",
+              "status": "ai-draft"
+            },
+            "de_DE": {
+              "text": "Vending Machines — Basis",
+              "based_on": "cc7f2a586153cb71df19811edf25739aca5b55522d7128acb9740dde795b2e10",
+              "status": "ai-draft"
+            },
+            "fr_FR": {
+              "text": "Vending Machines — Base",
+              "based_on": "cc7f2a586153cb71df19811edf25739aca5b55522d7128acb9740dde795b2e10",
+              "status": "ai-draft"
+            },
+            "pl_PL": {
+              "text": "Vending Machines — Podstawa",
+              "based_on": "cc7f2a586153cb71df19811edf25739aca5b55522d7128acb9740dde795b2e10",
+              "status": "ai-draft"
+            }
+          }
+        },
+        "pack.description": {
+          "source": "Vending Machines core: shared scripts and Upgrade Kit. Add feature packs for the machines you want.",
+          "context": {
+            "meaning": "Pack title or description for vending_bp. BP means behavior pack; RP means resource pack. Keep mod brands unchanged.",
+            "location": "vending_bp: pack selection screen",
+            "trigger": "Shown when the player views or uses this content.",
+            "tone": "Clear Minecraft UI",
+            "grammar": "Pack title or a complete description; localize pack type and descriptive words.",
+            "constraints": "Preserve namespace IDs, commands, coordinates, color codes, placeholder order and lore proper names. Action-bar labels must stay short; no assumed player gender."
+          },
+          "placeholders": [],
+          "translations": {
+            "cs_CZ": {
+              "text": "Základ Vending Machines: společné skripty a vylepšovací sada. Vybrané automaty přidáte pomocí rozšiřujících balíčků.",
+              "based_on": "62e1153d635c51f64455e76c5b1ab054fb3ac52fa25ff7211ee5be0bd4b3221f",
+              "status": "ai-draft"
+            },
+            "es_ES": {
+              "text": "Núcleo de Vending Machines: scripts compartidos y kit de mejora. Añade los paquetes de las máquinas que quieras.",
+              "based_on": "62e1153d635c51f64455e76c5b1ab054fb3ac52fa25ff7211ee5be0bd4b3221f",
+              "status": "ai-draft"
+            },
+            "es_MX": {
+              "text": "Núcleo de Vending Machines: scripts compartidos y kit de mejora. Agrega los paquetes de las máquinas que quieras.",
+              "based_on": "62e1153d635c51f64455e76c5b1ab054fb3ac52fa25ff7211ee5be0bd4b3221f",
+              "status": "ai-draft"
+            },
+            "pt_PT": {
+              "text": "Base de Vending Machines: scripts partilhados e kit de melhoria. Adiciona os pacotes das máquinas que quiseres.",
+              "based_on": "62e1153d635c51f64455e76c5b1ab054fb3ac52fa25ff7211ee5be0bd4b3221f",
+              "status": "ai-draft"
+            },
+            "pt_BR": {
+              "text": "Base de Vending Machines: scripts compartilhados e kit de melhoria. Adicione os pacotes das máquinas que quiser.",
+              "based_on": "62e1153d635c51f64455e76c5b1ab054fb3ac52fa25ff7211ee5be0bd4b3221f",
+              "status": "ai-draft"
+            },
+            "de_DE": {
+              "text": "Vending Machines – Basis: gemeinsame Skripte und Aufrüstungsset. Ergänze die Pakete für die gewünschten Automaten.",
+              "based_on": "62e1153d635c51f64455e76c5b1ab054fb3ac52fa25ff7211ee5be0bd4b3221f",
+              "status": "ai-draft"
+            },
+            "fr_FR": {
+              "text": "Vending Machines – Base : scripts communs et kit d’amélioration. Ajoute les packs des distributeurs de ton choix.",
+              "based_on": "62e1153d635c51f64455e76c5b1ab054fb3ac52fa25ff7211ee5be0bd4b3221f",
+              "status": "ai-draft"
+            },
+            "pl_PL": {
+              "text": "Vending Machines – Podstawa: wspólne skrypty i zestaw ulepszający. Dodaj pakiety z wybranymi automatami.",
+              "based_on": "62e1153d635c51f64455e76c5b1ab054fb3ac52fa25ff7211ee5be0bd4b3221f",
+              "status": "ai-draft"
+            }
+          }
+        }
+      }
+    },
+    "vending_rp": {
+      "kind": "resource",
+      "entries": {
+        "tile.vm:machine_farmer.name": {
+          "source": "Farmer Machine",
+          "context": {
+            "meaning": "Automated trade shop using the Farmer villager profession trade table. Block and hidden trading entity share the same display name. Do not translate as a worker operating a machine.",
+            "location": "vending_rp: inventory/block tooltip, entity name or spawn egg",
+            "trigger": "Viewed in inventory, Creative inventory, block targeting or entity UI, as appropriate to this key.",
+            "tone": "Clear Minecraft UI",
+            "grammar": "Standalone noun phrase, no sentence punctuation.",
+            "constraints": "Preserve namespace IDs, commands, coordinates, color codes, placeholder order and lore proper names. Action-bar labels must stay short; no assumed player gender."
+          },
+          "placeholders": [],
+          "translations": {
+            "cs_CZ": {
+              "text": "Automat: Farmář",
+              "based_on": "6ed089b3339821ae1b730f1b58aa0a0689ebf78a78d714c9a04f152b0999e3ec",
+              "status": "ai-draft"
+            },
+            "es_ES": {
+              "text": "Máquina de granjero",
+              "based_on": "6ed089b3339821ae1b730f1b58aa0a0689ebf78a78d714c9a04f152b0999e3ec",
+              "status": "ai-draft"
+            },
+            "es_MX": {
+              "text": "Máquina de granjero",
+              "based_on": "6ed089b3339821ae1b730f1b58aa0a0689ebf78a78d714c9a04f152b0999e3ec",
+              "status": "ai-draft"
+            },
+            "pt_PT": {
+              "text": "Máquina de agricultor",
+              "based_on": "6ed089b3339821ae1b730f1b58aa0a0689ebf78a78d714c9a04f152b0999e3ec",
+              "status": "ai-draft"
+            },
+            "pt_BR": {
+              "text": "Máquina de fazendeiro",
+              "based_on": "6ed089b3339821ae1b730f1b58aa0a0689ebf78a78d714c9a04f152b0999e3ec",
+              "status": "ai-draft"
+            },
+            "de_DE": {
+              "text": "Bauer-Automat",
+              "based_on": "6ed089b3339821ae1b730f1b58aa0a0689ebf78a78d714c9a04f152b0999e3ec",
+              "status": "ai-draft"
+            },
+            "fr_FR": {
+              "text": "Distributeur : Fermier",
+              "based_on": "6ed089b3339821ae1b730f1b58aa0a0689ebf78a78d714c9a04f152b0999e3ec",
+              "status": "ai-draft"
+            },
+            "pl_PL": {
+              "text": "Automat: Rolnik",
+              "based_on": "6ed089b3339821ae1b730f1b58aa0a0689ebf78a78d714c9a04f152b0999e3ec",
+              "status": "ai-draft"
+            }
+          }
+        },
+        "entity.vm:trader_farmer.name": {
+          "source": "Farmer Machine",
+          "context": {
+            "meaning": "Automated trade shop using the Farmer villager profession trade table. Block and hidden trading entity share the same display name. Do not translate as a worker operating a machine.",
+            "location": "vending_rp: inventory/block tooltip, entity name or spawn egg",
+            "trigger": "Viewed in inventory, Creative inventory, block targeting or entity UI, as appropriate to this key.",
+            "tone": "Clear Minecraft UI",
+            "grammar": "Standalone noun phrase, no sentence punctuation.",
+            "constraints": "Preserve namespace IDs, commands, coordinates, color codes, placeholder order and lore proper names. Action-bar labels must stay short; no assumed player gender."
+          },
+          "placeholders": [],
+          "translations": {
+            "cs_CZ": {
+              "text": "Automat: Farmář",
+              "based_on": "6ed089b3339821ae1b730f1b58aa0a0689ebf78a78d714c9a04f152b0999e3ec",
+              "status": "ai-draft"
+            },
+            "es_ES": {
+              "text": "Máquina de granjero",
+              "based_on": "6ed089b3339821ae1b730f1b58aa0a0689ebf78a78d714c9a04f152b0999e3ec",
+              "status": "ai-draft"
+            },
+            "es_MX": {
+              "text": "Máquina de granjero",
+              "based_on": "6ed089b3339821ae1b730f1b58aa0a0689ebf78a78d714c9a04f152b0999e3ec",
+              "status": "ai-draft"
+            },
+            "pt_PT": {
+              "text": "Máquina de agricultor",
+              "based_on": "6ed089b3339821ae1b730f1b58aa0a0689ebf78a78d714c9a04f152b0999e3ec",
+              "status": "ai-draft"
+            },
+            "pt_BR": {
+              "text": "Máquina de fazendeiro",
+              "based_on": "6ed089b3339821ae1b730f1b58aa0a0689ebf78a78d714c9a04f152b0999e3ec",
+              "status": "ai-draft"
+            },
+            "de_DE": {
+              "text": "Bauer-Automat",
+              "based_on": "6ed089b3339821ae1b730f1b58aa0a0689ebf78a78d714c9a04f152b0999e3ec",
+              "status": "ai-draft"
+            },
+            "fr_FR": {
+              "text": "Distributeur : Fermier",
+              "based_on": "6ed089b3339821ae1b730f1b58aa0a0689ebf78a78d714c9a04f152b0999e3ec",
+              "status": "ai-draft"
+            },
+            "pl_PL": {
+              "text": "Automat: Rolnik",
+              "based_on": "6ed089b3339821ae1b730f1b58aa0a0689ebf78a78d714c9a04f152b0999e3ec",
+              "status": "ai-draft"
+            }
+          }
+        },
+        "tile.vm:machine_fisherman.name": {
+          "source": "Fisherman Machine",
+          "context": {
+            "meaning": "Automated trade shop using the Fisherman villager profession trade table. Block and hidden trading entity share the same display name. Do not translate as a worker operating a machine.",
+            "location": "vending_rp: inventory/block tooltip, entity name or spawn egg",
+            "trigger": "Viewed in inventory, Creative inventory, block targeting or entity UI, as appropriate to this key.",
+            "tone": "Clear Minecraft UI",
+            "grammar": "Standalone noun phrase, no sentence punctuation.",
+            "constraints": "Preserve namespace IDs, commands, coordinates, color codes, placeholder order and lore proper names. Action-bar labels must stay short; no assumed player gender."
+          },
+          "placeholders": [],
+          "translations": {
+            "cs_CZ": {
+              "text": "Automat: Rybář",
+              "based_on": "e10bda3303fa772a26fb2316043f010dae6536ec443c82adf332a7649452af0b",
+              "status": "ai-draft"
+            },
+            "es_ES": {
+              "text": "Máquina de pescador",
+              "based_on": "e10bda3303fa772a26fb2316043f010dae6536ec443c82adf332a7649452af0b",
+              "status": "ai-draft"
+            },
+            "es_MX": {
+              "text": "Máquina de pescador",
+              "based_on": "e10bda3303fa772a26fb2316043f010dae6536ec443c82adf332a7649452af0b",
+              "status": "ai-draft"
+            },
+            "pt_PT": {
+              "text": "Máquina de pescador",
+              "based_on": "e10bda3303fa772a26fb2316043f010dae6536ec443c82adf332a7649452af0b",
+              "status": "ai-draft"
+            },
+            "pt_BR": {
+              "text": "Máquina de pescador",
+              "based_on": "e10bda3303fa772a26fb2316043f010dae6536ec443c82adf332a7649452af0b",
+              "status": "ai-draft"
+            },
+            "de_DE": {
+              "text": "Fischer-Automat",
+              "based_on": "e10bda3303fa772a26fb2316043f010dae6536ec443c82adf332a7649452af0b",
+              "status": "ai-draft"
+            },
+            "fr_FR": {
+              "text": "Distributeur : Pêcheur",
+              "based_on": "e10bda3303fa772a26fb2316043f010dae6536ec443c82adf332a7649452af0b",
+              "status": "ai-draft"
+            },
+            "pl_PL": {
+              "text": "Automat: Rybak",
+              "based_on": "e10bda3303fa772a26fb2316043f010dae6536ec443c82adf332a7649452af0b",
+              "status": "ai-draft"
+            }
+          }
+        },
+        "entity.vm:trader_fisherman.name": {
+          "source": "Fisherman Machine",
+          "context": {
+            "meaning": "Automated trade shop using the Fisherman villager profession trade table. Block and hidden trading entity share the same display name. Do not translate as a worker operating a machine.",
+            "location": "vending_rp: inventory/block tooltip, entity name or spawn egg",
+            "trigger": "Viewed in inventory, Creative inventory, block targeting or entity UI, as appropriate to this key.",
+            "tone": "Clear Minecraft UI",
+            "grammar": "Standalone noun phrase, no sentence punctuation.",
+            "constraints": "Preserve namespace IDs, commands, coordinates, color codes, placeholder order and lore proper names. Action-bar labels must stay short; no assumed player gender."
+          },
+          "placeholders": [],
+          "translations": {
+            "cs_CZ": {
+              "text": "Automat: Rybář",
+              "based_on": "e10bda3303fa772a26fb2316043f010dae6536ec443c82adf332a7649452af0b",
+              "status": "ai-draft"
+            },
+            "es_ES": {
+              "text": "Máquina de pescador",
+              "based_on": "e10bda3303fa772a26fb2316043f010dae6536ec443c82adf332a7649452af0b",
+              "status": "ai-draft"
+            },
+            "es_MX": {
+              "text": "Máquina de pescador",
+              "based_on": "e10bda3303fa772a26fb2316043f010dae6536ec443c82adf332a7649452af0b",
+              "status": "ai-draft"
+            },
+            "pt_PT": {
+              "text": "Máquina de pescador",
+              "based_on": "e10bda3303fa772a26fb2316043f010dae6536ec443c82adf332a7649452af0b",
+              "status": "ai-draft"
+            },
+            "pt_BR": {
+              "text": "Máquina de pescador",
+              "based_on": "e10bda3303fa772a26fb2316043f010dae6536ec443c82adf332a7649452af0b",
+              "status": "ai-draft"
+            },
+            "de_DE": {
+              "text": "Fischer-Automat",
+              "based_on": "e10bda3303fa772a26fb2316043f010dae6536ec443c82adf332a7649452af0b",
+              "status": "ai-draft"
+            },
+            "fr_FR": {
+              "text": "Distributeur : Pêcheur",
+              "based_on": "e10bda3303fa772a26fb2316043f010dae6536ec443c82adf332a7649452af0b",
+              "status": "ai-draft"
+            },
+            "pl_PL": {
+              "text": "Automat: Rybak",
+              "based_on": "e10bda3303fa772a26fb2316043f010dae6536ec443c82adf332a7649452af0b",
+              "status": "ai-draft"
+            }
+          }
+        },
+        "tile.vm:machine_shepherd.name": {
+          "source": "Shepherd Machine",
+          "context": {
+            "meaning": "Automated trade shop using the Shepherd villager profession trade table. Block and hidden trading entity share the same display name. Do not translate as a worker operating a machine.",
+            "location": "vending_rp: inventory/block tooltip, entity name or spawn egg",
+            "trigger": "Viewed in inventory, Creative inventory, block targeting or entity UI, as appropriate to this key.",
+            "tone": "Clear Minecraft UI",
+            "grammar": "Standalone noun phrase, no sentence punctuation.",
+            "constraints": "Preserve namespace IDs, commands, coordinates, color codes, placeholder order and lore proper names. Action-bar labels must stay short; no assumed player gender."
+          },
+          "placeholders": [],
+          "translations": {
+            "cs_CZ": {
+              "text": "Automat: Pastýř",
+              "based_on": "4ce173a9ccc35dc8f26d2f7dece58a64ab27a9b9a5ab1048491bbd9b21b95bac",
+              "status": "ai-draft"
+            },
+            "es_ES": {
+              "text": "Máquina de pastor",
+              "based_on": "4ce173a9ccc35dc8f26d2f7dece58a64ab27a9b9a5ab1048491bbd9b21b95bac",
+              "status": "ai-draft"
+            },
+            "es_MX": {
+              "text": "Máquina de pastor",
+              "based_on": "4ce173a9ccc35dc8f26d2f7dece58a64ab27a9b9a5ab1048491bbd9b21b95bac",
+              "status": "ai-draft"
+            },
+            "pt_PT": {
+              "text": "Máquina de pastor",
+              "based_on": "4ce173a9ccc35dc8f26d2f7dece58a64ab27a9b9a5ab1048491bbd9b21b95bac",
+              "status": "ai-draft"
+            },
+            "pt_BR": {
+              "text": "Máquina de pastor",
+              "based_on": "4ce173a9ccc35dc8f26d2f7dece58a64ab27a9b9a5ab1048491bbd9b21b95bac",
+              "status": "ai-draft"
+            },
+            "de_DE": {
+              "text": "Schäfer-Automat",
+              "based_on": "4ce173a9ccc35dc8f26d2f7dece58a64ab27a9b9a5ab1048491bbd9b21b95bac",
+              "status": "ai-draft"
+            },
+            "fr_FR": {
+              "text": "Distributeur : Berger",
+              "based_on": "4ce173a9ccc35dc8f26d2f7dece58a64ab27a9b9a5ab1048491bbd9b21b95bac",
+              "status": "ai-draft"
+            },
+            "pl_PL": {
+              "text": "Automat: Pasterz",
+              "based_on": "4ce173a9ccc35dc8f26d2f7dece58a64ab27a9b9a5ab1048491bbd9b21b95bac",
+              "status": "ai-draft"
+            }
+          }
+        },
+        "entity.vm:trader_shepherd.name": {
+          "source": "Shepherd Machine",
+          "context": {
+            "meaning": "Automated trade shop using the Shepherd villager profession trade table. Block and hidden trading entity share the same display name. Do not translate as a worker operating a machine.",
+            "location": "vending_rp: inventory/block tooltip, entity name or spawn egg",
+            "trigger": "Viewed in inventory, Creative inventory, block targeting or entity UI, as appropriate to this key.",
+            "tone": "Clear Minecraft UI",
+            "grammar": "Standalone noun phrase, no sentence punctuation.",
+            "constraints": "Preserve namespace IDs, commands, coordinates, color codes, placeholder order and lore proper names. Action-bar labels must stay short; no assumed player gender."
+          },
+          "placeholders": [],
+          "translations": {
+            "cs_CZ": {
+              "text": "Automat: Pastýř",
+              "based_on": "4ce173a9ccc35dc8f26d2f7dece58a64ab27a9b9a5ab1048491bbd9b21b95bac",
+              "status": "ai-draft"
+            },
+            "es_ES": {
+              "text": "Máquina de pastor",
+              "based_on": "4ce173a9ccc35dc8f26d2f7dece58a64ab27a9b9a5ab1048491bbd9b21b95bac",
+              "status": "ai-draft"
+            },
+            "es_MX": {
+              "text": "Máquina de pastor",
+              "based_on": "4ce173a9ccc35dc8f26d2f7dece58a64ab27a9b9a5ab1048491bbd9b21b95bac",
+              "status": "ai-draft"
+            },
+            "pt_PT": {
+              "text": "Máquina de pastor",
+              "based_on": "4ce173a9ccc35dc8f26d2f7dece58a64ab27a9b9a5ab1048491bbd9b21b95bac",
+              "status": "ai-draft"
+            },
+            "pt_BR": {
+              "text": "Máquina de pastor",
+              "based_on": "4ce173a9ccc35dc8f26d2f7dece58a64ab27a9b9a5ab1048491bbd9b21b95bac",
+              "status": "ai-draft"
+            },
+            "de_DE": {
+              "text": "Schäfer-Automat",
+              "based_on": "4ce173a9ccc35dc8f26d2f7dece58a64ab27a9b9a5ab1048491bbd9b21b95bac",
+              "status": "ai-draft"
+            },
+            "fr_FR": {
+              "text": "Distributeur : Berger",
+              "based_on": "4ce173a9ccc35dc8f26d2f7dece58a64ab27a9b9a5ab1048491bbd9b21b95bac",
+              "status": "ai-draft"
+            },
+            "pl_PL": {
+              "text": "Automat: Pasterz",
+              "based_on": "4ce173a9ccc35dc8f26d2f7dece58a64ab27a9b9a5ab1048491bbd9b21b95bac",
+              "status": "ai-draft"
+            }
+          }
+        },
+        "tile.vm:machine_fletcher.name": {
+          "source": "Fletcher Machine",
+          "context": {
+            "meaning": "Automated trade shop using the Fletcher villager profession trade table. Block and hidden trading entity share the same display name. Do not translate as a worker operating a machine.",
+            "location": "vending_rp: inventory/block tooltip, entity name or spawn egg",
+            "trigger": "Viewed in inventory, Creative inventory, block targeting or entity UI, as appropriate to this key.",
+            "tone": "Clear Minecraft UI",
+            "grammar": "Standalone noun phrase, no sentence punctuation.",
+            "constraints": "Preserve namespace IDs, commands, coordinates, color codes, placeholder order and lore proper names. Action-bar labels must stay short; no assumed player gender."
+          },
+          "placeholders": [],
+          "translations": {
+            "cs_CZ": {
+              "text": "Automat: Výrobce šípů",
+              "based_on": "ecc7fc13c64043ce87e10612f3424f101ea1207ddaf01fc321140eca10b82a78",
+              "status": "ai-draft"
+            },
+            "es_ES": {
+              "text": "Máquina de flechero",
+              "based_on": "ecc7fc13c64043ce87e10612f3424f101ea1207ddaf01fc321140eca10b82a78",
+              "status": "ai-draft"
+            },
+            "es_MX": {
+              "text": "Máquina de flechero",
+              "based_on": "ecc7fc13c64043ce87e10612f3424f101ea1207ddaf01fc321140eca10b82a78",
+              "status": "ai-draft"
+            },
+            "pt_PT": {
+              "text": "Máquina de flecheiro",
+              "based_on": "ecc7fc13c64043ce87e10612f3424f101ea1207ddaf01fc321140eca10b82a78",
+              "status": "ai-draft"
+            },
+            "pt_BR": {
+              "text": "Máquina de flecheiro",
+              "based_on": "ecc7fc13c64043ce87e10612f3424f101ea1207ddaf01fc321140eca10b82a78",
+              "status": "ai-draft"
+            },
+            "de_DE": {
+              "text": "Pfeilmacher-Automat",
+              "based_on": "ecc7fc13c64043ce87e10612f3424f101ea1207ddaf01fc321140eca10b82a78",
+              "status": "ai-draft"
+            },
+            "fr_FR": {
+              "text": "Distributeur : Fléchier",
+              "based_on": "ecc7fc13c64043ce87e10612f3424f101ea1207ddaf01fc321140eca10b82a78",
+              "status": "ai-draft"
+            },
+            "pl_PL": {
+              "text": "Automat: Łuczarz",
+              "based_on": "ecc7fc13c64043ce87e10612f3424f101ea1207ddaf01fc321140eca10b82a78",
+              "status": "ai-draft"
+            }
+          }
+        },
+        "entity.vm:trader_fletcher.name": {
+          "source": "Fletcher Machine",
+          "context": {
+            "meaning": "Automated trade shop using the Fletcher villager profession trade table. Block and hidden trading entity share the same display name. Do not translate as a worker operating a machine.",
+            "location": "vending_rp: inventory/block tooltip, entity name or spawn egg",
+            "trigger": "Viewed in inventory, Creative inventory, block targeting or entity UI, as appropriate to this key.",
+            "tone": "Clear Minecraft UI",
+            "grammar": "Standalone noun phrase, no sentence punctuation.",
+            "constraints": "Preserve namespace IDs, commands, coordinates, color codes, placeholder order and lore proper names. Action-bar labels must stay short; no assumed player gender."
+          },
+          "placeholders": [],
+          "translations": {
+            "cs_CZ": {
+              "text": "Automat: Výrobce šípů",
+              "based_on": "ecc7fc13c64043ce87e10612f3424f101ea1207ddaf01fc321140eca10b82a78",
+              "status": "ai-draft"
+            },
+            "es_ES": {
+              "text": "Máquina de flechero",
+              "based_on": "ecc7fc13c64043ce87e10612f3424f101ea1207ddaf01fc321140eca10b82a78",
+              "status": "ai-draft"
+            },
+            "es_MX": {
+              "text": "Máquina de flechero",
+              "based_on": "ecc7fc13c64043ce87e10612f3424f101ea1207ddaf01fc321140eca10b82a78",
+              "status": "ai-draft"
+            },
+            "pt_PT": {
+              "text": "Máquina de flecheiro",
+              "based_on": "ecc7fc13c64043ce87e10612f3424f101ea1207ddaf01fc321140eca10b82a78",
+              "status": "ai-draft"
+            },
+            "pt_BR": {
+              "text": "Máquina de flecheiro",
+              "based_on": "ecc7fc13c64043ce87e10612f3424f101ea1207ddaf01fc321140eca10b82a78",
+              "status": "ai-draft"
+            },
+            "de_DE": {
+              "text": "Pfeilmacher-Automat",
+              "based_on": "ecc7fc13c64043ce87e10612f3424f101ea1207ddaf01fc321140eca10b82a78",
+              "status": "ai-draft"
+            },
+            "fr_FR": {
+              "text": "Distributeur : Fléchier",
+              "based_on": "ecc7fc13c64043ce87e10612f3424f101ea1207ddaf01fc321140eca10b82a78",
+              "status": "ai-draft"
+            },
+            "pl_PL": {
+              "text": "Automat: Łuczarz",
+              "based_on": "ecc7fc13c64043ce87e10612f3424f101ea1207ddaf01fc321140eca10b82a78",
+              "status": "ai-draft"
+            }
+          }
+        },
+        "tile.vm:machine_librarian.name": {
+          "source": "Librarian Machine",
+          "context": {
+            "meaning": "Automated trade shop using the Librarian villager profession trade table. Block and hidden trading entity share the same display name. Do not translate as a worker operating a machine.",
+            "location": "vending_rp: inventory/block tooltip, entity name or spawn egg",
+            "trigger": "Viewed in inventory, Creative inventory, block targeting or entity UI, as appropriate to this key.",
+            "tone": "Clear Minecraft UI",
+            "grammar": "Standalone noun phrase, no sentence punctuation.",
+            "constraints": "Preserve namespace IDs, commands, coordinates, color codes, placeholder order and lore proper names. Action-bar labels must stay short; no assumed player gender."
+          },
+          "placeholders": [],
+          "translations": {
+            "cs_CZ": {
+              "text": "Automat: Knihovník",
+              "based_on": "23a7f3d228ce07457fe984111bac2fcc11b5bb082d886118768e62bc9a7b3279",
+              "status": "ai-draft"
+            },
+            "es_ES": {
+              "text": "Máquina de bibliotecario",
+              "based_on": "23a7f3d228ce07457fe984111bac2fcc11b5bb082d886118768e62bc9a7b3279",
+              "status": "ai-draft"
+            },
+            "es_MX": {
+              "text": "Máquina de bibliotecario",
+              "based_on": "23a7f3d228ce07457fe984111bac2fcc11b5bb082d886118768e62bc9a7b3279",
+              "status": "ai-draft"
+            },
+            "pt_PT": {
+              "text": "Máquina de bibliotecário",
+              "based_on": "23a7f3d228ce07457fe984111bac2fcc11b5bb082d886118768e62bc9a7b3279",
+              "status": "ai-draft"
+            },
+            "pt_BR": {
+              "text": "Máquina de bibliotecário",
+              "based_on": "23a7f3d228ce07457fe984111bac2fcc11b5bb082d886118768e62bc9a7b3279",
+              "status": "ai-draft"
+            },
+            "de_DE": {
+              "text": "Bibliothekar-Automat",
+              "based_on": "23a7f3d228ce07457fe984111bac2fcc11b5bb082d886118768e62bc9a7b3279",
+              "status": "ai-draft"
+            },
+            "fr_FR": {
+              "text": "Distributeur : Bibliothécaire",
+              "based_on": "23a7f3d228ce07457fe984111bac2fcc11b5bb082d886118768e62bc9a7b3279",
+              "status": "ai-draft"
+            },
+            "pl_PL": {
+              "text": "Automat: Bibliotekarz",
+              "based_on": "23a7f3d228ce07457fe984111bac2fcc11b5bb082d886118768e62bc9a7b3279",
+              "status": "ai-draft"
+            }
+          }
+        },
+        "entity.vm:trader_librarian.name": {
+          "source": "Librarian Machine",
+          "context": {
+            "meaning": "Automated trade shop using the Librarian villager profession trade table. Block and hidden trading entity share the same display name. Do not translate as a worker operating a machine.",
+            "location": "vending_rp: inventory/block tooltip, entity name or spawn egg",
+            "trigger": "Viewed in inventory, Creative inventory, block targeting or entity UI, as appropriate to this key.",
+            "tone": "Clear Minecraft UI",
+            "grammar": "Standalone noun phrase, no sentence punctuation.",
+            "constraints": "Preserve namespace IDs, commands, coordinates, color codes, placeholder order and lore proper names. Action-bar labels must stay short; no assumed player gender."
+          },
+          "placeholders": [],
+          "translations": {
+            "cs_CZ": {
+              "text": "Automat: Knihovník",
+              "based_on": "23a7f3d228ce07457fe984111bac2fcc11b5bb082d886118768e62bc9a7b3279",
+              "status": "ai-draft"
+            },
+            "es_ES": {
+              "text": "Máquina de bibliotecario",
+              "based_on": "23a7f3d228ce07457fe984111bac2fcc11b5bb082d886118768e62bc9a7b3279",
+              "status": "ai-draft"
+            },
+            "es_MX": {
+              "text": "Máquina de bibliotecario",
+              "based_on": "23a7f3d228ce07457fe984111bac2fcc11b5bb082d886118768e62bc9a7b3279",
+              "status": "ai-draft"
+            },
+            "pt_PT": {
+              "text": "Máquina de bibliotecário",
+              "based_on": "23a7f3d228ce07457fe984111bac2fcc11b5bb082d886118768e62bc9a7b3279",
+              "status": "ai-draft"
+            },
+            "pt_BR": {
+              "text": "Máquina de bibliotecário",
+              "based_on": "23a7f3d228ce07457fe984111bac2fcc11b5bb082d886118768e62bc9a7b3279",
+              "status": "ai-draft"
+            },
+            "de_DE": {
+              "text": "Bibliothekar-Automat",
+              "based_on": "23a7f3d228ce07457fe984111bac2fcc11b5bb082d886118768e62bc9a7b3279",
+              "status": "ai-draft"
+            },
+            "fr_FR": {
+              "text": "Distributeur : Bibliothécaire",
+              "based_on": "23a7f3d228ce07457fe984111bac2fcc11b5bb082d886118768e62bc9a7b3279",
+              "status": "ai-draft"
+            },
+            "pl_PL": {
+              "text": "Automat: Bibliotekarz",
+              "based_on": "23a7f3d228ce07457fe984111bac2fcc11b5bb082d886118768e62bc9a7b3279",
+              "status": "ai-draft"
+            }
+          }
+        },
+        "tile.vm:machine_cartographer.name": {
+          "source": "Cartographer Machine",
+          "context": {
+            "meaning": "Automated trade shop using the Cartographer villager profession trade table. Block and hidden trading entity share the same display name. Do not translate as a worker operating a machine.",
+            "location": "vending_rp: inventory/block tooltip, entity name or spawn egg",
+            "trigger": "Viewed in inventory, Creative inventory, block targeting or entity UI, as appropriate to this key.",
+            "tone": "Clear Minecraft UI",
+            "grammar": "Standalone noun phrase, no sentence punctuation.",
+            "constraints": "Preserve namespace IDs, commands, coordinates, color codes, placeholder order and lore proper names. Action-bar labels must stay short; no assumed player gender."
+          },
+          "placeholders": [],
+          "translations": {
+            "cs_CZ": {
+              "text": "Automat: Kartograf",
+              "based_on": "451540c27e5d62f22a9b46d5796b5dcbffdc41961c5855f417ea3ffe86eb2f50",
+              "status": "ai-draft"
+            },
+            "es_ES": {
+              "text": "Máquina de cartógrafo",
+              "based_on": "451540c27e5d62f22a9b46d5796b5dcbffdc41961c5855f417ea3ffe86eb2f50",
+              "status": "ai-draft"
+            },
+            "es_MX": {
+              "text": "Máquina de cartógrafo",
+              "based_on": "451540c27e5d62f22a9b46d5796b5dcbffdc41961c5855f417ea3ffe86eb2f50",
+              "status": "ai-draft"
+            },
+            "pt_PT": {
+              "text": "Máquina de cartógrafo",
+              "based_on": "451540c27e5d62f22a9b46d5796b5dcbffdc41961c5855f417ea3ffe86eb2f50",
+              "status": "ai-draft"
+            },
+            "pt_BR": {
+              "text": "Máquina de cartógrafo",
+              "based_on": "451540c27e5d62f22a9b46d5796b5dcbffdc41961c5855f417ea3ffe86eb2f50",
+              "status": "ai-draft"
+            },
+            "de_DE": {
+              "text": "Kartograf-Automat",
+              "based_on": "451540c27e5d62f22a9b46d5796b5dcbffdc41961c5855f417ea3ffe86eb2f50",
+              "status": "ai-draft"
+            },
+            "fr_FR": {
+              "text": "Distributeur : Cartographe",
+              "based_on": "451540c27e5d62f22a9b46d5796b5dcbffdc41961c5855f417ea3ffe86eb2f50",
+              "status": "ai-draft"
+            },
+            "pl_PL": {
+              "text": "Automat: Kartograf",
+              "based_on": "451540c27e5d62f22a9b46d5796b5dcbffdc41961c5855f417ea3ffe86eb2f50",
+              "status": "ai-draft"
+            }
+          }
+        },
+        "entity.vm:trader_cartographer.name": {
+          "source": "Cartographer Machine",
+          "context": {
+            "meaning": "Automated trade shop using the Cartographer villager profession trade table. Block and hidden trading entity share the same display name. Do not translate as a worker operating a machine.",
+            "location": "vending_rp: inventory/block tooltip, entity name or spawn egg",
+            "trigger": "Viewed in inventory, Creative inventory, block targeting or entity UI, as appropriate to this key.",
+            "tone": "Clear Minecraft UI",
+            "grammar": "Standalone noun phrase, no sentence punctuation.",
+            "constraints": "Preserve namespace IDs, commands, coordinates, color codes, placeholder order and lore proper names. Action-bar labels must stay short; no assumed player gender."
+          },
+          "placeholders": [],
+          "translations": {
+            "cs_CZ": {
+              "text": "Automat: Kartograf",
+              "based_on": "451540c27e5d62f22a9b46d5796b5dcbffdc41961c5855f417ea3ffe86eb2f50",
+              "status": "ai-draft"
+            },
+            "es_ES": {
+              "text": "Máquina de cartógrafo",
+              "based_on": "451540c27e5d62f22a9b46d5796b5dcbffdc41961c5855f417ea3ffe86eb2f50",
+              "status": "ai-draft"
+            },
+            "es_MX": {
+              "text": "Máquina de cartógrafo",
+              "based_on": "451540c27e5d62f22a9b46d5796b5dcbffdc41961c5855f417ea3ffe86eb2f50",
+              "status": "ai-draft"
+            },
+            "pt_PT": {
+              "text": "Máquina de cartógrafo",
+              "based_on": "451540c27e5d62f22a9b46d5796b5dcbffdc41961c5855f417ea3ffe86eb2f50",
+              "status": "ai-draft"
+            },
+            "pt_BR": {
+              "text": "Máquina de cartógrafo",
+              "based_on": "451540c27e5d62f22a9b46d5796b5dcbffdc41961c5855f417ea3ffe86eb2f50",
+              "status": "ai-draft"
+            },
+            "de_DE": {
+              "text": "Kartograf-Automat",
+              "based_on": "451540c27e5d62f22a9b46d5796b5dcbffdc41961c5855f417ea3ffe86eb2f50",
+              "status": "ai-draft"
+            },
+            "fr_FR": {
+              "text": "Distributeur : Cartographe",
+              "based_on": "451540c27e5d62f22a9b46d5796b5dcbffdc41961c5855f417ea3ffe86eb2f50",
+              "status": "ai-draft"
+            },
+            "pl_PL": {
+              "text": "Automat: Kartograf",
+              "based_on": "451540c27e5d62f22a9b46d5796b5dcbffdc41961c5855f417ea3ffe86eb2f50",
+              "status": "ai-draft"
+            }
+          }
+        },
+        "tile.vm:machine_cleric.name": {
+          "source": "Cleric Machine",
+          "context": {
+            "meaning": "Automated trade shop using the Cleric villager profession trade table. Block and hidden trading entity share the same display name. Do not translate as a worker operating a machine.",
+            "location": "vending_rp: inventory/block tooltip, entity name or spawn egg",
+            "trigger": "Viewed in inventory, Creative inventory, block targeting or entity UI, as appropriate to this key.",
+            "tone": "Clear Minecraft UI",
+            "grammar": "Standalone noun phrase, no sentence punctuation.",
+            "constraints": "Preserve namespace IDs, commands, coordinates, color codes, placeholder order and lore proper names. Action-bar labels must stay short; no assumed player gender."
+          },
+          "placeholders": [],
+          "translations": {
+            "cs_CZ": {
+              "text": "Automat: Klerik",
+              "based_on": "7388546bd728ec0b081c615c21e9e550778f93a35199e2a57acef524d84c6bd4",
+              "status": "ai-draft"
+            },
+            "es_ES": {
+              "text": "Máquina de clérigo",
+              "based_on": "7388546bd728ec0b081c615c21e9e550778f93a35199e2a57acef524d84c6bd4",
+              "status": "ai-draft"
+            },
+            "es_MX": {
+              "text": "Máquina de clérigo",
+              "based_on": "7388546bd728ec0b081c615c21e9e550778f93a35199e2a57acef524d84c6bd4",
+              "status": "ai-draft"
+            },
+            "pt_PT": {
+              "text": "Máquina de clérigo",
+              "based_on": "7388546bd728ec0b081c615c21e9e550778f93a35199e2a57acef524d84c6bd4",
+              "status": "ai-draft"
+            },
+            "pt_BR": {
+              "text": "Máquina de clérigo",
+              "based_on": "7388546bd728ec0b081c615c21e9e550778f93a35199e2a57acef524d84c6bd4",
+              "status": "ai-draft"
+            },
+            "de_DE": {
+              "text": "Geistlicher-Automat",
+              "based_on": "7388546bd728ec0b081c615c21e9e550778f93a35199e2a57acef524d84c6bd4",
+              "status": "ai-draft"
+            },
+            "fr_FR": {
+              "text": "Distributeur : Prêtre",
+              "based_on": "7388546bd728ec0b081c615c21e9e550778f93a35199e2a57acef524d84c6bd4",
+              "status": "ai-draft"
+            },
+            "pl_PL": {
+              "text": "Automat: Kapłan",
+              "based_on": "7388546bd728ec0b081c615c21e9e550778f93a35199e2a57acef524d84c6bd4",
+              "status": "ai-draft"
+            }
+          }
+        },
+        "entity.vm:trader_cleric.name": {
+          "source": "Cleric Machine",
+          "context": {
+            "meaning": "Automated trade shop using the Cleric villager profession trade table. Block and hidden trading entity share the same display name. Do not translate as a worker operating a machine.",
+            "location": "vending_rp: inventory/block tooltip, entity name or spawn egg",
+            "trigger": "Viewed in inventory, Creative inventory, block targeting or entity UI, as appropriate to this key.",
+            "tone": "Clear Minecraft UI",
+            "grammar": "Standalone noun phrase, no sentence punctuation.",
+            "constraints": "Preserve namespace IDs, commands, coordinates, color codes, placeholder order and lore proper names. Action-bar labels must stay short; no assumed player gender."
+          },
+          "placeholders": [],
+          "translations": {
+            "cs_CZ": {
+              "text": "Automat: Klerik",
+              "based_on": "7388546bd728ec0b081c615c21e9e550778f93a35199e2a57acef524d84c6bd4",
+              "status": "ai-draft"
+            },
+            "es_ES": {
+              "text": "Máquina de clérigo",
+              "based_on": "7388546bd728ec0b081c615c21e9e550778f93a35199e2a57acef524d84c6bd4",
+              "status": "ai-draft"
+            },
+            "es_MX": {
+              "text": "Máquina de clérigo",
+              "based_on": "7388546bd728ec0b081c615c21e9e550778f93a35199e2a57acef524d84c6bd4",
+              "status": "ai-draft"
+            },
+            "pt_PT": {
+              "text": "Máquina de clérigo",
+              "based_on": "7388546bd728ec0b081c615c21e9e550778f93a35199e2a57acef524d84c6bd4",
+              "status": "ai-draft"
+            },
+            "pt_BR": {
+              "text": "Máquina de clérigo",
+              "based_on": "7388546bd728ec0b081c615c21e9e550778f93a35199e2a57acef524d84c6bd4",
+              "status": "ai-draft"
+            },
+            "de_DE": {
+              "text": "Geistlicher-Automat",
+              "based_on": "7388546bd728ec0b081c615c21e9e550778f93a35199e2a57acef524d84c6bd4",
+              "status": "ai-draft"
+            },
+            "fr_FR": {
+              "text": "Distributeur : Prêtre",
+              "based_on": "7388546bd728ec0b081c615c21e9e550778f93a35199e2a57acef524d84c6bd4",
+              "status": "ai-draft"
+            },
+            "pl_PL": {
+              "text": "Automat: Kapłan",
+              "based_on": "7388546bd728ec0b081c615c21e9e550778f93a35199e2a57acef524d84c6bd4",
+              "status": "ai-draft"
+            }
+          }
+        },
+        "tile.vm:machine_armorer.name": {
+          "source": "Armorer Machine",
+          "context": {
+            "meaning": "Automated trade shop using the Armorer villager profession trade table. Block and hidden trading entity share the same display name. Do not translate as a worker operating a machine.",
+            "location": "vending_rp: inventory/block tooltip, entity name or spawn egg",
+            "trigger": "Viewed in inventory, Creative inventory, block targeting or entity UI, as appropriate to this key.",
+            "tone": "Clear Minecraft UI",
+            "grammar": "Standalone noun phrase, no sentence punctuation.",
+            "constraints": "Preserve namespace IDs, commands, coordinates, color codes, placeholder order and lore proper names. Action-bar labels must stay short; no assumed player gender."
+          },
+          "placeholders": [],
+          "translations": {
+            "cs_CZ": {
+              "text": "Automat: Zbrojíř",
+              "based_on": "720ff374fbe53786afd3a6034b78217eacfa1432346e459b3d1dbdcb7ca0fa9a",
+              "status": "ai-draft"
+            },
+            "es_ES": {
+              "text": "Máquina de armero",
+              "based_on": "720ff374fbe53786afd3a6034b78217eacfa1432346e459b3d1dbdcb7ca0fa9a",
+              "status": "ai-draft"
+            },
+            "es_MX": {
+              "text": "Máquina de armero",
+              "based_on": "720ff374fbe53786afd3a6034b78217eacfa1432346e459b3d1dbdcb7ca0fa9a",
+              "status": "ai-draft"
+            },
+            "pt_PT": {
+              "text": "Máquina de vendedor de armaduras",
+              "based_on": "720ff374fbe53786afd3a6034b78217eacfa1432346e459b3d1dbdcb7ca0fa9a",
+              "status": "ai-draft"
+            },
+            "pt_BR": {
+              "text": "Máquina de armadureiro",
+              "based_on": "720ff374fbe53786afd3a6034b78217eacfa1432346e459b3d1dbdcb7ca0fa9a",
+              "status": "ai-draft"
+            },
+            "de_DE": {
+              "text": "Rüstungsschmied-Automat",
+              "based_on": "720ff374fbe53786afd3a6034b78217eacfa1432346e459b3d1dbdcb7ca0fa9a",
+              "status": "ai-draft"
+            },
+            "fr_FR": {
+              "text": "Distributeur : Armurier",
+              "based_on": "720ff374fbe53786afd3a6034b78217eacfa1432346e459b3d1dbdcb7ca0fa9a",
+              "status": "ai-draft"
+            },
+            "pl_PL": {
+              "text": "Automat: Płatnerz",
+              "based_on": "720ff374fbe53786afd3a6034b78217eacfa1432346e459b3d1dbdcb7ca0fa9a",
+              "status": "ai-draft"
+            }
+          }
+        },
+        "entity.vm:trader_armorer.name": {
+          "source": "Armorer Machine",
+          "context": {
+            "meaning": "Automated trade shop using the Armorer villager profession trade table. Block and hidden trading entity share the same display name. Do not translate as a worker operating a machine.",
+            "location": "vending_rp: inventory/block tooltip, entity name or spawn egg",
+            "trigger": "Viewed in inventory, Creative inventory, block targeting or entity UI, as appropriate to this key.",
+            "tone": "Clear Minecraft UI",
+            "grammar": "Standalone noun phrase, no sentence punctuation.",
+            "constraints": "Preserve namespace IDs, commands, coordinates, color codes, placeholder order and lore proper names. Action-bar labels must stay short; no assumed player gender."
+          },
+          "placeholders": [],
+          "translations": {
+            "cs_CZ": {
+              "text": "Automat: Zbrojíř",
+              "based_on": "720ff374fbe53786afd3a6034b78217eacfa1432346e459b3d1dbdcb7ca0fa9a",
+              "status": "ai-draft"
+            },
+            "es_ES": {
+              "text": "Máquina de armero",
+              "based_on": "720ff374fbe53786afd3a6034b78217eacfa1432346e459b3d1dbdcb7ca0fa9a",
+              "status": "ai-draft"
+            },
+            "es_MX": {
+              "text": "Máquina de armero",
+              "based_on": "720ff374fbe53786afd3a6034b78217eacfa1432346e459b3d1dbdcb7ca0fa9a",
+              "status": "ai-draft"
+            },
+            "pt_PT": {
+              "text": "Máquina de vendedor de armaduras",
+              "based_on": "720ff374fbe53786afd3a6034b78217eacfa1432346e459b3d1dbdcb7ca0fa9a",
+              "status": "ai-draft"
+            },
+            "pt_BR": {
+              "text": "Máquina de armadureiro",
+              "based_on": "720ff374fbe53786afd3a6034b78217eacfa1432346e459b3d1dbdcb7ca0fa9a",
+              "status": "ai-draft"
+            },
+            "de_DE": {
+              "text": "Rüstungsschmied-Automat",
+              "based_on": "720ff374fbe53786afd3a6034b78217eacfa1432346e459b3d1dbdcb7ca0fa9a",
+              "status": "ai-draft"
+            },
+            "fr_FR": {
+              "text": "Distributeur : Armurier",
+              "based_on": "720ff374fbe53786afd3a6034b78217eacfa1432346e459b3d1dbdcb7ca0fa9a",
+              "status": "ai-draft"
+            },
+            "pl_PL": {
+              "text": "Automat: Płatnerz",
+              "based_on": "720ff374fbe53786afd3a6034b78217eacfa1432346e459b3d1dbdcb7ca0fa9a",
+              "status": "ai-draft"
+            }
+          }
+        },
+        "tile.vm:machine_weapon_smith.name": {
+          "source": "Weapon Smith Machine",
+          "context": {
+            "meaning": "Automated trade shop using the Weapon Smith villager profession trade table. Block and hidden trading entity share the same display name. Do not translate as a worker operating a machine.",
+            "location": "vending_rp: inventory/block tooltip, entity name or spawn egg",
+            "trigger": "Viewed in inventory, Creative inventory, block targeting or entity UI, as appropriate to this key.",
+            "tone": "Clear Minecraft UI",
+            "grammar": "Standalone noun phrase, no sentence punctuation.",
+            "constraints": "Preserve namespace IDs, commands, coordinates, color codes, placeholder order and lore proper names. Action-bar labels must stay short; no assumed player gender."
+          },
+          "placeholders": [],
+          "translations": {
+            "cs_CZ": {
+              "text": "Automat: Mečíř",
+              "based_on": "30b2edb87046986ead223523e20a47b6812eb73ee179fc4235c7321caf8bf9e0",
+              "status": "ai-draft"
+            },
+            "es_ES": {
+              "text": "Máquina de herrero de armas",
+              "based_on": "30b2edb87046986ead223523e20a47b6812eb73ee179fc4235c7321caf8bf9e0",
+              "status": "ai-draft"
+            },
+            "es_MX": {
+              "text": "Máquina de herrero de armas",
+              "based_on": "30b2edb87046986ead223523e20a47b6812eb73ee179fc4235c7321caf8bf9e0",
+              "status": "ai-draft"
+            },
+            "pt_PT": {
+              "text": "Máquina de armeiro",
+              "based_on": "30b2edb87046986ead223523e20a47b6812eb73ee179fc4235c7321caf8bf9e0",
+              "status": "ai-draft"
+            },
+            "pt_BR": {
+              "text": "Máquina de armeiro",
+              "based_on": "30b2edb87046986ead223523e20a47b6812eb73ee179fc4235c7321caf8bf9e0",
+              "status": "ai-draft"
+            },
+            "de_DE": {
+              "text": "Waffenschmied-Automat",
+              "based_on": "30b2edb87046986ead223523e20a47b6812eb73ee179fc4235c7321caf8bf9e0",
+              "status": "ai-draft"
+            },
+            "fr_FR": {
+              "text": "Distributeur : Forgeron (armes)",
+              "based_on": "30b2edb87046986ead223523e20a47b6812eb73ee179fc4235c7321caf8bf9e0",
+              "status": "ai-draft"
+            },
+            "pl_PL": {
+              "text": "Automat: Zbrojmistrz",
+              "based_on": "30b2edb87046986ead223523e20a47b6812eb73ee179fc4235c7321caf8bf9e0",
+              "status": "ai-draft"
+            }
+          }
+        },
+        "entity.vm:trader_weapon_smith.name": {
+          "source": "Weapon Smith Machine",
+          "context": {
+            "meaning": "Automated trade shop using the Weapon Smith villager profession trade table. Block and hidden trading entity share the same display name. Do not translate as a worker operating a machine.",
+            "location": "vending_rp: inventory/block tooltip, entity name or spawn egg",
+            "trigger": "Viewed in inventory, Creative inventory, block targeting or entity UI, as appropriate to this key.",
+            "tone": "Clear Minecraft UI",
+            "grammar": "Standalone noun phrase, no sentence punctuation.",
+            "constraints": "Preserve namespace IDs, commands, coordinates, color codes, placeholder order and lore proper names. Action-bar labels must stay short; no assumed player gender."
+          },
+          "placeholders": [],
+          "translations": {
+            "cs_CZ": {
+              "text": "Automat: Mečíř",
+              "based_on": "30b2edb87046986ead223523e20a47b6812eb73ee179fc4235c7321caf8bf9e0",
+              "status": "ai-draft"
+            },
+            "es_ES": {
+              "text": "Máquina de herrero de armas",
+              "based_on": "30b2edb87046986ead223523e20a47b6812eb73ee179fc4235c7321caf8bf9e0",
+              "status": "ai-draft"
+            },
+            "es_MX": {
+              "text": "Máquina de herrero de armas",
+              "based_on": "30b2edb87046986ead223523e20a47b6812eb73ee179fc4235c7321caf8bf9e0",
+              "status": "ai-draft"
+            },
+            "pt_PT": {
+              "text": "Máquina de armeiro",
+              "based_on": "30b2edb87046986ead223523e20a47b6812eb73ee179fc4235c7321caf8bf9e0",
+              "status": "ai-draft"
+            },
+            "pt_BR": {
+              "text": "Máquina de armeiro",
+              "based_on": "30b2edb87046986ead223523e20a47b6812eb73ee179fc4235c7321caf8bf9e0",
+              "status": "ai-draft"
+            },
+            "de_DE": {
+              "text": "Waffenschmied-Automat",
+              "based_on": "30b2edb87046986ead223523e20a47b6812eb73ee179fc4235c7321caf8bf9e0",
+              "status": "ai-draft"
+            },
+            "fr_FR": {
+              "text": "Distributeur : Forgeron (armes)",
+              "based_on": "30b2edb87046986ead223523e20a47b6812eb73ee179fc4235c7321caf8bf9e0",
+              "status": "ai-draft"
+            },
+            "pl_PL": {
+              "text": "Automat: Zbrojmistrz",
+              "based_on": "30b2edb87046986ead223523e20a47b6812eb73ee179fc4235c7321caf8bf9e0",
+              "status": "ai-draft"
+            }
+          }
+        },
+        "tile.vm:machine_tool_smith.name": {
+          "source": "Tool Smith Machine",
+          "context": {
+            "meaning": "Automated trade shop using the Tool Smith villager profession trade table. Block and hidden trading entity share the same display name. Do not translate as a worker operating a machine.",
+            "location": "vending_rp: inventory/block tooltip, entity name or spawn egg",
+            "trigger": "Viewed in inventory, Creative inventory, block targeting or entity UI, as appropriate to this key.",
+            "tone": "Clear Minecraft UI",
+            "grammar": "Standalone noun phrase, no sentence punctuation.",
+            "constraints": "Preserve namespace IDs, commands, coordinates, color codes, placeholder order and lore proper names. Action-bar labels must stay short; no assumed player gender."
+          },
+          "placeholders": [],
+          "translations": {
+            "cs_CZ": {
+              "text": "Automat: Nástrojář",
+              "based_on": "2c35da7eb1e946ca242897748ad48099bb5b713f4eb38cc8d0ad745ef80a3a2b",
+              "status": "ai-draft"
+            },
+            "es_ES": {
+              "text": "Máquina de ferretero",
+              "based_on": "2c35da7eb1e946ca242897748ad48099bb5b713f4eb38cc8d0ad745ef80a3a2b",
+              "status": "ai-draft"
+            },
+            "es_MX": {
+              "text": "Máquina de ferretero",
+              "based_on": "2c35da7eb1e946ca242897748ad48099bb5b713f4eb38cc8d0ad745ef80a3a2b",
+              "status": "ai-draft"
+            },
+            "pt_PT": {
+              "text": "Máquina de ferreiro",
+              "based_on": "2c35da7eb1e946ca242897748ad48099bb5b713f4eb38cc8d0ad745ef80a3a2b",
+              "status": "ai-draft"
+            },
+            "pt_BR": {
+              "text": "Máquina de ferramenteiro",
+              "based_on": "2c35da7eb1e946ca242897748ad48099bb5b713f4eb38cc8d0ad745ef80a3a2b",
+              "status": "ai-draft"
+            },
+            "de_DE": {
+              "text": "Werkzeugschmied-Automat",
+              "based_on": "2c35da7eb1e946ca242897748ad48099bb5b713f4eb38cc8d0ad745ef80a3a2b",
+              "status": "ai-draft"
+            },
+            "fr_FR": {
+              "text": "Distributeur : Forgeron (outils)",
+              "based_on": "2c35da7eb1e946ca242897748ad48099bb5b713f4eb38cc8d0ad745ef80a3a2b",
+              "status": "ai-draft"
+            },
+            "pl_PL": {
+              "text": "Automat: Wytwórca narzędzi",
+              "based_on": "2c35da7eb1e946ca242897748ad48099bb5b713f4eb38cc8d0ad745ef80a3a2b",
+              "status": "ai-draft"
+            }
+          }
+        },
+        "entity.vm:trader_tool_smith.name": {
+          "source": "Tool Smith Machine",
+          "context": {
+            "meaning": "Automated trade shop using the Tool Smith villager profession trade table. Block and hidden trading entity share the same display name. Do not translate as a worker operating a machine.",
+            "location": "vending_rp: inventory/block tooltip, entity name or spawn egg",
+            "trigger": "Viewed in inventory, Creative inventory, block targeting or entity UI, as appropriate to this key.",
+            "tone": "Clear Minecraft UI",
+            "grammar": "Standalone noun phrase, no sentence punctuation.",
+            "constraints": "Preserve namespace IDs, commands, coordinates, color codes, placeholder order and lore proper names. Action-bar labels must stay short; no assumed player gender."
+          },
+          "placeholders": [],
+          "translations": {
+            "cs_CZ": {
+              "text": "Automat: Nástrojář",
+              "based_on": "2c35da7eb1e946ca242897748ad48099bb5b713f4eb38cc8d0ad745ef80a3a2b",
+              "status": "ai-draft"
+            },
+            "es_ES": {
+              "text": "Máquina de ferretero",
+              "based_on": "2c35da7eb1e946ca242897748ad48099bb5b713f4eb38cc8d0ad745ef80a3a2b",
+              "status": "ai-draft"
+            },
+            "es_MX": {
+              "text": "Máquina de ferretero",
+              "based_on": "2c35da7eb1e946ca242897748ad48099bb5b713f4eb38cc8d0ad745ef80a3a2b",
+              "status": "ai-draft"
+            },
+            "pt_PT": {
+              "text": "Máquina de ferreiro",
+              "based_on": "2c35da7eb1e946ca242897748ad48099bb5b713f4eb38cc8d0ad745ef80a3a2b",
+              "status": "ai-draft"
+            },
+            "pt_BR": {
+              "text": "Máquina de ferramenteiro",
+              "based_on": "2c35da7eb1e946ca242897748ad48099bb5b713f4eb38cc8d0ad745ef80a3a2b",
+              "status": "ai-draft"
+            },
+            "de_DE": {
+              "text": "Werkzeugschmied-Automat",
+              "based_on": "2c35da7eb1e946ca242897748ad48099bb5b713f4eb38cc8d0ad745ef80a3a2b",
+              "status": "ai-draft"
+            },
+            "fr_FR": {
+              "text": "Distributeur : Forgeron (outils)",
+              "based_on": "2c35da7eb1e946ca242897748ad48099bb5b713f4eb38cc8d0ad745ef80a3a2b",
+              "status": "ai-draft"
+            },
+            "pl_PL": {
+              "text": "Automat: Wytwórca narzędzi",
+              "based_on": "2c35da7eb1e946ca242897748ad48099bb5b713f4eb38cc8d0ad745ef80a3a2b",
+              "status": "ai-draft"
+            }
+          }
+        },
+        "tile.vm:machine_butcher.name": {
+          "source": "Butcher Machine",
+          "context": {
+            "meaning": "Automated trade shop using the Butcher villager profession trade table. Block and hidden trading entity share the same display name. Do not translate as a worker operating a machine.",
+            "location": "vending_rp: inventory/block tooltip, entity name or spawn egg",
+            "trigger": "Viewed in inventory, Creative inventory, block targeting or entity UI, as appropriate to this key.",
+            "tone": "Clear Minecraft UI",
+            "grammar": "Standalone noun phrase, no sentence punctuation.",
+            "constraints": "Preserve namespace IDs, commands, coordinates, color codes, placeholder order and lore proper names. Action-bar labels must stay short; no assumed player gender."
+          },
+          "placeholders": [],
+          "translations": {
+            "cs_CZ": {
+              "text": "Automat: Řezník",
+              "based_on": "d55ec0ca3261666dea80a8dab296c4552dd31a8d0dc31cacec1b758969e5f61f",
+              "status": "ai-draft"
+            },
+            "es_ES": {
+              "text": "Máquina de carnicero",
+              "based_on": "d55ec0ca3261666dea80a8dab296c4552dd31a8d0dc31cacec1b758969e5f61f",
+              "status": "ai-draft"
+            },
+            "es_MX": {
+              "text": "Máquina de carnicero",
+              "based_on": "d55ec0ca3261666dea80a8dab296c4552dd31a8d0dc31cacec1b758969e5f61f",
+              "status": "ai-draft"
+            },
+            "pt_PT": {
+              "text": "Máquina de talhante",
+              "based_on": "d55ec0ca3261666dea80a8dab296c4552dd31a8d0dc31cacec1b758969e5f61f",
+              "status": "ai-draft"
+            },
+            "pt_BR": {
+              "text": "Máquina de açougueiro",
+              "based_on": "d55ec0ca3261666dea80a8dab296c4552dd31a8d0dc31cacec1b758969e5f61f",
+              "status": "ai-draft"
+            },
+            "de_DE": {
+              "text": "Metzger-Automat",
+              "based_on": "d55ec0ca3261666dea80a8dab296c4552dd31a8d0dc31cacec1b758969e5f61f",
+              "status": "ai-draft"
+            },
+            "fr_FR": {
+              "text": "Distributeur : Boucher",
+              "based_on": "d55ec0ca3261666dea80a8dab296c4552dd31a8d0dc31cacec1b758969e5f61f",
+              "status": "ai-draft"
+            },
+            "pl_PL": {
+              "text": "Automat: Rzeźnik",
+              "based_on": "d55ec0ca3261666dea80a8dab296c4552dd31a8d0dc31cacec1b758969e5f61f",
+              "status": "ai-draft"
+            }
+          }
+        },
+        "entity.vm:trader_butcher.name": {
+          "source": "Butcher Machine",
+          "context": {
+            "meaning": "Automated trade shop using the Butcher villager profession trade table. Block and hidden trading entity share the same display name. Do not translate as a worker operating a machine.",
+            "location": "vending_rp: inventory/block tooltip, entity name or spawn egg",
+            "trigger": "Viewed in inventory, Creative inventory, block targeting or entity UI, as appropriate to this key.",
+            "tone": "Clear Minecraft UI",
+            "grammar": "Standalone noun phrase, no sentence punctuation.",
+            "constraints": "Preserve namespace IDs, commands, coordinates, color codes, placeholder order and lore proper names. Action-bar labels must stay short; no assumed player gender."
+          },
+          "placeholders": [],
+          "translations": {
+            "cs_CZ": {
+              "text": "Automat: Řezník",
+              "based_on": "d55ec0ca3261666dea80a8dab296c4552dd31a8d0dc31cacec1b758969e5f61f",
+              "status": "ai-draft"
+            },
+            "es_ES": {
+              "text": "Máquina de carnicero",
+              "based_on": "d55ec0ca3261666dea80a8dab296c4552dd31a8d0dc31cacec1b758969e5f61f",
+              "status": "ai-draft"
+            },
+            "es_MX": {
+              "text": "Máquina de carnicero",
+              "based_on": "d55ec0ca3261666dea80a8dab296c4552dd31a8d0dc31cacec1b758969e5f61f",
+              "status": "ai-draft"
+            },
+            "pt_PT": {
+              "text": "Máquina de talhante",
+              "based_on": "d55ec0ca3261666dea80a8dab296c4552dd31a8d0dc31cacec1b758969e5f61f",
+              "status": "ai-draft"
+            },
+            "pt_BR": {
+              "text": "Máquina de açougueiro",
+              "based_on": "d55ec0ca3261666dea80a8dab296c4552dd31a8d0dc31cacec1b758969e5f61f",
+              "status": "ai-draft"
+            },
+            "de_DE": {
+              "text": "Metzger-Automat",
+              "based_on": "d55ec0ca3261666dea80a8dab296c4552dd31a8d0dc31cacec1b758969e5f61f",
+              "status": "ai-draft"
+            },
+            "fr_FR": {
+              "text": "Distributeur : Boucher",
+              "based_on": "d55ec0ca3261666dea80a8dab296c4552dd31a8d0dc31cacec1b758969e5f61f",
+              "status": "ai-draft"
+            },
+            "pl_PL": {
+              "text": "Automat: Rzeźnik",
+              "based_on": "d55ec0ca3261666dea80a8dab296c4552dd31a8d0dc31cacec1b758969e5f61f",
+              "status": "ai-draft"
+            }
+          }
+        },
+        "tile.vm:machine_leather_worker.name": {
+          "source": "Leather Worker Machine",
+          "context": {
+            "meaning": "Automated trade shop using the Leatherworker villager profession trade table. Block and hidden trading entity share the same display name. Do not translate as a worker operating a machine.",
+            "location": "vending_rp: inventory/block tooltip, entity name or spawn egg",
+            "trigger": "Viewed in inventory, Creative inventory, block targeting or entity UI, as appropriate to this key.",
+            "tone": "Clear Minecraft UI",
+            "grammar": "Standalone noun phrase, no sentence punctuation.",
+            "constraints": "Preserve namespace IDs, commands, coordinates, color codes, placeholder order and lore proper names. Action-bar labels must stay short; no assumed player gender."
+          },
+          "placeholders": [],
+          "translations": {
+            "cs_CZ": {
+              "text": "Automat: Koželuh",
+              "based_on": "b2ff2fd08a197b83eeeed329759ebae76310beffdbc9f32c18efc92e9a1c282c",
+              "status": "ai-draft"
+            },
+            "es_ES": {
+              "text": "Máquina de curtidor",
+              "based_on": "b2ff2fd08a197b83eeeed329759ebae76310beffdbc9f32c18efc92e9a1c282c",
+              "status": "ai-draft"
+            },
+            "es_MX": {
+              "text": "Máquina de curtidor",
+              "based_on": "b2ff2fd08a197b83eeeed329759ebae76310beffdbc9f32c18efc92e9a1c282c",
+              "status": "ai-draft"
+            },
+            "pt_PT": {
+              "text": "Máquina de coureiro",
+              "based_on": "b2ff2fd08a197b83eeeed329759ebae76310beffdbc9f32c18efc92e9a1c282c",
+              "status": "ai-draft"
+            },
+            "pt_BR": {
+              "text": "Máquina de coureiro",
+              "based_on": "b2ff2fd08a197b83eeeed329759ebae76310beffdbc9f32c18efc92e9a1c282c",
+              "status": "ai-draft"
+            },
+            "de_DE": {
+              "text": "Gerber-Automat",
+              "based_on": "b2ff2fd08a197b83eeeed329759ebae76310beffdbc9f32c18efc92e9a1c282c",
+              "status": "ai-draft"
+            },
+            "fr_FR": {
+              "text": "Distributeur : Tanneur",
+              "based_on": "b2ff2fd08a197b83eeeed329759ebae76310beffdbc9f32c18efc92e9a1c282c",
+              "status": "ai-draft"
+            },
+            "pl_PL": {
+              "text": "Automat: Rymarz",
+              "based_on": "b2ff2fd08a197b83eeeed329759ebae76310beffdbc9f32c18efc92e9a1c282c",
+              "status": "ai-draft"
+            }
+          }
+        },
+        "entity.vm:trader_leather_worker.name": {
+          "source": "Leather Worker Machine",
+          "context": {
+            "meaning": "Automated trade shop using the Leatherworker villager profession trade table. Block and hidden trading entity share the same display name. Do not translate as a worker operating a machine.",
+            "location": "vending_rp: inventory/block tooltip, entity name or spawn egg",
+            "trigger": "Viewed in inventory, Creative inventory, block targeting or entity UI, as appropriate to this key.",
+            "tone": "Clear Minecraft UI",
+            "grammar": "Standalone noun phrase, no sentence punctuation.",
+            "constraints": "Preserve namespace IDs, commands, coordinates, color codes, placeholder order and lore proper names. Action-bar labels must stay short; no assumed player gender."
+          },
+          "placeholders": [],
+          "translations": {
+            "cs_CZ": {
+              "text": "Automat: Koželuh",
+              "based_on": "b2ff2fd08a197b83eeeed329759ebae76310beffdbc9f32c18efc92e9a1c282c",
+              "status": "ai-draft"
+            },
+            "es_ES": {
+              "text": "Máquina de curtidor",
+              "based_on": "b2ff2fd08a197b83eeeed329759ebae76310beffdbc9f32c18efc92e9a1c282c",
+              "status": "ai-draft"
+            },
+            "es_MX": {
+              "text": "Máquina de curtidor",
+              "based_on": "b2ff2fd08a197b83eeeed329759ebae76310beffdbc9f32c18efc92e9a1c282c",
+              "status": "ai-draft"
+            },
+            "pt_PT": {
+              "text": "Máquina de coureiro",
+              "based_on": "b2ff2fd08a197b83eeeed329759ebae76310beffdbc9f32c18efc92e9a1c282c",
+              "status": "ai-draft"
+            },
+            "pt_BR": {
+              "text": "Máquina de coureiro",
+              "based_on": "b2ff2fd08a197b83eeeed329759ebae76310beffdbc9f32c18efc92e9a1c282c",
+              "status": "ai-draft"
+            },
+            "de_DE": {
+              "text": "Gerber-Automat",
+              "based_on": "b2ff2fd08a197b83eeeed329759ebae76310beffdbc9f32c18efc92e9a1c282c",
+              "status": "ai-draft"
+            },
+            "fr_FR": {
+              "text": "Distributeur : Tanneur",
+              "based_on": "b2ff2fd08a197b83eeeed329759ebae76310beffdbc9f32c18efc92e9a1c282c",
+              "status": "ai-draft"
+            },
+            "pl_PL": {
+              "text": "Automat: Rymarz",
+              "based_on": "b2ff2fd08a197b83eeeed329759ebae76310beffdbc9f32c18efc92e9a1c282c",
+              "status": "ai-draft"
+            }
+          }
+        },
+        "tile.vm:machine_stone_mason.name": {
+          "source": "Stone Mason Machine",
+          "context": {
+            "meaning": "Automated trade shop using the Mason villager profession trade table. Block and hidden trading entity share the same display name. Do not translate as a worker operating a machine.",
+            "location": "vending_rp: inventory/block tooltip, entity name or spawn egg",
+            "trigger": "Viewed in inventory, Creative inventory, block targeting or entity UI, as appropriate to this key.",
+            "tone": "Clear Minecraft UI",
+            "grammar": "Standalone noun phrase, no sentence punctuation.",
+            "constraints": "Preserve namespace IDs, commands, coordinates, color codes, placeholder order and lore proper names. Action-bar labels must stay short; no assumed player gender."
+          },
+          "placeholders": [],
+          "translations": {
+            "cs_CZ": {
+              "text": "Automat: Zedník",
+              "based_on": "d7c1b87f953bd110696b2ee18d9df120aba5fde0afa219eaf3527345141cf1aa",
+              "status": "ai-draft"
+            },
+            "es_ES": {
+              "text": "Máquina de albañil",
+              "based_on": "d7c1b87f953bd110696b2ee18d9df120aba5fde0afa219eaf3527345141cf1aa",
+              "status": "ai-draft"
+            },
+            "es_MX": {
+              "text": "Máquina de albañil",
+              "based_on": "d7c1b87f953bd110696b2ee18d9df120aba5fde0afa219eaf3527345141cf1aa",
+              "status": "ai-draft"
+            },
+            "pt_PT": {
+              "text": "Máquina de pedreiro",
+              "based_on": "d7c1b87f953bd110696b2ee18d9df120aba5fde0afa219eaf3527345141cf1aa",
+              "status": "ai-draft"
+            },
+            "pt_BR": {
+              "text": "Máquina de pedreiro",
+              "based_on": "d7c1b87f953bd110696b2ee18d9df120aba5fde0afa219eaf3527345141cf1aa",
+              "status": "ai-draft"
+            },
+            "de_DE": {
+              "text": "Steinmetz-Automat",
+              "based_on": "d7c1b87f953bd110696b2ee18d9df120aba5fde0afa219eaf3527345141cf1aa",
+              "status": "ai-draft"
+            },
+            "fr_FR": {
+              "text": "Distributeur : Maçon",
+              "based_on": "d7c1b87f953bd110696b2ee18d9df120aba5fde0afa219eaf3527345141cf1aa",
+              "status": "ai-draft"
+            },
+            "pl_PL": {
+              "text": "Automat: Kamieniarz",
+              "based_on": "d7c1b87f953bd110696b2ee18d9df120aba5fde0afa219eaf3527345141cf1aa",
+              "status": "ai-draft"
+            }
+          }
+        },
+        "entity.vm:trader_stone_mason.name": {
+          "source": "Stone Mason Machine",
+          "context": {
+            "meaning": "Automated trade shop using the Mason villager profession trade table. Block and hidden trading entity share the same display name. Do not translate as a worker operating a machine.",
+            "location": "vending_rp: inventory/block tooltip, entity name or spawn egg",
+            "trigger": "Viewed in inventory, Creative inventory, block targeting or entity UI, as appropriate to this key.",
+            "tone": "Clear Minecraft UI",
+            "grammar": "Standalone noun phrase, no sentence punctuation.",
+            "constraints": "Preserve namespace IDs, commands, coordinates, color codes, placeholder order and lore proper names. Action-bar labels must stay short; no assumed player gender."
+          },
+          "placeholders": [],
+          "translations": {
+            "cs_CZ": {
+              "text": "Automat: Zedník",
+              "based_on": "d7c1b87f953bd110696b2ee18d9df120aba5fde0afa219eaf3527345141cf1aa",
+              "status": "ai-draft"
+            },
+            "es_ES": {
+              "text": "Máquina de albañil",
+              "based_on": "d7c1b87f953bd110696b2ee18d9df120aba5fde0afa219eaf3527345141cf1aa",
+              "status": "ai-draft"
+            },
+            "es_MX": {
+              "text": "Máquina de albañil",
+              "based_on": "d7c1b87f953bd110696b2ee18d9df120aba5fde0afa219eaf3527345141cf1aa",
+              "status": "ai-draft"
+            },
+            "pt_PT": {
+              "text": "Máquina de pedreiro",
+              "based_on": "d7c1b87f953bd110696b2ee18d9df120aba5fde0afa219eaf3527345141cf1aa",
+              "status": "ai-draft"
+            },
+            "pt_BR": {
+              "text": "Máquina de pedreiro",
+              "based_on": "d7c1b87f953bd110696b2ee18d9df120aba5fde0afa219eaf3527345141cf1aa",
+              "status": "ai-draft"
+            },
+            "de_DE": {
+              "text": "Steinmetz-Automat",
+              "based_on": "d7c1b87f953bd110696b2ee18d9df120aba5fde0afa219eaf3527345141cf1aa",
+              "status": "ai-draft"
+            },
+            "fr_FR": {
+              "text": "Distributeur : Maçon",
+              "based_on": "d7c1b87f953bd110696b2ee18d9df120aba5fde0afa219eaf3527345141cf1aa",
+              "status": "ai-draft"
+            },
+            "pl_PL": {
+              "text": "Automat: Kamieniarz",
+              "based_on": "d7c1b87f953bd110696b2ee18d9df120aba5fde0afa219eaf3527345141cf1aa",
+              "status": "ai-draft"
+            }
+          }
+        },
+        "item.vm:upgrade_kit": {
+          "source": "Upgrade Kit",
+          "context": {
+            "meaning": "Consumable vending-machine upgrade which grants discounted trades, not a machine-level increment.",
+            "location": "vending_rp: inventory/block tooltip, entity name or spawn egg",
+            "trigger": "Viewed in inventory, Creative inventory, block targeting or entity UI, as appropriate to this key.",
+            "tone": "Clear Minecraft UI",
+            "grammar": "Standalone noun phrase, no sentence punctuation.",
+            "constraints": "Preserve namespace IDs, commands, coordinates, color codes, placeholder order and lore proper names. Action-bar labels must stay short; no assumed player gender."
+          },
+          "placeholders": [],
+          "translations": {
+            "cs_CZ": {
+              "text": "Vylepšovací sada",
+              "based_on": "a8d941d827d25145bd46ee028d03a6e6b8aeab41585e18b1bfc1cc7393853f37",
+              "status": "ai-draft"
+            },
+            "es_ES": {
+              "text": "Kit de mejora",
+              "based_on": "a8d941d827d25145bd46ee028d03a6e6b8aeab41585e18b1bfc1cc7393853f37",
+              "status": "ai-draft"
+            },
+            "es_MX": {
+              "text": "Kit de mejora",
+              "based_on": "a8d941d827d25145bd46ee028d03a6e6b8aeab41585e18b1bfc1cc7393853f37",
+              "status": "ai-draft"
+            },
+            "pt_PT": {
+              "text": "Kit de melhoria",
+              "based_on": "a8d941d827d25145bd46ee028d03a6e6b8aeab41585e18b1bfc1cc7393853f37",
+              "status": "ai-draft"
+            },
+            "pt_BR": {
+              "text": "Kit de melhoria",
+              "based_on": "a8d941d827d25145bd46ee028d03a6e6b8aeab41585e18b1bfc1cc7393853f37",
+              "status": "ai-draft"
+            },
+            "de_DE": {
+              "text": "Aufrüstungsset",
+              "based_on": "a8d941d827d25145bd46ee028d03a6e6b8aeab41585e18b1bfc1cc7393853f37",
+              "status": "ai-draft"
+            },
+            "fr_FR": {
+              "text": "Kit d’amélioration",
+              "based_on": "a8d941d827d25145bd46ee028d03a6e6b8aeab41585e18b1bfc1cc7393853f37",
+              "status": "ai-draft"
+            },
+            "pl_PL": {
+              "text": "Zestaw ulepszający",
+              "based_on": "a8d941d827d25145bd46ee028d03a6e6b8aeab41585e18b1bfc1cc7393853f37",
+              "status": "ai-draft"
+            }
+          }
+        },
+        "tile.vm:machine_wandering_trader.name": {
+          "source": "Wandering Trader Machine",
+          "context": {
+            "meaning": "Automated trade shop using the Wandering Trader villager profession trade table. Block and hidden trading entity share the same display name. Do not translate as a worker operating a machine.",
+            "location": "vending_rp: inventory/block tooltip, entity name or spawn egg",
+            "trigger": "Viewed in inventory, Creative inventory, block targeting or entity UI, as appropriate to this key.",
+            "tone": "Clear Minecraft UI",
+            "grammar": "Standalone noun phrase, no sentence punctuation.",
+            "constraints": "Preserve namespace IDs, commands, coordinates, color codes, placeholder order and lore proper names. Action-bar labels must stay short; no assumed player gender."
+          },
+          "placeholders": [],
+          "translations": {
+            "cs_CZ": {
+              "text": "Automat: Potulný obchodník",
+              "based_on": "94e95ecbde4bf9a08748bd105e6ada7a425a7e9f3bc321b0533dd3e1f7fbf57c",
+              "status": "ai-draft"
+            },
+            "es_ES": {
+              "text": "Máquina de vendedor errante",
+              "based_on": "94e95ecbde4bf9a08748bd105e6ada7a425a7e9f3bc321b0533dd3e1f7fbf57c",
+              "status": "ai-draft"
+            },
+            "es_MX": {
+              "text": "Máquina de comerciante errante",
+              "based_on": "94e95ecbde4bf9a08748bd105e6ada7a425a7e9f3bc321b0533dd3e1f7fbf57c",
+              "status": "ai-draft"
+            },
+            "pt_PT": {
+              "text": "Máquina de feirante",
+              "based_on": "94e95ecbde4bf9a08748bd105e6ada7a425a7e9f3bc321b0533dd3e1f7fbf57c",
+              "status": "ai-draft"
+            },
+            "pt_BR": {
+              "text": "Máquina de vendedor Ambulante",
+              "based_on": "94e95ecbde4bf9a08748bd105e6ada7a425a7e9f3bc321b0533dd3e1f7fbf57c",
+              "status": "ai-draft"
+            },
+            "de_DE": {
+              "text": "Fahrender Händler-Automat",
+              "based_on": "94e95ecbde4bf9a08748bd105e6ada7a425a7e9f3bc321b0533dd3e1f7fbf57c",
+              "status": "ai-draft"
+            },
+            "fr_FR": {
+              "text": "Distributeur : Marchand ambulant",
+              "based_on": "94e95ecbde4bf9a08748bd105e6ada7a425a7e9f3bc321b0533dd3e1f7fbf57c",
+              "status": "ai-draft"
+            },
+            "pl_PL": {
+              "text": "Automat: Kupiec wędrowny",
+              "based_on": "94e95ecbde4bf9a08748bd105e6ada7a425a7e9f3bc321b0533dd3e1f7fbf57c",
+              "status": "ai-draft"
+            }
+          }
+        },
+        "entity.vm:trader_wandering_trader.name": {
+          "source": "Wandering Trader Machine",
+          "context": {
+            "meaning": "Automated trade shop using the Wandering Trader villager profession trade table. Block and hidden trading entity share the same display name. Do not translate as a worker operating a machine.",
+            "location": "vending_rp: inventory/block tooltip, entity name or spawn egg",
+            "trigger": "Viewed in inventory, Creative inventory, block targeting or entity UI, as appropriate to this key.",
+            "tone": "Clear Minecraft UI",
+            "grammar": "Standalone noun phrase, no sentence punctuation.",
+            "constraints": "Preserve namespace IDs, commands, coordinates, color codes, placeholder order and lore proper names. Action-bar labels must stay short; no assumed player gender."
+          },
+          "placeholders": [],
+          "translations": {
+            "cs_CZ": {
+              "text": "Automat: Potulný obchodník",
+              "based_on": "94e95ecbde4bf9a08748bd105e6ada7a425a7e9f3bc321b0533dd3e1f7fbf57c",
+              "status": "ai-draft"
+            },
+            "es_ES": {
+              "text": "Máquina de vendedor errante",
+              "based_on": "94e95ecbde4bf9a08748bd105e6ada7a425a7e9f3bc321b0533dd3e1f7fbf57c",
+              "status": "ai-draft"
+            },
+            "es_MX": {
+              "text": "Máquina de comerciante errante",
+              "based_on": "94e95ecbde4bf9a08748bd105e6ada7a425a7e9f3bc321b0533dd3e1f7fbf57c",
+              "status": "ai-draft"
+            },
+            "pt_PT": {
+              "text": "Máquina de feirante",
+              "based_on": "94e95ecbde4bf9a08748bd105e6ada7a425a7e9f3bc321b0533dd3e1f7fbf57c",
+              "status": "ai-draft"
+            },
+            "pt_BR": {
+              "text": "Máquina de vendedor Ambulante",
+              "based_on": "94e95ecbde4bf9a08748bd105e6ada7a425a7e9f3bc321b0533dd3e1f7fbf57c",
+              "status": "ai-draft"
+            },
+            "de_DE": {
+              "text": "Fahrender Händler-Automat",
+              "based_on": "94e95ecbde4bf9a08748bd105e6ada7a425a7e9f3bc321b0533dd3e1f7fbf57c",
+              "status": "ai-draft"
+            },
+            "fr_FR": {
+              "text": "Distributeur : Marchand ambulant",
+              "based_on": "94e95ecbde4bf9a08748bd105e6ada7a425a7e9f3bc321b0533dd3e1f7fbf57c",
+              "status": "ai-draft"
+            },
+            "pl_PL": {
+              "text": "Automat: Kupiec wędrowny",
+              "based_on": "94e95ecbde4bf9a08748bd105e6ada7a425a7e9f3bc321b0533dd3e1f7fbf57c",
+              "status": "ai-draft"
+            }
+          }
+        },
+        "tile.vm:machine_shulker.name": {
+          "source": "Shulker Machine",
+          "context": {
+            "meaning": "Shulker Machine.",
+            "location": "vending_rp: inventory/block tooltip, entity name or spawn egg",
+            "trigger": "Viewed in inventory, Creative inventory, block targeting or entity UI, as appropriate to this key.",
+            "tone": "Clear Minecraft UI",
+            "grammar": "Standalone noun phrase, no sentence punctuation.",
+            "constraints": "Preserve namespace IDs, commands, coordinates, color codes, placeholder order and lore proper names. Action-bar labels must stay short; no assumed player gender."
+          },
+          "placeholders": [],
+          "translations": {
+            "cs_CZ": {
+              "text": "Shulkerový automat",
+              "based_on": "0bffac675b4c145925cfb51a8cf5b5772a550fd4f9ff0ec82e0fb7d3fee30021",
+              "status": "ai-draft"
+            },
+            "es_ES": {
+              "text": "Máquina de shulker",
+              "based_on": "0bffac675b4c145925cfb51a8cf5b5772a550fd4f9ff0ec82e0fb7d3fee30021",
+              "status": "ai-draft"
+            },
+            "es_MX": {
+              "text": "Máquina de shulker",
+              "based_on": "0bffac675b4c145925cfb51a8cf5b5772a550fd4f9ff0ec82e0fb7d3fee30021",
+              "status": "ai-draft"
+            },
+            "pt_PT": {
+              "text": "Máquina de shulker",
+              "based_on": "0bffac675b4c145925cfb51a8cf5b5772a550fd4f9ff0ec82e0fb7d3fee30021",
+              "status": "ai-draft"
+            },
+            "pt_BR": {
+              "text": "Máquina de shulker",
+              "based_on": "0bffac675b4c145925cfb51a8cf5b5772a550fd4f9ff0ec82e0fb7d3fee30021",
+              "status": "ai-draft"
+            },
+            "de_DE": {
+              "text": "Shulkerautomat",
+              "based_on": "0bffac675b4c145925cfb51a8cf5b5772a550fd4f9ff0ec82e0fb7d3fee30021",
+              "status": "ai-draft"
+            },
+            "fr_FR": {
+              "text": "Distributeur de Shulker",
+              "based_on": "0bffac675b4c145925cfb51a8cf5b5772a550fd4f9ff0ec82e0fb7d3fee30021",
+              "status": "ai-draft"
+            },
+            "pl_PL": {
+              "text": "Automat shulkera",
+              "based_on": "0bffac675b4c145925cfb51a8cf5b5772a550fd4f9ff0ec82e0fb7d3fee30021",
+              "status": "ai-draft"
+            }
+          }
+        },
+        "entity.vm:trader_shulker.name": {
+          "source": "Shulker Machine",
+          "context": {
+            "meaning": "Shulker Machine.",
+            "location": "vending_rp: inventory/block tooltip, entity name or spawn egg",
+            "trigger": "Viewed in inventory, Creative inventory, block targeting or entity UI, as appropriate to this key.",
+            "tone": "Clear Minecraft UI",
+            "grammar": "Standalone noun phrase, no sentence punctuation.",
+            "constraints": "Preserve namespace IDs, commands, coordinates, color codes, placeholder order and lore proper names. Action-bar labels must stay short; no assumed player gender."
+          },
+          "placeholders": [],
+          "translations": {
+            "cs_CZ": {
+              "text": "Shulkerový automat",
+              "based_on": "0bffac675b4c145925cfb51a8cf5b5772a550fd4f9ff0ec82e0fb7d3fee30021",
+              "status": "ai-draft"
+            },
+            "es_ES": {
+              "text": "Máquina de shulker",
+              "based_on": "0bffac675b4c145925cfb51a8cf5b5772a550fd4f9ff0ec82e0fb7d3fee30021",
+              "status": "ai-draft"
+            },
+            "es_MX": {
+              "text": "Máquina de shulker",
+              "based_on": "0bffac675b4c145925cfb51a8cf5b5772a550fd4f9ff0ec82e0fb7d3fee30021",
+              "status": "ai-draft"
+            },
+            "pt_PT": {
+              "text": "Máquina de shulker",
+              "based_on": "0bffac675b4c145925cfb51a8cf5b5772a550fd4f9ff0ec82e0fb7d3fee30021",
+              "status": "ai-draft"
+            },
+            "pt_BR": {
+              "text": "Máquina de shulker",
+              "based_on": "0bffac675b4c145925cfb51a8cf5b5772a550fd4f9ff0ec82e0fb7d3fee30021",
+              "status": "ai-draft"
+            },
+            "de_DE": {
+              "text": "Shulkerautomat",
+              "based_on": "0bffac675b4c145925cfb51a8cf5b5772a550fd4f9ff0ec82e0fb7d3fee30021",
+              "status": "ai-draft"
+            },
+            "fr_FR": {
+              "text": "Distributeur de Shulker",
+              "based_on": "0bffac675b4c145925cfb51a8cf5b5772a550fd4f9ff0ec82e0fb7d3fee30021",
+              "status": "ai-draft"
+            },
+            "pl_PL": {
+              "text": "Automat shulkera",
+              "based_on": "0bffac675b4c145925cfb51a8cf5b5772a550fd4f9ff0ec82e0fb7d3fee30021",
+              "status": "ai-draft"
+            }
+          }
+        },
+        "item.vm:shulker_core": {
+          "source": "Shulker Core",
+          "context": {
+            "meaning": "Shulker Core.",
+            "location": "vending_rp: inventory/block tooltip, entity name or spawn egg",
+            "trigger": "Viewed in inventory, Creative inventory, block targeting or entity UI, as appropriate to this key.",
+            "tone": "Clear Minecraft UI",
+            "grammar": "Standalone noun phrase, no sentence punctuation.",
+            "constraints": "Preserve namespace IDs, commands, coordinates, color codes, placeholder order and lore proper names. Action-bar labels must stay short; no assumed player gender."
+          },
+          "placeholders": [],
+          "translations": {
+            "cs_CZ": {
+              "text": "Shulkerové jádro",
+              "based_on": "c96f886b2dc5435b1102968e6b4ac5ce4a0fbe5d99357af86e063f14ca5ed1cf",
+              "status": "ai-draft"
+            },
+            "es_ES": {
+              "text": "Núcleo de shulker",
+              "based_on": "c96f886b2dc5435b1102968e6b4ac5ce4a0fbe5d99357af86e063f14ca5ed1cf",
+              "status": "ai-draft"
+            },
+            "es_MX": {
+              "text": "Núcleo de shulker",
+              "based_on": "c96f886b2dc5435b1102968e6b4ac5ce4a0fbe5d99357af86e063f14ca5ed1cf",
+              "status": "ai-draft"
+            },
+            "pt_PT": {
+              "text": "Núcleo de shulker",
+              "based_on": "c96f886b2dc5435b1102968e6b4ac5ce4a0fbe5d99357af86e063f14ca5ed1cf",
+              "status": "ai-draft"
+            },
+            "pt_BR": {
+              "text": "Núcleo de shulker",
+              "based_on": "c96f886b2dc5435b1102968e6b4ac5ce4a0fbe5d99357af86e063f14ca5ed1cf",
+              "status": "ai-draft"
+            },
+            "de_DE": {
+              "text": "Shulkerkern",
+              "based_on": "c96f886b2dc5435b1102968e6b4ac5ce4a0fbe5d99357af86e063f14ca5ed1cf",
+              "status": "ai-draft"
+            },
+            "fr_FR": {
+              "text": "Noyau de Shulker",
+              "based_on": "c96f886b2dc5435b1102968e6b4ac5ce4a0fbe5d99357af86e063f14ca5ed1cf",
+              "status": "ai-draft"
+            },
+            "pl_PL": {
+              "text": "Rdzeń shulkera",
+              "based_on": "c96f886b2dc5435b1102968e6b4ac5ce4a0fbe5d99357af86e063f14ca5ed1cf",
+              "status": "ai-draft"
+            }
+          }
+        },
+        "vending.message.space": {
+          "source": "§cA vending machine needs two blocks of space.",
+          "context": {
+            "meaning": "Machine occupies a lower and upper block; placement needs two blocks of vertical space.",
+            "location": "vending_rp: chat or action bar",
+            "trigger": "Machine occupies a lower and upper block; placement needs two blocks of vertical space.",
+            "tone": "Clear Minecraft UI",
+            "grammar": "Complete sentence; address the player without assuming gender.",
+            "constraints": "Preserve namespace IDs, commands, coordinates, color codes, placeholder order and lore proper names. Action-bar labels must stay short; no assumed player gender.",
+            "source_paths": [
+              "vending_bp/scripts/main.js"
+            ]
+          },
+          "placeholders": [],
+          "translations": {
+            "cs_CZ": {
+              "text": "§cPro automat je potřeba prostor vysoký dva bloky.",
+              "based_on": "5dbd1cc21cd95bfcabd0d221fc9f086dd18a7105af4fa4ea8a2c026d87293c1f",
+              "status": "ai-draft"
+            },
+            "es_ES": {
+              "text": "§cLa máquina necesita dos bloques de altura.",
+              "based_on": "5dbd1cc21cd95bfcabd0d221fc9f086dd18a7105af4fa4ea8a2c026d87293c1f",
+              "status": "ai-draft"
+            },
+            "es_MX": {
+              "text": "§cLa máquina necesita dos bloques de altura.",
+              "based_on": "5dbd1cc21cd95bfcabd0d221fc9f086dd18a7105af4fa4ea8a2c026d87293c1f",
+              "status": "ai-draft"
+            },
+            "pt_PT": {
+              "text": "§cA máquina precisa de dois blocos de altura.",
+              "based_on": "5dbd1cc21cd95bfcabd0d221fc9f086dd18a7105af4fa4ea8a2c026d87293c1f",
+              "status": "ai-draft"
+            },
+            "pt_BR": {
+              "text": "§cA máquina precisa de dois blocos de altura.",
+              "based_on": "5dbd1cc21cd95bfcabd0d221fc9f086dd18a7105af4fa4ea8a2c026d87293c1f",
+              "status": "ai-draft"
+            },
+            "de_DE": {
+              "text": "§cDer Automat braucht zwei Blöcke Platz in der Höhe.",
+              "based_on": "5dbd1cc21cd95bfcabd0d221fc9f086dd18a7105af4fa4ea8a2c026d87293c1f",
+              "status": "ai-draft"
+            },
+            "fr_FR": {
+              "text": "§cLe distributeur a besoin de deux blocs de hauteur.",
+              "based_on": "5dbd1cc21cd95bfcabd0d221fc9f086dd18a7105af4fa4ea8a2c026d87293c1f",
+              "status": "ai-draft"
+            },
+            "pl_PL": {
+              "text": "§cAutomat potrzebuje miejsca na wysokość dwóch bloków.",
+              "based_on": "5dbd1cc21cd95bfcabd0d221fc9f086dd18a7105af4fa4ea8a2c026d87293c1f",
+              "status": "ai-draft"
+            }
+          }
+        },
+        "vending.message.upgraded": {
+          "source": "§eThis machine is already upgraded.",
+          "context": {
+            "meaning": "Discount upgrade is already applied; item is not consumed again.",
+            "location": "vending_rp: chat or action bar",
+            "trigger": "Discount upgrade is already applied; item is not consumed again.",
+            "tone": "Clear Minecraft UI",
+            "grammar": "Complete sentence; address the player without assuming gender.",
+            "constraints": "Preserve namespace IDs, commands, coordinates, color codes, placeholder order and lore proper names. Action-bar labels must stay short; no assumed player gender.",
+            "source_paths": [
+              "vending_bp/scripts/main.js"
+            ]
+          },
+          "placeholders": [],
+          "translations": {
+            "cs_CZ": {
+              "text": "§eTento automat už je vylepšený.",
+              "based_on": "ece2d7f3d95969a41ac2ff0cbb10445c37ce435bec5672b4df5ea0c3e8ce7d97",
+              "status": "ai-draft"
+            },
+            "es_ES": {
+              "text": "§eEsta máquina ya está mejorada.",
+              "based_on": "ece2d7f3d95969a41ac2ff0cbb10445c37ce435bec5672b4df5ea0c3e8ce7d97",
+              "status": "ai-draft"
+            },
+            "es_MX": {
+              "text": "§eEsta máquina ya está mejorada.",
+              "based_on": "ece2d7f3d95969a41ac2ff0cbb10445c37ce435bec5672b4df5ea0c3e8ce7d97",
+              "status": "ai-draft"
+            },
+            "pt_PT": {
+              "text": "§eEsta máquina já foi melhorada.",
+              "based_on": "ece2d7f3d95969a41ac2ff0cbb10445c37ce435bec5672b4df5ea0c3e8ce7d97",
+              "status": "ai-draft"
+            },
+            "pt_BR": {
+              "text": "§eEsta máquina já foi melhorada.",
+              "based_on": "ece2d7f3d95969a41ac2ff0cbb10445c37ce435bec5672b4df5ea0c3e8ce7d97",
+              "status": "ai-draft"
+            },
+            "de_DE": {
+              "text": "§eDieser Automat ist bereits aufgerüstet.",
+              "based_on": "ece2d7f3d95969a41ac2ff0cbb10445c37ce435bec5672b4df5ea0c3e8ce7d97",
+              "status": "ai-draft"
+            },
+            "fr_FR": {
+              "text": "§eCe distributeur est déjà amélioré.",
+              "based_on": "ece2d7f3d95969a41ac2ff0cbb10445c37ce435bec5672b4df5ea0c3e8ce7d97",
+              "status": "ai-draft"
+            },
+            "pl_PL": {
+              "text": "§eTen automat jest już ulepszony.",
+              "based_on": "ece2d7f3d95969a41ac2ff0cbb10445c37ce435bec5672b4df5ea0c3e8ce7d97",
+              "status": "ai-draft"
+            }
+          }
+        },
+        "vending.message.upgrade": {
+          "source": "§aUpgraded — this machine now trades at a discount.",
+          "context": {
+            "meaning": "Upgrade Kit consumed successfully; this machine now offers discounted trades.",
+            "location": "vending_rp: chat or action bar",
+            "trigger": "Upgrade Kit consumed successfully; this machine now offers discounted trades.",
+            "tone": "Clear Minecraft UI",
+            "grammar": "Complete sentence; address the player without assuming gender.",
+            "constraints": "Preserve namespace IDs, commands, coordinates, color codes, placeholder order and lore proper names. Action-bar labels must stay short; no assumed player gender.",
+            "source_paths": [
+              "vending_bp/scripts/main.js"
+            ]
+          },
+          "placeholders": [],
+          "translations": {
+            "cs_CZ": {
+              "text": "§aVylepšeno — tento automat nyní nabízí slevu.",
+              "based_on": "0329edc503035990a9f57f8f8ca0dc66cea6fd6228d7e68ed1f191c71522d6c0",
+              "status": "ai-draft"
+            },
+            "es_ES": {
+              "text": "§aMejora aplicada: esta máquina ofrece descuentos.",
+              "based_on": "0329edc503035990a9f57f8f8ca0dc66cea6fd6228d7e68ed1f191c71522d6c0",
+              "status": "ai-draft"
+            },
+            "es_MX": {
+              "text": "§aMejora aplicada: esta máquina ofrece descuentos.",
+              "based_on": "0329edc503035990a9f57f8f8ca0dc66cea6fd6228d7e68ed1f191c71522d6c0",
+              "status": "ai-draft"
+            },
+            "pt_PT": {
+              "text": "§aMelhoria aplicada — esta máquina oferece agora descontos.",
+              "based_on": "0329edc503035990a9f57f8f8ca0dc66cea6fd6228d7e68ed1f191c71522d6c0",
+              "status": "ai-draft"
+            },
+            "pt_BR": {
+              "text": "§aMelhoria aplicada — esta máquina agora oferece descontos.",
+              "based_on": "0329edc503035990a9f57f8f8ca0dc66cea6fd6228d7e68ed1f191c71522d6c0",
+              "status": "ai-draft"
+            },
+            "de_DE": {
+              "text": "§aAufgerüstet – dieser Automat bietet jetzt günstigere Preise.",
+              "based_on": "0329edc503035990a9f57f8f8ca0dc66cea6fd6228d7e68ed1f191c71522d6c0",
+              "status": "ai-draft"
+            },
+            "fr_FR": {
+              "text": "§aAmélioration effectuée : ce distributeur propose désormais des réductions.",
+              "based_on": "0329edc503035990a9f57f8f8ca0dc66cea6fd6228d7e68ed1f191c71522d6c0",
+              "status": "ai-draft"
+            },
+            "pl_PL": {
+              "text": "§aUlepszono — ten automat oferuje teraz niższe ceny.",
+              "based_on": "0329edc503035990a9f57f8f8ca0dc66cea6fd6228d7e68ed1f191c71522d6c0",
+              "status": "ai-draft"
+            }
+          }
+        },
+        "pack.name": {
+          "source": "Vending Machines — Resource Pack",
+          "context": {
+            "meaning": "Pack title or description for vending_rp. BP means behavior pack; RP means resource pack. Keep mod brands unchanged.",
+            "location": "vending_rp: pack selection screen",
+            "trigger": "Shown when the player views or uses this content.",
+            "tone": "Clear Minecraft UI",
+            "grammar": "Pack title or a complete description; localize pack type and descriptive words.",
+            "constraints": "Preserve namespace IDs, commands, coordinates, color codes, placeholder order and lore proper names. Action-bar labels must stay short; no assumed player gender."
+          },
+          "placeholders": [],
+          "translations": {
+            "cs_CZ": {
+              "text": "Vending Machines — Balíček zdrojů",
+              "based_on": "10d414cc3afe1a992c1a2c5303cf9636b29b54370df0d6e137f03eef6c595fa1",
+              "status": "ai-draft"
+            },
+            "es_ES": {
+              "text": "Vending Machines — Paquete de recursos",
+              "based_on": "10d414cc3afe1a992c1a2c5303cf9636b29b54370df0d6e137f03eef6c595fa1",
+              "status": "ai-draft"
+            },
+            "es_MX": {
+              "text": "Vending Machines — Paquete de recursos",
+              "based_on": "10d414cc3afe1a992c1a2c5303cf9636b29b54370df0d6e137f03eef6c595fa1",
+              "status": "ai-draft"
+            },
+            "pt_PT": {
+              "text": "Vending Machines — Pacote de recursos",
+              "based_on": "10d414cc3afe1a992c1a2c5303cf9636b29b54370df0d6e137f03eef6c595fa1",
+              "status": "ai-draft"
+            },
+            "pt_BR": {
+              "text": "Vending Machines — Pacote de recursos",
+              "based_on": "10d414cc3afe1a992c1a2c5303cf9636b29b54370df0d6e137f03eef6c595fa1",
+              "status": "ai-draft"
+            },
+            "de_DE": {
+              "text": "Vending Machines — Ressourcenpaket",
+              "based_on": "10d414cc3afe1a992c1a2c5303cf9636b29b54370df0d6e137f03eef6c595fa1",
+              "status": "ai-draft"
+            },
+            "fr_FR": {
+              "text": "Vending Machines — Pack de ressources",
+              "based_on": "10d414cc3afe1a992c1a2c5303cf9636b29b54370df0d6e137f03eef6c595fa1",
+              "status": "ai-draft"
+            },
+            "pl_PL": {
+              "text": "Vending Machines — Pakiet zasobów",
+              "based_on": "10d414cc3afe1a992c1a2c5303cf9636b29b54370df0d6e137f03eef6c595fa1",
+              "status": "ai-draft"
+            }
+          }
+        },
+        "pack.description": {
+          "source": "Vending Machines resource pack: textures, models and text for every machine.",
+          "context": {
+            "meaning": "Pack title or description for vending_rp. BP means behavior pack; RP means resource pack. Keep mod brands unchanged.",
+            "location": "vending_rp: pack selection screen",
+            "trigger": "Shown when the player views or uses this content.",
+            "tone": "Clear Minecraft UI",
+            "grammar": "Pack title or a complete description; localize pack type and descriptive words.",
+            "constraints": "Preserve namespace IDs, commands, coordinates, color codes, placeholder order and lore proper names. Action-bar labels must stay short; no assumed player gender."
+          },
+          "placeholders": [],
+          "translations": {
+            "cs_CZ": {
+              "text": "Balíček zdrojů Vending Machines: textury, modely a texty všech automatů.",
+              "based_on": "03a98b65396b512efe67583cd159f4222820fc1bb013740785d67b53a160a593",
+              "status": "ai-draft"
+            },
+            "es_ES": {
+              "text": "Paquete de recursos de Vending Machines: texturas, modelos y textos de todas las máquinas.",
+              "based_on": "03a98b65396b512efe67583cd159f4222820fc1bb013740785d67b53a160a593",
+              "status": "ai-draft"
+            },
+            "es_MX": {
+              "text": "Paquete de recursos de Vending Machines: texturas, modelos y textos de todas las máquinas.",
+              "based_on": "03a98b65396b512efe67583cd159f4222820fc1bb013740785d67b53a160a593",
+              "status": "ai-draft"
+            },
+            "pt_PT": {
+              "text": "Pacote de recursos de Vending Machines: texturas, modelos e textos de todas as máquinas.",
+              "based_on": "03a98b65396b512efe67583cd159f4222820fc1bb013740785d67b53a160a593",
+              "status": "ai-draft"
+            },
+            "pt_BR": {
+              "text": "Pacote de recursos de Vending Machines: texturas, modelos e textos de todas as máquinas.",
+              "based_on": "03a98b65396b512efe67583cd159f4222820fc1bb013740785d67b53a160a593",
+              "status": "ai-draft"
+            },
+            "de_DE": {
+              "text": "Ressourcenpaket für Vending Machines: Texturen, Modelle und Texte aller Automaten.",
+              "based_on": "03a98b65396b512efe67583cd159f4222820fc1bb013740785d67b53a160a593",
+              "status": "ai-draft"
+            },
+            "fr_FR": {
+              "text": "Pack de ressources de Vending Machines : textures, modèles et textes de tous les distributeurs.",
+              "based_on": "03a98b65396b512efe67583cd159f4222820fc1bb013740785d67b53a160a593",
+              "status": "ai-draft"
+            },
+            "pl_PL": {
+              "text": "Pakiet zasobów Vending Machines: tekstury, modele i teksty wszystkich automatów.",
+              "based_on": "03a98b65396b512efe67583cd159f4222820fc1bb013740785d67b53a160a593",
+              "status": "ai-draft"
+            }
+          }
+        }
+      }
+    },
+    "vending_shulker_bp": {
+      "kind": "behavior",
+      "entries": {
+        "pack.name": {
+          "source": "Vending Machines — Shulker",
+          "context": {
+            "meaning": "Pack title or description for vending_shulker_bp. BP means behavior pack; RP means resource pack. Keep mod brands unchanged.",
+            "location": "vending_shulker_bp: pack selection screen",
+            "trigger": "Shown when the player views or uses this content.",
+            "tone": "Clear Minecraft UI",
+            "grammar": "Pack title or a complete description; localize pack type and descriptive words.",
+            "constraints": "Preserve namespace IDs, commands, coordinates, color codes, placeholder order and lore proper names. Action-bar labels must stay short; no assumed player gender."
+          },
+          "placeholders": [],
+          "translations": {
+            "cs_CZ": {
+              "text": "Vending Machines — Shulker",
+              "based_on": "72db6523befe392c8a191537b3bf40d18909c041a197a9d4c9e92a49b9891613",
+              "status": "ai-draft"
+            },
+            "es_ES": {
+              "text": "Vending Machines — Shulker",
+              "based_on": "72db6523befe392c8a191537b3bf40d18909c041a197a9d4c9e92a49b9891613",
+              "status": "ai-draft"
+            },
+            "es_MX": {
+              "text": "Vending Machines — Shulker",
+              "based_on": "72db6523befe392c8a191537b3bf40d18909c041a197a9d4c9e92a49b9891613",
+              "status": "ai-draft"
+            },
+            "pt_PT": {
+              "text": "Vending Machines — Shulker",
+              "based_on": "72db6523befe392c8a191537b3bf40d18909c041a197a9d4c9e92a49b9891613",
+              "status": "ai-draft"
+            },
+            "pt_BR": {
+              "text": "Vending Machines — Shulker",
+              "based_on": "72db6523befe392c8a191537b3bf40d18909c041a197a9d4c9e92a49b9891613",
+              "status": "ai-draft"
+            },
+            "de_DE": {
+              "text": "Vending Machines — Shulker",
+              "based_on": "72db6523befe392c8a191537b3bf40d18909c041a197a9d4c9e92a49b9891613",
+              "status": "ai-draft"
+            },
+            "fr_FR": {
+              "text": "Vending Machines — Shulker",
+              "based_on": "72db6523befe392c8a191537b3bf40d18909c041a197a9d4c9e92a49b9891613",
+              "status": "ai-draft"
+            },
+            "pl_PL": {
+              "text": "Vending Machines — Shulker",
+              "based_on": "72db6523befe392c8a191537b3bf40d18909c041a197a9d4c9e92a49b9891613",
+              "status": "ai-draft"
+            }
+          }
+        },
+        "pack.description": {
+          "source": "Shulker machine selling shells and boxes. Requires Vending Machines core.",
+          "context": {
+            "meaning": "Pack title or description for vending_shulker_bp. BP means behavior pack; RP means resource pack. Keep mod brands unchanged.",
+            "location": "vending_shulker_bp: pack selection screen",
+            "trigger": "Shown when the player views or uses this content.",
+            "tone": "Clear Minecraft UI",
+            "grammar": "Pack title or a complete description; localize pack type and descriptive words.",
+            "constraints": "Preserve namespace IDs, commands, coordinates, color codes, placeholder order and lore proper names. Action-bar labels must stay short; no assumed player gender."
+          },
+          "placeholders": [],
+          "translations": {
+            "cs_CZ": {
+              "text": "Shulkerový automat prodávající krunýře a boxy. Vyžaduje základ Vending Machines.",
+              "based_on": "7718d1e8732f065dbb8bbfbf61d9535c8a394eea359e07178201fb5024cfcd38",
+              "status": "ai-draft"
+            },
+            "es_ES": {
+              "text": "Máquina de shulker que vende caparazones y cajas. Requiere el núcleo de Vending Machines.",
+              "based_on": "7718d1e8732f065dbb8bbfbf61d9535c8a394eea359e07178201fb5024cfcd38",
+              "status": "ai-draft"
+            },
+            "es_MX": {
+              "text": "Máquina de shulker que vende caparazones y cajas. Requiere el núcleo de Vending Machines.",
+              "based_on": "7718d1e8732f065dbb8bbfbf61d9535c8a394eea359e07178201fb5024cfcd38",
+              "status": "ai-draft"
+            },
+            "pt_PT": {
+              "text": "Máquina de shulker que vende carapaças e caixas. Requer a base de Vending Machines.",
+              "based_on": "7718d1e8732f065dbb8bbfbf61d9535c8a394eea359e07178201fb5024cfcd38",
+              "status": "ai-draft"
+            },
+            "pt_BR": {
+              "text": "Máquina de shulker que vende cascos e caixas. Requer a base de Vending Machines.",
+              "based_on": "7718d1e8732f065dbb8bbfbf61d9535c8a394eea359e07178201fb5024cfcd38",
+              "status": "ai-draft"
+            },
+            "de_DE": {
+              "text": "Shulkerautomat für Schalen und Kisten. Benötigt Vending Machines – Basis.",
+              "based_on": "7718d1e8732f065dbb8bbfbf61d9535c8a394eea359e07178201fb5024cfcd38",
+              "status": "ai-draft"
+            },
+            "fr_FR": {
+              "text": "Distributeur de Shulker vendant des carapaces et des boîtes. Nécessite Vending Machines – Base.",
+              "based_on": "7718d1e8732f065dbb8bbfbf61d9535c8a394eea359e07178201fb5024cfcd38",
+              "status": "ai-draft"
+            },
+            "pl_PL": {
+              "text": "Automat shulkera sprzedający skorupy i skrzynie. Wymaga Vending Machines – Podstawa.",
+              "based_on": "7718d1e8732f065dbb8bbfbf61d9535c8a394eea359e07178201fb5024cfcd38",
+              "status": "ai-draft"
+            }
+          }
+        }
+      }
+    },
+    "vending_villagers_bp": {
+      "kind": "behavior",
+      "entries": {
+        "pack.name": {
+          "source": "Vending Machines — Villagers",
+          "context": {
+            "meaning": "Pack title or description for vending_villagers_bp. BP means behavior pack; RP means resource pack. Keep mod brands unchanged.",
+            "location": "vending_villagers_bp: pack selection screen",
+            "trigger": "Shown when the player views or uses this content.",
+            "tone": "Clear Minecraft UI",
+            "grammar": "Pack title or a complete description; localize pack type and descriptive words.",
+            "constraints": "Preserve namespace IDs, commands, coordinates, color codes, placeholder order and lore proper names. Action-bar labels must stay short; no assumed player gender."
+          },
+          "placeholders": [],
+          "translations": {
+            "cs_CZ": {
+              "text": "Vending Machines — Vesničané",
+              "based_on": "455481e3449a36039af233acdbcd080d6d45d22ed7a09f8ce2e1ae589fdffbf0",
+              "status": "ai-draft"
+            },
+            "es_ES": {
+              "text": "Vending Machines — Aldeanos",
+              "based_on": "455481e3449a36039af233acdbcd080d6d45d22ed7a09f8ce2e1ae589fdffbf0",
+              "status": "ai-draft"
+            },
+            "es_MX": {
+              "text": "Vending Machines — Aldeanos",
+              "based_on": "455481e3449a36039af233acdbcd080d6d45d22ed7a09f8ce2e1ae589fdffbf0",
+              "status": "ai-draft"
+            },
+            "pt_PT": {
+              "text": "Vending Machines — Aldeões",
+              "based_on": "455481e3449a36039af233acdbcd080d6d45d22ed7a09f8ce2e1ae589fdffbf0",
+              "status": "ai-draft"
+            },
+            "pt_BR": {
+              "text": "Vending Machines — Aldeões",
+              "based_on": "455481e3449a36039af233acdbcd080d6d45d22ed7a09f8ce2e1ae589fdffbf0",
+              "status": "ai-draft"
+            },
+            "de_DE": {
+              "text": "Vending Machines — Dorfbewohner",
+              "based_on": "455481e3449a36039af233acdbcd080d6d45d22ed7a09f8ce2e1ae589fdffbf0",
+              "status": "ai-draft"
+            },
+            "fr_FR": {
+              "text": "Vending Machines — Villageois",
+              "based_on": "455481e3449a36039af233acdbcd080d6d45d22ed7a09f8ce2e1ae589fdffbf0",
+              "status": "ai-draft"
+            },
+            "pl_PL": {
+              "text": "Vending Machines — Osadnicy",
+              "based_on": "455481e3449a36039af233acdbcd080d6d45d22ed7a09f8ce2e1ae589fdffbf0",
+              "status": "ai-draft"
+            }
+          }
+        },
+        "pack.description": {
+          "source": "Villager profession machines. Requires Vending Machines core.",
+          "context": {
+            "meaning": "Pack title or description for vending_villagers_bp. BP means behavior pack; RP means resource pack. Keep mod brands unchanged.",
+            "location": "vending_villagers_bp: pack selection screen",
+            "trigger": "Shown when the player views or uses this content.",
+            "tone": "Clear Minecraft UI",
+            "grammar": "Pack title or a complete description; localize pack type and descriptive words.",
+            "constraints": "Preserve namespace IDs, commands, coordinates, color codes, placeholder order and lore proper names. Action-bar labels must stay short; no assumed player gender."
+          },
+          "placeholders": [],
+          "translations": {
+            "cs_CZ": {
+              "text": "Automaty pro všechna vesnická povolání. Vyžaduje základ Vending Machines.",
+              "based_on": "586cdf3c0d379407b9e61ae1e3dd6dab18234b892b9a0b488f0dbd885561f753",
+              "status": "ai-draft"
+            },
+            "es_ES": {
+              "text": "Máquinas de las profesiones de aldeano. Requiere el núcleo de Vending Machines.",
+              "based_on": "586cdf3c0d379407b9e61ae1e3dd6dab18234b892b9a0b488f0dbd885561f753",
+              "status": "ai-draft"
+            },
+            "es_MX": {
+              "text": "Máquinas de las profesiones de aldeano. Requiere el núcleo de Vending Machines.",
+              "based_on": "586cdf3c0d379407b9e61ae1e3dd6dab18234b892b9a0b488f0dbd885561f753",
+              "status": "ai-draft"
+            },
+            "pt_PT": {
+              "text": "Máquinas das profissões dos aldeões. Requer a base de Vending Machines.",
+              "based_on": "586cdf3c0d379407b9e61ae1e3dd6dab18234b892b9a0b488f0dbd885561f753",
+              "status": "ai-draft"
+            },
+            "pt_BR": {
+              "text": "Máquinas das profissões dos aldeões. Requer a base de Vending Machines.",
+              "based_on": "586cdf3c0d379407b9e61ae1e3dd6dab18234b892b9a0b488f0dbd885561f753",
+              "status": "ai-draft"
+            },
+            "de_DE": {
+              "text": "Automaten für die Dorfbewohnerberufe. Benötigt Vending Machines – Basis.",
+              "based_on": "586cdf3c0d379407b9e61ae1e3dd6dab18234b892b9a0b488f0dbd885561f753",
+              "status": "ai-draft"
+            },
+            "fr_FR": {
+              "text": "Distributeurs des métiers de villageois. Nécessite Vending Machines – Base.",
+              "based_on": "586cdf3c0d379407b9e61ae1e3dd6dab18234b892b9a0b488f0dbd885561f753",
+              "status": "ai-draft"
+            },
+            "pl_PL": {
+              "text": "Automaty profesji osadników. Wymaga Vending Machines – Podstawa.",
+              "based_on": "586cdf3c0d379407b9e61ae1e3dd6dab18234b892b9a0b488f0dbd885561f753",
+              "status": "ai-draft"
+            }
+          }
+        }
+      }
+    },
+    "vending_wandering_bp": {
+      "kind": "behavior",
+      "entries": {
+        "pack.name": {
+          "source": "Vending Machines — Wandering Trader",
+          "context": {
+            "meaning": "Pack title or description for vending_wandering_bp. BP means behavior pack; RP means resource pack. Keep mod brands unchanged.",
+            "location": "vending_wandering_bp: pack selection screen",
+            "trigger": "Shown when the player views or uses this content.",
+            "tone": "Clear Minecraft UI",
+            "grammar": "Pack title or a complete description; localize pack type and descriptive words.",
+            "constraints": "Preserve namespace IDs, commands, coordinates, color codes, placeholder order and lore proper names. Action-bar labels must stay short; no assumed player gender."
+          },
+          "placeholders": [],
+          "translations": {
+            "cs_CZ": {
+              "text": "Vending Machines — Potulný obchodník",
+              "based_on": "56fae57f89d8942941eafe5fb28fed6c45d4cec6e854af14ef425dee6d4dea18",
+              "status": "ai-draft"
+            },
+            "es_ES": {
+              "text": "Vending Machines — Vendedor ambulante",
+              "based_on": "56fae57f89d8942941eafe5fb28fed6c45d4cec6e854af14ef425dee6d4dea18",
+              "status": "ai-draft"
+            },
+            "es_MX": {
+              "text": "Vending Machines — Comerciante ambulante",
+              "based_on": "56fae57f89d8942941eafe5fb28fed6c45d4cec6e854af14ef425dee6d4dea18",
+              "status": "ai-draft"
+            },
+            "pt_PT": {
+              "text": "Vending Machines — Vendedor ambulante",
+              "based_on": "56fae57f89d8942941eafe5fb28fed6c45d4cec6e854af14ef425dee6d4dea18",
+              "status": "ai-draft"
+            },
+            "pt_BR": {
+              "text": "Vending Machines — Vendedor ambulante",
+              "based_on": "56fae57f89d8942941eafe5fb28fed6c45d4cec6e854af14ef425dee6d4dea18",
+              "status": "ai-draft"
+            },
+            "de_DE": {
+              "text": "Vending Machines — Fahrender Händler",
+              "based_on": "56fae57f89d8942941eafe5fb28fed6c45d4cec6e854af14ef425dee6d4dea18",
+              "status": "ai-draft"
+            },
+            "fr_FR": {
+              "text": "Vending Machines — Marchand ambulant",
+              "based_on": "56fae57f89d8942941eafe5fb28fed6c45d4cec6e854af14ef425dee6d4dea18",
+              "status": "ai-draft"
+            },
+            "pl_PL": {
+              "text": "Vending Machines — Wędrowny handlarz",
+              "based_on": "56fae57f89d8942941eafe5fb28fed6c45d4cec6e854af14ef425dee6d4dea18",
+              "status": "ai-draft"
+            }
+          }
+        },
+        "pack.description": {
+          "source": "Wandering trader machine. Requires Vending Machines core.",
+          "context": {
+            "meaning": "Pack title or description for vending_wandering_bp. BP means behavior pack; RP means resource pack. Keep mod brands unchanged.",
+            "location": "vending_wandering_bp: pack selection screen",
+            "trigger": "Shown when the player views or uses this content.",
+            "tone": "Clear Minecraft UI",
+            "grammar": "Pack title or a complete description; localize pack type and descriptive words.",
+            "constraints": "Preserve namespace IDs, commands, coordinates, color codes, placeholder order and lore proper names. Action-bar labels must stay short; no assumed player gender."
+          },
+          "placeholders": [],
+          "translations": {
+            "cs_CZ": {
+              "text": "Automat potulného obchodníka. Vyžaduje základ Vending Machines.",
+              "based_on": "79e4bfd02b3962a93c6ea7d26f94ffc6a43c29aabc42abcec78381309fce67b9",
+              "status": "ai-draft"
+            },
+            "es_ES": {
+              "text": "Máquina de vendedor ambulante. Requiere el núcleo de Vending Machines.",
+              "based_on": "79e4bfd02b3962a93c6ea7d26f94ffc6a43c29aabc42abcec78381309fce67b9",
+              "status": "ai-draft"
+            },
+            "es_MX": {
+              "text": "Máquina de comerciante ambulante. Requiere el núcleo de Vending Machines.",
+              "based_on": "79e4bfd02b3962a93c6ea7d26f94ffc6a43c29aabc42abcec78381309fce67b9",
+              "status": "ai-draft"
+            },
+            "pt_PT": {
+              "text": "Máquina de vendedor ambulante. Requer a base de Vending Machines.",
+              "based_on": "79e4bfd02b3962a93c6ea7d26f94ffc6a43c29aabc42abcec78381309fce67b9",
+              "status": "ai-draft"
+            },
+            "pt_BR": {
+              "text": "Máquina de vendedor ambulante. Requer a base de Vending Machines.",
+              "based_on": "79e4bfd02b3962a93c6ea7d26f94ffc6a43c29aabc42abcec78381309fce67b9",
+              "status": "ai-draft"
+            },
+            "de_DE": {
+              "text": "Automat des fahrenden Händlers. Benötigt Vending Machines – Basis.",
+              "based_on": "79e4bfd02b3962a93c6ea7d26f94ffc6a43c29aabc42abcec78381309fce67b9",
+              "status": "ai-draft"
+            },
+            "fr_FR": {
+              "text": "Distributeur de marchand ambulant. Nécessite Vending Machines – Base.",
+              "based_on": "79e4bfd02b3962a93c6ea7d26f94ffc6a43c29aabc42abcec78381309fce67b9",
+              "status": "ai-draft"
+            },
+            "pl_PL": {
+              "text": "Automat wędrownego handlarza. Wymaga Vending Machines – Podstawa.",
+              "based_on": "79e4bfd02b3962a93c6ea7d26f94ffc6a43c29aabc42abcec78381309fce67b9",
+              "status": "ai-draft"
+            }
+          }
+        }
+      }
+    }
+  },
+  "glossary": {
+    "brand": {
+      "policy": "Preserve Vending Machines as pack family brand."
+    },
+    "machine": {
+      "meaning": "Automated shop using villager profession trade tables; never an actual villager profession change."
+    },
+    "upgrade": {
+      "meaning": "Upgrade Kit enables discounted trades. Villager tiers remain engine-managed."
+    },
+    "regional": {
+      "policy": "Spain: valla/cantero; Mexico: cerca/albañil. Portugal: talhante and partilhado; Brazil: açougueiro and compartilhado."
+    },
+    "vanilla_reference": {
+      "commit": "46ba6ea985fb5a92d79a9419198f10dda14c199d",
+      "url": "https://github.com/Mojang/bedrock-samples/tree/46ba6ea985fb5a92d79a9419198f10dda14c199d/resource_pack/texts",
+      "status": "Documented sample terminology, not checked in game. Installed extracted 1.26.52 .lang files are empty."
+    },
+    "professions": {
+      "meaning": "Use vanilla Bedrock profession names in standalone labels after a colon where that avoids incorrect grammatical inflection.",
+      "localized": {
+        "cs_CZ": {
+          "farmer": "Farmář",
+          "fisherman": "Rybář",
+          "shepherd": "Pastýř",
+          "fletcher": "Výrobce šípů",
+          "librarian": "Knihovník",
+          "cartographer": "Kartograf",
+          "cleric": "Klerik",
+          "armorer": "Zbrojíř",
+          "weapon_smith": "Mečíř",
+          "tool_smith": "Nástrojář",
+          "butcher": "Řezník",
+          "leather_worker": "Koželuh",
+          "stone_mason": "Zedník",
+          "wandering_trader": "Potulný obchodník"
+        },
+        "es_ES": {
+          "farmer": "Granjero",
+          "fisherman": "Pescador",
+          "shepherd": "Pastor",
+          "fletcher": "Flechero",
+          "librarian": "Bibliotecario",
+          "cartographer": "Cartógrafo",
+          "cleric": "Clérigo",
+          "armorer": "Armero",
+          "weapon_smith": "Herrero de armas",
+          "tool_smith": "Ferretero",
+          "butcher": "Carnicero",
+          "leather_worker": "Curtidor",
+          "stone_mason": "Albañil",
+          "wandering_trader": "Vendedor errante"
+        },
+        "es_MX": {
+          "farmer": "Granjero",
+          "fisherman": "Pescador",
+          "shepherd": "Pastor",
+          "fletcher": "Flechero",
+          "librarian": "Bibliotecario",
+          "cartographer": "Cartógrafo",
+          "cleric": "Clérigo",
+          "armorer": "Armero",
+          "weapon_smith": "Herrero de armas",
+          "tool_smith": "Ferretero",
+          "butcher": "Carnicero",
+          "leather_worker": "Curtidor",
+          "stone_mason": "Albañil",
+          "wandering_trader": "comerciante errante"
+        },
+        "pt_PT": {
+          "farmer": "Agricultor",
+          "fisherman": "Pescador",
+          "shepherd": "Pastor",
+          "fletcher": "Flecheiro",
+          "librarian": "Bibliotecário",
+          "cartographer": "Cartógrafo",
+          "cleric": "Clérigo",
+          "armorer": "Vend. de Armaduras",
+          "weapon_smith": "Armeiro",
+          "tool_smith": "Ferreiro",
+          "butcher": "Talhante",
+          "leather_worker": "Coureiro",
+          "stone_mason": "Pedreiro",
+          "wandering_trader": "Feirante"
+        },
+        "pt_BR": {
+          "farmer": "Fazendeiro",
+          "fisherman": "Pescador",
+          "shepherd": "Pastor",
+          "fletcher": "Flecheiro",
+          "librarian": "Bibliotecário",
+          "cartographer": "Cartógrafo",
+          "cleric": "Clérigo",
+          "armorer": "Armadureiro",
+          "weapon_smith": "Armeiro",
+          "tool_smith": "Ferramenteiro",
+          "butcher": "Açougueiro",
+          "leather_worker": "Coureiro",
+          "stone_mason": "Pedreiro",
+          "wandering_trader": "Vendedor Ambulante"
+        },
+        "de_DE": {
+          "farmer": "Bauer",
+          "fisherman": "Fischer",
+          "shepherd": "Schäfer",
+          "fletcher": "Pfeilmacher",
+          "librarian": "Bibliothekar",
+          "cartographer": "Kartograf",
+          "cleric": "Geistlicher",
+          "armorer": "Rüstungsschmied",
+          "weapon_smith": "Waffenschmied",
+          "tool_smith": "Werkzeugschmied",
+          "butcher": "Metzger",
+          "leather_worker": "Gerber",
+          "stone_mason": "Steinmetz",
+          "wandering_trader": "Fahrender Händler"
+        },
+        "fr_FR": {
+          "farmer": "Fermier",
+          "fisherman": "Pêcheur",
+          "shepherd": "Berger",
+          "fletcher": "Fléchier",
+          "librarian": "Bibliothécaire",
+          "cartographer": "Cartographe",
+          "cleric": "Prêtre",
+          "armorer": "Armurier",
+          "weapon_smith": "Forgeron (armes)",
+          "tool_smith": "Forgeron (outils)",
+          "butcher": "Boucher",
+          "leather_worker": "Tanneur",
+          "stone_mason": "Maçon",
+          "wandering_trader": "Marchand ambulant"
+        },
+        "pl_PL": {
+          "farmer": "Rolnik",
+          "fisherman": "Rybak",
+          "shepherd": "Pasterz",
+          "fletcher": "Łuczarz",
+          "librarian": "Bibliotekarz",
+          "cartographer": "Kartograf",
+          "cleric": "Kapłan",
+          "armorer": "Płatnerz",
+          "weapon_smith": "Zbrojmistrz",
+          "tool_smith": "Wytwórca narzędzi",
+          "butcher": "Rzeźnik",
+          "leather_worker": "Rymarz",
+          "stone_mason": "Kamieniarz",
+          "wandering_trader": "Kupiec wędrowny"
+        }
+      }
+    }
+  },
+  "style": {
+    "audience": "Minecraft players; concise UI and gentle woodland narrative where applicable.",
+    "address": "Czech respectful plural address; Spanish tú; Portuguese Portugal tu, Brazil você; German du; French tu; Polish ty. Avoid assuming player gender.",
+    "review": "AI draft, not independently language-reviewed or tested in game.",
+    "reference": "Locale list verified in installed 1.26.52 reference. Vanilla terminology checked against Mojang bedrock-samples commit 46ba6ea985fb5a92d79a9419198f10dda14c199d; sample terms documented, not checked in game."
+  }
+}

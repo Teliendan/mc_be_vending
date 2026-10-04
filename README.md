@@ -37,3 +37,7 @@ is safe (they refuse to overwrite without `--force`).
 - Art: `make_machine_textures.py`, `vm_make_upgraded_textures.py`, `make_pack_icon.py`.
 
 Pricing rule: upgraded table = the real trader's price; base table dearer (~vanilla / 0.7).
+
+## Localization
+
+Nine locales use a mod-scoped contextual catalog. See [the localization notes](docs/LOCALIZATION.md) before adding or changing player-facing text.

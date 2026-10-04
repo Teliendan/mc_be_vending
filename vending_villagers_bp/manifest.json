@@ -1,8 +1,8 @@
 {
     "format_version": 2,
     "header": {
-        "name": "Vending Machines - Villagers",
-        "description": "The 13 villager profession vending machines. Needs Vending Machines - Core.",
+        "name": "pack.name",
+        "description": "pack.description",
         "uuid": "29f7d092-ad30-449f-bae6-2f0be3f29fbb",
         "version": [
             1,

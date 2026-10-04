@@ -1,8 +1,8 @@
 {
     "format_version": 2,
     "header": {
-        "name": "Vending Machines - Wandering Trader",
-        "description": "A vending machine that sells the wandering trader's wares. Needs Vending Machines - Core.",
+        "name": "pack.name",
+        "description": "pack.description",
         "uuid": "7d564340-4922-4030-9df4-2864511a801a",
         "version": [
             1,
