@@ -45,42 +45,24 @@ Commit name: `Finalize vending graphics and signature ingredients`.
 
 ## Validation
 
-2026-10-05, local vanilla reference 1.26.52: software-reviewed final 13-machine
-standard/upgraded sheet. One-time checks passed for all recipe signatures,
-plain map/arrow variants, and every visible opaque item texel against the source
-sprite (after the deliberate leather tint). Shared body/top textures match the
-accepted comparison pixel-for-pixel. Shared verifier passed every pack with zero
-errors and warnings. Rendering/performance and recipes await the owner's in-game
-check. Iteration drafts are cleaned up after acceptance; git holds final history.
+2026-10-05, local vanilla reference 1.26.52: owner accepted the final graphics and
+confirmed the deployed crouch-placement feature works in game. All recipe
+signatures and plain map/arrow variants were checked offline. Generation asserts
+a full 14x14 display opening and preservation of opaque product pixels. All 15
+goods and both machine tiers were reviewed in software; shared verification
+passed every pack with zero errors/warnings. Recipes and performance have no
+separate in-game test record. Iteration scratch is removed; git retains history.
 
-2026-10-05 follow-up: owner observed the second-from-right display column hiding
-item pixels. The head mask reused the body panel's two-column right edge, leaving
-only 13 product columns despite centring goods in a 14-column window. Head rows
-now use one frame column on each side, exposing interior column 14. Generation
-asserts a full 14x14 opening and that every opaque displayed product texel survives
-frame painting. Commit name: `Restore full-width vending item displays`.
-All 30 before/after head textures compared: the 162 changed pixels are confined
-to interior column 14, rows 1-14. Enlarged armorer/book/wool comparisons reviewed.
-Shared verification passed with zero errors/warnings; deployed and in sync.
-Corrected rendering awaits in-game confirmation.
+The owner requested the entire display width to remain live and every item to be
+centred as well as the pixel grid allows. `display_position()` balances bounds
+(weight 1) and alpha-weighted silhouette (weight 0.5); equal scores favour
+right/down. The owner also requested removing the lower block's inner right
+shadow strip and both broad horizontal recesses. Those areas now continue the
+steel panel, preserving the outer frame, gold rails and emerald controls.
 
-2026-10-05 centring: reviewed every display after the owner's arrow/pearl feedback.
-The former floor division biased odd-sized sprites top-left. `display_position()`
-now searches the positions that keep the fitted sprite fully inside the window,
-balancing its bounds and alpha-weighted silhouette (bounds weight 1, mass 0.5).
-Equal scores favour right/down; no scaling or new clipping is introduced.
-Armorer, Fletcher, Leatherworker, Toolsmith, Wandering Trader and Shulker move
-down one texel; Cleric moves right and down one. The other eight positions are
-already optimal within these constraints. Before/after 1x/2x and enlarged sheets
-reviewed; all 15 fitted sprites preserve their opaque pixels, and all 30 outer
-frames and upgrade markers remain unchanged. Shared verifier: zero errors and
-warnings. Software-reviewed with reference 1.26.52; awaits in-game confirmation.
-Commit name: `Balance vending goods within display windows`.
-
-2026-10-05 lower-panel follow-up: owner confirmed removing both the inner right
-shadow column and the two broad horizontal recesses (display underside and
-collection tray). Those interior texels now continue the steel surface, with
-the outer frame, gold rails, emerald controls and upgrade markers retained.
-Standard/upgraded before/after comparison software-reviewed; only the two shared
-body PNGs changed. Shared verifier passed with zero errors/warnings.
-Commit name: `Allow crouch placement against vending heads and flatten lower panels`.
+| Commit | Final decision |
+|---|---|
+| `cdda0b3` Finalize vending graphics and signature ingredients | Accepted manual shading, vanilla goods and matching recipes |
+| `55f3a3a` Restore full-width vending item displays | Full 14-column display opening |
+| `827dfb7` Balance vending goods within display windows | Centre every fitted item |
+| `d3c2dbb` Allow crouch placement against vending heads and flatten lower panels | Native crouch placement; remove lower simulated recesses |

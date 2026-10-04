@@ -23,6 +23,7 @@ priority over a crouching builder so the standing player can still trade.
 Validation: 2026-10-05, Script API 2.8.0, local reference 1.26.52. Eleven Node
 regression tests pass for ray geometry, occlusion, state transitions, multiplayer
 priority, unload/reload cleanup, and all 15 block definitions. Shared verifier
-passes every pack with zero errors/warnings. The texture comparison was reviewed
-in software. Native placement and trading transitions still require an in-game
-check; the tests do not simulate the engine's input handling or rendering.
+passes every pack with zero errors/warnings. The owner confirmed the deployed
+crouch-placement feature works in game on 2026-10-05. Multiplayer priority and
+unload/reload cases are covered by offline tests, without separate in-game
+confirmation. Local implementation commit: `d3c2dbb`.
