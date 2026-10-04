@@ -28,8 +28,9 @@ Commit name: `Finalize vending graphics and signature ingredients`.
   warm gold shadows and pale glints; faceted emerald buttons; shaded display
   recesses. Top-left lighting, no random noise, no texture resampling.
 - Display goods use the vanilla item sprite (white wool uses the block texture).
-  Existing centre-crop/placement remains; icons larger than the window are cropped
-  without scaling. Leather's greyscale source gets a baked brown tint (160,101,64)
+  Icons larger than the window are centre-cropped without scaling. Fitted sprites
+  use whole-pixel positions balancing their bounds and alpha-weighted silhouette;
+  half-texel ties go right/down. Leather's greyscale source gets a baked brown tint (160,101,64)
   to show leather rather than an iron-looking tunic. Exact in-game tint matching
   has not been separately verified.
 - `tools/machine_catalog.py` defines each profession's recipe item, sprite and
@@ -61,3 +62,16 @@ All 30 before/after head textures compared: the 162 changed pixels are confined
 to interior column 14, rows 1-14. Enlarged armorer/book/wool comparisons reviewed.
 Shared verification passed with zero errors/warnings; deployed and in sync.
 Corrected rendering awaits in-game confirmation.
+
+2026-10-05 centring: reviewed every display after the owner's arrow/pearl feedback.
+The former floor division biased odd-sized sprites top-left. `display_position()`
+now searches the positions that keep the fitted sprite fully inside the window,
+balancing its bounds and alpha-weighted silhouette (bounds weight 1, mass 0.5).
+Equal scores favour right/down; no scaling or new clipping is introduced.
+Armorer, Fletcher, Leatherworker, Toolsmith, Wandering Trader and Shulker move
+down one texel; Cleric moves right and down one. The other eight positions are
+already optimal within these constraints. Before/after 1x/2x and enlarged sheets
+reviewed; all 15 fitted sprites preserve their opaque pixels, and all 30 outer
+frames and upgrade markers remain unchanged. Shared verifier: zero errors and
+warnings. Software-reviewed with reference 1.26.52; awaits in-game confirmation.
+Commit name: `Balance vending goods within display windows`.

@@ -368,11 +368,38 @@ def plot(grid, palette):
     return paint(Image.new("RGBA", (SIZE, SIZE), (0, 0, 0, 0)), grid, palette)
 
 
+def display_position(art):
+    """Balance bounds and visible silhouette at integer positions in the window.
+
+    The bounding box keeps slim handles/tips in the composition; alpha-weighted
+    mass corrects visibly uneven shapes. Half-texel ties go right/down instead
+    of always biasing odd-sized icons toward the top-left.
+    """
+    assert 0 < art.width <= WINDOW and 0 < art.height <= WINDOW
+    pixels = [(x, y, art.getpixel((x, y))[3]) for y in range(art.height)
+              for x in range(art.width) if art.getpixel((x, y))[3]]
+    if not pixels:
+        return 1 + (WINDOW - art.width + 1) // 2, 1 + (WINDOW - art.height + 1) // 2
+    total_alpha = sum(a for x, y, a in pixels)
+    mass_x = sum(x * a for x, y, a in pixels) / total_alpha
+    mass_y = sum(y * a for x, y, a in pixels) / total_alpha
+    centre = (SIZE - 1) / 2
+    def score(position):
+        x, y = position
+        bounds_error = (x + (art.width - 1) / 2 - centre) ** 2
+        bounds_error += (y + (art.height - 1) / 2 - centre) ** 2
+        mass_error = (x + mass_x - centre) ** 2 + (y + mass_y - centre) ** 2
+        return round(bounds_error + 0.5 * mass_error, 12), -y, -x
+    candidates = [(x, y) for y in range(1, 2 + WINDOW - art.height)
+                  for x in range(1, 2 + WINDOW - art.width)]
+    return min(candidates, key=score)
+
+
 def display_case(goods):
     """The glass window with one trade good centred in it.
 
-    The goods sprite is placed by its own alpha bounding box, so a small icon sits
-    centred rather than wherever vanilla happened to draw it. Anything wider or
+    The goods sprite is cropped to its alpha bounding box, then balanced using
+    bounds and visible silhouette mass. Anything wider or
     taller than the window is centre-cropped -- never scaled; a resampled item
     sprite reads as mush at the size Minecraft draws a block.
     """
@@ -386,13 +413,14 @@ def display_case(goods):
         top = max(0, (art.height - WINDOW) // 2)
         art = art.crop((left, top,
                         left + min(WINDOW, art.width), top + min(WINDOW, art.height)))
-    case.paste(art, (1 + (WINDOW - art.width) // 2, 1 + (WINDOW - art.height) // 2), art)
+    x0, y0 = display_position(art)
+    assert 1 <= x0 <= SIZE - 1 - art.width and 1 <= y0 <= SIZE - 1 - art.height
+    case.paste(art, (x0, y0), art)
     for y, row in enumerate(HEAD):
         for x, role in enumerate(row):
             if role != ".":
                 case.putpixel((x, y), surface.getpixel((x, y)))
     # Every opaque product texel, including interior column 14, survives the frame.
-    x0, y0 = 1 + (WINDOW - art.width) // 2, 1 + (WINDOW - art.height) // 2
     for y in range(art.height):
         for x in range(art.width):
             if art.getpixel((x, y))[3] == 255:
