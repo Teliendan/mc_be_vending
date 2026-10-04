@@ -23,8 +23,8 @@ buttons, and the wrench is gold with emerald texels.
 Outputs:
 
   * vm_machine_body.png          -- shared LOWER half: the machine front. Display
-                                    underside, gold trim, two emerald buttons, a
-                                    gold coin slot and a recessed dispensing tray.
+                                    panel, gold trim, two emerald buttons and a
+                                    gold coin slot. Lower recesses are flattened.
                                     Identical on all 13, which is what makes them
                                     a product line rather than 13 odd blocks.
   * vm_machine_top.png           -- the upper half's TOP face: an emerald status
@@ -66,8 +66,8 @@ SIZE = 16
 WINDOW = 14              # the display glass, inset one texel on every side
 
 # profession -> (vanilla folder, sprite) for the good on show. Chosen to be
-# instantly readable at 14x14 AND characteristic of what that machine sells --
-# both matter, which is why the fisherman shows a fish and not a fishing rod.
+# instantly readable at 14x14 and characteristic of that machine. The owner's
+# approved signatures, including the fisherman's fishing rod, live in the catalog.
 PROFESSION_GOODS = {profession: (os.path.join(VANILLA_ROOT, spec[1]), spec[2])
                     for profession, spec in VILLAGER_MACHINES.items()}
 PROFESSION_GOODS.update({
@@ -100,10 +100,10 @@ def _row(middle):
     return "h" + middle + "ks"
 
 
-BODY = [TOP_EDGE] + [_row(m) for m in [
+BODY = [TOP_EDGE] + ["h" + m + m[-1] + "s" for m in [
     "mmmmmmmmmmmmm",
-    "kkkkkkkkkkkkk",     # underside of the display case above
-    "kkkkkkkkkkkkk",
+    "mmmmmmmmmmmmm",     # flush metal under the display, no inset shadow band
+    "mmmmmmmmmmmmm",
     "GGGGGGGGGGGGG",
     "mmmmmmmmmmmmm",
     "mmeemmmmmeemm",     # selection buttons
@@ -112,8 +112,8 @@ BODY = [TOP_EDGE] + [_row(m) for m in [
     "mmmmmmmmmmmmm",
     "GGGGGGGGGGGGG",
     "mmmmmmmmmmmmm",
-    "dkkkkkkkkkkkd",     # dispensing tray
-    "dkkkkkkkkkkkd",
+    "mmmmmmmmmmmmm",     # flush lower panel, no recessed collection tray
+    "mmmmmmmmmmmmm",
     "mmmmmmmmmmmmm",
 ]] + [BOTTOM_EDGE]
 

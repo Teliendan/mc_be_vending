@@ -14,6 +14,10 @@
         "vm:upgraded": [
           false,
           true
+        ],
+        "vm:build_mode": [
+          false,
+          true
         ]
       }
     },
@@ -29,7 +33,9 @@
       },
       "minecraft:map_color": "#8f8f8f",
       "minecraft:geometry": "minecraft:geometry.full_block",
-      "minecraft:redstone_conductivity": { "redstone_conductor": true },
+      "minecraft:redstone_conductivity": {
+        "redstone_conductor": true
+      },
       "minecraft:material_instances": {
         "*": {
           "texture": "vm_machine_body",
@@ -54,6 +60,23 @@
         "components": {
           "minecraft:selection_box": false,
           "minecraft:destructible_by_mining": false
+        }
+      },
+      {
+        "condition": "q.block_state('vm:half') == 1 && q.block_state('vm:build_mode')",
+        "components": {
+          "minecraft:selection_box": {
+            "origin": [
+              -8,
+              0,
+              -8
+            ],
+            "size": [
+              16,
+              16,
+              16
+            ]
+          }
         }
       },
       {

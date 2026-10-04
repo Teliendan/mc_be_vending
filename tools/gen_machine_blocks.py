@@ -2,14 +2,15 @@ r"""Generate the 13 vending-machine block definitions, one custom block per prof
 
 Each machine is ONE custom block, vm:machine_<prof>, that occupies two stacked
 positions through a block state, vm:half: 0 (the solid, selectable, breakable
-base) and 1 (the upper half). The upper half keeps full collision but drops its
-selection box, so a crosshair aimed at it passes straight through to the invisible
-trader standing inside it; the two halves share a geometry so they read as one
+base) and 1 (the upper half). The upper half keeps full collision and normally
+drops its selection box so clicks reach the invisible trader. The core script
+temporarily exposes a full selection box while crouching to allow native block
+placement; the two halves share a geometry so they read as one
 two-block-tall machine.
 
 The base components (worn by every half, so the base is always mineable and
-selectable) wear the shared body texture. The single permutation overrides the
-upper half: selection_box off, unmineable, and swapped to that profession's panel
+selectable) wear the shared body texture. Permutations override the
+upper half: normally selection_box off, always unmineable, and that profession's panel
 texture plus the shared top texture, which lands on "up" -- an absolute face name
 -- so the emerald status light shows on the machine's crown no matter which way
 it faces.
@@ -95,7 +96,8 @@ def build(profession):
             "description": {
                 "identifier": "vm:machine_{}".format(profession),
                 "menu_category": {"category": "items"},
-                "states": {"vm:half": [0, 1], "vm:upgraded": [False, True]},
+                "states": {"vm:half": [0, 1], "vm:upgraded": [False, True],
+                           "vm:build_mode": [False, True]},
             },
             "components": {
                 "minecraft:destructible_by_mining": {"seconds_to_destroy": 8},
@@ -103,6 +105,7 @@ def build(profession):
                 "minecraft:movable": {"movement_type": "immovable"},
                 "minecraft:map_color": "#8f8f8f",
                 "minecraft:geometry": "minecraft:geometry.full_block",
+                "minecraft:redstone_conductivity": {"redstone_conductor": True},
                 "minecraft:material_instances": {
                     "*": {"texture": "vm_machine_body", "render_method": "opaque"},
                 },
@@ -121,6 +124,12 @@ def build(profession):
                         "minecraft:selection_box": False,
                         "minecraft:destructible_by_mining": False,
                     },
+                },
+                {
+                    "condition": "q.block_state('vm:half') == 1 && q.block_state('vm:build_mode')",
+                    "components": {"minecraft:selection_box": {
+                        "origin": [-8, 0, -8], "size": [16, 16, 16],
+                    }},
                 },
                 {
                     "condition": "q.block_state('vm:half') == 0 && q.block_state('vm:upgraded')",

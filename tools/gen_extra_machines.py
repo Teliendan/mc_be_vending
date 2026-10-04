@@ -11,6 +11,8 @@ They are copied from the farmer machine with the name swapped, so the
 two-half block, the upgrade permutations, the invisible trader and the
 vm:apply_upgrade event stay byte-for-byte the shape that is already verified
 in game. The core script needs nothing: it handles any vm:machine_* block.
+Use --blocks-only to refresh the shared machine states/permutations without
+rewriting trade tables, recipes, items or localization resources.
 
 Pricing follows one rule. The UPGRADED table is the real trader's price;
 the base table is dearer, so an un-upgraded machine is worse than finding the
@@ -217,6 +219,15 @@ def build_rp():
 
 
 def main():
+    import argparse
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--blocks-only", action="store_true")
+    args = parser.parse_args()
+    if args.blocks_only:
+        for machine, spec in MACHINES.items():
+            from_template(os.path.join(TEMPLATE_BP, "blocks", "machine_%s.json" % TEMPLATE),
+                          os.path.join(MOD, spec["pack"], "blocks", "machine_%s.json" % machine), machine)
+        return
     for machine, spec in MACHINES.items():
         build_bp(machine, spec)
     build_rp()

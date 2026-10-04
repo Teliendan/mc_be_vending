@@ -15,6 +15,11 @@ Packs - one Core plus one data-only pack per feature, all sharing `vending_rp/`:
 A new feature = a new small BP depending on Core + an entry in `tools/gen_extra_machines.py`.
 Deploy with `mods deploy vending`.
 
+Crouch and aim at the upper block to place blocks or attach torches using native
+Minecraft placement. Stand up to trade. If a standing player aims at the same
+machine, trade access takes priority because the selection box is shared.
+See [interaction notes](docs/INTERACTIONS.md) for implementation and test status.
+
 ## Generators (`tools/`)
 
 Run from anywhere; they locate the packs relative to this repo. All of them were
@@ -34,12 +39,15 @@ is safe (they refuse to overwrite without `--force`).
   entries only, so run `gen_extra_machines.py` after it.
 - `gen_extra_machines.py` - the non-villager feature packs (wandering trader, shulker),
   built from the villager templates; a new feature is an entry in its MACHINES.
+  `--blocks-only` refreshes block definitions without rewriting trades or recipes.
 - Art: `make_machine_textures.py`, `vm_make_upgraded_textures.py`, `make_pack_icon.py`.
 - `machine_catalog.py` is the shared source for the 13 villager machines' displayed
   goods and recipe signature ingredients. Accepted art and item choices:
   [graphics notes](docs/GRAPHICS_CONCEPT.md).
 
 Pricing rule: upgraded table = the real trader's price; base table dearer (~vanilla / 0.7).
+
+Controller regression tests: `node --test tests/build_mode.test.mjs` from this repo.
 
 ## Localization
 

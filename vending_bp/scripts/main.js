@@ -1,12 +1,14 @@
 import { message } from "./messages.js";
 import { world, system, ItemStack, BlockPermutation } from "@minecraft/server";
+import { createBuildModeController } from "./build_mode.js";
 
 // ---------------------------------------------------------------------------
 // Vending machine: block + hidden trader
 //
 // A machine is one custom block occupying two positions -- vm:half 0 (solid,
-// selectable, breakable) and vm:half 1 (solid, but selection_box:false so the
-// crosshair passes through it) -- with an invisible vm:trader_<prof> entity
+// selectable, breakable) and vm:half 1 (solid, normally selection_box:false so
+// clicks reach the trader; selectable while crouching to build against it) --
+// with an invisible vm:trader_<prof> entity
 // standing inside the upper half. The entity owns the trade table; the block
 // owns collision, placement and breaking.
 //
@@ -17,6 +19,22 @@ import { world, system, ItemStack, BlockPermutation } from "@minecraft/server";
 
 const BLOCK_PREFIX = "vm:machine_";
 const TRADER_PREFIX = "vm:trader_";
+const buildMode = createBuildModeController(world);
+
+world.afterEvents.worldLoad.subscribe(() => {
+    for (const id of ["overworld", "nether", "the_end"]) {
+        for (const trader of world.getDimension(id).getEntities()) {
+            if (trader.isValid && trader.typeId.startsWith(TRADER_PREFIX)) buildMode.resetTrader(trader);
+        }
+    }
+    system.runInterval(() => buildMode.update(), 1);
+});
+
+// Suppress trading during the tick in which crouching starts, before the
+// selectable head state reaches the client. Subsequent use is native placement.
+world.beforeEvents.playerInteractWithEntity.subscribe((event) => {
+    if (event.player.isSneaking && event.target.typeId.startsWith(TRADER_PREFIX)) event.cancel = true;
+});
 
 function professionOf(blockTypeId) {
     return blockTypeId.substring(BLOCK_PREFIX.length);
@@ -42,6 +60,7 @@ world.afterEvents.entityLoad.subscribe((e) => {
     const entity = e.entity;
     if (!entity.isValid || !entity.typeId.startsWith(TRADER_PREFIX)) return;
     hideShadow(entity);
+    buildMode.resetTrader(entity);
     // Machines upgraded before the block had a vm:upgraded state catch up here.
     if (entity.getDynamicProperty("vm:upgraded") === true) {
         const l = entity.location;

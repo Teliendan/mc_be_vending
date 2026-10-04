@@ -23,7 +23,8 @@ Commit name: `Finalize vending graphics and signature ingredients`.
 ## Final design and generation
 
 - Existing two full blocks, 16x16 textures, display window, control buttons,
-  collection tray, crown light and three-pixel upgrade corner markers retained.
+  crown light and three-pixel upgrade corner markers retained. Lower panels are
+  flush following the owner's final request to remove the simulated recesses.
 - Cool steel hue-shifted ramps, coherent plate facets and brushed highlights;
   warm gold shadows and pale glints; faceted emerald buttons; shaded display
   recesses. Top-left lighting, no random noise, no texture resampling.
@@ -75,3 +76,11 @@ reviewed; all 15 fitted sprites preserve their opaque pixels, and all 30 outer
 frames and upgrade markers remain unchanged. Shared verifier: zero errors and
 warnings. Software-reviewed with reference 1.26.52; awaits in-game confirmation.
 Commit name: `Balance vending goods within display windows`.
+
+2026-10-05 lower-panel follow-up: owner confirmed removing both the inner right
+shadow column and the two broad horizontal recesses (display underside and
+collection tray). Those interior texels now continue the steel surface, with
+the outer frame, gold rails, emerald controls and upgrade markers retained.
+Standard/upgraded before/after comparison software-reviewed; only the two shared
+body PNGs changed. Shared verifier passed with zero errors/warnings.
+Commit name: `Allow crouch placement against vending heads and flatten lower panels`.
