@@ -50,3 +50,14 @@ sprite (after the deliberate leather tint). Shared body/top textures match the
 accepted comparison pixel-for-pixel. Shared verifier passed every pack with zero
 errors and warnings. Rendering/performance and recipes await the owner's in-game
 check. Iteration drafts are cleaned up after acceptance; git holds final history.
+
+2026-10-05 follow-up: owner observed the second-from-right display column hiding
+item pixels. The head mask reused the body panel's two-column right edge, leaving
+only 13 product columns despite centring goods in a 14-column window. Head rows
+now use one frame column on each side, exposing interior column 14. Generation
+asserts a full 14x14 opening and that every opaque displayed product texel survives
+frame painting. Commit name: `Restore full-width vending item displays`.
+All 30 before/after head textures compared: the 162 changed pixels are confined
+to interior column 14, rows 1-14. Enlarged armorer/book/wool comparisons reviewed.
+Shared verification passed with zero errors/warnings; deployed and in sync.
+Corrected rendering awaits in-game confirmation.

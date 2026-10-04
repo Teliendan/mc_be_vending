@@ -134,7 +134,9 @@ TOP = [TOP_EDGE] + [_row(m) for m in [
     "mmmmmmmmmmmmm",
 ]] + [BOTTOM_EDGE]
 
-HEAD = [TOP_EDGE] + [_row("." * (SIZE - 3)) for _ in range(SIZE - 2)] + [BOTTOM_EDGE]
+# Unlike the control panel, the display has a one-texel frame on both sides.
+# Its full 14-texel interior must remain available to the product sprite.
+HEAD = [TOP_EDGE] + ["h" + "." * WINDOW + "s" for _ in range(SIZE - 2)] + [BOTTOM_EDGE]
 
 # An open-end wrench: jaw open at the top left, handle running to the bottom right.
 # The jaw is left OPEN on purpose -- a closed ring reads as a key, not a spanner.
@@ -389,6 +391,12 @@ def display_case(goods):
         for x, role in enumerate(row):
             if role != ".":
                 case.putpixel((x, y), surface.getpixel((x, y)))
+    # Every opaque product texel, including interior column 14, survives the frame.
+    x0, y0 = 1 + (WINDOW - art.width) // 2, 1 + (WINDOW - art.height) // 2
+    for y in range(art.height):
+        for x in range(art.width):
+            if art.getpixel((x, y))[3] == 255:
+                assert case.getpixel((x0 + x, y0 + y)) == art.getpixel((x, y))
     return case
 
 
@@ -417,6 +425,7 @@ def main():
     for name, grid in (("HEAD", HEAD), ("BODY", BODY), ("TOP", TOP), ("WRENCH", WRENCH)):
         if len(grid) != SIZE or any(len(row) != SIZE for row in grid):
             sys.exit("{} grid is not {}x{}".format(name, SIZE, SIZE))
+    assert all(row[1:-1] == "." * WINDOW for row in HEAD[1:-1])
 
     missing = ["%s/%s" % (os.path.basename(root), sprite)
                for root, sprite in PROFESSION_GOODS.values()
