@@ -35,6 +35,9 @@ is safe (they refuse to overwrite without `--force`).
 - `gen_extra_machines.py` - the non-villager feature packs (wandering trader, shulker),
   built from the villager templates; a new feature is an entry in its MACHINES.
 - Art: `make_machine_textures.py`, `vm_make_upgraded_textures.py`, `make_pack_icon.py`.
+- `machine_catalog.py` is the shared source for the 13 villager machines' displayed
+  goods and recipe signature ingredients. Accepted art and item choices:
+  [graphics notes](docs/GRAPHICS_CONCEPT.md).
 
 Pricing rule: upgraded table = the real trader's price; base table dearer (~vanilla / 0.7).
 

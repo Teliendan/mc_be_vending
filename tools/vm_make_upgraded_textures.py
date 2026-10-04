@@ -7,20 +7,17 @@ The original PNGs are only read, never written.
 """
 from pathlib import Path
 from PIL import Image
+from make_machine_textures import GOLD_RAMP, EMERALD_RAMP, rgba
 
 BLOCKS = Path(__file__).resolve().parent.parent / "vending_rp/textures/blocks"
-
-GOLD_HI = (253, 245, 95, 255)   # the existing corner gold
-GOLD_LO = (214, 170, 32, 255)
-EMERALD_HI = (130, 245, 170, 255)
-EMERALD_LO = (0, 140, 40, 255)
 
 # corner pixel, then its two neighbours along the edges
 CORNERS = {
     "gold": [((15, 0), (14, 0), (15, 1)), ((0, 15), (1, 15), (0, 14))],
     "emerald": [((0, 0), (1, 0), (0, 1)), ((15, 15), (14, 15), (15, 14))],
 }
-COLOURS = {"gold": (GOLD_HI, GOLD_LO), "emerald": (EMERALD_HI, EMERALD_LO)}
+COLOURS = {"gold": tuple(rgba(GOLD_RAMP[i]) for i in (3, 2, 1)),
+           "emerald": tuple(rgba(EMERALD_RAMP[i]) for i in (3, 2, 1))}
 
 
 def upgrade(src: Path) -> Path:
@@ -28,10 +25,10 @@ def upgrade(src: Path) -> Path:
     assert im.size == (16, 16), f"{src.name} is {im.size}, expected 16x16"
     px = im.load()
     for kind, corners in CORNERS.items():
-        hi, lo = COLOURS[kind]
+        hi, mid, lo = COLOURS[kind]
         for corner, arm1, arm2 in corners:
             px[corner] = hi
-            px[arm1] = lo
+            px[arm1] = mid
             px[arm2] = lo
     dst = src.with_name(src.stem + "_upgraded.png")
     im.save(dst)

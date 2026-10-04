@@ -33,23 +33,11 @@ import json
 import os
 MOD = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))  # this mod's repo root
 import sys
+from machine_catalog import VILLAGER_MACHINES
 
 # profession -> (goods T, workstation W), both without the minecraft: namespace.
-RECIPES = {
-    "farmer":         ("wheat",          "composter"),
-    "fisherman":      ("cod",            "barrel"),
-    "shepherd":       ("wool",           "loom"),
-    "fletcher":       ("arrow",          "fletching_table"),
-    "librarian":      ("book",           "lectern"),
-    "cartographer":   ("compass",        "cartography_table"),
-    "cleric":         ("ender_pearl",    "brewing_stand"),
-    "armorer":        ("iron_chestplate", "blast_furnace"),
-    "weapon_smith":   ("iron_sword",     "grindstone"),
-    "tool_smith":     ("iron_pickaxe",   "smithing_table"),
-    "butcher":        ("cooked_beef",    "smoker"),
-    "leather_worker": ("leather",        "cauldron"),
-    "stone_mason":    ("brick",          "stonecutter_block"),
-}
+RECIPES = {profession: (spec[0], spec[3])
+           for profession, spec in VILLAGER_MACHINES.items()}
 
 # recipes track their own version, a long-stable track separate from items and
 # blocks.
@@ -61,6 +49,7 @@ RECIPE_FORMAT_VERSION = "1.20.10"
 # "Potion with aux value 32766 does not exist". Pin the plain variant.
 GOODS_DATA = {
     "arrow": 0,
+    "empty_map": 0,  # plain Empty Map, rather than the locator-map aux variant
 }
 
 RECIPE_DIR = os.path.join(MOD, "vending_villagers_bp", "recipes")

@@ -20,7 +20,7 @@
                 "item": "minecraft:gold_block"
             },
             "T": {
-                "item": "minecraft:leather"
+                "item": "minecraft:leather_chestplate"
             },
             "E": {
                 "item": "minecraft:emerald_block"

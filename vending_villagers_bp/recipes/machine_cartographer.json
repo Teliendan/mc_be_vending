@@ -20,7 +20,8 @@
                 "item": "minecraft:gold_block"
             },
             "T": {
-                "item": "minecraft:compass"
+                "item": "minecraft:empty_map",
+                "data": 0
             },
             "E": {
                 "item": "minecraft:emerald_block"

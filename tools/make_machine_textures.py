@@ -1,15 +1,19 @@
 r"""Build the vending machine block and item textures.
 
+Approved design (2026-10-05): preserve the original layout and shade its materials.
+Signature goods and recipe ingredients share tools/machine_catalog.py.
+
 Two techniques, used deliberately:
 
   * The machine CHASSIS is plotted from an ASCII grid, in a palette sampled out of
     vanilla sprites by luminance. Nothing in vanilla looks like a vending machine,
-    so there is nothing to crop -- but sampling from observer_side.png,
-    gold_ingot.png and emerald.png keeps it sitting beside vanilla blocks rather
-    than on top of them.
+    so there is nothing to crop. machine_surface() shades its existing material
+    regions with restricted hue-shifted ramps, coherent metal facets, top-left
+    light, gold glints, emerald facets and dark recesses. No random noise.
   * The GOODS in the display window are a real vanilla item sprite, blitted 1:1
-    with no scaling: a steak, a book, a sword, red wool. That is what tells you at
+    with no scaling: a porkchop, a book, a sword, white wool. That is what tells you at
     a glance what a machine sells.
+    Leather Tunic uses the vanilla greyscale icon with a baked brown leather tint.
 
 The design language is the recipe. A machine is crafted from iron, an emerald
 block and its workstation; the Upgrade Kit from gold, emeralds, a golden apple and
@@ -32,15 +36,6 @@ Outputs:
   * vm_shulker_core.png          -- the item: two shulker-shell caps closed on a
                                     lime-yellow glow, i.e. a shulker, compacted.
 
-Two earlier passes are recorded here so they are not retried:
-
-  1. A one-texel iron_block border around the raw workstation sprite. iron_block
-     has no dark texels at all, so the border read as a white picture frame at two
-     texels and vanished entirely at one.
-  2. The workstation sprite itself as the panel. Several are simply not
-     identifiable cropped small -- a cauldron side and a stonecutter side are both
-     just grey -- which is why the window now shows the GOODS instead.
-
 The wrench keeps its own palette, drawn wholly from gold_ingot.png. It shares
 character names with the chassis grids but not their colours: folding the two
 palettes together once turned the wrench steel-grey, because the chassis needs
@@ -53,6 +48,7 @@ import argparse
 import os
 MOD = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))  # this mod's repo root
 import sys
+from machine_catalog import VILLAGER_MACHINES, DISPLAY_TINTS
 
 try:
     from PIL import Image
@@ -72,29 +68,21 @@ WINDOW = 14              # the display glass, inset one texel on every side
 # profession -> (vanilla folder, sprite) for the good on show. Chosen to be
 # instantly readable at 14x14 AND characteristic of what that machine sells --
 # both matter, which is why the fisherman shows a fish and not a fishing rod.
-PROFESSION_GOODS = {
-    "farmer": (ITEMS_SRC, "wheat"),
-    "fisherman": (ITEMS_SRC, "fish_raw"),
-    "shepherd": (BLOCKS_SRC, "wool_colored_red"),
-    "fletcher": (ITEMS_SRC, "arrow"),
-    "librarian": (ITEMS_SRC, "book_enchanted"),
-    "cartographer": (ITEMS_SRC, "compass_item"),
-    "cleric": (ITEMS_SRC, "ender_pearl"),
-    "armorer": (ITEMS_SRC, "iron_chestplate"),
-    "weapon_smith": (ITEMS_SRC, "iron_sword"),
-    "tool_smith": (ITEMS_SRC, "iron_pickaxe"),
-    "butcher": (ITEMS_SRC, "beef_cooked"),
-    "leather_worker": (ITEMS_SRC, "leather"),
-    "stone_mason": (ITEMS_SRC, "brick"),
+PROFESSION_GOODS = {profession: (os.path.join(VANILLA_ROOT, spec[1]), spec[2])
+                    for profession, spec in VILLAGER_MACHINES.items()}
+PROFESSION_GOODS.update({
     "wandering_trader": (ITEMS_SRC, "lead"),
     # No vanilla sprite reads as a shulker box: its only block face is a flat
     # purple square. The good is drawn instead -- see shulker_box_sprite().
     "shulker": (None, "shulker_box"),
-}
+})
 
-CHASSIS_SOURCES = {"steel": (BLOCKS_SRC, "observer_side"),
-                   "gold": (ITEMS_SRC, "gold_ingot"),
-                   "emerald": (ITEMS_SRC, "emerald")}
+# Accepted 2026-10-05 graphical-manual pass. Keep these material ramps consistent
+# with vm_make_upgraded_textures.py; only the approved style is generated.
+STEEL_RAMP = ["#292f36", "#414b54", "#5d6b75", "#88959b", "#afbbb9"]
+GOLD_RAMP = ["#97612c", "#ca963e", "#efd25b", "#fff09b"]
+EMERALD_RAMP = ["#15553c", "#228353", "#44bd72", "#a1e498"]
+GLASS_RAMP = ["#182027", "#222e36", "#30414a", "#425962"]
 
 # Chassis grids, one character per texel.
 #   h  highlight edge (top/left)   s  shadow edge (bottom/right)
@@ -240,7 +228,17 @@ DRAWN_GOODS = {"shulker_box": shulker_box_sprite}
 
 
 def goods_sprite(root, name):
-    return DRAWN_GOODS[name]() if root is None else load(root, name)
+    image = DRAWN_GOODS[name]() if root is None else load(root, name)
+    tint = DISPLAY_TINTS.get(name)
+    if tint:
+        image = image.copy()
+        px = image.load()
+        for y in range(image.height):
+            for x in range(image.width):
+                r, g, b, a = px[x, y]
+                px[x, y] = (r * tint[0] // 255, g * tint[1] // 255,
+                            b * tint[2] // 255, a)
+    return image
 
 
 def load(root, name):
@@ -263,26 +261,83 @@ def _ramp(image):
     return texels
 
 
-def chassis_palette():
-    """Map the chassis grid characters to real vanilla colours.
+def rgba(hex_color):
+    return tuple(bytes.fromhex(hex_color[1:])) + (255,)
 
-    Picking by position in each sprite's own luminance ramp, rather than by a
-    hardcoded RGB, means these stay in palette if the vanilla reference is
-    refreshed under us.
-    """
-    ramps = {key: _ramp(load(root, sprite))
-             for key, (root, sprite) in CHASSIS_SOURCES.items()}
-    steel, gold, emerald = ramps["steel"], ramps["gold"], ramps["emerald"]
-    return {
-        "k": steel[0],
-        "s": steel[len(steel) // 12],
-        "d": steel[len(steel) // 5],
-        "m": steel[len(steel) // 2],
-        "h": steel[-1],
-        "G": gold[-1 - len(gold) // 8],
-        "e": emerald[len(emerald) // 2],
-        "E": emerald[-1 - len(emerald) // 4],
-    }
+
+def steel_value(x, y, kind):
+    """Coherent plate facets, rail shadows and short brushed highlights."""
+    value = 2 if x < 6 else 1
+    if kind == "top":
+        if y <= 5:
+            value += 1
+        if y >= 11:
+            value -= 1
+    else:
+        if y in (5, 11):
+            value = 0
+        if y >= 13:
+            value -= 1
+    if (2 <= x <= 4 and 6 <= y <= 9) or (7 <= x <= 9 and y == 1):
+        value += 1
+    if (10 <= x <= 12 and 8 <= y <= 9) or (3 <= x <= 5 and y == 14):
+        value -= 1
+    return min(4, max(0, value))
+
+
+def machine_surface(kind):
+    """Shade the existing layout at one texel per model unit, without noise."""
+    grid = {"head": HEAD, "body": BODY, "top": TOP}[kind]
+    image = Image.new("RGBA", (SIZE, SIZE))
+    for y, row in enumerate(grid):
+        for x, role in enumerate(row):
+            if role == "m":
+                color = STEEL_RAMP[steel_value(x, y, kind)]
+            elif role == "h":
+                value = 4 if (y == 0 and x < 6) or (x == 0 and y < 5) else 3
+                if (y == 0 and 9 <= x <= 12) or (x == 0 and y in (8, 9, 13)):
+                    value -= 1
+                color = STEEL_RAMP[value]
+            elif role == "s":
+                color = STEEL_RAMP[0 if x == 15 or y > 9 else 1]
+            elif role == "d":
+                color = STEEL_RAMP[1 if x < 8 else 0]
+            elif role == "G":
+                value = 2 if x < 8 else 1
+                if x in (1, 2, 6):
+                    value = 3
+                if x in (11, 12) or y == 15:
+                    value = 0
+                color = GOLD_RAMP[value]
+            elif role in ("e", "E"):
+                def neighbour(xx, yy):
+                    return 0 <= xx < SIZE and 0 <= yy < SIZE and grid[yy][xx] in ("e", "E")
+                top, left = not neighbour(x, y - 1), not neighbour(x - 1, y)
+                value = 3 if top and left else 2 if top or left else 1
+                if role == "E":
+                    value = 3 if x < 9 and y < 8 else 2
+                color = EMERALD_RAMP[value]
+            elif role == "k" and kind == "body":
+                value = 0 if y in (2, 12) else 1 if y in (3, 13) else 0
+                if y in (3, 13) and x < 5:
+                    value = 2
+                color = GLASS_RAMP[value]
+            elif kind == "head" and role == ".":
+                value = 2 if y < 4 else 1 if y < 10 else 0
+                if x == 1 and y < 8:
+                    value = min(3, value + 1)
+                if x >= 12:
+                    value = max(0, value - 1)
+                if (2 <= x <= 4 and y == 2) or (x == 2 and y == 3):
+                    value = 3
+                if 4 <= x <= 7 and y in (13, 14):
+                    value = 1
+                color = GLASS_RAMP[value]
+            else:
+                color = GLASS_RAMP[0]
+            image.putpixel((x, y), rgba(color))
+    assert image.size == (SIZE, SIZE) and image.getextrema()[3] == (255, 255)
+    return image
 
 
 def wrench_palette():
@@ -311,7 +366,7 @@ def plot(grid, palette):
     return paint(Image.new("RGBA", (SIZE, SIZE), (0, 0, 0, 0)), grid, palette)
 
 
-def display_case(goods, palette):
+def display_case(goods):
     """The glass window with one trade good centred in it.
 
     The goods sprite is placed by its own alpha bounding box, so a small icon sits
@@ -319,11 +374,8 @@ def display_case(goods, palette):
     taller than the window is centre-cropped -- never scaled; a resampled item
     sprite reads as mush at the size Minecraft draws a block.
     """
-    case = Image.new("RGBA", (SIZE, SIZE), palette["k"])
-    px = case.load()
-    for y in range(1, SIZE - 1):
-        for x in range(1, SIZE - 1):
-            px[x, y] = palette["s"] if y < 4 else palette["k"]   # light falling in
+    surface = machine_surface("head")
+    case = surface.copy()
 
     box = goods.getbbox()
     art = goods.crop(box) if box else goods
@@ -333,7 +385,11 @@ def display_case(goods, palette):
         art = art.crop((left, top,
                         left + min(WINDOW, art.width), top + min(WINDOW, art.height)))
     case.paste(art, (1 + (WINDOW - art.width) // 2, 1 + (WINDOW - art.height) // 2), art)
-    return paint(case, HEAD, palette)
+    for y, row in enumerate(HEAD):
+        for x, role in enumerate(row):
+            if role != ".":
+                case.putpixel((x, y), surface.getpixel((x, y)))
+    return case
 
 
 def write(image, path, force):
@@ -369,19 +425,18 @@ def main():
     if missing:
         sys.exit("vanilla sprites missing, nothing written: {}".format(", ".join(missing)))
 
-    palette = chassis_palette()
     written = []
 
     def wanted(name):
         return not args.only or name in args.only
 
     if wanted("body"):
-        body = plot(BODY, palette)
+        body = machine_surface("body")
         write(body, os.path.join(BLOCKS_DEST, "vm_machine_body.png"), args.force)
         written.append(("body", body))
 
     if wanted("top"):
-        top = plot(TOP, palette)
+        top = machine_surface("top")
         write(top, os.path.join(BLOCKS_DEST, "vm_machine_top.png"), args.force)
         written.append(("top", top))
 
@@ -389,7 +444,7 @@ def main():
         if not wanted(profession):
             continue
         root, sprite = PROFESSION_GOODS[profession]
-        head = display_case(goods_sprite(root, sprite), palette)
+        head = display_case(goods_sprite(root, sprite))
         write(head, os.path.join(BLOCKS_DEST, "vm_machine_head_%s.png" % profession), args.force)
         written.append((profession, head))
 
