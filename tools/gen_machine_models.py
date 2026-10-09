@@ -6,7 +6,7 @@ standing inside it, whose client entity is empty, so this tool writes:
   * RP/models/entity/vm_invisible.geo.json        -- one [0,0,0] cube that renders nothing. A bone
     list with NO cube at all fails the validator, so the zero cube is mandatory, not cosmetic.
   * RP/entity/trader_<prof>.entity.json x13       -- vm:trader_<prof>, points at the empty geo.
-  * RP/blocks.json                                -- 13 entries: sound "stone" + the body texture.
+  * RP/blocks.json                                -- 13 entries: sound "iron" + the body texture.
   * RP/textures/terrain_texture.json              -- body, top and the 13 head panels (new file).
   * merge into RP/textures/item_texture.json      -- the upgrade_kit icon (new shortname).
   * RP/texts/en_US.lang                           -- tile.<block>.name, entity.<trader>.name,
@@ -129,7 +129,7 @@ def write_blocks():
         sys.exit("%s top-level JSON is not an object; refusing to write" % path)
     data["format_version"] = BLOCKS_FORMAT_VERSION
     for prof in PROFESSIONS:
-        data["vm:machine_%s" % prof] = {"sound": "stone", "textures": "vm_machine_body"}
+        data["vm:machine_%s" % prof] = {"sound": "iron", "textures": "vm_machine_body"}
     write_json(path, data)
     return len(data)
 

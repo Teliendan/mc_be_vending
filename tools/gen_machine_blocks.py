@@ -171,6 +171,9 @@ def build(profession):
 def material_policy():
     return {
         "profile": "metal_machine",
+        "property_checks": {"RP:sound": {
+            "counterpart": "minecraft:iron_block", "expected": "iron",
+            "source": "reference/vanilla/current/resource_packs/vanilla_1.21.60/blocks.json"}},
         "harvest": "Existing machine removal handler owns the paired block/trader lifecycle; no new pickaxe loot gate.",
         "reason": "Preserve deliberate protected trader lifecycle: mining 8, resistance 1200, upper half cannot be mined independently.",
         "overrides": {"minecraft:destructible_by_mining": {"seconds_to_destroy": 8},

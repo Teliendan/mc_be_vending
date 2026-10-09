@@ -11,3 +11,13 @@ Existing paired block/trader removal and drop logic remain; pickaxe speed does
 not add a new harvest restriction. In-game tool timing and TNT/trader cleanup
 still need acceptance. Resistance 1200 is not unconditional explosion immunity.
 Standard: `C:/mcmods/.claude/skills/bedrock-blocks/references/materials.md`.
+
+Remaining-property batch, 2026-10-10 / target 1.26.52: all 15 machine RP sounds
+now match current native iron block (`iron`, not the obsolete `metal` group or
+previous stone). Source: installed `vanilla_1.21.60/blocks.json`, overriding the
+older base vanilla entry. Both RP generators retain iron sounds; each owning
+BP material policy records an enforceable `RP:sound` counterpart check. The
+core BP contains no blocks/policy; all three block-owning variants share this RP.
+Protection, paired-half lifecycle and immovability retain their existing rules.
+Static checks pass; actual break/step/place sounds and trader cleanup still need
+game acceptance after reload. No new owner question arose for these matches.

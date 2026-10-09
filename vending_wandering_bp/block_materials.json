@@ -20,7 +20,14 @@
           }
         }
       },
-      "harvest": "Existing machine removal handler owns the paired block/trader lifecycle; no new pickaxe loot gate."
+      "harvest": "Existing machine removal handler owns the paired block/trader lifecycle; no new pickaxe loot gate.",
+      "property_checks": {
+        "RP:sound": {
+          "counterpart": "minecraft:iron_block",
+          "expected": "iron",
+          "source": "reference/vanilla/current/resource_packs/vanilla_1.21.60/blocks.json"
+        }
+      }
     }
   }
 }

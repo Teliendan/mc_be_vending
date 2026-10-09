@@ -204,7 +204,7 @@ def build_rp():
     path = os.path.join(RP, "blocks.json")
     blocks = read_json(path)
     for machine in MACHINES:
-        blocks["vm:machine_%s" % machine] = {"sound": "stone", "textures": "vm_machine_body"}
+        blocks["vm:machine_%s" % machine] = {"sound": "iron", "textures": "vm_machine_body"}
     write_json(path, blocks)
 
     path = os.path.join(RP, "textures", "item_texture.json")

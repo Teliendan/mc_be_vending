@@ -20,7 +20,14 @@
           }
         }
       },
-      "harvest": "Existing machine removal handler owns the paired block/trader lifecycle; no new pickaxe loot gate."
+      "harvest": "Existing machine removal handler owns the paired block/trader lifecycle; no new pickaxe loot gate.",
+      "property_checks": {
+        "RP:sound": {
+          "counterpart": "minecraft:iron_block",
+          "expected": "iron",
+          "source": "reference/vanilla/current/resource_packs/vanilla_1.21.60/blocks.json"
+        }
+      }
     },
     "vm:machine_butcher": {
       "profile": "metal_machine",
@@ -41,7 +48,14 @@
           }
         }
       },
-      "harvest": "Existing machine removal handler owns the paired block/trader lifecycle; no new pickaxe loot gate."
+      "harvest": "Existing machine removal handler owns the paired block/trader lifecycle; no new pickaxe loot gate.",
+      "property_checks": {
+        "RP:sound": {
+          "counterpart": "minecraft:iron_block",
+          "expected": "iron",
+          "source": "reference/vanilla/current/resource_packs/vanilla_1.21.60/blocks.json"
+        }
+      }
     },
     "vm:machine_cartographer": {
       "profile": "metal_machine",
@@ -62,7 +76,14 @@
           }
         }
       },
-      "harvest": "Existing machine removal handler owns the paired block/trader lifecycle; no new pickaxe loot gate."
+      "harvest": "Existing machine removal handler owns the paired block/trader lifecycle; no new pickaxe loot gate.",
+      "property_checks": {
+        "RP:sound": {
+          "counterpart": "minecraft:iron_block",
+          "expected": "iron",
+          "source": "reference/vanilla/current/resource_packs/vanilla_1.21.60/blocks.json"
+        }
+      }
     },
     "vm:machine_cleric": {
       "profile": "metal_machine",
@@ -83,7 +104,14 @@
           }
         }
       },
-      "harvest": "Existing machine removal handler owns the paired block/trader lifecycle; no new pickaxe loot gate."
+      "harvest": "Existing machine removal handler owns the paired block/trader lifecycle; no new pickaxe loot gate.",
+      "property_checks": {
+        "RP:sound": {
+          "counterpart": "minecraft:iron_block",
+          "expected": "iron",
+          "source": "reference/vanilla/current/resource_packs/vanilla_1.21.60/blocks.json"
+        }
+      }
     },
     "vm:machine_farmer": {
       "profile": "metal_machine",
@@ -104,7 +132,14 @@
           }
         }
       },
-      "harvest": "Existing machine removal handler owns the paired block/trader lifecycle; no new pickaxe loot gate."
+      "harvest": "Existing machine removal handler owns the paired block/trader lifecycle; no new pickaxe loot gate.",
+      "property_checks": {
+        "RP:sound": {
+          "counterpart": "minecraft:iron_block",
+          "expected": "iron",
+          "source": "reference/vanilla/current/resource_packs/vanilla_1.21.60/blocks.json"
+        }
+      }
     },
     "vm:machine_fisherman": {
       "profile": "metal_machine",
@@ -125,7 +160,14 @@
           }
         }
       },
-      "harvest": "Existing machine removal handler owns the paired block/trader lifecycle; no new pickaxe loot gate."
+      "harvest": "Existing machine removal handler owns the paired block/trader lifecycle; no new pickaxe loot gate.",
+      "property_checks": {
+        "RP:sound": {
+          "counterpart": "minecraft:iron_block",
+          "expected": "iron",
+          "source": "reference/vanilla/current/resource_packs/vanilla_1.21.60/blocks.json"
+        }
+      }
     },
     "vm:machine_fletcher": {
       "profile": "metal_machine",
@@ -146,7 +188,14 @@
           }
         }
       },
-      "harvest": "Existing machine removal handler owns the paired block/trader lifecycle; no new pickaxe loot gate."
+      "harvest": "Existing machine removal handler owns the paired block/trader lifecycle; no new pickaxe loot gate.",
+      "property_checks": {
+        "RP:sound": {
+          "counterpart": "minecraft:iron_block",
+          "expected": "iron",
+          "source": "reference/vanilla/current/resource_packs/vanilla_1.21.60/blocks.json"
+        }
+      }
     },
     "vm:machine_leather_worker": {
       "profile": "metal_machine",
@@ -167,7 +216,14 @@
           }
         }
       },
-      "harvest": "Existing machine removal handler owns the paired block/trader lifecycle; no new pickaxe loot gate."
+      "harvest": "Existing machine removal handler owns the paired block/trader lifecycle; no new pickaxe loot gate.",
+      "property_checks": {
+        "RP:sound": {
+          "counterpart": "minecraft:iron_block",
+          "expected": "iron",
+          "source": "reference/vanilla/current/resource_packs/vanilla_1.21.60/blocks.json"
+        }
+      }
     },
     "vm:machine_librarian": {
       "profile": "metal_machine",
@@ -188,7 +244,14 @@
           }
         }
       },
-      "harvest": "Existing machine removal handler owns the paired block/trader lifecycle; no new pickaxe loot gate."
+      "harvest": "Existing machine removal handler owns the paired block/trader lifecycle; no new pickaxe loot gate.",
+      "property_checks": {
+        "RP:sound": {
+          "counterpart": "minecraft:iron_block",
+          "expected": "iron",
+          "source": "reference/vanilla/current/resource_packs/vanilla_1.21.60/blocks.json"
+        }
+      }
     },
     "vm:machine_shepherd": {
       "profile": "metal_machine",
@@ -209,7 +272,14 @@
           }
         }
       },
-      "harvest": "Existing machine removal handler owns the paired block/trader lifecycle; no new pickaxe loot gate."
+      "harvest": "Existing machine removal handler owns the paired block/trader lifecycle; no new pickaxe loot gate.",
+      "property_checks": {
+        "RP:sound": {
+          "counterpart": "minecraft:iron_block",
+          "expected": "iron",
+          "source": "reference/vanilla/current/resource_packs/vanilla_1.21.60/blocks.json"
+        }
+      }
     },
     "vm:machine_stone_mason": {
       "profile": "metal_machine",
@@ -230,7 +300,14 @@
           }
         }
       },
-      "harvest": "Existing machine removal handler owns the paired block/trader lifecycle; no new pickaxe loot gate."
+      "harvest": "Existing machine removal handler owns the paired block/trader lifecycle; no new pickaxe loot gate.",
+      "property_checks": {
+        "RP:sound": {
+          "counterpart": "minecraft:iron_block",
+          "expected": "iron",
+          "source": "reference/vanilla/current/resource_packs/vanilla_1.21.60/blocks.json"
+        }
+      }
     },
     "vm:machine_tool_smith": {
       "profile": "metal_machine",
@@ -251,7 +328,14 @@
           }
         }
       },
-      "harvest": "Existing machine removal handler owns the paired block/trader lifecycle; no new pickaxe loot gate."
+      "harvest": "Existing machine removal handler owns the paired block/trader lifecycle; no new pickaxe loot gate.",
+      "property_checks": {
+        "RP:sound": {
+          "counterpart": "minecraft:iron_block",
+          "expected": "iron",
+          "source": "reference/vanilla/current/resource_packs/vanilla_1.21.60/blocks.json"
+        }
+      }
     },
     "vm:machine_weapon_smith": {
       "profile": "metal_machine",
@@ -272,7 +356,14 @@
           }
         }
       },
-      "harvest": "Existing machine removal handler owns the paired block/trader lifecycle; no new pickaxe loot gate."
+      "harvest": "Existing machine removal handler owns the paired block/trader lifecycle; no new pickaxe loot gate.",
+      "property_checks": {
+        "RP:sound": {
+          "counterpart": "minecraft:iron_block",
+          "expected": "iron",
+          "source": "reference/vanilla/current/resource_packs/vanilla_1.21.60/blocks.json"
+        }
+      }
     }
   }
 }
