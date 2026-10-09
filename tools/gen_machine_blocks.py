@@ -100,6 +100,8 @@ def build(profession):
                            "vm:build_mode": [False, True]},
             },
             "components": {
+                "minecraft:liquid_detection": {"detection_rules": [{
+                    "liquid_type": "water", "can_contain_liquid": False, "on_liquid_touches": "blocking"}]},
                 "minecraft:destructible_by_mining": {"seconds_to_destroy": 8},
                 "minecraft:destructible_by_explosion": {"explosion_resistance": 1200},
                 "minecraft:movable": {"movement_type": "immovable"},
