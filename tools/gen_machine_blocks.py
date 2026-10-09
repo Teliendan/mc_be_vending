@@ -91,7 +91,7 @@ def build(profession):
     machines reads as the profession rather than a plain body cube.
     """
     return {
-        "format_version": "1.21.120",
+        "format_version": "1.26.50",
         "minecraft:block": {
             "description": {
                 "identifier": "vm:machine_{}".format(profession),
@@ -100,6 +100,8 @@ def build(profession):
                            "vm:build_mode": [False, True]},
             },
             "components": {
+                "minecraft:tags": ["minecraft:is_pickaxe_item_destructible"],
+                "minecraft:flammable": False,
                 "minecraft:liquid_detection": {"detection_rules": [{
                     "liquid_type": "water", "can_contain_liquid": False, "on_liquid_touches": "blocking"}]},
                 "minecraft:destructible_by_mining": {"seconds_to_destroy": 8},
@@ -166,6 +168,19 @@ def build(profession):
     }
 
 
+def material_policy():
+    return {
+        "profile": "metal_machine",
+        "harvest": "Existing machine removal handler owns the paired block/trader lifecycle; no new pickaxe loot gate.",
+        "reason": "Preserve deliberate protected trader lifecycle: mining 8, resistance 1200, upper half cannot be mined independently.",
+        "overrides": {"minecraft:destructible_by_mining": {"seconds_to_destroy": 8},
+                      "minecraft:destructible_by_explosion": {"explosion_resistance": 1200}},
+        "permutations": {"q.block_state('vm:half') == 1": {
+            "reason": "Only the lower half owns removal and trader cleanup.",
+            "overrides": {"minecraft:destructible_by_mining": False}}},
+    }
+
+
 def main():
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--force", action="store_true",
@@ -182,6 +197,17 @@ def main():
             json.dump(build(profession), fh, indent=2)
             fh.write("\n")
     print("wrote {} block definitions to {}".format(len(PROFESSIONS), BLOCKS_DIR))
+    policy_path = os.path.join(os.path.dirname(BLOCKS_DIR), "block_materials.json")
+    if os.path.exists(policy_path):
+        with open(policy_path, encoding="utf-8") as fh:
+            policy = json.load(fh)
+    else:
+        policy = {"schema_version": 1, "blocks": {}}
+    for profession in PROFESSIONS:
+        policy["blocks"].setdefault("vm:machine_" + profession, material_policy())
+    with open(policy_path, "w", encoding="utf-8", newline="\n") as fh:
+        json.dump(policy, fh, indent=2)
+        fh.write("\n")
     for profession in PROFESSIONS:
         print("  machine_{}".format(profession))
 

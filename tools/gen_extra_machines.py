@@ -163,6 +163,13 @@ def from_template(src, dest, machine):
         text = fh.read()
     assert TEMPLATE in text, src
     write_json(dest, json.loads(text.replace(TEMPLATE, machine)))
+    if os.path.basename(os.path.dirname(src)) == "blocks":
+        source_policy = os.path.join(os.path.dirname(os.path.dirname(src)), "block_materials.json")
+        target_policy = os.path.join(os.path.dirname(os.path.dirname(dest)), "block_materials.json")
+        template_policy = read_json(source_policy)["blocks"]["vm:machine_" + TEMPLATE]
+        policy = read_json(target_policy) if os.path.exists(target_policy) else {"schema_version": 1, "blocks": {}}
+        policy["blocks"].setdefault("vm:machine_" + machine, template_policy)
+        write_json(target_policy, policy)
 
 
 def build_bp(machine, spec):

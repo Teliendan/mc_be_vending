@@ -1,0 +1,278 @@
+{
+  "schema_version": 1,
+  "blocks": {
+    "vm:machine_armorer": {
+      "profile": "metal_machine",
+      "reason": "Preserve deliberate protected trader lifecycle: mining 8, resistance 1200, upper half cannot be mined independently.",
+      "overrides": {
+        "minecraft:destructible_by_mining": {
+          "seconds_to_destroy": 8
+        },
+        "minecraft:destructible_by_explosion": {
+          "explosion_resistance": 1200
+        }
+      },
+      "permutations": {
+        "q.block_state('vm:half') == 1": {
+          "reason": "Only the lower half owns removal and trader cleanup.",
+          "overrides": {
+            "minecraft:destructible_by_mining": false
+          }
+        }
+      },
+      "harvest": "Existing machine removal handler owns the paired block/trader lifecycle; no new pickaxe loot gate."
+    },
+    "vm:machine_butcher": {
+      "profile": "metal_machine",
+      "reason": "Preserve deliberate protected trader lifecycle: mining 8, resistance 1200, upper half cannot be mined independently.",
+      "overrides": {
+        "minecraft:destructible_by_mining": {
+          "seconds_to_destroy": 8
+        },
+        "minecraft:destructible_by_explosion": {
+          "explosion_resistance": 1200
+        }
+      },
+      "permutations": {
+        "q.block_state('vm:half') == 1": {
+          "reason": "Only the lower half owns removal and trader cleanup.",
+          "overrides": {
+            "minecraft:destructible_by_mining": false
+          }
+        }
+      },
+      "harvest": "Existing machine removal handler owns the paired block/trader lifecycle; no new pickaxe loot gate."
+    },
+    "vm:machine_cartographer": {
+      "profile": "metal_machine",
+      "reason": "Preserve deliberate protected trader lifecycle: mining 8, resistance 1200, upper half cannot be mined independently.",
+      "overrides": {
+        "minecraft:destructible_by_mining": {
+          "seconds_to_destroy": 8
+        },
+        "minecraft:destructible_by_explosion": {
+          "explosion_resistance": 1200
+        }
+      },
+      "permutations": {
+        "q.block_state('vm:half') == 1": {
+          "reason": "Only the lower half owns removal and trader cleanup.",
+          "overrides": {
+            "minecraft:destructible_by_mining": false
+          }
+        }
+      },
+      "harvest": "Existing machine removal handler owns the paired block/trader lifecycle; no new pickaxe loot gate."
+    },
+    "vm:machine_cleric": {
+      "profile": "metal_machine",
+      "reason": "Preserve deliberate protected trader lifecycle: mining 8, resistance 1200, upper half cannot be mined independently.",
+      "overrides": {
+        "minecraft:destructible_by_mining": {
+          "seconds_to_destroy": 8
+        },
+        "minecraft:destructible_by_explosion": {
+          "explosion_resistance": 1200
+        }
+      },
+      "permutations": {
+        "q.block_state('vm:half') == 1": {
+          "reason": "Only the lower half owns removal and trader cleanup.",
+          "overrides": {
+            "minecraft:destructible_by_mining": false
+          }
+        }
+      },
+      "harvest": "Existing machine removal handler owns the paired block/trader lifecycle; no new pickaxe loot gate."
+    },
+    "vm:machine_farmer": {
+      "profile": "metal_machine",
+      "reason": "Preserve deliberate protected trader lifecycle: mining 8, resistance 1200, upper half cannot be mined independently.",
+      "overrides": {
+        "minecraft:destructible_by_mining": {
+          "seconds_to_destroy": 8
+        },
+        "minecraft:destructible_by_explosion": {
+          "explosion_resistance": 1200
+        }
+      },
+      "permutations": {
+        "q.block_state('vm:half') == 1": {
+          "reason": "Only the lower half owns removal and trader cleanup.",
+          "overrides": {
+            "minecraft:destructible_by_mining": false
+          }
+        }
+      },
+      "harvest": "Existing machine removal handler owns the paired block/trader lifecycle; no new pickaxe loot gate."
+    },
+    "vm:machine_fisherman": {
+      "profile": "metal_machine",
+      "reason": "Preserve deliberate protected trader lifecycle: mining 8, resistance 1200, upper half cannot be mined independently.",
+      "overrides": {
+        "minecraft:destructible_by_mining": {
+          "seconds_to_destroy": 8
+        },
+        "minecraft:destructible_by_explosion": {
+          "explosion_resistance": 1200
+        }
+      },
+      "permutations": {
+        "q.block_state('vm:half') == 1": {
+          "reason": "Only the lower half owns removal and trader cleanup.",
+          "overrides": {
+            "minecraft:destructible_by_mining": false
+          }
+        }
+      },
+      "harvest": "Existing machine removal handler owns the paired block/trader lifecycle; no new pickaxe loot gate."
+    },
+    "vm:machine_fletcher": {
+      "profile": "metal_machine",
+      "reason": "Preserve deliberate protected trader lifecycle: mining 8, resistance 1200, upper half cannot be mined independently.",
+      "overrides": {
+        "minecraft:destructible_by_mining": {
+          "seconds_to_destroy": 8
+        },
+        "minecraft:destructible_by_explosion": {
+          "explosion_resistance": 1200
+        }
+      },
+      "permutations": {
+        "q.block_state('vm:half') == 1": {
+          "reason": "Only the lower half owns removal and trader cleanup.",
+          "overrides": {
+            "minecraft:destructible_by_mining": false
+          }
+        }
+      },
+      "harvest": "Existing machine removal handler owns the paired block/trader lifecycle; no new pickaxe loot gate."
+    },
+    "vm:machine_leather_worker": {
+      "profile": "metal_machine",
+      "reason": "Preserve deliberate protected trader lifecycle: mining 8, resistance 1200, upper half cannot be mined independently.",
+      "overrides": {
+        "minecraft:destructible_by_mining": {
+          "seconds_to_destroy": 8
+        },
+        "minecraft:destructible_by_explosion": {
+          "explosion_resistance": 1200
+        }
+      },
+      "permutations": {
+        "q.block_state('vm:half') == 1": {
+          "reason": "Only the lower half owns removal and trader cleanup.",
+          "overrides": {
+            "minecraft:destructible_by_mining": false
+          }
+        }
+      },
+      "harvest": "Existing machine removal handler owns the paired block/trader lifecycle; no new pickaxe loot gate."
+    },
+    "vm:machine_librarian": {
+      "profile": "metal_machine",
+      "reason": "Preserve deliberate protected trader lifecycle: mining 8, resistance 1200, upper half cannot be mined independently.",
+      "overrides": {
+        "minecraft:destructible_by_mining": {
+          "seconds_to_destroy": 8
+        },
+        "minecraft:destructible_by_explosion": {
+          "explosion_resistance": 1200
+        }
+      },
+      "permutations": {
+        "q.block_state('vm:half') == 1": {
+          "reason": "Only the lower half owns removal and trader cleanup.",
+          "overrides": {
+            "minecraft:destructible_by_mining": false
+          }
+        }
+      },
+      "harvest": "Existing machine removal handler owns the paired block/trader lifecycle; no new pickaxe loot gate."
+    },
+    "vm:machine_shepherd": {
+      "profile": "metal_machine",
+      "reason": "Preserve deliberate protected trader lifecycle: mining 8, resistance 1200, upper half cannot be mined independently.",
+      "overrides": {
+        "minecraft:destructible_by_mining": {
+          "seconds_to_destroy": 8
+        },
+        "minecraft:destructible_by_explosion": {
+          "explosion_resistance": 1200
+        }
+      },
+      "permutations": {
+        "q.block_state('vm:half') == 1": {
+          "reason": "Only the lower half owns removal and trader cleanup.",
+          "overrides": {
+            "minecraft:destructible_by_mining": false
+          }
+        }
+      },
+      "harvest": "Existing machine removal handler owns the paired block/trader lifecycle; no new pickaxe loot gate."
+    },
+    "vm:machine_stone_mason": {
+      "profile": "metal_machine",
+      "reason": "Preserve deliberate protected trader lifecycle: mining 8, resistance 1200, upper half cannot be mined independently.",
+      "overrides": {
+        "minecraft:destructible_by_mining": {
+          "seconds_to_destroy": 8
+        },
+        "minecraft:destructible_by_explosion": {
+          "explosion_resistance": 1200
+        }
+      },
+      "permutations": {
+        "q.block_state('vm:half') == 1": {
+          "reason": "Only the lower half owns removal and trader cleanup.",
+          "overrides": {
+            "minecraft:destructible_by_mining": false
+          }
+        }
+      },
+      "harvest": "Existing machine removal handler owns the paired block/trader lifecycle; no new pickaxe loot gate."
+    },
+    "vm:machine_tool_smith": {
+      "profile": "metal_machine",
+      "reason": "Preserve deliberate protected trader lifecycle: mining 8, resistance 1200, upper half cannot be mined independently.",
+      "overrides": {
+        "minecraft:destructible_by_mining": {
+          "seconds_to_destroy": 8
+        },
+        "minecraft:destructible_by_explosion": {
+          "explosion_resistance": 1200
+        }
+      },
+      "permutations": {
+        "q.block_state('vm:half') == 1": {
+          "reason": "Only the lower half owns removal and trader cleanup.",
+          "overrides": {
+            "minecraft:destructible_by_mining": false
+          }
+        }
+      },
+      "harvest": "Existing machine removal handler owns the paired block/trader lifecycle; no new pickaxe loot gate."
+    },
+    "vm:machine_weapon_smith": {
+      "profile": "metal_machine",
+      "reason": "Preserve deliberate protected trader lifecycle: mining 8, resistance 1200, upper half cannot be mined independently.",
+      "overrides": {
+        "minecraft:destructible_by_mining": {
+          "seconds_to_destroy": 8
+        },
+        "minecraft:destructible_by_explosion": {
+          "explosion_resistance": 1200
+        }
+      },
+      "permutations": {
+        "q.block_state('vm:half') == 1": {
+          "reason": "Only the lower half owns removal and trader cleanup.",
+          "overrides": {
+            "minecraft:destructible_by_mining": false
+          }
+        }
+      },
+      "harvest": "Existing machine removal handler owns the paired block/trader lifecycle; no new pickaxe loot gate."
+    }
+  }
+}
