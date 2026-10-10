@@ -107,6 +107,7 @@ def build(profession):
                 "minecraft:destructible_by_mining": {"seconds_to_destroy": 8},
                 "minecraft:destructible_by_explosion": {"explosion_resistance": 1200},
                 "minecraft:movable": {"movement_type": "immovable"},
+                "minecraft:loot": "loot_tables/blocks/machine_{}.json".format(profession),
                 "minecraft:map_color": "#8f8f8f",
                 "minecraft:geometry": "minecraft:geometry.full_block",
                 "minecraft:redstone_conductivity": {"redstone_conductor": True},
@@ -127,6 +128,7 @@ def build(profession):
                     "components": {
                         "minecraft:selection_box": False,
                         "minecraft:destructible_by_mining": False,
+                        "minecraft:loot": "loot_tables/blocks/machine_upper_empty.json",
                     },
                 },
                 {
@@ -168,13 +170,39 @@ def build(profession):
     }
 
 
-def material_policy():
+def write_machine_loot(pack_root, profession):
+    """Only the base owns one item; native explosion decay retains its context."""
+    loot_dir = os.path.join(pack_root, "loot_tables", "blocks")
+    os.makedirs(loot_dir, exist_ok=True)
+    tables = {
+        "machine_" + profession: {"pools": [{"rolls": 1, "entries": [{
+            "type": "item", "name": "vm:machine_" + profession,
+            "functions": [{"function": "explosion_decay"}],
+        }]}]},
+        "machine_upper_empty": {"pools": [{"rolls": 1, "entries": [{"type": "empty"}]}]},
+    }
+    for name, table in tables.items():
+        with open(os.path.join(loot_dir, name + ".json"), "w", encoding="utf-8", newline="\n") as fh:
+            json.dump(table, fh, indent=2)
+            fh.write("\n")
+
+
+def material_policy(profession):
     return {
         "profile": "metal_machine",
         "property_checks": {"RP:sound": {
             "counterpart": "minecraft:iron_block", "expected": "iron",
             "source": "reference/vanilla/current/resource_packs/vanilla_1.21.60/blocks.json"}},
-        "harvest": "Existing machine removal handler owns the paired block/trader lifecycle; no new pickaxe loot gate.",
+        "harvest": "One native base-owned machine item; explicit empty upper loot. Upper-only loss uses support-collapse context; Creative cleanup drops nothing. Existing any-tool harvest retained pending review.",
+        "loot_checks": {
+            "loot_tables/blocks/machine_" + profession + ".json": {
+                "counterpart": "minecraft:iron_block", "explosion_decay": True,
+                "source": "references/harvest-explosion-loot.md; docs/LIFECYCLE.md: native decay and one base-owned item."},
+            "loot_tables/blocks/machine_upper_empty.json": {
+                "counterpart": "minecraft:wooden_door", "explosion_decay": False,
+                "source": "Paired-block one-item ownership; docs/LIFECYCLE.md.",
+                "reason": "Manually paired machines: only the base owns loot; upper-only loss destroys a surviving base natively."},
+        },
         "reason": "Preserve deliberate protected trader lifecycle: mining 8, resistance 1200, upper half cannot be mined independently.",
         "overrides": {"minecraft:destructible_by_mining": {"seconds_to_destroy": 8},
                       "minecraft:destructible_by_explosion": {"explosion_resistance": 1200}},
@@ -199,6 +227,7 @@ def main():
         with open(path, "w", encoding="utf-8") as fh:
             json.dump(build(profession), fh, indent=2)
             fh.write("\n")
+        write_machine_loot(os.path.dirname(BLOCKS_DIR), profession)
     print("wrote {} block definitions to {}".format(len(PROFESSIONS), BLOCKS_DIR))
     policy_path = os.path.join(os.path.dirname(BLOCKS_DIR), "block_materials.json")
     if os.path.exists(policy_path):
@@ -207,7 +236,7 @@ def main():
     else:
         policy = {"schema_version": 1, "blocks": {}}
     for profession in PROFESSIONS:
-        policy["blocks"].setdefault("vm:machine_" + profession, material_policy())
+        policy["blocks"].setdefault("vm:machine_" + profession, material_policy(profession))
     with open(policy_path, "w", encoding="utf-8", newline="\n") as fh:
         json.dump(policy, fh, indent=2)
         fh.write("\n")

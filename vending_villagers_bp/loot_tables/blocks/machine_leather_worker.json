@@ -1,0 +1,18 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "item",
+          "name": "vm:machine_leather_worker",
+          "functions": [
+            {
+              "function": "explosion_decay"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

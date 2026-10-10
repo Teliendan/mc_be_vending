@@ -20,12 +20,25 @@
           }
         }
       },
-      "harvest": "Existing machine removal handler owns the paired block/trader lifecycle; no new pickaxe loot gate.",
+      "harvest": "One native base-owned machine item; upper half has empty loot. Upper-only survivor cleanup uses native support-loss context; Creative cleanup drops nothing. Existing any-tool harvest preserved pending counterpart review.",
       "property_checks": {
         "RP:sound": {
           "counterpart": "minecraft:iron_block",
           "expected": "iron",
           "source": "reference/vanilla/current/resource_packs/vanilla_1.21.60/blocks.json"
+        }
+      },
+      "loot_checks": {
+        "loot_tables/blocks/machine_shulker.json": {
+          "counterpart": "minecraft:iron_block",
+          "source": "references/harvest-explosion-loot.md: native explosion_decay; one placed item owns the base, paired upper is empty. docs/LIFECYCLE.md.",
+          "explosion_decay": true
+        },
+        "loot_tables/blocks/machine_upper_empty.json": {
+          "counterpart": "minecraft:wooden_door",
+          "source": "Paired-block one-item ownership; docs/LIFECYCLE.md. Native vertical multi_block migration is outside this repair.",
+          "reason": "Existing manually paired machine lifecycle: only the base owns the placed item; upper-only loss destroys surviving base natively.",
+          "explosion_decay": false
         }
       }
     }

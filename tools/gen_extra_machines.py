@@ -30,6 +30,7 @@ Run:  python mods\vending\tools\gen_extra_machines.py
 
 import json
 import os
+from gen_machine_blocks import write_machine_loot
 MOD = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))  # this mod's repo root
 
 BP_ROOT = MOD
@@ -164,9 +165,12 @@ def from_template(src, dest, machine):
     assert TEMPLATE in text, src
     write_json(dest, json.loads(text.replace(TEMPLATE, machine)))
     if os.path.basename(os.path.dirname(src)) == "blocks":
+        write_machine_loot(os.path.dirname(os.path.dirname(dest)), machine)
         source_policy = os.path.join(os.path.dirname(os.path.dirname(src)), "block_materials.json")
         target_policy = os.path.join(os.path.dirname(os.path.dirname(dest)), "block_materials.json")
         template_policy = read_json(source_policy)["blocks"]["vm:machine_" + TEMPLATE]
+        # Loot records contain profession-specific routes just like the block.
+        template_policy = json.loads(json.dumps(template_policy).replace(TEMPLATE, machine))
         policy = read_json(target_policy) if os.path.exists(target_policy) else {"schema_version": 1, "blocks": {}}
         policy["blocks"].setdefault("vm:machine_" + machine, template_policy)
         write_json(target_policy, policy)

@@ -31,6 +31,7 @@
       "minecraft:destructible_by_explosion": {
         "explosion_resistance": 1200
       },
+      "minecraft:loot": "loot_tables/blocks/machine_fletcher.json",
       "minecraft:movable": {
         "movement_type": "immovable"
       },
@@ -62,7 +63,8 @@
         "condition": "q.block_state('vm:half') == 1",
         "components": {
           "minecraft:selection_box": false,
-          "minecraft:destructible_by_mining": false
+          "minecraft:destructible_by_mining": false,
+          "minecraft:loot": "loot_tables/blocks/machine_upper_empty.json"
         }
       },
       {

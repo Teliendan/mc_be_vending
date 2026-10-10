@@ -88,13 +88,18 @@ function sparkle(baseBlock) {
     }
 }
 
-function findTrader(dimension, baseBlock, profession) {
-    const found = dimension.getEntities({
+function tradersAt(dimension, baseBlock, profession) {
+    // Traders have no movement/physics components. A neighbouring machine can
+    // be only one block away, so the former radius of two was ambiguous.
+    return dimension.getEntities({
         type: TRADER_PREFIX + profession,
         location: traderSpot(baseBlock),
-        maxDistance: 2,
+        maxDistance: 0.1,
     });
-    return found.length > 0 ? found[0] : undefined;
+}
+
+function findTrader(dimension, baseBlock, profession) {
+    return tradersAt(dimension, baseBlock, profession)[0];
 }
 
 // --- placement: raise the upper half and spawn the trader ------------------
@@ -118,17 +123,45 @@ world.afterEvents.playerPlaceBlock.subscribe((e) => {
     hideShadow(trader);
 });
 
-// --- breaking: only the lower half is breakable, so this is the teardown ----
-world.afterEvents.playerBreakBlock.subscribe((e) => {
-    const typeId = e.brokenBlockPermutation.type.id;
+// --- destruction: either half can be destroyed by Creative or an explosion --
+function removeMachine(dimension, location, oldPermutation, { dropBase = false } = {}) {
+    const typeId = oldPermutation.type.id;
     if (!typeId.startsWith(BLOCK_PREFIX)) return;
-
-    const above = e.block.above();
-    if (above && above.typeId === typeId) {
-        above.setType("minecraft:air");
+    const half = oldPermutation.getState("vm:half");
+    if (half !== 0 && half !== 1) return;
+    const base = { location: { ...location, y: location.y - half } };
+    const counterpartLocation = { ...location, y: location.y + (half === 0 ? 1 : -1) };
+    try {
+        // A preceding handler may already have placed another machine here.
+        // Its trader belongs to the new machine, not to this destruction event.
+        const current = dimension.getBlock(location);
+        if (current?.typeId.startsWith(BLOCK_PREFIX)) return;
+        const counterpart = dimension.getBlock(counterpartLocation);
+        if (counterpart?.typeId === typeId && counterpart.permutation.getState("vm:half") === 1 - half) {
+            if (half === 1 && dropBase) {
+                // The upper half has no loot. Its surviving base falls as a
+                // native support-loss drop, outside the original blast context.
+                const { x, y, z } = counterpartLocation;
+                dimension.runCommand(`setblock ${x} ${y} ${z} air destroy`);
+            } else {
+                counterpart.setType("minecraft:air");
+            }
+        }
+    } catch (error) {
+        if (error.name !== "LocationInUnloadedChunkError" && error.name !== "LocationOutOfWorldBoundariesError") throw error;
     }
-    const trader = findTrader(e.dimension, e.block, professionOf(typeId));
-    if (trader) trader.remove();
+    for (const trader of tradersAt(dimension, base, professionOf(typeId))) {
+        if (trader.isValid) trader.remove();
+    }
+}
+
+world.afterEvents.playerBreakBlock.subscribe((e) => {
+    removeMachine(e.dimension, e.block.location, e.brokenBlockPermutation, {
+        dropBase: e.player.getGameMode() !== "Creative",
+    });
+});
+world.afterEvents.blockExplode.subscribe((e) => {
+    removeMachine(e.dimension, e.block.location, e.explodedBlockPermutation, { dropBase: true });
 });
 
 // --- the Upgrade Kit: right-click the base with it -------------------------
