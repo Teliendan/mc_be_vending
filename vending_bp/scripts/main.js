@@ -161,7 +161,14 @@ world.afterEvents.playerBreakBlock.subscribe((e) => {
     });
 });
 world.afterEvents.blockExplode.subscribe((e) => {
-    removeMachine(e.dimension, e.block.location, e.explodedBlockPermutation, { dropBase: true });
+    const oldPermutation = e.explodedBlockPermutation;
+    if (!oldPermutation.type.id.startsWith(BLOCK_PREFIX)) return;
+    const dimension = e.dimension;
+    const location = { ...e.block.location };
+    // Let native destruction finish before treating the other half as a
+    // support-loss survivor. It may also be directly impacted by this blast.
+    // Capture values now; the event's block handle may be invalid by then.
+    system.run(() => removeMachine(dimension, location, oldPermutation, { dropBase: true }));
 });
 
 // --- the Upgrade Kit: right-click the base with it -------------------------

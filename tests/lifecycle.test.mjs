@@ -5,10 +5,14 @@ import test from "node:test";
 // Load the actual event wiring with a narrow Script API substitute. The build
 // mode has its own suite; this suite exercises destruction and trader lookup.
 const callbacks = {};
+const deferred = [];
+function flush() {
+    while (deferred.length) deferred.shift()();
+}
 const subscriptions = new Proxy({}, { get: (_, name) => ({ subscribe(fn) { callbacks[name] = fn; } }) });
 const api = {
     world: { afterEvents: subscriptions, beforeEvents: subscriptions },
-    system: { beforeEvents: subscriptions, run: fn => fn() },
+    system: { beforeEvents: subscriptions, run: fn => deferred.push(fn) },
     ItemStack: class {}, BlockPermutation: {},
     message: () => "", createBuildModeController: () => ({}),
 };
@@ -62,12 +66,14 @@ function scene() {
         const upper = put(type, 1, { ...base, y: base.y + 1 });
         return { lower, upper, trader: trader(base, profession) };
     }
-    function destroy(kind, block) {
+    function destroy(kind, block, { settle = true } = {}) {
         const old = block.permutation;
         blocks.delete(key(block.location));
         const event = { block: dimension.getBlock(block.location), dimension, player: { getGameMode: () => "Survival" } };
         event[kind === "blockExplode" ? "explodedBlockPermutation" : "brokenBlockPermutation"] = old;
-        callbacks[kind](event); return event;
+        callbacks[kind](event);
+        if (settle) flush();
+        return event;
     }
     return { blocks, traders, writes, commands, dimension, put, trader, machine, destroy };
 }
@@ -82,6 +88,7 @@ for (const kind of ["playerBreakBlock", "blockExplode"]) {
             assert.equal(m.trader.removals, 1);
             assert.equal(s.commands.length, half === "upper" ? 1 : 0);
             callbacks[kind](event);
+            flush();
             assert.equal(s.writes.length, 1);
             assert.equal(m.trader.removals, 1);
         });
@@ -116,6 +123,7 @@ for (const kind of ["playerBreakBlock", "blockExplode"]) {
         const event = { block: replacement.lower, dimension: s.dimension, player: { getGameMode: () => "Survival" } };
         event[kind === "blockExplode" ? "explodedBlockPermutation" : "brokenBlockPermutation"] = snapshot;
         callbacks[kind](event);
+        flush();
         assert.equal(s.writes.length, 0);
         assert.equal(s.commands.length, 0);
         assert.equal(replacement.trader.removals, 0);
@@ -128,6 +136,7 @@ test("one blast destroying both halves in either order cleans the trader without
         const events = [m.lower, m.upper].map(block => ({ block, dimension: s.dimension, explodedBlockPermutation: block.permutation }));
         s.blocks.clear();
         for (const index of order) callbacks.blockExplode(events[index]);
+        flush();
         assert.equal(m.trader.removals, 1);
         assert.equal(s.writes.length, 0);
         assert.equal(s.commands.length, 0);
@@ -148,7 +157,7 @@ test("Creative destruction of either half removes its pair without a support-los
     }
 });
 
-test("all 15 definitions give exactly one native base loot route and explicit empty upper loot", async () => {
+test("all 15 definitions keep unconditional any-tool base loot and explicit empty upper loot", async () => {
     let checked = 0;
     for (const pack of ["vending_villagers_bp", "vending_wandering_bp", "vending_shulker_bp"]) {
         const root = new URL(`../${pack}/`, import.meta.url);
@@ -181,5 +190,58 @@ test("ordinary blocks and malformed half snapshots have no machine side effects"
     for (const [type, half] of [["minecraft:stone", undefined], ["vm:machine_farmer", undefined]]) {
         callbacks.blockExplode({ dimension: s.dimension, block: m.lower, explodedBlockPermutation: permutation(type, half) });
     }
+    flush();
     assert.equal(s.writes.length, 0); assert.equal(m.trader.removals, 0);
+});
+
+test("blast cleanup lets native destruction handle both halves before support-loss removal", () => {
+    for (const order of [["upper", "lower"], ["lower", "upper"]]) {
+        const s = scene(), m = s.machine({ x: 0, y: 0, z: 0 });
+        s.destroy("blockExplode", m[order[0]], { settle: false });
+        assert.ok(m[order[1]].typeId.startsWith("vm:machine_"), "first event cannot intercept native destruction of the next half");
+        assert.equal(s.commands.length, 0);
+        assert.equal(s.writes.length, 0);
+        assert.equal(m.trader.removals, 0);
+        s.destroy("blockExplode", m[order[1]], { settle: false });
+        flush();
+        assert.equal(s.commands.length, 0, "no support-loss refund for an already exploded base");
+        assert.equal(s.writes.length, 0);
+        assert.equal(m.trader.removals, 1);
+    }
+});
+
+test("upper-only blast removes a genuinely surviving base exactly once after settling", () => {
+    const s = scene(), m = s.machine({ x: -3, y: 9, z: 7 });
+    const event = s.destroy("blockExplode", m.upper, { settle: false });
+    assert.equal(s.commands.length, 0);
+    assert.equal(m.lower.typeId, "vm:machine_farmer");
+    callbacks.blockExplode(event);
+    flush();
+    assert.deepEqual(s.commands, ["setblock -3 9 7 air destroy"]);
+    assert.equal(m.trader.removals, 1);
+});
+
+test("queued explosion cleanup preserves a replacement placed before settlement", () => {
+    const s = scene(), old = s.machine({ x: 0, y: 0, z: 0 });
+    s.destroy("blockExplode", old.lower, { settle: false });
+    const replacement = s.machine({ x: 0, y: 0, z: 0 }, "cleric");
+    flush();
+    assert.equal(s.writes.length, 0);
+    assert.equal(s.commands.length, 0);
+    assert.equal(replacement.lower.typeId, "vm:machine_cleric");
+    assert.equal(replacement.upper.typeId, "vm:machine_cleric");
+    assert.equal(replacement.trader.removals, 0);
+});
+
+test("queued cleanup captures event position without retaining a live block handle", () => {
+    const s = scene(), m = s.machine({ x: 0, y: 0, z: 0 });
+    const oldPermutation = m.upper.permutation;
+    s.blocks.delete(key(m.upper.location));
+    let expired = false;
+    callbacks.blockExplode({ dimension: s.dimension, explodedBlockPermutation: oldPermutation,
+        block: { get location() { assert.equal(expired, false, "event block access must happen inside its callback"); return m.upper.location; } } });
+    expired = true;
+    flush();
+    assert.equal(s.commands.length, 1);
+    assert.equal(m.trader.removals, 1);
 });

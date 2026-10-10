@@ -5,6 +5,10 @@ event regressions; not separately confirmed in game.
 
 Both player breaks (including a Creative break of the upper half) and
 `blockExplode` use the destroyed permutation's `vm:half` to find the base.
+Explosion cleanup captures the old permutation and position, then defers through
+`system.run` so a base can finish native blast destruction before survivor
+cleanup considers a separate support-loss drop. It does not retain a live event
+block handle. Player-break cleanup remains immediate.
 Only the matching opposite half is removed. Replacements and neighbouring
 machines are preserved; a new machine already placed at the destroyed cell
 causes the stale event to be ignored. All same-profession traders at that
@@ -22,11 +26,16 @@ player destruction removes the pair without a support-loss drop. Both machine
 generators preserve these routes. Blast resistance 1200 remains unchanged.
 Commands that silently replace a machine are outside these event handlers.
 
-Validation: `node tests/run.mjs` (26 passing tests), plus all four pack pairs
+Owner confirmed 2026-10-10: hand and every tool can collect a machine; there is
+no required collection tool. The native loot entry remains unconditional.
+
+Validation: `node tests/run.mjs` (30 passing tests), plus all four pack pairs
 pass `.\mods.cmd verify vending` with zero errors/warnings.
 The lifecycle suite covers either destroyed half, both explosion event orders,
 repeat delivery, adjacent and stacked machines, replacements, and duplicate
-orphan traders, Creative suppression and all 15 block/table routes. API source:
+orphan traders, Creative suppression, native destruction before settlement,
+replacement during settlement, captured event position and all 15 block/table
+routes. API source:
 `reference/server-2.8.0.d.ts`, `BlockExplodeAfterEvent.explodedBlockPermutation`.
 Native drop counts and strong-blast ordering still need in-game acceptance.
 
@@ -35,3 +44,7 @@ Native multi-blocks are now available for vertical format 1.26.40+, per the
 Migrating existing `vm:half` machines would also change placement, item/state
 representation, selection and destruction event semantics. That migration was
 not needed for this fix and has not been implemented or tested.
+
+The upper-only support-loss result is not established as a vanilla parity bug.
+Sources, limits and the focused remaining comparison are in
+[VANILLA_PARITY.md](VANILLA_PARITY.md).

@@ -193,7 +193,7 @@ def material_policy(profession):
         "property_checks": {"RP:sound": {
             "counterpart": "minecraft:iron_block", "expected": "iron",
             "source": "reference/vanilla/current/resource_packs/vanilla_1.21.60/blocks.json"}},
-        "harvest": "One native base-owned machine item; explicit empty upper loot. Upper-only loss uses support-collapse context; Creative cleanup drops nothing. Existing any-tool harvest retained pending review.",
+        "harvest": "One native base-owned machine item; explicit empty upper loot. Upper-only loss uses support-collapse context; Creative cleanup drops nothing. Owner 2026-10-10: collect with any tool or hand; no required tool.",
         "loot_checks": {
             "loot_tables/blocks/machine_" + profession + ".json": {
                 "counterpart": "minecraft:iron_block", "explosion_decay": True,
@@ -207,7 +207,7 @@ def material_policy(profession):
         "overrides": {"minecraft:destructible_by_mining": {"seconds_to_destroy": 8},
                       "minecraft:destructible_by_explosion": {"explosion_resistance": 1200}},
         "permutations": {"q.block_state('vm:half') == 1": {
-            "reason": "Only the lower half owns removal and trader cleanup.",
+            "reason": "Only the base owns loot; the upper half is not independently mineable.",
             "overrides": {"minecraft:destructible_by_mining": False}}},
     }
 

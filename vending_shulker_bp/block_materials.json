@@ -14,13 +14,13 @@
       },
       "permutations": {
         "q.block_state('vm:half') == 1": {
-          "reason": "Only the lower half owns removal and trader cleanup.",
+          "reason": "Only the base owns loot; the upper half is not independently mineable.",
           "overrides": {
             "minecraft:destructible_by_mining": false
           }
         }
       },
-      "harvest": "One native base-owned machine item; upper half has empty loot. Upper-only survivor cleanup uses native support-loss context; Creative cleanup drops nothing. Existing any-tool harvest preserved pending counterpart review.",
+      "harvest": "One native base-owned machine item; upper half has empty loot. Upper-only survivor cleanup uses native support-loss context; Creative cleanup drops nothing. Owner 2026-10-10: collect with any tool or hand; no required tool.",
       "property_checks": {
         "RP:sound": {
           "counterpart": "minecraft:iron_block",

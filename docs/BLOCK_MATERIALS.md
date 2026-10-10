@@ -7,8 +7,9 @@ native pickaxe effectiveness. Existing protection deliberately overrides vanilla
 All explicitly nonflammable. Reasons and exact upper-half conditions are
 recorded so the verifier checks exceptions without permitting unexplained drift.
 
-Existing paired block/trader removal and drop logic remain; pickaxe speed does
-not add a new harvest restriction. In-game tool timing and TNT/trader cleanup
+Owner confirmed 2026-10-10: machines collect with any tool or hand; no required
+collection tool. Native pickaxe speed remains independent of that choice.
+In-game tool timing and TNT/trader cleanup
 still need acceptance. Resistance 1200 is not unconditional explosion immunity.
 Standard: `C:/mcmods/.claude/skills/bedrock-blocks/references/materials.md`.
 
