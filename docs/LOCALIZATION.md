@@ -1,5 +1,11 @@
 # Localization
 
+2026-10-04 RawMessage repair (target 1.26.52 / API 2.8.0): omit `with` for
+translations without arguments. The same helper pattern caused Torchlight's
+owner-reported `RawMessageError`; see workspace `docs/localization.md`. Offline
+payload regressions cover this case; in-game confirmation of the corrected
+helper is pending.
+
 2026-10-04; target Bedrock 1.26.52 / Script API 2.8.0.
 Commit: `Localize vending with contextual catalogs and nine locales`.
 
@@ -16,3 +22,5 @@ Offline verification: shared add-on verifier, project regression tests where con
 Remaining in-game review: pack descriptions/settings, inventory/block/entity names, interaction prompts, chat/action bars, mixed-language multiplayer, language switching and new item lore where applicable. Target review states remain `ai-draft`; use named-reviewer evidence before marking `language-reviewed`, and version/date/test evidence for `game-tested`.
 
 Vanilla terminology: Mojang bedrock-samples commit `46ba6ea985fb5a92d79a9419198f10dda14c199d`, documented not verified in game. Shared selected terms: workspace `docs/localization-terminology.json`.
+
+RawMessage repair commit: `Omit empty translation arguments in vending messages`.
