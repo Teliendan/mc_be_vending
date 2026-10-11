@@ -66,3 +66,29 @@ steel panel, preserving the outer frame, gold rails and emerald controls.
 | `55f3a3a` Restore full-width vending item displays | Full 14-column display opening |
 | `827dfb7` Balance vending goods within display windows | Centre every fitted item |
 | `d3c2dbb` Allow crouch placement against vending heads and flatten lower panels | Native crouch placement; remove lower simulated recesses |
+
+## Pack icon
+
+2026-10-07: owner requested distinct machines for the feature packs and a shared
+group photo for Core and Resources. `tools/make_pack_icon.py` generates 256x256 icons directly
+from the accepted textures, using integer pixel projections:
+
+| Pack | Icon | Background |
+|---|---|---|
+| Core | Librarian in front, Wandering Trader and Shulker behind | Green |
+| Resources | Same group photo as Core | Green |
+| Villagers | Librarian machine | Green |
+| Wandering Trader | Wandering Trader machine | Blue |
+| Shulker | Shulker machine | Purple |
+
+Single-machine icons retain the vanilla emerald beside the machine. Group
+members are projected at their own integer sizes without resampling textures.
+The generator checks opaque 16x16 faces, unclipped machine bounds, matching
+Core/Resources pixels and three distinct feature icons. `--review PATH` creates a labelled sheet at
+256, 64 and 32 pixels; `--preview PATH --pack PACK` writes a single preview
+without changing pack files, with an optional `--head` override.
+
+Reviewed all three sizes offline; shared verification passed all packs with
+zero errors/warnings. Deployed for local vanilla reference 1.26.52; the updated
+icons have not yet been checked in Minecraft or accepted by the owner. Review
+scratch remains in `temp/vending-pack-icon/` until acceptance. Implementation commit: `Give vending packs distinct machine icons`.
