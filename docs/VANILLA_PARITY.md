@@ -49,8 +49,10 @@ is re-applied on every load.
 ## Trades
 
 `tools/gen_trade_tables.py` owns all 30 tables. Villager tables keep vanilla's five
-tiers and XP thresholds, sell every "choice" and `random_aux_value` variant once,
-permanent stock, XP on. `_cured` = upgraded: every wants quantity -30% (floor 1).
+tiers and XP thresholds and are a fixed catalogue: every trade of every pick-N
+group, every "choice" and `random_aux_value` variant once (repeats = roll weights,
+dropped), permanent stock, XP on. `random_dye` is removed (undyed);
+only `enchant_with_levels` stays random; a test fails on any other random element. `_cured` = upgraded: every wants quantity -30% (floor 1).
 Librarian: random book replaced by one max-level book per non-curse game
 enchantment (`enchantments.json` = level/treasure/tier policy). Wandering trader:
 every native offer in one tier; upgraded = vanilla prices, basic = dearer sales and
@@ -65,9 +67,11 @@ After a game update, run `tools\refresh_vanilla_ref.ps1`, then
 `... --write --report temp\vending-trade-diff.md` to regenerate. It reads each
 profession's newest vanilla trade file and the game's enchantment list, rebuilds
 every table, and prints what changed per machine level. Flags to read: a
-binary-only source (MCB) is read from the same version slice in an old launcher
-install (item IDs verified) or falls back to an older slice (FALLBACK: missing
-trades); a NEW enchantment is sold at level 1 on tier 4 until `enchantments.json`
+binary-only source (MCB: since 1.26 every trade file without item functions
+ships binary) is read from Mojang's bedrock-samples JSON
+(`python -B tools/fetch_bedrock_samples.py` first), else from the same slice in an
+old launcher install, both only if item IDs equal the binary's, else an older slice
+(FALLBACK: missing trades); a NEW enchantment is sold at level 1 on tier 4 until `enchantments.json`
 gets its values. `node tests/run.mjs --suite catalogs` checks the shipped tables
 equal the generator output.
 
@@ -79,13 +83,15 @@ equal the generator output.
 - 2026-10-23: placement checked before payment; synchronous kit upgrade; hidden eggs.
 - 2026-10-23: orphan traders are removed on load (minimal check, no scanning).
 - 2026-10-23: trades follow current vanilla via the regenerating generator, new enchantments included.
+- 2026-10-23: fixed catalogue; leather undyed; vanilla random enchanting (`enchant_with_levels`) kept as the one exception.
 
 ## Known limits
 
 - Head must be pure air (owner policy); vanilla doors also accept replaceable plants/snow.
 - Actor check uses the head cell only: a wide mob standing in a neighbouring column is not detected.
 - Basic wandering 1-emerald buybacks pay the same as upgraded (minimum 1).
-- Leather worker armour keeps vanilla `random_dye`: a random colour per purchase.
+- Leather armour is sold undyed: trade tables have no fixed-colour function, only `random_dye`.
+- Gear vanilla enchants at random (`enchant_with_levels`, 17 offers) keeps a random enchantment per purchase.
 - Commands/structures that place or clear blocks bypass the pair logic; an actorless machine is not repaired.
 
 ## In-game checks still worth doing

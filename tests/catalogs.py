@@ -12,7 +12,7 @@ sys.path.insert(0, str(MOD / 'tools'))
 import gen_book_trades as books
 import gen_extra_machines as extra
 import gen_trade_tables as trades
-from trade_sources import load_trade_source, fixture_filters, game_enchantments
+from trade_sources import load_trade_source, fixture_filters, game_enchantments, plain_trades
 
 def read(path):
     return json.loads(path.read_text(encoding='utf-8-sig'))
@@ -44,7 +44,7 @@ class Catalogs(unittest.TestCase):
     def test_current_wandering_catalog_and_buybacks(self):
         native, path, _ = load_trade_source('wandering_trader')
         self.assertEqual(path.parents[2].name, 'vanilla_1.26.50')
-        expected = [variant for t in offers(native) for variant in trades._expand_choices(t)]
+        expected = [variant for t in offers(native) for variant in trades.deterministic_variants(t)]
         upgraded = offers(extra.wandering_table(True))
         self.assertEqual(len(upgraded), 100)
         self.assertEqual(len(upgraded), len(expected))
@@ -73,7 +73,7 @@ class Catalogs(unittest.TestCase):
         potion = next(t for t in table if t['gives'][0]['item'] == 'minecraft:potion:8')
         self.assertEqual(potion['wants'][0]['quantity'], 5)
         pickaxe = next(t for t in table if t['gives'][0]['item'] == 'minecraft:iron_pickaxe')
-        self.assertEqual(pickaxe['gives'][0]['functions'][0]['function'], 'enchant_with_levels')
+        self.assertEqual(pickaxe['gives'][0]['functions'][0]['function'], 'enchant_with_levels')  # owner exception
 
     def test_cartographer_destinations_and_dimension_filters(self):
         native = load_trade_source('cartographer').data
@@ -93,23 +93,62 @@ class Catalogs(unittest.TestCase):
         self.assertEqual(destinations, {'monument', 'mansion', 'trial_chambers', 'jungle_temple', 'swamp_hut',
             'village_taiga', 'village_desert', 'village_plains', 'village_snowy', 'village_savanna'})
 
-    def test_binary_source_uses_verified_same_slice_or_flagged_fallback(self):
+    def test_binary_source_uses_verified_readable_copy_or_flagged_fallback(self):
         trades_file = 'trading/economy_trades/fixture_trades.json'
         with sources() as (root, write):
-            game, launchers = root / 'game', root / 'launchers'
+            game, launchers, samples = root / 'game', root / 'launchers', root / 'samples'
+            load = lambda: load_trade_source('fixture', game, launchers, samples)
             write(f'game/vanilla_1.9.0/{trades_file}', b'{"tiers": [], "item": "minecraft:old"}')
             write(f'game/vanilla_1.26.50/{trades_file}', b'{"tiers": [], "item": "minecraft:current"}')
-            self.assertEqual(load_trade_source('fixture', game, launchers).data['item'], 'minecraft:current')
+            self.assertEqual(load().data['item'], 'minecraft:current')
             write(f'game/vanilla_1.26.60/{trades_file}', b'\x7fMCB\x01\x00\x05tiers\x11minecraft:newest')
-            fallback = load_trade_source('fixture', game, launchers)
+            fallback = load()
             self.assertEqual(fallback.data['item'], 'minecraft:current')
             self.assertIn('FALLBACK', fallback.note)
             write(f'launchers/guid/data/behavior_packs/vanilla_1.26.60/{trades_file}', b'{"item": "minecraft:wrong"}')
-            self.assertIn('FALLBACK', load_trade_source('fixture', game, launchers).note)
+            self.assertIn('FALLBACK', load().note)
             write(f'launchers/guid2/data/behavior_packs/vanilla_1.26.60/{trades_file}', b'{"item": "minecraft:newest"}')
-            same = load_trade_source('fixture', game, launchers)
+            same = load()
             self.assertEqual(same.data['item'], 'minecraft:newest')
-            self.assertIn('item IDs match', same.note)
+            self.assertIn('launcher install', same.note)
+            # bedrock-samples (newest tag) wins over launcher installs; its normalised form is folded back.
+            write(f'samples/v1.26.60.1/behavior_pack/{trades_file}', b'{"tiers": [], "item": "minecraft:wrong"}')
+            self.assertIn('launcher install', load().note)
+            write(f'samples/v1.26.60.10/behavior_pack/{trades_file}', b'{"tiers": [{"groups": [{"trades": [{ // note\n'
+                  b'"wants": [{"choice": [{"quantity": {"min": 3, "max": 3}, "item": "minecraft:newest", "functions": []}]}]}]}]}]}')
+            official = load()
+            self.assertIn('bedrock-samples v1.26.60.10', official.note)
+            self.assertEqual(official.data['tiers'][0]['groups'][0]['trades'][0]['wants'],
+                             [{'item': 'minecraft:newest', 'quantity': 3}])
+        options = {'tiers': [{'trades': [{'gives': [{'choice': [{'item': 'minecraft:a'}, {'item': 'minecraft:b'}]}]}]}]}
+        self.assertEqual(plain_trades(options), options)  # real choices stay for _expand_choices
+
+    def test_no_random_element_in_shipped_tables(self):
+        shipped = list(MOD.glob('*_bp/trading/vm/*.json'))
+        self.assertEqual(len(shipped), 30)
+        enchanted = 0
+        for path in shipped:
+            self.assertEqual(trades.random_parts(read(path)), [], path.name)
+            enchanted += json.dumps(read(path)).count('"enchant_with_levels"')
+        self.assertEqual(trades.ALLOWED_RANDOM, {'enchant_with_levels'})  # the owner's only exception
+        self.assertEqual(enchanted, 34)  # 17 vanilla gear offers x basic/upgraded
+
+    def test_pick_n_groups_sell_all_m_and_random_functions_resolve(self):
+        emerald = [{'item': 'minecraft:emerald'}]
+        potion = {'item': 'minecraft:arrow', 'functions': [{'function': 'set_potion', 'id': 'healing'}]}
+        tier = {'groups': [{'num_to_select': 1, 'trades': [
+            {'wants': emerald, 'gives': [{'item': 'minecraft:leather_boots', 'functions': [{'function': 'random_dye'}]}]},
+            {'wants': emerald, 'gives': [{'item': 'minecraft:bow', 'functions': [
+                {'function': 'enchant_with_levels', 'levels': {'min': 5, 'max': 19}}]}]},
+            {'wants': emerald, 'gives': [potion]}]}]}
+        table = trades.build_table({'tiers': [tier] + [{}] * 4}, False)
+        self.assertEqual([t['gives'][0] for t in offers(table)],
+                         [{'item': 'minecraft:leather_boots'}, tier['groups'][0]['trades'][1]['gives'][0], potion])
+        self.assertEqual(trades.random_parts(table), [])
+        self.assertTrue(trades.random_parts({'tiers': [tier]}))
+        ranged = {'trades': [{'wants': [{'item': 'minecraft:emerald', 'quantity': {'min': 1, 'max': 3}}], 'gives': emerald}]}
+        with self.assertRaises(ValueError):
+            trades.build_table({'tiers': [ranged] + [{}] * 4}, False)
 
     def test_shipped_tables_match_the_generator(self):
         tables, sources_used, notes = trades.build_all()

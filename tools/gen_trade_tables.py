@@ -130,13 +130,71 @@ def _expand_choices(trade):
     return [trade]
 
 
-def build_table(data, cured):
-    """Five tiers with vanilla's XP thresholds; one singleton group per distinct tier-N trade."""
+# Random item functions with no deterministic expansion, removed and counted (the
+# report lists them). random_dye: trade tables have no fixed-colour function for
+# leather, so the item is sold undyed (owner, 2026-10-23).
+STRIPPED_RANDOM = {
+    "random_dye": "sold undyed (trade tables have no fixed-colour function)",
+}
+
+# Item functions that roll at trade time. None may remain in a shipped table, except
+# enchant_with_levels: the owner keeps vanilla's random enchanting on gear (2026-10-23).
+ALLOWED_RANDOM = {"enchant_with_levels"}
+RANDOM_FUNCTIONS = {"random_dye", "random_aux_value", "random_block_state",
+                    "enchant_randomly", "enchant_random_gear", "enchant_book_for_trading", "set_stew_effect",
+                    "set_ominous_bottle_amplifier", "trader_material_type"}
+
+
+def random_parts(table):
+    """Every leftover random element in a table: [(tier, item, what)]. Empty for a fixed catalogue."""
+    out = []
+    for index, tier in enumerate(table["tiers"]):
+        for group in tier.get("groups") or []:
+            if group.get("num_to_select") != 1 or len(group.get("trades") or []) != 1:
+                out.append((index, "-", f"group picks {group.get('num_to_select')} of {len(group.get('trades') or [])}"))
+        for trade in _tier_trades(tier):
+            for line in trade.get("wants", []) + trade.get("gives", []):
+                if "choice" in line:
+                    out.append((index, "-", "choice"))
+                    continue
+                if isinstance(line.get("quantity", 1), dict):
+                    out.append((index, line["item"], "quantity range"))
+                for function in line.get("functions") or []:
+                    if function.get("function") in RANDOM_FUNCTIONS:
+                        out.append((index, line["item"], function["function"]))
+    return out
+
+
+def deterministic_variants(trade, stripped=None):
+    """Every fixed variant of one vanilla trade: choices and aux values expanded, the
+    STRIPPED_RANDOM functions removed (counted into `stripped`, a Counter)."""
+    out = []
+    for variant in _expand_choices(copy.deepcopy(trade)):
+        for line in (variant.get("wants") or []) + (variant.get("gives") or []):
+            if isinstance(line.get("quantity"), dict):
+                raise ValueError(f"quantity range on {line['item']}: no fixed-price rule yet; decide one first")
+            if "functions" not in line:
+                continue
+            for function in line["functions"]:
+                if function.get("function") in STRIPPED_RANDOM and stripped is not None:
+                    stripped[function["function"]] += 1
+            line["functions"] = [f for f in line["functions"] if f.get("function") not in STRIPPED_RANDOM]
+            if not line["functions"]:
+                del line["functions"]
+        out.append(variant)
+    return out
+
+
+def build_table(data, cured, stripped=None):
+    """Five tiers with vanilla's XP thresholds; one singleton group per distinct tier-N trade.
+
+    Every trade of every vanilla group is kept whatever its num_to_select: the machine
+    sells all M offers a villager would pick N from."""
     tiers = []
     for index, xp in enumerate(TIER_XP):
         trades = []
         for trade in _tier_trades(data["tiers"][index]):
-            for variant in _expand_choices(trade):
+            for variant in deterministic_variants(trade, stripped):
                 if variant not in trades:  # vanilla weights a roll by repeating a trade
                     trades.append(variant)
         groups = [{"num_to_select": 1, "trades": [_emit_trade(trade, cured)]} for trade in trades]
@@ -156,19 +214,32 @@ def build_all(root=None):
         sources.append(f"{profession}: {source.path}")
         if source.note:
             notes.append(f"{profession}: {source.note}")
+        stripped = Counter()
         for suffix in ("", "_cured"):
-            table = build_table(source.data, suffix == "_cured")
+            table = build_table(source.data, suffix == "_cured", None if suffix else stripped)
             if profession == "librarian":
                 books._patch(table, enchants, suffix == "_cured")
             tables[f"vending_villagers_bp/trading/vm/{profession}{suffix}.json"] = table
+        notes += _stripped_notes(profession, stripped)
     wandering = load_trade_source("wandering_trader", root)
     sources.append(f"wandering_trader: {wandering.path}")
     if wandering.note:
         notes.append(f"wandering_trader: {wandering.note}")
+    stripped = Counter()
     for machine, pack in (("wandering_trader", "vending_wandering_bp"), ("shulker", "vending_shulker_bp")):
         for suffix, upgraded in (("", False), ("_cured", True)):
-            tables[f"{pack}/trading/vm/{machine}{suffix}.json"] = extra.TABLES[machine](upgraded, root)
+            build = extra.TABLES[machine]
+            table = build(upgraded, root, stripped) if machine == "wandering_trader" and upgraded else build(upgraded, root)
+            tables[f"{pack}/trading/vm/{machine}{suffix}.json"] = table
+    notes += _stripped_notes("wandering_trader", stripped)
+    leftovers = {rel: parts for rel, table in tables.items() if (parts := random_parts(table))}
+    if leftovers:
+        raise ValueError(f"random elements left in shipped tables: {leftovers}")
     return tables, sources, notes
+
+
+def _stripped_notes(machine, stripped):
+    return [f"{machine}: {count} offer(s) {STRIPPED_RANDOM[name]} [{name}]" for name, count in sorted(stripped.items())]
 
 
 # --- human-readable diff ----------------------------------------------------

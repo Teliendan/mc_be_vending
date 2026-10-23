@@ -1,15 +1,23 @@
 """Read vanilla trade and enchantment data from the installed game.
 
 Trade sources: the game layers versioned packs (vanilla, vanilla_1.16, ...,
-vanilla_1.26.50); the newest pack that ships a profession's file wins. Since 1.26 some
-of those files are binary "MCB" (magic 0x7f 'MCB', version 1): an uncompressed,
-schema-bound serialisation that stores only the root key name ("tiers") and then
-positional values, so it is not a known container and cannot be decoded without
-Mojang's schema. For such a file the resolver reads the SAME versioned slice as JSON
-from an older launcher install (%APPDATA%/.minecraft_bedrock/versions/*/data) and
-checks that its item IDs, in order, equal the IDs embedded in the binary file. If no
-such copy exists it falls back to the newest older readable slice and says so.
-Every substitution comes back as a note for the diff report.
+vanilla_1.26.50); the newest pack that ships a profession's file wins.
+
+Binary "MCB" files: since 1.26 the game ships minified JSON, and every trade file
+whose trades use no item `functions` is stored instead in a schema-bound binary form
+(magic 0x7f 'MCB', version 1: the root key "tiers", then positional values; every
+quantity as a min/max pair). It is a build-time packing choice, not a content
+change or a naming problem: each MCB file holds exactly the trades of the old JSON.
+For such a file the resolver reads, in order:
+  1. Mojang/bedrock-samples (reference/bedrock-samples/<tag>, fetched by
+     tools/fetch_bedrock_samples.py): the official JSON of the newest release, in a
+     normalised form (single-option "choice" wrappers, {"min": n, "max": n}
+     quantities, empty function lists) that is folded back to the plain form;
+  2. the SAME versioned slice as JSON from an older launcher install
+     (%APPDATA%/.minecraft_bedrock/versions/*/data);
+  3. the newest older readable slice (flagged FALLBACK).
+1 and 2 are used only when their item IDs, in order, equal the IDs embedded in the
+binary file. Every substitution comes back as a note for the diff report.
 """
 import copy
 import json
@@ -21,6 +29,8 @@ from pathlib import Path
 REFERENCE = Path('C:/mcmods/reference/vanilla/current')
 VANILLA_PACKS = REFERENCE / 'behavior_packs'
 LAUNCHER_VERSIONS = Path(os.environ.get('APPDATA', '')) / '.minecraft_bedrock' / 'versions'
+SAMPLES = Path('C:/mcmods/reference/bedrock-samples')
+SAMPLES_TRADES = Path('behavior_pack/trading/economy_trades')
 BINARY_MAGIC = b'\x7fMCB'
 ITEM_ID = re.compile(rb'minecraft:[a-z0-9_.:]+')
 
@@ -54,11 +64,59 @@ def binary_item_ids(raw):
     return [match.decode() for match in ITEM_ID.findall(raw)]
 
 
+JSON_TOKEN = re.compile(r'"(?:\\.|[^"\\])*"|//[^\n]*|/\*.*?\*/', re.S)
+
+
+def _strip_comments(text):
+    """Drop // and /* */ comments outside strings (bedrock-samples JSON carries a few)."""
+    return JSON_TOKEN.sub(lambda m: m.group(0) if m.group(0).startswith('"') else '', text)
+
+
 def _read_json(raw):
-    return json.loads(raw.decode('utf-8-sig'))
+    return json.loads(_strip_comments(raw.decode('utf-8-sig')))
 
 
-def load_trade_source(name, root=None, launchers=None):
+def _plain_line(line, option=False):
+    """bedrock-samples form -> plain form: unwrap one-option choices, fixed quantities as numbers."""
+    if set(line) == {'choice'} and len(line['choice']) == 1:
+        return _plain_line(line['choice'][0])
+    if 'choice' in line:
+        return {**line, 'choice': [_plain_line(option, option=True) for option in line['choice']]}
+    # Samples drop a quantity of 1; vanilla files spell it out on plain lines, not on choice options.
+    quantity = line.get('quantity', None if option else 1)
+    if isinstance(quantity, dict) and quantity.get('min') == quantity.get('max'):
+        quantity = quantity['min']
+    plain = {'item': line['item']} if quantity is None else {'item': line['item'], 'quantity': quantity}
+    plain.update((key, value) for key, value in line.items() if key not in plain and key != 'quantity' and value != [])
+    return plain
+
+
+def plain_trades(data):
+    """Fold the normalised bedrock-samples serialisation back to the plain vanilla form."""
+    data = copy.deepcopy(data)
+    for tier in data.get('tiers', []):
+        for trade in [t for g in tier.get('groups') or [] for t in g.get('trades') or []] + (tier.get('trades') or []):
+            for key in ('wants', 'gives'):
+                if key in trade:
+                    trade[key] = [_plain_line(line) for line in trade[key]]
+    return data
+
+
+def samples_release(samples=None):
+    """Newest bedrock-samples tag folder that holds trade files, or None."""
+    samples = Path(samples) if samples is not None else SAMPLES
+    tags = [p for p in samples.glob('v*') if (p / SAMPLES_TRADES).is_dir()]
+    key = lambda p: tuple(int(x) for x in re.findall(r'\d+', p.name.split('-')[0]))
+    return max(tags, key=key) if tags else None
+
+
+def _samples_commit(release):
+    source = release / 'SOURCE.txt'
+    match = re.search(r'commit ([0-9a-f]{10})', source.read_text(encoding='utf-8')) if source.exists() else None
+    return f' commit {match.group(1)}' if match else ''
+
+
+def load_trade_source(name, root=None, launchers=None, samples=None):
     root = Path(root) if root is not None else VANILLA_PACKS
     launchers = Path(launchers) if launchers is not None else LAUNCHER_VERSIONS
     filename = name + '_trades.json'
@@ -76,6 +134,13 @@ def load_trade_source(name, root=None, launchers=None):
 
     pack = newest.parents[2].name
     ids = binary_item_ids(raw)
+    release = samples_release(samples)
+    if release is not None and (release / SAMPLES_TRADES / filename).exists():
+        path = release / SAMPLES_TRADES / filename
+        data = plain_trades(_read_json(path.read_bytes()))
+        if json_item_ids(data) == ids:
+            return Source(data, path, f'{pack} is binary (MCB) in the game; read as JSON from Mojang/bedrock-samples '
+                          f'{release.name}{_samples_commit(release)}; all {len(ids)} item IDs match the binary file.')
     for copy_path in sorted(launchers.glob(f'*/data/behavior_packs/{pack}/trading/economy_trades/{filename}')):
         copy_raw = copy_path.read_bytes()
         if copy_raw.startswith(BINARY_MAGIC):

@@ -18,7 +18,8 @@ Trade tables are written by gen_trade_tables.py (TABLES below).
 Wandering upgraded prices/counts come from the newest installed vanilla table.
 Basic sales cost more emeralds; basic buybacks pay fewer emeralds, minimum one,
 without inflating unstackable bucket/bottle inputs. The custom shulker balance
-remains explicit. All native candidates become singleton selection groups.
+remains explicit. All native candidates (every trade of every pick-N group) become singleton
+selection groups, with the same deterministic rules as the villager tables.
 
 The RP entries (terrain atlas, blocks.json, item atlas, lang) are MERGED, so
 this is safe to re-run. language names are maintained in localization/catalog.json;
@@ -30,7 +31,7 @@ Run:  python mods\vending\tools\gen_extra_machines.py
 import copy
 import json
 from trade_sources import load_trade_source, fixture_items
-from gen_trade_tables import _tier_trades, _expand_choices
+from gen_trade_tables import _tier_trades, deterministic_variants
 import os
 from gen_machine_blocks import write_machine_loot
 MOD = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))  # this mod's repo root
@@ -64,12 +65,15 @@ def trade(wants, gives, count, exp):
     }]}
 
 
-def wandering_table(upgraded, root=None):
+def wandering_table(upgraded, root=None, stripped=None):
     source = load_trade_source("wandering_trader", root).data
-    groups = []
+    groups, seen = [], []
     for tier in source["tiers"]:
         for original in _tier_trades(tier):
-            for option in _expand_choices(original):
+            for option in deterministic_variants(original, stripped):
+                if option in seen:  # a repeated trade is a roll weight; sell it once
+                    continue
+                seen.append(option)
                 offer = copy.deepcopy(option)
                 offer["wants"] = fixture_items(offer["wants"])
                 offer["gives"] = fixture_items(offer["gives"])
