@@ -52,7 +52,7 @@
         "redstone_conductor": true
       },
       "minecraft:instrument_sound": {
-        "down": "note.iron_xylophone"
+        "up": "note.iron_xylophone"
       },
       "minecraft:material_instances": {
         "*": {

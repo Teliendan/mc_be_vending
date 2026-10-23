@@ -63,8 +63,6 @@ tile.vm:machine_shulker.name=Shulkerový automat
 entity.vm:trader_shulker.name=Shulkerový automat
 ## Context: Shulker Core.
 item.vm:shulker_core=Shulkerové jádro
-## Context: Machine occupies a lower and upper block; placement needs two blocks of vertical space.
-vending.message.space=§cPro automat je potřeba prostor vysoký dva bloky.
 ## Context: Discount upgrade is already applied; item is not consumed again.
 vending.message.upgraded=§eTento automat už je vylepšený.
 ## Context: Upgrade Kit consumed successfully; this machine now offers discounted trades.

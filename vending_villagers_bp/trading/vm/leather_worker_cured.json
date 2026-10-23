@@ -20,7 +20,7 @@
                   "quantity": 1
                 }
               ],
-              "trader_exp": 1,
+              "trader_exp": 2,
               "max_uses": 9999999,
               "reward_exp": true
             }
@@ -34,16 +34,21 @@
                 {
                   "item": "minecraft:emerald",
                   "quantity": 2,
-                  "price_multiplier": 0.1
+                  "price_multiplier": 0.2
                 }
               ],
               "gives": [
                 {
                   "item": "minecraft:leather_leggings",
-                  "quantity": 1
+                  "quantity": 1,
+                  "functions": [
+                    {
+                      "function": "random_dye"
+                    }
+                  ]
                 }
               ],
-              "trader_exp": 2,
+              "trader_exp": 1,
               "max_uses": 9999999,
               "reward_exp": true
             }
@@ -57,16 +62,21 @@
                 {
                   "item": "minecraft:emerald",
                   "quantity": 5,
-                  "price_multiplier": 0.1
+                  "price_multiplier": 0.2
                 }
               ],
               "gives": [
                 {
                   "item": "minecraft:leather_chestplate",
-                  "quantity": 1
+                  "quantity": 1,
+                  "functions": [
+                    {
+                      "function": "random_dye"
+                    }
+                  ]
                 }
               ],
-              "trader_exp": 2,
+              "trader_exp": 1,
               "max_uses": 9999999,
               "reward_exp": true
             }
@@ -94,7 +104,7 @@
                   "quantity": 1
                 }
               ],
-              "trader_exp": 5,
+              "trader_exp": 10,
               "max_uses": 9999999,
               "reward_exp": true
             }
@@ -108,16 +118,21 @@
                 {
                   "item": "minecraft:emerald",
                   "quantity": 4,
-                  "price_multiplier": 0.1
+                  "price_multiplier": 0.2
                 }
               ],
               "gives": [
                 {
                   "item": "minecraft:leather_helmet",
-                  "quantity": 1
+                  "quantity": 1,
+                  "functions": [
+                    {
+                      "function": "random_dye"
+                    }
+                  ]
                 }
               ],
-              "trader_exp": 10,
+              "trader_exp": 5,
               "max_uses": 9999999,
               "reward_exp": true
             }
@@ -131,16 +146,21 @@
                 {
                   "item": "minecraft:emerald",
                   "quantity": 3,
-                  "price_multiplier": 0.1
+                  "price_multiplier": 0.2
                 }
               ],
               "gives": [
                 {
                   "item": "minecraft:leather_boots",
-                  "quantity": 1
+                  "quantity": 1,
+                  "functions": [
+                    {
+                      "function": "random_dye"
+                    }
+                  ]
                 }
               ],
-              "trader_exp": 10,
+              "trader_exp": 5,
               "max_uses": 9999999,
               "reward_exp": true
             }
@@ -168,7 +188,7 @@
                   "quantity": 1
                 }
               ],
-              "trader_exp": 10,
+              "trader_exp": 20,
               "max_uses": 9999999,
               "reward_exp": true
             }
@@ -182,7 +202,7 @@
                 {
                   "item": "minecraft:emerald",
                   "quantity": 5,
-                  "price_multiplier": 0.1
+                  "price_multiplier": 0.2
                 }
               ],
               "gives": [
@@ -191,17 +211,12 @@
                   "quantity": 1,
                   "functions": [
                     {
-                      "function": "enchant_with_levels",
-                      "treasure": false,
-                      "levels": {
-                        "min": 5,
-                        "max": 19
-                      }
+                      "function": "random_dye"
                     }
                   ]
                 }
               ],
-              "trader_exp": 20,
+              "trader_exp": 10,
               "max_uses": 9999999,
               "reward_exp": true
             }
@@ -229,7 +244,7 @@
                   "quantity": 1
                 }
               ],
-              "trader_exp": 15,
+              "trader_exp": 30,
               "max_uses": 9999999,
               "reward_exp": true
             }
@@ -243,16 +258,21 @@
                 {
                   "item": "minecraft:emerald",
                   "quantity": 4,
-                  "price_multiplier": 0.1
+                  "price_multiplier": 0.2
                 }
               ],
               "gives": [
                 {
                   "item": "minecraft:horsearmorleather",
-                  "quantity": 1
+                  "quantity": 1,
+                  "functions": [
+                    {
+                      "function": "random_dye"
+                    }
+                  ]
                 }
               ],
-              "trader_exp": 30,
+              "trader_exp": 15,
               "max_uses": 9999999,
               "reward_exp": true
             }
@@ -271,7 +291,7 @@
                 {
                   "item": "minecraft:emerald",
                   "quantity": 4,
-                  "price_multiplier": 0.1
+                  "price_multiplier": 0.2
                 }
               ],
               "gives": [
@@ -280,17 +300,12 @@
                   "quantity": 1,
                   "functions": [
                     {
-                      "function": "enchant_with_levels",
-                      "treasure": false,
-                      "levels": {
-                        "min": 5,
-                        "max": 19
-                      }
+                      "function": "random_dye"
                     }
                   ]
                 }
               ],
-              "trader_exp": 0,
+              "trader_exp": 30,
               "max_uses": 9999999,
               "reward_exp": true
             }
@@ -304,7 +319,7 @@
                 {
                   "item": "minecraft:emerald",
                   "quantity": 4,
-                  "price_multiplier": 0.1
+                  "price_multiplier": 0.2
                 }
               ],
               "gives": [
@@ -313,7 +328,7 @@
                   "quantity": 1
                 }
               ],
-              "trader_exp": 0,
+              "trader_exp": 30,
               "max_uses": 9999999,
               "reward_exp": true
             }

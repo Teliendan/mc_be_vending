@@ -108,7 +108,7 @@ def _write(profession, force):
     path = os.path.join(OUTPUT_DIR, "trader_{}.json".format(profession))
     if os.path.exists(path) and not force:
         sys.exit("{} already exists; pass --force to replace it".format(path))
-    with open(path, "w", encoding="utf-8") as fh:
+    with open(path, "w", encoding="utf-8", newline="\n") as fh:
         json.dump(build_entity(profession), fh, ensure_ascii=False, indent=2)
         fh.write("\n")
     return path

@@ -112,7 +112,7 @@ def build(profession):
                 "minecraft:map_color": "#8f8f8f",
                 "minecraft:geometry": "minecraft:geometry.full_block",
                 "minecraft:redstone_conductivity": {"redstone_conductor": True},
-                "minecraft:instrument_sound": {"down": "note.iron_xylophone"},
+                "minecraft:instrument_sound": {"up": "note.iron_xylophone"},
                 "minecraft:material_instances": {
                     "*": {"texture": "vm_machine_body", "render_method": "opaque"},
                 },
@@ -193,18 +193,18 @@ def material_policy(profession):
     return {
         "profile": "metal_machine",
         "property_checks": {"minecraft:instrument_sound": {
-            "counterpart": "minecraft:iron_block", "expected": {"down": "note.iron_xylophone"},
-            "source": "Block of Iron note-block usage; instrument_sound stable since Bedrock26.40."}, "RP:sound": {
+            "counterpart": "minecraft:iron_block", "expected": {"up": "note.iron_xylophone"},
+            "source": "Block of Iron: a note block placed ON this block plays iron xylophone. Vanilla data-driven blocks (vanilla_1.26.50 concrete) key it as \"up\"."}, "RP:sound": {
             "counterpart": "minecraft:iron_block", "expected": "iron",
             "source": "reference/vanilla/current/resource_packs/vanilla_1.21.60/blocks.json"}},
         "harvest": "One native base-owned machine item; explicit empty upper loot. Upper-only loss uses support-collapse context; Creative cleanup drops nothing. Owner 2026-10-10: collect with any tool or hand; no required tool.",
         "loot_checks": {
             "loot_tables/blocks/machine_" + profession + ".json": {
                 "counterpart": "minecraft:iron_block", "explosion_decay": True,
-                "source": "references/harvest-explosion-loot.md; docs/LIFECYCLE.md: native decay and one base-owned item."},
+                "source": "references/harvest-explosion-loot.md; docs/VANILLA_PARITY.md: native decay and one base-owned item."},
             "loot_tables/blocks/machine_upper_empty.json": {
                 "counterpart": "minecraft:wooden_door", "explosion_decay": False,
-                "source": "Paired-block one-item ownership; docs/LIFECYCLE.md.",
+                "source": "Paired-block one-item ownership; docs/VANILLA_PARITY.md.",
                 "reason": "Manually paired machines: only the base owns loot; upper-only loss destroys a surviving base natively."},
         },
         "reason": "Preserve deliberate protected trader lifecycle: mining 8, resistance 1200, upper half cannot be mined independently.",
@@ -228,14 +228,14 @@ def main():
         path = os.path.join(BLOCKS_DIR, "machine_{}.json".format(profession))
         if os.path.exists(path) and not args.force:
             sys.exit("{} already exists; pass --force to replace it".format(path))
-        with open(path, "w", encoding="utf-8") as fh:
+        with open(path, "w", encoding="utf-8", newline="\n") as fh:
             json.dump(build(profession), fh, indent=2)
             fh.write("\n")
         write_machine_loot(os.path.dirname(BLOCKS_DIR), profession)
     print("wrote {} block definitions to {}".format(len(PROFESSIONS), BLOCKS_DIR))
     policy_path = os.path.join(os.path.dirname(BLOCKS_DIR), "block_materials.json")
     if os.path.exists(policy_path):
-        with open(policy_path, encoding="utf-8") as fh:
+        with open(policy_path, encoding="utf-8", newline="\n") as fh:
             policy = json.load(fh)
     else:
         policy = {"schema_version": 1, "blocks": {}}

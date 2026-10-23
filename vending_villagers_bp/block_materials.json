@@ -30,20 +30,20 @@
         "minecraft:instrument_sound": {
           "counterpart": "minecraft:iron_block",
           "expected": {
-            "down": "note.iron_xylophone"
+            "up": "note.iron_xylophone"
           },
-          "source": "Block of Iron note-block usage; instrument_sound stable since Bedrock26.40."
+          "source": "Block of Iron: a note block placed ON this block plays iron xylophone. Vanilla data-driven blocks (vanilla_1.26.50 concrete) key it as \"up\"."
         }
       },
       "loot_checks": {
         "loot_tables/blocks/machine_armorer.json": {
           "counterpart": "minecraft:iron_block",
-          "source": "references/harvest-explosion-loot.md: native explosion_decay; one placed item owns the base, paired upper is empty. docs/LIFECYCLE.md.",
+          "source": "references/harvest-explosion-loot.md: native explosion_decay; one placed item owns the base, paired upper is empty. docs/VANILLA_PARITY.md.",
           "explosion_decay": true
         },
         "loot_tables/blocks/machine_upper_empty.json": {
           "counterpart": "minecraft:wooden_door",
-          "source": "Paired-block one-item ownership; docs/LIFECYCLE.md. Native vertical multi_block migration is outside this repair.",
+          "source": "Paired-block one-item ownership; docs/VANILLA_PARITY.md. Native vertical multi_block migration is outside this repair.",
           "reason": "Existing manually paired machine lifecycle: only the base owns the placed item; upper-only loss destroys surviving base natively.",
           "explosion_decay": false
         }
@@ -78,20 +78,20 @@
         "minecraft:instrument_sound": {
           "counterpart": "minecraft:iron_block",
           "expected": {
-            "down": "note.iron_xylophone"
+            "up": "note.iron_xylophone"
           },
-          "source": "Block of Iron note-block usage; instrument_sound stable since Bedrock26.40."
+          "source": "Block of Iron: a note block placed ON this block plays iron xylophone. Vanilla data-driven blocks (vanilla_1.26.50 concrete) key it as \"up\"."
         }
       },
       "loot_checks": {
         "loot_tables/blocks/machine_butcher.json": {
           "counterpart": "minecraft:iron_block",
-          "source": "references/harvest-explosion-loot.md: native explosion_decay; one placed item owns the base, paired upper is empty. docs/LIFECYCLE.md.",
+          "source": "references/harvest-explosion-loot.md: native explosion_decay; one placed item owns the base, paired upper is empty. docs/VANILLA_PARITY.md.",
           "explosion_decay": true
         },
         "loot_tables/blocks/machine_upper_empty.json": {
           "counterpart": "minecraft:wooden_door",
-          "source": "Paired-block one-item ownership; docs/LIFECYCLE.md. Native vertical multi_block migration is outside this repair.",
+          "source": "Paired-block one-item ownership; docs/VANILLA_PARITY.md. Native vertical multi_block migration is outside this repair.",
           "reason": "Existing manually paired machine lifecycle: only the base owns the placed item; upper-only loss destroys surviving base natively.",
           "explosion_decay": false
         }
@@ -126,20 +126,20 @@
         "minecraft:instrument_sound": {
           "counterpart": "minecraft:iron_block",
           "expected": {
-            "down": "note.iron_xylophone"
+            "up": "note.iron_xylophone"
           },
-          "source": "Block of Iron note-block usage; instrument_sound stable since Bedrock26.40."
+          "source": "Block of Iron: a note block placed ON this block plays iron xylophone. Vanilla data-driven blocks (vanilla_1.26.50 concrete) key it as \"up\"."
         }
       },
       "loot_checks": {
         "loot_tables/blocks/machine_cartographer.json": {
           "counterpart": "minecraft:iron_block",
-          "source": "references/harvest-explosion-loot.md: native explosion_decay; one placed item owns the base, paired upper is empty. docs/LIFECYCLE.md.",
+          "source": "references/harvest-explosion-loot.md: native explosion_decay; one placed item owns the base, paired upper is empty. docs/VANILLA_PARITY.md.",
           "explosion_decay": true
         },
         "loot_tables/blocks/machine_upper_empty.json": {
           "counterpart": "minecraft:wooden_door",
-          "source": "Paired-block one-item ownership; docs/LIFECYCLE.md. Native vertical multi_block migration is outside this repair.",
+          "source": "Paired-block one-item ownership; docs/VANILLA_PARITY.md. Native vertical multi_block migration is outside this repair.",
           "reason": "Existing manually paired machine lifecycle: only the base owns the placed item; upper-only loss destroys surviving base natively.",
           "explosion_decay": false
         }
@@ -174,20 +174,20 @@
         "minecraft:instrument_sound": {
           "counterpart": "minecraft:iron_block",
           "expected": {
-            "down": "note.iron_xylophone"
+            "up": "note.iron_xylophone"
           },
-          "source": "Block of Iron note-block usage; instrument_sound stable since Bedrock26.40."
+          "source": "Block of Iron: a note block placed ON this block plays iron xylophone. Vanilla data-driven blocks (vanilla_1.26.50 concrete) key it as \"up\"."
         }
       },
       "loot_checks": {
         "loot_tables/blocks/machine_cleric.json": {
           "counterpart": "minecraft:iron_block",
-          "source": "references/harvest-explosion-loot.md: native explosion_decay; one placed item owns the base, paired upper is empty. docs/LIFECYCLE.md.",
+          "source": "references/harvest-explosion-loot.md: native explosion_decay; one placed item owns the base, paired upper is empty. docs/VANILLA_PARITY.md.",
           "explosion_decay": true
         },
         "loot_tables/blocks/machine_upper_empty.json": {
           "counterpart": "minecraft:wooden_door",
-          "source": "Paired-block one-item ownership; docs/LIFECYCLE.md. Native vertical multi_block migration is outside this repair.",
+          "source": "Paired-block one-item ownership; docs/VANILLA_PARITY.md. Native vertical multi_block migration is outside this repair.",
           "reason": "Existing manually paired machine lifecycle: only the base owns the placed item; upper-only loss destroys surviving base natively.",
           "explosion_decay": false
         }
@@ -222,20 +222,20 @@
         "minecraft:instrument_sound": {
           "counterpart": "minecraft:iron_block",
           "expected": {
-            "down": "note.iron_xylophone"
+            "up": "note.iron_xylophone"
           },
-          "source": "Block of Iron note-block usage; instrument_sound stable since Bedrock26.40."
+          "source": "Block of Iron: a note block placed ON this block plays iron xylophone. Vanilla data-driven blocks (vanilla_1.26.50 concrete) key it as \"up\"."
         }
       },
       "loot_checks": {
         "loot_tables/blocks/machine_farmer.json": {
           "counterpart": "minecraft:iron_block",
-          "source": "references/harvest-explosion-loot.md: native explosion_decay; one placed item owns the base, paired upper is empty. docs/LIFECYCLE.md.",
+          "source": "references/harvest-explosion-loot.md: native explosion_decay; one placed item owns the base, paired upper is empty. docs/VANILLA_PARITY.md.",
           "explosion_decay": true
         },
         "loot_tables/blocks/machine_upper_empty.json": {
           "counterpart": "minecraft:wooden_door",
-          "source": "Paired-block one-item ownership; docs/LIFECYCLE.md. Native vertical multi_block migration is outside this repair.",
+          "source": "Paired-block one-item ownership; docs/VANILLA_PARITY.md. Native vertical multi_block migration is outside this repair.",
           "reason": "Existing manually paired machine lifecycle: only the base owns the placed item; upper-only loss destroys surviving base natively.",
           "explosion_decay": false
         }
@@ -270,20 +270,20 @@
         "minecraft:instrument_sound": {
           "counterpart": "minecraft:iron_block",
           "expected": {
-            "down": "note.iron_xylophone"
+            "up": "note.iron_xylophone"
           },
-          "source": "Block of Iron note-block usage; instrument_sound stable since Bedrock26.40."
+          "source": "Block of Iron: a note block placed ON this block plays iron xylophone. Vanilla data-driven blocks (vanilla_1.26.50 concrete) key it as \"up\"."
         }
       },
       "loot_checks": {
         "loot_tables/blocks/machine_fisherman.json": {
           "counterpart": "minecraft:iron_block",
-          "source": "references/harvest-explosion-loot.md: native explosion_decay; one placed item owns the base, paired upper is empty. docs/LIFECYCLE.md.",
+          "source": "references/harvest-explosion-loot.md: native explosion_decay; one placed item owns the base, paired upper is empty. docs/VANILLA_PARITY.md.",
           "explosion_decay": true
         },
         "loot_tables/blocks/machine_upper_empty.json": {
           "counterpart": "minecraft:wooden_door",
-          "source": "Paired-block one-item ownership; docs/LIFECYCLE.md. Native vertical multi_block migration is outside this repair.",
+          "source": "Paired-block one-item ownership; docs/VANILLA_PARITY.md. Native vertical multi_block migration is outside this repair.",
           "reason": "Existing manually paired machine lifecycle: only the base owns the placed item; upper-only loss destroys surviving base natively.",
           "explosion_decay": false
         }
@@ -318,20 +318,20 @@
         "minecraft:instrument_sound": {
           "counterpart": "minecraft:iron_block",
           "expected": {
-            "down": "note.iron_xylophone"
+            "up": "note.iron_xylophone"
           },
-          "source": "Block of Iron note-block usage; instrument_sound stable since Bedrock26.40."
+          "source": "Block of Iron: a note block placed ON this block plays iron xylophone. Vanilla data-driven blocks (vanilla_1.26.50 concrete) key it as \"up\"."
         }
       },
       "loot_checks": {
         "loot_tables/blocks/machine_fletcher.json": {
           "counterpart": "minecraft:iron_block",
-          "source": "references/harvest-explosion-loot.md: native explosion_decay; one placed item owns the base, paired upper is empty. docs/LIFECYCLE.md.",
+          "source": "references/harvest-explosion-loot.md: native explosion_decay; one placed item owns the base, paired upper is empty. docs/VANILLA_PARITY.md.",
           "explosion_decay": true
         },
         "loot_tables/blocks/machine_upper_empty.json": {
           "counterpart": "minecraft:wooden_door",
-          "source": "Paired-block one-item ownership; docs/LIFECYCLE.md. Native vertical multi_block migration is outside this repair.",
+          "source": "Paired-block one-item ownership; docs/VANILLA_PARITY.md. Native vertical multi_block migration is outside this repair.",
           "reason": "Existing manually paired machine lifecycle: only the base owns the placed item; upper-only loss destroys surviving base natively.",
           "explosion_decay": false
         }
@@ -366,20 +366,20 @@
         "minecraft:instrument_sound": {
           "counterpart": "minecraft:iron_block",
           "expected": {
-            "down": "note.iron_xylophone"
+            "up": "note.iron_xylophone"
           },
-          "source": "Block of Iron note-block usage; instrument_sound stable since Bedrock26.40."
+          "source": "Block of Iron: a note block placed ON this block plays iron xylophone. Vanilla data-driven blocks (vanilla_1.26.50 concrete) key it as \"up\"."
         }
       },
       "loot_checks": {
         "loot_tables/blocks/machine_leather_worker.json": {
           "counterpart": "minecraft:iron_block",
-          "source": "references/harvest-explosion-loot.md: native explosion_decay; one placed item owns the base, paired upper is empty. docs/LIFECYCLE.md.",
+          "source": "references/harvest-explosion-loot.md: native explosion_decay; one placed item owns the base, paired upper is empty. docs/VANILLA_PARITY.md.",
           "explosion_decay": true
         },
         "loot_tables/blocks/machine_upper_empty.json": {
           "counterpart": "minecraft:wooden_door",
-          "source": "Paired-block one-item ownership; docs/LIFECYCLE.md. Native vertical multi_block migration is outside this repair.",
+          "source": "Paired-block one-item ownership; docs/VANILLA_PARITY.md. Native vertical multi_block migration is outside this repair.",
           "reason": "Existing manually paired machine lifecycle: only the base owns the placed item; upper-only loss destroys surviving base natively.",
           "explosion_decay": false
         }
@@ -414,20 +414,20 @@
         "minecraft:instrument_sound": {
           "counterpart": "minecraft:iron_block",
           "expected": {
-            "down": "note.iron_xylophone"
+            "up": "note.iron_xylophone"
           },
-          "source": "Block of Iron note-block usage; instrument_sound stable since Bedrock26.40."
+          "source": "Block of Iron: a note block placed ON this block plays iron xylophone. Vanilla data-driven blocks (vanilla_1.26.50 concrete) key it as \"up\"."
         }
       },
       "loot_checks": {
         "loot_tables/blocks/machine_librarian.json": {
           "counterpart": "minecraft:iron_block",
-          "source": "references/harvest-explosion-loot.md: native explosion_decay; one placed item owns the base, paired upper is empty. docs/LIFECYCLE.md.",
+          "source": "references/harvest-explosion-loot.md: native explosion_decay; one placed item owns the base, paired upper is empty. docs/VANILLA_PARITY.md.",
           "explosion_decay": true
         },
         "loot_tables/blocks/machine_upper_empty.json": {
           "counterpart": "minecraft:wooden_door",
-          "source": "Paired-block one-item ownership; docs/LIFECYCLE.md. Native vertical multi_block migration is outside this repair.",
+          "source": "Paired-block one-item ownership; docs/VANILLA_PARITY.md. Native vertical multi_block migration is outside this repair.",
           "reason": "Existing manually paired machine lifecycle: only the base owns the placed item; upper-only loss destroys surviving base natively.",
           "explosion_decay": false
         }
@@ -462,20 +462,20 @@
         "minecraft:instrument_sound": {
           "counterpart": "minecraft:iron_block",
           "expected": {
-            "down": "note.iron_xylophone"
+            "up": "note.iron_xylophone"
           },
-          "source": "Block of Iron note-block usage; instrument_sound stable since Bedrock26.40."
+          "source": "Block of Iron: a note block placed ON this block plays iron xylophone. Vanilla data-driven blocks (vanilla_1.26.50 concrete) key it as \"up\"."
         }
       },
       "loot_checks": {
         "loot_tables/blocks/machine_shepherd.json": {
           "counterpart": "minecraft:iron_block",
-          "source": "references/harvest-explosion-loot.md: native explosion_decay; one placed item owns the base, paired upper is empty. docs/LIFECYCLE.md.",
+          "source": "references/harvest-explosion-loot.md: native explosion_decay; one placed item owns the base, paired upper is empty. docs/VANILLA_PARITY.md.",
           "explosion_decay": true
         },
         "loot_tables/blocks/machine_upper_empty.json": {
           "counterpart": "minecraft:wooden_door",
-          "source": "Paired-block one-item ownership; docs/LIFECYCLE.md. Native vertical multi_block migration is outside this repair.",
+          "source": "Paired-block one-item ownership; docs/VANILLA_PARITY.md. Native vertical multi_block migration is outside this repair.",
           "reason": "Existing manually paired machine lifecycle: only the base owns the placed item; upper-only loss destroys surviving base natively.",
           "explosion_decay": false
         }
@@ -510,20 +510,20 @@
         "minecraft:instrument_sound": {
           "counterpart": "minecraft:iron_block",
           "expected": {
-            "down": "note.iron_xylophone"
+            "up": "note.iron_xylophone"
           },
-          "source": "Block of Iron note-block usage; instrument_sound stable since Bedrock26.40."
+          "source": "Block of Iron: a note block placed ON this block plays iron xylophone. Vanilla data-driven blocks (vanilla_1.26.50 concrete) key it as \"up\"."
         }
       },
       "loot_checks": {
         "loot_tables/blocks/machine_stone_mason.json": {
           "counterpart": "minecraft:iron_block",
-          "source": "references/harvest-explosion-loot.md: native explosion_decay; one placed item owns the base, paired upper is empty. docs/LIFECYCLE.md.",
+          "source": "references/harvest-explosion-loot.md: native explosion_decay; one placed item owns the base, paired upper is empty. docs/VANILLA_PARITY.md.",
           "explosion_decay": true
         },
         "loot_tables/blocks/machine_upper_empty.json": {
           "counterpart": "minecraft:wooden_door",
-          "source": "Paired-block one-item ownership; docs/LIFECYCLE.md. Native vertical multi_block migration is outside this repair.",
+          "source": "Paired-block one-item ownership; docs/VANILLA_PARITY.md. Native vertical multi_block migration is outside this repair.",
           "reason": "Existing manually paired machine lifecycle: only the base owns the placed item; upper-only loss destroys surviving base natively.",
           "explosion_decay": false
         }
@@ -558,20 +558,20 @@
         "minecraft:instrument_sound": {
           "counterpart": "minecraft:iron_block",
           "expected": {
-            "down": "note.iron_xylophone"
+            "up": "note.iron_xylophone"
           },
-          "source": "Block of Iron note-block usage; instrument_sound stable since Bedrock26.40."
+          "source": "Block of Iron: a note block placed ON this block plays iron xylophone. Vanilla data-driven blocks (vanilla_1.26.50 concrete) key it as \"up\"."
         }
       },
       "loot_checks": {
         "loot_tables/blocks/machine_tool_smith.json": {
           "counterpart": "minecraft:iron_block",
-          "source": "references/harvest-explosion-loot.md: native explosion_decay; one placed item owns the base, paired upper is empty. docs/LIFECYCLE.md.",
+          "source": "references/harvest-explosion-loot.md: native explosion_decay; one placed item owns the base, paired upper is empty. docs/VANILLA_PARITY.md.",
           "explosion_decay": true
         },
         "loot_tables/blocks/machine_upper_empty.json": {
           "counterpart": "minecraft:wooden_door",
-          "source": "Paired-block one-item ownership; docs/LIFECYCLE.md. Native vertical multi_block migration is outside this repair.",
+          "source": "Paired-block one-item ownership; docs/VANILLA_PARITY.md. Native vertical multi_block migration is outside this repair.",
           "reason": "Existing manually paired machine lifecycle: only the base owns the placed item; upper-only loss destroys surviving base natively.",
           "explosion_decay": false
         }
@@ -606,20 +606,20 @@
         "minecraft:instrument_sound": {
           "counterpart": "minecraft:iron_block",
           "expected": {
-            "down": "note.iron_xylophone"
+            "up": "note.iron_xylophone"
           },
-          "source": "Block of Iron note-block usage; instrument_sound stable since Bedrock26.40."
+          "source": "Block of Iron: a note block placed ON this block plays iron xylophone. Vanilla data-driven blocks (vanilla_1.26.50 concrete) key it as \"up\"."
         }
       },
       "loot_checks": {
         "loot_tables/blocks/machine_weapon_smith.json": {
           "counterpart": "minecraft:iron_block",
-          "source": "references/harvest-explosion-loot.md: native explosion_decay; one placed item owns the base, paired upper is empty. docs/LIFECYCLE.md.",
+          "source": "references/harvest-explosion-loot.md: native explosion_decay; one placed item owns the base, paired upper is empty. docs/VANILLA_PARITY.md.",
           "explosion_decay": true
         },
         "loot_tables/blocks/machine_upper_empty.json": {
           "counterpart": "minecraft:wooden_door",
-          "source": "Paired-block one-item ownership; docs/LIFECYCLE.md. Native vertical multi_block migration is outside this repair.",
+          "source": "Paired-block one-item ownership; docs/VANILLA_PARITY.md. Native vertical multi_block migration is outside this repair.",
           "reason": "Existing manually paired machine lifecycle: only the base owns the placed item; upper-only loss destroys surviving base natively.",
           "explosion_decay": false
         }

@@ -14,6 +14,7 @@ in game. The core script needs nothing: it handles any vm:machine_* block.
 Use --blocks-only to refresh the shared machine states/permutations without
 rewriting trade tables, recipes, items or localization resources.
 
+Trade tables are written by gen_trade_tables.py (TABLES below).
 Wandering upgraded prices/counts come from the newest installed vanilla table.
 Basic sales cost more emeralds; basic buybacks pay fewer emeralds, minimum one,
 without inflating unstackable bucket/bottle inputs. The custom shulker balance
@@ -63,8 +64,8 @@ def trade(wants, gives, count, exp):
     }]}
 
 
-def wandering_table(upgraded):
-    source, _ = load_trade_source("wandering_trader")
+def wandering_table(upgraded, root=None):
+    source = load_trade_source("wandering_trader", root).data
     groups = []
     for tier in source["tiers"]:
         for original in _tier_trades(tier):
@@ -88,7 +89,7 @@ def wandering_table(upgraded):
     return {"tiers": [{"total_exp_required": 0, "groups": groups}]}
 
 
-def shulker_table(upgraded):
+def shulker_table(upgraded, root=None):
     shell, box = (8, 16) if upgraded else (12, 24)
     return {"tiers": [
         {"total_exp_required": 0, "groups": [
@@ -144,7 +145,7 @@ def read_json(path):
 
 def write_json(path, data, indent=2):
     os.makedirs(os.path.dirname(path), exist_ok=True)
-    with open(path, "w", encoding="utf-8") as fh:
+    with open(path, "w", encoding="utf-8", newline="\n") as fh:
         json.dump(data, fh, ensure_ascii=False, indent=indent)
         fh.write("\n")
     print("wrote", path)
@@ -176,9 +177,6 @@ def build_bp(machine, spec):
                   os.path.join(bp, "entities", "trader_%s.json" % machine), machine)
     write_json(os.path.join(bp, "recipes", "machine_%s.json" % machine),
                machine_recipe(machine, spec), indent=4)
-    for suffix, upgraded in (("", False), ("_cured", True)):
-        write_json(os.path.join(bp, "trading", "vm", "%s%s.json" % (machine, suffix)),
-                   TABLES[machine](upgraded))
     if machine == "shulker":
         write_json(os.path.join(bp, "items", "shulker_core.json"), SHULKER_CORE_ITEM, indent=4)
         write_json(os.path.join(bp, "recipes", "shulker_core.json"), SHULKER_CORE_RECIPE, indent=4)

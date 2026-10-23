@@ -20,7 +20,7 @@
                   "quantity": 1
                 }
               ],
-              "trader_exp": 1,
+              "trader_exp": 2,
               "max_uses": 9999999,
               "reward_exp": true
             }
@@ -43,7 +43,7 @@
                   "quantity": 1
                 }
               ],
-              "trader_exp": 1,
+              "trader_exp": 2,
               "max_uses": 9999999,
               "reward_exp": true
             }
@@ -66,7 +66,7 @@
                   "quantity": 1
                 }
               ],
-              "trader_exp": 1,
+              "trader_exp": 2,
               "max_uses": 9999999,
               "reward_exp": true
             }
@@ -89,7 +89,7 @@
                   "quantity": 1
                 }
               ],
-              "trader_exp": 2,
+              "trader_exp": 1,
               "max_uses": 9999999,
               "reward_exp": true
             }
@@ -117,28 +117,6 @@
                   "quantity": 1
                 }
               ],
-              "trader_exp": 5,
-              "max_uses": 9999999,
-              "reward_exp": true
-            }
-          ]
-        },
-        {
-          "num_to_select": 1,
-          "trades": [
-            {
-              "wants": [
-                {
-                  "item": "minecraft:emerald",
-                  "price_multiplier": 0.05
-                }
-              ],
-              "gives": [
-                {
-                  "item": "minecraft:cooked_rabbit",
-                  "quantity": 5
-                }
-              ],
               "trader_exp": 10,
               "max_uses": 9999999,
               "reward_exp": true
@@ -159,10 +137,10 @@
               "gives": [
                 {
                   "item": "minecraft:cooked_chicken",
-                  "quantity": 4
+                  "quantity": 8
                 }
               ],
-              "trader_exp": 10,
+              "trader_exp": 5,
               "max_uses": 9999999,
               "reward_exp": true
             }
@@ -182,33 +160,10 @@
               "gives": [
                 {
                   "item": "minecraft:cooked_porkchop",
-                  "quantity": 3
+                  "quantity": 5
                 }
               ],
-              "trader_exp": 10,
-              "max_uses": 9999999,
-              "reward_exp": true
-            }
-          ]
-        },
-        {
-          "num_to_select": 1,
-          "trades": [
-            {
-              "wants": [
-                {
-                  "item": "minecraft:emerald",
-                  "quantity": 1,
-                  "price_multiplier": 0.05
-                }
-              ],
-              "gives": [
-                {
-                  "item": "minecraft:muttoncooked",
-                  "quantity": 4
-                }
-              ],
-              "trader_exp": 10,
+              "trader_exp": 5,
               "max_uses": 9999999,
               "reward_exp": true
             }
@@ -236,7 +191,7 @@
                   "quantity": 1
                 }
               ],
-              "trader_exp": 10,
+              "trader_exp": 20,
               "max_uses": 9999999,
               "reward_exp": true
             }
@@ -249,7 +204,7 @@
               "wants": [
                 {
                   "item": "minecraft:muttonraw",
-                  "quantity": 6,
+                  "quantity": 5,
                   "price_multiplier": 0.05
                 }
               ],
@@ -257,29 +212,6 @@
                 {
                   "item": "minecraft:emerald",
                   "quantity": 1
-                }
-              ],
-              "trader_exp": 10,
-              "max_uses": 9999999,
-              "reward_exp": true
-            }
-          ]
-        },
-        {
-          "num_to_select": 1,
-          "trades": [
-            {
-              "wants": [
-                {
-                  "item": "minecraft:emerald",
-                  "quantity": 1,
-                  "price_multiplier": 0.5
-                }
-              ],
-              "gives": [
-                {
-                  "item": "minecraft:cooked_beef",
-                  "quantity": 3
                 }
               ],
               "trader_exp": 20,
@@ -300,7 +232,7 @@
               "wants": [
                 {
                   "item": "minecraft:dried_kelp_block",
-                  "quantity": 13,
+                  "quantity": 7,
                   "price_multiplier": 0.05
                 }
               ],
@@ -310,7 +242,7 @@
                   "quantity": 1
                 }
               ],
-              "trader_exp": 15,
+              "trader_exp": 30,
               "max_uses": 9999999,
               "reward_exp": true
             }
@@ -338,7 +270,7 @@
                   "quantity": 1
                 }
               ],
-              "trader_exp": 0,
+              "trader_exp": 30,
               "max_uses": 9999999,
               "reward_exp": true
             }

@@ -1,29 +1,6 @@
 {
-  "captured_from": "https://wiki.bedrock.dev/items/enchantments",
-  "captured_date": "2026-09-21",
-  "verified_on_disk": [
-    "aqua_affinity",
-    "binding",
-    "blast_protection",
-    "depth_strider",
-    "efficiency",
-    "feather_falling",
-    "fire_protection",
-    "frost_walker",
-    "knockback",
-    "mending",
-    "power",
-    "projectile_protection",
-    "protection",
-    "punch",
-    "quick_charge",
-    "respiration",
-    "sharpness",
-    "soul_speed",
-    "swift_sneak",
-    "thorns",
-    "unbreaking"
-  ],
+  "_comment": "Book policy per enchantment. WHICH books exist comes from the game (trade_sources.game_enchantments); this file adds max_level (vanilla), treasure/curse (vanilla) and tier (mod policy: the machine level that sells it). Curses are never sold. A game enchantment missing here is sold at level 1 on tier 4 and flagged by gen_trade_tables.py.",
+  "levels_source": "wiki.bedrock.dev/items/enchantments, captured 2026-09-21; breach, density, wind_burst, lunge, binding, vanishing added 2026-10-23 from wiki values (offline, not read from game data)",
   "enchants": {
     "respiration": {
       "max_level": 3,
@@ -239,6 +216,42 @@
       "max_level": 3,
       "treasure": false,
       "curse": false,
+      "tier": 4
+    },
+    "breach": {
+      "max_level": 4,
+      "treasure": false,
+      "curse": false,
+      "tier": 4
+    },
+    "density": {
+      "max_level": 5,
+      "treasure": false,
+      "curse": false,
+      "tier": 4
+    },
+    "wind_burst": {
+      "max_level": 3,
+      "treasure": true,
+      "curse": false,
+      "tier": 4
+    },
+    "lunge": {
+      "max_level": 3,
+      "treasure": false,
+      "curse": false,
+      "tier": 4
+    },
+    "binding": {
+      "max_level": 1,
+      "treasure": true,
+      "curse": true,
+      "tier": 4
+    },
+    "vanishing": {
+      "max_level": 1,
+      "treasure": true,
+      "curse": true,
       "tier": 4
     }
   }

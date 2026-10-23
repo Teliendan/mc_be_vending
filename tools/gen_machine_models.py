@@ -64,7 +64,7 @@ INVISIBLE_GEO = {
 
 
 def write_json(path, data):
-    with open(path, "w", encoding="utf-8") as fh:
+    with open(path, "w", encoding="utf-8", newline="\n") as fh:
         json.dump(data, fh, indent=4)
         fh.write("\n")
 

@@ -1,4 +1,4 @@
-"""Trade generation regressions against inspected native inputs."""
+"""Trade generator: smoke test against the shipped tables, source resolution and book rules."""
 import copy
 from contextlib import contextmanager
 import json
@@ -12,7 +12,7 @@ sys.path.insert(0, str(MOD / 'tools'))
 import gen_book_trades as books
 import gen_extra_machines as extra
 import gen_trade_tables as trades
-from trade_sources import load_trade_source, fixture_filters
+from trade_sources import load_trade_source, fixture_filters, game_enchantments
 
 def read(path):
     return json.loads(path.read_text(encoding='utf-8-sig'))
@@ -26,8 +26,8 @@ def sources():
     scratch.mkdir(parents=True, exist_ok=True)
     root = Path(tempfile.mkdtemp(prefix='source-fixture-', dir=scratch))
     files, directories = [], {root}
-    def write(version, content):
-        path = root / version / 'trading/economy_trades/fixture_trades.json'
+    def write(relative, content):
+        path = root / relative
         path.parent.mkdir(parents=True, exist_ok=True)
         files.append(path)
         directories.update(parent for parent in path.parents if parent == root or root in parent.parents)
@@ -42,7 +42,7 @@ def sources():
 
 class Catalogs(unittest.TestCase):
     def test_current_wandering_catalog_and_buybacks(self):
-        native, path = load_trade_source('wandering_trader')
+        native, path, _ = load_trade_source('wandering_trader')
         self.assertEqual(path.parents[2].name, 'vanilla_1.26.50')
         expected = [variant for t in offers(native) for variant in trades._expand_choices(t)]
         upgraded = offers(extra.wandering_table(True))
@@ -76,7 +76,7 @@ class Catalogs(unittest.TestCase):
         self.assertEqual(pickaxe['gives'][0]['functions'][0]['function'], 'enchant_with_levels')
 
     def test_cartographer_destinations_and_dimension_filters(self):
-        native, _ = load_trade_source('cartographer')
+        native = load_trade_source('cartographer').data
         destinations = set()
         for cured in [False, True]:
             generated = trades.build_table(native, cured)
@@ -93,14 +93,52 @@ class Catalogs(unittest.TestCase):
         self.assertEqual(destinations, {'monument', 'mansion', 'trial_chambers', 'jungle_temple', 'swamp_hut',
             'village_taiga', 'village_desert', 'village_plains', 'village_snowy', 'village_savanna'})
 
-    def test_source_selection_never_silently_falls_back_from_binary(self):
+    def test_binary_source_uses_verified_same_slice_or_flagged_fallback(self):
+        trades_file = 'trading/economy_trades/fixture_trades.json'
         with sources() as (root, write):
-            write('vanilla_1.9.0', b'{"source": "old"}')
-            write('vanilla_1.26.50', b'{"source": "current"}')
-            self.assertEqual(load_trade_source('fixture', root)[0]['source'], 'current')
-            write('vanilla_1.26.60', b'\x7fMCBbinary')
-            with self.assertRaisesRegex(ValueError, 'No older source was substituted'):
-                load_trade_source('fixture', root)
+            game, launchers = root / 'game', root / 'launchers'
+            write(f'game/vanilla_1.9.0/{trades_file}', b'{"tiers": [], "item": "minecraft:old"}')
+            write(f'game/vanilla_1.26.50/{trades_file}', b'{"tiers": [], "item": "minecraft:current"}')
+            self.assertEqual(load_trade_source('fixture', game, launchers).data['item'], 'minecraft:current')
+            write(f'game/vanilla_1.26.60/{trades_file}', b'\x7fMCB\x01\x00\x05tiers\x11minecraft:newest')
+            fallback = load_trade_source('fixture', game, launchers)
+            self.assertEqual(fallback.data['item'], 'minecraft:current')
+            self.assertIn('FALLBACK', fallback.note)
+            write(f'launchers/guid/data/behavior_packs/vanilla_1.26.60/{trades_file}', b'{"item": "minecraft:wrong"}')
+            self.assertIn('FALLBACK', load_trade_source('fixture', game, launchers).note)
+            write(f'launchers/guid2/data/behavior_packs/vanilla_1.26.60/{trades_file}', b'{"item": "minecraft:newest"}')
+            same = load_trade_source('fixture', game, launchers)
+            self.assertEqual(same.data['item'], 'minecraft:newest')
+            self.assertIn('item IDs match', same.note)
+
+    def test_shipped_tables_match_the_generator(self):
+        tables, sources_used, notes = trades.build_all()
+        self.assertEqual(len(tables), 30)
+        self.assertFalse([note for note in notes if 'FALLBACK' in note or 'NEW' in note], notes)
+        for rel, table in tables.items():
+            self.assertEqual(read(MOD / rel), table, rel)
+        self.assertIn('All tables are up to date.', trades.report(tables, sources_used, notes))
+
+    def test_every_variant_once(self):
+        tier = {'trades': [
+            {'wants': [{'item': 'minecraft:emerald'}], 'gives': [{'item': 'minecraft:bed',
+                'functions': [{'function': 'random_aux_value', 'values': {'min': 0, 'max': 2}}]}]},
+            {'wants': [{'item': 'minecraft:emerald'}], 'gives': [{'item': 'minecraft:red_candle'}]},
+            {'wants': [{'item': 'minecraft:emerald'}], 'gives': [{'item': 'minecraft:red_candle'}]}]}
+        table = trades.build_table({'tiers': [tier] + [{}] * 4}, False)
+        self.assertEqual([t['gives'][0]['item'] for t in offers(table)],
+                         ['minecraft:bed:0', 'minecraft:bed:1', 'minecraft:bed:2', 'minecraft:red_candle'])
+        self.assertNotIn('functions', offers(table)[0]['gives'][0])
+
+    def test_books_follow_the_game_enchantment_list(self):
+        game = game_enchantments()
+        self.assertIn('lunge', game)
+        enchants, notes = books.book_catalog()
+        self.assertEqual(set(enchants), set(game))
+        self.assertEqual(notes, [])
+        sold = {f['enchants']['id'] for t in offers(read(MOD/'vending_villagers_bp/trading/vm/librarian.json'))
+                for line in t['gives'] for f in line.get('functions', []) if f['function'] == 'specific_enchants'}
+        self.assertEqual(sold, {i for i, spec in enchants.items() if not spec['curse']})
 
     def test_filter_pruning_preserves_other_restrictions_and_source(self):
         original = {'all_of': [{'test': 'in_overworld', 'value': True},
@@ -115,7 +153,7 @@ class Catalogs(unittest.TestCase):
             table = read(MOD/'vending_villagers_bp/trading/vm'/name)
             original = copy.deepcopy(table)
             for _ in range(2):
-                self.assertEqual(books._patch(table, books._load_enchants(), cured), 36)
+                self.assertEqual(books._patch(table, books.book_catalog()[0], cured), 40)
                 self.assertEqual(table, original)
 
     def test_all_machine_bindings_and_internal_actor_descriptions(self):
@@ -125,9 +163,9 @@ class Catalogs(unittest.TestCase):
         for path in blocks:
             block = read(path)['minecraft:block']
             self.assertEqual(block['components']['vm:machine'], {})
-            self.assertEqual(block['components']['minecraft:instrument_sound'], {'down': 'note.iron_xylophone'})
+            self.assertEqual(block['components']['minecraft:instrument_sound'], {'up': 'note.iron_xylophone'})
             policy = read(path.parents[1]/'block_materials.json')['blocks'][block['description']['identifier']]
-            self.assertEqual(policy['property_checks']['minecraft:instrument_sound']['expected'], {'down': 'note.iron_xylophone'})
+            self.assertEqual(policy['property_checks']['minecraft:instrument_sound']['expected'], {'up': 'note.iron_xylophone'})
         for path in entities:
             description = read(path)['minecraft:entity']['description']
             self.assertFalse(description['is_spawnable']); self.assertTrue(description['is_summonable'])

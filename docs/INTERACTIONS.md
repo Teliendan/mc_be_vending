@@ -20,10 +20,5 @@ There is no scripted block placement or manual item consumption.
 Selection state is shared. A standing player aiming at the same head takes
 priority over a crouching builder so the standing player can still trade.
 
-Validation: 2026-10-05, Script API 2.8.0, local reference 1.26.52. Eleven Node
-regression tests pass for ray geometry, occlusion, state transitions, multiplayer
-priority, unload/reload cleanup, and all 15 block definitions. Shared verifier
-passes every pack with zero errors/warnings. The owner confirmed the deployed
-crouch-placement feature works in game on 2026-10-05. Multiplayer priority and
-unload/reload cases are covered by offline tests, without separate in-game
-confirmation. Local implementation commit: `d3c2dbb`.
+Owner confirmed crouch placement in game on 2026-10-05 (commit `d3c2dbb`). Multiplayer
+priority and unload/reload cleanup are covered by `tests/build_mode.test.mjs` only.

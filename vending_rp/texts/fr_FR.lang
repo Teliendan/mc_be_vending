@@ -63,8 +63,6 @@ tile.vm:machine_shulker.name=Distributeur de Shulker
 entity.vm:trader_shulker.name=Distributeur de Shulker
 ## Context: Shulker Core.
 item.vm:shulker_core=Noyau de Shulker
-## Context: Machine occupies a lower and upper block; placement needs two blocks of vertical space.
-vending.message.space=§cLe distributeur a besoin de deux blocs de hauteur.
 ## Context: Discount upgrade is already applied; item is not consumed again.
 vending.message.upgraded=§eCe distributeur est déjà amélioré.
 ## Context: Upgrade Kit consumed successfully; this machine now offers discounted trades.

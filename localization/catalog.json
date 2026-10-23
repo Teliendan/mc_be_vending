@@ -1857,63 +1857,6 @@
             }
           }
         },
-        "vending.message.space": {
-          "source": "§cA vending machine needs two blocks of space.",
-          "context": {
-            "meaning": "Machine occupies a lower and upper block; placement needs two blocks of vertical space.",
-            "location": "vending_rp: chat or action bar",
-            "trigger": "Machine occupies a lower and upper block; placement needs two blocks of vertical space.",
-            "tone": "Clear Minecraft UI",
-            "grammar": "Complete sentence; address the player without assuming gender.",
-            "constraints": "Preserve namespace IDs, commands, coordinates, color codes, placeholder order and lore proper names. Action-bar labels must stay short; no assumed player gender.",
-            "source_paths": [
-              "vending_bp/scripts/main.js"
-            ]
-          },
-          "placeholders": [],
-          "translations": {
-            "cs_CZ": {
-              "text": "§cPro automat je potřeba prostor vysoký dva bloky.",
-              "based_on": "5dbd1cc21cd95bfcabd0d221fc9f086dd18a7105af4fa4ea8a2c026d87293c1f",
-              "status": "ai-draft"
-            },
-            "es_ES": {
-              "text": "§cLa máquina necesita dos bloques de altura.",
-              "based_on": "5dbd1cc21cd95bfcabd0d221fc9f086dd18a7105af4fa4ea8a2c026d87293c1f",
-              "status": "ai-draft"
-            },
-            "es_MX": {
-              "text": "§cLa máquina necesita dos bloques de altura.",
-              "based_on": "5dbd1cc21cd95bfcabd0d221fc9f086dd18a7105af4fa4ea8a2c026d87293c1f",
-              "status": "ai-draft"
-            },
-            "pt_PT": {
-              "text": "§cA máquina precisa de dois blocos de altura.",
-              "based_on": "5dbd1cc21cd95bfcabd0d221fc9f086dd18a7105af4fa4ea8a2c026d87293c1f",
-              "status": "ai-draft"
-            },
-            "pt_BR": {
-              "text": "§cA máquina precisa de dois blocos de altura.",
-              "based_on": "5dbd1cc21cd95bfcabd0d221fc9f086dd18a7105af4fa4ea8a2c026d87293c1f",
-              "status": "ai-draft"
-            },
-            "de_DE": {
-              "text": "§cDer Automat braucht zwei Blöcke Platz in der Höhe.",
-              "based_on": "5dbd1cc21cd95bfcabd0d221fc9f086dd18a7105af4fa4ea8a2c026d87293c1f",
-              "status": "ai-draft"
-            },
-            "fr_FR": {
-              "text": "§cLe distributeur a besoin de deux blocs de hauteur.",
-              "based_on": "5dbd1cc21cd95bfcabd0d221fc9f086dd18a7105af4fa4ea8a2c026d87293c1f",
-              "status": "ai-draft"
-            },
-            "pl_PL": {
-              "text": "§cAutomat potrzebuje miejsca na wysokość dwóch bloków.",
-              "based_on": "5dbd1cc21cd95bfcabd0d221fc9f086dd18a7105af4fa4ea8a2c026d87293c1f",
-              "status": "ai-draft"
-            }
-          }
-        },
         "vending.message.upgraded": {
           "source": "§eThis machine is already upgraded.",
           "context": {

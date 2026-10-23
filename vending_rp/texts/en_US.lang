@@ -63,8 +63,6 @@ tile.vm:machine_shulker.name=Shulker Machine
 entity.vm:trader_shulker.name=Shulker Machine
 ## Context: Shulker Core.
 item.vm:shulker_core=Shulker Core
-## Context: Machine occupies a lower and upper block; placement needs two blocks of vertical space.
-vending.message.space=§cA vending machine needs two blocks of space.
 ## Context: Discount upgrade is already applied; item is not consumed again.
 vending.message.upgraded=§eThis machine is already upgraded.
 ## Context: Upgrade Kit consumed successfully; this machine now offers discounted trades.

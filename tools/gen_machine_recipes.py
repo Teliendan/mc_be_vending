@@ -84,7 +84,7 @@ def build_recipe(prof, goods, workstation):
 
 
 def write_json(path, data):
-    with open(path, "w", encoding="utf-8") as f:
+    with open(path, "w", encoding="utf-8", newline="\n") as f:
         json.dump(data, f, indent=4)
         f.write("\n")
 

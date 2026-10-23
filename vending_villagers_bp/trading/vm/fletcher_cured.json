@@ -20,7 +20,7 @@
                   "quantity": 1
                 }
               ],
-              "trader_exp": 1,
+              "trader_exp": 2,
               "max_uses": 9999999,
               "reward_exp": true
             }
@@ -39,11 +39,11 @@
               ],
               "gives": [
                 {
-                  "item": "minecraft:arrow:0",
+                  "item": "minecraft:arrow",
                   "quantity": 16
                 }
               ],
-              "trader_exp": 2,
+              "trader_exp": 1,
               "max_uses": 9999999,
               "reward_exp": true
             }
@@ -61,7 +61,8 @@
                 },
                 {
                   "item": "minecraft:gravel",
-                  "quantity": 7
+                  "quantity": 7,
+                  "price_multiplier": 0.05
                 }
               ],
               "gives": [
@@ -70,7 +71,7 @@
                   "quantity": 10
                 }
               ],
-              "trader_exp": 2,
+              "trader_exp": 1,
               "max_uses": 9999999,
               "reward_exp": true
             }
@@ -98,7 +99,7 @@
                   "quantity": 1
                 }
               ],
-              "trader_exp": 5,
+              "trader_exp": 10,
               "max_uses": 9999999,
               "reward_exp": true
             }
@@ -121,7 +122,7 @@
                   "quantity": 1
                 }
               ],
-              "trader_exp": 10,
+              "trader_exp": 5,
               "max_uses": 9999999,
               "reward_exp": true
             }
@@ -172,7 +173,7 @@
                   "quantity": 1
                 }
               ],
-              "trader_exp": 20,
+              "trader_exp": 10,
               "max_uses": 9999999,
               "reward_exp": true
             }
@@ -200,7 +201,7 @@
                   "quantity": 1
                 }
               ],
-              "trader_exp": 15,
+              "trader_exp": 30,
               "max_uses": 9999999,
               "reward_exp": true
             }
@@ -213,7 +214,7 @@
               "wants": [
                 {
                   "item": "minecraft:emerald",
-                  "quantity": 6,
+                  "quantity": 1,
                   "price_multiplier": 0.05
                 }
               ],
@@ -233,7 +234,7 @@
                   ]
                 }
               ],
-              "trader_exp": 30,
+              "trader_exp": 15,
               "max_uses": 9999999,
               "reward_exp": true
             }
@@ -261,7 +262,7 @@
                   "quantity": 1
                 }
               ],
-              "trader_exp": 0,
+              "trader_exp": 30,
               "max_uses": 9999999,
               "reward_exp": true
             }
@@ -274,7 +275,7 @@
               "wants": [
                 {
                   "item": "minecraft:emerald",
-                  "quantity": 6,
+                  "quantity": 2,
                   "price_multiplier": 0.05
                 }
               ],
@@ -294,7 +295,7 @@
                   ]
                 }
               ],
-              "trader_exp": 0,
+              "trader_exp": 15,
               "max_uses": 9999999,
               "reward_exp": true
             }
@@ -311,17 +312,24 @@
                   "price_multiplier": 0.05
                 },
                 {
-                  "item": "minecraft:arrow:0",
-                  "quantity": 4
+                  "item": "minecraft:arrow",
+                  "quantity": 4,
+                  "price_multiplier": 0.05
                 }
               ],
               "gives": [
                 {
-                  "item": "minecraft:arrow:6",
-                  "quantity": 5
+                  "item": "minecraft:arrow",
+                  "quantity": 5,
+                  "functions": [
+                    {
+                      "function": "set_potion",
+                      "id": "nightvision"
+                    }
+                  ]
                 }
               ],
-              "trader_exp": 2,
+              "trader_exp": 30,
               "max_uses": 9999999,
               "reward_exp": true
             }
@@ -338,17 +346,24 @@
                   "price_multiplier": 0.05
                 },
                 {
-                  "item": "minecraft:arrow:0",
-                  "quantity": 4
+                  "item": "minecraft:arrow",
+                  "quantity": 4,
+                  "price_multiplier": 0.05
                 }
               ],
               "gives": [
                 {
-                  "item": "minecraft:arrow:8",
-                  "quantity": 5
+                  "item": "minecraft:arrow",
+                  "quantity": 5,
+                  "functions": [
+                    {
+                      "function": "set_potion",
+                      "id": "invisibility"
+                    }
+                  ]
                 }
               ],
-              "trader_exp": 2,
+              "trader_exp": 30,
               "max_uses": 9999999,
               "reward_exp": true
             }
@@ -365,17 +380,24 @@
                   "price_multiplier": 0.05
                 },
                 {
-                  "item": "minecraft:arrow:0",
-                  "quantity": 4
+                  "item": "minecraft:arrow",
+                  "quantity": 4,
+                  "price_multiplier": 0.05
                 }
               ],
               "gives": [
                 {
-                  "item": "minecraft:arrow:10",
-                  "quantity": 5
+                  "item": "minecraft:arrow",
+                  "quantity": 5,
+                  "functions": [
+                    {
+                      "function": "set_potion",
+                      "id": "leaping"
+                    }
+                  ]
                 }
               ],
-              "trader_exp": 2,
+              "trader_exp": 30,
               "max_uses": 9999999,
               "reward_exp": true
             }
@@ -392,17 +414,24 @@
                   "price_multiplier": 0.05
                 },
                 {
-                  "item": "minecraft:arrow:0",
-                  "quantity": 4
+                  "item": "minecraft:arrow",
+                  "quantity": 4,
+                  "price_multiplier": 0.05
                 }
               ],
               "gives": [
                 {
-                  "item": "minecraft:arrow:13",
-                  "quantity": 5
+                  "item": "minecraft:arrow",
+                  "quantity": 5,
+                  "functions": [
+                    {
+                      "function": "set_potion",
+                      "id": "fire_resistance"
+                    }
+                  ]
                 }
               ],
-              "trader_exp": 2,
+              "trader_exp": 30,
               "max_uses": 9999999,
               "reward_exp": true
             }
@@ -419,17 +448,24 @@
                   "price_multiplier": 0.05
                 },
                 {
-                  "item": "minecraft:arrow:0",
-                  "quantity": 4
+                  "item": "minecraft:arrow",
+                  "quantity": 4,
+                  "price_multiplier": 0.05
                 }
               ],
               "gives": [
                 {
-                  "item": "minecraft:arrow:15",
-                  "quantity": 5
+                  "item": "minecraft:arrow",
+                  "quantity": 5,
+                  "functions": [
+                    {
+                      "function": "set_potion",
+                      "id": "swiftness"
+                    }
+                  ]
                 }
               ],
-              "trader_exp": 2,
+              "trader_exp": 30,
               "max_uses": 9999999,
               "reward_exp": true
             }
@@ -446,17 +482,24 @@
                   "price_multiplier": 0.05
                 },
                 {
-                  "item": "minecraft:arrow:0",
-                  "quantity": 4
+                  "item": "minecraft:arrow",
+                  "quantity": 4,
+                  "price_multiplier": 0.05
                 }
               ],
               "gives": [
                 {
-                  "item": "minecraft:arrow:18",
-                  "quantity": 5
+                  "item": "minecraft:arrow",
+                  "quantity": 5,
+                  "functions": [
+                    {
+                      "function": "set_potion",
+                      "id": "slowness"
+                    }
+                  ]
                 }
               ],
-              "trader_exp": 2,
+              "trader_exp": 30,
               "max_uses": 9999999,
               "reward_exp": true
             }
@@ -473,17 +516,24 @@
                   "price_multiplier": 0.05
                 },
                 {
-                  "item": "minecraft:arrow:0",
-                  "quantity": 4
+                  "item": "minecraft:arrow",
+                  "quantity": 4,
+                  "price_multiplier": 0.05
                 }
               ],
               "gives": [
                 {
-                  "item": "minecraft:arrow:20",
-                  "quantity": 5
+                  "item": "minecraft:arrow",
+                  "quantity": 5,
+                  "functions": [
+                    {
+                      "function": "set_potion",
+                      "id": "water_breathing"
+                    }
+                  ]
                 }
               ],
-              "trader_exp": 2,
+              "trader_exp": 30,
               "max_uses": 9999999,
               "reward_exp": true
             }
@@ -500,17 +550,24 @@
                   "price_multiplier": 0.05
                 },
                 {
-                  "item": "minecraft:arrow:0",
-                  "quantity": 4
+                  "item": "minecraft:arrow",
+                  "quantity": 4,
+                  "price_multiplier": 0.05
                 }
               ],
               "gives": [
                 {
-                  "item": "minecraft:arrow:22",
-                  "quantity": 5
+                  "item": "minecraft:arrow",
+                  "quantity": 5,
+                  "functions": [
+                    {
+                      "function": "set_potion",
+                      "id": "healing"
+                    }
+                  ]
                 }
               ],
-              "trader_exp": 2,
+              "trader_exp": 30,
               "max_uses": 9999999,
               "reward_exp": true
             }
@@ -527,17 +584,24 @@
                   "price_multiplier": 0.05
                 },
                 {
-                  "item": "minecraft:arrow:0",
-                  "quantity": 4
+                  "item": "minecraft:arrow",
+                  "quantity": 4,
+                  "price_multiplier": 0.05
                 }
               ],
               "gives": [
                 {
-                  "item": "minecraft:arrow:24",
-                  "quantity": 5
+                  "item": "minecraft:arrow",
+                  "quantity": 5,
+                  "functions": [
+                    {
+                      "function": "set_potion",
+                      "id": "harming"
+                    }
+                  ]
                 }
               ],
-              "trader_exp": 2,
+              "trader_exp": 30,
               "max_uses": 9999999,
               "reward_exp": true
             }
@@ -554,17 +618,24 @@
                   "price_multiplier": 0.05
                 },
                 {
-                  "item": "minecraft:arrow:0",
-                  "quantity": 4
+                  "item": "minecraft:arrow",
+                  "quantity": 4,
+                  "price_multiplier": 0.05
                 }
               ],
               "gives": [
                 {
-                  "item": "minecraft:arrow:26",
-                  "quantity": 5
+                  "item": "minecraft:arrow",
+                  "quantity": 5,
+                  "functions": [
+                    {
+                      "function": "set_potion",
+                      "id": "poison"
+                    }
+                  ]
                 }
               ],
-              "trader_exp": 2,
+              "trader_exp": 30,
               "max_uses": 9999999,
               "reward_exp": true
             }
@@ -581,17 +652,24 @@
                   "price_multiplier": 0.05
                 },
                 {
-                  "item": "minecraft:arrow:0",
-                  "quantity": 4
+                  "item": "minecraft:arrow",
+                  "quantity": 4,
+                  "price_multiplier": 0.05
                 }
               ],
               "gives": [
                 {
-                  "item": "minecraft:arrow:29",
-                  "quantity": 5
+                  "item": "minecraft:arrow",
+                  "quantity": 5,
+                  "functions": [
+                    {
+                      "function": "set_potion",
+                      "id": "regeneration"
+                    }
+                  ]
                 }
               ],
-              "trader_exp": 2,
+              "trader_exp": 30,
               "max_uses": 9999999,
               "reward_exp": true
             }
@@ -608,17 +686,24 @@
                   "price_multiplier": 0.05
                 },
                 {
-                  "item": "minecraft:arrow:0",
-                  "quantity": 4
+                  "item": "minecraft:arrow",
+                  "quantity": 4,
+                  "price_multiplier": 0.05
                 }
               ],
               "gives": [
                 {
-                  "item": "minecraft:arrow:32",
-                  "quantity": 5
+                  "item": "minecraft:arrow",
+                  "quantity": 5,
+                  "functions": [
+                    {
+                      "function": "set_potion",
+                      "id": "strength"
+                    }
+                  ]
                 }
               ],
-              "trader_exp": 2,
+              "trader_exp": 30,
               "max_uses": 9999999,
               "reward_exp": true
             }
@@ -635,17 +720,24 @@
                   "price_multiplier": 0.05
                 },
                 {
-                  "item": "minecraft:arrow:0",
-                  "quantity": 4
+                  "item": "minecraft:arrow",
+                  "quantity": 4,
+                  "price_multiplier": 0.05
                 }
               ],
               "gives": [
                 {
-                  "item": "minecraft:arrow:35",
-                  "quantity": 15
+                  "item": "minecraft:arrow",
+                  "quantity": 5,
+                  "functions": [
+                    {
+                      "function": "set_potion",
+                      "id": "weakness"
+                    }
+                  ]
                 }
               ],
-              "trader_exp": 2,
+              "trader_exp": 30,
               "max_uses": 9999999,
               "reward_exp": true
             }
@@ -662,17 +754,24 @@
                   "price_multiplier": 0.05
                 },
                 {
-                  "item": "minecraft:arrow:0",
-                  "quantity": 4
+                  "item": "minecraft:arrow",
+                  "quantity": 4,
+                  "price_multiplier": 0.05
                 }
               ],
               "gives": [
                 {
-                  "item": "minecraft:arrow:37",
-                  "quantity": 5
+                  "item": "minecraft:arrow",
+                  "quantity": 5,
+                  "functions": [
+                    {
+                      "function": "set_potion",
+                      "id": "turtle_master"
+                    }
+                  ]
                 }
               ],
-              "trader_exp": 2,
+              "trader_exp": 30,
               "max_uses": 9999999,
               "reward_exp": true
             }
@@ -689,17 +788,24 @@
                   "price_multiplier": 0.05
                 },
                 {
-                  "item": "minecraft:arrow:0",
-                  "quantity": 4
+                  "item": "minecraft:arrow",
+                  "quantity": 4,
+                  "price_multiplier": 0.05
                 }
               ],
               "gives": [
                 {
-                  "item": "minecraft:arrow:38",
-                  "quantity": 5
+                  "item": "minecraft:arrow",
+                  "quantity": 5,
+                  "functions": [
+                    {
+                      "function": "set_potion",
+                      "id": "wither"
+                    }
+                  ]
                 }
               ],
-              "trader_exp": 0,
+              "trader_exp": 30,
               "max_uses": 9999999,
               "reward_exp": true
             }
