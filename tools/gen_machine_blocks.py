@@ -100,6 +100,7 @@ def build(profession):
                            "vm:build_mode": [False, True]},
             },
             "components": {
+                "vm:machine": {},
                 "minecraft:tags": ["minecraft:is_pickaxe_item_destructible"],
                 "minecraft:flammable": False,
                 "minecraft:liquid_detection": {"detection_rules": [{
@@ -111,6 +112,7 @@ def build(profession):
                 "minecraft:map_color": "#8f8f8f",
                 "minecraft:geometry": "minecraft:geometry.full_block",
                 "minecraft:redstone_conductivity": {"redstone_conductor": True},
+                "minecraft:instrument_sound": {"down": "note.iron_xylophone"},
                 "minecraft:material_instances": {
                     "*": {"texture": "vm_machine_body", "render_method": "opaque"},
                 },
@@ -190,7 +192,9 @@ def write_machine_loot(pack_root, profession):
 def material_policy(profession):
     return {
         "profile": "metal_machine",
-        "property_checks": {"RP:sound": {
+        "property_checks": {"minecraft:instrument_sound": {
+            "counterpart": "minecraft:iron_block", "expected": {"down": "note.iron_xylophone"},
+            "source": "Block of Iron note-block usage; instrument_sound stable since Bedrock26.40."}, "RP:sound": {
             "counterpart": "minecraft:iron_block", "expected": "iron",
             "source": "reference/vanilla/current/resource_packs/vanilla_1.21.60/blocks.json"}},
         "harvest": "One native base-owned machine item; explicit empty upper loot. Upper-only loss uses support-collapse context; Creative cleanup drops nothing. Owner 2026-10-10: collect with any tool or hand; no required tool.",
@@ -236,7 +240,8 @@ def main():
     else:
         policy = {"schema_version": 1, "blocks": {}}
     for profession in PROFESSIONS:
-        policy["blocks"].setdefault("vm:machine_" + profession, material_policy(profession))
+        entry = policy["blocks"].setdefault("vm:machine_" + profession, material_policy(profession))
+        entry.setdefault("property_checks", {})["minecraft:instrument_sound"] = material_policy(profession)["property_checks"]["minecraft:instrument_sound"]
     with open(policy_path, "w", encoding="utf-8", newline="\n") as fh:
         json.dump(policy, fh, indent=2)
         fh.write("\n")

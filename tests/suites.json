@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "suites": {
+    "build-mode": ["build_mode.test.mjs"],
+    "lifecycle": ["lifecycle.test.mjs"],
+    "upgrades": ["upgrades.test.mjs"],
+    "placement": ["placement.test.mjs"],
+    "catalogs": ["catalogs.py"],
+    "suite-layout": ["suite_layout.mjs"]
+  },
+  "support_files": {
+    "support/runtime.mjs": "Production-script loader and narrow API fixture for placement and upgrade regressions."
+  }
+}

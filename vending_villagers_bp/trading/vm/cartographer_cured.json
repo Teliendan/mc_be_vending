@@ -20,7 +20,7 @@
                   "quantity": 1
                 }
               ],
-              "trader_exp": 1,
+              "trader_exp": 2,
               "max_uses": 9999999,
               "reward_exp": true
             }
@@ -33,17 +33,17 @@
               "wants": [
                 {
                   "item": "minecraft:emerald",
-                  "quantity": 1,
+                  "quantity": 5,
                   "price_multiplier": 0.05
                 }
               ],
               "gives": [
                 {
-                  "item": "minecraft:emptymap:0",
+                  "item": "minecraft:empty_map",
                   "quantity": 1
                 }
               ],
-              "trader_exp": 2,
+              "trader_exp": 1,
               "max_uses": 9999999,
               "reward_exp": true
             }
@@ -71,6 +71,49 @@
                   "quantity": 1
                 }
               ],
+              "trader_exp": 10,
+              "max_uses": 9999999,
+              "reward_exp": true
+            }
+          ]
+        },
+        {
+          "num_to_select": 1,
+          "trades": [
+            {
+              "wants": [
+                {
+                  "item": "minecraft:emerald",
+                  "quantity": 6,
+                  "price_multiplier": 0.05
+                },
+                {
+                  "item": "minecraft:compass",
+                  "quantity": 1
+                }
+              ],
+              "gives": [
+                {
+                  "item": "minecraft:map",
+                  "quantity": 1,
+                  "functions": [
+                    {
+                      "function": "exploration_map",
+                      "destination": "village_taiga"
+                    }
+                  ],
+                  "filters": {
+                    "all_of": [
+                      {
+                        "test": "in_overworld",
+                        "subject": "self",
+                        "value": true,
+                        "operator": "="
+                      }
+                    ]
+                  }
+                }
+              ],
               "trader_exp": 5,
               "max_uses": 9999999,
               "reward_exp": true
@@ -84,17 +127,252 @@
               "wants": [
                 {
                   "item": "minecraft:emerald",
-                  "quantity": 5,
+                  "quantity": 6,
                   "price_multiplier": 0.05
+                },
+                {
+                  "item": "minecraft:compass",
+                  "quantity": 1
                 }
               ],
               "gives": [
                 {
-                  "item": "minecraft:frame",
+                  "item": "minecraft:map",
+                  "quantity": 1,
+                  "functions": [
+                    {
+                      "function": "exploration_map",
+                      "destination": "swamp_hut"
+                    }
+                  ],
+                  "filters": {
+                    "all_of": [
+                      {
+                        "test": "in_overworld",
+                        "subject": "self",
+                        "value": true,
+                        "operator": "="
+                      }
+                    ]
+                  }
+                }
+              ],
+              "trader_exp": 5,
+              "max_uses": 9999999,
+              "reward_exp": true
+            }
+          ]
+        },
+        {
+          "num_to_select": 1,
+          "trades": [
+            {
+              "wants": [
+                {
+                  "item": "minecraft:emerald",
+                  "quantity": 6,
+                  "price_multiplier": 0.05
+                },
+                {
+                  "item": "minecraft:compass",
                   "quantity": 1
                 }
               ],
-              "trader_exp": 2,
+              "gives": [
+                {
+                  "item": "minecraft:map",
+                  "quantity": 1,
+                  "functions": [
+                    {
+                      "function": "exploration_map",
+                      "destination": "village_snowy"
+                    }
+                  ],
+                  "filters": {
+                    "all_of": [
+                      {
+                        "test": "in_overworld",
+                        "subject": "self",
+                        "value": true,
+                        "operator": "="
+                      }
+                    ]
+                  }
+                }
+              ],
+              "trader_exp": 5,
+              "max_uses": 9999999,
+              "reward_exp": true
+            }
+          ]
+        },
+        {
+          "num_to_select": 1,
+          "trades": [
+            {
+              "wants": [
+                {
+                  "item": "minecraft:emerald",
+                  "quantity": 6,
+                  "price_multiplier": 0.05
+                },
+                {
+                  "item": "minecraft:compass",
+                  "quantity": 1
+                }
+              ],
+              "gives": [
+                {
+                  "item": "minecraft:map",
+                  "quantity": 1,
+                  "functions": [
+                    {
+                      "function": "exploration_map",
+                      "destination": "village_savanna"
+                    }
+                  ],
+                  "filters": {
+                    "all_of": [
+                      {
+                        "test": "in_overworld",
+                        "subject": "self",
+                        "value": true,
+                        "operator": "="
+                      }
+                    ]
+                  }
+                }
+              ],
+              "trader_exp": 5,
+              "max_uses": 9999999,
+              "reward_exp": true
+            }
+          ]
+        },
+        {
+          "num_to_select": 1,
+          "trades": [
+            {
+              "wants": [
+                {
+                  "item": "minecraft:emerald",
+                  "quantity": 6,
+                  "price_multiplier": 0.05
+                },
+                {
+                  "item": "minecraft:compass",
+                  "quantity": 1
+                }
+              ],
+              "gives": [
+                {
+                  "item": "minecraft:map",
+                  "quantity": 1,
+                  "functions": [
+                    {
+                      "function": "exploration_map",
+                      "destination": "village_plains"
+                    }
+                  ],
+                  "filters": {
+                    "all_of": [
+                      {
+                        "test": "in_overworld",
+                        "subject": "self",
+                        "value": true,
+                        "operator": "="
+                      }
+                    ]
+                  }
+                }
+              ],
+              "trader_exp": 5,
+              "max_uses": 9999999,
+              "reward_exp": true
+            }
+          ]
+        },
+        {
+          "num_to_select": 1,
+          "trades": [
+            {
+              "wants": [
+                {
+                  "item": "minecraft:emerald",
+                  "quantity": 6,
+                  "price_multiplier": 0.05
+                },
+                {
+                  "item": "minecraft:compass",
+                  "quantity": 1
+                }
+              ],
+              "gives": [
+                {
+                  "item": "minecraft:map",
+                  "quantity": 1,
+                  "functions": [
+                    {
+                      "function": "exploration_map",
+                      "destination": "jungle_temple"
+                    }
+                  ],
+                  "filters": {
+                    "all_of": [
+                      {
+                        "test": "in_overworld",
+                        "subject": "self",
+                        "value": true,
+                        "operator": "="
+                      }
+                    ]
+                  }
+                }
+              ],
+              "trader_exp": 5,
+              "max_uses": 9999999,
+              "reward_exp": true
+            }
+          ]
+        },
+        {
+          "num_to_select": 1,
+          "trades": [
+            {
+              "wants": [
+                {
+                  "item": "minecraft:emerald",
+                  "quantity": 6,
+                  "price_multiplier": 0.05
+                },
+                {
+                  "item": "minecraft:compass",
+                  "quantity": 1
+                }
+              ],
+              "gives": [
+                {
+                  "item": "minecraft:map",
+                  "quantity": 1,
+                  "functions": [
+                    {
+                      "function": "exploration_map",
+                      "destination": "village_desert"
+                    }
+                  ],
+                  "filters": {
+                    "all_of": [
+                      {
+                        "test": "in_overworld",
+                        "subject": "self",
+                        "value": true,
+                        "operator": "="
+                      }
+                    ]
+                  }
+                }
+              ],
+              "trader_exp": 5,
               "max_uses": 9999999,
               "reward_exp": true
             }
@@ -111,18 +389,18 @@
             {
               "wants": [
                 {
-                  "item": "minecraft:emerald",
-                  "quantity": 4,
+                  "item": "minecraft:compass",
+                  "quantity": 1,
                   "price_multiplier": 0.05
                 }
               ],
               "gives": [
                 {
-                  "item": "minecraft:emptymap:2",
+                  "item": "minecraft:emerald",
                   "quantity": 1
                 }
               ],
-              "trader_exp": 5,
+              "trader_exp": 20,
               "max_uses": 9999999,
               "reward_exp": true
             }
@@ -135,8 +413,8 @@
               "wants": [
                 {
                   "item": "minecraft:emerald",
-                  "quantity": 8,
-                  "price_multiplier": 0.1
+                  "quantity": 9,
+                  "price_multiplier": 0.05
                 },
                 {
                   "item": "minecraft:compass",
@@ -146,12 +424,19 @@
               "gives": [
                 {
                   "item": "minecraft:map",
+                  "quantity": 1,
                   "functions": [
                     {
                       "function": "exploration_map",
                       "destination": "monument"
                     }
-                  ]
+                  ],
+                  "filters": {
+                    "test": "in_overworld",
+                    "subject": "self",
+                    "value": true,
+                    "operator": "="
+                  }
                 }
               ],
               "trader_exp": 10,
@@ -167,8 +452,8 @@
               "wants": [
                 {
                   "item": "minecraft:emerald",
-                  "quantity": 11,
-                  "price_multiplier": 0.1
+                  "quantity": 8,
+                  "price_multiplier": 0.05
                 },
                 {
                   "item": "minecraft:compass",
@@ -178,12 +463,19 @@
               "gives": [
                 {
                   "item": "minecraft:map",
+                  "quantity": 1,
                   "functions": [
                     {
                       "function": "exploration_map",
-                      "destination": "mansion"
+                      "destination": "trial_chambers"
                     }
-                  ]
+                  ],
+                  "filters": {
+                    "test": "in_overworld",
+                    "subject": "self",
+                    "value": true,
+                    "operator": "="
+                  }
                 }
               ],
               "trader_exp": 10,
@@ -203,14 +495,14 @@
             {
               "wants": [
                 {
-                  "item": "minecraft:compass",
-                  "quantity": 1,
+                  "item": "minecraft:emerald",
+                  "quantity": 5,
                   "price_multiplier": 0.05
                 }
               ],
               "gives": [
                 {
-                  "item": "minecraft:emerald",
+                  "item": "minecraft:frame",
                   "quantity": 1
                 }
               ],
@@ -227,99 +519,7 @@
               "wants": [
                 {
                   "item": "minecraft:emerald",
-                  "quantity": 2,
-                  "price_multiplier": 0.05
-                }
-              ],
-              "gives": [
-                {
-                  "item": "minecraft:banner:0",
-                  "quantity": 1
-                }
-              ],
-              "trader_exp": 30,
-              "max_uses": 9999999,
-              "reward_exp": true
-            }
-          ]
-        },
-        {
-          "num_to_select": 1,
-          "trades": [
-            {
-              "wants": [
-                {
-                  "item": "minecraft:emerald",
-                  "quantity": 2,
-                  "price_multiplier": 0.05
-                }
-              ],
-              "gives": [
-                {
-                  "item": "minecraft:banner:1",
-                  "quantity": 1
-                }
-              ],
-              "trader_exp": 30,
-              "max_uses": 9999999,
-              "reward_exp": true
-            }
-          ]
-        },
-        {
-          "num_to_select": 1,
-          "trades": [
-            {
-              "wants": [
-                {
-                  "item": "minecraft:emerald",
-                  "quantity": 2,
-                  "price_multiplier": 0.05
-                }
-              ],
-              "gives": [
-                {
-                  "item": "minecraft:banner:2",
-                  "quantity": 1
-                }
-              ],
-              "trader_exp": 30,
-              "max_uses": 9999999,
-              "reward_exp": true
-            }
-          ]
-        },
-        {
-          "num_to_select": 1,
-          "trades": [
-            {
-              "wants": [
-                {
-                  "item": "minecraft:emerald",
-                  "quantity": 2,
-                  "price_multiplier": 0.05
-                }
-              ],
-              "gives": [
-                {
-                  "item": "minecraft:banner:3",
-                  "quantity": 1
-                }
-              ],
-              "trader_exp": 30,
-              "max_uses": 9999999,
-              "reward_exp": true
-            }
-          ]
-        },
-        {
-          "num_to_select": 1,
-          "trades": [
-            {
-              "wants": [
-                {
-                  "item": "minecraft:emerald",
-                  "quantity": 2,
+                  "quantity": 1,
                   "price_multiplier": 0.05
                 }
               ],
@@ -329,7 +529,7 @@
                   "quantity": 1
                 }
               ],
-              "trader_exp": 30,
+              "trader_exp": 15,
               "max_uses": 9999999,
               "reward_exp": true
             }
@@ -342,237 +542,7 @@
               "wants": [
                 {
                   "item": "minecraft:emerald",
-                  "quantity": 2,
-                  "price_multiplier": 0.05
-                }
-              ],
-              "gives": [
-                {
-                  "item": "minecraft:banner:5",
-                  "quantity": 1
-                }
-              ],
-              "trader_exp": 30,
-              "max_uses": 9999999,
-              "reward_exp": true
-            }
-          ]
-        },
-        {
-          "num_to_select": 1,
-          "trades": [
-            {
-              "wants": [
-                {
-                  "item": "minecraft:emerald",
-                  "quantity": 2,
-                  "price_multiplier": 0.05
-                }
-              ],
-              "gives": [
-                {
-                  "item": "minecraft:banner:6",
-                  "quantity": 1
-                }
-              ],
-              "trader_exp": 30,
-              "max_uses": 9999999,
-              "reward_exp": true
-            }
-          ]
-        },
-        {
-          "num_to_select": 1,
-          "trades": [
-            {
-              "wants": [
-                {
-                  "item": "minecraft:emerald",
-                  "quantity": 2,
-                  "price_multiplier": 0.05
-                }
-              ],
-              "gives": [
-                {
-                  "item": "minecraft:banner:7",
-                  "quantity": 1
-                }
-              ],
-              "trader_exp": 30,
-              "max_uses": 9999999,
-              "reward_exp": true
-            }
-          ]
-        },
-        {
-          "num_to_select": 1,
-          "trades": [
-            {
-              "wants": [
-                {
-                  "item": "minecraft:emerald",
-                  "quantity": 2,
-                  "price_multiplier": 0.05
-                }
-              ],
-              "gives": [
-                {
-                  "item": "minecraft:banner:8",
-                  "quantity": 1
-                }
-              ],
-              "trader_exp": 30,
-              "max_uses": 9999999,
-              "reward_exp": true
-            }
-          ]
-        },
-        {
-          "num_to_select": 1,
-          "trades": [
-            {
-              "wants": [
-                {
-                  "item": "minecraft:emerald",
-                  "quantity": 2,
-                  "price_multiplier": 0.05
-                }
-              ],
-              "gives": [
-                {
-                  "item": "minecraft:banner:9",
-                  "quantity": 1
-                }
-              ],
-              "trader_exp": 30,
-              "max_uses": 9999999,
-              "reward_exp": true
-            }
-          ]
-        },
-        {
-          "num_to_select": 1,
-          "trades": [
-            {
-              "wants": [
-                {
-                  "item": "minecraft:emerald",
-                  "quantity": 2,
-                  "price_multiplier": 0.05
-                }
-              ],
-              "gives": [
-                {
-                  "item": "minecraft:banner:10",
-                  "quantity": 1
-                }
-              ],
-              "trader_exp": 30,
-              "max_uses": 9999999,
-              "reward_exp": true
-            }
-          ]
-        },
-        {
-          "num_to_select": 1,
-          "trades": [
-            {
-              "wants": [
-                {
-                  "item": "minecraft:emerald",
-                  "quantity": 2,
-                  "price_multiplier": 0.05
-                }
-              ],
-              "gives": [
-                {
-                  "item": "minecraft:banner:11",
-                  "quantity": 1
-                }
-              ],
-              "trader_exp": 30,
-              "max_uses": 9999999,
-              "reward_exp": true
-            }
-          ]
-        },
-        {
-          "num_to_select": 1,
-          "trades": [
-            {
-              "wants": [
-                {
-                  "item": "minecraft:emerald",
-                  "quantity": 2,
-                  "price_multiplier": 0.05
-                }
-              ],
-              "gives": [
-                {
-                  "item": "minecraft:banner:12",
-                  "quantity": 1
-                }
-              ],
-              "trader_exp": 30,
-              "max_uses": 9999999,
-              "reward_exp": true
-            }
-          ]
-        },
-        {
-          "num_to_select": 1,
-          "trades": [
-            {
-              "wants": [
-                {
-                  "item": "minecraft:emerald",
-                  "quantity": 2,
-                  "price_multiplier": 0.05
-                }
-              ],
-              "gives": [
-                {
-                  "item": "minecraft:banner:13",
-                  "quantity": 1
-                }
-              ],
-              "trader_exp": 30,
-              "max_uses": 9999999,
-              "reward_exp": true
-            }
-          ]
-        },
-        {
-          "num_to_select": 1,
-          "trades": [
-            {
-              "wants": [
-                {
-                  "item": "minecraft:emerald",
-                  "quantity": 2,
-                  "price_multiplier": 0.05
-                }
-              ],
-              "gives": [
-                {
-                  "item": "minecraft:banner:14",
-                  "quantity": 1
-                }
-              ],
-              "trader_exp": 30,
-              "max_uses": 9999999,
-              "reward_exp": true
-            }
-          ]
-        },
-        {
-          "num_to_select": 1,
-          "trades": [
-            {
-              "wants": [
-                {
-                  "item": "minecraft:emerald",
-                  "quantity": 2,
+                  "quantity": 1,
                   "price_multiplier": 0.05
                 }
               ],
@@ -582,7 +552,306 @@
                   "quantity": 1
                 }
               ],
-              "trader_exp": 30,
+              "trader_exp": 15,
+              "max_uses": 9999999,
+              "reward_exp": true
+            }
+          ]
+        },
+        {
+          "num_to_select": 1,
+          "trades": [
+            {
+              "wants": [
+                {
+                  "item": "minecraft:emerald",
+                  "quantity": 1,
+                  "price_multiplier": 0.05
+                }
+              ],
+              "gives": [
+                {
+                  "item": "minecraft:banner:1",
+                  "quantity": 1
+                }
+              ],
+              "trader_exp": 15,
+              "max_uses": 9999999,
+              "reward_exp": true
+            }
+          ]
+        },
+        {
+          "num_to_select": 1,
+          "trades": [
+            {
+              "wants": [
+                {
+                  "item": "minecraft:emerald",
+                  "quantity": 1,
+                  "price_multiplier": 0.05
+                }
+              ],
+              "gives": [
+                {
+                  "item": "minecraft:banner:2",
+                  "quantity": 1
+                }
+              ],
+              "trader_exp": 15,
+              "max_uses": 9999999,
+              "reward_exp": true
+            }
+          ]
+        },
+        {
+          "num_to_select": 1,
+          "trades": [
+            {
+              "wants": [
+                {
+                  "item": "minecraft:emerald",
+                  "quantity": 1,
+                  "price_multiplier": 0.05
+                }
+              ],
+              "gives": [
+                {
+                  "item": "minecraft:banner:10",
+                  "quantity": 1
+                }
+              ],
+              "trader_exp": 15,
+              "max_uses": 9999999,
+              "reward_exp": true
+            }
+          ]
+        },
+        {
+          "num_to_select": 1,
+          "trades": [
+            {
+              "wants": [
+                {
+                  "item": "minecraft:emerald",
+                  "quantity": 1,
+                  "price_multiplier": 0.05
+                }
+              ],
+              "gives": [
+                {
+                  "item": "minecraft:banner:5",
+                  "quantity": 1
+                }
+              ],
+              "trader_exp": 15,
+              "max_uses": 9999999,
+              "reward_exp": true
+            }
+          ]
+        },
+        {
+          "num_to_select": 1,
+          "trades": [
+            {
+              "wants": [
+                {
+                  "item": "minecraft:emerald",
+                  "quantity": 1,
+                  "price_multiplier": 0.05
+                }
+              ],
+              "gives": [
+                {
+                  "item": "minecraft:banner:6",
+                  "quantity": 1
+                }
+              ],
+              "trader_exp": 15,
+              "max_uses": 9999999,
+              "reward_exp": true
+            }
+          ]
+        },
+        {
+          "num_to_select": 1,
+          "trades": [
+            {
+              "wants": [
+                {
+                  "item": "minecraft:emerald",
+                  "quantity": 1,
+                  "price_multiplier": 0.05
+                }
+              ],
+              "gives": [
+                {
+                  "item": "minecraft:banner:11",
+                  "quantity": 1
+                }
+              ],
+              "trader_exp": 15,
+              "max_uses": 9999999,
+              "reward_exp": true
+            }
+          ]
+        },
+        {
+          "num_to_select": 1,
+          "trades": [
+            {
+              "wants": [
+                {
+                  "item": "minecraft:emerald",
+                  "quantity": 1,
+                  "price_multiplier": 0.05
+                }
+              ],
+              "gives": [
+                {
+                  "item": "minecraft:banner:14",
+                  "quantity": 1
+                }
+              ],
+              "trader_exp": 15,
+              "max_uses": 9999999,
+              "reward_exp": true
+            }
+          ]
+        },
+        {
+          "num_to_select": 1,
+          "trades": [
+            {
+              "wants": [
+                {
+                  "item": "minecraft:emerald",
+                  "quantity": 1,
+                  "price_multiplier": 0.05
+                }
+              ],
+              "gives": [
+                {
+                  "item": "minecraft:banner:3",
+                  "quantity": 1
+                }
+              ],
+              "trader_exp": 15,
+              "max_uses": 9999999,
+              "reward_exp": true
+            }
+          ]
+        },
+        {
+          "num_to_select": 1,
+          "trades": [
+            {
+              "wants": [
+                {
+                  "item": "minecraft:emerald",
+                  "quantity": 1,
+                  "price_multiplier": 0.05
+                }
+              ],
+              "gives": [
+                {
+                  "item": "minecraft:banner:13",
+                  "quantity": 1
+                }
+              ],
+              "trader_exp": 15,
+              "max_uses": 9999999,
+              "reward_exp": true
+            }
+          ]
+        },
+        {
+          "num_to_select": 1,
+          "trades": [
+            {
+              "wants": [
+                {
+                  "item": "minecraft:emerald",
+                  "quantity": 1,
+                  "price_multiplier": 0.05
+                }
+              ],
+              "gives": [
+                {
+                  "item": "minecraft:banner:12",
+                  "quantity": 1
+                }
+              ],
+              "trader_exp": 15,
+              "max_uses": 9999999,
+              "reward_exp": true
+            }
+          ]
+        },
+        {
+          "num_to_select": 1,
+          "trades": [
+            {
+              "wants": [
+                {
+                  "item": "minecraft:emerald",
+                  "quantity": 1,
+                  "price_multiplier": 0.05
+                }
+              ],
+              "gives": [
+                {
+                  "item": "minecraft:banner:9",
+                  "quantity": 1
+                }
+              ],
+              "trader_exp": 15,
+              "max_uses": 9999999,
+              "reward_exp": true
+            }
+          ]
+        },
+        {
+          "num_to_select": 1,
+          "trades": [
+            {
+              "wants": [
+                {
+                  "item": "minecraft:emerald",
+                  "quantity": 1,
+                  "price_multiplier": 0.05
+                }
+              ],
+              "gives": [
+                {
+                  "item": "minecraft:banner:8",
+                  "quantity": 1
+                }
+              ],
+              "trader_exp": 15,
+              "max_uses": 9999999,
+              "reward_exp": true
+            }
+          ]
+        },
+        {
+          "num_to_select": 1,
+          "trades": [
+            {
+              "wants": [
+                {
+                  "item": "minecraft:emerald",
+                  "quantity": 1,
+                  "price_multiplier": 0.05
+                }
+              ],
+              "gives": [
+                {
+                  "item": "minecraft:banner",
+                  "quantity": 1
+                }
+              ],
+              "trader_exp": 15,
               "max_uses": 9999999,
               "reward_exp": true
             }
@@ -600,17 +869,17 @@
               "wants": [
                 {
                   "item": "minecraft:emerald",
-                  "quantity": 1,
+                  "quantity": 6,
                   "price_multiplier": 0.05
                 }
               ],
               "gives": [
                 {
-                  "item": "minecraft:banner_pattern:2",
+                  "item": "minecraft:globe_banner_pattern",
                   "quantity": 1
                 }
               ],
-              "trader_exp": 0,
+              "trader_exp": 30,
               "max_uses": 9999999,
               "reward_exp": true
             }
@@ -623,40 +892,33 @@
               "wants": [
                 {
                   "item": "minecraft:emerald",
-                  "quantity": 1,
+                  "quantity": 10,
                   "price_multiplier": 0.05
+                },
+                {
+                  "item": "minecraft:compass",
+                  "quantity": 1
                 }
               ],
               "gives": [
                 {
-                  "item": "minecraft:banner_pattern:4",
-                  "quantity": 1
-                }
-              ],
-              "trader_exp": 0,
-              "max_uses": 9999999,
-              "reward_exp": true
-            }
-          ]
-        },
-        {
-          "num_to_select": 1,
-          "trades": [
-            {
-              "wants": [
-                {
-                  "item": "minecraft:emerald",
+                  "item": "minecraft:map",
                   "quantity": 1,
-                  "price_multiplier": 0.05
+                  "functions": [
+                    {
+                      "function": "exploration_map",
+                      "destination": "mansion"
+                    }
+                  ],
+                  "filters": {
+                    "test": "in_overworld",
+                    "subject": "self",
+                    "value": true,
+                    "operator": "="
+                  }
                 }
               ],
-              "gives": [
-                {
-                  "item": "minecraft:banner_pattern:5",
-                  "quantity": 1
-                }
-              ],
-              "trader_exp": 0,
+              "trader_exp": 30,
               "max_uses": 9999999,
               "reward_exp": true
             }

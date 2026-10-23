@@ -142,10 +142,19 @@ def _patch(table,enchants, cured):
     own richest trade, so it grants XP like its neighbours; the Master tier's only
     vanilla trade pays nothing, so there it falls back to the richest tier overall.
     """
+    def owned_book(trade):
+        for line in trade.get("gives", []):
+            if line.get("item") != "minecraft:enchanted_book":
+                continue
+            for function in line.get("functions", []):
+                if function.get("function") == "specific_enchants" and function.get("enchants", {}).get("id") in enchants:
+                    return True
+        return _is_random_book_trade(trade)
+
     exp_by_tier = []
     for tier in table["tiers"]:
         tier["groups"] = [
-            g for g in tier["groups"] if not _is_random_book_trade(g["trades"][0])
+            g for g in tier["groups"] if not owned_book(g["trades"][0])
         ]
         exp_by_tier.append(max((g["trades"][0]["trader_exp"] for g in tier["groups"]), default=0))
     fallback = max(exp_by_tier)

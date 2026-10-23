@@ -30,12 +30,9 @@ import os
 MOD = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))  # this mod's repo root
 import sys
 
-VANILLA_ROOT = r"C:\mcmods\reference\vanilla\current\behavior_packs\vanilla\trading\economy_trades"
+from trade_sources import load_trade_source, fixture_items
 
-# From 1.26 several vanilla trade files ship as binary JSON (they start with this magic),
-# which json.load cannot read. The launcher installs of older versions keep plain text.
-BINARY_JSON_MAGIC = b"\x7fMCB"
-LAUNCHER_VERSIONS = os.path.join(os.environ.get("APPDATA", ""), ".minecraft_bedrock", "versions")
+VANILLA_ROOT = None
 
 OUTPUT_DIR = os.path.join(MOD, "vending_villagers_bp", "trading", "vm")
 
@@ -65,82 +62,8 @@ TIER_XP = [0, 10, 60, 160, 310]
 # The maximum uses we stamp on every emitted trade so it never burns out.
 MAX_USES = 9999999
 
-# The number of trades vanilla ships per profession across all five tiers. Tier
-# N now holds exactly vanilla tier N's trades, so this is also the per-profession
-# total the new layout must preserve -- a guard that no trade was dropped.
-EXPECTED_TRADE_COUNTS = {
-    "farmer": 15,
-    "fisherman": 17,
-    "shepherd": 86,
-    "fletcher": 26,
-    "librarian": 14,
-    "cartographer": 27,
-    "cleric": 11,
-    "armorer": 18,
-    "weapon_smith": 9,
-    "tool_smith": 16,
-    "butcher": 14,
-    "leather_worker": 12,
-    "stone_mason": 9,
-}
-
-
-def _input_path(profession, root=None):
-    return os.path.join(root or VANILLA_ROOT, profession + "_trades.json")
-
-
-def _is_text_root(root):
-    """True if every profession file exists under root and is plain JSON."""
-    for profession in PROFESSIONS:
-        path = _input_path(profession, root)
-        if not os.path.exists(path):
-            return False
-        with open(path, "rb") as fh:
-            if fh.read(4) == BINARY_JSON_MAGIC:
-                return False
-    return True
-
-
-def _launcher_trade_roots():
-    """economy_trades dirs of the launcher's installed versions, newest game first."""
-    found = []
-    if not os.path.isdir(LAUNCHER_VERSIONS):
-        return found
-    for guid in os.listdir(LAUNCHER_VERSIONS):
-        bp = os.path.join(LAUNCHER_VERSIONS, guid, "data", "behavior_packs")
-        if not os.path.isdir(bp):
-            continue
-        versions = []
-        for name in os.listdir(bp):
-            parts = name[len("vanilla_"):].split(".") if name.startswith("vanilla_") else []
-            if len(parts) == 3 and all(p.isdigit() for p in parts):
-                versions.append(tuple(int(p) for p in parts))
-        if versions:
-            found.append((max(versions), os.path.join(bp, "vanilla", "trading", "economy_trades")))
-    return [root for _, root in sorted(found, reverse=True)]
-
-
-def _pick_vanilla_root(explicit):
-    if explicit:
-        if not _is_text_root(explicit):
-            sys.exit("{} lacks readable (plain JSON) trade files".format(explicit))
-        return explicit
-    if _is_text_root(VANILLA_ROOT):
-        return VANILLA_ROOT
-    for root in _launcher_trade_roots():
-        if _is_text_root(root):
-            print("note: {} has binary 1.26 trade files; using {}".format(VANILLA_ROOT, root))
-            return root
-    sys.exit("no plain-JSON vanilla trade files found: {} is binary (1.26+) and no launcher "
-             "version under {} has them. Pass --vanilla-root.".format(VANILLA_ROOT, LAUNCHER_VERSIONS))
-
-
 def _load(profession):
-    path = _input_path(profession)
-    if not os.path.exists(path):
-        sys.exit("missing input file for profession {}: {}".format(profession, path))
-    with open(path, encoding="utf-8-sig") as fh:
-        return json.load(fh)
+    return load_trade_source(profession, VANILLA_ROOT)[0]
 
 
 def _tier_trades(tier):
@@ -169,7 +92,11 @@ def _discounted_wants(wants):
     for want in wants:
         want = copy.deepcopy(want)
         if "quantity" in want:
-            want["quantity"] = max(1, round(want["quantity"] * 0.7))
+            quantity = want["quantity"]
+            if isinstance(quantity, dict):
+                want["quantity"] = {key: max(1, round(value * 0.7)) for key, value in quantity.items()}
+            else:
+                want["quantity"] = max(1, round(quantity * 0.7))
         out.append(want)
     return out
 
@@ -184,14 +111,14 @@ def _emit_trade(trade, cured):
     """
     out = {}
     if "wants" in trade:
-        out["wants"] = _discounted_wants(trade["wants"]) if cured else copy.deepcopy(trade["wants"])
+        out["wants"] = _discounted_wants(fixture_items(trade["wants"])) if cured else fixture_items(trade["wants"])
     if "gives" in trade:
-        out["gives"] = copy.deepcopy(trade["gives"])
+        out["gives"] = fixture_items(trade["gives"])
     if "price_multiplier" in trade:
         out["price_multiplier"] = trade["price_multiplier"]
     if "functions" in trade:
         out["functions"] = copy.deepcopy(trade["functions"])
-    out["trader_exp"] = trade["trader_exp"]
+    out["trader_exp"] = trade.get("trader_exp", 1)
     out["max_uses"] = MAX_USES
     out["reward_exp"] = True
     return out
@@ -231,56 +158,28 @@ def build_table(data, cured):
     return {"tiers": tiers}
 
 
-def _write_table(profession, force):
-    for suffix in ("", "_cured"):
-        path = os.path.join(OUTPUT_DIR, "{}{}.json".format(profession, suffix))
-        if os.path.exists(path) and not force:
-            sys.exit("{} already exists; pass --force to replace it".format(path))
-        table = build_table(_load(profession), cured=(suffix == "_cured"))
-        with open(path, "w", encoding="utf-8") as fh:
-            json.dump(table, fh, ensure_ascii=False, indent=2)
-            fh.write("\n")
-    # The old layout wrote one file per tier; remove those so the directory only
-    # holds the new per-profession files.
-    for tier in range(5):
-        old = os.path.join(OUTPUT_DIR, "{}_t{}.json".format(profession, tier))
-        if os.path.exists(old):
-            os.remove(old)
-
-
 def main():
     ap = argparse.ArgumentParser(description=__doc__)
-    ap.add_argument("--force", action="store_true",
-                    help="overwrite outputs that already exist")
-    ap.add_argument("--vanilla-root",
-                    help="economy_trades dir to read (default: the workspace reference, "
-                         "falling back to a launcher install when that is binary)")
+    ap.add_argument("--force", action="store_true", help="overwrite generated tables")
+    ap.add_argument("--vanilla-root", help="installed behavior_packs root or explicit readable economy_trades directory")
+    ap.add_argument("--profession", action="append", choices=PROFESSIONS,
+                    help="regenerate only this profession; repeat to select several")
     args = ap.parse_args()
-
-    global VANILLA_ROOT
-    VANILLA_ROOT = _pick_vanilla_root(args.vanilla_root)
-
+    professions = list(dict.fromkeys(args.profession or PROFESSIONS))
+    # Read/build/check every selected output before writing the first file.
+    sources = {p: load_trade_source(p, args.vanilla_root) for p in professions}
+    outputs = [(os.path.join(OUTPUT_DIR, p + suffix + ".json"), build_table(sources[p][0], suffix == "_cured"))
+               for p in professions for suffix in ("", "_cured")]
+    for path, table in outputs:
+        if os.path.exists(path) and not args.force:
+            sys.exit(f"{path} already exists; pass --force to replace it")
     os.makedirs(OUTPUT_DIR, exist_ok=True)
-    for profession in PROFESSIONS:
-        _write_table(profession, args.force)
-
-    total = 0
-    for profession in PROFESSIONS:
-        data = _load(profession)
-        count = sum(len(_tier_trades(data["tiers"][i])) for i in range(5))
-        print("{}: {}".format(profession, count))
-        total += count
-    print("TOTAL: {}".format(total))
-
-    for profession, expected in EXPECTED_TRADE_COUNTS.items():
-        actual = sum(len(_tier_trades(_load(profession)["tiers"][i])) for i in range(5))
-        assert actual == expected, (
-            "{}: got {} trades across tiers, expected {}".format(
-                profession, actual, expected)
-        )
-    assert total == sum(EXPECTED_TRADE_COUNTS.values()), (
-        "grand total {} != {}".format(total, sum(EXPECTED_TRADE_COUNTS.values()))
-    )
+    for path, table in outputs:
+        with open(path, "w", encoding="utf-8", newline="\n") as output:
+            json.dump(table, output, ensure_ascii=False, indent=2)
+            output.write("\n")
+    for profession, (_, source) in sources.items():
+        print(f"{profession}: {source}")
 
 
 if __name__ == "__main__":

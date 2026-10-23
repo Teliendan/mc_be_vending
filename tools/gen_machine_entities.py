@@ -50,7 +50,7 @@ def trade_table_component(profession, table):
 def build_entity(profession):
     description = {
         "identifier": "vm:trader_{}".format(profession),
-        "is_spawnable": True,
+        "is_spawnable": False,
         "is_summonable": True,
         "is_experimental": False,
     }

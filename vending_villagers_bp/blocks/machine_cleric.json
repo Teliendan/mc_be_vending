@@ -22,23 +22,37 @@
       }
     },
     "components": {
-      "minecraft:tags": ["minecraft:is_pickaxe_item_destructible"],
+      "vm:machine": {},
+      "minecraft:tags": [
+        "minecraft:is_pickaxe_item_destructible"
+      ],
       "minecraft:flammable": false,
-      "minecraft:liquid_detection": {"detection_rules": [{"liquid_type": "water", "can_contain_liquid": false, "on_liquid_touches": "blocking"}]},
+      "minecraft:liquid_detection": {
+        "detection_rules": [
+          {
+            "liquid_type": "water",
+            "can_contain_liquid": false,
+            "on_liquid_touches": "blocking"
+          }
+        ]
+      },
       "minecraft:destructible_by_mining": {
         "seconds_to_destroy": 8
       },
       "minecraft:destructible_by_explosion": {
         "explosion_resistance": 1200
       },
-      "minecraft:loot": "loot_tables/blocks/machine_cleric.json",
       "minecraft:movable": {
         "movement_type": "immovable"
       },
+      "minecraft:loot": "loot_tables/blocks/machine_cleric.json",
       "minecraft:map_color": "#8f8f8f",
       "minecraft:geometry": "minecraft:geometry.full_block",
       "minecraft:redstone_conductivity": {
         "redstone_conductor": true
+      },
+      "minecraft:instrument_sound": {
+        "down": "note.iron_xylophone"
       },
       "minecraft:material_instances": {
         "*": {

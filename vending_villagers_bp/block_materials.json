@@ -26,6 +26,13 @@
           "counterpart": "minecraft:iron_block",
           "expected": "iron",
           "source": "reference/vanilla/current/resource_packs/vanilla_1.21.60/blocks.json"
+        },
+        "minecraft:instrument_sound": {
+          "counterpart": "minecraft:iron_block",
+          "expected": {
+            "down": "note.iron_xylophone"
+          },
+          "source": "Block of Iron note-block usage; instrument_sound stable since Bedrock26.40."
         }
       },
       "loot_checks": {
@@ -67,6 +74,13 @@
           "counterpart": "minecraft:iron_block",
           "expected": "iron",
           "source": "reference/vanilla/current/resource_packs/vanilla_1.21.60/blocks.json"
+        },
+        "minecraft:instrument_sound": {
+          "counterpart": "minecraft:iron_block",
+          "expected": {
+            "down": "note.iron_xylophone"
+          },
+          "source": "Block of Iron note-block usage; instrument_sound stable since Bedrock26.40."
         }
       },
       "loot_checks": {
@@ -108,6 +122,13 @@
           "counterpart": "minecraft:iron_block",
           "expected": "iron",
           "source": "reference/vanilla/current/resource_packs/vanilla_1.21.60/blocks.json"
+        },
+        "minecraft:instrument_sound": {
+          "counterpart": "minecraft:iron_block",
+          "expected": {
+            "down": "note.iron_xylophone"
+          },
+          "source": "Block of Iron note-block usage; instrument_sound stable since Bedrock26.40."
         }
       },
       "loot_checks": {
@@ -149,6 +170,13 @@
           "counterpart": "minecraft:iron_block",
           "expected": "iron",
           "source": "reference/vanilla/current/resource_packs/vanilla_1.21.60/blocks.json"
+        },
+        "minecraft:instrument_sound": {
+          "counterpart": "minecraft:iron_block",
+          "expected": {
+            "down": "note.iron_xylophone"
+          },
+          "source": "Block of Iron note-block usage; instrument_sound stable since Bedrock26.40."
         }
       },
       "loot_checks": {
@@ -190,6 +218,13 @@
           "counterpart": "minecraft:iron_block",
           "expected": "iron",
           "source": "reference/vanilla/current/resource_packs/vanilla_1.21.60/blocks.json"
+        },
+        "minecraft:instrument_sound": {
+          "counterpart": "minecraft:iron_block",
+          "expected": {
+            "down": "note.iron_xylophone"
+          },
+          "source": "Block of Iron note-block usage; instrument_sound stable since Bedrock26.40."
         }
       },
       "loot_checks": {
@@ -231,6 +266,13 @@
           "counterpart": "minecraft:iron_block",
           "expected": "iron",
           "source": "reference/vanilla/current/resource_packs/vanilla_1.21.60/blocks.json"
+        },
+        "minecraft:instrument_sound": {
+          "counterpart": "minecraft:iron_block",
+          "expected": {
+            "down": "note.iron_xylophone"
+          },
+          "source": "Block of Iron note-block usage; instrument_sound stable since Bedrock26.40."
         }
       },
       "loot_checks": {
@@ -272,6 +314,13 @@
           "counterpart": "minecraft:iron_block",
           "expected": "iron",
           "source": "reference/vanilla/current/resource_packs/vanilla_1.21.60/blocks.json"
+        },
+        "minecraft:instrument_sound": {
+          "counterpart": "minecraft:iron_block",
+          "expected": {
+            "down": "note.iron_xylophone"
+          },
+          "source": "Block of Iron note-block usage; instrument_sound stable since Bedrock26.40."
         }
       },
       "loot_checks": {
@@ -313,6 +362,13 @@
           "counterpart": "minecraft:iron_block",
           "expected": "iron",
           "source": "reference/vanilla/current/resource_packs/vanilla_1.21.60/blocks.json"
+        },
+        "minecraft:instrument_sound": {
+          "counterpart": "minecraft:iron_block",
+          "expected": {
+            "down": "note.iron_xylophone"
+          },
+          "source": "Block of Iron note-block usage; instrument_sound stable since Bedrock26.40."
         }
       },
       "loot_checks": {
@@ -354,6 +410,13 @@
           "counterpart": "minecraft:iron_block",
           "expected": "iron",
           "source": "reference/vanilla/current/resource_packs/vanilla_1.21.60/blocks.json"
+        },
+        "minecraft:instrument_sound": {
+          "counterpart": "minecraft:iron_block",
+          "expected": {
+            "down": "note.iron_xylophone"
+          },
+          "source": "Block of Iron note-block usage; instrument_sound stable since Bedrock26.40."
         }
       },
       "loot_checks": {
@@ -395,6 +458,13 @@
           "counterpart": "minecraft:iron_block",
           "expected": "iron",
           "source": "reference/vanilla/current/resource_packs/vanilla_1.21.60/blocks.json"
+        },
+        "minecraft:instrument_sound": {
+          "counterpart": "minecraft:iron_block",
+          "expected": {
+            "down": "note.iron_xylophone"
+          },
+          "source": "Block of Iron note-block usage; instrument_sound stable since Bedrock26.40."
         }
       },
       "loot_checks": {
@@ -436,6 +506,13 @@
           "counterpart": "minecraft:iron_block",
           "expected": "iron",
           "source": "reference/vanilla/current/resource_packs/vanilla_1.21.60/blocks.json"
+        },
+        "minecraft:instrument_sound": {
+          "counterpart": "minecraft:iron_block",
+          "expected": {
+            "down": "note.iron_xylophone"
+          },
+          "source": "Block of Iron note-block usage; instrument_sound stable since Bedrock26.40."
         }
       },
       "loot_checks": {
@@ -477,6 +554,13 @@
           "counterpart": "minecraft:iron_block",
           "expected": "iron",
           "source": "reference/vanilla/current/resource_packs/vanilla_1.21.60/blocks.json"
+        },
+        "minecraft:instrument_sound": {
+          "counterpart": "minecraft:iron_block",
+          "expected": {
+            "down": "note.iron_xylophone"
+          },
+          "source": "Block of Iron note-block usage; instrument_sound stable since Bedrock26.40."
         }
       },
       "loot_checks": {
@@ -518,6 +602,13 @@
           "counterpart": "minecraft:iron_block",
           "expected": "iron",
           "source": "reference/vanilla/current/resource_packs/vanilla_1.21.60/blocks.json"
+        },
+        "minecraft:instrument_sound": {
+          "counterpart": "minecraft:iron_block",
+          "expected": {
+            "down": "note.iron_xylophone"
+          },
+          "source": "Block of Iron note-block usage; instrument_sound stable since Bedrock26.40."
         }
       },
       "loot_checks": {

@@ -22,14 +22,16 @@ See [interaction notes](docs/INTERACTIONS.md) for implementation and test status
 
 ## Generators (`tools/`)
 
-Run from anywhere; they locate the packs relative to this repo. All of them were
-checked on 2026-09-29 to reproduce the shipped files byte for byte, so regenerating
-is safe (they refuse to overwrite without `--force`).
+Run from anywhere; generators locate packs relative to this repo. Generators
+with a `--force` option require it to overwrite existing files. The extra-machine
+generator updates its own outputs directly. Catalog sources are versioned and
+checked; do not substitute an old install when a current source is binary.
 
 - `gen_trade_tables.py` - the 13 profession tables (+ `_cured`, 30% cheaper) from the
-  vanilla reference at `C:\mcmods\reference\vanilla\current` (1.26 ships those files as
-  binary, so it falls back to the newest launcher install with plain JSON, or
-  `--vanilla-root`); vanilla "choice" trades are split
+  newest matching vanilla override under `C:\mcmods\reference\vanilla\current`.
+  Select only changed professions with `--profession cartographer` (repeatable).
+  An explicit readable `--vanilla-root` is supported; binary sources fail before
+  any selected table is written. Vanilla "choice" trades are split
   so the machine sells every variant. `gen_book_trades.py` adds the librarian's
   enchanted books from `enchantments.json`.
 - `gen_machine_blocks.py`, `gen_machine_entities.py`, `gen_machine_recipes.py` - the
@@ -45,9 +47,15 @@ is safe (they refuse to overwrite without `--force`).
   goods and recipe signature ingredients. Accepted art and item choices:
   [graphics notes](docs/GRAPHICS_CONCEPT.md).
 
-Pricing rule: upgraded table = the real trader's price; base table dearer (~vanilla / 0.7).
+Profession machines retain their source base prices and a30% kit discount.
+Wandering machines use current vanilla prices/counts when upgraded, dearer buying
+prices when basic, and reduced emerald payouts for basic buybacks (minimum1).
+Input bucket/bottle quantities stay native. Shulker prices retain the custom
+12/24 basic and8/16 upgraded balance. Native price multipliers remain.
 
-Controller regression tests: `node --test tests/build_mode.test.mjs` from this repo.
+Tests: `node tests/run.mjs`; named selections include `--suite upgrades`,
+`--suite placement`, `--suite catalogs`, `--suite lifecycle` and `--suite build-mode`.
+See [the completed source batch and pending game checks](docs/PARITY_INSPECTION.md).
 
 ## Localization
 

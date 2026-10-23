@@ -1,5 +1,14 @@
 # Machine destruction
 
+Placement/upgrade follow-up2026-10-23: all15 blocks attach Core's cancellable
+before-placement hook. Rejected headroom costs nothing; failed construction
+cleans owned parts and refunds only Survival, into inventory then dropped
+remainder. Cosmetic shadow failure does not roll back a complete machine.
+Upgrade use now finishes synchronously before optional feedback, Creative keeps
+its kit, and load-time visual migration checks both halves/profession. No actor
+deletion/retry/scan policy was introduced. Six scoped test runners pass; detailed
+implementation and native acceptance checks: [parity batch](PARITY_INSPECTION.md).
+
 2026-10-10, Script API 2.8.0 / target Bedrock 1.26.52. Source audit and mocked
 event regressions; not separately confirmed in game.
 

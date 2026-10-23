@@ -14,12 +14,10 @@ in game. The core script needs nothing: it handles any vm:machine_* block.
 Use --blocks-only to refresh the shared machine states/permutations without
 rewriting trade tables, recipes, items or localization resources.
 
-Pricing follows one rule. The UPGRADED table is the real trader's price;
-the base table is dearer, so an un-upgraded machine is worse than finding the
-trader. For the wandering trader, base prices are chosen so that the cured
-trim used by gen_trade_tables.py (round(q * 0.7), floor 1) lands exactly on the
-vanilla price -- asserted below. The shulker tables are written out by hand
-because 24 * 0.7 does not round to 16.
+Wandering upgraded prices/counts come from the newest installed vanilla table.
+Basic sales cost more emeralds; basic buybacks pay fewer emeralds, minimum one,
+without inflating unstackable bucket/bottle inputs. The custom shulker balance
+remains explicit. All native candidates become singleton selection groups.
 
 The RP entries (terrain atlas, blocks.json, item atlas, lang) are MERGED, so
 this is safe to re-run. language names are maintained in localization/catalog.json;
@@ -28,7 +26,10 @@ run this tool again after it.
 Run:  python mods\vending\tools\gen_extra_machines.py
 """
 
+import copy
 import json
+from trade_sources import load_trade_source, fixture_items
+from gen_trade_tables import _tier_trades, _expand_choices
 import os
 from gen_machine_blocks import write_machine_loot
 MOD = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))  # this mod's repo root
@@ -47,35 +48,9 @@ MACHINES = {
 
 MAX_USES = 9999999
 
-# vanilla emerald price -> base price whose 30% trim rounds back to vanilla.
-BASE_PRICE = {1: 2, 2: 3, 3: 4, 4: 6, 5: 7, 6: 9}
-
-# Every wandering trader ware as (item, count given, vanilla emerald price).
-# Vanilla picks some of these at random and rolls random variants; the machine
-# offers all of them, each variant as its own trade, in modern item IDs.
-FLOWERS = ["dandelion", "poppy", "blue_orchid", "allium", "azure_bluet", "red_tulip",
-           "orange_tulip", "white_tulip", "pink_tulip", "oxeye_daisy", "cornflower",
-           "lily_of_the_valley", "sunflower", "lilac", "rose_bush", "peony"]
-SEEDS = ["wheat_seeds", "pumpkin_seeds", "melon_seeds", "beetroot_seeds"]
-SAPLINGS = ["oak_sapling", "spruce_sapling", "birch_sapling", "jungle_sapling",
-            "acacia_sapling", "dark_oak_sapling"]
-DYES = ["white", "orange", "magenta", "light_blue", "yellow", "lime", "pink", "gray",
-        "light_gray", "cyan", "purple", "blue", "brown", "green", "red", "black"]
-CORALS = ["tube", "brain", "bubble", "fire", "horn"]
-
-WANDERING_WARES = (
-    [("sea_pickle", 1, 2), ("slime_ball", 1, 4), ("glowstone", 1, 2), ("nautilus_shell", 1, 5),
-     ("fern", 1, 1), ("sugar_cane", 1, 1), ("pumpkin", 1, 1), ("kelp", 1, 3), ("cactus", 1, 3)]
-    + [(f, 1, 1) for f in FLOWERS]
-    + [(s, 1, 1) for s in SEEDS]
-    + [(s, 1, 5) for s in SAPLINGS]
-    + [(d + "_dye", 3, 1) for d in DYES]
-    + [(c + "_coral_block", 3, 1) for c in CORALS]
-    + [("vine", 1, 1), ("brown_mushroom", 1, 1), ("red_mushroom", 1, 1), ("waterlily", 2, 1),
-       ("red_sand", 4, 1), ("red_sandstone", 4, 1)]
-    + [("tropical_fish_bucket", 1, 5), ("pufferfish_bucket", 1, 5), ("packed_ice", 1, 3),
-       ("blue_ice", 1, 6), ("gunpowder", 1, 1), ("podzol", 3, 3)]
-)
+def base_price(quantity):
+    """Dearer emerald cost, with upgraded price exactly matching vanilla."""
+    return min(64, max(quantity + 1, round(quantity / 0.7)))
 
 
 def trade(wants, gives, count, exp):
@@ -89,11 +64,27 @@ def trade(wants, gives, count, exp):
 
 
 def wandering_table(upgraded):
+    source, _ = load_trade_source("wandering_trader")
     groups = []
-    for item, count, vanilla in WANDERING_WARES:
-        price = vanilla if upgraded else BASE_PRICE[vanilla]
-        assert max(1, round(BASE_PRICE[vanilla] * 0.7)) == vanilla, item
-        groups.append(trade([("minecraft:emerald", price)], "minecraft:" + item, count, 0))
+    for tier in source["tiers"]:
+        for original in _tier_trades(tier):
+            for option in _expand_choices(original):
+                offer = copy.deepcopy(option)
+                offer["wants"] = fixture_items(offer["wants"])
+                offer["gives"] = fixture_items(offer["gives"])
+                if not upgraded:
+                    if any(line["item"] == "minecraft:emerald" for line in offer["wants"]):
+                        for line in offer["wants"]:
+                            if line["item"] == "minecraft:emerald":
+                                line["quantity"] = base_price(line.get("quantity", 1))
+                    else:
+                        # A bucket/bottle cannot occupy a trade slot as a stack
+                        # of two. Keep native input quantities; reduce payout.
+                        for line in offer["gives"]:
+                            if line["item"] == "minecraft:emerald":
+                                line["quantity"] = max(1, round(line.get("quantity", 1) * 0.7))
+                offer.update(trader_exp=0, max_uses=MAX_USES, reward_exp=True)
+                groups.append({"num_to_select": 1, "trades": [offer]})
     return {"tiers": [{"total_exp_required": 0, "groups": groups}]}
 
 
@@ -172,7 +163,8 @@ def from_template(src, dest, machine):
         # Loot records contain profession-specific routes just like the block.
         template_policy = json.loads(json.dumps(template_policy).replace(TEMPLATE, machine))
         policy = read_json(target_policy) if os.path.exists(target_policy) else {"schema_version": 1, "blocks": {}}
-        policy["blocks"].setdefault("vm:machine_" + machine, template_policy)
+        entry = policy["blocks"].setdefault("vm:machine_" + machine, template_policy)
+        entry.setdefault("property_checks", {})["minecraft:instrument_sound"] = template_policy["property_checks"]["minecraft:instrument_sound"]
         write_json(target_policy, policy)
 
 
@@ -242,7 +234,7 @@ def main():
     for machine, spec in MACHINES.items():
         build_bp(machine, spec)
     build_rp()
-    print("wandering trader: %d trades" % len(WANDERING_WARES))
+    print("wandering trader: %d trades" % len(wandering_table(True)["tiers"][0]["groups"]))
 
 
 if __name__ == "__main__":

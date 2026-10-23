@@ -59,13 +59,14 @@ function hideShadow(trader) {
 world.afterEvents.entityLoad.subscribe((e) => {
     const entity = e.entity;
     if (!entity.isValid || !entity.typeId.startsWith(TRADER_PREFIX)) return;
-    hideShadow(entity);
+    feedback(() => hideShadow(entity));
     buildMode.resetTrader(entity);
     // Machines upgraded before the block had a vm:upgraded state catch up here.
     if (entity.getDynamicProperty("vm:upgraded") === true) {
         const l = entity.location;
-        const base = entity.dimension.getBlock({ x: Math.floor(l.x), y: Math.floor(l.y) - 1, z: Math.floor(l.z) });
-        if (base && base.typeId.startsWith(BLOCK_PREFIX)) showUpgraded(base);
+        const base = loadedBlock(entity.dimension, { x: Math.floor(l.x), y: Math.floor(l.y) - 1, z: Math.floor(l.z) });
+        const expected = BLOCK_PREFIX + entity.typeId.slice(TRADER_PREFIX.length);
+        if (base?.typeId === expected && completeMachine(base)) feedback(() => showUpgraded(base));
     }
 });
 
@@ -76,6 +77,57 @@ function showUpgraded(baseBlock) {
         if (!block || block.typeId !== baseBlock.typeId) continue;
         if (block.permutation.getState("vm:upgraded") === true) continue;
         block.setPermutation(block.permutation.withState("vm:upgraded", true));
+    }
+}
+
+function feedback(action) {
+    try { action(); } catch (error) { console.warn(`[Vending] Feedback failed: ${error}`); }
+}
+
+function loadedBlock(dimension, location) {
+    try { return dimension.getBlock(location); } catch (error) {
+        if (error.name === "LocationInUnloadedChunkError" || error.name === "LocationOutOfWorldBoundariesError") return undefined;
+        throw error;
+    }
+}
+
+function loadedAbove(block) {
+    return loadedBlock(block.dimension, { ...block.location, y: block.location.y + 1 });
+}
+
+function completeMachine(base) {
+    if (base.permutation.getState("vm:half") !== 0) return false;
+    const head = loadedAbove(base);
+    return head?.typeId === base.typeId && head.permutation.getState("vm:half") === 1;
+}
+
+function headroom(base) {
+    const head = loadedAbove(base);
+    // Preserve solid, non-waterlogged placement. Native base placement owns
+    // its own obstruction check; also reject actors in the scripted upper cube.
+    if (!head?.isAir) return undefined;
+    const l = head.location;
+    if (base.dimension.getEntities({ location: l, volume: { x: 1, y: 1, z: 1 } })
+        .some(entity => {
+            if (entity.typeId === "minecraft:item" || entity.typeId === "minecraft:xp_orb") return false;
+            if (entity.getComponent?.("minecraft:projectile")) return false;
+            if (entity.typeId === "minecraft:player" && entity.getGameMode() === "Spectator") return false;
+            const box = entity.getAABB();
+            return box.center.x + box.extent.x > l.x && box.center.x - box.extent.x < l.x + 1 &&
+                box.center.y + box.extent.y > l.y && box.center.y - box.extent.y < l.y + 1 &&
+                box.center.z + box.extent.z > l.z && box.center.z - box.extent.z < l.z + 1;
+        })) return undefined;
+    return head;
+}
+
+function refundPlacement(block, typeId, player) {
+    if (player?.getGameMode() === "Creative") return;
+    const item = new ItemStack(typeId, 1);
+    const inventory = player?.getComponent("minecraft:inventory")?.container;
+    const remainder = inventory ? inventory.addItem(item) : item;
+    if (remainder) {
+        const l = block.location;
+        block.dimension.spawnItem(remainder, { x: l.x + 0.5, y: l.y + 0.5, z: l.z + 0.5 });
     }
 }
 
@@ -108,19 +160,26 @@ world.afterEvents.playerPlaceBlock.subscribe((e) => {
     if (!block.typeId.startsWith(BLOCK_PREFIX)) return;
     if (block.permutation.getState("vm:half") !== 0) return;
 
-    const above = block.above();
-    if (!above || !above.isAir) {
-        // No headroom. Give the machine back rather than leaving half of one.
-        const typeId = block.typeId;
-        block.setType("minecraft:air");
-        block.dimension.spawnItem(new ItemStack(typeId, 1), traderSpot(block));
-        e.player.sendMessage(message("space"));
+    const typeId = block.typeId;
+    let above, trader, raised = false;
+    try {
+        above = headroom(block);
+        if (!above) throw new Error("No machine headroom");
+        above.setPermutation(BlockPermutation.resolve(typeId, { "vm:half": 1 }));
+        raised = true;
+        trader = block.dimension.spawnEntity(TRADER_PREFIX + professionOf(typeId), traderSpot(block));
+    } catch (error) {
+        if (trader?.isValid) trader.remove();
+        if (raised && above.typeId === typeId && above.permutation.getState("vm:half") === 1) above.setType("minecraft:air");
+        if (block.typeId === typeId && block.permutation.getState("vm:half") === 0) {
+            block.setType("minecraft:air");
+            refundPlacement(block, typeId, e.player);
+        }
+        if (!above) feedback(() => e.player?.sendMessage(message("space")));
+        console.warn(`[Vending] Placement failed: ${error}`);
         return;
     }
-
-    above.setPermutation(BlockPermutation.resolve(block.typeId, { "vm:half": 1 }));
-    const trader = block.dimension.spawnEntity(TRADER_PREFIX + professionOf(block.typeId), traderSpot(block));
-    hideShadow(trader);
+    feedback(() => hideShadow(trader));
 });
 
 // --- destruction: either half can be destroyed by Creative or an explosion --
@@ -176,42 +235,48 @@ world.afterEvents.blockExplode.subscribe((e) => {
 // One kit per machine. The flag lives on the trader as a dynamic property, so
 // it travels with the thing it describes and dies with it.
 system.beforeEvents.startup.subscribe((init) => {
+    init.blockComponentRegistry.registerCustomComponent("vm:machine", {
+        beforeOnPlayerPlace(event) {
+            if (event.permutationToPlace.getState("vm:half") !== 0) { event.cancel = true; return; }
+            if (!headroom(event.block)) event.cancel = true;
+        },
+    });
     init.itemComponentRegistry.registerCustomComponent("vm:upgrade_kit", {
         onUseOn(event) {
             const block = event.block;
             const player = event.source;
             if (!block || !block.typeId.startsWith(BLOCK_PREFIX)) return;
-            if (block.permutation.getState("vm:half") !== 0) return;
+            if (!completeMachine(block)) return;
 
-            system.run(() => {
-                const profession = professionOf(block.typeId);
-                const trader = findTrader(block.dimension, block, profession);
-                if (!trader || !trader.isValid) return;
+            // Custom item onUseOn is privileged. Finish in this callback;
+            // unlike a before-event it needs no system.run continuation.
+            const profession = professionOf(block.typeId);
+            const trader = findTrader(block.dimension, block, profession);
+            if (!trader || !trader.isValid) return;
 
-                if (trader.getDynamicProperty("vm:upgraded") === true) {
-                    showUpgraded(block);
-                    player.sendMessage(message("upgraded"));
-                    return;
+            if (trader.getDynamicProperty("vm:upgraded") === true) {
+                feedback(() => showUpgraded(block));
+                feedback(() => player.sendMessage(message("upgraded")));
+                return;
+            }
+
+            const equippable = player.getComponent("minecraft:equippable");
+            const held = equippable ? equippable.getEquipment("Mainhand") : undefined;
+            if (!held || held.typeId !== "vm:upgrade_kit") return;
+            trader.triggerEvent("vm:apply_upgrade");
+            trader.setDynamicProperty("vm:upgraded", true);
+            if (player.getGameMode() !== "Creative") {
+                if (held.amount > 1) {
+                    held.amount -= 1;
+                    equippable.setEquipment("Mainhand", held);
+                } else {
+                    equippable.setEquipment("Mainhand", undefined);
                 }
-
-                trader.triggerEvent("vm:apply_upgrade");
-                trader.setDynamicProperty("vm:upgraded", true);
-                showUpgraded(block);
-                sparkle(block);
-                block.dimension.playSound("random.anvil_use", traderSpot(block), { volume: 0.8, pitch: 1.2 });
-                player.sendMessage(message("upgrade"));
-
-                const equippable = player.getComponent("minecraft:equippable");
-                const held = equippable ? equippable.getEquipment("Mainhand") : undefined;
-                if (held && held.typeId === "vm:upgrade_kit") {
-                    if (held.amount > 1) {
-                        held.amount -= 1;
-                        equippable.setEquipment("Mainhand", held);
-                    } else {
-                        equippable.setEquipment("Mainhand", undefined);
-                    }
-                }
-            });
+            }
+            feedback(() => showUpgraded(block));
+            feedback(() => sparkle(block));
+            feedback(() => block.dimension.playSound("random.anvil_use", traderSpot(block), { volume: 0.8, pitch: 1.2 }));
+            feedback(() => player.sendMessage(message("upgrade")));
         },
     });
 });

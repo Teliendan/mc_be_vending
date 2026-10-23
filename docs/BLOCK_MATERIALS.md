@@ -1,5 +1,11 @@
 # Block materials
 
+2026-10-23 follow-up: all15 machines and both generator routes now declare
+`minecraft:instrument_sound: {"down":"note.iron_xylophone"}`, matching iron
+under note blocks. Explicit material property expectations cover it. Stable
+since26.40 despite Learn's stale experimental notice. Offline checks pass;
+both halves and upgraded/build-mode states still need native sound acceptance.
+
 2026-10-09, target Bedrock 1.26.52. Each block-owning BP records its policies in
 `block_materials.json`. Machines use the iron-block material comparison and
 native pickaxe effectiveness. Existing protection deliberately overrides vanilla
