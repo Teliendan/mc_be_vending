@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 2,
+  "id": "vending",
+  "name": "Vending Machines",
+  "locale": "en_US",
+  "adapter": "bedrock",
+  "behaviorPacks": [
+    "vending_bp",
+    "vending_shulker_bp",
+    "vending_villagers_bp",
+    "vending_wandering_bp"
+  ],
+  "resourcePacks": [
+    "vending_rp"
+  ],
+  "coverage": [
+    {
+      "pattern": "vending_bp/scripts/build_mode.js",
+      "featureId": "vm:upgrade_kit"
+    },
+    {
+      "pattern": "vending_bp/scripts/main.js",
+      "featureId": "vm:upgrade_kit"
+    },
+    {
+      "pattern": "vending_bp/scripts/messages.js",
+      "featureId": "vm:upgrade_kit"
+    }
+  ],
+  "ruleValues": []
+}

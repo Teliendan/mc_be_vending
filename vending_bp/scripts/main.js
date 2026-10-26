@@ -1,6 +1,6 @@
 import { message } from "./messages.js";
 import { world, system, BlockPermutation } from "@minecraft/server";
-import { createBuildModeController } from "./build_mode.js";
+import { createBuildModeController, hasSneakIntent } from "./build_mode.js";
 
 // ---------------------------------------------------------------------------
 // Vending machine: block + hidden trader
@@ -33,7 +33,7 @@ world.afterEvents.worldLoad.subscribe(() => {
 // Suppress trading during the tick in which crouching starts, before the
 // selectable head state reaches the client. Subsequent use is native placement.
 world.beforeEvents.playerInteractWithEntity.subscribe((event) => {
-    if (event.player.isSneaking && event.target.typeId.startsWith(TRADER_PREFIX)) event.cancel = true;
+    if (event.target.typeId.startsWith(TRADER_PREFIX) && hasSneakIntent(event.player)) event.cancel = true;
 });
 
 function professionOf(blockTypeId) {
@@ -98,7 +98,10 @@ function headroom(base) {
     const head = blockAbove(base);
     if (!head?.isAir) return undefined;
     const blocked = base.dimension.getEntities({ location: head.location, volume: { x: 1, y: 1, z: 1 } })
-        .some(entity => entity.typeId !== "minecraft:item" && entity.typeId !== "minecraft:xp_orb" &&
+        // Hidden traders belong to solid machine heads. A neighbouring trader can
+        // appear in this volume query; its owning block already enforces space.
+        .some(entity => !entity.typeId.startsWith(TRADER_PREFIX) &&
+            entity.typeId !== "minecraft:item" && entity.typeId !== "minecraft:xp_orb" &&
             !entity.getComponent("minecraft:projectile") &&
             !(entity.typeId === "minecraft:player" && entity.getGameMode() === "Spectator"));
     return blocked ? undefined : head;

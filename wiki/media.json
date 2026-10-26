@@ -1,0 +1,181 @@
+[
+  {
+    "id": "vm:upgrade_kit/icon",
+    "featureId": "vm:upgrade_kit",
+    "source": "vending_rp/textures/items/vm_upgrade_kit.png",
+    "kind": "item",
+    "alt": "Upgrade Kit"
+  },
+  {
+    "id": "vm:shulker_core/icon",
+    "featureId": "vm:shulker_core",
+    "source": "vending_rp/textures/items/vm_shulker_core.png",
+    "kind": "item",
+    "alt": "Shulker Core"
+  },
+  {
+    "id": "vm:machine_shulker/icon",
+    "featureId": "vm:machine_shulker",
+    "source": "vending_rp/textures/blocks/vm_machine_head_shulker.png",
+    "kind": "texture",
+    "alt": "Machine Shulker",
+    "render": {
+      "adapter": "vending-machine",
+      "blockId": "vm:machine_shulker"
+    }
+  },
+  {
+    "id": "vm:machine_armorer/icon",
+    "featureId": "vm:machine_armorer",
+    "source": "vending_rp/textures/blocks/vm_machine_head_armorer.png",
+    "kind": "texture",
+    "alt": "Machine Armorer",
+    "render": {
+      "adapter": "vending-machine",
+      "blockId": "vm:machine_armorer"
+    }
+  },
+  {
+    "id": "vm:machine_butcher/icon",
+    "featureId": "vm:machine_butcher",
+    "source": "vending_rp/textures/blocks/vm_machine_head_butcher.png",
+    "kind": "texture",
+    "alt": "Machine Butcher",
+    "render": {
+      "adapter": "vending-machine",
+      "blockId": "vm:machine_butcher"
+    }
+  },
+  {
+    "id": "vm:machine_cartographer/icon",
+    "featureId": "vm:machine_cartographer",
+    "source": "vending_rp/textures/blocks/vm_machine_head_cartographer.png",
+    "kind": "texture",
+    "alt": "Machine Cartographer",
+    "render": {
+      "adapter": "vending-machine",
+      "blockId": "vm:machine_cartographer"
+    }
+  },
+  {
+    "id": "vm:machine_cleric/icon",
+    "featureId": "vm:machine_cleric",
+    "source": "vending_rp/textures/blocks/vm_machine_head_cleric.png",
+    "kind": "texture",
+    "alt": "Machine Cleric",
+    "render": {
+      "adapter": "vending-machine",
+      "blockId": "vm:machine_cleric"
+    }
+  },
+  {
+    "id": "vm:machine_farmer/icon",
+    "featureId": "vm:machine_farmer",
+    "source": "vending_rp/textures/blocks/vm_machine_head_farmer.png",
+    "kind": "texture",
+    "alt": "Machine Farmer",
+    "render": {
+      "adapter": "vending-machine",
+      "blockId": "vm:machine_farmer"
+    }
+  },
+  {
+    "id": "vm:machine_fisherman/icon",
+    "featureId": "vm:machine_fisherman",
+    "source": "vending_rp/textures/blocks/vm_machine_head_fisherman.png",
+    "kind": "texture",
+    "alt": "Machine Fisherman",
+    "render": {
+      "adapter": "vending-machine",
+      "blockId": "vm:machine_fisherman"
+    }
+  },
+  {
+    "id": "vm:machine_fletcher/icon",
+    "featureId": "vm:machine_fletcher",
+    "source": "vending_rp/textures/blocks/vm_machine_head_fletcher.png",
+    "kind": "texture",
+    "alt": "Machine Fletcher",
+    "render": {
+      "adapter": "vending-machine",
+      "blockId": "vm:machine_fletcher"
+    }
+  },
+  {
+    "id": "vm:machine_leather_worker/icon",
+    "featureId": "vm:machine_leather_worker",
+    "source": "vending_rp/textures/blocks/vm_machine_head_leather_worker.png",
+    "kind": "texture",
+    "alt": "Machine Leather Worker",
+    "render": {
+      "adapter": "vending-machine",
+      "blockId": "vm:machine_leather_worker"
+    }
+  },
+  {
+    "id": "vm:machine_librarian/icon",
+    "featureId": "vm:machine_librarian",
+    "source": "vending_rp/textures/blocks/vm_machine_head_librarian.png",
+    "kind": "texture",
+    "alt": "Machine Librarian",
+    "render": {
+      "adapter": "vending-machine",
+      "blockId": "vm:machine_librarian"
+    }
+  },
+  {
+    "id": "vm:machine_shepherd/icon",
+    "featureId": "vm:machine_shepherd",
+    "source": "vending_rp/textures/blocks/vm_machine_head_shepherd.png",
+    "kind": "texture",
+    "alt": "Machine Shepherd",
+    "render": {
+      "adapter": "vending-machine",
+      "blockId": "vm:machine_shepherd"
+    }
+  },
+  {
+    "id": "vm:machine_stone_mason/icon",
+    "featureId": "vm:machine_stone_mason",
+    "source": "vending_rp/textures/blocks/vm_machine_head_stone_mason.png",
+    "kind": "texture",
+    "alt": "Machine Stone Mason",
+    "render": {
+      "adapter": "vending-machine",
+      "blockId": "vm:machine_stone_mason"
+    }
+  },
+  {
+    "id": "vm:machine_tool_smith/icon",
+    "featureId": "vm:machine_tool_smith",
+    "source": "vending_rp/textures/blocks/vm_machine_head_tool_smith.png",
+    "kind": "texture",
+    "alt": "Machine Tool Smith",
+    "render": {
+      "adapter": "vending-machine",
+      "blockId": "vm:machine_tool_smith"
+    }
+  },
+  {
+    "id": "vm:machine_weapon_smith/icon",
+    "featureId": "vm:machine_weapon_smith",
+    "source": "vending_rp/textures/blocks/vm_machine_head_weapon_smith.png",
+    "kind": "texture",
+    "alt": "Machine Weapon Smith",
+    "render": {
+      "adapter": "vending-machine",
+      "blockId": "vm:machine_weapon_smith"
+    }
+  },
+  {
+    "id": "vm:machine_wandering_trader/icon",
+    "featureId": "vm:machine_wandering_trader",
+    "source": "vending_rp/textures/blocks/vm_machine_head_wandering_trader.png",
+    "kind": "texture",
+    "alt": "Machine Wandering Trader",
+    "render": {
+      "adapter": "vending-machine",
+      "blockId": "vm:machine_wandering_trader"
+    }
+  }
+]

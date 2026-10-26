@@ -3,15 +3,17 @@ let serial = 0;
 export async function runtime() {
     const callbacks = {}, deferred = [], components = {block: {}, item: {}};
     const events = new Proxy({}, {get: (_, key) => ({subscribe(fn) {callbacks[key] = fn;}})});
+    const buildSource = await readFile(new URL('../../vending_bp/scripts/build_mode.js', import.meta.url), 'utf8');
+    const {hasSneakIntent} = await import(`data:text/javascript;base64,${Buffer.from(buildSource).toString('base64')}`);
     const api = {
         world: {afterEvents: events, beforeEvents: events},
         system: {beforeEvents: events, run: fn => deferred.push(fn)},
         BlockPermutation: {resolve: permutation}, message: key => key,
-        createBuildModeController: () => ({resetTrader() {}}),
+        createBuildModeController: () => ({resetTrader() {}}), hasSneakIntent,
     };
     globalThis.__vendingTestRuntime = api;
     const source = (await readFile(new URL('../../vending_bp/scripts/main.js', import.meta.url), 'utf8')).replace(/^import .*;\r?\n/gm, '');
-    await import(`data:text/javascript;base64,${Buffer.from(`const {world, system, BlockPermutation, message, createBuildModeController} = globalThis.__vendingTestRuntime;\n// instance ${serial++}\n` + source).toString('base64')}`);
+    await import(`data:text/javascript;base64,${Buffer.from(`const {world, system, BlockPermutation, message, createBuildModeController, hasSneakIntent} = globalThis.__vendingTestRuntime;\n// instance ${serial++}\n` + source).toString('base64')}`);
     delete globalThis.__vendingTestRuntime;
     callbacks.startup({blockComponentRegistry: {registerCustomComponent(id, value) {components.block[id] = value;}},
         itemComponentRegistry: {registerCustomComponent(id, value) {components.item[id] = value;}}});
@@ -56,7 +58,8 @@ export function scene({mode = 'Survival'} = {}) {
         };
         result.actors.push(value); return value;
     }
-    const player = {getGameMode: () => mode, sendMessage() {},
+    const player = {getGameMode: () => mode, sendMessage() {}, isSneaking: false,
+        inputInfo: {getButtonState: () => result.sneakButton ?? 'Released'},
         getComponent(id) {
             if (id === 'minecraft:equippable') return {getEquipment: () => result.held && {...result.held}, setEquipment: (_, item) => {result.held = item;}};
         }};

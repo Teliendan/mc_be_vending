@@ -3,6 +3,7 @@
 Target Bedrock 1.26.52 / Script API 2.8.0. Final design only; history is in git
 (review and implementation: workspace commits `288b0f7`, `5029b4e`; mod `a5bd9bb`).
 Crouch placement against the head: [INTERACTIONS.md](INTERACTIONS.md).
+Creative flight uses the held Sneak input as well as crouch posture.
 
 ## Machine block
 
@@ -21,8 +22,9 @@ ownership, villager for trading. All 15 machines share `gen_machine_blocks.py`;
   waterlogging, like solid workstations.
 - Placement: Core's `vm:machine` `beforeOnPlayerPlace` cancels before the item is
   used when the head cell is not air, is above the build limit, or holds an actor
-  (dropped items, XP, projectiles and spectators do not count). The after-place
-  handler then sets the head and spawns the trader with no fallback path.
+  (hidden machine traders, dropped items, XP, projectiles and spectators do not count). The after-place
+  handler then sets the head and spawns the trader with no fallback path. Machines may touch
+  side-by-side or diagonally; a neighbouring machine's invisible trader never blocks placement.
 - Loot: only the base drops one machine item (native `explosion_decay`); the head
   has an empty table. Breaking either half removes the other half and the trader.
   If only the head is lost, the base is removed with `setblock ... destroy`

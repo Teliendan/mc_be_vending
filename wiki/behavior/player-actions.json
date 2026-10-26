@@ -1,0 +1,1147 @@
+[
+  {
+    "evidence": [
+      {
+        "path": "docs/INTERACTIONS.md",
+        "sha256": "e28bf08703d625b577637f238568d3aa29d1ebe5b7cad737af781f4697f33560"
+      },
+      {
+        "path": "docs/VANILLA_PARITY.md",
+        "sha256": "c813881059d619969614498bde477acc55fe6bd11db7679dcec122050d99b302"
+      },
+      {
+        "path": "vending_bp/items/upgrade_kit.json",
+        "sha256": "7ba845082e913e717e116b4f2cf211090ee3d3373b9d06aaec5bc80792a7fba2"
+      },
+      {
+        "path": "vending_bp/scripts/build_mode.js",
+        "sha256": "8778c98043b3b7d8ff5fcb1a2553eac7a14f260f7040fa7066dcf227dd025c24"
+      },
+      {
+        "path": "vending_bp/scripts/main.js",
+        "sha256": "8c683e4723e9eb61e70b5598ed907ad6837caebbdc516860990e979172d9695b"
+      },
+      {
+        "path": "vending_bp/scripts/messages.js",
+        "sha256": "e6e55916854cdf8123f15a08a069e04d89b128c49a0ae1cf03f32228df5dd66f"
+      }
+    ],
+    "featureId": "vm:upgrade_kit",
+    "id": "vm:upgrade_kit/use",
+    "text": "Use on the base of a machine to upgrade it. Villager machine prices fall by 30%, with a minimum cost of one; wandering and shulker machines use their own improved prices."
+  },
+  {
+    "evidence": [
+      {
+        "path": "docs/INTERACTIONS.md",
+        "sha256": "e28bf08703d625b577637f238568d3aa29d1ebe5b7cad737af781f4697f33560"
+      },
+      {
+        "path": "docs/VANILLA_PARITY.md",
+        "sha256": "c813881059d619969614498bde477acc55fe6bd11db7679dcec122050d99b302"
+      },
+      {
+        "path": "vending_shulker_bp/items/shulker_core.json",
+        "sha256": "04a573cbe001b54d380d791df04b2ba5d9a05ce0a2476537ffc0c1c0a7f7eb74"
+      }
+    ],
+    "featureId": "vm:shulker_core",
+    "id": "vm:shulker_core/use",
+    "text": "Craft a Shulker Machine using this core."
+  },
+  {
+    "evidence": [
+      {
+        "path": "docs/INTERACTIONS.md",
+        "sha256": "e28bf08703d625b577637f238568d3aa29d1ebe5b7cad737af781f4697f33560"
+      },
+      {
+        "path": "docs/VANILLA_PARITY.md",
+        "sha256": "c813881059d619969614498bde477acc55fe6bd11db7679dcec122050d99b302"
+      },
+      {
+        "path": "vending_shulker_bp/blocks/machine_shulker.json",
+        "sha256": "f66d72e89f2adedc1f78a0d84433252e36191e2155dbc03bc7be7ca1d39280e4"
+      },
+      {
+        "path": "vending_shulker_bp/entities/trader_shulker.json",
+        "sha256": "21e696335987f067dd056deedcefd87820283c7e817322f04b60484ddc24fed3"
+      },
+      {
+        "path": "vending_bp/scripts/main.js",
+        "sha256": "8c683e4723e9eb61e70b5598ed907ad6837caebbdc516860990e979172d9695b"
+      }
+    ],
+    "featureId": "vm:machine_shulker",
+    "id": "vm:machine_shulker/place",
+    "text": "Place on a floor with a completely empty block above. Machines can stand directly side-by-side or diagonally. The machine is two blocks tall. In Survival, mine the base to collect the machine; the upper half cannot be mined. Breaking and replacing it resets any trading progress and removes any installed upgrade. The recovered item places a base machine; train and upgrade it again after moving."
+  },
+  {
+    "evidence": [
+      {
+        "path": "docs/INTERACTIONS.md",
+        "sha256": "e28bf08703d625b577637f238568d3aa29d1ebe5b7cad737af781f4697f33560"
+      },
+      {
+        "path": "docs/VANILLA_PARITY.md",
+        "sha256": "c813881059d619969614498bde477acc55fe6bd11db7679dcec122050d99b302"
+      },
+      {
+        "path": "vending_shulker_bp/blocks/machine_shulker.json",
+        "sha256": "f66d72e89f2adedc1f78a0d84433252e36191e2155dbc03bc7be7ca1d39280e4"
+      },
+      {
+        "path": "vending_shulker_bp/entities/trader_shulker.json",
+        "sha256": "21e696335987f067dd056deedcefd87820283c7e817322f04b60484ddc24fed3"
+      }
+    ],
+    "featureId": "vm:machine_shulker",
+    "id": "vm:machine_shulker/trade",
+    "text": "Stand to trade. Crouch and aim at the upper half to build against it; while flying in Creative, hold Sneak. Offers stay in stock; experience unlocks the machine’s higher trade tiers."
+  },
+  {
+    "evidence": [
+      {
+        "path": "docs/INTERACTIONS.md",
+        "sha256": "e28bf08703d625b577637f238568d3aa29d1ebe5b7cad737af781f4697f33560"
+      },
+      {
+        "path": "docs/VANILLA_PARITY.md",
+        "sha256": "c813881059d619969614498bde477acc55fe6bd11db7679dcec122050d99b302"
+      },
+      {
+        "path": "vending_shulker_bp/blocks/machine_shulker.json",
+        "sha256": "f66d72e89f2adedc1f78a0d84433252e36191e2155dbc03bc7be7ca1d39280e4"
+      },
+      {
+        "path": "vending_shulker_bp/entities/trader_shulker.json",
+        "sha256": "21e696335987f067dd056deedcefd87820283c7e817322f04b60484ddc24fed3"
+      }
+    ],
+    "featureId": "vm:machine_shulker",
+    "id": "vm:machine_shulker/upgrade",
+    "text": "Use an Upgrade Kit on the base to improve its prices until the machine is broken. Survival consumes the kit once; using a kit on an already upgraded machine costs nothing."
+  },
+  {
+    "evidence": [
+      {
+        "path": "docs/INTERACTIONS.md",
+        "sha256": "e28bf08703d625b577637f238568d3aa29d1ebe5b7cad737af781f4697f33560"
+      },
+      {
+        "path": "docs/VANILLA_PARITY.md",
+        "sha256": "c813881059d619969614498bde477acc55fe6bd11db7679dcec122050d99b302"
+      },
+      {
+        "path": "vending_villagers_bp/blocks/machine_armorer.json",
+        "sha256": "a727cd915e56a292cc879f5f14ae33e4583075149743e829a6f2737fbface715"
+      },
+      {
+        "path": "vending_villagers_bp/entities/trader_armorer.json",
+        "sha256": "d9a636a110c2e85d8f5efd37c90742cabd65dd83e4aa30bb0f1173a1e9c6ee7f"
+      },
+      {
+        "path": "vending_bp/scripts/main.js",
+        "sha256": "8c683e4723e9eb61e70b5598ed907ad6837caebbdc516860990e979172d9695b"
+      }
+    ],
+    "featureId": "vm:machine_armorer",
+    "id": "vm:machine_armorer/place",
+    "text": "Place on a floor with a completely empty block above. Machines can stand directly side-by-side or diagonally. The machine is two blocks tall. In Survival, mine the base to collect the machine; the upper half cannot be mined. Breaking and replacing it resets any trading progress and removes any installed upgrade. The recovered item places a base machine; train and upgrade it again after moving."
+  },
+  {
+    "evidence": [
+      {
+        "path": "docs/INTERACTIONS.md",
+        "sha256": "e28bf08703d625b577637f238568d3aa29d1ebe5b7cad737af781f4697f33560"
+      },
+      {
+        "path": "docs/VANILLA_PARITY.md",
+        "sha256": "c813881059d619969614498bde477acc55fe6bd11db7679dcec122050d99b302"
+      },
+      {
+        "path": "vending_villagers_bp/blocks/machine_armorer.json",
+        "sha256": "a727cd915e56a292cc879f5f14ae33e4583075149743e829a6f2737fbface715"
+      },
+      {
+        "path": "vending_villagers_bp/entities/trader_armorer.json",
+        "sha256": "d9a636a110c2e85d8f5efd37c90742cabd65dd83e4aa30bb0f1173a1e9c6ee7f"
+      }
+    ],
+    "featureId": "vm:machine_armorer",
+    "id": "vm:machine_armorer/trade",
+    "text": "Stand to trade. Crouch and aim at the upper half to build against it; while flying in Creative, hold Sneak. Offers stay in stock; experience unlocks the machine’s higher trade tiers."
+  },
+  {
+    "evidence": [
+      {
+        "path": "docs/INTERACTIONS.md",
+        "sha256": "e28bf08703d625b577637f238568d3aa29d1ebe5b7cad737af781f4697f33560"
+      },
+      {
+        "path": "docs/VANILLA_PARITY.md",
+        "sha256": "c813881059d619969614498bde477acc55fe6bd11db7679dcec122050d99b302"
+      },
+      {
+        "path": "vending_villagers_bp/blocks/machine_armorer.json",
+        "sha256": "a727cd915e56a292cc879f5f14ae33e4583075149743e829a6f2737fbface715"
+      },
+      {
+        "path": "vending_villagers_bp/entities/trader_armorer.json",
+        "sha256": "d9a636a110c2e85d8f5efd37c90742cabd65dd83e4aa30bb0f1173a1e9c6ee7f"
+      }
+    ],
+    "featureId": "vm:machine_armorer",
+    "id": "vm:machine_armorer/upgrade",
+    "text": "Use an Upgrade Kit on the base to improve its prices until the machine is broken. Survival consumes the kit once; using a kit on an already upgraded machine costs nothing."
+  },
+  {
+    "evidence": [
+      {
+        "path": "docs/INTERACTIONS.md",
+        "sha256": "e28bf08703d625b577637f238568d3aa29d1ebe5b7cad737af781f4697f33560"
+      },
+      {
+        "path": "docs/VANILLA_PARITY.md",
+        "sha256": "c813881059d619969614498bde477acc55fe6bd11db7679dcec122050d99b302"
+      },
+      {
+        "path": "vending_villagers_bp/blocks/machine_butcher.json",
+        "sha256": "2c166334c0e2dca5b606d98f84731c812fac9b149b1d9cf974b9c7216774f3e9"
+      },
+      {
+        "path": "vending_villagers_bp/entities/trader_butcher.json",
+        "sha256": "bf6b42cb5c7cfde740a85f7d1c103e086872333473011c1e81e316746e48fefa"
+      },
+      {
+        "path": "vending_bp/scripts/main.js",
+        "sha256": "8c683e4723e9eb61e70b5598ed907ad6837caebbdc516860990e979172d9695b"
+      }
+    ],
+    "featureId": "vm:machine_butcher",
+    "id": "vm:machine_butcher/place",
+    "text": "Place on a floor with a completely empty block above. Machines can stand directly side-by-side or diagonally. The machine is two blocks tall. In Survival, mine the base to collect the machine; the upper half cannot be mined. Breaking and replacing it resets any trading progress and removes any installed upgrade. The recovered item places a base machine; train and upgrade it again after moving."
+  },
+  {
+    "evidence": [
+      {
+        "path": "docs/INTERACTIONS.md",
+        "sha256": "e28bf08703d625b577637f238568d3aa29d1ebe5b7cad737af781f4697f33560"
+      },
+      {
+        "path": "docs/VANILLA_PARITY.md",
+        "sha256": "c813881059d619969614498bde477acc55fe6bd11db7679dcec122050d99b302"
+      },
+      {
+        "path": "vending_villagers_bp/blocks/machine_butcher.json",
+        "sha256": "2c166334c0e2dca5b606d98f84731c812fac9b149b1d9cf974b9c7216774f3e9"
+      },
+      {
+        "path": "vending_villagers_bp/entities/trader_butcher.json",
+        "sha256": "bf6b42cb5c7cfde740a85f7d1c103e086872333473011c1e81e316746e48fefa"
+      }
+    ],
+    "featureId": "vm:machine_butcher",
+    "id": "vm:machine_butcher/trade",
+    "text": "Stand to trade. Crouch and aim at the upper half to build against it; while flying in Creative, hold Sneak. Offers stay in stock; experience unlocks the machine’s higher trade tiers."
+  },
+  {
+    "evidence": [
+      {
+        "path": "docs/INTERACTIONS.md",
+        "sha256": "e28bf08703d625b577637f238568d3aa29d1ebe5b7cad737af781f4697f33560"
+      },
+      {
+        "path": "docs/VANILLA_PARITY.md",
+        "sha256": "c813881059d619969614498bde477acc55fe6bd11db7679dcec122050d99b302"
+      },
+      {
+        "path": "vending_villagers_bp/blocks/machine_butcher.json",
+        "sha256": "2c166334c0e2dca5b606d98f84731c812fac9b149b1d9cf974b9c7216774f3e9"
+      },
+      {
+        "path": "vending_villagers_bp/entities/trader_butcher.json",
+        "sha256": "bf6b42cb5c7cfde740a85f7d1c103e086872333473011c1e81e316746e48fefa"
+      }
+    ],
+    "featureId": "vm:machine_butcher",
+    "id": "vm:machine_butcher/upgrade",
+    "text": "Use an Upgrade Kit on the base to improve its prices until the machine is broken. Survival consumes the kit once; using a kit on an already upgraded machine costs nothing."
+  },
+  {
+    "evidence": [
+      {
+        "path": "docs/INTERACTIONS.md",
+        "sha256": "e28bf08703d625b577637f238568d3aa29d1ebe5b7cad737af781f4697f33560"
+      },
+      {
+        "path": "docs/VANILLA_PARITY.md",
+        "sha256": "c813881059d619969614498bde477acc55fe6bd11db7679dcec122050d99b302"
+      },
+      {
+        "path": "vending_villagers_bp/blocks/machine_cartographer.json",
+        "sha256": "824d995ad5dbf43918a4546abf44dbcdf7975af615a49f95c08920d7a8ff4cb5"
+      },
+      {
+        "path": "vending_villagers_bp/entities/trader_cartographer.json",
+        "sha256": "9206a7433cd461d4b554c67ffcfcd6200b941abafad68664253788ef15f5e782"
+      },
+      {
+        "path": "vending_bp/scripts/main.js",
+        "sha256": "8c683e4723e9eb61e70b5598ed907ad6837caebbdc516860990e979172d9695b"
+      }
+    ],
+    "featureId": "vm:machine_cartographer",
+    "id": "vm:machine_cartographer/place",
+    "text": "Place on a floor with a completely empty block above. Machines can stand directly side-by-side or diagonally. The machine is two blocks tall. In Survival, mine the base to collect the machine; the upper half cannot be mined. Breaking and replacing it resets any trading progress and removes any installed upgrade. The recovered item places a base machine; train and upgrade it again after moving."
+  },
+  {
+    "evidence": [
+      {
+        "path": "docs/INTERACTIONS.md",
+        "sha256": "e28bf08703d625b577637f238568d3aa29d1ebe5b7cad737af781f4697f33560"
+      },
+      {
+        "path": "docs/VANILLA_PARITY.md",
+        "sha256": "c813881059d619969614498bde477acc55fe6bd11db7679dcec122050d99b302"
+      },
+      {
+        "path": "vending_villagers_bp/blocks/machine_cartographer.json",
+        "sha256": "824d995ad5dbf43918a4546abf44dbcdf7975af615a49f95c08920d7a8ff4cb5"
+      },
+      {
+        "path": "vending_villagers_bp/entities/trader_cartographer.json",
+        "sha256": "9206a7433cd461d4b554c67ffcfcd6200b941abafad68664253788ef15f5e782"
+      }
+    ],
+    "featureId": "vm:machine_cartographer",
+    "id": "vm:machine_cartographer/trade",
+    "text": "Stand to trade. Crouch and aim at the upper half to build against it; while flying in Creative, hold Sneak. Offers stay in stock; experience unlocks the machine’s higher trade tiers."
+  },
+  {
+    "evidence": [
+      {
+        "path": "docs/INTERACTIONS.md",
+        "sha256": "e28bf08703d625b577637f238568d3aa29d1ebe5b7cad737af781f4697f33560"
+      },
+      {
+        "path": "docs/VANILLA_PARITY.md",
+        "sha256": "c813881059d619969614498bde477acc55fe6bd11db7679dcec122050d99b302"
+      },
+      {
+        "path": "vending_villagers_bp/blocks/machine_cartographer.json",
+        "sha256": "824d995ad5dbf43918a4546abf44dbcdf7975af615a49f95c08920d7a8ff4cb5"
+      },
+      {
+        "path": "vending_villagers_bp/entities/trader_cartographer.json",
+        "sha256": "9206a7433cd461d4b554c67ffcfcd6200b941abafad68664253788ef15f5e782"
+      }
+    ],
+    "featureId": "vm:machine_cartographer",
+    "id": "vm:machine_cartographer/upgrade",
+    "text": "Use an Upgrade Kit on the base to improve its prices until the machine is broken. Survival consumes the kit once; using a kit on an already upgraded machine costs nothing."
+  },
+  {
+    "evidence": [
+      {
+        "path": "docs/INTERACTIONS.md",
+        "sha256": "e28bf08703d625b577637f238568d3aa29d1ebe5b7cad737af781f4697f33560"
+      },
+      {
+        "path": "docs/VANILLA_PARITY.md",
+        "sha256": "c813881059d619969614498bde477acc55fe6bd11db7679dcec122050d99b302"
+      },
+      {
+        "path": "vending_villagers_bp/blocks/machine_cleric.json",
+        "sha256": "4b5cbab44c04ce47ae07b3652282803922327c0e1a738ff0cfe5c437e16d4d92"
+      },
+      {
+        "path": "vending_villagers_bp/entities/trader_cleric.json",
+        "sha256": "b2de8df2be2fd771b278d74714f8e7e7c3651c92f95f7e6aa994f425a466e163"
+      },
+      {
+        "path": "vending_bp/scripts/main.js",
+        "sha256": "8c683e4723e9eb61e70b5598ed907ad6837caebbdc516860990e979172d9695b"
+      }
+    ],
+    "featureId": "vm:machine_cleric",
+    "id": "vm:machine_cleric/place",
+    "text": "Place on a floor with a completely empty block above. Machines can stand directly side-by-side or diagonally. The machine is two blocks tall. In Survival, mine the base to collect the machine; the upper half cannot be mined. Breaking and replacing it resets any trading progress and removes any installed upgrade. The recovered item places a base machine; train and upgrade it again after moving."
+  },
+  {
+    "evidence": [
+      {
+        "path": "docs/INTERACTIONS.md",
+        "sha256": "e28bf08703d625b577637f238568d3aa29d1ebe5b7cad737af781f4697f33560"
+      },
+      {
+        "path": "docs/VANILLA_PARITY.md",
+        "sha256": "c813881059d619969614498bde477acc55fe6bd11db7679dcec122050d99b302"
+      },
+      {
+        "path": "vending_villagers_bp/blocks/machine_cleric.json",
+        "sha256": "4b5cbab44c04ce47ae07b3652282803922327c0e1a738ff0cfe5c437e16d4d92"
+      },
+      {
+        "path": "vending_villagers_bp/entities/trader_cleric.json",
+        "sha256": "b2de8df2be2fd771b278d74714f8e7e7c3651c92f95f7e6aa994f425a466e163"
+      }
+    ],
+    "featureId": "vm:machine_cleric",
+    "id": "vm:machine_cleric/trade",
+    "text": "Stand to trade. Crouch and aim at the upper half to build against it; while flying in Creative, hold Sneak. Offers stay in stock; experience unlocks the machine’s higher trade tiers."
+  },
+  {
+    "evidence": [
+      {
+        "path": "docs/INTERACTIONS.md",
+        "sha256": "e28bf08703d625b577637f238568d3aa29d1ebe5b7cad737af781f4697f33560"
+      },
+      {
+        "path": "docs/VANILLA_PARITY.md",
+        "sha256": "c813881059d619969614498bde477acc55fe6bd11db7679dcec122050d99b302"
+      },
+      {
+        "path": "vending_villagers_bp/blocks/machine_cleric.json",
+        "sha256": "4b5cbab44c04ce47ae07b3652282803922327c0e1a738ff0cfe5c437e16d4d92"
+      },
+      {
+        "path": "vending_villagers_bp/entities/trader_cleric.json",
+        "sha256": "b2de8df2be2fd771b278d74714f8e7e7c3651c92f95f7e6aa994f425a466e163"
+      }
+    ],
+    "featureId": "vm:machine_cleric",
+    "id": "vm:machine_cleric/upgrade",
+    "text": "Use an Upgrade Kit on the base to improve its prices until the machine is broken. Survival consumes the kit once; using a kit on an already upgraded machine costs nothing."
+  },
+  {
+    "evidence": [
+      {
+        "path": "docs/INTERACTIONS.md",
+        "sha256": "e28bf08703d625b577637f238568d3aa29d1ebe5b7cad737af781f4697f33560"
+      },
+      {
+        "path": "docs/VANILLA_PARITY.md",
+        "sha256": "c813881059d619969614498bde477acc55fe6bd11db7679dcec122050d99b302"
+      },
+      {
+        "path": "vending_villagers_bp/blocks/machine_farmer.json",
+        "sha256": "91c9c6b2837bc71ecd0fd1fbfaae44e173b6724b5808b10e9cf5a709f621acda"
+      },
+      {
+        "path": "vending_villagers_bp/entities/trader_farmer.json",
+        "sha256": "7b4873e78ef6b0d724ac10ed14f84e625557798ea7b5845a79a8c41602bb8c61"
+      },
+      {
+        "path": "vending_bp/scripts/main.js",
+        "sha256": "8c683e4723e9eb61e70b5598ed907ad6837caebbdc516860990e979172d9695b"
+      }
+    ],
+    "featureId": "vm:machine_farmer",
+    "id": "vm:machine_farmer/place",
+    "text": "Place on a floor with a completely empty block above. Machines can stand directly side-by-side or diagonally. The machine is two blocks tall. In Survival, mine the base to collect the machine; the upper half cannot be mined. Breaking and replacing it resets any trading progress and removes any installed upgrade. The recovered item places a base machine; train and upgrade it again after moving."
+  },
+  {
+    "evidence": [
+      {
+        "path": "docs/INTERACTIONS.md",
+        "sha256": "e28bf08703d625b577637f238568d3aa29d1ebe5b7cad737af781f4697f33560"
+      },
+      {
+        "path": "docs/VANILLA_PARITY.md",
+        "sha256": "c813881059d619969614498bde477acc55fe6bd11db7679dcec122050d99b302"
+      },
+      {
+        "path": "vending_villagers_bp/blocks/machine_farmer.json",
+        "sha256": "91c9c6b2837bc71ecd0fd1fbfaae44e173b6724b5808b10e9cf5a709f621acda"
+      },
+      {
+        "path": "vending_villagers_bp/entities/trader_farmer.json",
+        "sha256": "7b4873e78ef6b0d724ac10ed14f84e625557798ea7b5845a79a8c41602bb8c61"
+      }
+    ],
+    "featureId": "vm:machine_farmer",
+    "id": "vm:machine_farmer/trade",
+    "text": "Stand to trade. Crouch and aim at the upper half to build against it; while flying in Creative, hold Sneak. Offers stay in stock; experience unlocks the machine’s higher trade tiers."
+  },
+  {
+    "evidence": [
+      {
+        "path": "docs/INTERACTIONS.md",
+        "sha256": "e28bf08703d625b577637f238568d3aa29d1ebe5b7cad737af781f4697f33560"
+      },
+      {
+        "path": "docs/VANILLA_PARITY.md",
+        "sha256": "c813881059d619969614498bde477acc55fe6bd11db7679dcec122050d99b302"
+      },
+      {
+        "path": "vending_villagers_bp/blocks/machine_farmer.json",
+        "sha256": "91c9c6b2837bc71ecd0fd1fbfaae44e173b6724b5808b10e9cf5a709f621acda"
+      },
+      {
+        "path": "vending_villagers_bp/entities/trader_farmer.json",
+        "sha256": "7b4873e78ef6b0d724ac10ed14f84e625557798ea7b5845a79a8c41602bb8c61"
+      }
+    ],
+    "featureId": "vm:machine_farmer",
+    "id": "vm:machine_farmer/upgrade",
+    "text": "Use an Upgrade Kit on the base to improve its prices until the machine is broken. Survival consumes the kit once; using a kit on an already upgraded machine costs nothing."
+  },
+  {
+    "evidence": [
+      {
+        "path": "docs/INTERACTIONS.md",
+        "sha256": "e28bf08703d625b577637f238568d3aa29d1ebe5b7cad737af781f4697f33560"
+      },
+      {
+        "path": "docs/VANILLA_PARITY.md",
+        "sha256": "c813881059d619969614498bde477acc55fe6bd11db7679dcec122050d99b302"
+      },
+      {
+        "path": "vending_villagers_bp/blocks/machine_fisherman.json",
+        "sha256": "91190ca5e882e8efae1e5b1fbf9aa73e1e7bf12ad0e986a920c8896d2665fc85"
+      },
+      {
+        "path": "vending_villagers_bp/entities/trader_fisherman.json",
+        "sha256": "afd12f4e508b24a2c5ac452c1a59e81f856b7af4763f92c0cb037c0b8cbfd676"
+      },
+      {
+        "path": "vending_bp/scripts/main.js",
+        "sha256": "8c683e4723e9eb61e70b5598ed907ad6837caebbdc516860990e979172d9695b"
+      }
+    ],
+    "featureId": "vm:machine_fisherman",
+    "id": "vm:machine_fisherman/place",
+    "text": "Place on a floor with a completely empty block above. Machines can stand directly side-by-side or diagonally. The machine is two blocks tall. In Survival, mine the base to collect the machine; the upper half cannot be mined. Breaking and replacing it resets any trading progress and removes any installed upgrade. The recovered item places a base machine; train and upgrade it again after moving."
+  },
+  {
+    "evidence": [
+      {
+        "path": "docs/INTERACTIONS.md",
+        "sha256": "e28bf08703d625b577637f238568d3aa29d1ebe5b7cad737af781f4697f33560"
+      },
+      {
+        "path": "docs/VANILLA_PARITY.md",
+        "sha256": "c813881059d619969614498bde477acc55fe6bd11db7679dcec122050d99b302"
+      },
+      {
+        "path": "vending_villagers_bp/blocks/machine_fisherman.json",
+        "sha256": "91190ca5e882e8efae1e5b1fbf9aa73e1e7bf12ad0e986a920c8896d2665fc85"
+      },
+      {
+        "path": "vending_villagers_bp/entities/trader_fisherman.json",
+        "sha256": "afd12f4e508b24a2c5ac452c1a59e81f856b7af4763f92c0cb037c0b8cbfd676"
+      }
+    ],
+    "featureId": "vm:machine_fisherman",
+    "id": "vm:machine_fisherman/trade",
+    "text": "Stand to trade. Crouch and aim at the upper half to build against it; while flying in Creative, hold Sneak. Offers stay in stock; experience unlocks the machine’s higher trade tiers."
+  },
+  {
+    "evidence": [
+      {
+        "path": "docs/INTERACTIONS.md",
+        "sha256": "e28bf08703d625b577637f238568d3aa29d1ebe5b7cad737af781f4697f33560"
+      },
+      {
+        "path": "docs/VANILLA_PARITY.md",
+        "sha256": "c813881059d619969614498bde477acc55fe6bd11db7679dcec122050d99b302"
+      },
+      {
+        "path": "vending_villagers_bp/blocks/machine_fisherman.json",
+        "sha256": "91190ca5e882e8efae1e5b1fbf9aa73e1e7bf12ad0e986a920c8896d2665fc85"
+      },
+      {
+        "path": "vending_villagers_bp/entities/trader_fisherman.json",
+        "sha256": "afd12f4e508b24a2c5ac452c1a59e81f856b7af4763f92c0cb037c0b8cbfd676"
+      }
+    ],
+    "featureId": "vm:machine_fisherman",
+    "id": "vm:machine_fisherman/upgrade",
+    "text": "Use an Upgrade Kit on the base to improve its prices until the machine is broken. Survival consumes the kit once; using a kit on an already upgraded machine costs nothing."
+  },
+  {
+    "evidence": [
+      {
+        "path": "docs/INTERACTIONS.md",
+        "sha256": "e28bf08703d625b577637f238568d3aa29d1ebe5b7cad737af781f4697f33560"
+      },
+      {
+        "path": "docs/VANILLA_PARITY.md",
+        "sha256": "c813881059d619969614498bde477acc55fe6bd11db7679dcec122050d99b302"
+      },
+      {
+        "path": "vending_villagers_bp/blocks/machine_fletcher.json",
+        "sha256": "249e837c9e66ba5301a624076886b2ebe50b0e614368020cf6638d2efc399227"
+      },
+      {
+        "path": "vending_villagers_bp/entities/trader_fletcher.json",
+        "sha256": "30b290b8f07461f6e2fba9443c8336bec49f2963f15256888635baddcce886f3"
+      },
+      {
+        "path": "vending_bp/scripts/main.js",
+        "sha256": "8c683e4723e9eb61e70b5598ed907ad6837caebbdc516860990e979172d9695b"
+      }
+    ],
+    "featureId": "vm:machine_fletcher",
+    "id": "vm:machine_fletcher/place",
+    "text": "Place on a floor with a completely empty block above. Machines can stand directly side-by-side or diagonally. The machine is two blocks tall. In Survival, mine the base to collect the machine; the upper half cannot be mined. Breaking and replacing it resets any trading progress and removes any installed upgrade. The recovered item places a base machine; train and upgrade it again after moving."
+  },
+  {
+    "evidence": [
+      {
+        "path": "docs/INTERACTIONS.md",
+        "sha256": "e28bf08703d625b577637f238568d3aa29d1ebe5b7cad737af781f4697f33560"
+      },
+      {
+        "path": "docs/VANILLA_PARITY.md",
+        "sha256": "c813881059d619969614498bde477acc55fe6bd11db7679dcec122050d99b302"
+      },
+      {
+        "path": "vending_villagers_bp/blocks/machine_fletcher.json",
+        "sha256": "249e837c9e66ba5301a624076886b2ebe50b0e614368020cf6638d2efc399227"
+      },
+      {
+        "path": "vending_villagers_bp/entities/trader_fletcher.json",
+        "sha256": "30b290b8f07461f6e2fba9443c8336bec49f2963f15256888635baddcce886f3"
+      }
+    ],
+    "featureId": "vm:machine_fletcher",
+    "id": "vm:machine_fletcher/trade",
+    "text": "Stand to trade. Crouch and aim at the upper half to build against it; while flying in Creative, hold Sneak. Offers stay in stock; experience unlocks the machine’s higher trade tiers."
+  },
+  {
+    "evidence": [
+      {
+        "path": "docs/INTERACTIONS.md",
+        "sha256": "e28bf08703d625b577637f238568d3aa29d1ebe5b7cad737af781f4697f33560"
+      },
+      {
+        "path": "docs/VANILLA_PARITY.md",
+        "sha256": "c813881059d619969614498bde477acc55fe6bd11db7679dcec122050d99b302"
+      },
+      {
+        "path": "vending_villagers_bp/blocks/machine_fletcher.json",
+        "sha256": "249e837c9e66ba5301a624076886b2ebe50b0e614368020cf6638d2efc399227"
+      },
+      {
+        "path": "vending_villagers_bp/entities/trader_fletcher.json",
+        "sha256": "30b290b8f07461f6e2fba9443c8336bec49f2963f15256888635baddcce886f3"
+      }
+    ],
+    "featureId": "vm:machine_fletcher",
+    "id": "vm:machine_fletcher/upgrade",
+    "text": "Use an Upgrade Kit on the base to improve its prices until the machine is broken. Survival consumes the kit once; using a kit on an already upgraded machine costs nothing."
+  },
+  {
+    "evidence": [
+      {
+        "path": "docs/INTERACTIONS.md",
+        "sha256": "e28bf08703d625b577637f238568d3aa29d1ebe5b7cad737af781f4697f33560"
+      },
+      {
+        "path": "docs/VANILLA_PARITY.md",
+        "sha256": "c813881059d619969614498bde477acc55fe6bd11db7679dcec122050d99b302"
+      },
+      {
+        "path": "vending_villagers_bp/blocks/machine_leather_worker.json",
+        "sha256": "8689cf6d5334a87f164d441eeec16473c88f47458e3240f9240d56cdfd45f125"
+      },
+      {
+        "path": "vending_villagers_bp/entities/trader_leather_worker.json",
+        "sha256": "d833af7d5f5c93ce96736f6bfed81221f4291c684d701637e749c06ef7c21912"
+      },
+      {
+        "path": "vending_bp/scripts/main.js",
+        "sha256": "8c683e4723e9eb61e70b5598ed907ad6837caebbdc516860990e979172d9695b"
+      }
+    ],
+    "featureId": "vm:machine_leather_worker",
+    "id": "vm:machine_leather_worker/place",
+    "text": "Place on a floor with a completely empty block above. Machines can stand directly side-by-side or diagonally. The machine is two blocks tall. In Survival, mine the base to collect the machine; the upper half cannot be mined. Breaking and replacing it resets any trading progress and removes any installed upgrade. The recovered item places a base machine; train and upgrade it again after moving."
+  },
+  {
+    "evidence": [
+      {
+        "path": "docs/INTERACTIONS.md",
+        "sha256": "e28bf08703d625b577637f238568d3aa29d1ebe5b7cad737af781f4697f33560"
+      },
+      {
+        "path": "docs/VANILLA_PARITY.md",
+        "sha256": "c813881059d619969614498bde477acc55fe6bd11db7679dcec122050d99b302"
+      },
+      {
+        "path": "vending_villagers_bp/blocks/machine_leather_worker.json",
+        "sha256": "8689cf6d5334a87f164d441eeec16473c88f47458e3240f9240d56cdfd45f125"
+      },
+      {
+        "path": "vending_villagers_bp/entities/trader_leather_worker.json",
+        "sha256": "d833af7d5f5c93ce96736f6bfed81221f4291c684d701637e749c06ef7c21912"
+      }
+    ],
+    "featureId": "vm:machine_leather_worker",
+    "id": "vm:machine_leather_worker/trade",
+    "text": "Stand to trade. Crouch and aim at the upper half to build against it; while flying in Creative, hold Sneak. Offers stay in stock; experience unlocks the machine’s higher trade tiers."
+  },
+  {
+    "evidence": [
+      {
+        "path": "docs/INTERACTIONS.md",
+        "sha256": "e28bf08703d625b577637f238568d3aa29d1ebe5b7cad737af781f4697f33560"
+      },
+      {
+        "path": "docs/VANILLA_PARITY.md",
+        "sha256": "c813881059d619969614498bde477acc55fe6bd11db7679dcec122050d99b302"
+      },
+      {
+        "path": "vending_villagers_bp/blocks/machine_leather_worker.json",
+        "sha256": "8689cf6d5334a87f164d441eeec16473c88f47458e3240f9240d56cdfd45f125"
+      },
+      {
+        "path": "vending_villagers_bp/entities/trader_leather_worker.json",
+        "sha256": "d833af7d5f5c93ce96736f6bfed81221f4291c684d701637e749c06ef7c21912"
+      }
+    ],
+    "featureId": "vm:machine_leather_worker",
+    "id": "vm:machine_leather_worker/upgrade",
+    "text": "Use an Upgrade Kit on the base to improve its prices until the machine is broken. Survival consumes the kit once; using a kit on an already upgraded machine costs nothing."
+  },
+  {
+    "evidence": [
+      {
+        "path": "docs/INTERACTIONS.md",
+        "sha256": "e28bf08703d625b577637f238568d3aa29d1ebe5b7cad737af781f4697f33560"
+      },
+      {
+        "path": "docs/VANILLA_PARITY.md",
+        "sha256": "c813881059d619969614498bde477acc55fe6bd11db7679dcec122050d99b302"
+      },
+      {
+        "path": "vending_villagers_bp/blocks/machine_librarian.json",
+        "sha256": "b64a5717c4ecbfe9c4d396832210f0862d6734cebbb62b401dfd89ca395b7599"
+      },
+      {
+        "path": "vending_villagers_bp/entities/trader_librarian.json",
+        "sha256": "2d6c921bc5d6c9c4d3afc6563db0d3af34d2dcfe4a1847ae790b33fd3ab6d3d5"
+      },
+      {
+        "path": "vending_bp/scripts/main.js",
+        "sha256": "8c683e4723e9eb61e70b5598ed907ad6837caebbdc516860990e979172d9695b"
+      }
+    ],
+    "featureId": "vm:machine_librarian",
+    "id": "vm:machine_librarian/place",
+    "text": "Place on a floor with a completely empty block above. Machines can stand directly side-by-side or diagonally. The machine is two blocks tall. In Survival, mine the base to collect the machine; the upper half cannot be mined. Breaking and replacing it resets any trading progress and removes any installed upgrade. The recovered item places a base machine; train and upgrade it again after moving."
+  },
+  {
+    "evidence": [
+      {
+        "path": "docs/INTERACTIONS.md",
+        "sha256": "e28bf08703d625b577637f238568d3aa29d1ebe5b7cad737af781f4697f33560"
+      },
+      {
+        "path": "docs/VANILLA_PARITY.md",
+        "sha256": "c813881059d619969614498bde477acc55fe6bd11db7679dcec122050d99b302"
+      },
+      {
+        "path": "vending_villagers_bp/blocks/machine_librarian.json",
+        "sha256": "b64a5717c4ecbfe9c4d396832210f0862d6734cebbb62b401dfd89ca395b7599"
+      },
+      {
+        "path": "vending_villagers_bp/entities/trader_librarian.json",
+        "sha256": "2d6c921bc5d6c9c4d3afc6563db0d3af34d2dcfe4a1847ae790b33fd3ab6d3d5"
+      }
+    ],
+    "featureId": "vm:machine_librarian",
+    "id": "vm:machine_librarian/trade",
+    "text": "Stand to trade. Crouch and aim at the upper half to build against it; while flying in Creative, hold Sneak. Offers stay in stock; experience unlocks the machine’s higher trade tiers."
+  },
+  {
+    "evidence": [
+      {
+        "path": "docs/INTERACTIONS.md",
+        "sha256": "e28bf08703d625b577637f238568d3aa29d1ebe5b7cad737af781f4697f33560"
+      },
+      {
+        "path": "docs/VANILLA_PARITY.md",
+        "sha256": "c813881059d619969614498bde477acc55fe6bd11db7679dcec122050d99b302"
+      },
+      {
+        "path": "vending_villagers_bp/blocks/machine_librarian.json",
+        "sha256": "b64a5717c4ecbfe9c4d396832210f0862d6734cebbb62b401dfd89ca395b7599"
+      },
+      {
+        "path": "vending_villagers_bp/entities/trader_librarian.json",
+        "sha256": "2d6c921bc5d6c9c4d3afc6563db0d3af34d2dcfe4a1847ae790b33fd3ab6d3d5"
+      }
+    ],
+    "featureId": "vm:machine_librarian",
+    "id": "vm:machine_librarian/upgrade",
+    "text": "Use an Upgrade Kit on the base to improve its prices until the machine is broken. Survival consumes the kit once; using a kit on an already upgraded machine costs nothing."
+  },
+  {
+    "evidence": [
+      {
+        "path": "docs/INTERACTIONS.md",
+        "sha256": "e28bf08703d625b577637f238568d3aa29d1ebe5b7cad737af781f4697f33560"
+      },
+      {
+        "path": "docs/VANILLA_PARITY.md",
+        "sha256": "c813881059d619969614498bde477acc55fe6bd11db7679dcec122050d99b302"
+      },
+      {
+        "path": "vending_villagers_bp/blocks/machine_shepherd.json",
+        "sha256": "8b6bd65572787787464fed1f50cab3073b6f912204c541f26f1f468fda9aa2b4"
+      },
+      {
+        "path": "vending_villagers_bp/entities/trader_shepherd.json",
+        "sha256": "c2de99aa43b84cead5022ca7fac16b5a0049e0f53a7621a715561958002d1644"
+      },
+      {
+        "path": "vending_bp/scripts/main.js",
+        "sha256": "8c683e4723e9eb61e70b5598ed907ad6837caebbdc516860990e979172d9695b"
+      }
+    ],
+    "featureId": "vm:machine_shepherd",
+    "id": "vm:machine_shepherd/place",
+    "text": "Place on a floor with a completely empty block above. Machines can stand directly side-by-side or diagonally. The machine is two blocks tall. In Survival, mine the base to collect the machine; the upper half cannot be mined. Breaking and replacing it resets any trading progress and removes any installed upgrade. The recovered item places a base machine; train and upgrade it again after moving."
+  },
+  {
+    "evidence": [
+      {
+        "path": "docs/INTERACTIONS.md",
+        "sha256": "e28bf08703d625b577637f238568d3aa29d1ebe5b7cad737af781f4697f33560"
+      },
+      {
+        "path": "docs/VANILLA_PARITY.md",
+        "sha256": "c813881059d619969614498bde477acc55fe6bd11db7679dcec122050d99b302"
+      },
+      {
+        "path": "vending_villagers_bp/blocks/machine_shepherd.json",
+        "sha256": "8b6bd65572787787464fed1f50cab3073b6f912204c541f26f1f468fda9aa2b4"
+      },
+      {
+        "path": "vending_villagers_bp/entities/trader_shepherd.json",
+        "sha256": "c2de99aa43b84cead5022ca7fac16b5a0049e0f53a7621a715561958002d1644"
+      }
+    ],
+    "featureId": "vm:machine_shepherd",
+    "id": "vm:machine_shepherd/trade",
+    "text": "Stand to trade. Crouch and aim at the upper half to build against it; while flying in Creative, hold Sneak. Offers stay in stock; experience unlocks the machine’s higher trade tiers."
+  },
+  {
+    "evidence": [
+      {
+        "path": "docs/INTERACTIONS.md",
+        "sha256": "e28bf08703d625b577637f238568d3aa29d1ebe5b7cad737af781f4697f33560"
+      },
+      {
+        "path": "docs/VANILLA_PARITY.md",
+        "sha256": "c813881059d619969614498bde477acc55fe6bd11db7679dcec122050d99b302"
+      },
+      {
+        "path": "vending_villagers_bp/blocks/machine_shepherd.json",
+        "sha256": "8b6bd65572787787464fed1f50cab3073b6f912204c541f26f1f468fda9aa2b4"
+      },
+      {
+        "path": "vending_villagers_bp/entities/trader_shepherd.json",
+        "sha256": "c2de99aa43b84cead5022ca7fac16b5a0049e0f53a7621a715561958002d1644"
+      }
+    ],
+    "featureId": "vm:machine_shepherd",
+    "id": "vm:machine_shepherd/upgrade",
+    "text": "Use an Upgrade Kit on the base to improve its prices until the machine is broken. Survival consumes the kit once; using a kit on an already upgraded machine costs nothing."
+  },
+  {
+    "evidence": [
+      {
+        "path": "docs/INTERACTIONS.md",
+        "sha256": "e28bf08703d625b577637f238568d3aa29d1ebe5b7cad737af781f4697f33560"
+      },
+      {
+        "path": "docs/VANILLA_PARITY.md",
+        "sha256": "c813881059d619969614498bde477acc55fe6bd11db7679dcec122050d99b302"
+      },
+      {
+        "path": "vending_villagers_bp/blocks/machine_stone_mason.json",
+        "sha256": "a31a8ead2dd4161fb8d82efe7149bfa7cbce8cf7796fda2a306217c2bb1c22b6"
+      },
+      {
+        "path": "vending_villagers_bp/entities/trader_stone_mason.json",
+        "sha256": "e5484075c2751a2e79bb1ba91d5e701a063bb406ea5941207167c36542a32687"
+      },
+      {
+        "path": "vending_bp/scripts/main.js",
+        "sha256": "8c683e4723e9eb61e70b5598ed907ad6837caebbdc516860990e979172d9695b"
+      }
+    ],
+    "featureId": "vm:machine_stone_mason",
+    "id": "vm:machine_stone_mason/place",
+    "text": "Place on a floor with a completely empty block above. Machines can stand directly side-by-side or diagonally. The machine is two blocks tall. In Survival, mine the base to collect the machine; the upper half cannot be mined. Breaking and replacing it resets any trading progress and removes any installed upgrade. The recovered item places a base machine; train and upgrade it again after moving."
+  },
+  {
+    "evidence": [
+      {
+        "path": "docs/INTERACTIONS.md",
+        "sha256": "e28bf08703d625b577637f238568d3aa29d1ebe5b7cad737af781f4697f33560"
+      },
+      {
+        "path": "docs/VANILLA_PARITY.md",
+        "sha256": "c813881059d619969614498bde477acc55fe6bd11db7679dcec122050d99b302"
+      },
+      {
+        "path": "vending_villagers_bp/blocks/machine_stone_mason.json",
+        "sha256": "a31a8ead2dd4161fb8d82efe7149bfa7cbce8cf7796fda2a306217c2bb1c22b6"
+      },
+      {
+        "path": "vending_villagers_bp/entities/trader_stone_mason.json",
+        "sha256": "e5484075c2751a2e79bb1ba91d5e701a063bb406ea5941207167c36542a32687"
+      }
+    ],
+    "featureId": "vm:machine_stone_mason",
+    "id": "vm:machine_stone_mason/trade",
+    "text": "Stand to trade. Crouch and aim at the upper half to build against it; while flying in Creative, hold Sneak. Offers stay in stock; experience unlocks the machine’s higher trade tiers."
+  },
+  {
+    "evidence": [
+      {
+        "path": "docs/INTERACTIONS.md",
+        "sha256": "e28bf08703d625b577637f238568d3aa29d1ebe5b7cad737af781f4697f33560"
+      },
+      {
+        "path": "docs/VANILLA_PARITY.md",
+        "sha256": "c813881059d619969614498bde477acc55fe6bd11db7679dcec122050d99b302"
+      },
+      {
+        "path": "vending_villagers_bp/blocks/machine_stone_mason.json",
+        "sha256": "a31a8ead2dd4161fb8d82efe7149bfa7cbce8cf7796fda2a306217c2bb1c22b6"
+      },
+      {
+        "path": "vending_villagers_bp/entities/trader_stone_mason.json",
+        "sha256": "e5484075c2751a2e79bb1ba91d5e701a063bb406ea5941207167c36542a32687"
+      }
+    ],
+    "featureId": "vm:machine_stone_mason",
+    "id": "vm:machine_stone_mason/upgrade",
+    "text": "Use an Upgrade Kit on the base to improve its prices until the machine is broken. Survival consumes the kit once; using a kit on an already upgraded machine costs nothing."
+  },
+  {
+    "evidence": [
+      {
+        "path": "docs/INTERACTIONS.md",
+        "sha256": "e28bf08703d625b577637f238568d3aa29d1ebe5b7cad737af781f4697f33560"
+      },
+      {
+        "path": "docs/VANILLA_PARITY.md",
+        "sha256": "c813881059d619969614498bde477acc55fe6bd11db7679dcec122050d99b302"
+      },
+      {
+        "path": "vending_villagers_bp/blocks/machine_tool_smith.json",
+        "sha256": "dcbc5666ade3da93a2b983455ce23a52fc65afa1ec02dfba648071c3d34f2a6e"
+      },
+      {
+        "path": "vending_villagers_bp/entities/trader_tool_smith.json",
+        "sha256": "611daefa8989ab2eb6d29a45c31736fd80521b4f742b3da17abda37416697a75"
+      },
+      {
+        "path": "vending_bp/scripts/main.js",
+        "sha256": "8c683e4723e9eb61e70b5598ed907ad6837caebbdc516860990e979172d9695b"
+      }
+    ],
+    "featureId": "vm:machine_tool_smith",
+    "id": "vm:machine_tool_smith/place",
+    "text": "Place on a floor with a completely empty block above. Machines can stand directly side-by-side or diagonally. The machine is two blocks tall. In Survival, mine the base to collect the machine; the upper half cannot be mined. Breaking and replacing it resets any trading progress and removes any installed upgrade. The recovered item places a base machine; train and upgrade it again after moving."
+  },
+  {
+    "evidence": [
+      {
+        "path": "docs/INTERACTIONS.md",
+        "sha256": "e28bf08703d625b577637f238568d3aa29d1ebe5b7cad737af781f4697f33560"
+      },
+      {
+        "path": "docs/VANILLA_PARITY.md",
+        "sha256": "c813881059d619969614498bde477acc55fe6bd11db7679dcec122050d99b302"
+      },
+      {
+        "path": "vending_villagers_bp/blocks/machine_tool_smith.json",
+        "sha256": "dcbc5666ade3da93a2b983455ce23a52fc65afa1ec02dfba648071c3d34f2a6e"
+      },
+      {
+        "path": "vending_villagers_bp/entities/trader_tool_smith.json",
+        "sha256": "611daefa8989ab2eb6d29a45c31736fd80521b4f742b3da17abda37416697a75"
+      }
+    ],
+    "featureId": "vm:machine_tool_smith",
+    "id": "vm:machine_tool_smith/trade",
+    "text": "Stand to trade. Crouch and aim at the upper half to build against it; while flying in Creative, hold Sneak. Offers stay in stock; experience unlocks the machine’s higher trade tiers."
+  },
+  {
+    "evidence": [
+      {
+        "path": "docs/INTERACTIONS.md",
+        "sha256": "e28bf08703d625b577637f238568d3aa29d1ebe5b7cad737af781f4697f33560"
+      },
+      {
+        "path": "docs/VANILLA_PARITY.md",
+        "sha256": "c813881059d619969614498bde477acc55fe6bd11db7679dcec122050d99b302"
+      },
+      {
+        "path": "vending_villagers_bp/blocks/machine_tool_smith.json",
+        "sha256": "dcbc5666ade3da93a2b983455ce23a52fc65afa1ec02dfba648071c3d34f2a6e"
+      },
+      {
+        "path": "vending_villagers_bp/entities/trader_tool_smith.json",
+        "sha256": "611daefa8989ab2eb6d29a45c31736fd80521b4f742b3da17abda37416697a75"
+      }
+    ],
+    "featureId": "vm:machine_tool_smith",
+    "id": "vm:machine_tool_smith/upgrade",
+    "text": "Use an Upgrade Kit on the base to improve its prices until the machine is broken. Survival consumes the kit once; using a kit on an already upgraded machine costs nothing."
+  },
+  {
+    "evidence": [
+      {
+        "path": "docs/INTERACTIONS.md",
+        "sha256": "e28bf08703d625b577637f238568d3aa29d1ebe5b7cad737af781f4697f33560"
+      },
+      {
+        "path": "docs/VANILLA_PARITY.md",
+        "sha256": "c813881059d619969614498bde477acc55fe6bd11db7679dcec122050d99b302"
+      },
+      {
+        "path": "vending_villagers_bp/blocks/machine_weapon_smith.json",
+        "sha256": "0ae4e2290a17c454c933c6b874d4d4cc6090de937e3c2eb45673120496c4a233"
+      },
+      {
+        "path": "vending_villagers_bp/entities/trader_weapon_smith.json",
+        "sha256": "8740a3c424606951f237bbfcb75a2637104b12a7352e84121b260ba8ce1ac5b4"
+      },
+      {
+        "path": "vending_bp/scripts/main.js",
+        "sha256": "8c683e4723e9eb61e70b5598ed907ad6837caebbdc516860990e979172d9695b"
+      }
+    ],
+    "featureId": "vm:machine_weapon_smith",
+    "id": "vm:machine_weapon_smith/place",
+    "text": "Place on a floor with a completely empty block above. Machines can stand directly side-by-side or diagonally. The machine is two blocks tall. In Survival, mine the base to collect the machine; the upper half cannot be mined. Breaking and replacing it resets any trading progress and removes any installed upgrade. The recovered item places a base machine; train and upgrade it again after moving."
+  },
+  {
+    "evidence": [
+      {
+        "path": "docs/INTERACTIONS.md",
+        "sha256": "e28bf08703d625b577637f238568d3aa29d1ebe5b7cad737af781f4697f33560"
+      },
+      {
+        "path": "docs/VANILLA_PARITY.md",
+        "sha256": "c813881059d619969614498bde477acc55fe6bd11db7679dcec122050d99b302"
+      },
+      {
+        "path": "vending_villagers_bp/blocks/machine_weapon_smith.json",
+        "sha256": "0ae4e2290a17c454c933c6b874d4d4cc6090de937e3c2eb45673120496c4a233"
+      },
+      {
+        "path": "vending_villagers_bp/entities/trader_weapon_smith.json",
+        "sha256": "8740a3c424606951f237bbfcb75a2637104b12a7352e84121b260ba8ce1ac5b4"
+      }
+    ],
+    "featureId": "vm:machine_weapon_smith",
+    "id": "vm:machine_weapon_smith/trade",
+    "text": "Stand to trade. Crouch and aim at the upper half to build against it; while flying in Creative, hold Sneak. Offers stay in stock; experience unlocks the machine’s higher trade tiers."
+  },
+  {
+    "evidence": [
+      {
+        "path": "docs/INTERACTIONS.md",
+        "sha256": "e28bf08703d625b577637f238568d3aa29d1ebe5b7cad737af781f4697f33560"
+      },
+      {
+        "path": "docs/VANILLA_PARITY.md",
+        "sha256": "c813881059d619969614498bde477acc55fe6bd11db7679dcec122050d99b302"
+      },
+      {
+        "path": "vending_villagers_bp/blocks/machine_weapon_smith.json",
+        "sha256": "0ae4e2290a17c454c933c6b874d4d4cc6090de937e3c2eb45673120496c4a233"
+      },
+      {
+        "path": "vending_villagers_bp/entities/trader_weapon_smith.json",
+        "sha256": "8740a3c424606951f237bbfcb75a2637104b12a7352e84121b260ba8ce1ac5b4"
+      }
+    ],
+    "featureId": "vm:machine_weapon_smith",
+    "id": "vm:machine_weapon_smith/upgrade",
+    "text": "Use an Upgrade Kit on the base to improve its prices until the machine is broken. Survival consumes the kit once; using a kit on an already upgraded machine costs nothing."
+  },
+  {
+    "evidence": [
+      {
+        "path": "docs/INTERACTIONS.md",
+        "sha256": "e28bf08703d625b577637f238568d3aa29d1ebe5b7cad737af781f4697f33560"
+      },
+      {
+        "path": "docs/VANILLA_PARITY.md",
+        "sha256": "c813881059d619969614498bde477acc55fe6bd11db7679dcec122050d99b302"
+      },
+      {
+        "path": "vending_wandering_bp/blocks/machine_wandering_trader.json",
+        "sha256": "6072095620b167b9be84d0121b800c650f4728e1f6b71c6ec368af55c1e42ae9"
+      },
+      {
+        "path": "vending_wandering_bp/entities/trader_wandering_trader.json",
+        "sha256": "6cefa830011395c573bee260168e86e5cd27ed0d2cd1053909bd9254df78fe77"
+      },
+      {
+        "path": "vending_bp/scripts/main.js",
+        "sha256": "8c683e4723e9eb61e70b5598ed907ad6837caebbdc516860990e979172d9695b"
+      }
+    ],
+    "featureId": "vm:machine_wandering_trader",
+    "id": "vm:machine_wandering_trader/place",
+    "text": "Place on a floor with a completely empty block above. Machines can stand directly side-by-side or diagonally. The machine is two blocks tall. In Survival, mine the base to collect the machine; the upper half cannot be mined. Breaking and replacing it resets any trading progress and removes any installed upgrade. The recovered item places a base machine; train and upgrade it again after moving."
+  },
+  {
+    "evidence": [
+      {
+        "path": "docs/INTERACTIONS.md",
+        "sha256": "e28bf08703d625b577637f238568d3aa29d1ebe5b7cad737af781f4697f33560"
+      },
+      {
+        "path": "docs/VANILLA_PARITY.md",
+        "sha256": "c813881059d619969614498bde477acc55fe6bd11db7679dcec122050d99b302"
+      },
+      {
+        "path": "vending_wandering_bp/blocks/machine_wandering_trader.json",
+        "sha256": "6072095620b167b9be84d0121b800c650f4728e1f6b71c6ec368af55c1e42ae9"
+      },
+      {
+        "path": "vending_wandering_bp/entities/trader_wandering_trader.json",
+        "sha256": "6cefa830011395c573bee260168e86e5cd27ed0d2cd1053909bd9254df78fe77"
+      }
+    ],
+    "featureId": "vm:machine_wandering_trader",
+    "id": "vm:machine_wandering_trader/trade",
+    "text": "Stand to trade. Crouch and aim at the upper half to build against it; while flying in Creative, hold Sneak. Offers stay in stock; experience unlocks the machine’s higher trade tiers."
+  },
+  {
+    "evidence": [
+      {
+        "path": "docs/INTERACTIONS.md",
+        "sha256": "e28bf08703d625b577637f238568d3aa29d1ebe5b7cad737af781f4697f33560"
+      },
+      {
+        "path": "docs/VANILLA_PARITY.md",
+        "sha256": "c813881059d619969614498bde477acc55fe6bd11db7679dcec122050d99b302"
+      },
+      {
+        "path": "vending_wandering_bp/blocks/machine_wandering_trader.json",
+        "sha256": "6072095620b167b9be84d0121b800c650f4728e1f6b71c6ec368af55c1e42ae9"
+      },
+      {
+        "path": "vending_wandering_bp/entities/trader_wandering_trader.json",
+        "sha256": "6cefa830011395c573bee260168e86e5cd27ed0d2cd1053909bd9254df78fe77"
+      }
+    ],
+    "featureId": "vm:machine_wandering_trader",
+    "id": "vm:machine_wandering_trader/upgrade",
+    "text": "Use an Upgrade Kit on the base to improve its prices until the machine is broken. Survival consumes the kit once; using a kit on an already upgraded machine costs nothing."
+  }
+]

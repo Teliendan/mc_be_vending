@@ -3,7 +3,7 @@ import { readFile, readdir } from "node:fs/promises";
 import test from "node:test";
 
 const source = await readFile(new URL("../vending_bp/scripts/build_mode.js", import.meta.url), "utf8");
-const { createBuildModeController, rayBoxEntry } = await import(`data:text/javascript;base64,${Buffer.from(source).toString("base64")}`);
+const { createBuildModeController, rayBoxEntry, hasSneakIntent } = await import(`data:text/javascript;base64,${Buffer.from(source).toString("base64")}`);
 
 function scene() {
     const dimensions = { id: "minecraft:overworld", getEntities: () => [trader], getBlock: () => head };
@@ -20,6 +20,7 @@ function scene() {
     const trader = { typeId: "vm:trader_farmer", isValid: true, dimension: dimensions, location: { x: 0.5, y: 1, z: 0.5 } };
     const player = {
         isValid: true, isSneaking: true, dimension: dimensions,
+        inputInfo: { getButtonState: () => "Released" },
         direction: { x: 0, y: 0, z: 1 }, obstruction: undefined,
         getHeadLocation: () => ({ x: 0.5, y: 1.5, z: -2 }),
         getViewDirection() { return this.direction; },
@@ -65,6 +66,28 @@ test("crouching exposes the head; standing restores trade and preserves upgrade"
     assert.equal(s.head.permutation.getState("vm:upgraded"), true);
     s.player.isSneaking = false; s.controller.update();
     assert.equal(enabled(s), false);
+});
+
+test("Creative flight Sneak input opens building without crouch posture, then releases", () => {
+    const s = scene();
+    s.player.isSneaking = false;
+    s.player.getGameMode = () => "Creative";
+    s.player.inputInfo = { getButtonState: button => {
+        assert.equal(button, "Sneak");
+        return "Pressed";
+    } };
+    s.controller.update();
+    assert.equal(enabled(s), true);
+    s.player.inputInfo.getButtonState = () => "Released";
+    s.controller.update();
+    assert.equal(enabled(s), false);
+});
+
+test("grounded or touch-toggle crouch remains building after the raw button releases", () => {
+    for (const mode of ["Survival", "Creative"]) {
+        assert.equal(hasSneakIntent({isSneaking: true, getGameMode: () => mode,
+            inputInfo: {getButtonState: () => "Released"}}), true);
+    }
 });
 
 test("mode stays open when native raycast starts hitting the selectable head", () => {

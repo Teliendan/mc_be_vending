@@ -5,6 +5,13 @@ const MACHINE = "vm:machine_";
 const TRADER = "vm:trader_";
 const REACH = 6;
 
+// Creative flight can use the Sneak control to descend without the ordinary
+// crouching posture. Keep posture for touch/toggle controls and read the input
+// as well so the same control bypasses trading while flying.
+export function hasSneakIntent(player) {
+    return player.isSneaking || player.inputInfo.getButtonState("Sneak") === "Pressed";
+}
+
 function loadedBlock(dimension, location) {
     try {
         return dimension.getBlock(location);
@@ -97,7 +104,7 @@ export function createBuildModeController(world) {
                 const head = aimedHead(player);
                 if (!head) continue;
                 const key = headKey(head);
-                if (player.isSneaking) desired.set(key, head);
+                if (hasSneakIntent(player)) desired.set(key, head);
                 else trading.add(key);
             }
             // Selection boxes are shared world state. A standing player aiming
