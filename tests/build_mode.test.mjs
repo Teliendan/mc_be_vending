@@ -148,3 +148,13 @@ test("a base or mismatched trader is never made selectable as a head", () => {
     s.trader.typeId = "vm:trader_butcher";
     s.controller.update(); assert.equal(s.head.writes, 0);
 });
+
+test("with nobody crouching no player runs the entity query", () => {
+    const s = scene();
+    s.player.isSneaking = false;
+    let queries = 0;
+    s.player.dimension.getEntities = () => { queries++; return [s.trader]; };
+    s.controller.update(); s.controller.update();
+    assert.equal(queries, 0);
+    assert.equal(enabled(s), false);
+});

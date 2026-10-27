@@ -168,6 +168,7 @@ function removeMachine(dimension, location, oldPermutation, { dropBase = false }
 }
 
 world.afterEvents.playerBreakBlock.subscribe((e) => {
+    if (!e.brokenBlockPermutation.type.id.startsWith(BLOCK_PREFIX)) return;
     removeMachine(e.dimension, e.block.location, e.brokenBlockPermutation, {
         dropBase: e.player.getGameMode() !== "Creative",
     });

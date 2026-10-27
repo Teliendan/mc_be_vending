@@ -98,18 +98,23 @@ export function createBuildModeController(world) {
         },
         update() {
             const desired = new Map();
-            const trading = new Set();
+            const standing = [];
             for (const player of world.getAllPlayers()) {
                 if (!player.isValid) continue;
+                if (!hasSneakIntent(player)) { standing.push(player); continue; }
                 const head = aimedHead(player);
-                if (!head) continue;
-                const key = headKey(head);
-                if (hasSneakIntent(player)) desired.set(key, head);
-                else trading.add(key);
+                if (head) desired.set(headKey(head), head);
             }
             // Selection boxes are shared world state. A standing player aiming
             // at the same head keeps trade access; building resumes afterwards.
-            for (const key of trading) desired.delete(key);
+            // Standing aim matters only for a head a builder wants, so with
+            // nobody crouching no player runs the entity query.
+            if (desired.size) {
+                for (const player of standing) {
+                    const head = aimedHead(player);
+                    if (head) desired.delete(headKey(head));
+                }
+            }
             for (const [key, previous] of active) {
                 if (desired.has(key)) continue;
                 const block = loadedBlock(previous.dimension, previous.location);
