@@ -25,6 +25,10 @@
     {
       "pattern": "vending_bp/scripts/messages.js",
       "featureId": "vm:upgrade_kit"
+    },
+    {
+      "pattern": "vending_bp/scripts/message_helper.js",
+      "featureId": "vm:upgrade_kit"
     }
   ],
   "ruleValues": []
