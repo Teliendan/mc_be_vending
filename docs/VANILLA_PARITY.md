@@ -75,7 +75,7 @@ ships binary) is read from Mojang's bedrock-samples JSON
 old launcher install, both only if item IDs equal the binary's, else an older slice
 (FALLBACK: missing trades); a NEW enchantment is sold at level 1 on tier 4 until `enchantments.json`
 gets its values. `node tests/run.mjs --suite catalogs` checks the shipped tables
-equal the generator output.
+equal the generator output; `--suite generated` does the same for every generated pack file (`tools/build.py`).
 
 ## Owner decisions
 

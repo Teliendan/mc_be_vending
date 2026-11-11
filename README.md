@@ -24,6 +24,11 @@ See [interaction notes](docs/INTERACTIONS.md) for implementation and test status
 
 Run from anywhere; generators locate packs relative to this repo.
 
+`python tools/build.py` runs the six JSON generators in the one order that works
+(`--art` adds the texture and pack icon generators); suite `generated` checks that this
+reproduces the shipped files exactly. Run single generators only for a quick look:
+the shared RP files are wrong until the whole order has run.
+
 - `gen_trade_tables.py` - every trade table (13 villagers, wandering trader, shulker;
   basic + `_cured`/upgraded) from the installed game. Without `--write` it only prints
   what would change. See "How to update trades" in [docs/VANILLA_PARITY.md](docs/VANILLA_PARITY.md).
@@ -33,7 +38,7 @@ Run from anywhere; generators locate packs relative to this repo.
   13 villager machines (blocks carry the `vm:upgraded` state for the Upgrade Kit).
 - `gen_machine_models.py` - their RP side: the empty trader model, client entities,
   `blocks.json`, atlases and lang. It rewrites those shared files with the villager
-  entries only, so run `gen_extra_machines.py` after it.
+  entries only; `build.py` runs `gen_extra_machines.py` after it.
 - `gen_extra_machines.py` - the non-villager feature packs (wandering trader, shulker),
   built from the villager templates; a new feature is an entry in its MACHINES.
   `--blocks-only` refreshes block definitions only.
