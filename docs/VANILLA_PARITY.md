@@ -104,3 +104,15 @@ equal the generator output; `--suite generated` does the same for every generate
 - `/setblock` a machine's head to air, leave and re-enter: the trader is gone.
 - New offers: suspicious stew 0-5, bed/banner colours, librarian candles and the four new books.
 - Controlled strong blast on a machine vs an iron door: drops match one item.
+
+## Bedrock 26.60 impact (2026-10-27, documented only)
+
+Source review against the 26.60 changelog and API 2.11.0 / 2.12.0-beta declarations; nothing tested in game.
+
+- Verdict: no break. Traders are entity format 1.13.0 and machines block format 1.26.50 (no `collision_box`), so the 26.60 schema tightening does not apply; nothing the script uses was removed from the API.
+- Native `minecraft:multi_block` redesign (with `Block.getParts()`, stable trait): deferred, owner decision. It could replace the manual head placement/removal in `main.js` but needs migration from `vm:half`, item and loot changes and in-game tests.
+- Crouch-placement workaround (`workarounds.md` row 13) is still needed: no native entity-to-block passthrough or per-player selection box in 2.11.0 or 2.12.0-beta; `playerItemAttackEntity` is attack only; `entity_storage` removes the stored trader from the world, so it cannot host a tradeable trader.
+- Deferred: `entityStartSneaking`/`entityStopSneaking` (stable 2.11.0) could gate the build-mode loop, but `hasSneakIntent` also reads the raw Sneak button for Creative flight; wait. Re-check the single-object `selection_box` permutation (`tools/gen_machine_blocks.py`) before any bump to block format 1.26.60.
+- Optional cleanup, owner's call: `vending_bp/manifest.json` declares `@minecraft/server-ui` 2.1.0 but no script imports it.
+- MCPE-167218 (sneaking persists in water) keeps the head selectable in build mode while touching water; desired.
+- Owner checks on 26.60: smoke test (place, trade, upgrade, crouch-place a torch, break); crouch in water while aiming at a head; the pending Creative crouch-build checks in `TODO.md`.
