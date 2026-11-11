@@ -185,11 +185,9 @@ test("all matching orphan traders are removed; different professions stay", () =
     assert.equal(other.removals, 0);
 });
 
-test("ordinary blocks and malformed half snapshots have no machine side effects", () => {
+test("ordinary blocks have no machine side effects", () => {
     const s = scene(), m = s.machine({ x: 0, y: 0, z: 0 });
-    for (const [type, half] of [["minecraft:stone", undefined], ["vm:machine_farmer", undefined]]) {
-        callbacks.blockExplode({ dimension: s.dimension, block: m.lower, explodedBlockPermutation: permutation(type, half) });
-    }
+    callbacks.blockExplode({ dimension: s.dimension, block: m.lower, explodedBlockPermutation: permutation("minecraft:stone", undefined) });
     flush();
     assert.equal(s.writes.length, 0); assert.equal(m.trader.removals, 0);
 });

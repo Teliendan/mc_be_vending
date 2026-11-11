@@ -24,7 +24,7 @@ const buildMode = createBuildModeController(world);
 world.afterEvents.worldLoad.subscribe(() => {
     for (const id of ["overworld", "nether", "the_end"]) {
         for (const trader of world.getDimension(id).getEntities()) {
-            if (trader.isValid && trader.typeId.startsWith(TRADER_PREFIX)) buildMode.resetTrader(trader);
+            if (trader.typeId.startsWith(TRADER_PREFIX)) buildMode.resetTrader(trader);
         }
     }
     system.runInterval(() => buildMode.update(), 1);
@@ -140,7 +140,6 @@ function removeMachine(dimension, location, oldPermutation, { dropBase = false }
     const typeId = oldPermutation.type.id;
     if (!typeId.startsWith(BLOCK_PREFIX)) return;
     const half = oldPermutation.getState("vm:half");
-    if (half !== 0 && half !== 1) return;
     const base = { location: { ...location, y: location.y - half } };
     const counterpartLocation = { ...location, y: location.y + (half === 0 ? 1 : -1) };
     try {
@@ -163,7 +162,7 @@ function removeMachine(dimension, location, oldPermutation, { dropBase = false }
         if (error.name !== "LocationInUnloadedChunkError" && error.name !== "LocationOutOfWorldBoundariesError") throw error;
     }
     for (const trader of tradersAt(dimension, base, professionOf(typeId))) {
-        if (trader.isValid) trader.remove();
+        trader.remove();
     }
 }
 

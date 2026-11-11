@@ -56,7 +56,7 @@ export function aimedHead(player) {
     // Test the whole head, including its edges, while it is unselectable. This
     // also works once its full selection box hides the small trader hitbox.
     for (const trader of player.dimension.getEntities({ location: origin, maxDistance: REACH + 2 })) {
-        if (!trader.isValid || !trader.typeId.startsWith(TRADER)) continue;
+        if (!trader.typeId.startsWith(TRADER)) continue;
         const head = traderHead(trader);
         if (!head) continue;
         const distance = rayBoxEntry(origin, direction, head.location);
@@ -100,7 +100,6 @@ export function createBuildModeController(world) {
             const desired = new Map();
             const standing = [];
             for (const player of world.getAllPlayers()) {
-                if (!player.isValid) continue;
                 if (!hasSneakIntent(player)) { standing.push(player); continue; }
                 const head = aimedHead(player);
                 if (head) desired.set(headKey(head), head);
