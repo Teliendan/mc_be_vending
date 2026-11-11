@@ -69,8 +69,6 @@ world.afterEvents.entityLoad.subscribe(({ entity }) => {
     }
     hideShadow(entity);
     buildMode.resetTrader(entity);
-    // Machines upgraded before the block had a vm:upgraded state catch up here.
-    if (entity.getDynamicProperty("vm:upgraded") === true) showUpgraded(head);
 });
 
 // The upgraded look (gold + emerald corners) is a block state on both halves.
@@ -204,14 +202,12 @@ system.beforeEvents.startup.subscribe((init) => {
             const trader = tradersAt(block.dimension, block, professionOf(block.typeId))[0];
             if (!trader) return;
 
-            if (trader.getDynamicProperty("vm:upgraded") === true) {
-                showUpgraded(head);
+            if (block.permutation.getState("vm:upgraded") === true) {
                 player.sendMessage(message("upgraded"));
                 return;
             }
 
             trader.triggerEvent("vm:apply_upgrade");
-            trader.setDynamicProperty("vm:upgraded", true);
             // The kit is the used item; it does not stack and has no off-hand use.
             if (player.getGameMode() !== "Creative") player.getComponent("minecraft:equippable").setEquipment("Mainhand");
             showUpgraded(head);

@@ -41,12 +41,12 @@ stored stock (no hopper/comparator/chest logic). Spawn eggs hidden
 is re-applied on every load.
 
 - Upgrade Kit (stack 1): use on the base. The item callback is privileged, so the
-  upgrade (`vm:apply_upgrade`, dynamic property, `vm:upgraded` block state on both
+  upgrade (`vm:apply_upgrade`, `vm:upgraded` block state on both
   halves) and the Survival payment happen in that callback. Creative keeps the kit;
-  an already-upgraded machine costs nothing.
+  an already-upgraded machine (base block state `vm:upgraded`) costs nothing.
 - On `entityLoad` a trader whose head block is not its own machine is removed
-  (orphan); otherwise its shadow and build mode are reset and an old upgrade's
-  block state is restored.
+  (orphan); otherwise its shadow and build mode are reset. No pre-1.0.0 catch-up
+  (owner 2026-11-11: no such worlds matter).
 
 ## Trades
 
