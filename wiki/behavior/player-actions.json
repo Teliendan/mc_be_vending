@@ -15,11 +15,11 @@
       },
       {
         "path": "vending_bp/scripts/build_mode.js",
-        "sha256": "8778c98043b3b7d8ff5fcb1a2553eac7a14f260f7040fa7066dcf227dd025c24"
+        "sha256": "8cd8993642fd75d73a795f1526707e806f200f7350f302963c1c6d22442cbaa1"
       },
       {
         "path": "vending_bp/scripts/main.js",
-        "sha256": "8c683e4723e9eb61e70b5598ed907ad6837caebbdc516860990e979172d9695b"
+        "sha256": "3c5371f7b5da8254e717d204424a2c452faaa5e76bcb108a0b58ed944815bd66"
       },
       {
         "path": "vending_bp/scripts/messages.js",
@@ -69,7 +69,7 @@
       },
       {
         "path": "vending_bp/scripts/main.js",
-        "sha256": "8c683e4723e9eb61e70b5598ed907ad6837caebbdc516860990e979172d9695b"
+        "sha256": "3c5371f7b5da8254e717d204424a2c452faaa5e76bcb108a0b58ed944815bd66"
       }
     ],
     "featureId": "vm:machine_shulker",
@@ -142,7 +142,7 @@
       },
       {
         "path": "vending_bp/scripts/main.js",
-        "sha256": "8c683e4723e9eb61e70b5598ed907ad6837caebbdc516860990e979172d9695b"
+        "sha256": "3c5371f7b5da8254e717d204424a2c452faaa5e76bcb108a0b58ed944815bd66"
       }
     ],
     "featureId": "vm:machine_armorer",
@@ -215,7 +215,7 @@
       },
       {
         "path": "vending_bp/scripts/main.js",
-        "sha256": "8c683e4723e9eb61e70b5598ed907ad6837caebbdc516860990e979172d9695b"
+        "sha256": "3c5371f7b5da8254e717d204424a2c452faaa5e76bcb108a0b58ed944815bd66"
       }
     ],
     "featureId": "vm:machine_butcher",
@@ -288,7 +288,7 @@
       },
       {
         "path": "vending_bp/scripts/main.js",
-        "sha256": "8c683e4723e9eb61e70b5598ed907ad6837caebbdc516860990e979172d9695b"
+        "sha256": "3c5371f7b5da8254e717d204424a2c452faaa5e76bcb108a0b58ed944815bd66"
       }
     ],
     "featureId": "vm:machine_cartographer",
@@ -361,7 +361,7 @@
       },
       {
         "path": "vending_bp/scripts/main.js",
-        "sha256": "8c683e4723e9eb61e70b5598ed907ad6837caebbdc516860990e979172d9695b"
+        "sha256": "3c5371f7b5da8254e717d204424a2c452faaa5e76bcb108a0b58ed944815bd66"
       }
     ],
     "featureId": "vm:machine_cleric",
@@ -434,7 +434,7 @@
       },
       {
         "path": "vending_bp/scripts/main.js",
-        "sha256": "8c683e4723e9eb61e70b5598ed907ad6837caebbdc516860990e979172d9695b"
+        "sha256": "3c5371f7b5da8254e717d204424a2c452faaa5e76bcb108a0b58ed944815bd66"
       }
     ],
     "featureId": "vm:machine_farmer",
@@ -507,7 +507,7 @@
       },
       {
         "path": "vending_bp/scripts/main.js",
-        "sha256": "8c683e4723e9eb61e70b5598ed907ad6837caebbdc516860990e979172d9695b"
+        "sha256": "3c5371f7b5da8254e717d204424a2c452faaa5e76bcb108a0b58ed944815bd66"
       }
     ],
     "featureId": "vm:machine_fisherman",
@@ -580,7 +580,7 @@
       },
       {
         "path": "vending_bp/scripts/main.js",
-        "sha256": "8c683e4723e9eb61e70b5598ed907ad6837caebbdc516860990e979172d9695b"
+        "sha256": "3c5371f7b5da8254e717d204424a2c452faaa5e76bcb108a0b58ed944815bd66"
       }
     ],
     "featureId": "vm:machine_fletcher",
@@ -653,7 +653,7 @@
       },
       {
         "path": "vending_bp/scripts/main.js",
-        "sha256": "8c683e4723e9eb61e70b5598ed907ad6837caebbdc516860990e979172d9695b"
+        "sha256": "3c5371f7b5da8254e717d204424a2c452faaa5e76bcb108a0b58ed944815bd66"
       }
     ],
     "featureId": "vm:machine_leather_worker",
@@ -726,7 +726,7 @@
       },
       {
         "path": "vending_bp/scripts/main.js",
-        "sha256": "8c683e4723e9eb61e70b5598ed907ad6837caebbdc516860990e979172d9695b"
+        "sha256": "3c5371f7b5da8254e717d204424a2c452faaa5e76bcb108a0b58ed944815bd66"
       }
     ],
     "featureId": "vm:machine_librarian",
@@ -799,7 +799,7 @@
       },
       {
         "path": "vending_bp/scripts/main.js",
-        "sha256": "8c683e4723e9eb61e70b5598ed907ad6837caebbdc516860990e979172d9695b"
+        "sha256": "3c5371f7b5da8254e717d204424a2c452faaa5e76bcb108a0b58ed944815bd66"
       }
     ],
     "featureId": "vm:machine_shepherd",
@@ -872,7 +872,7 @@
       },
       {
         "path": "vending_bp/scripts/main.js",
-        "sha256": "8c683e4723e9eb61e70b5598ed907ad6837caebbdc516860990e979172d9695b"
+        "sha256": "3c5371f7b5da8254e717d204424a2c452faaa5e76bcb108a0b58ed944815bd66"
       }
     ],
     "featureId": "vm:machine_stone_mason",
@@ -945,7 +945,7 @@
       },
       {
         "path": "vending_bp/scripts/main.js",
-        "sha256": "8c683e4723e9eb61e70b5598ed907ad6837caebbdc516860990e979172d9695b"
+        "sha256": "3c5371f7b5da8254e717d204424a2c452faaa5e76bcb108a0b58ed944815bd66"
       }
     ],
     "featureId": "vm:machine_tool_smith",
@@ -1018,7 +1018,7 @@
       },
       {
         "path": "vending_bp/scripts/main.js",
-        "sha256": "8c683e4723e9eb61e70b5598ed907ad6837caebbdc516860990e979172d9695b"
+        "sha256": "3c5371f7b5da8254e717d204424a2c452faaa5e76bcb108a0b58ed944815bd66"
       }
     ],
     "featureId": "vm:machine_weapon_smith",
@@ -1091,7 +1091,7 @@
       },
       {
         "path": "vending_bp/scripts/main.js",
-        "sha256": "8c683e4723e9eb61e70b5598ed907ad6837caebbdc516860990e979172d9695b"
+        "sha256": "3c5371f7b5da8254e717d204424a2c452faaa5e76bcb108a0b58ed944815bd66"
       }
     ],
     "featureId": "vm:machine_wandering_trader",
