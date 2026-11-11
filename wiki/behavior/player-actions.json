@@ -23,7 +23,7 @@
       },
       {
         "path": "vending_bp/scripts/messages.js",
-        "sha256": "e6e55916854cdf8123f15a08a069e04d89b128c49a0ae1cf03f32228df5dd66f"
+        "sha256": "a361f1c58ce7ca86f86c9e0d6f07ede4402c47e54bdb7cb701067b53b31a0ad9"
       }
     ],
     "featureId": "vm:upgrade_kit",
