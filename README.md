@@ -14,6 +14,7 @@ Packs - one Core plus one data-only pack per feature, all sharing `vending_rp/`:
 
 A new feature = a new small BP depending on Core + an entry in `tools/gen_extra_machines.py`.
 Deploy with `mods deploy vending`.
+Download the add-on from the repo's GitHub Releases page, https://github.com/Teliendan/mc_be_vending/releases, or build it locally with `.\mods package vending` from the workspace root.
 
 Crouch and aim at the upper block to place blocks or attach torches using native
 Minecraft placement. Stand up to trade. If a standing player aims at the same
