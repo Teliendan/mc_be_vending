@@ -18,3 +18,7 @@ Details: [test feedback](TEST_FEEDBACK_2026-10-25.md).
 Owner follow-up accepted the remaining original checks; new-offer coverage is no longer
 listed as outstanding. The Creative crouch-build follow-up and placement fixes still
 need their targeted post-fix engine check.
+
+## Feature ideas
+
+- Machine for peaceful mode - sell drops that are hard to obtain without mobs.
