@@ -8,6 +8,11 @@
       "is_experimental": false
     },
     "components": {
+      "minecraft:type_family": {
+        "family": [
+          "vm_trader"
+        ]
+      },
       "minecraft:collision_box": {
         "width": 0.9,
         "height": 0.9

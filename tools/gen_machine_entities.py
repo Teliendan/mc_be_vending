@@ -56,8 +56,10 @@ def build_entity(profession):
     }
 
     # Small collision box, no physics (it hangs motionless inside the block), immovable by
-    # attacks and pistons, immune to damage. No type_family: it would draw mob aggro.
+    # attacks and pistons, immune to damage. Private type_family vm_trader (owner 2026-11-11): lets entity
+    # queries filter in the engine; vanilla mobs target only named families.
     components = {
+        "minecraft:type_family": {"family": ["vm_trader"]},
         "minecraft:collision_box": {"width": 0.9, "height": 0.9},
         "minecraft:pushable": {
             "is_pushable": False,

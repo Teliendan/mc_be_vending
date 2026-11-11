@@ -6,7 +6,7 @@ const source = await readFile(new URL("../vending_bp/scripts/build_mode.js", imp
 const { createBuildModeController, rayBoxEntry, hasSneakIntent } = await import(`data:text/javascript;base64,${Buffer.from(source).toString("base64")}`);
 
 function scene() {
-    const dimensions = { id: "minecraft:overworld", getEntities: () => [trader], getBlock: () => head };
+    const dimensions = { id: "minecraft:overworld", getEntities: (query) => { dimensions.queries.push(query); return query?.families?.includes("vm_trader") ? [trader] : []; }, queries: [], getBlock: () => head };
     const permutation = (states) => ({
         getState: (name) => states[name],
         withState: (name, value) => permutation({ ...states, [name]: value }),
@@ -147,6 +147,13 @@ test("a base or mismatched trader is never made selectable as a head", () => {
     s.head.permutation = s.head.permutation.withState("vm:half", 1);
     s.trader.typeId = "vm:trader_butcher";
     s.controller.update(); assert.equal(s.head.writes, 0);
+});
+
+test("the aim query filters on the private trader family in the engine", () => {
+    const s = scene();
+    s.controller.update();
+    assert.ok(s.player.dimension.queries.length > 0);
+    for (const query of s.player.dimension.queries) assert.deepEqual(query.families, ["vm_trader"]);
 });
 
 test("with nobody crouching no player runs the entity query", () => {

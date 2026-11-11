@@ -19,13 +19,12 @@ import { createBuildModeController, hasSneakIntent } from "./build_mode.js";
 
 const BLOCK_PREFIX = "vm:machine_";
 const TRADER_PREFIX = "vm:trader_";
+const TRADER_FAMILY = "vm_trader";
 const buildMode = createBuildModeController(world);
 
 world.afterEvents.worldLoad.subscribe(() => {
     for (const id of ["overworld", "nether", "the_end"]) {
-        for (const trader of world.getDimension(id).getEntities()) {
-            if (trader.typeId.startsWith(TRADER_PREFIX)) buildMode.resetTrader(trader);
-        }
+        for (const trader of world.getDimension(id).getEntities({ families: [TRADER_FAMILY] })) buildMode.resetTrader(trader);
     }
     system.runInterval(() => buildMode.update(), 1);
 });

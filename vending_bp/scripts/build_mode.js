@@ -3,6 +3,7 @@
 // collision/attachment surface; Minecraft owns placement, orientation and costs.
 const MACHINE = "vm:machine_";
 const TRADER = "vm:trader_";
+const FAMILY = "vm_trader";
 const REACH = 6;
 
 // Creative flight can use the Sneak control to descend without the ordinary
@@ -55,8 +56,7 @@ export function aimedHead(player) {
     let nearestDistance = REACH + 1;
     // Test the whole head, including its edges, while it is unselectable. This
     // also works once its full selection box hides the small trader hitbox.
-    for (const trader of player.dimension.getEntities({ location: origin, maxDistance: REACH + 2 })) {
-        if (!trader.typeId.startsWith(TRADER)) continue;
+    for (const trader of player.dimension.getEntities({ location: origin, maxDistance: REACH + 2, families: [FAMILY] })) {
         const head = traderHead(trader);
         if (!head) continue;
         const distance = rayBoxEntry(origin, direction, head.location);

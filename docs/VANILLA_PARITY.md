@@ -35,7 +35,7 @@ ownership, villager for trading. All 15 machines share `gen_machine_blocks.py`;
 ## Trader and upgrade
 
 The trader (`vm:trader_<profession>`) is an invisible, persistent, damage-immune
-exchange fixture: no families, no biological villager/shulker behaviour, no
+exchange fixture: only the private `vm_trader` family (owner 2026-11-11), no biological villager/shulker behaviour, no
 stored stock (no hopper/comparator/chest logic). Spawn eggs hidden
 (`is_spawnable:false`, still summonable). Invisibility removes the mob shadow and
 is re-applied on every load.
