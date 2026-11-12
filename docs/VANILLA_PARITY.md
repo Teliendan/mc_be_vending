@@ -27,10 +27,11 @@ ownership, villager for trading. All 15 machines share `gen_machine_blocks.py`;
   side-by-side or diagonally; a neighbouring machine's invisible trader never blocks placement.
 - Loot: only the base drops one machine item (native `explosion_decay`); the head
   has an empty table. Breaking either half removes the other half and the trader.
-  If only the head is lost, the base is removed with `setblock ... destroy`
-  (support-loss drop). Creative breaks drop nothing. Blast cleanup runs one tick
-  later (`system.run`) with captured position/permutation so native blast
-  destruction of the base happens first.
+  Cleanup runs from the block's `onBreak` for every destruction (player, explosion,
+  `setblock`/`fill ... destroy`), one tick later (`system.run`) with the captured
+  position and permutation, so native destruction of the other half happens first.
+  Head lost to anything but a (Creative) player: the base drops as a support-loss drop
+  (`setblock ... destroy`), like a vanilla door. Creative breaks drop nothing.
 
 ## Trader and upgrade
 
@@ -94,7 +95,7 @@ equal the generator output; `--suite generated` does the same for every generate
 - Basic wandering 1-emerald buybacks pay the same as upgraded (minimum 1).
 - Leather armour is sold undyed: trade tables have no fixed-colour function, only `random_dye`.
 - Gear vanilla enchants at random (`enchant_with_levels`, 17 offers) keeps a random enchantment per purchase.
-- Commands/structures that place or clear blocks bypass the pair logic; an actorless machine is not repaired.
+- Commands without `destroy` mode, `/clone` and structures that place or clear blocks bypass the pair logic; an actorless machine is not repaired.
 
 ## In-game checks still worth doing
 
@@ -104,6 +105,7 @@ equal the generator output; `--suite generated` does the same for every generate
 - `/setblock` a machine's head to air, leave and re-enter: the trader is gone.
 - New offers: suspicious stew 0-5, bed/banner colours, librarian candles and the four new books.
 - Controlled strong blast on a machine vs an iron door: drops match one item.
+- VD-01 (`onBreak`, offline only until checked): V-1 Survival mine base: one item, head and trader gone. V-2 Creative break head or base: gone, no item (an item means `entitySource` is not the player). V-3 `/setblock <head|base> air destroy`: one item, rest gone. V-4 `/fill` over both halves `air destroy`: one item, trader gone. V-5 plain `/setblock <head> air`: base stays, trader gone after re-entering. No content-log script error.
 
 ## Bedrock 26.60 impact (2026-10-27, documented only)
 

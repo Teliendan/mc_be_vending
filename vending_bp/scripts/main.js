@@ -132,10 +132,9 @@ world.afterEvents.playerPlaceBlock.subscribe(({ block }) => {
     hideShadow(block.dimension.spawnEntity(TRADER_PREFIX + professionOf(block.typeId), traderSpot(block)));
 });
 
-// --- destruction: either half can be destroyed by Creative or an explosion --
-function removeMachine(dimension, location, oldPermutation, { dropBase = false } = {}) {
+// --- destruction: the block's onBreak, deferred one tick --------------------
+function removeMachine(dimension, location, oldPermutation, { dropBase }) {
     const typeId = oldPermutation.type.id;
-    if (!typeId.startsWith(BLOCK_PREFIX)) return;
     const half = oldPermutation.getState("vm:half");
     const base = { location: { ...location, y: location.y - half } };
     const counterpartLocation = { ...location, y: location.y + (half === 0 ? 1 : -1) };
@@ -163,31 +162,26 @@ function removeMachine(dimension, location, oldPermutation, { dropBase = false }
     }
 }
 
-world.afterEvents.playerBreakBlock.subscribe((e) => {
-    if (!e.brokenBlockPermutation.type.id.startsWith(BLOCK_PREFIX)) return;
-    removeMachine(e.dimension, e.block.location, e.brokenBlockPermutation, {
-        dropBase: e.player.getGameMode() !== "Creative",
-    });
-});
-world.afterEvents.blockExplode.subscribe((e) => {
-    const oldPermutation = e.explodedBlockPermutation;
-    if (!oldPermutation.type.id.startsWith(BLOCK_PREFIX)) return;
-    const dimension = e.dimension;
-    const location = { ...e.block.location };
-    // Let native destruction finish before treating the other half as a
-    // support-loss survivor. It may also be directly impacted by this blast.
-    // Capture values now; the event's block handle may be invalid by then.
-    system.run(() => removeMachine(dimension, location, oldPermutation, { dropBase: true }));
-});
-
 // --- the Upgrade Kit: right-click the base with it -------------------------
 //
-// One kit per machine. The flag lives on the trader as a dynamic property, so
-// it travels with the thing it describes and dies with it.
+// One kit per machine. The flag is the vm:upgraded block state of both halves,
+// so it travels with the machine and dies with it.
 system.beforeEvents.startup.subscribe((init) => {
     init.blockComponentRegistry.registerCustomComponent("vm:machine", {
         beforeOnPlayerPlace(event) {
             if (!headroom(event.block)) event.cancel = true;
+        },
+        // Every destruction of either half: player, explosion, `setblock`/`fill ... destroy`.
+        // Deferred one tick: native destruction (also of the other half in the same blast or
+        // fill) finishes first, and nothing is read from the event's block afterwards.
+        onBreak(event) {
+            const dimension = event.dimension;
+            const location = { ...event.block.location };
+            const oldPermutation = event.brokenBlockPermutation;
+            // Survival cannot mine the head; only a Creative player breaks it, and Creative
+            // breaks never refund. Any other cause of head loss drops the base natively.
+            const dropBase = event.entitySource?.typeId !== "minecraft:player";
+            system.run(() => removeMachine(dimension, location, oldPermutation, { dropBase }));
         },
     });
     init.itemComponentRegistry.registerCustomComponent("vm:upgrade_kit", {
