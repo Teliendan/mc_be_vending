@@ -99,13 +99,14 @@ equal the generator output; `--suite generated` does the same for every generate
 
 ## In-game checks still worth doing
 
+- Owner checks verified in game (owner, 1.26.63, 2026-11-17): an old upgraded machine keeps its texture and prices, a kit on it says "already upgraded", crouch-build still finds heads.
 - Placement under a block, at the build limit and with a mob in the head cell: no item used.
 - Kit: Survival pays once, Creative keeps it, second use is free; upgrade survives reload.
 - Note block on top of a machine plays iron xylophone.
 - `/setblock` a machine's head to air, leave and re-enter: the trader is gone.
 - New offers: suspicious stew 0-5, bed/banner colours, librarian candles and the four new books.
 - Controlled strong blast on a machine vs an iron door: drops match one item.
-- VD-01 (`onBreak`, offline only until checked): V-1 Survival mine base: one item, head and trader gone. V-2 Creative break head or base: gone, no item (an item means `entitySource` is not the player). V-3 `/setblock <head|base> air destroy`: one item, rest gone. V-4 `/fill` over both halves `air destroy`: one item, trader gone. V-5 plain `/setblock <head> air`: base stays, trader gone after re-entering. No content-log script error.
+- VD-01 (`onBreak`): V-1 and V-2 verified in game (owner, 1.26.63, 2026-11-17); V-3 to V-5 (destroy-mode commands) not tested yet. V-1 Survival mine base: one item, head and trader gone. V-2 Creative break head or base: gone, no item (an item means `entitySource` is not the player). V-3 `/setblock <head|base> air destroy`: one item, rest gone. V-4 `/fill` over both halves `air destroy`: one item, trader gone. V-5 plain `/setblock <head> air`: base stays, trader gone after re-entering. No content-log script error.
 
 ## Bedrock 26.60 impact (2026-10-27, documented only)
 

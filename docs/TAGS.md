@@ -8,7 +8,7 @@ Scope: 15 block definitions, 15 entity definitions, across every `*_bp` pack in 
 
 ## Recommendations and effects
 
-All 15 hidden trader entities carry one private type family, `vm_trader` (owner decision 2026-11-11, replacing the earlier "no families" choice). `tools/gen_machine_entities.py` adds it and the two extra machines inherit it through the farmer template. Its only purpose is the engine-side `families` filter in the script's entity queries (`aimedHead`, world-load scan). Vanilla mobs target named families such as `player` or `villager`, so a private family should attract nothing; the in-game aggro check (zombies, pillagers, iron golems ignore a machine) is pending. Do not add `mob`, `villager`, `wandering_trader`, `shulker` or `monster` merely because of their trade tables/appearance. All 15 machine blocks already have pickaxe speed tags; preserve the protected upper-half mining override and existing collection policy.
+All 15 hidden trader entities carry one private type family, `vm_trader` (owner decision 2026-11-11, replacing the earlier "no families" choice). `tools/gen_machine_entities.py` adds it and the two extra machines inherit it through the farmer template. Its only purpose is the engine-side `families` filter in the script's entity queries (`aimedHead`, world-load scan). Vanilla mobs target named families such as `player` or `villager`, so a private family attracts nothing: zombies, pillagers and an iron golem ignore a machine, verified in game (owner, 1.26.63, 2026-11-17). Do not add `mob`, `villager`, `wandering_trader`, `shulker` or `monster` merely because of their trade tables/appearance. All 15 machine blocks already have pickaxe speed tags; preserve the protected upper-half mining override and existing collection policy.
 
 ## Complete block inventory
 
@@ -38,21 +38,21 @@ Inspected all block permutations: 0 tag-component overrides. Other components st
 
 | Entity | Base families | Group overrides / decision |
 | --- | --- | --- |
-| [vm:trader_shulker](../vending_shulker_bp/entities/trader_shulker.json) | `vm_trader` | Private family for query filtering; aggro check pending in game |
-| [vm:trader_armorer](../vending_villagers_bp/entities/trader_armorer.json) | `vm_trader` | Private family for query filtering; aggro check pending in game |
-| [vm:trader_butcher](../vending_villagers_bp/entities/trader_butcher.json) | `vm_trader` | Private family for query filtering; aggro check pending in game |
-| [vm:trader_cartographer](../vending_villagers_bp/entities/trader_cartographer.json) | `vm_trader` | Private family for query filtering; aggro check pending in game |
-| [vm:trader_cleric](../vending_villagers_bp/entities/trader_cleric.json) | `vm_trader` | Private family for query filtering; aggro check pending in game |
-| [vm:trader_farmer](../vending_villagers_bp/entities/trader_farmer.json) | `vm_trader` | Private family for query filtering; aggro check pending in game |
-| [vm:trader_fisherman](../vending_villagers_bp/entities/trader_fisherman.json) | `vm_trader` | Private family for query filtering; aggro check pending in game |
-| [vm:trader_fletcher](../vending_villagers_bp/entities/trader_fletcher.json) | `vm_trader` | Private family for query filtering; aggro check pending in game |
-| [vm:trader_leather_worker](../vending_villagers_bp/entities/trader_leather_worker.json) | `vm_trader` | Private family for query filtering; aggro check pending in game |
-| [vm:trader_librarian](../vending_villagers_bp/entities/trader_librarian.json) | `vm_trader` | Private family for query filtering; aggro check pending in game |
-| [vm:trader_shepherd](../vending_villagers_bp/entities/trader_shepherd.json) | `vm_trader` | Private family for query filtering; aggro check pending in game |
-| [vm:trader_stone_mason](../vending_villagers_bp/entities/trader_stone_mason.json) | `vm_trader` | Private family for query filtering; aggro check pending in game |
-| [vm:trader_tool_smith](../vending_villagers_bp/entities/trader_tool_smith.json) | `vm_trader` | Private family for query filtering; aggro check pending in game |
-| [vm:trader_weapon_smith](../vending_villagers_bp/entities/trader_weapon_smith.json) | `vm_trader` | Private family for query filtering; aggro check pending in game |
-| [vm:trader_wandering_trader](../vending_wandering_bp/entities/trader_wandering_trader.json) | `vm_trader` | Private family for query filtering; aggro check pending in game |
+| [vm:trader_shulker](../vending_shulker_bp/entities/trader_shulker.json) | `vm_trader` | Private family for query filtering; no aggro, verified in game 2026-11-17 |
+| [vm:trader_armorer](../vending_villagers_bp/entities/trader_armorer.json) | `vm_trader` | Private family for query filtering; no aggro, verified in game 2026-11-17 |
+| [vm:trader_butcher](../vending_villagers_bp/entities/trader_butcher.json) | `vm_trader` | Private family for query filtering; no aggro, verified in game 2026-11-17 |
+| [vm:trader_cartographer](../vending_villagers_bp/entities/trader_cartographer.json) | `vm_trader` | Private family for query filtering; no aggro, verified in game 2026-11-17 |
+| [vm:trader_cleric](../vending_villagers_bp/entities/trader_cleric.json) | `vm_trader` | Private family for query filtering; no aggro, verified in game 2026-11-17 |
+| [vm:trader_farmer](../vending_villagers_bp/entities/trader_farmer.json) | `vm_trader` | Private family for query filtering; no aggro, verified in game 2026-11-17 |
+| [vm:trader_fisherman](../vending_villagers_bp/entities/trader_fisherman.json) | `vm_trader` | Private family for query filtering; no aggro, verified in game 2026-11-17 |
+| [vm:trader_fletcher](../vending_villagers_bp/entities/trader_fletcher.json) | `vm_trader` | Private family for query filtering; no aggro, verified in game 2026-11-17 |
+| [vm:trader_leather_worker](../vending_villagers_bp/entities/trader_leather_worker.json) | `vm_trader` | Private family for query filtering; no aggro, verified in game 2026-11-17 |
+| [vm:trader_librarian](../vending_villagers_bp/entities/trader_librarian.json) | `vm_trader` | Private family for query filtering; no aggro, verified in game 2026-11-17 |
+| [vm:trader_shepherd](../vending_villagers_bp/entities/trader_shepherd.json) | `vm_trader` | Private family for query filtering; no aggro, verified in game 2026-11-17 |
+| [vm:trader_stone_mason](../vending_villagers_bp/entities/trader_stone_mason.json) | `vm_trader` | Private family for query filtering; no aggro, verified in game 2026-11-17 |
+| [vm:trader_tool_smith](../vending_villagers_bp/entities/trader_tool_smith.json) | `vm_trader` | Private family for query filtering; no aggro, verified in game 2026-11-17 |
+| [vm:trader_weapon_smith](../vending_villagers_bp/entities/trader_weapon_smith.json) | `vm_trader` | Private family for query filtering; no aggro, verified in game 2026-11-17 |
+| [vm:trader_wandering_trader](../vending_wandering_bp/entities/trader_wandering_trader.json) | `vm_trader` | Private family for query filtering; no aggro, verified in game 2026-11-17 |
 
 ## Related explicit item tags
 
