@@ -30,42 +30,42 @@
           "translations": {
             "cs_CZ": {
               "text": "Vending Machines — Základní balíček",
-              "based_on": "57043653cbd0c52f3ca02ec2414aca2c9a57c90f163abe6a1830efb17e5ece3d",
+              "based_on": "96597ba2b0274134e2b5fffdd853d9ff7cdbb67b87913538770c508b33579f49",
               "status": "ai-draft"
             },
             "es_ES": {
               "text": "Vending Machines — Núcleo",
-              "based_on": "57043653cbd0c52f3ca02ec2414aca2c9a57c90f163abe6a1830efb17e5ece3d",
+              "based_on": "96597ba2b0274134e2b5fffdd853d9ff7cdbb67b87913538770c508b33579f49",
               "status": "ai-draft"
             },
             "es_MX": {
               "text": "Vending Machines — Núcleo",
-              "based_on": "57043653cbd0c52f3ca02ec2414aca2c9a57c90f163abe6a1830efb17e5ece3d",
+              "based_on": "96597ba2b0274134e2b5fffdd853d9ff7cdbb67b87913538770c508b33579f49",
               "status": "ai-draft"
             },
             "pt_PT": {
               "text": "Vending Machines — Base",
-              "based_on": "57043653cbd0c52f3ca02ec2414aca2c9a57c90f163abe6a1830efb17e5ece3d",
+              "based_on": "96597ba2b0274134e2b5fffdd853d9ff7cdbb67b87913538770c508b33579f49",
               "status": "ai-draft"
             },
             "pt_BR": {
               "text": "Vending Machines — Base",
-              "based_on": "57043653cbd0c52f3ca02ec2414aca2c9a57c90f163abe6a1830efb17e5ece3d",
+              "based_on": "96597ba2b0274134e2b5fffdd853d9ff7cdbb67b87913538770c508b33579f49",
               "status": "ai-draft"
             },
             "de_DE": {
               "text": "Vending Machines — Basis",
-              "based_on": "57043653cbd0c52f3ca02ec2414aca2c9a57c90f163abe6a1830efb17e5ece3d",
+              "based_on": "96597ba2b0274134e2b5fffdd853d9ff7cdbb67b87913538770c508b33579f49",
               "status": "ai-draft"
             },
             "fr_FR": {
               "text": "Vending Machines — Base",
-              "based_on": "57043653cbd0c52f3ca02ec2414aca2c9a57c90f163abe6a1830efb17e5ece3d",
+              "based_on": "96597ba2b0274134e2b5fffdd853d9ff7cdbb67b87913538770c508b33579f49",
               "status": "ai-draft"
             },
             "pl_PL": {
               "text": "Vending Machines — Podstawa",
-              "based_on": "57043653cbd0c52f3ca02ec2414aca2c9a57c90f163abe6a1830efb17e5ece3d",
+              "based_on": "96597ba2b0274134e2b5fffdd853d9ff7cdbb67b87913538770c508b33579f49",
               "status": "ai-draft"
             }
           }
@@ -84,42 +84,42 @@
           "translations": {
             "cs_CZ": {
               "text": "Základní balíček Vending Machines: společné skripty a vylepšovací sada. Automaty, které chcete, přidáte dalšími balíčky.",
-              "based_on": "b66c83ab75ce574f4bd5f36af39c0f486c7833397b50f5bea58120f5852d1ad7",
+              "based_on": "612d9884e0cff27d852affcecce341aff7c06f2d265a4b7f9f4f8031ac8d1723",
               "status": "ai-draft"
             },
             "es_ES": {
               "text": "Núcleo de Vending Machines: scripts comunes y kit de mejora. Añade los packs de las máquinas que quieras.",
-              "based_on": "b66c83ab75ce574f4bd5f36af39c0f486c7833397b50f5bea58120f5852d1ad7",
+              "based_on": "612d9884e0cff27d852affcecce341aff7c06f2d265a4b7f9f4f8031ac8d1723",
               "status": "ai-draft"
             },
             "es_MX": {
               "text": "Núcleo de Vending Machines: scripts compartidos y el kit de mejora. Agrega los packs de las máquinas que quieras.",
-              "based_on": "b66c83ab75ce574f4bd5f36af39c0f486c7833397b50f5bea58120f5852d1ad7",
+              "based_on": "612d9884e0cff27d852affcecce341aff7c06f2d265a4b7f9f4f8031ac8d1723",
               "status": "ai-draft"
             },
             "pt_PT": {
               "text": "Base de Vending Machines: scripts partilhados e Kit de Melhoria. Adiciona os packs das máquinas que quiseres.",
-              "based_on": "b66c83ab75ce574f4bd5f36af39c0f486c7833397b50f5bea58120f5852d1ad7",
+              "based_on": "612d9884e0cff27d852affcecce341aff7c06f2d265a4b7f9f4f8031ac8d1723",
               "status": "ai-draft"
             },
             "pt_BR": {
               "text": "Base de Vending Machines: scripts compartilhados e o Kit de Melhoria. Adicione os pacotes das máquinas que você quiser.",
-              "based_on": "b66c83ab75ce574f4bd5f36af39c0f486c7833397b50f5bea58120f5852d1ad7",
+              "based_on": "612d9884e0cff27d852affcecce341aff7c06f2d265a4b7f9f4f8031ac8d1723",
               "status": "ai-draft"
             },
             "de_DE": {
               "text": "Vending Machines – Basis: gemeinsame Skripte und Aufrüstungsset. Aktiviere zusätzlich die Pakete der Automaten, die du nutzen willst.",
-              "based_on": "b66c83ab75ce574f4bd5f36af39c0f486c7833397b50f5bea58120f5852d1ad7",
+              "based_on": "612d9884e0cff27d852affcecce341aff7c06f2d265a4b7f9f4f8031ac8d1723",
               "status": "ai-draft"
             },
             "fr_FR": {
               "text": "Base de Vending Machines : scripts communs et kit d’amélioration. Ajoutez les packs des distributeurs qui vous intéressent.",
-              "based_on": "b66c83ab75ce574f4bd5f36af39c0f486c7833397b50f5bea58120f5852d1ad7",
+              "based_on": "612d9884e0cff27d852affcecce341aff7c06f2d265a4b7f9f4f8031ac8d1723",
               "status": "ai-draft"
             },
             "pl_PL": {
               "text": "Podstawa Vending Machines: wspólne skrypty i zestaw ulepszeń. Dodaj paczki z automatami, których potrzebujesz.",
-              "based_on": "b66c83ab75ce574f4bd5f36af39c0f486c7833397b50f5bea58120f5852d1ad7",
+              "based_on": "612d9884e0cff27d852affcecce341aff7c06f2d265a4b7f9f4f8031ac8d1723",
               "status": "ai-draft"
             }
           }
@@ -143,42 +143,42 @@
           "translations": {
             "cs_CZ": {
               "text": "Vending Machines — Kořist",
-              "based_on": "9233d0344bc7957f2823ac2f2c25b8974de1b90e5152c040638d5247185b58e8",
+              "based_on": "35003359fe717b3b140371dbf11c030a4d6d46dfc08032209f470d50df16d216",
               "status": "ai-draft"
             },
             "es_ES": {
               "text": "Vending Machines — Botín",
-              "based_on": "9233d0344bc7957f2823ac2f2c25b8974de1b90e5152c040638d5247185b58e8",
+              "based_on": "35003359fe717b3b140371dbf11c030a4d6d46dfc08032209f470d50df16d216",
               "status": "ai-draft"
             },
             "es_MX": {
               "text": "Vending Machines — Botín",
-              "based_on": "9233d0344bc7957f2823ac2f2c25b8974de1b90e5152c040638d5247185b58e8",
+              "based_on": "35003359fe717b3b140371dbf11c030a4d6d46dfc08032209f470d50df16d216",
               "status": "ai-draft"
             },
             "pt_PT": {
               "text": "Vending Machines — Saques",
-              "based_on": "9233d0344bc7957f2823ac2f2c25b8974de1b90e5152c040638d5247185b58e8",
+              "based_on": "35003359fe717b3b140371dbf11c030a4d6d46dfc08032209f470d50df16d216",
               "status": "ai-draft"
             },
             "pt_BR": {
               "text": "Vending Machines — Saque",
-              "based_on": "9233d0344bc7957f2823ac2f2c25b8974de1b90e5152c040638d5247185b58e8",
+              "based_on": "35003359fe717b3b140371dbf11c030a4d6d46dfc08032209f470d50df16d216",
               "status": "ai-draft"
             },
             "de_DE": {
               "text": "Vending Machines — Beute",
-              "based_on": "9233d0344bc7957f2823ac2f2c25b8974de1b90e5152c040638d5247185b58e8",
+              "based_on": "35003359fe717b3b140371dbf11c030a4d6d46dfc08032209f470d50df16d216",
               "status": "ai-draft"
             },
             "fr_FR": {
               "text": "Vending Machines — Butin",
-              "based_on": "9233d0344bc7957f2823ac2f2c25b8974de1b90e5152c040638d5247185b58e8",
+              "based_on": "35003359fe717b3b140371dbf11c030a4d6d46dfc08032209f470d50df16d216",
               "status": "ai-draft"
             },
             "pl_PL": {
               "text": "Vending Machines — Łupy",
-              "based_on": "9233d0344bc7957f2823ac2f2c25b8974de1b90e5152c040638d5247185b58e8",
+              "based_on": "35003359fe717b3b140371dbf11c030a4d6d46dfc08032209f470d50df16d216",
               "status": "ai-draft"
             }
           }
@@ -197,42 +197,42 @@
           "translations": {
             "cs_CZ": {
               "text": "Čtyři automaty na kořist (běžný svět, Nether, zkušební komory, End) prodávají kořist ze stvoření, kterou při mírumilovné obtížnosti nezískáte. Vyžaduje základní balíček Vending Machines.",
-              "based_on": "2a37ffcec54f2b87cc81624f38f3b44564d1aeecdec412ccdd25a92b05ecefcd",
+              "based_on": "5a789dbaee3d1fa41c782751cd03c765232d2534198e1c5891957b3e6560dacf",
               "status": "ai-draft"
             },
             "es_ES": {
               "text": "Cuatro máquinas de botín (mundo superior, Inframundo, cámaras de prueba y End) que venden el botín de criaturas que no se consigue en dificultad Pacífico. Requiere el núcleo de Vending Machines.",
-              "based_on": "2a37ffcec54f2b87cc81624f38f3b44564d1aeecdec412ccdd25a92b05ecefcd",
+              "based_on": "5a789dbaee3d1fa41c782751cd03c765232d2534198e1c5891957b3e6560dacf",
               "status": "ai-draft"
             },
             "es_MX": {
               "text": "Cuatro máquinas de botín (Mundo principal, Nether, cámara de desafíos, End) que venden el botín de criaturas que no se consigue en dificultad pacífica. Requiere el núcleo de Vending Machines.",
-              "based_on": "2a37ffcec54f2b87cc81624f38f3b44564d1aeecdec412ccdd25a92b05ecefcd",
+              "based_on": "5a789dbaee3d1fa41c782751cd03c765232d2534198e1c5891957b3e6560dacf",
               "status": "ai-draft"
             },
             "pt_PT": {
               "text": "Quatro Máquinas de Saques (Superfície, Nether, Câmaras da Provação, End) que vendem os saques de criaturas impossíveis de obter na dificuldade Pacífico. Requer a base de Vending Machines.",
-              "based_on": "2a37ffcec54f2b87cc81624f38f3b44564d1aeecdec412ccdd25a92b05ecefcd",
+              "based_on": "5a789dbaee3d1fa41c782751cd03c765232d2534198e1c5891957b3e6560dacf",
               "status": "ai-draft"
             },
             "pt_BR": {
               "text": "Quatro Máquinas de Saque (Mundo Superior, Nether, Desafio, End) que vendem o saque de criaturas impossível de obter na dificuldade Pacífico. Requer a base de Vending Machines.",
-              "based_on": "2a37ffcec54f2b87cc81624f38f3b44564d1aeecdec412ccdd25a92b05ecefcd",
+              "based_on": "5a789dbaee3d1fa41c782751cd03c765232d2534198e1c5891957b3e6560dacf",
               "status": "ai-draft"
             },
             "de_DE": {
               "text": "Vier Beuteautomaten (Oberwelt, Nether, Prüfungskammern, Ende) verkaufen Kreaturenbeute, die eine Welt auf „Friedlich“ nicht liefert. Benötigt Vending Machines – Basis.",
-              "based_on": "2a37ffcec54f2b87cc81624f38f3b44564d1aeecdec412ccdd25a92b05ecefcd",
+              "based_on": "5a789dbaee3d1fa41c782751cd03c765232d2534198e1c5891957b3e6560dacf",
               "status": "ai-draft"
             },
             "fr_FR": {
               "text": "Quatre distributeurs de butin (Surface, Nether, salles d'épreuve, End) qui vendent le butin de créatures impossible à obtenir en difficulté Paisible. Nécessite Vending Machines — Base.",
-              "based_on": "2a37ffcec54f2b87cc81624f38f3b44564d1aeecdec412ccdd25a92b05ecefcd",
+              "based_on": "5a789dbaee3d1fa41c782751cd03c765232d2534198e1c5891957b3e6560dacf",
               "status": "ai-draft"
             },
             "pl_PL": {
               "text": "Cztery automaty z łupami (Nadziemie, Nether, komnaty prób, Kres) sprzedają łupy z mobów, których nie zdobędziesz na pokojowym poziomie trudności. Wymaga paczki Vending Machines — Podstawa.",
-              "based_on": "2a37ffcec54f2b87cc81624f38f3b44564d1aeecdec412ccdd25a92b05ecefcd",
+              "based_on": "5a789dbaee3d1fa41c782751cd03c765232d2534198e1c5891957b3e6560dacf",
               "status": "ai-draft"
             }
           }
@@ -255,43 +255,43 @@
           "placeholders": [],
           "translations": {
             "cs_CZ": {
-              "text": "Automat: Farmář",
-              "based_on": "377fc111e217b82c31a46b5c66a9adf24e9ba0e895207c38275a320a4d395ff8",
+              "text": "Automat farmáře",
+              "based_on": "a9b63c9e92de3d28fc03506673408796b48f8a75928b58078d25905b7d4aad2f",
               "status": "ai-draft"
             },
             "es_ES": {
               "text": "Máquina de granjero",
-              "based_on": "377fc111e217b82c31a46b5c66a9adf24e9ba0e895207c38275a320a4d395ff8",
+              "based_on": "a9b63c9e92de3d28fc03506673408796b48f8a75928b58078d25905b7d4aad2f",
               "status": "ai-draft"
             },
             "es_MX": {
               "text": "Máquina de granjero",
-              "based_on": "377fc111e217b82c31a46b5c66a9adf24e9ba0e895207c38275a320a4d395ff8",
+              "based_on": "a9b63c9e92de3d28fc03506673408796b48f8a75928b58078d25905b7d4aad2f",
               "status": "ai-draft"
             },
             "pt_PT": {
               "text": "Máquina de Agricultor",
-              "based_on": "377fc111e217b82c31a46b5c66a9adf24e9ba0e895207c38275a320a4d395ff8",
+              "based_on": "a9b63c9e92de3d28fc03506673408796b48f8a75928b58078d25905b7d4aad2f",
               "status": "ai-draft"
             },
             "pt_BR": {
               "text": "Máquina de Fazendeiro",
-              "based_on": "377fc111e217b82c31a46b5c66a9adf24e9ba0e895207c38275a320a4d395ff8",
+              "based_on": "a9b63c9e92de3d28fc03506673408796b48f8a75928b58078d25905b7d4aad2f",
               "status": "ai-draft"
             },
             "de_DE": {
               "text": "Bauern-Automat",
-              "based_on": "377fc111e217b82c31a46b5c66a9adf24e9ba0e895207c38275a320a4d395ff8",
+              "based_on": "a9b63c9e92de3d28fc03506673408796b48f8a75928b58078d25905b7d4aad2f",
               "status": "ai-draft"
             },
             "fr_FR": {
-              "text": "Distributeur : Fermier",
-              "based_on": "377fc111e217b82c31a46b5c66a9adf24e9ba0e895207c38275a320a4d395ff8",
+              "text": "Distributeur du fermier",
+              "based_on": "a9b63c9e92de3d28fc03506673408796b48f8a75928b58078d25905b7d4aad2f",
               "status": "ai-draft"
             },
             "pl_PL": {
               "text": "Automat rolnika",
-              "based_on": "377fc111e217b82c31a46b5c66a9adf24e9ba0e895207c38275a320a4d395ff8",
+              "based_on": "a9b63c9e92de3d28fc03506673408796b48f8a75928b58078d25905b7d4aad2f",
               "status": "ai-draft"
             }
           }
@@ -309,43 +309,43 @@
           "placeholders": [],
           "translations": {
             "cs_CZ": {
-              "text": "Automat: Farmář",
-              "based_on": "377fc111e217b82c31a46b5c66a9adf24e9ba0e895207c38275a320a4d395ff8",
+              "text": "Automat farmáře",
+              "based_on": "a9b63c9e92de3d28fc03506673408796b48f8a75928b58078d25905b7d4aad2f",
               "status": "ai-draft"
             },
             "es_ES": {
               "text": "Máquina de granjero",
-              "based_on": "377fc111e217b82c31a46b5c66a9adf24e9ba0e895207c38275a320a4d395ff8",
+              "based_on": "a9b63c9e92de3d28fc03506673408796b48f8a75928b58078d25905b7d4aad2f",
               "status": "ai-draft"
             },
             "es_MX": {
               "text": "Máquina de granjero",
-              "based_on": "377fc111e217b82c31a46b5c66a9adf24e9ba0e895207c38275a320a4d395ff8",
+              "based_on": "a9b63c9e92de3d28fc03506673408796b48f8a75928b58078d25905b7d4aad2f",
               "status": "ai-draft"
             },
             "pt_PT": {
               "text": "Máquina de Agricultor",
-              "based_on": "377fc111e217b82c31a46b5c66a9adf24e9ba0e895207c38275a320a4d395ff8",
+              "based_on": "a9b63c9e92de3d28fc03506673408796b48f8a75928b58078d25905b7d4aad2f",
               "status": "ai-draft"
             },
             "pt_BR": {
               "text": "Máquina de Fazendeiro",
-              "based_on": "377fc111e217b82c31a46b5c66a9adf24e9ba0e895207c38275a320a4d395ff8",
+              "based_on": "a9b63c9e92de3d28fc03506673408796b48f8a75928b58078d25905b7d4aad2f",
               "status": "ai-draft"
             },
             "de_DE": {
               "text": "Bauern-Automat",
-              "based_on": "377fc111e217b82c31a46b5c66a9adf24e9ba0e895207c38275a320a4d395ff8",
+              "based_on": "a9b63c9e92de3d28fc03506673408796b48f8a75928b58078d25905b7d4aad2f",
               "status": "ai-draft"
             },
             "fr_FR": {
-              "text": "Distributeur : Fermier",
-              "based_on": "377fc111e217b82c31a46b5c66a9adf24e9ba0e895207c38275a320a4d395ff8",
+              "text": "Distributeur du fermier",
+              "based_on": "a9b63c9e92de3d28fc03506673408796b48f8a75928b58078d25905b7d4aad2f",
               "status": "ai-draft"
             },
             "pl_PL": {
               "text": "Automat rolnika",
-              "based_on": "377fc111e217b82c31a46b5c66a9adf24e9ba0e895207c38275a320a4d395ff8",
+              "based_on": "a9b63c9e92de3d28fc03506673408796b48f8a75928b58078d25905b7d4aad2f",
               "status": "ai-draft"
             }
           }
@@ -363,43 +363,43 @@
           "placeholders": [],
           "translations": {
             "cs_CZ": {
-              "text": "Automat: Rybář",
-              "based_on": "ecce9fe32bbc3e8a129bf5dffe3fbdd41e17aa9747448562c4444855da78605d",
+              "text": "Automat rybáře",
+              "based_on": "70efff86a33a20e05b8790871fc6f5b3ea26fbb5f94ecacbf12b059b46da2a62",
               "status": "ai-draft"
             },
             "es_ES": {
               "text": "Máquina de pescador",
-              "based_on": "ecce9fe32bbc3e8a129bf5dffe3fbdd41e17aa9747448562c4444855da78605d",
+              "based_on": "70efff86a33a20e05b8790871fc6f5b3ea26fbb5f94ecacbf12b059b46da2a62",
               "status": "ai-draft"
             },
             "es_MX": {
               "text": "Máquina de pescador",
-              "based_on": "ecce9fe32bbc3e8a129bf5dffe3fbdd41e17aa9747448562c4444855da78605d",
+              "based_on": "70efff86a33a20e05b8790871fc6f5b3ea26fbb5f94ecacbf12b059b46da2a62",
               "status": "ai-draft"
             },
             "pt_PT": {
               "text": "Máquina de Pescador",
-              "based_on": "ecce9fe32bbc3e8a129bf5dffe3fbdd41e17aa9747448562c4444855da78605d",
+              "based_on": "70efff86a33a20e05b8790871fc6f5b3ea26fbb5f94ecacbf12b059b46da2a62",
               "status": "ai-draft"
             },
             "pt_BR": {
               "text": "Máquina de Pescador",
-              "based_on": "ecce9fe32bbc3e8a129bf5dffe3fbdd41e17aa9747448562c4444855da78605d",
+              "based_on": "70efff86a33a20e05b8790871fc6f5b3ea26fbb5f94ecacbf12b059b46da2a62",
               "status": "ai-draft"
             },
             "de_DE": {
               "text": "Fischer-Automat",
-              "based_on": "ecce9fe32bbc3e8a129bf5dffe3fbdd41e17aa9747448562c4444855da78605d",
+              "based_on": "70efff86a33a20e05b8790871fc6f5b3ea26fbb5f94ecacbf12b059b46da2a62",
               "status": "ai-draft"
             },
             "fr_FR": {
-              "text": "Distributeur : Pêcheur",
-              "based_on": "ecce9fe32bbc3e8a129bf5dffe3fbdd41e17aa9747448562c4444855da78605d",
+              "text": "Distributeur du pêcheur",
+              "based_on": "70efff86a33a20e05b8790871fc6f5b3ea26fbb5f94ecacbf12b059b46da2a62",
               "status": "ai-draft"
             },
             "pl_PL": {
               "text": "Automat rybaka",
-              "based_on": "ecce9fe32bbc3e8a129bf5dffe3fbdd41e17aa9747448562c4444855da78605d",
+              "based_on": "70efff86a33a20e05b8790871fc6f5b3ea26fbb5f94ecacbf12b059b46da2a62",
               "status": "ai-draft"
             }
           }
@@ -417,43 +417,43 @@
           "placeholders": [],
           "translations": {
             "cs_CZ": {
-              "text": "Automat: Rybář",
-              "based_on": "ecce9fe32bbc3e8a129bf5dffe3fbdd41e17aa9747448562c4444855da78605d",
+              "text": "Automat rybáře",
+              "based_on": "70efff86a33a20e05b8790871fc6f5b3ea26fbb5f94ecacbf12b059b46da2a62",
               "status": "ai-draft"
             },
             "es_ES": {
               "text": "Máquina de pescador",
-              "based_on": "ecce9fe32bbc3e8a129bf5dffe3fbdd41e17aa9747448562c4444855da78605d",
+              "based_on": "70efff86a33a20e05b8790871fc6f5b3ea26fbb5f94ecacbf12b059b46da2a62",
               "status": "ai-draft"
             },
             "es_MX": {
               "text": "Máquina de pescador",
-              "based_on": "ecce9fe32bbc3e8a129bf5dffe3fbdd41e17aa9747448562c4444855da78605d",
+              "based_on": "70efff86a33a20e05b8790871fc6f5b3ea26fbb5f94ecacbf12b059b46da2a62",
               "status": "ai-draft"
             },
             "pt_PT": {
               "text": "Máquina de Pescador",
-              "based_on": "ecce9fe32bbc3e8a129bf5dffe3fbdd41e17aa9747448562c4444855da78605d",
+              "based_on": "70efff86a33a20e05b8790871fc6f5b3ea26fbb5f94ecacbf12b059b46da2a62",
               "status": "ai-draft"
             },
             "pt_BR": {
               "text": "Máquina de Pescador",
-              "based_on": "ecce9fe32bbc3e8a129bf5dffe3fbdd41e17aa9747448562c4444855da78605d",
+              "based_on": "70efff86a33a20e05b8790871fc6f5b3ea26fbb5f94ecacbf12b059b46da2a62",
               "status": "ai-draft"
             },
             "de_DE": {
               "text": "Fischer-Automat",
-              "based_on": "ecce9fe32bbc3e8a129bf5dffe3fbdd41e17aa9747448562c4444855da78605d",
+              "based_on": "70efff86a33a20e05b8790871fc6f5b3ea26fbb5f94ecacbf12b059b46da2a62",
               "status": "ai-draft"
             },
             "fr_FR": {
-              "text": "Distributeur : Pêcheur",
-              "based_on": "ecce9fe32bbc3e8a129bf5dffe3fbdd41e17aa9747448562c4444855da78605d",
+              "text": "Distributeur du pêcheur",
+              "based_on": "70efff86a33a20e05b8790871fc6f5b3ea26fbb5f94ecacbf12b059b46da2a62",
               "status": "ai-draft"
             },
             "pl_PL": {
               "text": "Automat rybaka",
-              "based_on": "ecce9fe32bbc3e8a129bf5dffe3fbdd41e17aa9747448562c4444855da78605d",
+              "based_on": "70efff86a33a20e05b8790871fc6f5b3ea26fbb5f94ecacbf12b059b46da2a62",
               "status": "ai-draft"
             }
           }
@@ -471,43 +471,43 @@
           "placeholders": [],
           "translations": {
             "cs_CZ": {
-              "text": "Automat: Pastýř",
-              "based_on": "340c231597b2a141c625fcb2e05401e9cb3c168bae0db4577c7be9d614337aef",
+              "text": "Automat pastýře",
+              "based_on": "505001e9caca71cb8423588b073cd8b0920b604a18e0faf57d447a8d325fb6c2",
               "status": "ai-draft"
             },
             "es_ES": {
               "text": "Máquina de pastor",
-              "based_on": "340c231597b2a141c625fcb2e05401e9cb3c168bae0db4577c7be9d614337aef",
+              "based_on": "505001e9caca71cb8423588b073cd8b0920b604a18e0faf57d447a8d325fb6c2",
               "status": "ai-draft"
             },
             "es_MX": {
               "text": "Máquina de pastor",
-              "based_on": "340c231597b2a141c625fcb2e05401e9cb3c168bae0db4577c7be9d614337aef",
+              "based_on": "505001e9caca71cb8423588b073cd8b0920b604a18e0faf57d447a8d325fb6c2",
               "status": "ai-draft"
             },
             "pt_PT": {
               "text": "Máquina de Pastor",
-              "based_on": "340c231597b2a141c625fcb2e05401e9cb3c168bae0db4577c7be9d614337aef",
+              "based_on": "505001e9caca71cb8423588b073cd8b0920b604a18e0faf57d447a8d325fb6c2",
               "status": "ai-draft"
             },
             "pt_BR": {
               "text": "Máquina de Pastor",
-              "based_on": "340c231597b2a141c625fcb2e05401e9cb3c168bae0db4577c7be9d614337aef",
+              "based_on": "505001e9caca71cb8423588b073cd8b0920b604a18e0faf57d447a8d325fb6c2",
               "status": "ai-draft"
             },
             "de_DE": {
               "text": "Schäfer-Automat",
-              "based_on": "340c231597b2a141c625fcb2e05401e9cb3c168bae0db4577c7be9d614337aef",
+              "based_on": "505001e9caca71cb8423588b073cd8b0920b604a18e0faf57d447a8d325fb6c2",
               "status": "ai-draft"
             },
             "fr_FR": {
-              "text": "Distributeur : Berger",
-              "based_on": "340c231597b2a141c625fcb2e05401e9cb3c168bae0db4577c7be9d614337aef",
+              "text": "Distributeur du berger",
+              "based_on": "505001e9caca71cb8423588b073cd8b0920b604a18e0faf57d447a8d325fb6c2",
               "status": "ai-draft"
             },
             "pl_PL": {
               "text": "Automat pasterza",
-              "based_on": "340c231597b2a141c625fcb2e05401e9cb3c168bae0db4577c7be9d614337aef",
+              "based_on": "505001e9caca71cb8423588b073cd8b0920b604a18e0faf57d447a8d325fb6c2",
               "status": "ai-draft"
             }
           }
@@ -525,43 +525,43 @@
           "placeholders": [],
           "translations": {
             "cs_CZ": {
-              "text": "Automat: Pastýř",
-              "based_on": "340c231597b2a141c625fcb2e05401e9cb3c168bae0db4577c7be9d614337aef",
+              "text": "Automat pastýře",
+              "based_on": "505001e9caca71cb8423588b073cd8b0920b604a18e0faf57d447a8d325fb6c2",
               "status": "ai-draft"
             },
             "es_ES": {
               "text": "Máquina de pastor",
-              "based_on": "340c231597b2a141c625fcb2e05401e9cb3c168bae0db4577c7be9d614337aef",
+              "based_on": "505001e9caca71cb8423588b073cd8b0920b604a18e0faf57d447a8d325fb6c2",
               "status": "ai-draft"
             },
             "es_MX": {
               "text": "Máquina de pastor",
-              "based_on": "340c231597b2a141c625fcb2e05401e9cb3c168bae0db4577c7be9d614337aef",
+              "based_on": "505001e9caca71cb8423588b073cd8b0920b604a18e0faf57d447a8d325fb6c2",
               "status": "ai-draft"
             },
             "pt_PT": {
               "text": "Máquina de Pastor",
-              "based_on": "340c231597b2a141c625fcb2e05401e9cb3c168bae0db4577c7be9d614337aef",
+              "based_on": "505001e9caca71cb8423588b073cd8b0920b604a18e0faf57d447a8d325fb6c2",
               "status": "ai-draft"
             },
             "pt_BR": {
               "text": "Máquina de Pastor",
-              "based_on": "340c231597b2a141c625fcb2e05401e9cb3c168bae0db4577c7be9d614337aef",
+              "based_on": "505001e9caca71cb8423588b073cd8b0920b604a18e0faf57d447a8d325fb6c2",
               "status": "ai-draft"
             },
             "de_DE": {
               "text": "Schäfer-Automat",
-              "based_on": "340c231597b2a141c625fcb2e05401e9cb3c168bae0db4577c7be9d614337aef",
+              "based_on": "505001e9caca71cb8423588b073cd8b0920b604a18e0faf57d447a8d325fb6c2",
               "status": "ai-draft"
             },
             "fr_FR": {
-              "text": "Distributeur : Berger",
-              "based_on": "340c231597b2a141c625fcb2e05401e9cb3c168bae0db4577c7be9d614337aef",
+              "text": "Distributeur du berger",
+              "based_on": "505001e9caca71cb8423588b073cd8b0920b604a18e0faf57d447a8d325fb6c2",
               "status": "ai-draft"
             },
             "pl_PL": {
               "text": "Automat pasterza",
-              "based_on": "340c231597b2a141c625fcb2e05401e9cb3c168bae0db4577c7be9d614337aef",
+              "based_on": "505001e9caca71cb8423588b073cd8b0920b604a18e0faf57d447a8d325fb6c2",
               "status": "ai-draft"
             }
           }
@@ -579,43 +579,43 @@
           "placeholders": [],
           "translations": {
             "cs_CZ": {
-              "text": "Automat: Výrobce šípů",
-              "based_on": "2eba6161a37e183a84fd8b0661034611b5a2b7991a1a0d2c72d470ed302a7c8e",
+              "text": "Automat výrobce šípů",
+              "based_on": "70b6a627cca2c3f37b84bd6504874a191fa2bd0715efd4dff83f5ec4d167b2aa",
               "status": "ai-draft"
             },
             "es_ES": {
               "text": "Máquina de flechero",
-              "based_on": "2eba6161a37e183a84fd8b0661034611b5a2b7991a1a0d2c72d470ed302a7c8e",
+              "based_on": "70b6a627cca2c3f37b84bd6504874a191fa2bd0715efd4dff83f5ec4d167b2aa",
               "status": "ai-draft"
             },
             "es_MX": {
               "text": "Máquina de flechero",
-              "based_on": "2eba6161a37e183a84fd8b0661034611b5a2b7991a1a0d2c72d470ed302a7c8e",
+              "based_on": "70b6a627cca2c3f37b84bd6504874a191fa2bd0715efd4dff83f5ec4d167b2aa",
               "status": "ai-draft"
             },
             "pt_PT": {
               "text": "Máquina de Flecheiro",
-              "based_on": "2eba6161a37e183a84fd8b0661034611b5a2b7991a1a0d2c72d470ed302a7c8e",
+              "based_on": "70b6a627cca2c3f37b84bd6504874a191fa2bd0715efd4dff83f5ec4d167b2aa",
               "status": "ai-draft"
             },
             "pt_BR": {
               "text": "Máquina de Flecheiro",
-              "based_on": "2eba6161a37e183a84fd8b0661034611b5a2b7991a1a0d2c72d470ed302a7c8e",
+              "based_on": "70b6a627cca2c3f37b84bd6504874a191fa2bd0715efd4dff83f5ec4d167b2aa",
               "status": "ai-draft"
             },
             "de_DE": {
               "text": "Pfeilmacher-Automat",
-              "based_on": "2eba6161a37e183a84fd8b0661034611b5a2b7991a1a0d2c72d470ed302a7c8e",
+              "based_on": "70b6a627cca2c3f37b84bd6504874a191fa2bd0715efd4dff83f5ec4d167b2aa",
               "status": "ai-draft"
             },
             "fr_FR": {
-              "text": "Distributeur : Fléchier",
-              "based_on": "2eba6161a37e183a84fd8b0661034611b5a2b7991a1a0d2c72d470ed302a7c8e",
+              "text": "Distributeur du fléchier",
+              "based_on": "70b6a627cca2c3f37b84bd6504874a191fa2bd0715efd4dff83f5ec4d167b2aa",
               "status": "ai-draft"
             },
             "pl_PL": {
               "text": "Automat łuczarza",
-              "based_on": "2eba6161a37e183a84fd8b0661034611b5a2b7991a1a0d2c72d470ed302a7c8e",
+              "based_on": "70b6a627cca2c3f37b84bd6504874a191fa2bd0715efd4dff83f5ec4d167b2aa",
               "status": "ai-draft"
             }
           }
@@ -633,43 +633,43 @@
           "placeholders": [],
           "translations": {
             "cs_CZ": {
-              "text": "Automat: Výrobce šípů",
-              "based_on": "2eba6161a37e183a84fd8b0661034611b5a2b7991a1a0d2c72d470ed302a7c8e",
+              "text": "Automat výrobce šípů",
+              "based_on": "70b6a627cca2c3f37b84bd6504874a191fa2bd0715efd4dff83f5ec4d167b2aa",
               "status": "ai-draft"
             },
             "es_ES": {
               "text": "Máquina de flechero",
-              "based_on": "2eba6161a37e183a84fd8b0661034611b5a2b7991a1a0d2c72d470ed302a7c8e",
+              "based_on": "70b6a627cca2c3f37b84bd6504874a191fa2bd0715efd4dff83f5ec4d167b2aa",
               "status": "ai-draft"
             },
             "es_MX": {
               "text": "Máquina de flechero",
-              "based_on": "2eba6161a37e183a84fd8b0661034611b5a2b7991a1a0d2c72d470ed302a7c8e",
+              "based_on": "70b6a627cca2c3f37b84bd6504874a191fa2bd0715efd4dff83f5ec4d167b2aa",
               "status": "ai-draft"
             },
             "pt_PT": {
               "text": "Máquina de Flecheiro",
-              "based_on": "2eba6161a37e183a84fd8b0661034611b5a2b7991a1a0d2c72d470ed302a7c8e",
+              "based_on": "70b6a627cca2c3f37b84bd6504874a191fa2bd0715efd4dff83f5ec4d167b2aa",
               "status": "ai-draft"
             },
             "pt_BR": {
               "text": "Máquina de Flecheiro",
-              "based_on": "2eba6161a37e183a84fd8b0661034611b5a2b7991a1a0d2c72d470ed302a7c8e",
+              "based_on": "70b6a627cca2c3f37b84bd6504874a191fa2bd0715efd4dff83f5ec4d167b2aa",
               "status": "ai-draft"
             },
             "de_DE": {
               "text": "Pfeilmacher-Automat",
-              "based_on": "2eba6161a37e183a84fd8b0661034611b5a2b7991a1a0d2c72d470ed302a7c8e",
+              "based_on": "70b6a627cca2c3f37b84bd6504874a191fa2bd0715efd4dff83f5ec4d167b2aa",
               "status": "ai-draft"
             },
             "fr_FR": {
-              "text": "Distributeur : Fléchier",
-              "based_on": "2eba6161a37e183a84fd8b0661034611b5a2b7991a1a0d2c72d470ed302a7c8e",
+              "text": "Distributeur du fléchier",
+              "based_on": "70b6a627cca2c3f37b84bd6504874a191fa2bd0715efd4dff83f5ec4d167b2aa",
               "status": "ai-draft"
             },
             "pl_PL": {
               "text": "Automat łuczarza",
-              "based_on": "2eba6161a37e183a84fd8b0661034611b5a2b7991a1a0d2c72d470ed302a7c8e",
+              "based_on": "70b6a627cca2c3f37b84bd6504874a191fa2bd0715efd4dff83f5ec4d167b2aa",
               "status": "ai-draft"
             }
           }
@@ -687,43 +687,43 @@
           "placeholders": [],
           "translations": {
             "cs_CZ": {
-              "text": "Automat: Knihovník",
-              "based_on": "25a35a2b6efed9812502a7c556e07c78539fd89c1ab7a99263b860e5e43457b2",
+              "text": "Automat knihovníka",
+              "based_on": "856939b3bdffa9e3b9327a929b17e821be34025b430a72fd379621fc27fb8b2e",
               "status": "ai-draft"
             },
             "es_ES": {
               "text": "Máquina de bibliotecario",
-              "based_on": "25a35a2b6efed9812502a7c556e07c78539fd89c1ab7a99263b860e5e43457b2",
+              "based_on": "856939b3bdffa9e3b9327a929b17e821be34025b430a72fd379621fc27fb8b2e",
               "status": "ai-draft"
             },
             "es_MX": {
               "text": "Máquina de bibliotecario",
-              "based_on": "25a35a2b6efed9812502a7c556e07c78539fd89c1ab7a99263b860e5e43457b2",
+              "based_on": "856939b3bdffa9e3b9327a929b17e821be34025b430a72fd379621fc27fb8b2e",
               "status": "ai-draft"
             },
             "pt_PT": {
               "text": "Máquina de Bibliotecário",
-              "based_on": "25a35a2b6efed9812502a7c556e07c78539fd89c1ab7a99263b860e5e43457b2",
+              "based_on": "856939b3bdffa9e3b9327a929b17e821be34025b430a72fd379621fc27fb8b2e",
               "status": "ai-draft"
             },
             "pt_BR": {
               "text": "Máquina de Bibliotecário",
-              "based_on": "25a35a2b6efed9812502a7c556e07c78539fd89c1ab7a99263b860e5e43457b2",
+              "based_on": "856939b3bdffa9e3b9327a929b17e821be34025b430a72fd379621fc27fb8b2e",
               "status": "ai-draft"
             },
             "de_DE": {
               "text": "Bibliothekar-Automat",
-              "based_on": "25a35a2b6efed9812502a7c556e07c78539fd89c1ab7a99263b860e5e43457b2",
+              "based_on": "856939b3bdffa9e3b9327a929b17e821be34025b430a72fd379621fc27fb8b2e",
               "status": "ai-draft"
             },
             "fr_FR": {
-              "text": "Distributeur : Bibliothécaire",
-              "based_on": "25a35a2b6efed9812502a7c556e07c78539fd89c1ab7a99263b860e5e43457b2",
+              "text": "Distributeur du bibliothécaire",
+              "based_on": "856939b3bdffa9e3b9327a929b17e821be34025b430a72fd379621fc27fb8b2e",
               "status": "ai-draft"
             },
             "pl_PL": {
               "text": "Automat bibliotekarza",
-              "based_on": "25a35a2b6efed9812502a7c556e07c78539fd89c1ab7a99263b860e5e43457b2",
+              "based_on": "856939b3bdffa9e3b9327a929b17e821be34025b430a72fd379621fc27fb8b2e",
               "status": "ai-draft"
             }
           }
@@ -741,43 +741,43 @@
           "placeholders": [],
           "translations": {
             "cs_CZ": {
-              "text": "Automat: Knihovník",
-              "based_on": "25a35a2b6efed9812502a7c556e07c78539fd89c1ab7a99263b860e5e43457b2",
+              "text": "Automat knihovníka",
+              "based_on": "856939b3bdffa9e3b9327a929b17e821be34025b430a72fd379621fc27fb8b2e",
               "status": "ai-draft"
             },
             "es_ES": {
               "text": "Máquina de bibliotecario",
-              "based_on": "25a35a2b6efed9812502a7c556e07c78539fd89c1ab7a99263b860e5e43457b2",
+              "based_on": "856939b3bdffa9e3b9327a929b17e821be34025b430a72fd379621fc27fb8b2e",
               "status": "ai-draft"
             },
             "es_MX": {
               "text": "Máquina de bibliotecario",
-              "based_on": "25a35a2b6efed9812502a7c556e07c78539fd89c1ab7a99263b860e5e43457b2",
+              "based_on": "856939b3bdffa9e3b9327a929b17e821be34025b430a72fd379621fc27fb8b2e",
               "status": "ai-draft"
             },
             "pt_PT": {
               "text": "Máquina de Bibliotecário",
-              "based_on": "25a35a2b6efed9812502a7c556e07c78539fd89c1ab7a99263b860e5e43457b2",
+              "based_on": "856939b3bdffa9e3b9327a929b17e821be34025b430a72fd379621fc27fb8b2e",
               "status": "ai-draft"
             },
             "pt_BR": {
               "text": "Máquina de Bibliotecário",
-              "based_on": "25a35a2b6efed9812502a7c556e07c78539fd89c1ab7a99263b860e5e43457b2",
+              "based_on": "856939b3bdffa9e3b9327a929b17e821be34025b430a72fd379621fc27fb8b2e",
               "status": "ai-draft"
             },
             "de_DE": {
               "text": "Bibliothekar-Automat",
-              "based_on": "25a35a2b6efed9812502a7c556e07c78539fd89c1ab7a99263b860e5e43457b2",
+              "based_on": "856939b3bdffa9e3b9327a929b17e821be34025b430a72fd379621fc27fb8b2e",
               "status": "ai-draft"
             },
             "fr_FR": {
-              "text": "Distributeur : Bibliothécaire",
-              "based_on": "25a35a2b6efed9812502a7c556e07c78539fd89c1ab7a99263b860e5e43457b2",
+              "text": "Distributeur du bibliothécaire",
+              "based_on": "856939b3bdffa9e3b9327a929b17e821be34025b430a72fd379621fc27fb8b2e",
               "status": "ai-draft"
             },
             "pl_PL": {
               "text": "Automat bibliotekarza",
-              "based_on": "25a35a2b6efed9812502a7c556e07c78539fd89c1ab7a99263b860e5e43457b2",
+              "based_on": "856939b3bdffa9e3b9327a929b17e821be34025b430a72fd379621fc27fb8b2e",
               "status": "ai-draft"
             }
           }
@@ -795,43 +795,43 @@
           "placeholders": [],
           "translations": {
             "cs_CZ": {
-              "text": "Automat: Kartograf",
-              "based_on": "3a7cce0d154305e4ddc86b7d05c0e3d5e0ceee506ad862cc77ae5e459b357846",
+              "text": "Automat kartografa",
+              "based_on": "3f944ccf41e90d5b0fcb87b3653d167f80f07307f2a6d116ef405eb5af70ac20",
               "status": "ai-draft"
             },
             "es_ES": {
               "text": "Máquina de cartógrafo",
-              "based_on": "3a7cce0d154305e4ddc86b7d05c0e3d5e0ceee506ad862cc77ae5e459b357846",
+              "based_on": "3f944ccf41e90d5b0fcb87b3653d167f80f07307f2a6d116ef405eb5af70ac20",
               "status": "ai-draft"
             },
             "es_MX": {
               "text": "Máquina de cartógrafo",
-              "based_on": "3a7cce0d154305e4ddc86b7d05c0e3d5e0ceee506ad862cc77ae5e459b357846",
+              "based_on": "3f944ccf41e90d5b0fcb87b3653d167f80f07307f2a6d116ef405eb5af70ac20",
               "status": "ai-draft"
             },
             "pt_PT": {
               "text": "Máquina de Cartógrafo",
-              "based_on": "3a7cce0d154305e4ddc86b7d05c0e3d5e0ceee506ad862cc77ae5e459b357846",
+              "based_on": "3f944ccf41e90d5b0fcb87b3653d167f80f07307f2a6d116ef405eb5af70ac20",
               "status": "ai-draft"
             },
             "pt_BR": {
               "text": "Máquina de Cartógrafo",
-              "based_on": "3a7cce0d154305e4ddc86b7d05c0e3d5e0ceee506ad862cc77ae5e459b357846",
+              "based_on": "3f944ccf41e90d5b0fcb87b3653d167f80f07307f2a6d116ef405eb5af70ac20",
               "status": "ai-draft"
             },
             "de_DE": {
               "text": "Kartograf-Automat",
-              "based_on": "3a7cce0d154305e4ddc86b7d05c0e3d5e0ceee506ad862cc77ae5e459b357846",
+              "based_on": "3f944ccf41e90d5b0fcb87b3653d167f80f07307f2a6d116ef405eb5af70ac20",
               "status": "ai-draft"
             },
             "fr_FR": {
-              "text": "Distributeur : Cartographe",
-              "based_on": "3a7cce0d154305e4ddc86b7d05c0e3d5e0ceee506ad862cc77ae5e459b357846",
+              "text": "Distributeur du cartographe",
+              "based_on": "3f944ccf41e90d5b0fcb87b3653d167f80f07307f2a6d116ef405eb5af70ac20",
               "status": "ai-draft"
             },
             "pl_PL": {
               "text": "Automat kartografa",
-              "based_on": "3a7cce0d154305e4ddc86b7d05c0e3d5e0ceee506ad862cc77ae5e459b357846",
+              "based_on": "3f944ccf41e90d5b0fcb87b3653d167f80f07307f2a6d116ef405eb5af70ac20",
               "status": "ai-draft"
             }
           }
@@ -849,43 +849,43 @@
           "placeholders": [],
           "translations": {
             "cs_CZ": {
-              "text": "Automat: Kartograf",
-              "based_on": "3a7cce0d154305e4ddc86b7d05c0e3d5e0ceee506ad862cc77ae5e459b357846",
+              "text": "Automat kartografa",
+              "based_on": "3f944ccf41e90d5b0fcb87b3653d167f80f07307f2a6d116ef405eb5af70ac20",
               "status": "ai-draft"
             },
             "es_ES": {
               "text": "Máquina de cartógrafo",
-              "based_on": "3a7cce0d154305e4ddc86b7d05c0e3d5e0ceee506ad862cc77ae5e459b357846",
+              "based_on": "3f944ccf41e90d5b0fcb87b3653d167f80f07307f2a6d116ef405eb5af70ac20",
               "status": "ai-draft"
             },
             "es_MX": {
               "text": "Máquina de cartógrafo",
-              "based_on": "3a7cce0d154305e4ddc86b7d05c0e3d5e0ceee506ad862cc77ae5e459b357846",
+              "based_on": "3f944ccf41e90d5b0fcb87b3653d167f80f07307f2a6d116ef405eb5af70ac20",
               "status": "ai-draft"
             },
             "pt_PT": {
               "text": "Máquina de Cartógrafo",
-              "based_on": "3a7cce0d154305e4ddc86b7d05c0e3d5e0ceee506ad862cc77ae5e459b357846",
+              "based_on": "3f944ccf41e90d5b0fcb87b3653d167f80f07307f2a6d116ef405eb5af70ac20",
               "status": "ai-draft"
             },
             "pt_BR": {
               "text": "Máquina de Cartógrafo",
-              "based_on": "3a7cce0d154305e4ddc86b7d05c0e3d5e0ceee506ad862cc77ae5e459b357846",
+              "based_on": "3f944ccf41e90d5b0fcb87b3653d167f80f07307f2a6d116ef405eb5af70ac20",
               "status": "ai-draft"
             },
             "de_DE": {
               "text": "Kartograf-Automat",
-              "based_on": "3a7cce0d154305e4ddc86b7d05c0e3d5e0ceee506ad862cc77ae5e459b357846",
+              "based_on": "3f944ccf41e90d5b0fcb87b3653d167f80f07307f2a6d116ef405eb5af70ac20",
               "status": "ai-draft"
             },
             "fr_FR": {
-              "text": "Distributeur : Cartographe",
-              "based_on": "3a7cce0d154305e4ddc86b7d05c0e3d5e0ceee506ad862cc77ae5e459b357846",
+              "text": "Distributeur du cartographe",
+              "based_on": "3f944ccf41e90d5b0fcb87b3653d167f80f07307f2a6d116ef405eb5af70ac20",
               "status": "ai-draft"
             },
             "pl_PL": {
               "text": "Automat kartografa",
-              "based_on": "3a7cce0d154305e4ddc86b7d05c0e3d5e0ceee506ad862cc77ae5e459b357846",
+              "based_on": "3f944ccf41e90d5b0fcb87b3653d167f80f07307f2a6d116ef405eb5af70ac20",
               "status": "ai-draft"
             }
           }
@@ -903,43 +903,43 @@
           "placeholders": [],
           "translations": {
             "cs_CZ": {
-              "text": "Automat: Klerik",
-              "based_on": "760790c42c80f96f2a92df692cf385524c7fd7200d8fac28386d8a9d6cc21750",
+              "text": "Automat klerika",
+              "based_on": "a333f2f055c891361fa1faa9a9a6651c46915f972b143db4f2b74db2399cb9f5",
               "status": "ai-draft"
             },
             "es_ES": {
               "text": "Máquina de clérigo",
-              "based_on": "760790c42c80f96f2a92df692cf385524c7fd7200d8fac28386d8a9d6cc21750",
+              "based_on": "a333f2f055c891361fa1faa9a9a6651c46915f972b143db4f2b74db2399cb9f5",
               "status": "ai-draft"
             },
             "es_MX": {
               "text": "Máquina de clérigo",
-              "based_on": "760790c42c80f96f2a92df692cf385524c7fd7200d8fac28386d8a9d6cc21750",
+              "based_on": "a333f2f055c891361fa1faa9a9a6651c46915f972b143db4f2b74db2399cb9f5",
               "status": "ai-draft"
             },
             "pt_PT": {
               "text": "Máquina de Clérigo",
-              "based_on": "760790c42c80f96f2a92df692cf385524c7fd7200d8fac28386d8a9d6cc21750",
+              "based_on": "a333f2f055c891361fa1faa9a9a6651c46915f972b143db4f2b74db2399cb9f5",
               "status": "ai-draft"
             },
             "pt_BR": {
               "text": "Máquina de Clérigo",
-              "based_on": "760790c42c80f96f2a92df692cf385524c7fd7200d8fac28386d8a9d6cc21750",
+              "based_on": "a333f2f055c891361fa1faa9a9a6651c46915f972b143db4f2b74db2399cb9f5",
               "status": "ai-draft"
             },
             "de_DE": {
               "text": "Geistlichen-Automat",
-              "based_on": "760790c42c80f96f2a92df692cf385524c7fd7200d8fac28386d8a9d6cc21750",
+              "based_on": "a333f2f055c891361fa1faa9a9a6651c46915f972b143db4f2b74db2399cb9f5",
               "status": "ai-draft"
             },
             "fr_FR": {
-              "text": "Distributeur : Prêtre",
-              "based_on": "760790c42c80f96f2a92df692cf385524c7fd7200d8fac28386d8a9d6cc21750",
+              "text": "Distributeur du prêtre",
+              "based_on": "a333f2f055c891361fa1faa9a9a6651c46915f972b143db4f2b74db2399cb9f5",
               "status": "ai-draft"
             },
             "pl_PL": {
               "text": "Automat kapłana",
-              "based_on": "760790c42c80f96f2a92df692cf385524c7fd7200d8fac28386d8a9d6cc21750",
+              "based_on": "a333f2f055c891361fa1faa9a9a6651c46915f972b143db4f2b74db2399cb9f5",
               "status": "ai-draft"
             }
           }
@@ -957,43 +957,43 @@
           "placeholders": [],
           "translations": {
             "cs_CZ": {
-              "text": "Automat: Klerik",
-              "based_on": "760790c42c80f96f2a92df692cf385524c7fd7200d8fac28386d8a9d6cc21750",
+              "text": "Automat klerika",
+              "based_on": "a333f2f055c891361fa1faa9a9a6651c46915f972b143db4f2b74db2399cb9f5",
               "status": "ai-draft"
             },
             "es_ES": {
               "text": "Máquina de clérigo",
-              "based_on": "760790c42c80f96f2a92df692cf385524c7fd7200d8fac28386d8a9d6cc21750",
+              "based_on": "a333f2f055c891361fa1faa9a9a6651c46915f972b143db4f2b74db2399cb9f5",
               "status": "ai-draft"
             },
             "es_MX": {
               "text": "Máquina de clérigo",
-              "based_on": "760790c42c80f96f2a92df692cf385524c7fd7200d8fac28386d8a9d6cc21750",
+              "based_on": "a333f2f055c891361fa1faa9a9a6651c46915f972b143db4f2b74db2399cb9f5",
               "status": "ai-draft"
             },
             "pt_PT": {
               "text": "Máquina de Clérigo",
-              "based_on": "760790c42c80f96f2a92df692cf385524c7fd7200d8fac28386d8a9d6cc21750",
+              "based_on": "a333f2f055c891361fa1faa9a9a6651c46915f972b143db4f2b74db2399cb9f5",
               "status": "ai-draft"
             },
             "pt_BR": {
               "text": "Máquina de Clérigo",
-              "based_on": "760790c42c80f96f2a92df692cf385524c7fd7200d8fac28386d8a9d6cc21750",
+              "based_on": "a333f2f055c891361fa1faa9a9a6651c46915f972b143db4f2b74db2399cb9f5",
               "status": "ai-draft"
             },
             "de_DE": {
               "text": "Geistlichen-Automat",
-              "based_on": "760790c42c80f96f2a92df692cf385524c7fd7200d8fac28386d8a9d6cc21750",
+              "based_on": "a333f2f055c891361fa1faa9a9a6651c46915f972b143db4f2b74db2399cb9f5",
               "status": "ai-draft"
             },
             "fr_FR": {
-              "text": "Distributeur : Prêtre",
-              "based_on": "760790c42c80f96f2a92df692cf385524c7fd7200d8fac28386d8a9d6cc21750",
+              "text": "Distributeur du prêtre",
+              "based_on": "a333f2f055c891361fa1faa9a9a6651c46915f972b143db4f2b74db2399cb9f5",
               "status": "ai-draft"
             },
             "pl_PL": {
               "text": "Automat kapłana",
-              "based_on": "760790c42c80f96f2a92df692cf385524c7fd7200d8fac28386d8a9d6cc21750",
+              "based_on": "a333f2f055c891361fa1faa9a9a6651c46915f972b143db4f2b74db2399cb9f5",
               "status": "ai-draft"
             }
           }
@@ -1011,43 +1011,43 @@
           "placeholders": [],
           "translations": {
             "cs_CZ": {
-              "text": "Automat: Zbrojíř",
-              "based_on": "88ee826a64563f74df7622794837c3204dbfdcb9423962b9e600856e20b68151",
+              "text": "Automat zbrojíře",
+              "based_on": "dcd286557ee7e898a77387103a8941d901562e0578401e55de78f538a8a69567",
               "status": "ai-draft"
             },
             "es_ES": {
               "text": "Máquina de armero",
-              "based_on": "88ee826a64563f74df7622794837c3204dbfdcb9423962b9e600856e20b68151",
+              "based_on": "dcd286557ee7e898a77387103a8941d901562e0578401e55de78f538a8a69567",
               "status": "ai-draft"
             },
             "es_MX": {
               "text": "Máquina de armero",
-              "based_on": "88ee826a64563f74df7622794837c3204dbfdcb9423962b9e600856e20b68151",
+              "based_on": "dcd286557ee7e898a77387103a8941d901562e0578401e55de78f538a8a69567",
               "status": "ai-draft"
             },
             "pt_PT": {
               "text": "Máquina de Vendedor de Armaduras",
-              "based_on": "88ee826a64563f74df7622794837c3204dbfdcb9423962b9e600856e20b68151",
+              "based_on": "dcd286557ee7e898a77387103a8941d901562e0578401e55de78f538a8a69567",
               "status": "ai-draft"
             },
             "pt_BR": {
               "text": "Máquina de Armadureiro",
-              "based_on": "88ee826a64563f74df7622794837c3204dbfdcb9423962b9e600856e20b68151",
+              "based_on": "dcd286557ee7e898a77387103a8941d901562e0578401e55de78f538a8a69567",
               "status": "ai-draft"
             },
             "de_DE": {
               "text": "Rüstungsschmied-Automat",
-              "based_on": "88ee826a64563f74df7622794837c3204dbfdcb9423962b9e600856e20b68151",
+              "based_on": "dcd286557ee7e898a77387103a8941d901562e0578401e55de78f538a8a69567",
               "status": "ai-draft"
             },
             "fr_FR": {
-              "text": "Distributeur : Armurier",
-              "based_on": "88ee826a64563f74df7622794837c3204dbfdcb9423962b9e600856e20b68151",
+              "text": "Distributeur de l’armurier",
+              "based_on": "dcd286557ee7e898a77387103a8941d901562e0578401e55de78f538a8a69567",
               "status": "ai-draft"
             },
             "pl_PL": {
               "text": "Automat płatnerza",
-              "based_on": "88ee826a64563f74df7622794837c3204dbfdcb9423962b9e600856e20b68151",
+              "based_on": "dcd286557ee7e898a77387103a8941d901562e0578401e55de78f538a8a69567",
               "status": "ai-draft"
             }
           }
@@ -1065,43 +1065,43 @@
           "placeholders": [],
           "translations": {
             "cs_CZ": {
-              "text": "Automat: Zbrojíř",
-              "based_on": "88ee826a64563f74df7622794837c3204dbfdcb9423962b9e600856e20b68151",
+              "text": "Automat zbrojíře",
+              "based_on": "dcd286557ee7e898a77387103a8941d901562e0578401e55de78f538a8a69567",
               "status": "ai-draft"
             },
             "es_ES": {
               "text": "Máquina de armero",
-              "based_on": "88ee826a64563f74df7622794837c3204dbfdcb9423962b9e600856e20b68151",
+              "based_on": "dcd286557ee7e898a77387103a8941d901562e0578401e55de78f538a8a69567",
               "status": "ai-draft"
             },
             "es_MX": {
               "text": "Máquina de armero",
-              "based_on": "88ee826a64563f74df7622794837c3204dbfdcb9423962b9e600856e20b68151",
+              "based_on": "dcd286557ee7e898a77387103a8941d901562e0578401e55de78f538a8a69567",
               "status": "ai-draft"
             },
             "pt_PT": {
               "text": "Máquina de Vendedor de Armaduras",
-              "based_on": "88ee826a64563f74df7622794837c3204dbfdcb9423962b9e600856e20b68151",
+              "based_on": "dcd286557ee7e898a77387103a8941d901562e0578401e55de78f538a8a69567",
               "status": "ai-draft"
             },
             "pt_BR": {
               "text": "Máquina de Armadureiro",
-              "based_on": "88ee826a64563f74df7622794837c3204dbfdcb9423962b9e600856e20b68151",
+              "based_on": "dcd286557ee7e898a77387103a8941d901562e0578401e55de78f538a8a69567",
               "status": "ai-draft"
             },
             "de_DE": {
               "text": "Rüstungsschmied-Automat",
-              "based_on": "88ee826a64563f74df7622794837c3204dbfdcb9423962b9e600856e20b68151",
+              "based_on": "dcd286557ee7e898a77387103a8941d901562e0578401e55de78f538a8a69567",
               "status": "ai-draft"
             },
             "fr_FR": {
-              "text": "Distributeur : Armurier",
-              "based_on": "88ee826a64563f74df7622794837c3204dbfdcb9423962b9e600856e20b68151",
+              "text": "Distributeur de l’armurier",
+              "based_on": "dcd286557ee7e898a77387103a8941d901562e0578401e55de78f538a8a69567",
               "status": "ai-draft"
             },
             "pl_PL": {
               "text": "Automat płatnerza",
-              "based_on": "88ee826a64563f74df7622794837c3204dbfdcb9423962b9e600856e20b68151",
+              "based_on": "dcd286557ee7e898a77387103a8941d901562e0578401e55de78f538a8a69567",
               "status": "ai-draft"
             }
           }
@@ -1119,43 +1119,43 @@
           "placeholders": [],
           "translations": {
             "cs_CZ": {
-              "text": "Automat: Mečíř",
-              "based_on": "a579da754d7594093348e031371e05d0bad13a5727f2dde0dccfb04886754f75",
+              "text": "Automat mečíře",
+              "based_on": "3f3ec3d732ac2890280f42c2baedd6d15784ab3e00658c40ea5076631190c49d",
               "status": "ai-draft"
             },
             "es_ES": {
               "text": "Máquina de herrero de armas",
-              "based_on": "a579da754d7594093348e031371e05d0bad13a5727f2dde0dccfb04886754f75",
+              "based_on": "3f3ec3d732ac2890280f42c2baedd6d15784ab3e00658c40ea5076631190c49d",
               "status": "ai-draft"
             },
             "es_MX": {
               "text": "Máquina de herrero de armas",
-              "based_on": "a579da754d7594093348e031371e05d0bad13a5727f2dde0dccfb04886754f75",
+              "based_on": "3f3ec3d732ac2890280f42c2baedd6d15784ab3e00658c40ea5076631190c49d",
               "status": "ai-draft"
             },
             "pt_PT": {
               "text": "Máquina de Armeiro",
-              "based_on": "a579da754d7594093348e031371e05d0bad13a5727f2dde0dccfb04886754f75",
+              "based_on": "3f3ec3d732ac2890280f42c2baedd6d15784ab3e00658c40ea5076631190c49d",
               "status": "ai-draft"
             },
             "pt_BR": {
               "text": "Máquina de Armeiro",
-              "based_on": "a579da754d7594093348e031371e05d0bad13a5727f2dde0dccfb04886754f75",
+              "based_on": "3f3ec3d732ac2890280f42c2baedd6d15784ab3e00658c40ea5076631190c49d",
               "status": "ai-draft"
             },
             "de_DE": {
               "text": "Waffenschmied-Automat",
-              "based_on": "a579da754d7594093348e031371e05d0bad13a5727f2dde0dccfb04886754f75",
+              "based_on": "3f3ec3d732ac2890280f42c2baedd6d15784ab3e00658c40ea5076631190c49d",
               "status": "ai-draft"
             },
             "fr_FR": {
-              "text": "Distributeur : Forgeron (armes)",
-              "based_on": "a579da754d7594093348e031371e05d0bad13a5727f2dde0dccfb04886754f75",
+              "text": "Distributeur du forgeron d’armes",
+              "based_on": "3f3ec3d732ac2890280f42c2baedd6d15784ab3e00658c40ea5076631190c49d",
               "status": "ai-draft"
             },
             "pl_PL": {
               "text": "Automat zbrojmistrza",
-              "based_on": "a579da754d7594093348e031371e05d0bad13a5727f2dde0dccfb04886754f75",
+              "based_on": "3f3ec3d732ac2890280f42c2baedd6d15784ab3e00658c40ea5076631190c49d",
               "status": "ai-draft"
             }
           }
@@ -1173,43 +1173,43 @@
           "placeholders": [],
           "translations": {
             "cs_CZ": {
-              "text": "Automat: Mečíř",
-              "based_on": "a579da754d7594093348e031371e05d0bad13a5727f2dde0dccfb04886754f75",
+              "text": "Automat mečíře",
+              "based_on": "3f3ec3d732ac2890280f42c2baedd6d15784ab3e00658c40ea5076631190c49d",
               "status": "ai-draft"
             },
             "es_ES": {
               "text": "Máquina de herrero de armas",
-              "based_on": "a579da754d7594093348e031371e05d0bad13a5727f2dde0dccfb04886754f75",
+              "based_on": "3f3ec3d732ac2890280f42c2baedd6d15784ab3e00658c40ea5076631190c49d",
               "status": "ai-draft"
             },
             "es_MX": {
               "text": "Máquina de herrero de armas",
-              "based_on": "a579da754d7594093348e031371e05d0bad13a5727f2dde0dccfb04886754f75",
+              "based_on": "3f3ec3d732ac2890280f42c2baedd6d15784ab3e00658c40ea5076631190c49d",
               "status": "ai-draft"
             },
             "pt_PT": {
               "text": "Máquina de Armeiro",
-              "based_on": "a579da754d7594093348e031371e05d0bad13a5727f2dde0dccfb04886754f75",
+              "based_on": "3f3ec3d732ac2890280f42c2baedd6d15784ab3e00658c40ea5076631190c49d",
               "status": "ai-draft"
             },
             "pt_BR": {
               "text": "Máquina de Armeiro",
-              "based_on": "a579da754d7594093348e031371e05d0bad13a5727f2dde0dccfb04886754f75",
+              "based_on": "3f3ec3d732ac2890280f42c2baedd6d15784ab3e00658c40ea5076631190c49d",
               "status": "ai-draft"
             },
             "de_DE": {
               "text": "Waffenschmied-Automat",
-              "based_on": "a579da754d7594093348e031371e05d0bad13a5727f2dde0dccfb04886754f75",
+              "based_on": "3f3ec3d732ac2890280f42c2baedd6d15784ab3e00658c40ea5076631190c49d",
               "status": "ai-draft"
             },
             "fr_FR": {
-              "text": "Distributeur : Forgeron (armes)",
-              "based_on": "a579da754d7594093348e031371e05d0bad13a5727f2dde0dccfb04886754f75",
+              "text": "Distributeur du forgeron d’armes",
+              "based_on": "3f3ec3d732ac2890280f42c2baedd6d15784ab3e00658c40ea5076631190c49d",
               "status": "ai-draft"
             },
             "pl_PL": {
               "text": "Automat zbrojmistrza",
-              "based_on": "a579da754d7594093348e031371e05d0bad13a5727f2dde0dccfb04886754f75",
+              "based_on": "3f3ec3d732ac2890280f42c2baedd6d15784ab3e00658c40ea5076631190c49d",
               "status": "ai-draft"
             }
           }
@@ -1227,43 +1227,43 @@
           "placeholders": [],
           "translations": {
             "cs_CZ": {
-              "text": "Automat: Nástrojář",
-              "based_on": "5c5df2149762ac5dd43101d80f66acf792374a6b0c8b757bc6ecbeaacc00d5a5",
+              "text": "Automat nástrojáře",
+              "based_on": "08ecc984c180f0bc7fb08620eb792c9e96e3a8c6a6f29c5a3ae9c7dc5b86f138",
               "status": "ai-draft"
             },
             "es_ES": {
               "text": "Máquina de ferretero",
-              "based_on": "5c5df2149762ac5dd43101d80f66acf792374a6b0c8b757bc6ecbeaacc00d5a5",
+              "based_on": "08ecc984c180f0bc7fb08620eb792c9e96e3a8c6a6f29c5a3ae9c7dc5b86f138",
               "status": "ai-draft"
             },
             "es_MX": {
               "text": "Máquina de ferretero",
-              "based_on": "5c5df2149762ac5dd43101d80f66acf792374a6b0c8b757bc6ecbeaacc00d5a5",
+              "based_on": "08ecc984c180f0bc7fb08620eb792c9e96e3a8c6a6f29c5a3ae9c7dc5b86f138",
               "status": "ai-draft"
             },
             "pt_PT": {
               "text": "Máquina de Ferreiro",
-              "based_on": "5c5df2149762ac5dd43101d80f66acf792374a6b0c8b757bc6ecbeaacc00d5a5",
+              "based_on": "08ecc984c180f0bc7fb08620eb792c9e96e3a8c6a6f29c5a3ae9c7dc5b86f138",
               "status": "ai-draft"
             },
             "pt_BR": {
               "text": "Máquina de Ferramenteiro",
-              "based_on": "5c5df2149762ac5dd43101d80f66acf792374a6b0c8b757bc6ecbeaacc00d5a5",
+              "based_on": "08ecc984c180f0bc7fb08620eb792c9e96e3a8c6a6f29c5a3ae9c7dc5b86f138",
               "status": "ai-draft"
             },
             "de_DE": {
               "text": "Werkzeugschmied-Automat",
-              "based_on": "5c5df2149762ac5dd43101d80f66acf792374a6b0c8b757bc6ecbeaacc00d5a5",
+              "based_on": "08ecc984c180f0bc7fb08620eb792c9e96e3a8c6a6f29c5a3ae9c7dc5b86f138",
               "status": "ai-draft"
             },
             "fr_FR": {
-              "text": "Distributeur : Forgeron (outils)",
-              "based_on": "5c5df2149762ac5dd43101d80f66acf792374a6b0c8b757bc6ecbeaacc00d5a5",
+              "text": "Distributeur du forgeron d’outils",
+              "based_on": "08ecc984c180f0bc7fb08620eb792c9e96e3a8c6a6f29c5a3ae9c7dc5b86f138",
               "status": "ai-draft"
             },
             "pl_PL": {
               "text": "Automat wytwórcy narzędzi",
-              "based_on": "5c5df2149762ac5dd43101d80f66acf792374a6b0c8b757bc6ecbeaacc00d5a5",
+              "based_on": "08ecc984c180f0bc7fb08620eb792c9e96e3a8c6a6f29c5a3ae9c7dc5b86f138",
               "status": "ai-draft"
             }
           }
@@ -1281,43 +1281,43 @@
           "placeholders": [],
           "translations": {
             "cs_CZ": {
-              "text": "Automat: Nástrojář",
-              "based_on": "5c5df2149762ac5dd43101d80f66acf792374a6b0c8b757bc6ecbeaacc00d5a5",
+              "text": "Automat nástrojáře",
+              "based_on": "08ecc984c180f0bc7fb08620eb792c9e96e3a8c6a6f29c5a3ae9c7dc5b86f138",
               "status": "ai-draft"
             },
             "es_ES": {
               "text": "Máquina de ferretero",
-              "based_on": "5c5df2149762ac5dd43101d80f66acf792374a6b0c8b757bc6ecbeaacc00d5a5",
+              "based_on": "08ecc984c180f0bc7fb08620eb792c9e96e3a8c6a6f29c5a3ae9c7dc5b86f138",
               "status": "ai-draft"
             },
             "es_MX": {
               "text": "Máquina de ferretero",
-              "based_on": "5c5df2149762ac5dd43101d80f66acf792374a6b0c8b757bc6ecbeaacc00d5a5",
+              "based_on": "08ecc984c180f0bc7fb08620eb792c9e96e3a8c6a6f29c5a3ae9c7dc5b86f138",
               "status": "ai-draft"
             },
             "pt_PT": {
               "text": "Máquina de Ferreiro",
-              "based_on": "5c5df2149762ac5dd43101d80f66acf792374a6b0c8b757bc6ecbeaacc00d5a5",
+              "based_on": "08ecc984c180f0bc7fb08620eb792c9e96e3a8c6a6f29c5a3ae9c7dc5b86f138",
               "status": "ai-draft"
             },
             "pt_BR": {
               "text": "Máquina de Ferramenteiro",
-              "based_on": "5c5df2149762ac5dd43101d80f66acf792374a6b0c8b757bc6ecbeaacc00d5a5",
+              "based_on": "08ecc984c180f0bc7fb08620eb792c9e96e3a8c6a6f29c5a3ae9c7dc5b86f138",
               "status": "ai-draft"
             },
             "de_DE": {
               "text": "Werkzeugschmied-Automat",
-              "based_on": "5c5df2149762ac5dd43101d80f66acf792374a6b0c8b757bc6ecbeaacc00d5a5",
+              "based_on": "08ecc984c180f0bc7fb08620eb792c9e96e3a8c6a6f29c5a3ae9c7dc5b86f138",
               "status": "ai-draft"
             },
             "fr_FR": {
-              "text": "Distributeur : Forgeron (outils)",
-              "based_on": "5c5df2149762ac5dd43101d80f66acf792374a6b0c8b757bc6ecbeaacc00d5a5",
+              "text": "Distributeur du forgeron d’outils",
+              "based_on": "08ecc984c180f0bc7fb08620eb792c9e96e3a8c6a6f29c5a3ae9c7dc5b86f138",
               "status": "ai-draft"
             },
             "pl_PL": {
               "text": "Automat wytwórcy narzędzi",
-              "based_on": "5c5df2149762ac5dd43101d80f66acf792374a6b0c8b757bc6ecbeaacc00d5a5",
+              "based_on": "08ecc984c180f0bc7fb08620eb792c9e96e3a8c6a6f29c5a3ae9c7dc5b86f138",
               "status": "ai-draft"
             }
           }
@@ -1335,43 +1335,43 @@
           "placeholders": [],
           "translations": {
             "cs_CZ": {
-              "text": "Automat: Řezník",
-              "based_on": "1a0f5550f1394d75c62ad0d6d02ce08e45ef092f6f996084fd8de9d1ac074907",
+              "text": "Automat řezníka",
+              "based_on": "8c0526c4967da1fee9e0c09f43215fd859687fc7783a3a20876b787149d4da8c",
               "status": "ai-draft"
             },
             "es_ES": {
               "text": "Máquina de carnicero",
-              "based_on": "1a0f5550f1394d75c62ad0d6d02ce08e45ef092f6f996084fd8de9d1ac074907",
+              "based_on": "8c0526c4967da1fee9e0c09f43215fd859687fc7783a3a20876b787149d4da8c",
               "status": "ai-draft"
             },
             "es_MX": {
               "text": "Máquina de carnicero",
-              "based_on": "1a0f5550f1394d75c62ad0d6d02ce08e45ef092f6f996084fd8de9d1ac074907",
+              "based_on": "8c0526c4967da1fee9e0c09f43215fd859687fc7783a3a20876b787149d4da8c",
               "status": "ai-draft"
             },
             "pt_PT": {
               "text": "Máquina de Talhante",
-              "based_on": "1a0f5550f1394d75c62ad0d6d02ce08e45ef092f6f996084fd8de9d1ac074907",
+              "based_on": "8c0526c4967da1fee9e0c09f43215fd859687fc7783a3a20876b787149d4da8c",
               "status": "ai-draft"
             },
             "pt_BR": {
               "text": "Máquina de Açougueiro",
-              "based_on": "1a0f5550f1394d75c62ad0d6d02ce08e45ef092f6f996084fd8de9d1ac074907",
+              "based_on": "8c0526c4967da1fee9e0c09f43215fd859687fc7783a3a20876b787149d4da8c",
               "status": "ai-draft"
             },
             "de_DE": {
               "text": "Metzger-Automat",
-              "based_on": "1a0f5550f1394d75c62ad0d6d02ce08e45ef092f6f996084fd8de9d1ac074907",
+              "based_on": "8c0526c4967da1fee9e0c09f43215fd859687fc7783a3a20876b787149d4da8c",
               "status": "ai-draft"
             },
             "fr_FR": {
-              "text": "Distributeur : Boucher",
-              "based_on": "1a0f5550f1394d75c62ad0d6d02ce08e45ef092f6f996084fd8de9d1ac074907",
+              "text": "Distributeur du boucher",
+              "based_on": "8c0526c4967da1fee9e0c09f43215fd859687fc7783a3a20876b787149d4da8c",
               "status": "ai-draft"
             },
             "pl_PL": {
               "text": "Automat rzeźnika",
-              "based_on": "1a0f5550f1394d75c62ad0d6d02ce08e45ef092f6f996084fd8de9d1ac074907",
+              "based_on": "8c0526c4967da1fee9e0c09f43215fd859687fc7783a3a20876b787149d4da8c",
               "status": "ai-draft"
             }
           }
@@ -1389,43 +1389,43 @@
           "placeholders": [],
           "translations": {
             "cs_CZ": {
-              "text": "Automat: Řezník",
-              "based_on": "1a0f5550f1394d75c62ad0d6d02ce08e45ef092f6f996084fd8de9d1ac074907",
+              "text": "Automat řezníka",
+              "based_on": "8c0526c4967da1fee9e0c09f43215fd859687fc7783a3a20876b787149d4da8c",
               "status": "ai-draft"
             },
             "es_ES": {
               "text": "Máquina de carnicero",
-              "based_on": "1a0f5550f1394d75c62ad0d6d02ce08e45ef092f6f996084fd8de9d1ac074907",
+              "based_on": "8c0526c4967da1fee9e0c09f43215fd859687fc7783a3a20876b787149d4da8c",
               "status": "ai-draft"
             },
             "es_MX": {
               "text": "Máquina de carnicero",
-              "based_on": "1a0f5550f1394d75c62ad0d6d02ce08e45ef092f6f996084fd8de9d1ac074907",
+              "based_on": "8c0526c4967da1fee9e0c09f43215fd859687fc7783a3a20876b787149d4da8c",
               "status": "ai-draft"
             },
             "pt_PT": {
               "text": "Máquina de Talhante",
-              "based_on": "1a0f5550f1394d75c62ad0d6d02ce08e45ef092f6f996084fd8de9d1ac074907",
+              "based_on": "8c0526c4967da1fee9e0c09f43215fd859687fc7783a3a20876b787149d4da8c",
               "status": "ai-draft"
             },
             "pt_BR": {
               "text": "Máquina de Açougueiro",
-              "based_on": "1a0f5550f1394d75c62ad0d6d02ce08e45ef092f6f996084fd8de9d1ac074907",
+              "based_on": "8c0526c4967da1fee9e0c09f43215fd859687fc7783a3a20876b787149d4da8c",
               "status": "ai-draft"
             },
             "de_DE": {
               "text": "Metzger-Automat",
-              "based_on": "1a0f5550f1394d75c62ad0d6d02ce08e45ef092f6f996084fd8de9d1ac074907",
+              "based_on": "8c0526c4967da1fee9e0c09f43215fd859687fc7783a3a20876b787149d4da8c",
               "status": "ai-draft"
             },
             "fr_FR": {
-              "text": "Distributeur : Boucher",
-              "based_on": "1a0f5550f1394d75c62ad0d6d02ce08e45ef092f6f996084fd8de9d1ac074907",
+              "text": "Distributeur du boucher",
+              "based_on": "8c0526c4967da1fee9e0c09f43215fd859687fc7783a3a20876b787149d4da8c",
               "status": "ai-draft"
             },
             "pl_PL": {
               "text": "Automat rzeźnika",
-              "based_on": "1a0f5550f1394d75c62ad0d6d02ce08e45ef092f6f996084fd8de9d1ac074907",
+              "based_on": "8c0526c4967da1fee9e0c09f43215fd859687fc7783a3a20876b787149d4da8c",
               "status": "ai-draft"
             }
           }
@@ -1443,43 +1443,43 @@
           "placeholders": [],
           "translations": {
             "cs_CZ": {
-              "text": "Automat: Koželuh",
-              "based_on": "7342c00b354f882b77f6b285e5422b85fe60b09d03c02fa20d740264569c3305",
+              "text": "Automat koželuha",
+              "based_on": "af1129e6e5a52296d4f5e21d85e9f4c20c3c42f7c535492afca93abc317ea071",
               "status": "ai-draft"
             },
             "es_ES": {
               "text": "Máquina de curtidor",
-              "based_on": "7342c00b354f882b77f6b285e5422b85fe60b09d03c02fa20d740264569c3305",
+              "based_on": "af1129e6e5a52296d4f5e21d85e9f4c20c3c42f7c535492afca93abc317ea071",
               "status": "ai-draft"
             },
             "es_MX": {
               "text": "Máquina de curtidor",
-              "based_on": "7342c00b354f882b77f6b285e5422b85fe60b09d03c02fa20d740264569c3305",
+              "based_on": "af1129e6e5a52296d4f5e21d85e9f4c20c3c42f7c535492afca93abc317ea071",
               "status": "ai-draft"
             },
             "pt_PT": {
               "text": "Máquina de Coureiro",
-              "based_on": "7342c00b354f882b77f6b285e5422b85fe60b09d03c02fa20d740264569c3305",
+              "based_on": "af1129e6e5a52296d4f5e21d85e9f4c20c3c42f7c535492afca93abc317ea071",
               "status": "ai-draft"
             },
             "pt_BR": {
               "text": "Máquina de Coureiro",
-              "based_on": "7342c00b354f882b77f6b285e5422b85fe60b09d03c02fa20d740264569c3305",
+              "based_on": "af1129e6e5a52296d4f5e21d85e9f4c20c3c42f7c535492afca93abc317ea071",
               "status": "ai-draft"
             },
             "de_DE": {
               "text": "Gerber-Automat",
-              "based_on": "7342c00b354f882b77f6b285e5422b85fe60b09d03c02fa20d740264569c3305",
+              "based_on": "af1129e6e5a52296d4f5e21d85e9f4c20c3c42f7c535492afca93abc317ea071",
               "status": "ai-draft"
             },
             "fr_FR": {
-              "text": "Distributeur : Tanneur",
-              "based_on": "7342c00b354f882b77f6b285e5422b85fe60b09d03c02fa20d740264569c3305",
+              "text": "Distributeur du tanneur",
+              "based_on": "af1129e6e5a52296d4f5e21d85e9f4c20c3c42f7c535492afca93abc317ea071",
               "status": "ai-draft"
             },
             "pl_PL": {
               "text": "Automat rymarza",
-              "based_on": "7342c00b354f882b77f6b285e5422b85fe60b09d03c02fa20d740264569c3305",
+              "based_on": "af1129e6e5a52296d4f5e21d85e9f4c20c3c42f7c535492afca93abc317ea071",
               "status": "ai-draft"
             }
           }
@@ -1497,43 +1497,43 @@
           "placeholders": [],
           "translations": {
             "cs_CZ": {
-              "text": "Automat: Koželuh",
-              "based_on": "7342c00b354f882b77f6b285e5422b85fe60b09d03c02fa20d740264569c3305",
+              "text": "Automat koželuha",
+              "based_on": "af1129e6e5a52296d4f5e21d85e9f4c20c3c42f7c535492afca93abc317ea071",
               "status": "ai-draft"
             },
             "es_ES": {
               "text": "Máquina de curtidor",
-              "based_on": "7342c00b354f882b77f6b285e5422b85fe60b09d03c02fa20d740264569c3305",
+              "based_on": "af1129e6e5a52296d4f5e21d85e9f4c20c3c42f7c535492afca93abc317ea071",
               "status": "ai-draft"
             },
             "es_MX": {
               "text": "Máquina de curtidor",
-              "based_on": "7342c00b354f882b77f6b285e5422b85fe60b09d03c02fa20d740264569c3305",
+              "based_on": "af1129e6e5a52296d4f5e21d85e9f4c20c3c42f7c535492afca93abc317ea071",
               "status": "ai-draft"
             },
             "pt_PT": {
               "text": "Máquina de Coureiro",
-              "based_on": "7342c00b354f882b77f6b285e5422b85fe60b09d03c02fa20d740264569c3305",
+              "based_on": "af1129e6e5a52296d4f5e21d85e9f4c20c3c42f7c535492afca93abc317ea071",
               "status": "ai-draft"
             },
             "pt_BR": {
               "text": "Máquina de Coureiro",
-              "based_on": "7342c00b354f882b77f6b285e5422b85fe60b09d03c02fa20d740264569c3305",
+              "based_on": "af1129e6e5a52296d4f5e21d85e9f4c20c3c42f7c535492afca93abc317ea071",
               "status": "ai-draft"
             },
             "de_DE": {
               "text": "Gerber-Automat",
-              "based_on": "7342c00b354f882b77f6b285e5422b85fe60b09d03c02fa20d740264569c3305",
+              "based_on": "af1129e6e5a52296d4f5e21d85e9f4c20c3c42f7c535492afca93abc317ea071",
               "status": "ai-draft"
             },
             "fr_FR": {
-              "text": "Distributeur : Tanneur",
-              "based_on": "7342c00b354f882b77f6b285e5422b85fe60b09d03c02fa20d740264569c3305",
+              "text": "Distributeur du tanneur",
+              "based_on": "af1129e6e5a52296d4f5e21d85e9f4c20c3c42f7c535492afca93abc317ea071",
               "status": "ai-draft"
             },
             "pl_PL": {
               "text": "Automat rymarza",
-              "based_on": "7342c00b354f882b77f6b285e5422b85fe60b09d03c02fa20d740264569c3305",
+              "based_on": "af1129e6e5a52296d4f5e21d85e9f4c20c3c42f7c535492afca93abc317ea071",
               "status": "ai-draft"
             }
           }
@@ -1551,43 +1551,43 @@
           "placeholders": [],
           "translations": {
             "cs_CZ": {
-              "text": "Automat: Zedník",
-              "based_on": "20a141160f58d08451239398756f3aef833ba6719465f52d72647ab869d97e9a",
+              "text": "Automat zedníka",
+              "based_on": "2baa279155435f58c73579fd8b9cf9cd3574758c87d258a89ea34bdee0d3a1a6",
               "status": "ai-draft"
             },
             "es_ES": {
               "text": "Máquina de albañil",
-              "based_on": "20a141160f58d08451239398756f3aef833ba6719465f52d72647ab869d97e9a",
+              "based_on": "2baa279155435f58c73579fd8b9cf9cd3574758c87d258a89ea34bdee0d3a1a6",
               "status": "ai-draft"
             },
             "es_MX": {
               "text": "Máquina de albañil",
-              "based_on": "20a141160f58d08451239398756f3aef833ba6719465f52d72647ab869d97e9a",
+              "based_on": "2baa279155435f58c73579fd8b9cf9cd3574758c87d258a89ea34bdee0d3a1a6",
               "status": "ai-draft"
             },
             "pt_PT": {
               "text": "Máquina de Pedreiro",
-              "based_on": "20a141160f58d08451239398756f3aef833ba6719465f52d72647ab869d97e9a",
+              "based_on": "2baa279155435f58c73579fd8b9cf9cd3574758c87d258a89ea34bdee0d3a1a6",
               "status": "ai-draft"
             },
             "pt_BR": {
               "text": "Máquina de Pedreiro",
-              "based_on": "20a141160f58d08451239398756f3aef833ba6719465f52d72647ab869d97e9a",
+              "based_on": "2baa279155435f58c73579fd8b9cf9cd3574758c87d258a89ea34bdee0d3a1a6",
               "status": "ai-draft"
             },
             "de_DE": {
               "text": "Steinmetz-Automat",
-              "based_on": "20a141160f58d08451239398756f3aef833ba6719465f52d72647ab869d97e9a",
+              "based_on": "2baa279155435f58c73579fd8b9cf9cd3574758c87d258a89ea34bdee0d3a1a6",
               "status": "ai-draft"
             },
             "fr_FR": {
-              "text": "Distributeur : Maçon",
-              "based_on": "20a141160f58d08451239398756f3aef833ba6719465f52d72647ab869d97e9a",
+              "text": "Distributeur du maçon",
+              "based_on": "2baa279155435f58c73579fd8b9cf9cd3574758c87d258a89ea34bdee0d3a1a6",
               "status": "ai-draft"
             },
             "pl_PL": {
               "text": "Automat kamieniarza",
-              "based_on": "20a141160f58d08451239398756f3aef833ba6719465f52d72647ab869d97e9a",
+              "based_on": "2baa279155435f58c73579fd8b9cf9cd3574758c87d258a89ea34bdee0d3a1a6",
               "status": "ai-draft"
             }
           }
@@ -1605,43 +1605,43 @@
           "placeholders": [],
           "translations": {
             "cs_CZ": {
-              "text": "Automat: Zedník",
-              "based_on": "20a141160f58d08451239398756f3aef833ba6719465f52d72647ab869d97e9a",
+              "text": "Automat zedníka",
+              "based_on": "2baa279155435f58c73579fd8b9cf9cd3574758c87d258a89ea34bdee0d3a1a6",
               "status": "ai-draft"
             },
             "es_ES": {
               "text": "Máquina de albañil",
-              "based_on": "20a141160f58d08451239398756f3aef833ba6719465f52d72647ab869d97e9a",
+              "based_on": "2baa279155435f58c73579fd8b9cf9cd3574758c87d258a89ea34bdee0d3a1a6",
               "status": "ai-draft"
             },
             "es_MX": {
               "text": "Máquina de albañil",
-              "based_on": "20a141160f58d08451239398756f3aef833ba6719465f52d72647ab869d97e9a",
+              "based_on": "2baa279155435f58c73579fd8b9cf9cd3574758c87d258a89ea34bdee0d3a1a6",
               "status": "ai-draft"
             },
             "pt_PT": {
               "text": "Máquina de Pedreiro",
-              "based_on": "20a141160f58d08451239398756f3aef833ba6719465f52d72647ab869d97e9a",
+              "based_on": "2baa279155435f58c73579fd8b9cf9cd3574758c87d258a89ea34bdee0d3a1a6",
               "status": "ai-draft"
             },
             "pt_BR": {
               "text": "Máquina de Pedreiro",
-              "based_on": "20a141160f58d08451239398756f3aef833ba6719465f52d72647ab869d97e9a",
+              "based_on": "2baa279155435f58c73579fd8b9cf9cd3574758c87d258a89ea34bdee0d3a1a6",
               "status": "ai-draft"
             },
             "de_DE": {
               "text": "Steinmetz-Automat",
-              "based_on": "20a141160f58d08451239398756f3aef833ba6719465f52d72647ab869d97e9a",
+              "based_on": "2baa279155435f58c73579fd8b9cf9cd3574758c87d258a89ea34bdee0d3a1a6",
               "status": "ai-draft"
             },
             "fr_FR": {
-              "text": "Distributeur : Maçon",
-              "based_on": "20a141160f58d08451239398756f3aef833ba6719465f52d72647ab869d97e9a",
+              "text": "Distributeur du maçon",
+              "based_on": "2baa279155435f58c73579fd8b9cf9cd3574758c87d258a89ea34bdee0d3a1a6",
               "status": "ai-draft"
             },
             "pl_PL": {
               "text": "Automat kamieniarza",
-              "based_on": "20a141160f58d08451239398756f3aef833ba6719465f52d72647ab869d97e9a",
+              "based_on": "2baa279155435f58c73579fd8b9cf9cd3574758c87d258a89ea34bdee0d3a1a6",
               "status": "ai-draft"
             }
           }
@@ -1660,42 +1660,42 @@
           "translations": {
             "cs_CZ": {
               "text": "Vylepšovací sada",
-              "based_on": "29c881f14dbc411ae3dba8f68f4474806297ae7ac6624c38ea1d1e9bb55bfc14",
+              "based_on": "2d80e2f8900b20d0d8b50bc47a076a1878b0bbfe7d5b3afb52ffa4c9e2cee77f",
               "status": "ai-draft"
             },
             "es_ES": {
               "text": "Kit de mejora",
-              "based_on": "29c881f14dbc411ae3dba8f68f4474806297ae7ac6624c38ea1d1e9bb55bfc14",
+              "based_on": "2d80e2f8900b20d0d8b50bc47a076a1878b0bbfe7d5b3afb52ffa4c9e2cee77f",
               "status": "ai-draft"
             },
             "es_MX": {
               "text": "Kit de mejora",
-              "based_on": "29c881f14dbc411ae3dba8f68f4474806297ae7ac6624c38ea1d1e9bb55bfc14",
+              "based_on": "2d80e2f8900b20d0d8b50bc47a076a1878b0bbfe7d5b3afb52ffa4c9e2cee77f",
               "status": "ai-draft"
             },
             "pt_PT": {
               "text": "Kit de Melhoria",
-              "based_on": "29c881f14dbc411ae3dba8f68f4474806297ae7ac6624c38ea1d1e9bb55bfc14",
+              "based_on": "2d80e2f8900b20d0d8b50bc47a076a1878b0bbfe7d5b3afb52ffa4c9e2cee77f",
               "status": "ai-draft"
             },
             "pt_BR": {
               "text": "Kit de Melhoria",
-              "based_on": "29c881f14dbc411ae3dba8f68f4474806297ae7ac6624c38ea1d1e9bb55bfc14",
+              "based_on": "2d80e2f8900b20d0d8b50bc47a076a1878b0bbfe7d5b3afb52ffa4c9e2cee77f",
               "status": "ai-draft"
             },
             "de_DE": {
               "text": "Aufrüstungsset",
-              "based_on": "29c881f14dbc411ae3dba8f68f4474806297ae7ac6624c38ea1d1e9bb55bfc14",
+              "based_on": "2d80e2f8900b20d0d8b50bc47a076a1878b0bbfe7d5b3afb52ffa4c9e2cee77f",
               "status": "ai-draft"
             },
             "fr_FR": {
               "text": "Kit d’amélioration",
-              "based_on": "29c881f14dbc411ae3dba8f68f4474806297ae7ac6624c38ea1d1e9bb55bfc14",
+              "based_on": "2d80e2f8900b20d0d8b50bc47a076a1878b0bbfe7d5b3afb52ffa4c9e2cee77f",
               "status": "ai-draft"
             },
             "pl_PL": {
               "text": "Zestaw ulepszeń",
-              "based_on": "29c881f14dbc411ae3dba8f68f4474806297ae7ac6624c38ea1d1e9bb55bfc14",
+              "based_on": "2d80e2f8900b20d0d8b50bc47a076a1878b0bbfe7d5b3afb52ffa4c9e2cee77f",
               "status": "ai-draft"
             }
           }
@@ -1713,43 +1713,43 @@
           "placeholders": [],
           "translations": {
             "cs_CZ": {
-              "text": "Automat: Potulný obchodník",
-              "based_on": "9cfebb10b3e2cd366009db6b6b3edfec29bd7cb8c0f99be74d1807e649eb99a2",
+              "text": "Automat potulného obchodníka",
+              "based_on": "0d862ab8876b90da86c638a5c27f1c72f145f5c9a396d8097340cd391f295be8",
               "status": "ai-draft"
             },
             "es_ES": {
               "text": "Máquina de vendedor errante",
-              "based_on": "9cfebb10b3e2cd366009db6b6b3edfec29bd7cb8c0f99be74d1807e649eb99a2",
+              "based_on": "0d862ab8876b90da86c638a5c27f1c72f145f5c9a396d8097340cd391f295be8",
               "status": "ai-draft"
             },
             "es_MX": {
               "text": "Máquina de comerciante errante",
-              "based_on": "9cfebb10b3e2cd366009db6b6b3edfec29bd7cb8c0f99be74d1807e649eb99a2",
+              "based_on": "0d862ab8876b90da86c638a5c27f1c72f145f5c9a396d8097340cd391f295be8",
               "status": "ai-draft"
             },
             "pt_PT": {
               "text": "Máquina de Feirante",
-              "based_on": "9cfebb10b3e2cd366009db6b6b3edfec29bd7cb8c0f99be74d1807e649eb99a2",
+              "based_on": "0d862ab8876b90da86c638a5c27f1c72f145f5c9a396d8097340cd391f295be8",
               "status": "ai-draft"
             },
             "pt_BR": {
               "text": "Máquina de Vendedor Ambulante",
-              "based_on": "9cfebb10b3e2cd366009db6b6b3edfec29bd7cb8c0f99be74d1807e649eb99a2",
+              "based_on": "0d862ab8876b90da86c638a5c27f1c72f145f5c9a396d8097340cd391f295be8",
               "status": "ai-draft"
             },
             "de_DE": {
               "text": "Fahrender-Händler-Automat",
-              "based_on": "9cfebb10b3e2cd366009db6b6b3edfec29bd7cb8c0f99be74d1807e649eb99a2",
+              "based_on": "0d862ab8876b90da86c638a5c27f1c72f145f5c9a396d8097340cd391f295be8",
               "status": "ai-draft"
             },
             "fr_FR": {
-              "text": "Distributeur : Marchand ambulant",
-              "based_on": "9cfebb10b3e2cd366009db6b6b3edfec29bd7cb8c0f99be74d1807e649eb99a2",
+              "text": "Distributeur du marchand ambulant",
+              "based_on": "0d862ab8876b90da86c638a5c27f1c72f145f5c9a396d8097340cd391f295be8",
               "status": "ai-draft"
             },
             "pl_PL": {
               "text": "Automat kupca wędrownego",
-              "based_on": "9cfebb10b3e2cd366009db6b6b3edfec29bd7cb8c0f99be74d1807e649eb99a2",
+              "based_on": "0d862ab8876b90da86c638a5c27f1c72f145f5c9a396d8097340cd391f295be8",
               "status": "ai-draft"
             }
           }
@@ -1767,43 +1767,43 @@
           "placeholders": [],
           "translations": {
             "cs_CZ": {
-              "text": "Automat: Potulný obchodník",
-              "based_on": "9cfebb10b3e2cd366009db6b6b3edfec29bd7cb8c0f99be74d1807e649eb99a2",
+              "text": "Automat potulného obchodníka",
+              "based_on": "0d862ab8876b90da86c638a5c27f1c72f145f5c9a396d8097340cd391f295be8",
               "status": "ai-draft"
             },
             "es_ES": {
               "text": "Máquina de vendedor errante",
-              "based_on": "9cfebb10b3e2cd366009db6b6b3edfec29bd7cb8c0f99be74d1807e649eb99a2",
+              "based_on": "0d862ab8876b90da86c638a5c27f1c72f145f5c9a396d8097340cd391f295be8",
               "status": "ai-draft"
             },
             "es_MX": {
               "text": "Máquina de comerciante errante",
-              "based_on": "9cfebb10b3e2cd366009db6b6b3edfec29bd7cb8c0f99be74d1807e649eb99a2",
+              "based_on": "0d862ab8876b90da86c638a5c27f1c72f145f5c9a396d8097340cd391f295be8",
               "status": "ai-draft"
             },
             "pt_PT": {
               "text": "Máquina de Feirante",
-              "based_on": "9cfebb10b3e2cd366009db6b6b3edfec29bd7cb8c0f99be74d1807e649eb99a2",
+              "based_on": "0d862ab8876b90da86c638a5c27f1c72f145f5c9a396d8097340cd391f295be8",
               "status": "ai-draft"
             },
             "pt_BR": {
               "text": "Máquina de Vendedor Ambulante",
-              "based_on": "9cfebb10b3e2cd366009db6b6b3edfec29bd7cb8c0f99be74d1807e649eb99a2",
+              "based_on": "0d862ab8876b90da86c638a5c27f1c72f145f5c9a396d8097340cd391f295be8",
               "status": "ai-draft"
             },
             "de_DE": {
               "text": "Fahrender-Händler-Automat",
-              "based_on": "9cfebb10b3e2cd366009db6b6b3edfec29bd7cb8c0f99be74d1807e649eb99a2",
+              "based_on": "0d862ab8876b90da86c638a5c27f1c72f145f5c9a396d8097340cd391f295be8",
               "status": "ai-draft"
             },
             "fr_FR": {
-              "text": "Distributeur : Marchand ambulant",
-              "based_on": "9cfebb10b3e2cd366009db6b6b3edfec29bd7cb8c0f99be74d1807e649eb99a2",
+              "text": "Distributeur du marchand ambulant",
+              "based_on": "0d862ab8876b90da86c638a5c27f1c72f145f5c9a396d8097340cd391f295be8",
               "status": "ai-draft"
             },
             "pl_PL": {
               "text": "Automat kupca wędrownego",
-              "based_on": "9cfebb10b3e2cd366009db6b6b3edfec29bd7cb8c0f99be74d1807e649eb99a2",
+              "based_on": "0d862ab8876b90da86c638a5c27f1c72f145f5c9a396d8097340cd391f295be8",
               "status": "ai-draft"
             }
           }
@@ -1821,43 +1821,43 @@
           "placeholders": [],
           "translations": {
             "cs_CZ": {
-              "text": "Automat: Krabicovec",
-              "based_on": "8bb4e14a3f7d1ee0c5d1b18770c68beee9f1abfcac2d3f0c0b62f1e89a9f0e18",
+              "text": "Automat krabicovce",
+              "based_on": "d67bdeab04ff2020f981e97b141ff99ddfdc9c5a90ba4341384e8127da3aaedf",
               "status": "ai-draft"
             },
             "es_ES": {
               "text": "Máquina de Shulker",
-              "based_on": "8bb4e14a3f7d1ee0c5d1b18770c68beee9f1abfcac2d3f0c0b62f1e89a9f0e18",
+              "based_on": "d67bdeab04ff2020f981e97b141ff99ddfdc9c5a90ba4341384e8127da3aaedf",
               "status": "ai-draft"
             },
             "es_MX": {
               "text": "Máquina de Shulker",
-              "based_on": "8bb4e14a3f7d1ee0c5d1b18770c68beee9f1abfcac2d3f0c0b62f1e89a9f0e18",
+              "based_on": "d67bdeab04ff2020f981e97b141ff99ddfdc9c5a90ba4341384e8127da3aaedf",
               "status": "ai-draft"
             },
             "pt_PT": {
               "text": "Máquina de Shulker",
-              "based_on": "8bb4e14a3f7d1ee0c5d1b18770c68beee9f1abfcac2d3f0c0b62f1e89a9f0e18",
+              "based_on": "d67bdeab04ff2020f981e97b141ff99ddfdc9c5a90ba4341384e8127da3aaedf",
               "status": "ai-draft"
             },
             "pt_BR": {
               "text": "Máquina de Shulker",
-              "based_on": "8bb4e14a3f7d1ee0c5d1b18770c68beee9f1abfcac2d3f0c0b62f1e89a9f0e18",
+              "based_on": "d67bdeab04ff2020f981e97b141ff99ddfdc9c5a90ba4341384e8127da3aaedf",
               "status": "ai-draft"
             },
             "de_DE": {
               "text": "Shulker-Automat",
-              "based_on": "8bb4e14a3f7d1ee0c5d1b18770c68beee9f1abfcac2d3f0c0b62f1e89a9f0e18",
+              "based_on": "d67bdeab04ff2020f981e97b141ff99ddfdc9c5a90ba4341384e8127da3aaedf",
               "status": "ai-draft"
             },
             "fr_FR": {
               "text": "Distributeur de shulker",
-              "based_on": "8bb4e14a3f7d1ee0c5d1b18770c68beee9f1abfcac2d3f0c0b62f1e89a9f0e18",
+              "based_on": "d67bdeab04ff2020f981e97b141ff99ddfdc9c5a90ba4341384e8127da3aaedf",
               "status": "ai-draft"
             },
             "pl_PL": {
               "text": "Automat shulkera",
-              "based_on": "8bb4e14a3f7d1ee0c5d1b18770c68beee9f1abfcac2d3f0c0b62f1e89a9f0e18",
+              "based_on": "d67bdeab04ff2020f981e97b141ff99ddfdc9c5a90ba4341384e8127da3aaedf",
               "status": "ai-draft"
             }
           }
@@ -1875,43 +1875,43 @@
           "placeholders": [],
           "translations": {
             "cs_CZ": {
-              "text": "Automat: Krabicovec",
-              "based_on": "8bb4e14a3f7d1ee0c5d1b18770c68beee9f1abfcac2d3f0c0b62f1e89a9f0e18",
+              "text": "Automat krabicovce",
+              "based_on": "d67bdeab04ff2020f981e97b141ff99ddfdc9c5a90ba4341384e8127da3aaedf",
               "status": "ai-draft"
             },
             "es_ES": {
               "text": "Máquina de Shulker",
-              "based_on": "8bb4e14a3f7d1ee0c5d1b18770c68beee9f1abfcac2d3f0c0b62f1e89a9f0e18",
+              "based_on": "d67bdeab04ff2020f981e97b141ff99ddfdc9c5a90ba4341384e8127da3aaedf",
               "status": "ai-draft"
             },
             "es_MX": {
               "text": "Máquina de Shulker",
-              "based_on": "8bb4e14a3f7d1ee0c5d1b18770c68beee9f1abfcac2d3f0c0b62f1e89a9f0e18",
+              "based_on": "d67bdeab04ff2020f981e97b141ff99ddfdc9c5a90ba4341384e8127da3aaedf",
               "status": "ai-draft"
             },
             "pt_PT": {
               "text": "Máquina de Shulker",
-              "based_on": "8bb4e14a3f7d1ee0c5d1b18770c68beee9f1abfcac2d3f0c0b62f1e89a9f0e18",
+              "based_on": "d67bdeab04ff2020f981e97b141ff99ddfdc9c5a90ba4341384e8127da3aaedf",
               "status": "ai-draft"
             },
             "pt_BR": {
               "text": "Máquina de Shulker",
-              "based_on": "8bb4e14a3f7d1ee0c5d1b18770c68beee9f1abfcac2d3f0c0b62f1e89a9f0e18",
+              "based_on": "d67bdeab04ff2020f981e97b141ff99ddfdc9c5a90ba4341384e8127da3aaedf",
               "status": "ai-draft"
             },
             "de_DE": {
               "text": "Shulker-Automat",
-              "based_on": "8bb4e14a3f7d1ee0c5d1b18770c68beee9f1abfcac2d3f0c0b62f1e89a9f0e18",
+              "based_on": "d67bdeab04ff2020f981e97b141ff99ddfdc9c5a90ba4341384e8127da3aaedf",
               "status": "ai-draft"
             },
             "fr_FR": {
               "text": "Distributeur de shulker",
-              "based_on": "8bb4e14a3f7d1ee0c5d1b18770c68beee9f1abfcac2d3f0c0b62f1e89a9f0e18",
+              "based_on": "d67bdeab04ff2020f981e97b141ff99ddfdc9c5a90ba4341384e8127da3aaedf",
               "status": "ai-draft"
             },
             "pl_PL": {
               "text": "Automat shulkera",
-              "based_on": "8bb4e14a3f7d1ee0c5d1b18770c68beee9f1abfcac2d3f0c0b62f1e89a9f0e18",
+              "based_on": "d67bdeab04ff2020f981e97b141ff99ddfdc9c5a90ba4341384e8127da3aaedf",
               "status": "ai-draft"
             }
           }
@@ -1930,42 +1930,42 @@
           "translations": {
             "cs_CZ": {
               "text": "Jádro krabicovce",
-              "based_on": "746754aeb88ce3fbdfd561a67bf590099679ec4e2bd23c3bcaa63ea2a26872c7",
+              "based_on": "71af9d5b195a1477a31b82794fc93e6f2688b1bc4e37f2af55a29979cb649e2f",
               "status": "ai-draft"
             },
             "es_ES": {
               "text": "Núcleo de Shulker",
-              "based_on": "746754aeb88ce3fbdfd561a67bf590099679ec4e2bd23c3bcaa63ea2a26872c7",
+              "based_on": "71af9d5b195a1477a31b82794fc93e6f2688b1bc4e37f2af55a29979cb649e2f",
               "status": "ai-draft"
             },
             "es_MX": {
               "text": "Núcleo de Shulker",
-              "based_on": "746754aeb88ce3fbdfd561a67bf590099679ec4e2bd23c3bcaa63ea2a26872c7",
+              "based_on": "71af9d5b195a1477a31b82794fc93e6f2688b1bc4e37f2af55a29979cb649e2f",
               "status": "ai-draft"
             },
             "pt_PT": {
               "text": "Núcleo de Shulker",
-              "based_on": "746754aeb88ce3fbdfd561a67bf590099679ec4e2bd23c3bcaa63ea2a26872c7",
+              "based_on": "71af9d5b195a1477a31b82794fc93e6f2688b1bc4e37f2af55a29979cb649e2f",
               "status": "ai-draft"
             },
             "pt_BR": {
               "text": "Núcleo de Shulker",
-              "based_on": "746754aeb88ce3fbdfd561a67bf590099679ec4e2bd23c3bcaa63ea2a26872c7",
+              "based_on": "71af9d5b195a1477a31b82794fc93e6f2688b1bc4e37f2af55a29979cb649e2f",
               "status": "ai-draft"
             },
             "de_DE": {
               "text": "Shulkerkern",
-              "based_on": "746754aeb88ce3fbdfd561a67bf590099679ec4e2bd23c3bcaa63ea2a26872c7",
+              "based_on": "71af9d5b195a1477a31b82794fc93e6f2688b1bc4e37f2af55a29979cb649e2f",
               "status": "ai-draft"
             },
             "fr_FR": {
               "text": "Noyau de shulker",
-              "based_on": "746754aeb88ce3fbdfd561a67bf590099679ec4e2bd23c3bcaa63ea2a26872c7",
+              "based_on": "71af9d5b195a1477a31b82794fc93e6f2688b1bc4e37f2af55a29979cb649e2f",
               "status": "ai-draft"
             },
             "pl_PL": {
               "text": "Rdzeń shulkera",
-              "based_on": "746754aeb88ce3fbdfd561a67bf590099679ec4e2bd23c3bcaa63ea2a26872c7",
+              "based_on": "71af9d5b195a1477a31b82794fc93e6f2688b1bc4e37f2af55a29979cb649e2f",
               "status": "ai-draft"
             }
           }
@@ -1987,42 +1987,42 @@
           "translations": {
             "cs_CZ": {
               "text": "§eTento automat už je vylepšený.",
-              "based_on": "8316654f8466907fa5b9740b4d25269e1153ecd225b41abf467f626bab8fb338",
+              "based_on": "5d54e67d71e9c7fe362ca36980187e546c6810fa3b74ef849b8a29e5ad18f82e",
               "status": "ai-draft"
             },
             "es_ES": {
               "text": "§eEsta máquina ya está mejorada.",
-              "based_on": "8316654f8466907fa5b9740b4d25269e1153ecd225b41abf467f626bab8fb338",
+              "based_on": "5d54e67d71e9c7fe362ca36980187e546c6810fa3b74ef849b8a29e5ad18f82e",
               "status": "ai-draft"
             },
             "es_MX": {
               "text": "§eEsta máquina ya tiene la mejora.",
-              "based_on": "8316654f8466907fa5b9740b4d25269e1153ecd225b41abf467f626bab8fb338",
+              "based_on": "5d54e67d71e9c7fe362ca36980187e546c6810fa3b74ef849b8a29e5ad18f82e",
               "status": "ai-draft"
             },
             "pt_PT": {
               "text": "§eEsta máquina já foi melhorada.",
-              "based_on": "8316654f8466907fa5b9740b4d25269e1153ecd225b41abf467f626bab8fb338",
+              "based_on": "5d54e67d71e9c7fe362ca36980187e546c6810fa3b74ef849b8a29e5ad18f82e",
               "status": "ai-draft"
             },
             "pt_BR": {
               "text": "§eEsta máquina já foi melhorada.",
-              "based_on": "8316654f8466907fa5b9740b4d25269e1153ecd225b41abf467f626bab8fb338",
+              "based_on": "5d54e67d71e9c7fe362ca36980187e546c6810fa3b74ef849b8a29e5ad18f82e",
               "status": "ai-draft"
             },
             "de_DE": {
               "text": "§eDieser Automat ist bereits aufgerüstet.",
-              "based_on": "8316654f8466907fa5b9740b4d25269e1153ecd225b41abf467f626bab8fb338",
+              "based_on": "5d54e67d71e9c7fe362ca36980187e546c6810fa3b74ef849b8a29e5ad18f82e",
               "status": "ai-draft"
             },
             "fr_FR": {
               "text": "§eCe distributeur est déjà amélioré.",
-              "based_on": "8316654f8466907fa5b9740b4d25269e1153ecd225b41abf467f626bab8fb338",
+              "based_on": "5d54e67d71e9c7fe362ca36980187e546c6810fa3b74ef849b8a29e5ad18f82e",
               "status": "ai-draft"
             },
             "pl_PL": {
               "text": "§eTen automat jest już ulepszony.",
-              "based_on": "8316654f8466907fa5b9740b4d25269e1153ecd225b41abf467f626bab8fb338",
+              "based_on": "5d54e67d71e9c7fe362ca36980187e546c6810fa3b74ef849b8a29e5ad18f82e",
               "status": "ai-draft"
             }
           }
@@ -2044,42 +2044,42 @@
           "translations": {
             "cs_CZ": {
               "text": "§aVylepšeno! Automat teď nabízí obchody se slevou.",
-              "based_on": "f71d21eb397fbd7f64ec3637f223c2d5c1da7370d220550f4f275b3fc778f352",
+              "based_on": "b4e8f2da872f0edbc05651f75addb47be584629b0eaf20c25baaa4c76f356a7d",
               "status": "ai-draft"
             },
             "es_ES": {
               "text": "§aMejora aplicada: ahora esta máquina comercia con descuento.",
-              "based_on": "f71d21eb397fbd7f64ec3637f223c2d5c1da7370d220550f4f275b3fc778f352",
+              "based_on": "b4e8f2da872f0edbc05651f75addb47be584629b0eaf20c25baaa4c76f356a7d",
               "status": "ai-draft"
             },
             "es_MX": {
               "text": "§aMejora aplicada: ahora esta máquina vende con descuento.",
-              "based_on": "f71d21eb397fbd7f64ec3637f223c2d5c1da7370d220550f4f275b3fc778f352",
+              "based_on": "b4e8f2da872f0edbc05651f75addb47be584629b0eaf20c25baaa4c76f356a7d",
               "status": "ai-draft"
             },
             "pt_PT": {
               "text": "§aMelhoria aplicada: esta máquina passa a fazer trocas com desconto.",
-              "based_on": "f71d21eb397fbd7f64ec3637f223c2d5c1da7370d220550f4f275b3fc778f352",
+              "based_on": "b4e8f2da872f0edbc05651f75addb47be584629b0eaf20c25baaa4c76f356a7d",
               "status": "ai-draft"
             },
             "pt_BR": {
               "text": "§aMelhoria aplicada — esta máquina agora oferece descontos.",
-              "based_on": "f71d21eb397fbd7f64ec3637f223c2d5c1da7370d220550f4f275b3fc778f352",
+              "based_on": "b4e8f2da872f0edbc05651f75addb47be584629b0eaf20c25baaa4c76f356a7d",
               "status": "ai-draft"
             },
             "de_DE": {
               "text": "§aAufgerüstet – dieser Automat bietet jetzt günstigere Preise.",
-              "based_on": "f71d21eb397fbd7f64ec3637f223c2d5c1da7370d220550f4f275b3fc778f352",
+              "based_on": "b4e8f2da872f0edbc05651f75addb47be584629b0eaf20c25baaa4c76f356a7d",
               "status": "ai-draft"
             },
             "fr_FR": {
               "text": "§aDistributeur amélioré : ses échanges sont désormais à prix réduit.",
-              "based_on": "f71d21eb397fbd7f64ec3637f223c2d5c1da7370d220550f4f275b3fc778f352",
+              "based_on": "b4e8f2da872f0edbc05651f75addb47be584629b0eaf20c25baaa4c76f356a7d",
               "status": "ai-draft"
             },
             "pl_PL": {
               "text": "§aUlepszono — ten automat oferuje teraz niższe ceny.",
-              "based_on": "f71d21eb397fbd7f64ec3637f223c2d5c1da7370d220550f4f275b3fc778f352",
+              "based_on": "b4e8f2da872f0edbc05651f75addb47be584629b0eaf20c25baaa4c76f356a7d",
               "status": "ai-draft"
             }
           }
@@ -2098,42 +2098,42 @@
           "translations": {
             "cs_CZ": {
               "text": "Vending Machines — Balíček zdrojů",
-              "based_on": "9b7c82baa927516e01944594703612be2786a708428ba93e7647b2ffd45caab8",
+              "based_on": "13c1a718ee1cd31c2e87fd2806db95b3f2c10a478b8c559e4e616f408179779f",
               "status": "ai-draft"
             },
             "es_ES": {
               "text": "Vending Machines — Paquete de recursos",
-              "based_on": "9b7c82baa927516e01944594703612be2786a708428ba93e7647b2ffd45caab8",
+              "based_on": "13c1a718ee1cd31c2e87fd2806db95b3f2c10a478b8c559e4e616f408179779f",
               "status": "ai-draft"
             },
             "es_MX": {
               "text": "Vending Machines — Pack de recursos",
-              "based_on": "9b7c82baa927516e01944594703612be2786a708428ba93e7647b2ffd45caab8",
+              "based_on": "13c1a718ee1cd31c2e87fd2806db95b3f2c10a478b8c559e4e616f408179779f",
               "status": "ai-draft"
             },
             "pt_PT": {
               "text": "Vending Machines — Pack de Recursos",
-              "based_on": "9b7c82baa927516e01944594703612be2786a708428ba93e7647b2ffd45caab8",
+              "based_on": "13c1a718ee1cd31c2e87fd2806db95b3f2c10a478b8c559e4e616f408179779f",
               "status": "ai-draft"
             },
             "pt_BR": {
               "text": "Vending Machines — Pacote de recursos",
-              "based_on": "9b7c82baa927516e01944594703612be2786a708428ba93e7647b2ffd45caab8",
+              "based_on": "13c1a718ee1cd31c2e87fd2806db95b3f2c10a478b8c559e4e616f408179779f",
               "status": "ai-draft"
             },
             "de_DE": {
               "text": "Vending Machines — Ressourcenpaket",
-              "based_on": "9b7c82baa927516e01944594703612be2786a708428ba93e7647b2ffd45caab8",
+              "based_on": "13c1a718ee1cd31c2e87fd2806db95b3f2c10a478b8c559e4e616f408179779f",
               "status": "ai-draft"
             },
             "fr_FR": {
               "text": "Vending Machines — Pack de ressources",
-              "based_on": "9b7c82baa927516e01944594703612be2786a708428ba93e7647b2ffd45caab8",
+              "based_on": "13c1a718ee1cd31c2e87fd2806db95b3f2c10a478b8c559e4e616f408179779f",
               "status": "ai-draft"
             },
             "pl_PL": {
               "text": "Vending Machines — Paczka zasobów",
-              "based_on": "9b7c82baa927516e01944594703612be2786a708428ba93e7647b2ffd45caab8",
+              "based_on": "13c1a718ee1cd31c2e87fd2806db95b3f2c10a478b8c559e4e616f408179779f",
               "status": "ai-draft"
             }
           }
@@ -2152,42 +2152,42 @@
           "translations": {
             "cs_CZ": {
               "text": "Balíček zdrojů Vending Machines: textury, modely a texty všech automatů.",
-              "based_on": "f46fb9eea0a9a7090244e67edf66302af9f0bec52929db08fea251718135deb9",
+              "based_on": "d7db653f7106f4220a0fdf0e53740832da4fd30ec075502afd86d48c9cec3664",
               "status": "ai-draft"
             },
             "es_ES": {
               "text": "Paquete de recursos de Vending Machines: texturas, modelos y textos de todas las máquinas.",
-              "based_on": "f46fb9eea0a9a7090244e67edf66302af9f0bec52929db08fea251718135deb9",
+              "based_on": "d7db653f7106f4220a0fdf0e53740832da4fd30ec075502afd86d48c9cec3664",
               "status": "ai-draft"
             },
             "es_MX": {
               "text": "Pack de recursos de Vending Machines: texturas, modelos y textos de todas las máquinas.",
-              "based_on": "f46fb9eea0a9a7090244e67edf66302af9f0bec52929db08fea251718135deb9",
+              "based_on": "d7db653f7106f4220a0fdf0e53740832da4fd30ec075502afd86d48c9cec3664",
               "status": "ai-draft"
             },
             "pt_PT": {
               "text": "Pack de recursos de Vending Machines: texturas, modelos e textos de todas as máquinas.",
-              "based_on": "f46fb9eea0a9a7090244e67edf66302af9f0bec52929db08fea251718135deb9",
+              "based_on": "d7db653f7106f4220a0fdf0e53740832da4fd30ec075502afd86d48c9cec3664",
               "status": "ai-draft"
             },
             "pt_BR": {
               "text": "Pacote de recursos de Vending Machines: texturas, modelos e textos de todas as máquinas.",
-              "based_on": "f46fb9eea0a9a7090244e67edf66302af9f0bec52929db08fea251718135deb9",
+              "based_on": "d7db653f7106f4220a0fdf0e53740832da4fd30ec075502afd86d48c9cec3664",
               "status": "ai-draft"
             },
             "de_DE": {
               "text": "Ressourcenpaket für Vending Machines: Texturen, Modelle und Texte aller Automaten.",
-              "based_on": "f46fb9eea0a9a7090244e67edf66302af9f0bec52929db08fea251718135deb9",
+              "based_on": "d7db653f7106f4220a0fdf0e53740832da4fd30ec075502afd86d48c9cec3664",
               "status": "ai-draft"
             },
             "fr_FR": {
               "text": "Pack de ressources de Vending Machines : textures, modèles et textes de tous les distributeurs.",
-              "based_on": "f46fb9eea0a9a7090244e67edf66302af9f0bec52929db08fea251718135deb9",
+              "based_on": "d7db653f7106f4220a0fdf0e53740832da4fd30ec075502afd86d48c9cec3664",
               "status": "ai-draft"
             },
             "pl_PL": {
               "text": "Paczka zasobów Vending Machines: tekstury, modele i teksty wszystkich automatów.",
-              "based_on": "f46fb9eea0a9a7090244e67edf66302af9f0bec52929db08fea251718135deb9",
+              "based_on": "d7db653f7106f4220a0fdf0e53740832da4fd30ec075502afd86d48c9cec3664",
               "status": "ai-draft"
             }
           }
@@ -2206,42 +2206,42 @@
           "translations": {
             "cs_CZ": {
               "text": "Automat na kořist z běžného světa",
-              "based_on": "1841cd73fbba271819013643c84f48abb4ab59321b5fdc53a9e1e1631d21fd3a",
+              "based_on": "b504999f4bffc400a8e1190f12afb5929464ff9bf8dd5af600090648d28fa19b",
               "status": "ai-draft"
             },
             "es_ES": {
               "text": "Máquina de botín del mundo superior",
-              "based_on": "1841cd73fbba271819013643c84f48abb4ab59321b5fdc53a9e1e1631d21fd3a",
+              "based_on": "b504999f4bffc400a8e1190f12afb5929464ff9bf8dd5af600090648d28fa19b",
               "status": "ai-draft"
             },
             "es_MX": {
               "text": "Máquina de botín del Mundo principal",
-              "based_on": "1841cd73fbba271819013643c84f48abb4ab59321b5fdc53a9e1e1631d21fd3a",
+              "based_on": "b504999f4bffc400a8e1190f12afb5929464ff9bf8dd5af600090648d28fa19b",
               "status": "ai-draft"
             },
             "pt_PT": {
               "text": "Máquina de Saques da Superfície",
-              "based_on": "1841cd73fbba271819013643c84f48abb4ab59321b5fdc53a9e1e1631d21fd3a",
+              "based_on": "b504999f4bffc400a8e1190f12afb5929464ff9bf8dd5af600090648d28fa19b",
               "status": "ai-draft"
             },
             "pt_BR": {
               "text": "Máquina de Saque do Mundo Superior",
-              "based_on": "1841cd73fbba271819013643c84f48abb4ab59321b5fdc53a9e1e1631d21fd3a",
+              "based_on": "b504999f4bffc400a8e1190f12afb5929464ff9bf8dd5af600090648d28fa19b",
               "status": "ai-draft"
             },
             "de_DE": {
               "text": "Oberwelt-Beuteautomat",
-              "based_on": "1841cd73fbba271819013643c84f48abb4ab59321b5fdc53a9e1e1631d21fd3a",
+              "based_on": "b504999f4bffc400a8e1190f12afb5929464ff9bf8dd5af600090648d28fa19b",
               "status": "ai-draft"
             },
             "fr_FR": {
-              "text": "Distributeur : Butin de la Surface",
-              "based_on": "1841cd73fbba271819013643c84f48abb4ab59321b5fdc53a9e1e1631d21fd3a",
+              "text": "Distributeur de butin de la Surface",
+              "based_on": "b504999f4bffc400a8e1190f12afb5929464ff9bf8dd5af600090648d28fa19b",
               "status": "ai-draft"
             },
             "pl_PL": {
               "text": "Automat z łupami z Nadziemia",
-              "based_on": "1841cd73fbba271819013643c84f48abb4ab59321b5fdc53a9e1e1631d21fd3a",
+              "based_on": "b504999f4bffc400a8e1190f12afb5929464ff9bf8dd5af600090648d28fa19b",
               "status": "ai-draft"
             }
           }
@@ -2260,42 +2260,42 @@
           "translations": {
             "cs_CZ": {
               "text": "Automat na kořist z běžného světa",
-              "based_on": "1841cd73fbba271819013643c84f48abb4ab59321b5fdc53a9e1e1631d21fd3a",
+              "based_on": "b504999f4bffc400a8e1190f12afb5929464ff9bf8dd5af600090648d28fa19b",
               "status": "ai-draft"
             },
             "es_ES": {
               "text": "Máquina de botín del mundo superior",
-              "based_on": "1841cd73fbba271819013643c84f48abb4ab59321b5fdc53a9e1e1631d21fd3a",
+              "based_on": "b504999f4bffc400a8e1190f12afb5929464ff9bf8dd5af600090648d28fa19b",
               "status": "ai-draft"
             },
             "es_MX": {
               "text": "Máquina de botín del Mundo principal",
-              "based_on": "1841cd73fbba271819013643c84f48abb4ab59321b5fdc53a9e1e1631d21fd3a",
+              "based_on": "b504999f4bffc400a8e1190f12afb5929464ff9bf8dd5af600090648d28fa19b",
               "status": "ai-draft"
             },
             "pt_PT": {
               "text": "Máquina de Saques da Superfície",
-              "based_on": "1841cd73fbba271819013643c84f48abb4ab59321b5fdc53a9e1e1631d21fd3a",
+              "based_on": "b504999f4bffc400a8e1190f12afb5929464ff9bf8dd5af600090648d28fa19b",
               "status": "ai-draft"
             },
             "pt_BR": {
               "text": "Máquina de Saque do Mundo Superior",
-              "based_on": "1841cd73fbba271819013643c84f48abb4ab59321b5fdc53a9e1e1631d21fd3a",
+              "based_on": "b504999f4bffc400a8e1190f12afb5929464ff9bf8dd5af600090648d28fa19b",
               "status": "ai-draft"
             },
             "de_DE": {
               "text": "Oberwelt-Beuteautomat",
-              "based_on": "1841cd73fbba271819013643c84f48abb4ab59321b5fdc53a9e1e1631d21fd3a",
+              "based_on": "b504999f4bffc400a8e1190f12afb5929464ff9bf8dd5af600090648d28fa19b",
               "status": "ai-draft"
             },
             "fr_FR": {
-              "text": "Distributeur : Butin de la Surface",
-              "based_on": "1841cd73fbba271819013643c84f48abb4ab59321b5fdc53a9e1e1631d21fd3a",
+              "text": "Distributeur de butin de la Surface",
+              "based_on": "b504999f4bffc400a8e1190f12afb5929464ff9bf8dd5af600090648d28fa19b",
               "status": "ai-draft"
             },
             "pl_PL": {
               "text": "Automat z łupami z Nadziemia",
-              "based_on": "1841cd73fbba271819013643c84f48abb4ab59321b5fdc53a9e1e1631d21fd3a",
+              "based_on": "b504999f4bffc400a8e1190f12afb5929464ff9bf8dd5af600090648d28fa19b",
               "status": "ai-draft"
             }
           }
@@ -2314,42 +2314,42 @@
           "translations": {
             "cs_CZ": {
               "text": "Automat na kořist z Netheru",
-              "based_on": "dc80c699c65e1ff82578ff538933375dcb1aec04fc392ba3a2bd3157361d11e6",
+              "based_on": "167847e317cecd065bde0d306a9d45298b814351b7296035f227eb73b6fb57ee",
               "status": "ai-draft"
             },
             "es_ES": {
               "text": "Máquina de botín del Inframundo",
-              "based_on": "dc80c699c65e1ff82578ff538933375dcb1aec04fc392ba3a2bd3157361d11e6",
+              "based_on": "167847e317cecd065bde0d306a9d45298b814351b7296035f227eb73b6fb57ee",
               "status": "ai-draft"
             },
             "es_MX": {
               "text": "Máquina de botín del Nether",
-              "based_on": "dc80c699c65e1ff82578ff538933375dcb1aec04fc392ba3a2bd3157361d11e6",
+              "based_on": "167847e317cecd065bde0d306a9d45298b814351b7296035f227eb73b6fb57ee",
               "status": "ai-draft"
             },
             "pt_PT": {
               "text": "Máquina de Saques do Nether",
-              "based_on": "dc80c699c65e1ff82578ff538933375dcb1aec04fc392ba3a2bd3157361d11e6",
+              "based_on": "167847e317cecd065bde0d306a9d45298b814351b7296035f227eb73b6fb57ee",
               "status": "ai-draft"
             },
             "pt_BR": {
               "text": "Máquina de Saque do Nether",
-              "based_on": "dc80c699c65e1ff82578ff538933375dcb1aec04fc392ba3a2bd3157361d11e6",
+              "based_on": "167847e317cecd065bde0d306a9d45298b814351b7296035f227eb73b6fb57ee",
               "status": "ai-draft"
             },
             "de_DE": {
               "text": "Nether-Beuteautomat",
-              "based_on": "dc80c699c65e1ff82578ff538933375dcb1aec04fc392ba3a2bd3157361d11e6",
+              "based_on": "167847e317cecd065bde0d306a9d45298b814351b7296035f227eb73b6fb57ee",
               "status": "ai-draft"
             },
             "fr_FR": {
-              "text": "Distributeur : Butin du Nether",
-              "based_on": "dc80c699c65e1ff82578ff538933375dcb1aec04fc392ba3a2bd3157361d11e6",
+              "text": "Distributeur de butin du Nether",
+              "based_on": "167847e317cecd065bde0d306a9d45298b814351b7296035f227eb73b6fb57ee",
               "status": "ai-draft"
             },
             "pl_PL": {
               "text": "Automat z łupami z Netheru",
-              "based_on": "dc80c699c65e1ff82578ff538933375dcb1aec04fc392ba3a2bd3157361d11e6",
+              "based_on": "167847e317cecd065bde0d306a9d45298b814351b7296035f227eb73b6fb57ee",
               "status": "ai-draft"
             }
           }
@@ -2368,42 +2368,42 @@
           "translations": {
             "cs_CZ": {
               "text": "Automat na kořist z Netheru",
-              "based_on": "dc80c699c65e1ff82578ff538933375dcb1aec04fc392ba3a2bd3157361d11e6",
+              "based_on": "167847e317cecd065bde0d306a9d45298b814351b7296035f227eb73b6fb57ee",
               "status": "ai-draft"
             },
             "es_ES": {
               "text": "Máquina de botín del Inframundo",
-              "based_on": "dc80c699c65e1ff82578ff538933375dcb1aec04fc392ba3a2bd3157361d11e6",
+              "based_on": "167847e317cecd065bde0d306a9d45298b814351b7296035f227eb73b6fb57ee",
               "status": "ai-draft"
             },
             "es_MX": {
               "text": "Máquina de botín del Nether",
-              "based_on": "dc80c699c65e1ff82578ff538933375dcb1aec04fc392ba3a2bd3157361d11e6",
+              "based_on": "167847e317cecd065bde0d306a9d45298b814351b7296035f227eb73b6fb57ee",
               "status": "ai-draft"
             },
             "pt_PT": {
               "text": "Máquina de Saques do Nether",
-              "based_on": "dc80c699c65e1ff82578ff538933375dcb1aec04fc392ba3a2bd3157361d11e6",
+              "based_on": "167847e317cecd065bde0d306a9d45298b814351b7296035f227eb73b6fb57ee",
               "status": "ai-draft"
             },
             "pt_BR": {
               "text": "Máquina de Saque do Nether",
-              "based_on": "dc80c699c65e1ff82578ff538933375dcb1aec04fc392ba3a2bd3157361d11e6",
+              "based_on": "167847e317cecd065bde0d306a9d45298b814351b7296035f227eb73b6fb57ee",
               "status": "ai-draft"
             },
             "de_DE": {
               "text": "Nether-Beuteautomat",
-              "based_on": "dc80c699c65e1ff82578ff538933375dcb1aec04fc392ba3a2bd3157361d11e6",
+              "based_on": "167847e317cecd065bde0d306a9d45298b814351b7296035f227eb73b6fb57ee",
               "status": "ai-draft"
             },
             "fr_FR": {
-              "text": "Distributeur : Butin du Nether",
-              "based_on": "dc80c699c65e1ff82578ff538933375dcb1aec04fc392ba3a2bd3157361d11e6",
+              "text": "Distributeur de butin du Nether",
+              "based_on": "167847e317cecd065bde0d306a9d45298b814351b7296035f227eb73b6fb57ee",
               "status": "ai-draft"
             },
             "pl_PL": {
               "text": "Automat z łupami z Netheru",
-              "based_on": "dc80c699c65e1ff82578ff538933375dcb1aec04fc392ba3a2bd3157361d11e6",
+              "based_on": "167847e317cecd065bde0d306a9d45298b814351b7296035f227eb73b6fb57ee",
               "status": "ai-draft"
             }
           }
@@ -2422,42 +2422,42 @@
           "translations": {
             "cs_CZ": {
               "text": "Automat na kořist ze zkušebních komor",
-              "based_on": "8344be04746d031a8b0c99c1baabec593d712748f278d8371fbc4ebc285cac5a",
+              "based_on": "0ac71cdef01f9c3bff87dd9e04a33e3e5cb189333504ec2cadb85c0ed566318f",
               "status": "ai-draft"
             },
             "es_ES": {
               "text": "Máquina de botín de las cámaras de prueba",
-              "based_on": "8344be04746d031a8b0c99c1baabec593d712748f278d8371fbc4ebc285cac5a",
+              "based_on": "0ac71cdef01f9c3bff87dd9e04a33e3e5cb189333504ec2cadb85c0ed566318f",
               "status": "ai-draft"
             },
             "es_MX": {
               "text": "Máquina de botín de la cámara de desafíos",
-              "based_on": "8344be04746d031a8b0c99c1baabec593d712748f278d8371fbc4ebc285cac5a",
+              "based_on": "0ac71cdef01f9c3bff87dd9e04a33e3e5cb189333504ec2cadb85c0ed566318f",
               "status": "ai-draft"
             },
             "pt_PT": {
               "text": "Máquina de Saques das Câmaras da Provação",
-              "based_on": "8344be04746d031a8b0c99c1baabec593d712748f278d8371fbc4ebc285cac5a",
+              "based_on": "0ac71cdef01f9c3bff87dd9e04a33e3e5cb189333504ec2cadb85c0ed566318f",
               "status": "ai-draft"
             },
             "pt_BR": {
               "text": "Máquina de Saque do Desafio",
-              "based_on": "8344be04746d031a8b0c99c1baabec593d712748f278d8371fbc4ebc285cac5a",
+              "based_on": "0ac71cdef01f9c3bff87dd9e04a33e3e5cb189333504ec2cadb85c0ed566318f",
               "status": "ai-draft"
             },
             "de_DE": {
               "text": "Prüfungs-Beuteautomat",
-              "based_on": "8344be04746d031a8b0c99c1baabec593d712748f278d8371fbc4ebc285cac5a",
+              "based_on": "0ac71cdef01f9c3bff87dd9e04a33e3e5cb189333504ec2cadb85c0ed566318f",
               "status": "ai-draft"
             },
             "fr_FR": {
-              "text": "Distributeur : Butin des salles d'épreuve",
-              "based_on": "8344be04746d031a8b0c99c1baabec593d712748f278d8371fbc4ebc285cac5a",
+              "text": "Distributeur de butin des salles d’épreuve",
+              "based_on": "0ac71cdef01f9c3bff87dd9e04a33e3e5cb189333504ec2cadb85c0ed566318f",
               "status": "ai-draft"
             },
             "pl_PL": {
               "text": "Automat z łupami z komnat prób",
-              "based_on": "8344be04746d031a8b0c99c1baabec593d712748f278d8371fbc4ebc285cac5a",
+              "based_on": "0ac71cdef01f9c3bff87dd9e04a33e3e5cb189333504ec2cadb85c0ed566318f",
               "status": "ai-draft"
             }
           }
@@ -2476,42 +2476,42 @@
           "translations": {
             "cs_CZ": {
               "text": "Automat na kořist ze zkušebních komor",
-              "based_on": "8344be04746d031a8b0c99c1baabec593d712748f278d8371fbc4ebc285cac5a",
+              "based_on": "0ac71cdef01f9c3bff87dd9e04a33e3e5cb189333504ec2cadb85c0ed566318f",
               "status": "ai-draft"
             },
             "es_ES": {
               "text": "Máquina de botín de las cámaras de prueba",
-              "based_on": "8344be04746d031a8b0c99c1baabec593d712748f278d8371fbc4ebc285cac5a",
+              "based_on": "0ac71cdef01f9c3bff87dd9e04a33e3e5cb189333504ec2cadb85c0ed566318f",
               "status": "ai-draft"
             },
             "es_MX": {
               "text": "Máquina de botín de la cámara de desafíos",
-              "based_on": "8344be04746d031a8b0c99c1baabec593d712748f278d8371fbc4ebc285cac5a",
+              "based_on": "0ac71cdef01f9c3bff87dd9e04a33e3e5cb189333504ec2cadb85c0ed566318f",
               "status": "ai-draft"
             },
             "pt_PT": {
               "text": "Máquina de Saques das Câmaras da Provação",
-              "based_on": "8344be04746d031a8b0c99c1baabec593d712748f278d8371fbc4ebc285cac5a",
+              "based_on": "0ac71cdef01f9c3bff87dd9e04a33e3e5cb189333504ec2cadb85c0ed566318f",
               "status": "ai-draft"
             },
             "pt_BR": {
               "text": "Máquina de Saque do Desafio",
-              "based_on": "8344be04746d031a8b0c99c1baabec593d712748f278d8371fbc4ebc285cac5a",
+              "based_on": "0ac71cdef01f9c3bff87dd9e04a33e3e5cb189333504ec2cadb85c0ed566318f",
               "status": "ai-draft"
             },
             "de_DE": {
               "text": "Prüfungs-Beuteautomat",
-              "based_on": "8344be04746d031a8b0c99c1baabec593d712748f278d8371fbc4ebc285cac5a",
+              "based_on": "0ac71cdef01f9c3bff87dd9e04a33e3e5cb189333504ec2cadb85c0ed566318f",
               "status": "ai-draft"
             },
             "fr_FR": {
-              "text": "Distributeur : Butin des salles d'épreuve",
-              "based_on": "8344be04746d031a8b0c99c1baabec593d712748f278d8371fbc4ebc285cac5a",
+              "text": "Distributeur de butin des salles d’épreuve",
+              "based_on": "0ac71cdef01f9c3bff87dd9e04a33e3e5cb189333504ec2cadb85c0ed566318f",
               "status": "ai-draft"
             },
             "pl_PL": {
               "text": "Automat z łupami z komnat prób",
-              "based_on": "8344be04746d031a8b0c99c1baabec593d712748f278d8371fbc4ebc285cac5a",
+              "based_on": "0ac71cdef01f9c3bff87dd9e04a33e3e5cb189333504ec2cadb85c0ed566318f",
               "status": "ai-draft"
             }
           }
@@ -2530,42 +2530,42 @@
           "translations": {
             "cs_CZ": {
               "text": "Automat na kořist z Endu",
-              "based_on": "461f073a43cfa96585d270e2461642d0a7cb2b2523211e6e2b9bd869f2dc77b7",
+              "based_on": "6f8a3e108a893176ba113d6b4384e3ebd63527c2973cdffa4faa8f8032792675",
               "status": "ai-draft"
             },
             "es_ES": {
               "text": "Máquina de botín del End",
-              "based_on": "461f073a43cfa96585d270e2461642d0a7cb2b2523211e6e2b9bd869f2dc77b7",
+              "based_on": "6f8a3e108a893176ba113d6b4384e3ebd63527c2973cdffa4faa8f8032792675",
               "status": "ai-draft"
             },
             "es_MX": {
               "text": "Máquina de botín del End",
-              "based_on": "461f073a43cfa96585d270e2461642d0a7cb2b2523211e6e2b9bd869f2dc77b7",
+              "based_on": "6f8a3e108a893176ba113d6b4384e3ebd63527c2973cdffa4faa8f8032792675",
               "status": "ai-draft"
             },
             "pt_PT": {
               "text": "Máquina de Saques do End",
-              "based_on": "461f073a43cfa96585d270e2461642d0a7cb2b2523211e6e2b9bd869f2dc77b7",
+              "based_on": "6f8a3e108a893176ba113d6b4384e3ebd63527c2973cdffa4faa8f8032792675",
               "status": "ai-draft"
             },
             "pt_BR": {
               "text": "Máquina de Saque do End",
-              "based_on": "461f073a43cfa96585d270e2461642d0a7cb2b2523211e6e2b9bd869f2dc77b7",
+              "based_on": "6f8a3e108a893176ba113d6b4384e3ebd63527c2973cdffa4faa8f8032792675",
               "status": "ai-draft"
             },
             "de_DE": {
               "text": "End-Beuteautomat",
-              "based_on": "461f073a43cfa96585d270e2461642d0a7cb2b2523211e6e2b9bd869f2dc77b7",
+              "based_on": "6f8a3e108a893176ba113d6b4384e3ebd63527c2973cdffa4faa8f8032792675",
               "status": "ai-draft"
             },
             "fr_FR": {
-              "text": "Distributeur : Butin de l'End",
-              "based_on": "461f073a43cfa96585d270e2461642d0a7cb2b2523211e6e2b9bd869f2dc77b7",
+              "text": "Distributeur de butin de l’End",
+              "based_on": "6f8a3e108a893176ba113d6b4384e3ebd63527c2973cdffa4faa8f8032792675",
               "status": "ai-draft"
             },
             "pl_PL": {
               "text": "Automat z łupami z Kresu",
-              "based_on": "461f073a43cfa96585d270e2461642d0a7cb2b2523211e6e2b9bd869f2dc77b7",
+              "based_on": "6f8a3e108a893176ba113d6b4384e3ebd63527c2973cdffa4faa8f8032792675",
               "status": "ai-draft"
             }
           }
@@ -2584,42 +2584,42 @@
           "translations": {
             "cs_CZ": {
               "text": "Automat na kořist z Endu",
-              "based_on": "461f073a43cfa96585d270e2461642d0a7cb2b2523211e6e2b9bd869f2dc77b7",
+              "based_on": "6f8a3e108a893176ba113d6b4384e3ebd63527c2973cdffa4faa8f8032792675",
               "status": "ai-draft"
             },
             "es_ES": {
               "text": "Máquina de botín del End",
-              "based_on": "461f073a43cfa96585d270e2461642d0a7cb2b2523211e6e2b9bd869f2dc77b7",
+              "based_on": "6f8a3e108a893176ba113d6b4384e3ebd63527c2973cdffa4faa8f8032792675",
               "status": "ai-draft"
             },
             "es_MX": {
               "text": "Máquina de botín del End",
-              "based_on": "461f073a43cfa96585d270e2461642d0a7cb2b2523211e6e2b9bd869f2dc77b7",
+              "based_on": "6f8a3e108a893176ba113d6b4384e3ebd63527c2973cdffa4faa8f8032792675",
               "status": "ai-draft"
             },
             "pt_PT": {
               "text": "Máquina de Saques do End",
-              "based_on": "461f073a43cfa96585d270e2461642d0a7cb2b2523211e6e2b9bd869f2dc77b7",
+              "based_on": "6f8a3e108a893176ba113d6b4384e3ebd63527c2973cdffa4faa8f8032792675",
               "status": "ai-draft"
             },
             "pt_BR": {
               "text": "Máquina de Saque do End",
-              "based_on": "461f073a43cfa96585d270e2461642d0a7cb2b2523211e6e2b9bd869f2dc77b7",
+              "based_on": "6f8a3e108a893176ba113d6b4384e3ebd63527c2973cdffa4faa8f8032792675",
               "status": "ai-draft"
             },
             "de_DE": {
               "text": "End-Beuteautomat",
-              "based_on": "461f073a43cfa96585d270e2461642d0a7cb2b2523211e6e2b9bd869f2dc77b7",
+              "based_on": "6f8a3e108a893176ba113d6b4384e3ebd63527c2973cdffa4faa8f8032792675",
               "status": "ai-draft"
             },
             "fr_FR": {
-              "text": "Distributeur : Butin de l'End",
-              "based_on": "461f073a43cfa96585d270e2461642d0a7cb2b2523211e6e2b9bd869f2dc77b7",
+              "text": "Distributeur de butin de l’End",
+              "based_on": "6f8a3e108a893176ba113d6b4384e3ebd63527c2973cdffa4faa8f8032792675",
               "status": "ai-draft"
             },
             "pl_PL": {
               "text": "Automat z łupami z Kresu",
-              "based_on": "461f073a43cfa96585d270e2461642d0a7cb2b2523211e6e2b9bd869f2dc77b7",
+              "based_on": "6f8a3e108a893176ba113d6b4384e3ebd63527c2973cdffa4faa8f8032792675",
               "status": "ai-draft"
             }
           }
@@ -2643,42 +2643,42 @@
           "translations": {
             "cs_CZ": {
               "text": "Vending Machines — Krabicovec",
-              "based_on": "5394f610df92f843efe25e28467d9ff5dadff0ef4bc6103119bf74c537c9c743",
+              "based_on": "9f9cbf224115b95aac9b769ef9d51b2e781468694c5a1402c1c33335777605da",
               "status": "ai-draft"
             },
             "es_ES": {
               "text": "Vending Machines — Shulker",
-              "based_on": "5394f610df92f843efe25e28467d9ff5dadff0ef4bc6103119bf74c537c9c743",
+              "based_on": "9f9cbf224115b95aac9b769ef9d51b2e781468694c5a1402c1c33335777605da",
               "status": "ai-draft"
             },
             "es_MX": {
               "text": "Vending Machines — Shulker",
-              "based_on": "5394f610df92f843efe25e28467d9ff5dadff0ef4bc6103119bf74c537c9c743",
+              "based_on": "9f9cbf224115b95aac9b769ef9d51b2e781468694c5a1402c1c33335777605da",
               "status": "ai-draft"
             },
             "pt_PT": {
               "text": "Vending Machines — Shulker",
-              "based_on": "5394f610df92f843efe25e28467d9ff5dadff0ef4bc6103119bf74c537c9c743",
+              "based_on": "9f9cbf224115b95aac9b769ef9d51b2e781468694c5a1402c1c33335777605da",
               "status": "ai-draft"
             },
             "pt_BR": {
               "text": "Vending Machines — Shulker",
-              "based_on": "5394f610df92f843efe25e28467d9ff5dadff0ef4bc6103119bf74c537c9c743",
+              "based_on": "9f9cbf224115b95aac9b769ef9d51b2e781468694c5a1402c1c33335777605da",
               "status": "ai-draft"
             },
             "de_DE": {
               "text": "Vending Machines — Shulker",
-              "based_on": "5394f610df92f843efe25e28467d9ff5dadff0ef4bc6103119bf74c537c9c743",
+              "based_on": "9f9cbf224115b95aac9b769ef9d51b2e781468694c5a1402c1c33335777605da",
               "status": "ai-draft"
             },
             "fr_FR": {
               "text": "Vending Machines — Shulker",
-              "based_on": "5394f610df92f843efe25e28467d9ff5dadff0ef4bc6103119bf74c537c9c743",
+              "based_on": "9f9cbf224115b95aac9b769ef9d51b2e781468694c5a1402c1c33335777605da",
               "status": "ai-draft"
             },
             "pl_PL": {
               "text": "Vending Machines — Shulker",
-              "based_on": "5394f610df92f843efe25e28467d9ff5dadff0ef4bc6103119bf74c537c9c743",
+              "based_on": "9f9cbf224115b95aac9b769ef9d51b2e781468694c5a1402c1c33335777605da",
               "status": "ai-draft"
             }
           }
@@ -2697,42 +2697,42 @@
           "translations": {
             "cs_CZ": {
               "text": "Automat, který prodává krunýře krabicovců a krabice z krabicovce. Vyžaduje základní balíček Vending Machines.",
-              "based_on": "0ef6317f0f7738d4c009aca16948ffc53d9a5d53cd463946af2aa3f371d73322",
+              "based_on": "15c67d524bc6ee21e4e39c2d94713931ba8773bcd60c648b5a29616a629a05df",
               "status": "ai-draft"
             },
             "es_ES": {
               "text": "Máquina de Shulker que vende caparazones y cajas de Shulker. Requiere el núcleo de Vending Machines.",
-              "based_on": "0ef6317f0f7738d4c009aca16948ffc53d9a5d53cd463946af2aa3f371d73322",
+              "based_on": "15c67d524bc6ee21e4e39c2d94713931ba8773bcd60c648b5a29616a629a05df",
               "status": "ai-draft"
             },
             "es_MX": {
               "text": "Máquina de Shulker que vende corazas y cajas de Shulker. Requiere el núcleo de Vending Machines.",
-              "based_on": "0ef6317f0f7738d4c009aca16948ffc53d9a5d53cd463946af2aa3f371d73322",
+              "based_on": "15c67d524bc6ee21e4e39c2d94713931ba8773bcd60c648b5a29616a629a05df",
               "status": "ai-draft"
             },
             "pt_PT": {
               "text": "Máquina de Shulker que vende Carapaças de Shulker e Caixas de Shulker. Requer a base de Vending Machines.",
-              "based_on": "0ef6317f0f7738d4c009aca16948ffc53d9a5d53cd463946af2aa3f371d73322",
+              "based_on": "15c67d524bc6ee21e4e39c2d94713931ba8773bcd60c648b5a29616a629a05df",
               "status": "ai-draft"
             },
             "pt_BR": {
               "text": "Máquina de Shulker que vende Cascos e Caixas de Shulker. Requer a base de Vending Machines.",
-              "based_on": "0ef6317f0f7738d4c009aca16948ffc53d9a5d53cd463946af2aa3f371d73322",
+              "based_on": "15c67d524bc6ee21e4e39c2d94713931ba8773bcd60c648b5a29616a629a05df",
               "status": "ai-draft"
             },
             "de_DE": {
               "text": "Shulker-Automat, der Shulkerhüllen und Shulker-Kisten verkauft. Benötigt Vending Machines – Basis.",
-              "based_on": "0ef6317f0f7738d4c009aca16948ffc53d9a5d53cd463946af2aa3f371d73322",
+              "based_on": "15c67d524bc6ee21e4e39c2d94713931ba8773bcd60c648b5a29616a629a05df",
               "status": "ai-draft"
             },
             "fr_FR": {
               "text": "Distributeur de shulker qui vend des carapaces et des boîtes de shulker. Nécessite Vending Machines — Base.",
-              "based_on": "0ef6317f0f7738d4c009aca16948ffc53d9a5d53cd463946af2aa3f371d73322",
+              "based_on": "15c67d524bc6ee21e4e39c2d94713931ba8773bcd60c648b5a29616a629a05df",
               "status": "ai-draft"
             },
             "pl_PL": {
               "text": "Automat shulkera sprzedający muszle shulkerów i shulkerowe skrzynie. Wymaga paczki Vending Machines — Podstawa.",
-              "based_on": "0ef6317f0f7738d4c009aca16948ffc53d9a5d53cd463946af2aa3f371d73322",
+              "based_on": "15c67d524bc6ee21e4e39c2d94713931ba8773bcd60c648b5a29616a629a05df",
               "status": "ai-draft"
             }
           }
@@ -2756,42 +2756,42 @@
           "translations": {
             "cs_CZ": {
               "text": "Vending Machines — Vesničané",
-              "based_on": "9b59655177f5c0feba826a5ef279ab59f56667544c9d7851d4fd273a1b7679cf",
+              "based_on": "8d335a5aa6e315a0a27f98830ed73b1a0802ce866751b1a91be36b488eba9bf4",
               "status": "ai-draft"
             },
             "es_ES": {
               "text": "Vending Machines — Aldeanos",
-              "based_on": "9b59655177f5c0feba826a5ef279ab59f56667544c9d7851d4fd273a1b7679cf",
+              "based_on": "8d335a5aa6e315a0a27f98830ed73b1a0802ce866751b1a91be36b488eba9bf4",
               "status": "ai-draft"
             },
             "es_MX": {
               "text": "Vending Machines — Aldeanos",
-              "based_on": "9b59655177f5c0feba826a5ef279ab59f56667544c9d7851d4fd273a1b7679cf",
+              "based_on": "8d335a5aa6e315a0a27f98830ed73b1a0802ce866751b1a91be36b488eba9bf4",
               "status": "ai-draft"
             },
             "pt_PT": {
               "text": "Vending Machines — Aldeões",
-              "based_on": "9b59655177f5c0feba826a5ef279ab59f56667544c9d7851d4fd273a1b7679cf",
+              "based_on": "8d335a5aa6e315a0a27f98830ed73b1a0802ce866751b1a91be36b488eba9bf4",
               "status": "ai-draft"
             },
             "pt_BR": {
               "text": "Vending Machines — Aldeões",
-              "based_on": "9b59655177f5c0feba826a5ef279ab59f56667544c9d7851d4fd273a1b7679cf",
+              "based_on": "8d335a5aa6e315a0a27f98830ed73b1a0802ce866751b1a91be36b488eba9bf4",
               "status": "ai-draft"
             },
             "de_DE": {
               "text": "Vending Machines — Dorfbewohner",
-              "based_on": "9b59655177f5c0feba826a5ef279ab59f56667544c9d7851d4fd273a1b7679cf",
+              "based_on": "8d335a5aa6e315a0a27f98830ed73b1a0802ce866751b1a91be36b488eba9bf4",
               "status": "ai-draft"
             },
             "fr_FR": {
               "text": "Vending Machines — Villageois",
-              "based_on": "9b59655177f5c0feba826a5ef279ab59f56667544c9d7851d4fd273a1b7679cf",
+              "based_on": "8d335a5aa6e315a0a27f98830ed73b1a0802ce866751b1a91be36b488eba9bf4",
               "status": "ai-draft"
             },
             "pl_PL": {
               "text": "Vending Machines — Osadnicy",
-              "based_on": "9b59655177f5c0feba826a5ef279ab59f56667544c9d7851d4fd273a1b7679cf",
+              "based_on": "8d335a5aa6e315a0a27f98830ed73b1a0802ce866751b1a91be36b488eba9bf4",
               "status": "ai-draft"
             }
           }
@@ -2810,42 +2810,42 @@
           "translations": {
             "cs_CZ": {
               "text": "Automaty pro jednotlivé profese vesničanů. Vyžaduje základní balíček Vending Machines.",
-              "based_on": "d4d56b7d23e43a456ac4e31f93babaf9f5ac0c6a48ff9396cf6d1c55e080846b",
+              "based_on": "efbf89df3fe5e9e49347aa991163f12feeb0ebc327be62a2b19a5fb500f20031",
               "status": "ai-draft"
             },
             "es_ES": {
               "text": "Máquinas con los tratos de cada profesión de aldeano. Requiere el núcleo de Vending Machines.",
-              "based_on": "d4d56b7d23e43a456ac4e31f93babaf9f5ac0c6a48ff9396cf6d1c55e080846b",
+              "based_on": "efbf89df3fe5e9e49347aa991163f12feeb0ebc327be62a2b19a5fb500f20031",
               "status": "ai-draft"
             },
             "es_MX": {
               "text": "Máquinas con los intercambios de cada profesión de aldeano. Requiere el núcleo de Vending Machines.",
-              "based_on": "d4d56b7d23e43a456ac4e31f93babaf9f5ac0c6a48ff9396cf6d1c55e080846b",
+              "based_on": "efbf89df3fe5e9e49347aa991163f12feeb0ebc327be62a2b19a5fb500f20031",
               "status": "ai-draft"
             },
             "pt_PT": {
               "text": "Máquinas das profissões dos aldeões. Requer a base de Vending Machines.",
-              "based_on": "d4d56b7d23e43a456ac4e31f93babaf9f5ac0c6a48ff9396cf6d1c55e080846b",
+              "based_on": "efbf89df3fe5e9e49347aa991163f12feeb0ebc327be62a2b19a5fb500f20031",
               "status": "ai-draft"
             },
             "pt_BR": {
               "text": "Máquinas para cada profissão de aldeão. Requer a base de Vending Machines.",
-              "based_on": "d4d56b7d23e43a456ac4e31f93babaf9f5ac0c6a48ff9396cf6d1c55e080846b",
+              "based_on": "efbf89df3fe5e9e49347aa991163f12feeb0ebc327be62a2b19a5fb500f20031",
               "status": "ai-draft"
             },
             "de_DE": {
               "text": "Automaten für die Berufe der Dorfbewohner. Benötigt Vending Machines – Basis.",
-              "based_on": "d4d56b7d23e43a456ac4e31f93babaf9f5ac0c6a48ff9396cf6d1c55e080846b",
+              "based_on": "efbf89df3fe5e9e49347aa991163f12feeb0ebc327be62a2b19a5fb500f20031",
               "status": "ai-draft"
             },
             "fr_FR": {
               "text": "Un distributeur pour chaque métier de villageois. Nécessite Vending Machines — Base.",
-              "based_on": "d4d56b7d23e43a456ac4e31f93babaf9f5ac0c6a48ff9396cf6d1c55e080846b",
+              "based_on": "efbf89df3fe5e9e49347aa991163f12feeb0ebc327be62a2b19a5fb500f20031",
               "status": "ai-draft"
             },
             "pl_PL": {
               "text": "Automaty handlujące jak osadnicy poszczególnych profesji. Wymaga paczki Vending Machines — Podstawa.",
-              "based_on": "d4d56b7d23e43a456ac4e31f93babaf9f5ac0c6a48ff9396cf6d1c55e080846b",
+              "based_on": "efbf89df3fe5e9e49347aa991163f12feeb0ebc327be62a2b19a5fb500f20031",
               "status": "ai-draft"
             }
           }
@@ -2869,42 +2869,42 @@
           "translations": {
             "cs_CZ": {
               "text": "Vending Machines — Potulný obchodník",
-              "based_on": "fc9496388da901e746cfaf073d720dc508bcf3fae7bd3e0bffc1f1bf00ef9b9e",
+              "based_on": "f357c08c667e1304b55cbe122fe114c5439a33e30285c7c17d2095c1d73621e6",
               "status": "ai-draft"
             },
             "es_ES": {
               "text": "Vending Machines — Vendedor errante",
-              "based_on": "fc9496388da901e746cfaf073d720dc508bcf3fae7bd3e0bffc1f1bf00ef9b9e",
+              "based_on": "f357c08c667e1304b55cbe122fe114c5439a33e30285c7c17d2095c1d73621e6",
               "status": "ai-draft"
             },
             "es_MX": {
               "text": "Vending Machines — Comerciante errante",
-              "based_on": "fc9496388da901e746cfaf073d720dc508bcf3fae7bd3e0bffc1f1bf00ef9b9e",
+              "based_on": "f357c08c667e1304b55cbe122fe114c5439a33e30285c7c17d2095c1d73621e6",
               "status": "ai-draft"
             },
             "pt_PT": {
               "text": "Vending Machines — Feirante",
-              "based_on": "fc9496388da901e746cfaf073d720dc508bcf3fae7bd3e0bffc1f1bf00ef9b9e",
+              "based_on": "f357c08c667e1304b55cbe122fe114c5439a33e30285c7c17d2095c1d73621e6",
               "status": "ai-draft"
             },
             "pt_BR": {
               "text": "Vending Machines — Vendedor Ambulante",
-              "based_on": "fc9496388da901e746cfaf073d720dc508bcf3fae7bd3e0bffc1f1bf00ef9b9e",
+              "based_on": "f357c08c667e1304b55cbe122fe114c5439a33e30285c7c17d2095c1d73621e6",
               "status": "ai-draft"
             },
             "de_DE": {
               "text": "Vending Machines — Fahrender Händler",
-              "based_on": "fc9496388da901e746cfaf073d720dc508bcf3fae7bd3e0bffc1f1bf00ef9b9e",
+              "based_on": "f357c08c667e1304b55cbe122fe114c5439a33e30285c7c17d2095c1d73621e6",
               "status": "ai-draft"
             },
             "fr_FR": {
               "text": "Vending Machines — Marchand ambulant",
-              "based_on": "fc9496388da901e746cfaf073d720dc508bcf3fae7bd3e0bffc1f1bf00ef9b9e",
+              "based_on": "f357c08c667e1304b55cbe122fe114c5439a33e30285c7c17d2095c1d73621e6",
               "status": "ai-draft"
             },
             "pl_PL": {
               "text": "Vending Machines — Kupiec wędrowny",
-              "based_on": "fc9496388da901e746cfaf073d720dc508bcf3fae7bd3e0bffc1f1bf00ef9b9e",
+              "based_on": "f357c08c667e1304b55cbe122fe114c5439a33e30285c7c17d2095c1d73621e6",
               "status": "ai-draft"
             }
           }
@@ -2923,42 +2923,42 @@
           "translations": {
             "cs_CZ": {
               "text": "Automat s nabídkou potulného obchodníka. Vyžaduje základní balíček Vending Machines.",
-              "based_on": "c48fcc348d64dbdda53826a7b601fd031865176698addd9ecda0058680436e4d",
+              "based_on": "abb26309a7bcf35032f542c22b8b01f52b6a1f784f6bef1c402e92536e214cfd",
               "status": "ai-draft"
             },
             "es_ES": {
               "text": "Máquina de vendedor errante. Requiere el núcleo de Vending Machines.",
-              "based_on": "c48fcc348d64dbdda53826a7b601fd031865176698addd9ecda0058680436e4d",
+              "based_on": "abb26309a7bcf35032f542c22b8b01f52b6a1f784f6bef1c402e92536e214cfd",
               "status": "ai-draft"
             },
             "es_MX": {
               "text": "Máquina de comerciante errante. Requiere el núcleo de Vending Machines.",
-              "based_on": "c48fcc348d64dbdda53826a7b601fd031865176698addd9ecda0058680436e4d",
+              "based_on": "abb26309a7bcf35032f542c22b8b01f52b6a1f784f6bef1c402e92536e214cfd",
               "status": "ai-draft"
             },
             "pt_PT": {
               "text": "Máquina de Feirante. Requer a base de Vending Machines.",
-              "based_on": "c48fcc348d64dbdda53826a7b601fd031865176698addd9ecda0058680436e4d",
+              "based_on": "abb26309a7bcf35032f542c22b8b01f52b6a1f784f6bef1c402e92536e214cfd",
               "status": "ai-draft"
             },
             "pt_BR": {
               "text": "Máquina de Vendedor Ambulante. Requer a base de Vending Machines.",
-              "based_on": "c48fcc348d64dbdda53826a7b601fd031865176698addd9ecda0058680436e4d",
+              "based_on": "abb26309a7bcf35032f542c22b8b01f52b6a1f784f6bef1c402e92536e214cfd",
               "status": "ai-draft"
             },
             "de_DE": {
               "text": "Automat des fahrenden Händlers. Benötigt Vending Machines – Basis.",
-              "based_on": "c48fcc348d64dbdda53826a7b601fd031865176698addd9ecda0058680436e4d",
+              "based_on": "abb26309a7bcf35032f542c22b8b01f52b6a1f784f6bef1c402e92536e214cfd",
               "status": "ai-draft"
             },
             "fr_FR": {
               "text": "Distributeur du marchand ambulant. Nécessite Vending Machines — Base.",
-              "based_on": "c48fcc348d64dbdda53826a7b601fd031865176698addd9ecda0058680436e4d",
+              "based_on": "abb26309a7bcf35032f542c22b8b01f52b6a1f784f6bef1c402e92536e214cfd",
               "status": "ai-draft"
             },
             "pl_PL": {
               "text": "Automat kupca wędrownego. Wymaga paczki Vending Machines — Podstawa.",
-              "based_on": "c48fcc348d64dbdda53826a7b601fd031865176698addd9ecda0058680436e4d",
+              "based_on": "abb26309a7bcf35032f542c22b8b01f52b6a1f784f6bef1c402e92536e214cfd",
               "status": "ai-draft"
             }
           }
@@ -2985,7 +2985,7 @@
       "status": "Documented sample terminology, not checked in game. Installed extracted 1.26.52 .lang files are empty."
     },
     "professions": {
-      "meaning": "Use vanilla Bedrock profession names in standalone labels after a colon where that avoids incorrect grammatical inflection.",
+      "meaning": "Use vanilla Bedrock profession names. Owner decision 2026-11-21: machine names never use a colon, in any language; every machine is 'machine of <profession/loot/shulker>' in the language's natural form (cs genitive Automat farmáře, pl genitive Automat rolnika, de compound Bauern-Automat, fr Distributeur du fermier, es/pt Máquina de ...).",
       "localized": {
         "cs_CZ": {
           "farmer": "Farmář",
