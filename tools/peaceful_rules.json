@@ -1452,6 +1452,13 @@
       "by": "owner",
       "date": "2026-11-21"
     },
+    "minecraft:totem": {
+      "price": 32,
+      "reason": "owner: a free life is one of the strongest items and no villager sells it; 12 was below the decorative heads; priced like the trident (rare class), not higher because raid farms make totems plentiful in normal play",
+      "ref": "docs/peaceful-machine.md Part 2 decisions (2026-11-21)",
+      "by": "owner",
+      "date": "2026-11-21"
+    },
     "minecraft:resin_clump": {
       "price": 1,
       "quantity": 9,

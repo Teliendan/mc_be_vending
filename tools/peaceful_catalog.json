@@ -923,21 +923,21 @@
       "attempt": "one evocation_illager kill (loot table entities/evocation_illager.json)",
       "class": "rare_mob",
       "item": "minecraft:totem_of_undying",
-      "price": 12,
+      "price": 32,
       "quantity": 1,
       "replaces": "drop of evocation_illager",
       "stage": "trial",
-      "upgraded_price": 8,
+      "upgraded_price": 22,
       "upgraded_wants": [
         {
           "item": "minecraft:emerald",
-          "quantity": 8
+          "quantity": 22
         }
       ],
       "wants": [
         {
           "item": "minecraft:emerald",
-          "quantity": 12
+          "quantity": 32
         }
       ],
       "yield": 1.0

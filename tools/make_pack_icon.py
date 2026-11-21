@@ -31,7 +31,7 @@ PACK_DESIGNS = {
     "vending_villagers_bp": ("Villagers", "librarian", False, "green"),
     "vending_wandering_bp": ("Wandering Trader", "wandering_trader", False, "blue"),
     "vending_shulker_bp": ("Shulker", "shulker", False, "purple"),
-    "vending_loot_bp": ("Loot", "loot_end", False, "amber"),
+    "vending_loot_bp": ("Loot", "loot_end", False, "crimson"),
 }
 BLOCKS = os.path.join(RP, "textures", "blocks")
 EMERALD = r"C:\mcmods\reference\vanilla\current\resource_packs\vanilla\textures\items\emerald.png"
@@ -46,7 +46,7 @@ BG_PALETTES = {
     "green": [(38, 64, 58), (31, 53, 48), (25, 43, 39), (20, 34, 31)],
     "blue": [(36, 60, 83), (29, 49, 69), (23, 40, 56), (18, 31, 44)],
     "purple": [(65, 45, 75), (54, 36, 63), (44, 29, 51), (34, 23, 40)],
-    "amber": [(84, 62, 32), (70, 51, 26), (57, 41, 21), (44, 32, 16)],
+    "crimson": [(82, 34, 40), (68, 28, 33), (55, 22, 27), (42, 17, 21)],
 }
 CELL = 8
 

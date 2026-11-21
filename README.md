@@ -10,6 +10,7 @@ Packs - one Core plus one data-only pack per feature, all sharing `vending_rp/`:
 | `vending_villagers_bp` | the 13 villager profession machines |
 | `vending_wandering_bp` | wandering trader machine |
 | `vending_shulker_bp` | shulker machine + `vm:shulker_core` |
+| `vending_loot_bp` | the four Loot Machines (Overworld, Nether, Trial, End): mob loot a Peaceful world cannot produce |
 | `vending_rp` | shared resources |
 
 A new feature = a new small BP depending on Core + an entry in `tools/gen_extra_machines.py`.
@@ -45,7 +46,8 @@ the shared RP files are wrong until the whole order has run.
   `--blocks-only` refreshes block definitions only.
 - `gen_peaceful_catalog.py` (+ `peaceful_sources.py`) - evaluates the Peaceful machines' catalogue from
   `peaceful_rules.json` and the game data; writes `peaceful_catalog.json` and `docs/peaceful-catalog.md`
-  (`--check` = stale test). Not part of `build.py` yet. See [docs/peaceful-machine.md](docs/peaceful-machine.md).
+  (`--check` = stale test). `build.py` runs it before `gen_extra_machines.py`, which turns the catalogue into the
+  Loot Machines' trade tables; suite `generated` runs `--check`. `gen_loot_wiki.py` writes their wiki records. See [docs/peaceful-machine.md](docs/peaceful-machine.md).
 - Art: `make_machine_textures.py`, `vm_make_upgraded_textures.py`, `make_pack_icon.py`.
 - `machine_catalog.py` is the shared source for the 13 villager machines' displayed
   goods and recipe signature ingredients. Accepted art and item choices:

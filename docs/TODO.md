@@ -21,5 +21,5 @@ need their targeted post-fix engine check.
 
 ## Feature ideas
 
-- Peaceful machines (sell drops that are hard to obtain without mobs): Part 1 catalogue done
-  2026-11-21 ([peaceful-machine.md](peaceful-machine.md)); Part 2, the four stage machines, next.
+- Peaceful machines (sell drops that are hard to obtain without mobs): done 2026-11-21 as the
+  four Loot Machines ([peaceful-machine.md](peaceful-machine.md)). A Piglin machine would re-decide bartering.

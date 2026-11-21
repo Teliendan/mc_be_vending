@@ -62,7 +62,7 @@ Pricing inputs (proposals until the owner approves):
 | `minecraft:breeze_rod` | 1 | 5 | 4 | trial | trial_mob | drop of breeze |
 | `minecraft:ominous_bottle` | 1 | 2 | 1 | trial | common_mob | drop of pillager, vindicator |
 | `minecraft:ominous_trial_key` | 1 | 15 | 10 | trial | trial_reward | an ominous trial spawner ejects an ominous trial key (30 %) |
-| `minecraft:totem_of_undying` | 1 | 12 | 8 | trial | rare_mob | drop of evocation_illager |
+| `minecraft:totem_of_undying` | 1 | 32 | 22 | trial | rare_mob | drop of evocation_illager |
 | `minecraft:trial_key` | 1 | 9 | 6 | trial | trial_reward | a trial spawner ejects its reward after its mobs are defeated (key 50 %, else food or a potion) |
 | `minecraft:nether_star` | 1 | 128 | 90 | end_boss | boss | drop of wither |
 | `minecraft:wither_rose` | 1 | 16 | 11 | end_boss | boss_byproduct | a mob or player killed by the Wither leaves a wither rose |
@@ -707,7 +707,7 @@ accessible when the machine sells the item they need (the craft check counts tha
 - Class: rare_mob (acquisition_class[evocation_illager]: one per structure or raid; anchored on the leatherworker saddle (6 em) = one ravager kill)
 - Stage: trial (owner: trial chamber stage (renamed from deep))
 - Formula: ceil(8 x 1.5 / 1) = 12 emeralds per item, quantity 1, 12 emeralds
-- Price: 12 emeralds for 1 = wants 12; upgraded 8 = 8
+- Price: 32 emeralds for 1 = wants 32; upgraded 22 = 22 (price_overrides (owner 2026-11-21): owner: a free life is one of the strongest items and no villager sells it; 12 was below the decorative heads; priced like the trident (rare class), not higher because raid farms make totems plentiful in normal play)
 
 ### minecraft:trial_key
 

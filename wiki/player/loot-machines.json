@@ -73,11 +73,11 @@
     "evidence": [
       {
         "path": "tools/peaceful_catalog.json",
-        "sha256": "9bb79cb289039f110621b6c53f0a258bb27f0b29596e4140058d86254399d321"
+        "sha256": "10b9af939491c49ec76f25e616e3eb38f623245bf50e58aade9ea4da834b5494"
       },
       {
         "path": "tools/peaceful_rules.json",
-        "sha256": "85b59cec3ee532235b9137b82d6fb5864884d4432486a557634ee9bcc3b8d6c0"
+        "sha256": "209b748ba56d8f9379216097dcd3667b5ea565ea425219f139279be6c5ee8a90"
       },
       {
         "path": "vending_loot_bp/blocks/machine_loot_overworld.json",
@@ -131,11 +131,11 @@
     "evidence": [
       {
         "path": "tools/peaceful_catalog.json",
-        "sha256": "9bb79cb289039f110621b6c53f0a258bb27f0b29596e4140058d86254399d321"
+        "sha256": "10b9af939491c49ec76f25e616e3eb38f623245bf50e58aade9ea4da834b5494"
       },
       {
         "path": "tools/peaceful_rules.json",
-        "sha256": "85b59cec3ee532235b9137b82d6fb5864884d4432486a557634ee9bcc3b8d6c0"
+        "sha256": "209b748ba56d8f9379216097dcd3667b5ea565ea425219f139279be6c5ee8a90"
       },
       {
         "path": "vending_loot_bp/blocks/machine_loot_nether.json",
@@ -181,11 +181,11 @@
     "evidence": [
       {
         "path": "tools/peaceful_catalog.json",
-        "sha256": "9bb79cb289039f110621b6c53f0a258bb27f0b29596e4140058d86254399d321"
+        "sha256": "10b9af939491c49ec76f25e616e3eb38f623245bf50e58aade9ea4da834b5494"
       },
       {
         "path": "tools/peaceful_rules.json",
-        "sha256": "85b59cec3ee532235b9137b82d6fb5864884d4432486a557634ee9bcc3b8d6c0"
+        "sha256": "209b748ba56d8f9379216097dcd3667b5ea565ea425219f139279be6c5ee8a90"
       },
       {
         "path": "vending_loot_bp/blocks/machine_loot_trial.json",
@@ -215,11 +215,11 @@
     "evidence": [
       {
         "path": "tools/peaceful_catalog.json",
-        "sha256": "9bb79cb289039f110621b6c53f0a258bb27f0b29596e4140058d86254399d321"
+        "sha256": "10b9af939491c49ec76f25e616e3eb38f623245bf50e58aade9ea4da834b5494"
       },
       {
         "path": "tools/peaceful_rules.json",
-        "sha256": "85b59cec3ee532235b9137b82d6fb5864884d4432486a557634ee9bcc3b8d6c0"
+        "sha256": "209b748ba56d8f9379216097dcd3667b5ea565ea425219f139279be6c5ee8a90"
       },
       {
         "path": "vending_loot_bp/blocks/machine_loot_end.json",
