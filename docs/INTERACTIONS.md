@@ -32,8 +32,8 @@ same `hasSneakIntent`: actual crouch posture OR raw Sneak button pressed. This c
 Creative descent input while preserving grounded and touch/toggle crouching after a
 raw touch button releases. No game-mode restriction is imposed; placement and item
 cost remain native. The input-state difference is a source diagnosis, not a reproduced
-engine result. Retest Creative both on the ground and flying (also Sneak + Jump to
-hold altitude), plus Survival and ordinary standing trade.
+engine result. Owner confirmed Creative and Survival crouch-building in game
+(1.26.63, 2026-11-17 and 2026-11-21).
 
 API 2.8.0 declares `InputInfo.getButtonState`; official [InputButton documentation](https://learn.microsoft.com/en-us/minecraft/creator/scriptapi/minecraft/server/inputbutton?view=minecraft-bedrock-stable)
 notes touch Sneak input may release after one tick. [Minecraft controls](https://www.minecraft.net/en-us/article/minecraft-controls)

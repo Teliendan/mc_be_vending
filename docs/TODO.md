@@ -1,25 +1,7 @@
 # Vending backlog
 
-Updated 2026-10-25, Bedrock 1.26.52.
+No open items. Ready for release (owner, 2026-11-21, Bedrock 1.26.63).
 
-## Awaiting in-game verification
-
-- [ ] Creative crouch-build: test grounded, flying downward, and Sneak + Jump while
-  holding altitude; release Sneak to restore trading. Repeat Survival/touch-toggle crouch.
-
-- [ ] Place machines directly side-by-side and diagonally, with different professions
-  and upgraded machines. Hidden traders no longer fail the upper-cell actor check.
-- [ ] Repeat V1 actor obstruction to ensure a real mob still blocks head placement.
-
-Librarian's red and yellow candle offers are the complete vanilla candle catalogue;
-no missing-colour change is needed. TNT resistance is accepted by the owner.
-Details: [test feedback](TEST_FEEDBACK_2026-10-25.md).
-
-Owner follow-up accepted the remaining original checks; new-offer coverage is no longer
-listed as outstanding. The Creative crouch-build follow-up and placement fixes still
-need their targeted post-fix engine check.
-
-## Feature ideas
-
-- Peaceful machines (sell drops that are hard to obtain without mobs): done 2026-11-21 as the
-  four Loot Machines ([peaceful-machine.md](peaceful-machine.md)). A Piglin machine would re-decide bartering.
+The 2026-10-25 follow-ups passed the owner's retest: Creative and Survival crouch-building, machines
+side by side and diagonally (different professions, upgraded), and a real mob still blocking head placement.
+Loot Machines are accepted (`peaceful-machine.md`). Details: [test feedback](TEST_FEEDBACK_2026-10-25.md).
