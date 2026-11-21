@@ -1,0 +1,1456 @@
+{
+  "_doc": "Hand-maintained knowledge for gen_peaceful_catalog.py. Every entry needs 'reason' and 'ref'. Classes: EASY, LIMITED, UNAVAILABLE. Owner decisions are in docs/peaceful-machine.md and override automatic results via 'decisions'.",
+  "game_version": "1.26.63",
+  "peaceful_mobs": {
+    "ref": "Minecraft Wiki 'Difficulty' (Peaceful mob table and references MC-304858, MCPE-55270), 'Breeding', 'Sulfur Cube', 'Nautilus', read 2026-11-21; bedrock-mobs references/spawning.md; details and per-mob reasons in docs/peaceful-research.md section 'Mobs on Peaceful'",
+    "absent": [
+      "blaze",
+      "bogged",
+      "breeze",
+      "camel_husk",
+      "cave_spider",
+      "creaking",
+      "creeper",
+      "drowned",
+      "elder_guardian",
+      "enderman",
+      "endermite",
+      "evocation_illager",
+      "ghast",
+      "guardian",
+      "husk",
+      "magma_cube",
+      "parched",
+      "phantom",
+      "piglin_brute",
+      "pillager",
+      "ravager",
+      "silverfish",
+      "skeleton",
+      "skeleton_horse",
+      "slime",
+      "spider",
+      "stray",
+      "vex",
+      "vindicator",
+      "warden",
+      "witch",
+      "wither",
+      "wither_skeleton",
+      "zoglin",
+      "zombie",
+      "zombie_horse",
+      "zombie_pigman",
+      "zombie_villager",
+      "zombie_villager_v2"
+    ],
+    "present_breedable": [
+      "allay",
+      "armadillo",
+      "axolotl",
+      "bee",
+      "camel",
+      "cat",
+      "chicken",
+      "cow",
+      "donkey",
+      "fox",
+      "frog",
+      "goat",
+      "hoglin",
+      "horse",
+      "llama",
+      "mooshroom",
+      "mule",
+      "nautilus",
+      "ocelot",
+      "panda",
+      "pig",
+      "rabbit",
+      "sheep",
+      "sniffer",
+      "strider",
+      "trader_llama",
+      "turtle",
+      "villager",
+      "villager_v2",
+      "wolf"
+    ],
+    "present_limited": [
+      "bat",
+      "cod",
+      "copper_golem",
+      "dolphin",
+      "ender_dragon",
+      "fishing_hook",
+      "glow_squid",
+      "happy_ghast",
+      "iron_golem",
+      "parrot",
+      "piglin",
+      "polar_bear",
+      "pufferfish",
+      "salmon",
+      "shulker",
+      "snow_golem",
+      "squid",
+      "sulfur_cube",
+      "tadpole",
+      "tropicalfish",
+      "wandering_trader",
+      "zombie_nautilus"
+    ]
+  },
+  "sources": {
+    "_example_minecraft:item_id": [
+      {
+        "kind": "block|mob|chest|fishing|gift|archaeology|vault|barter|trade|environment|craft",
+        "detail": "short what/where",
+        "class": "EASY|LIMITED",
+        "reason": "why this class",
+        "ref": "Wiki page#section"
+      }
+    ],
+    "minecraft:carrot": [
+      {
+        "kind": "environment",
+        "detail": "farm crop (village farms, then replant)",
+        "class": "EASY",
+        "reason": "renewable farming",
+        "ref": "Minecraft Wiki 'Carrot' Obtaining"
+      }
+    ],
+    "minecraft:potato": [
+      {
+        "kind": "environment",
+        "detail": "farm crop (village farms, then replant)",
+        "class": "EASY",
+        "reason": "renewable farming",
+        "ref": "Minecraft Wiki 'Potato' Obtaining"
+      }
+    ],
+    "minecraft:glowstone_dust": [
+      {
+        "kind": "block",
+        "detail": "mine glowstone blocks in the Nether (2-4 dust each)",
+        "class": "EASY",
+        "reason": "ordinary mining; Nether glowstone is plentiful",
+        "ref": "Minecraft Wiki 'Glowstone Dust' Obtaining"
+      }
+    ],
+    "minecraft:sculk_catalyst": [
+      {
+        "kind": "block",
+        "detail": "naturally generated in the deep dark; drops itself with Silk Touch",
+        "class": "EASY",
+        "reason": "ordinary mining (Silk Touch); ancient city chests too",
+        "ref": "Minecraft Wiki 'Sculk Catalyst' Obtaining / Natural generation"
+      }
+    ],
+    "minecraft:skull": [
+      {
+        "kind": "environment",
+        "detail": "skeleton skulls placed in ancient cities",
+        "class": "LIMITED",
+        "reason": "finite structure blocks",
+        "ref": "Minecraft Wiki 'Head' Natural generation"
+      }
+    ],
+    "minecraft:resin_clump": [
+      {
+        "kind": "environment",
+        "detail": "mine a naturally generated creaking heart (1-3 resin without Silk Touch)",
+        "class": "LIMITED",
+        "reason": "finite: pale garden hearts are not renewable; a crafted heart costs a resin block",
+        "ref": "Minecraft Wiki 'Resin Clump' Obtaining"
+      }
+    ],
+    "minecraft:wet_sponge": [
+      {
+        "kind": "environment",
+        "detail": "ocean monument sponge rooms (about 30 wet sponges per room)",
+        "class": "LIMITED",
+        "reason": "finite structure blocks; sponge is not renewable without elder guardians",
+        "ref": "Minecraft Wiki 'Sponge' Obtaining"
+      }
+    ],
+    "minecraft:prismarine_crystals": [
+      {
+        "kind": "environment",
+        "detail": "break naturally generated sea lanterns (2-3 crystals)",
+        "class": "LIMITED",
+        "reason": "finite structure blocks (ocean monuments)",
+        "ref": "Minecraft Wiki 'Prismarine Crystals' Obtaining"
+      }
+    ]
+  },
+  "special": {
+    "_example_minecraft:item_id": {
+      "mechanic": "normal acquisition mechanic",
+      "why_unavailable": "why it fails on Peaceful",
+      "attempt": "what one acquisition attempt is",
+      "yield": 1.0,
+      "acquisition_class": "see pricing.classes",
+      "reason": "...",
+      "ref": "Wiki page#section"
+    },
+    "minecraft:skull": {
+      "mechanic": "a charged creeper explosion kills a skeleton (skeleton skull)",
+      "why_unavailable": "no creepers on Peaceful, so no charged creepers",
+      "attempt": "one mob killed by a charged-creeper explosion (Bedrock: every mob it kills drops a head; the one-head-per-explosion limit is Java only)",
+      "yield": 1.0,
+      "acquisition_class": "rare_mob",
+      "stage": "overworld",
+      "reason": "needs lightning on a creeper (thunderstorm or Channeling trident), so a rare event",
+      "ref": "Minecraft Wiki 'Head' Obtaining (Mob loot; one-head rule marked Java Edition only)"
+    },
+    "minecraft:zombie_head": {
+      "mechanic": "a charged creeper explosion kills a zombie (zombie head)",
+      "why_unavailable": "no creepers on Peaceful, so no charged creepers",
+      "attempt": "one mob killed by a charged-creeper explosion (Bedrock: every mob it kills drops a head; the one-head-per-explosion limit is Java only)",
+      "yield": 1.0,
+      "acquisition_class": "rare_mob",
+      "stage": "overworld",
+      "reason": "needs lightning on a creeper (thunderstorm or Channeling trident), so a rare event",
+      "ref": "Minecraft Wiki 'Head' Obtaining (Mob loot; one-head rule marked Java Edition only)"
+    },
+    "minecraft:creeper_head": {
+      "mechanic": "a charged creeper explosion kills a creeper (creeper head)",
+      "why_unavailable": "no creepers on Peaceful, so no charged creepers",
+      "attempt": "one mob killed by a charged-creeper explosion (Bedrock: every mob it kills drops a head; the one-head-per-explosion limit is Java only)",
+      "yield": 1.0,
+      "acquisition_class": "rare_mob",
+      "stage": "overworld",
+      "reason": "needs lightning on a creeper (thunderstorm or Channeling trident), so a rare event",
+      "ref": "Minecraft Wiki 'Head' Obtaining (Mob loot; one-head rule marked Java Edition only)"
+    },
+    "minecraft:piglin_head": {
+      "mechanic": "a charged creeper explosion kills a piglin (piglin head)",
+      "why_unavailable": "no creepers on Peaceful, so no charged creepers; piglins remain but nothing can make the explosion",
+      "attempt": "one mob killed by a charged-creeper explosion (Bedrock: every mob it kills drops a head; the one-head-per-explosion limit is Java only)",
+      "yield": 1.0,
+      "acquisition_class": "rare_mob",
+      "stage": "nether",
+      "reason": "needs lightning on a creeper (thunderstorm or Channeling trident), so a rare event",
+      "ref": "Minecraft Wiki 'Head' Obtaining (Mob loot; one-head rule marked Java Edition only)"
+    },
+    "minecraft:ochre_froglight": {
+      "mechanic": "a temperate frog eats a tiny magma cube",
+      "why_unavailable": "magma cubes do not spawn on Peaceful (frogs do)",
+      "attempt": "one tiny magma cube eaten by a frog",
+      "yield": 1.0,
+      "acquisition_class": "nether_mob",
+      "stage": "nether",
+      "reason": "frog loot table entities/frog.json drops the froglight when the frog kills a magma cube; no other source",
+      "ref": "Minecraft Wiki 'Froglight' Obtaining; data loot_tables/entities/frog.json"
+    },
+    "minecraft:verdant_froglight": {
+      "mechanic": "a cold frog eats a tiny magma cube",
+      "why_unavailable": "magma cubes do not spawn on Peaceful (frogs do)",
+      "attempt": "one tiny magma cube eaten by a frog",
+      "yield": 1.0,
+      "acquisition_class": "nether_mob",
+      "stage": "nether",
+      "reason": "frog loot table entities/frog.json drops the froglight when the frog kills a magma cube; no other source",
+      "ref": "Minecraft Wiki 'Froglight' Obtaining; data loot_tables/entities/frog.json"
+    },
+    "minecraft:pearlescent_froglight": {
+      "mechanic": "a warm frog eats a tiny magma cube",
+      "why_unavailable": "magma cubes do not spawn on Peaceful (frogs do)",
+      "attempt": "one tiny magma cube eaten by a frog",
+      "yield": 1.0,
+      "acquisition_class": "nether_mob",
+      "stage": "nether",
+      "reason": "frog loot table entities/frog.json drops the froglight when the frog kills a magma cube; no other source",
+      "ref": "Minecraft Wiki 'Froglight' Obtaining; data loot_tables/entities/frog.json"
+    },
+    "minecraft:resin_clump": {
+      "mechanic": "hitting a creaking at night makes its heart place 2-3 resin clumps (5 s cooldown)",
+      "why_unavailable": "creakings despawn and never spawn on Peaceful; a heart without a creaking makes no resin",
+      "attempt": "one hit on a creaking (2-3 clumps)",
+      "yield": 2.5,
+      "acquisition_class": "common_mob",
+      "stage": "overworld",
+      "reason": "only LIMITED alternatives: mining natural hearts (1-3), woodland mansion chests (17.2 %, 2-4)",
+      "ref": "Minecraft Wiki 'Resin Clump' Obtaining"
+    },
+    "minecraft:wither_rose": {
+      "mechanic": "a mob or player killed by the Wither leaves a wither rose",
+      "why_unavailable": "the Wither cannot be summoned on Peaceful (owner, in game, 1.26.63)",
+      "attempt": "one mob killed by the Wither",
+      "yield": 1.0,
+      "acquisition_class": "boss_byproduct",
+      "stage": "end_boss",
+      "reason": "bone meal does not spread wither roses on Bedrock; no chest or trade source",
+      "ref": "Minecraft Wiki 'Wither Rose' Obtaining; owner test 2026-11-21"
+    },
+    "minecraft:trial_key": {
+      "mechanic": "a trial spawner ejects its reward after its mobs are defeated (key 50 %, else food or a potion)",
+      "why_unavailable": "trial spawners do not activate on Peaceful per the wiki (tagged \"verify for Bedrock Edition\", MC-278006); their mobs would despawn anyway",
+      "attempt": "one completed trial spawner (per player)",
+      "yield": 0.5,
+      "acquisition_class": "trial_reward",
+      "stage": "trial",
+      "reason": "LIMITED leftovers: corridor decorated pots 2.8 %, entrance chests 6.8 %",
+      "ref": "Minecraft Wiki 'Trial Key' Obtaining (Generated loot); 'Trial Spawner' Behavior and Loot"
+    },
+    "minecraft:ominous_trial_key": {
+      "mechanic": "an ominous trial spawner ejects an ominous trial key (30 %)",
+      "why_unavailable": "needs Trial Omen from Bad Omen plus an active trial spawner; spawners do not activate on Peaceful (wiki, Bedrock unverified)",
+      "attempt": "one completed ominous trial spawner (per player)",
+      "yield": 0.3,
+      "acquisition_class": "trial_reward",
+      "stage": "trial",
+      "reason": "no other source at all (\"can only be obtained from ominous trial spawners\")",
+      "ref": "Minecraft Wiki 'Ominous Trial Key' Obtaining"
+    },
+    "minecraft:heavy_core": {
+      "mechanic": "ominous vault reward (reward_ominous_unique 10 %, about 7.5 % per opening)",
+      "why_unavailable": "not unavailable: the vault itself still works once the player has ominous trial keys (Bedrock untested)",
+      "attempt": "n/a (excluded)",
+      "reason": "listed so the audit shows why it is not sold",
+      "ref": "Minecraft Wiki 'Heavy Core' Obtaining; data chests/trial_chambers/reward_ominous_unique.json"
+    },
+    "minecraft:echo_shard": {
+      "mechanic": "ancient city chests only (no mob source)",
+      "why_unavailable": "not unavailable: chest loot is unaffected by Peaceful",
+      "attempt": "n/a (excluded)",
+      "reason": "listed so the audit shows why it is not sold",
+      "ref": "Minecraft Wiki 'Echo Shard' Obtaining; data chests/ancient_city.json"
+    },
+    "minecraft:disc_fragment_5": {
+      "mechanic": "ancient city chests only",
+      "why_unavailable": "not unavailable: chest loot is unaffected by Peaceful",
+      "attempt": "n/a (excluded)",
+      "reason": "listed so the audit shows why it is not sold",
+      "ref": "Minecraft Wiki 'Disc Fragment' Obtaining; data chests/ancient_city.json"
+    },
+    "minecraft:music_disc_otherside": {
+      "mechanic": "dungeon, stronghold and ancient city chests only",
+      "why_unavailable": "not unavailable: chest-only disc",
+      "attempt": "n/a (excluded)",
+      "reason": "listed so the audit shows why it is not sold",
+      "ref": "data chests/simple_dungeon.json, stronghold_corridor.json, ancient_city.json"
+    },
+    "minecraft:music_disc_pigstep": {
+      "mechanic": "bastion chests only",
+      "why_unavailable": "not unavailable: chest-only disc",
+      "attempt": "n/a (excluded)",
+      "reason": "listed so the audit shows why it is not sold",
+      "ref": "data chests/bastion_other.json"
+    },
+    "minecraft:music_disc_relic": {
+      "mechanic": "trail ruins suspicious gravel only",
+      "why_unavailable": "not unavailable: archaeology works on Peaceful",
+      "attempt": "n/a (excluded)",
+      "reason": "listed so the audit shows why it is not sold",
+      "ref": "data entities/trail_ruins_brushable_block_rare.json"
+    },
+    "minecraft:music_disc_precipice": {
+      "mechanic": "trial chamber vault only",
+      "why_unavailable": "not unavailable: vault-only disc",
+      "attempt": "n/a (excluded)",
+      "reason": "listed so the audit shows why it is not sold",
+      "ref": "data chests/trial_chambers/reward_unique.json"
+    },
+    "minecraft:music_disc_creator": {
+      "mechanic": "ominous vault only",
+      "why_unavailable": "not unavailable: vault-only disc",
+      "attempt": "n/a (excluded)",
+      "reason": "listed so the audit shows why it is not sold",
+      "ref": "data chests/trial_chambers/reward_ominous_unique.json"
+    },
+    "minecraft:music_disc_creator_music_box": {
+      "mechanic": "trial chamber corridor pots only",
+      "why_unavailable": "not unavailable: pot-only disc",
+      "attempt": "n/a (excluded)",
+      "reason": "listed so the audit shows why it is not sold",
+      "ref": "data pots/trial_chambers/corridor.json"
+    },
+    "minecraft:music_disc_bounce": {
+      "mechanic": "abandoned mineshaft chests only",
+      "why_unavailable": "not unavailable: chest-only disc",
+      "attempt": "n/a (excluded)",
+      "reason": "listed so the audit shows why it is not sold",
+      "ref": "data chests/abandoned_mineshaft.json"
+    },
+    "minecraft:dragon_breath": {
+      "mechanic": "bottling the Ender Dragon's breath cloud",
+      "why_unavailable": "not unavailable: the dragon remains on Peaceful (owner decision)",
+      "attempt": "n/a (excluded)",
+      "reason": "listed so the audit shows why it is not sold",
+      "ref": "Minecraft Wiki 'Difficulty' Peaceful; owner decision 2026-11-21"
+    },
+    "minecraft:dragon_egg": {
+      "mechanic": "first Ender Dragon kill",
+      "why_unavailable": "not unavailable: the dragon remains on Peaceful (owner decision)",
+      "attempt": "n/a (excluded)",
+      "reason": "listed so the audit shows why it is not sold",
+      "ref": "Minecraft Wiki 'Dragon Egg'; owner decision 2026-11-21"
+    },
+    "minecraft:elytra": {
+      "mechanic": "End ship item frames",
+      "why_unavailable": "not unavailable: End exploration works on Peaceful (brief section 5)",
+      "attempt": "n/a (excluded)",
+      "reason": "listed so the audit shows why it is not sold",
+      "ref": "Minecraft Wiki 'Elytra' Obtaining"
+    }
+  },
+  "yield_overrides": {
+    "_example_minecraft:item_id": {
+      "yield": 0.5,
+      "attempt": "one kill",
+      "reason": "loot data says X, engine does Y",
+      "ref": "..."
+    },
+    "minecraft:music_disc_11": {
+      "yield": 1.0,
+      "attempt": "one creeper killed by a skeleton, stray, bogged or parched (gives one of the 12 creeper discs)",
+      "reason": "the data gives 1/12 per disc per such kill (the engine cannot evaluate killed_by_entity); the machine lets the buyer choose the disc, so price one disc per attempt instead of 12x",
+      "ref": "Minecraft Wiki 'Music Disc' Obtaining (Creeper); data loot_tables/entities/creeper.json"
+    },
+    "minecraft:music_disc_13": {
+      "yield": 1.0,
+      "attempt": "one creeper killed by a skeleton, stray, bogged or parched (gives one of the 12 creeper discs)",
+      "reason": "the data gives 1/12 per disc per such kill (the engine cannot evaluate killed_by_entity); the machine lets the buyer choose the disc, so price one disc per attempt instead of 12x",
+      "ref": "Minecraft Wiki 'Music Disc' Obtaining (Creeper); data loot_tables/entities/creeper.json"
+    },
+    "minecraft:music_disc_blocks": {
+      "yield": 1.0,
+      "attempt": "one creeper killed by a skeleton, stray, bogged or parched (gives one of the 12 creeper discs)",
+      "reason": "the data gives 1/12 per disc per such kill (the engine cannot evaluate killed_by_entity); the machine lets the buyer choose the disc, so price one disc per attempt instead of 12x",
+      "ref": "Minecraft Wiki 'Music Disc' Obtaining (Creeper); data loot_tables/entities/creeper.json"
+    },
+    "minecraft:music_disc_cat": {
+      "yield": 1.0,
+      "attempt": "one creeper killed by a skeleton, stray, bogged or parched (gives one of the 12 creeper discs)",
+      "reason": "the data gives 1/12 per disc per such kill (the engine cannot evaluate killed_by_entity); the machine lets the buyer choose the disc, so price one disc per attempt instead of 12x",
+      "ref": "Minecraft Wiki 'Music Disc' Obtaining (Creeper); data loot_tables/entities/creeper.json"
+    },
+    "minecraft:music_disc_chirp": {
+      "yield": 1.0,
+      "attempt": "one creeper killed by a skeleton, stray, bogged or parched (gives one of the 12 creeper discs)",
+      "reason": "the data gives 1/12 per disc per such kill (the engine cannot evaluate killed_by_entity); the machine lets the buyer choose the disc, so price one disc per attempt instead of 12x",
+      "ref": "Minecraft Wiki 'Music Disc' Obtaining (Creeper); data loot_tables/entities/creeper.json"
+    },
+    "minecraft:music_disc_far": {
+      "yield": 1.0,
+      "attempt": "one creeper killed by a skeleton, stray, bogged or parched (gives one of the 12 creeper discs)",
+      "reason": "the data gives 1/12 per disc per such kill (the engine cannot evaluate killed_by_entity); the machine lets the buyer choose the disc, so price one disc per attempt instead of 12x",
+      "ref": "Minecraft Wiki 'Music Disc' Obtaining (Creeper); data loot_tables/entities/creeper.json"
+    },
+    "minecraft:music_disc_mall": {
+      "yield": 1.0,
+      "attempt": "one creeper killed by a skeleton, stray, bogged or parched (gives one of the 12 creeper discs)",
+      "reason": "the data gives 1/12 per disc per such kill (the engine cannot evaluate killed_by_entity); the machine lets the buyer choose the disc, so price one disc per attempt instead of 12x",
+      "ref": "Minecraft Wiki 'Music Disc' Obtaining (Creeper); data loot_tables/entities/creeper.json"
+    },
+    "minecraft:music_disc_mellohi": {
+      "yield": 1.0,
+      "attempt": "one creeper killed by a skeleton, stray, bogged or parched (gives one of the 12 creeper discs)",
+      "reason": "the data gives 1/12 per disc per such kill (the engine cannot evaluate killed_by_entity); the machine lets the buyer choose the disc, so price one disc per attempt instead of 12x",
+      "ref": "Minecraft Wiki 'Music Disc' Obtaining (Creeper); data loot_tables/entities/creeper.json"
+    },
+    "minecraft:music_disc_stal": {
+      "yield": 1.0,
+      "attempt": "one creeper killed by a skeleton, stray, bogged or parched (gives one of the 12 creeper discs)",
+      "reason": "the data gives 1/12 per disc per such kill (the engine cannot evaluate killed_by_entity); the machine lets the buyer choose the disc, so price one disc per attempt instead of 12x",
+      "ref": "Minecraft Wiki 'Music Disc' Obtaining (Creeper); data loot_tables/entities/creeper.json"
+    },
+    "minecraft:music_disc_strad": {
+      "yield": 1.0,
+      "attempt": "one creeper killed by a skeleton, stray, bogged or parched (gives one of the 12 creeper discs)",
+      "reason": "the data gives 1/12 per disc per such kill (the engine cannot evaluate killed_by_entity); the machine lets the buyer choose the disc, so price one disc per attempt instead of 12x",
+      "ref": "Minecraft Wiki 'Music Disc' Obtaining (Creeper); data loot_tables/entities/creeper.json"
+    },
+    "minecraft:music_disc_wait": {
+      "yield": 1.0,
+      "attempt": "one creeper killed by a skeleton, stray, bogged or parched (gives one of the 12 creeper discs)",
+      "reason": "the data gives 1/12 per disc per such kill (the engine cannot evaluate killed_by_entity); the machine lets the buyer choose the disc, so price one disc per attempt instead of 12x",
+      "ref": "Minecraft Wiki 'Music Disc' Obtaining (Creeper); data loot_tables/entities/creeper.json"
+    },
+    "minecraft:music_disc_ward": {
+      "yield": 1.0,
+      "attempt": "one creeper killed by a skeleton, stray, bogged or parched (gives one of the 12 creeper discs)",
+      "reason": "the data gives 1/12 per disc per such kill (the engine cannot evaluate killed_by_entity); the machine lets the buyer choose the disc, so price one disc per attempt instead of 12x",
+      "ref": "Minecraft Wiki 'Music Disc' Obtaining (Creeper); data loot_tables/entities/creeper.json"
+    },
+    "minecraft:trident": {
+      "yield": 0.085,
+      "attempt": "one kill of a drowned that visibly holds a trident",
+      "reason": "equipment drop: 6.25 % of drowned spawn with a trident (entity_spawned 25/400), held items drop at 8.5 % on Bedrock since 1.21.120 (was 25 %). Per random drowned it is 0.0053 (price ~189 emeralds); players target trident holders, so price per holder",
+      "ref": "Minecraft Wiki 'Drowned' Drops and History (Bedrock 1.21.120); data entities/drowned.json, loot_tables/entities/drowned_ranged_equipment.json"
+    },
+    "minecraft:nautilus_shell": {
+      "yield": 0.08,
+      "attempt": "one natural drowned kill",
+      "reason": "off-hand nautilus shell 8 % with slot_drop_chance 1.0 (sold by the wandering trader anyway)",
+      "ref": "Minecraft Wiki 'Drowned' Spawning; data loot_tables/entities/drowned_equipment.json"
+    },
+    "minecraft:music_disc_lava_chicken": {
+      "yield": 1.0,
+      "attempt": "one baby zombie or husk riding a chicken (chicken jockey) killed by a player",
+      "reason": "loot conditions is_baby + passenger_of_entity chicken; the attempt is the jockey kill, not a random zombie kill",
+      "ref": "data loot_tables/entities/zombie.json, husk_rider.json"
+    },
+    "minecraft:music_disc_tears": {
+      "yield": 1.0,
+      "attempt": "one ghast killed by its own fireball reflected by a player",
+      "reason": "loot conditions damaged_by_entity fireball + killed by player; one disc per such kill",
+      "ref": "Minecraft Wiki 'Music Disc' Obtaining; data loot_tables/entities/ghast.json"
+    },
+    "minecraft:rotten_flesh": {
+      "yield": 1.0,
+      "attempt": "one zombie kill (0-2)",
+      "reason": "the engine takes the best absent source (camel husk 2.5), a rare mount; zombies are the normal source",
+      "ref": "Minecraft Wiki 'Rotten Flesh' Obtaining; data loot_tables/entities/zombie.json"
+    }
+  },
+  "acquisition_class": {
+    "_example_mob_or_item": {
+      "class": "common_mob",
+      "reason": "...",
+      "ref": "..."
+    },
+    "zombie": {
+      "class": "common_mob",
+      "reason": "ordinary hostile overworld mob kill",
+      "ref": "Minecraft Wiki (mob page Drops); docs/peaceful-research.md 'Pricing'"
+    },
+    "husk": {
+      "class": "common_mob",
+      "reason": "ordinary hostile overworld mob kill",
+      "ref": "Minecraft Wiki (mob page Drops); docs/peaceful-research.md 'Pricing'"
+    },
+    "zombie_villager": {
+      "class": "common_mob",
+      "reason": "ordinary hostile overworld mob kill",
+      "ref": "Minecraft Wiki (mob page Drops); docs/peaceful-research.md 'Pricing'"
+    },
+    "zombie_villager_v2": {
+      "class": "common_mob",
+      "reason": "ordinary hostile overworld mob kill",
+      "ref": "Minecraft Wiki (mob page Drops); docs/peaceful-research.md 'Pricing'"
+    },
+    "drowned": {
+      "class": "common_mob",
+      "reason": "ordinary hostile overworld mob kill",
+      "ref": "Minecraft Wiki (mob page Drops); docs/peaceful-research.md 'Pricing'"
+    },
+    "skeleton": {
+      "class": "common_mob",
+      "reason": "ordinary hostile overworld mob kill",
+      "ref": "Minecraft Wiki (mob page Drops); docs/peaceful-research.md 'Pricing'"
+    },
+    "stray": {
+      "class": "common_mob",
+      "reason": "ordinary hostile overworld mob kill",
+      "ref": "Minecraft Wiki (mob page Drops); docs/peaceful-research.md 'Pricing'"
+    },
+    "bogged": {
+      "class": "common_mob",
+      "reason": "ordinary hostile overworld mob kill",
+      "ref": "Minecraft Wiki (mob page Drops); docs/peaceful-research.md 'Pricing'"
+    },
+    "parched": {
+      "class": "common_mob",
+      "reason": "ordinary hostile overworld mob kill",
+      "ref": "Minecraft Wiki (mob page Drops); docs/peaceful-research.md 'Pricing'"
+    },
+    "spider": {
+      "class": "common_mob",
+      "reason": "ordinary hostile overworld mob kill",
+      "ref": "Minecraft Wiki (mob page Drops); docs/peaceful-research.md 'Pricing'"
+    },
+    "cave_spider": {
+      "class": "common_mob",
+      "reason": "ordinary hostile overworld mob kill",
+      "ref": "Minecraft Wiki (mob page Drops); docs/peaceful-research.md 'Pricing'"
+    },
+    "creeper": {
+      "class": "common_mob",
+      "reason": "ordinary hostile overworld mob kill",
+      "ref": "Minecraft Wiki (mob page Drops); docs/peaceful-research.md 'Pricing'"
+    },
+    "witch": {
+      "class": "common_mob",
+      "reason": "ordinary hostile overworld mob kill",
+      "ref": "Minecraft Wiki (mob page Drops); docs/peaceful-research.md 'Pricing'"
+    },
+    "phantom": {
+      "class": "common_mob",
+      "reason": "ordinary hostile overworld mob kill",
+      "ref": "Minecraft Wiki (mob page Drops); docs/peaceful-research.md 'Pricing'"
+    },
+    "guardian": {
+      "class": "common_mob",
+      "reason": "ordinary hostile overworld mob kill",
+      "ref": "Minecraft Wiki (mob page Drops); docs/peaceful-research.md 'Pricing'"
+    },
+    "pillager": {
+      "class": "common_mob",
+      "reason": "ordinary hostile overworld mob kill",
+      "ref": "Minecraft Wiki (mob page Drops); docs/peaceful-research.md 'Pricing'"
+    },
+    "vindicator": {
+      "class": "common_mob",
+      "reason": "ordinary hostile overworld mob kill",
+      "ref": "Minecraft Wiki (mob page Drops); docs/peaceful-research.md 'Pricing'"
+    },
+    "enderman": {
+      "class": "common_mob",
+      "reason": "ordinary hostile overworld mob kill",
+      "ref": "Minecraft Wiki (mob page Drops); docs/peaceful-research.md 'Pricing'"
+    },
+    "slime": {
+      "class": "common_mob",
+      "reason": "ordinary hostile overworld mob kill",
+      "ref": "Minecraft Wiki (mob page Drops); docs/peaceful-research.md 'Pricing'"
+    },
+    "silverfish": {
+      "class": "common_mob",
+      "reason": "ordinary hostile overworld mob kill",
+      "ref": "Minecraft Wiki (mob page Drops); docs/peaceful-research.md 'Pricing'"
+    },
+    "endermite": {
+      "class": "common_mob",
+      "reason": "ordinary hostile overworld mob kill",
+      "ref": "Minecraft Wiki (mob page Drops); docs/peaceful-research.md 'Pricing'"
+    },
+    "vex": {
+      "class": "common_mob",
+      "reason": "ordinary hostile overworld mob kill",
+      "ref": "Minecraft Wiki (mob page Drops); docs/peaceful-research.md 'Pricing'"
+    },
+    "zoglin": {
+      "class": "common_mob",
+      "reason": "ordinary hostile overworld mob kill",
+      "ref": "Minecraft Wiki (mob page Drops); docs/peaceful-research.md 'Pricing'"
+    },
+    "camel_husk": {
+      "class": "common_mob",
+      "reason": "ordinary hostile overworld mob kill",
+      "ref": "Minecraft Wiki (mob page Drops); docs/peaceful-research.md 'Pricing'"
+    },
+    "skeleton_horse": {
+      "class": "common_mob",
+      "reason": "ordinary hostile overworld mob kill",
+      "ref": "Minecraft Wiki (mob page Drops); docs/peaceful-research.md 'Pricing'"
+    },
+    "zombie_horse": {
+      "class": "common_mob",
+      "reason": "ordinary hostile overworld mob kill",
+      "ref": "Minecraft Wiki (mob page Drops); docs/peaceful-research.md 'Pricing'"
+    },
+    "blaze": {
+      "class": "nether_mob",
+      "reason": "Nether hostile mob kill (fortress or lava ocean)",
+      "ref": "Minecraft Wiki (mob page Drops); docs/peaceful-research.md 'Pricing'"
+    },
+    "ghast": {
+      "class": "nether_mob",
+      "reason": "Nether hostile mob kill (fortress or lava ocean)",
+      "ref": "Minecraft Wiki (mob page Drops); docs/peaceful-research.md 'Pricing'"
+    },
+    "magma_cube": {
+      "class": "nether_mob",
+      "reason": "Nether hostile mob kill (fortress or lava ocean)",
+      "ref": "Minecraft Wiki (mob page Drops); docs/peaceful-research.md 'Pricing'"
+    },
+    "wither_skeleton": {
+      "class": "nether_mob",
+      "reason": "Nether hostile mob kill (fortress or lava ocean)",
+      "ref": "Minecraft Wiki (mob page Drops); docs/peaceful-research.md 'Pricing'"
+    },
+    "zombie_pigman": {
+      "class": "nether_mob",
+      "reason": "Nether hostile mob kill (fortress or lava ocean)",
+      "ref": "Minecraft Wiki (mob page Drops); docs/peaceful-research.md 'Pricing'"
+    },
+    "piglin_brute": {
+      "class": "nether_mob",
+      "reason": "Nether hostile mob kill (fortress or lava ocean)",
+      "ref": "Minecraft Wiki (mob page Drops); docs/peaceful-research.md 'Pricing'"
+    },
+    "breeze": {
+      "class": "trial_mob",
+      "reason": "breeze from a trial spawner; 1-2 rods per kill",
+      "ref": "Minecraft Wiki (mob page Drops); docs/peaceful-research.md 'Pricing'"
+    },
+    "elder_guardian": {
+      "class": "rare_mob",
+      "reason": "one per structure or raid; anchored on the leatherworker saddle (6 em) = one ravager kill",
+      "ref": "Minecraft Wiki (mob page Drops); docs/peaceful-research.md 'Pricing'"
+    },
+    "evocation_illager": {
+      "class": "rare_mob",
+      "reason": "one per structure or raid; anchored on the leatherworker saddle (6 em) = one ravager kill",
+      "ref": "Minecraft Wiki (mob page Drops); docs/peaceful-research.md 'Pricing'"
+    },
+    "ravager": {
+      "class": "rare_mob",
+      "reason": "one per structure or raid; anchored on the leatherworker saddle (6 em) = one ravager kill",
+      "ref": "Minecraft Wiki (mob page Drops); docs/peaceful-research.md 'Pricing'"
+    },
+    "warden": {
+      "class": "rare_mob",
+      "reason": "one per structure or raid; anchored on the leatherworker saddle (6 em) = one ravager kill",
+      "ref": "Minecraft Wiki (mob page Drops); docs/peaceful-research.md 'Pricing'"
+    },
+    "wither": {
+      "class": "boss",
+      "reason": "boss fight that needs three wither skeleton skulls",
+      "ref": "Minecraft Wiki (mob page Drops); docs/peaceful-research.md 'Pricing'"
+    },
+    "minecraft:prismarine_shard": {
+      "class": "common_mob",
+      "reason": "guardians are the common source (elder guardian sorts first in the data and would make it rare_mob)",
+      "ref": "Minecraft Wiki (mob page Drops); docs/peaceful-research.md 'Pricing'"
+    },
+    "minecraft:prismarine_crystals": {
+      "class": "common_mob",
+      "reason": "guardians are the common source",
+      "ref": "Minecraft Wiki (mob page Drops); docs/peaceful-research.md 'Pricing'"
+    },
+    "minecraft:rotten_flesh": {
+      "class": "junk_drop",
+      "reason": "low-value filler drop (cleric buys 32 for 1 emerald); keeps the price at a fraction of a kill",
+      "ref": "Minecraft Wiki (mob page Drops); docs/peaceful-research.md 'Pricing'"
+    },
+    "minecraft:trident": {
+      "class": "common_mob",
+      "reason": "drowned kill (equipment drop has no origin mob for the engine)",
+      "ref": "Minecraft Wiki (mob page Drops); docs/peaceful-research.md 'Pricing'"
+    },
+    "minecraft:skull:1": {
+      "class": "nether_mob",
+      "reason": "wither skeleton kill, 2.5 % (killed_by_player)",
+      "ref": "Minecraft Wiki (mob page Drops); docs/peaceful-research.md 'Pricing'"
+    },
+    "minecraft:music_disc_11": {
+      "class": "music_disc",
+      "reason": "a set-up kill (skeleton shoots creeper, reflected ghast fireball, chicken jockey)",
+      "ref": "Minecraft Wiki (mob page Drops); docs/peaceful-research.md 'Pricing'"
+    },
+    "minecraft:music_disc_13": {
+      "class": "music_disc",
+      "reason": "a set-up kill (skeleton shoots creeper, reflected ghast fireball, chicken jockey)",
+      "ref": "Minecraft Wiki (mob page Drops); docs/peaceful-research.md 'Pricing'"
+    },
+    "minecraft:music_disc_blocks": {
+      "class": "music_disc",
+      "reason": "a set-up kill (skeleton shoots creeper, reflected ghast fireball, chicken jockey)",
+      "ref": "Minecraft Wiki (mob page Drops); docs/peaceful-research.md 'Pricing'"
+    },
+    "minecraft:music_disc_cat": {
+      "class": "music_disc",
+      "reason": "a set-up kill (skeleton shoots creeper, reflected ghast fireball, chicken jockey)",
+      "ref": "Minecraft Wiki (mob page Drops); docs/peaceful-research.md 'Pricing'"
+    },
+    "minecraft:music_disc_chirp": {
+      "class": "music_disc",
+      "reason": "a set-up kill (skeleton shoots creeper, reflected ghast fireball, chicken jockey)",
+      "ref": "Minecraft Wiki (mob page Drops); docs/peaceful-research.md 'Pricing'"
+    },
+    "minecraft:music_disc_far": {
+      "class": "music_disc",
+      "reason": "a set-up kill (skeleton shoots creeper, reflected ghast fireball, chicken jockey)",
+      "ref": "Minecraft Wiki (mob page Drops); docs/peaceful-research.md 'Pricing'"
+    },
+    "minecraft:music_disc_mall": {
+      "class": "music_disc",
+      "reason": "a set-up kill (skeleton shoots creeper, reflected ghast fireball, chicken jockey)",
+      "ref": "Minecraft Wiki (mob page Drops); docs/peaceful-research.md 'Pricing'"
+    },
+    "minecraft:music_disc_mellohi": {
+      "class": "music_disc",
+      "reason": "a set-up kill (skeleton shoots creeper, reflected ghast fireball, chicken jockey)",
+      "ref": "Minecraft Wiki (mob page Drops); docs/peaceful-research.md 'Pricing'"
+    },
+    "minecraft:music_disc_stal": {
+      "class": "music_disc",
+      "reason": "a set-up kill (skeleton shoots creeper, reflected ghast fireball, chicken jockey)",
+      "ref": "Minecraft Wiki (mob page Drops); docs/peaceful-research.md 'Pricing'"
+    },
+    "minecraft:music_disc_strad": {
+      "class": "music_disc",
+      "reason": "a set-up kill (skeleton shoots creeper, reflected ghast fireball, chicken jockey)",
+      "ref": "Minecraft Wiki (mob page Drops); docs/peaceful-research.md 'Pricing'"
+    },
+    "minecraft:music_disc_wait": {
+      "class": "music_disc",
+      "reason": "a set-up kill (skeleton shoots creeper, reflected ghast fireball, chicken jockey)",
+      "ref": "Minecraft Wiki (mob page Drops); docs/peaceful-research.md 'Pricing'"
+    },
+    "minecraft:music_disc_ward": {
+      "class": "music_disc",
+      "reason": "a set-up kill (skeleton shoots creeper, reflected ghast fireball, chicken jockey)",
+      "ref": "Minecraft Wiki (mob page Drops); docs/peaceful-research.md 'Pricing'"
+    },
+    "minecraft:music_disc_lava_chicken": {
+      "class": "music_disc",
+      "reason": "a set-up kill (skeleton shoots creeper, reflected ghast fireball, chicken jockey)",
+      "ref": "Minecraft Wiki (mob page Drops); docs/peaceful-research.md 'Pricing'"
+    },
+    "minecraft:music_disc_tears": {
+      "class": "music_disc",
+      "reason": "a set-up kill (skeleton shoots creeper, reflected ghast fireball, chicken jockey)",
+      "ref": "Minecraft Wiki (mob page Drops); docs/peaceful-research.md 'Pricing'"
+    }
+  },
+  "stages": {
+    "_doc": "Proposal; becomes the machine split in Part 2. Order matters: earlier stages never need items of later ones. 'proof' = proposed stage-proof ingredient of that machine's recipe (core item), obtainable on Peaceful without any machine.",
+    "order": [
+      "overworld",
+      "nether",
+      "trial",
+      "end_boss"
+    ],
+    "proof": {
+      "overworld": {
+        "item": "minecraft:bone_block",
+        "reason": "renewable on Peaceful (composter bone meal, fossils); thematic for missing skeletons"
+      },
+      "nether": {
+        "item": "minecraft:nether_wart_block",
+        "reason": "nether wart grows only in fortresses / bastions: proves a fortress visit; needs no blaze item (no circularity)"
+      },
+      "trial": {
+        "item": "minecraft:trial_key",
+        "reason": "found in trial chamber entrance chests and corridor decorated pots (loot_tables/chests/trial_chambers/entrance.json, pots/trial_chambers/corridor.json); owner renamed stage deep to trial",
+        "by": "owner",
+        "date": "2026-11-21"
+      },
+      "end_boss": {
+        "item": "minecraft:shulker_shell",
+        "reason": "End city, reachable only after the dragon (gateway); alternative dragon head (End ship) or Dragon's Breath"
+      }
+    }
+  },
+  "item_stage": {
+    "_example_minecraft:item_id": {
+      "stage": "nether",
+      "reason": "..."
+    },
+    "minecraft:bone": {
+      "stage": "overworld",
+      "reason": "overworld mob (incl. ocean monument / drowned) drop",
+      "ref": "docs/peaceful-research.md 'Stages'; mob pages on the Minecraft Wiki (Spawning)"
+    },
+    "minecraft:rotten_flesh": {
+      "stage": "overworld",
+      "reason": "overworld mob (incl. ocean monument / drowned) drop",
+      "ref": "docs/peaceful-research.md 'Stages'; mob pages on the Minecraft Wiki (Spawning)"
+    },
+    "minecraft:spider_eye": {
+      "stage": "overworld",
+      "reason": "overworld mob (incl. ocean monument / drowned) drop",
+      "ref": "docs/peaceful-research.md 'Stages'; mob pages on the Minecraft Wiki (Spawning)"
+    },
+    "minecraft:phantom_membrane": {
+      "stage": "overworld",
+      "reason": "overworld mob (incl. ocean monument / drowned) drop",
+      "ref": "docs/peaceful-research.md 'Stages'; mob pages on the Minecraft Wiki (Spawning)"
+    },
+    "minecraft:prismarine_shard": {
+      "stage": "overworld",
+      "reason": "overworld mob (incl. ocean monument / drowned) drop",
+      "ref": "docs/peaceful-research.md 'Stages'; mob pages on the Minecraft Wiki (Spawning)"
+    },
+    "minecraft:prismarine_crystals": {
+      "stage": "overworld",
+      "reason": "overworld mob (incl. ocean monument / drowned) drop",
+      "ref": "docs/peaceful-research.md 'Stages'; mob pages on the Minecraft Wiki (Spawning)"
+    },
+    "minecraft:wet_sponge": {
+      "stage": "overworld",
+      "reason": "overworld mob (incl. ocean monument / drowned) drop",
+      "ref": "docs/peaceful-research.md 'Stages'; mob pages on the Minecraft Wiki (Spawning)"
+    },
+    "minecraft:tide_armor_trim_smithing_template": {
+      "stage": "overworld",
+      "reason": "overworld mob (incl. ocean monument / drowned) drop",
+      "ref": "docs/peaceful-research.md 'Stages'; mob pages on the Minecraft Wiki (Spawning)"
+    },
+    "minecraft:trident": {
+      "stage": "overworld",
+      "reason": "overworld mob (incl. ocean monument / drowned) drop",
+      "ref": "docs/peaceful-research.md 'Stages'; mob pages on the Minecraft Wiki (Spawning)"
+    },
+    "minecraft:music_disc_11": {
+      "stage": "overworld",
+      "reason": "overworld mob interaction",
+      "ref": "docs/peaceful-research.md 'Stages'; mob pages on the Minecraft Wiki (Spawning)"
+    },
+    "minecraft:music_disc_13": {
+      "stage": "overworld",
+      "reason": "overworld mob interaction",
+      "ref": "docs/peaceful-research.md 'Stages'; mob pages on the Minecraft Wiki (Spawning)"
+    },
+    "minecraft:music_disc_blocks": {
+      "stage": "overworld",
+      "reason": "overworld mob interaction",
+      "ref": "docs/peaceful-research.md 'Stages'; mob pages on the Minecraft Wiki (Spawning)"
+    },
+    "minecraft:music_disc_cat": {
+      "stage": "overworld",
+      "reason": "overworld mob interaction",
+      "ref": "docs/peaceful-research.md 'Stages'; mob pages on the Minecraft Wiki (Spawning)"
+    },
+    "minecraft:music_disc_chirp": {
+      "stage": "overworld",
+      "reason": "overworld mob interaction",
+      "ref": "docs/peaceful-research.md 'Stages'; mob pages on the Minecraft Wiki (Spawning)"
+    },
+    "minecraft:music_disc_far": {
+      "stage": "overworld",
+      "reason": "overworld mob interaction",
+      "ref": "docs/peaceful-research.md 'Stages'; mob pages on the Minecraft Wiki (Spawning)"
+    },
+    "minecraft:music_disc_mall": {
+      "stage": "overworld",
+      "reason": "overworld mob interaction",
+      "ref": "docs/peaceful-research.md 'Stages'; mob pages on the Minecraft Wiki (Spawning)"
+    },
+    "minecraft:music_disc_mellohi": {
+      "stage": "overworld",
+      "reason": "overworld mob interaction",
+      "ref": "docs/peaceful-research.md 'Stages'; mob pages on the Minecraft Wiki (Spawning)"
+    },
+    "minecraft:music_disc_stal": {
+      "stage": "overworld",
+      "reason": "overworld mob interaction",
+      "ref": "docs/peaceful-research.md 'Stages'; mob pages on the Minecraft Wiki (Spawning)"
+    },
+    "minecraft:music_disc_strad": {
+      "stage": "overworld",
+      "reason": "overworld mob interaction",
+      "ref": "docs/peaceful-research.md 'Stages'; mob pages on the Minecraft Wiki (Spawning)"
+    },
+    "minecraft:music_disc_wait": {
+      "stage": "overworld",
+      "reason": "overworld mob interaction",
+      "ref": "docs/peaceful-research.md 'Stages'; mob pages on the Minecraft Wiki (Spawning)"
+    },
+    "minecraft:music_disc_ward": {
+      "stage": "overworld",
+      "reason": "overworld mob interaction",
+      "ref": "docs/peaceful-research.md 'Stages'; mob pages on the Minecraft Wiki (Spawning)"
+    },
+    "minecraft:music_disc_lava_chicken": {
+      "stage": "overworld",
+      "reason": "overworld mob interaction",
+      "ref": "docs/peaceful-research.md 'Stages'; mob pages on the Minecraft Wiki (Spawning)"
+    },
+    "minecraft:music_disc_tears": {
+      "stage": "nether",
+      "reason": "ghast (Nether)",
+      "ref": "docs/peaceful-research.md 'Stages'; mob pages on the Minecraft Wiki (Spawning)"
+    },
+    "minecraft:blaze_rod": {
+      "stage": "nether",
+      "reason": "Nether mob drop; blaze rods unlock brewing and eyes of ender (End access)",
+      "ref": "docs/peaceful-research.md 'Stages'; mob pages on the Minecraft Wiki (Spawning)"
+    },
+    "minecraft:ghast_tear": {
+      "stage": "nether",
+      "reason": "Nether mob drop; blaze rods unlock brewing and eyes of ender (End access)",
+      "ref": "docs/peaceful-research.md 'Stages'; mob pages on the Minecraft Wiki (Spawning)"
+    },
+    "minecraft:skull:1": {
+      "stage": "nether",
+      "reason": "Nether mob drop; blaze rods unlock brewing and eyes of ender (End access)",
+      "ref": "docs/peaceful-research.md 'Stages'; mob pages on the Minecraft Wiki (Spawning)"
+    },
+    "minecraft:breeze_rod": {
+      "stage": "trial",
+      "reason": "owner: trial chamber stage (renamed from deep)",
+      "ref": "docs/peaceful-machine.md Owner decisions (round 2, 2026-11-21)",
+      "by": "owner",
+      "date": "2026-11-21"
+    },
+    "minecraft:ominous_bottle": {
+      "stage": "trial",
+      "reason": "owner: trial chamber stage (renamed from deep)",
+      "ref": "docs/peaceful-machine.md Owner decisions (round 2, 2026-11-21)",
+      "by": "owner",
+      "date": "2026-11-21"
+    },
+    "minecraft:totem": {
+      "stage": "trial",
+      "reason": "owner: trial chamber stage (renamed from deep)",
+      "ref": "docs/peaceful-machine.md Owner decisions (round 2, 2026-11-21)",
+      "by": "owner",
+      "date": "2026-11-21"
+    },
+    "minecraft:nether_star": {
+      "stage": "end_boss",
+      "reason": "Wither boss (beacon); endgame",
+      "ref": "docs/peaceful-research.md 'Stages'; mob pages on the Minecraft Wiki (Spawning)"
+    },
+    "minecraft:trial_key": {
+      "stage": "trial",
+      "reason": "owner: trial chamber stage (renamed from deep)",
+      "ref": "docs/peaceful-machine.md Owner decisions (round 2, 2026-11-21)",
+      "by": "owner",
+      "date": "2026-11-21"
+    },
+    "minecraft:ominous_trial_key": {
+      "stage": "trial",
+      "reason": "owner: trial chamber stage (renamed from deep)",
+      "ref": "docs/peaceful-machine.md Owner decisions (round 2, 2026-11-21)",
+      "by": "owner",
+      "date": "2026-11-21"
+    },
+    "minecraft:string": {
+      "stage": "overworld",
+      "reason": "early-game resource (bows, fishing rods); spider drop",
+      "ref": "docs/peaceful-machine.md Owner decisions (round 3, 2026-11-21)"
+    }
+  },
+  "pricing": {
+    "_doc": "Proposal until the owner approves. price = ceil(B[class] * M_stage[stage] / yield) for 'quantity' items. B = emeralds one acquisition attempt is worth, calibrated on vanilla SELL offers of mob-drop items (anchors); never on buy offers.",
+    "classes": {
+      "junk_drop": {
+        "B": 0.25,
+        "reason": "filler drops (rotten flesh): a quarter of a common kill"
+      },
+      "common_mob": {
+        "B": 1,
+        "reason": "anchors: cleric ender pearl 2.5 em/kill (enderman, hard mob), wandering gunpowder 0.25 em/kill, fletcher arrows 0.06 em/kill, wandering nautilus shell 0.4 em/kill"
+      },
+      "nether_mob": {
+        "B": 2,
+        "reason": "Nether danger; about the cleric ender-pearl level (2.5 em/kill)"
+      },
+      "trial_mob": {
+        "B": 2,
+        "reason": "trial spawner mob (breeze)"
+      },
+      "trial_reward": {
+        "B": 3,
+        "reason": "one completed trial spawner; keeps a key dearer than the emeralds a vault returns (normal 1.4, ominous 6.4)"
+      },
+      "rare_mob": {
+        "B": 8,
+        "reason": "anchors: leatherworker saddle 6 em = one ravager kill; this mod's Shulker machine 12 em/shell = 6 em/kill"
+      },
+      "music_disc": {
+        "B": 8,
+        "reason": "set-up kill like rare_mob"
+      },
+      "boss_byproduct": {
+        "B": 0.5,
+        "reason": "many roses per Wither fight (one per mob it kills)"
+      },
+      "boss": {
+        "B": 32,
+        "reason": "Wither fight: 3 skulls + soul sand + the fight; with M end_boss = 64 em (one wants-slot stack)"
+      }
+    },
+    "stage_multiplier": {
+      "overworld": {
+        "M": 1.0,
+        "reason": "base"
+      },
+      "nether": {
+        "M": 1.25,
+        "reason": "Nether access"
+      },
+      "trial": {
+        "M": 1.5,
+        "reason": "trial chambers, mansions, ancient cities"
+      },
+      "end_boss": {
+        "M": 2.0,
+        "reason": "endgame"
+      }
+    },
+    "anchors": [
+      {
+        "item": "minecraft:ender_pearl",
+        "seller": "cleric",
+        "price": 5,
+        "quantity": 1,
+        "mob": "enderman",
+        "drop_per_kill": 0.5,
+        "emeralds_per_kill": 2.5,
+        "ref": "vanilla trade data via trade_sources.load_trade_source (game 1.26.60 data); loot data on disk"
+      },
+      {
+        "item": "minecraft:gunpowder",
+        "seller": "wandering_trader",
+        "price": 1,
+        "quantity": 4,
+        "mob": "creeper",
+        "drop_per_kill": 1.0,
+        "emeralds_per_kill": 0.25,
+        "ref": "vanilla trade data via trade_sources.load_trade_source (game 1.26.60 data); loot data on disk"
+      },
+      {
+        "item": "minecraft:arrow",
+        "seller": "fletcher",
+        "price": 1,
+        "quantity": 16,
+        "mob": "skeleton",
+        "drop_per_kill": 1.0,
+        "emeralds_per_kill": 0.062,
+        "ref": "vanilla trade data via trade_sources.load_trade_source (game 1.26.60 data); loot data on disk"
+      },
+      {
+        "item": "minecraft:slime_ball",
+        "seller": "wandering_trader",
+        "price": 4,
+        "quantity": 1,
+        "mob": "slime (small)",
+        "drop_per_kill": 1.0,
+        "emeralds_per_kill": 4.0,
+        "ref": "vanilla trade data via trade_sources.load_trade_source (game 1.26.60 data); loot data on disk"
+      },
+      {
+        "item": "minecraft:nautilus_shell",
+        "seller": "wandering_trader",
+        "price": 5,
+        "quantity": 1,
+        "mob": "drowned",
+        "drop_per_kill": 0.08,
+        "emeralds_per_kill": 0.4,
+        "ref": "vanilla trade data via trade_sources.load_trade_source (game 1.26.60 data); loot data on disk"
+      },
+      {
+        "item": "minecraft:saddle",
+        "seller": "leather_worker",
+        "price": 6,
+        "quantity": 1,
+        "mob": "ravager",
+        "drop_per_kill": 1.0,
+        "emeralds_per_kill": 6.0,
+        "ref": "vanilla trade data via trade_sources.load_trade_source (game 1.26.60 data); loot data on disk"
+      },
+      {
+        "item": "minecraft:redstone",
+        "seller": "cleric",
+        "price": 1,
+        "quantity": 2,
+        "mob": "witch",
+        "drop_per_kill": 6.0,
+        "emeralds_per_kill": 3.0,
+        "ref": "vanilla trade data via trade_sources.load_trade_source (game 1.26.60 data); loot data on disk"
+      },
+      {
+        "item": "minecraft:glowstone",
+        "seller": "cleric",
+        "price": 4,
+        "quantity": 1,
+        "mob": "witch (0.29 dust = 0.07 block)",
+        "drop_per_kill": 0.071,
+        "emeralds_per_kill": 0.284,
+        "ref": "vanilla trade data via trade_sources.load_trade_source (game 1.26.60 data); loot data on disk"
+      },
+      {
+        "item": "minecraft:shulker_shell",
+        "seller": "vending Shulker machine (owner-approved)",
+        "price": 12,
+        "quantity": 1,
+        "mob": "shulker",
+        "drop_per_kill": 0.5,
+        "emeralds_per_kill": 6.0,
+        "ref": "mods/vending tools/gen_extra_machines.py; loot entities/shulker.json"
+      }
+    ]
+  },
+  "ingredient_class": {
+    "_doc": "Class of a crafting INGREDIENT that is not a candidate itself (no recipe, e.g. cobweb, ores, plants). A recipe excludes its result as EASY only if every ingredient is EASY; a LIMITED ingredient makes the craft a LIMITED source instead (the result stays eligible). Items without an entry and without a recipe default to EASY and are listed in the report's Needs owner review.",
+    "_example_minecraft:web": {
+      "class": "LIMITED",
+      "reason": "cobwebs only generate in structures; Weaving renews them only after one is found",
+      "ref": "Minecraft Wiki 'Cobweb'"
+    },
+    "minecraft:web": {
+      "class": "LIMITED",
+      "reason": "owner: cobwebs only generate in structures; Weaving renews them only after one is found",
+      "ref": "Minecraft Wiki 'Cobweb' Obtaining; owner correction 2026-11-21"
+    },
+    "minecraft:coal_ore": {
+      "class": "EASY",
+      "reason": "ordinary mining (owner rule: mining = EASY)",
+      "ref": "Minecraft Wiki ore pages, Obtaining"
+    },
+    "minecraft:copper_ore": {
+      "class": "EASY",
+      "reason": "ordinary mining (owner rule: mining = EASY)",
+      "ref": "Minecraft Wiki ore pages, Obtaining"
+    },
+    "minecraft:iron_ore": {
+      "class": "EASY",
+      "reason": "ordinary mining (owner rule: mining = EASY)",
+      "ref": "Minecraft Wiki ore pages, Obtaining"
+    },
+    "minecraft:gold_ore": {
+      "class": "EASY",
+      "reason": "ordinary mining (owner rule: mining = EASY)",
+      "ref": "Minecraft Wiki ore pages, Obtaining"
+    },
+    "minecraft:deepslate_coal_ore": {
+      "class": "EASY",
+      "reason": "ordinary mining (owner rule: mining = EASY)",
+      "ref": "Minecraft Wiki ore pages, Obtaining"
+    },
+    "minecraft:deepslate_copper_ore": {
+      "class": "EASY",
+      "reason": "ordinary mining (owner rule: mining = EASY)",
+      "ref": "Minecraft Wiki ore pages, Obtaining"
+    },
+    "minecraft:deepslate_iron_ore": {
+      "class": "EASY",
+      "reason": "ordinary mining (owner rule: mining = EASY)",
+      "ref": "Minecraft Wiki ore pages, Obtaining"
+    },
+    "minecraft:deepslate_gold_ore": {
+      "class": "EASY",
+      "reason": "ordinary mining (owner rule: mining = EASY)",
+      "ref": "Minecraft Wiki ore pages, Obtaining"
+    },
+    "minecraft:nether_gold_ore": {
+      "class": "EASY",
+      "reason": "ordinary mining (owner rule: mining = EASY)",
+      "ref": "Minecraft Wiki ore pages, Obtaining"
+    },
+    "minecraft:raw_iron": {
+      "class": "EASY",
+      "reason": "ordinary mining (owner rule: mining = EASY)",
+      "ref": "Minecraft Wiki ore pages, Obtaining"
+    },
+    "minecraft:raw_gold": {
+      "class": "EASY",
+      "reason": "ordinary mining (owner rule: mining = EASY)",
+      "ref": "Minecraft Wiki ore pages, Obtaining"
+    },
+    "minecraft:raw_copper": {
+      "class": "EASY",
+      "reason": "ordinary mining (owner rule: mining = EASY)",
+      "ref": "Minecraft Wiki ore pages, Obtaining"
+    },
+    "minecraft:warped_fungus": {
+      "class": "EASY",
+      "reason": "grows in warped forests; bone meal on warped nylium renews it",
+      "ref": "Minecraft Wiki 'Fungus' Obtaining"
+    },
+    "minecraft:honey_bottle": {
+      "class": "EASY",
+      "reason": "bee nests/hives with breedable bees (renewable farming)",
+      "ref": "Minecraft Wiki 'Honey Bottle' Obtaining"
+    }
+  },
+  "decisions": {
+    "_example_minecraft:item_id": {
+      "decision": "include|exclude|review",
+      "reason": "...",
+      "by": "owner|proposal",
+      "date": "2026-11-21"
+    },
+    "minecraft:rotten_flesh": {
+      "decision": "include",
+      "reason": "zombies are gone; only LIMITED leftovers (cat gifts, fishing junk, chests). Cheap junk_drop price; owner may exclude as low value",
+      "by": "proposal",
+      "date": "2026-11-21"
+    },
+    "minecraft:fish": {
+      "decision": "exclude",
+      "reason": "raw cod: its normal source (fishing, killing cod) works on Peaceful; the guardian drop is incidental",
+      "by": "proposal",
+      "date": "2026-11-21"
+    },
+    "minecraft:salmon": {
+      "decision": "exclude",
+      "reason": "normal source (fishing, killing salmon) works on Peaceful; the guardian drop is incidental",
+      "by": "proposal",
+      "date": "2026-11-21"
+    },
+    "minecraft:clownfish": {
+      "decision": "exclude",
+      "reason": "tropical fish: normal source (fishing, killing/bucketing tropical fish) works on Peaceful; guardian drop incidental",
+      "by": "proposal",
+      "date": "2026-11-21"
+    },
+    "minecraft:pufferfish": {
+      "decision": "exclude",
+      "reason": "normal source (fishing, killing pufferfish) works on Peaceful; guardian drop incidental",
+      "by": "proposal",
+      "date": "2026-11-21"
+    },
+    "minecraft:trial_key": {
+      "decision": "include",
+      "reason": "owner: trial spawners do not spawn mobs on Peaceful, so the machine replaces their key rewards; the other spawner rewards (consumables, wind charges, potions, food) are accessible elsewhere or craftable (wind charge from breeze rod)",
+      "by": "owner",
+      "date": "2026-11-21"
+    },
+    "minecraft:ominous_trial_key": {
+      "decision": "include",
+      "reason": "owner: trial spawners do not spawn mobs on Peaceful, so the machine replaces their key rewards; the other spawner rewards are accessible elsewhere or craftable",
+      "by": "owner",
+      "date": "2026-11-21"
+    },
+    "minecraft:skull:1": {
+      "decision": "include",
+      "reason": "owner: wither skeleton skull is sold (decorative on Peaceful; the Wither cannot be summoned)",
+      "by": "owner",
+      "date": "2026-11-21"
+    },
+    "minecraft:ominous_bottle": {
+      "decision": "include",
+      "reason": "owner: decorative use",
+      "by": "owner",
+      "date": "2026-11-21"
+    },
+    "minecraft:heavy_core": {
+      "decision": "exclude",
+      "reason": "sell the ominous trial key, not the vault reward: the ominous vault (its normal source) works once keys exist. Re-decide if vaults do not open on Peaceful (same owner test as the keys)",
+      "by": "proposal",
+      "date": "2026-11-21"
+    },
+    "minecraft:echo_shard": {
+      "decision": "exclude",
+      "reason": "chest / vault / archaeology loot only in normal play; brief: keep chest-only items and discs to their structures",
+      "by": "proposal",
+      "date": "2026-11-21"
+    },
+    "minecraft:disc_fragment_5": {
+      "decision": "exclude",
+      "reason": "chest / vault / archaeology loot only in normal play; brief: keep chest-only items and discs to their structures",
+      "by": "proposal",
+      "date": "2026-11-21"
+    },
+    "minecraft:music_disc_otherside": {
+      "decision": "exclude",
+      "reason": "chest / vault / archaeology loot only in normal play; brief: keep chest-only items and discs to their structures",
+      "by": "proposal",
+      "date": "2026-11-21"
+    },
+    "minecraft:music_disc_pigstep": {
+      "decision": "exclude",
+      "reason": "chest / vault / archaeology loot only in normal play; brief: keep chest-only items and discs to their structures",
+      "by": "proposal",
+      "date": "2026-11-21"
+    },
+    "minecraft:music_disc_relic": {
+      "decision": "exclude",
+      "reason": "chest / vault / archaeology loot only in normal play; brief: keep chest-only items and discs to their structures",
+      "by": "proposal",
+      "date": "2026-11-21"
+    },
+    "minecraft:music_disc_precipice": {
+      "decision": "exclude",
+      "reason": "chest / vault / archaeology loot only in normal play; brief: keep chest-only items and discs to their structures",
+      "by": "proposal",
+      "date": "2026-11-21"
+    },
+    "minecraft:music_disc_creator": {
+      "decision": "exclude",
+      "reason": "chest / vault / archaeology loot only in normal play; brief: keep chest-only items and discs to their structures",
+      "by": "proposal",
+      "date": "2026-11-21"
+    },
+    "minecraft:music_disc_creator_music_box": {
+      "decision": "exclude",
+      "reason": "chest / vault / archaeology loot only in normal play; brief: keep chest-only items and discs to their structures",
+      "by": "proposal",
+      "date": "2026-11-21"
+    },
+    "minecraft:music_disc_bounce": {
+      "decision": "exclude",
+      "reason": "chest / vault / archaeology loot only in normal play; brief: keep chest-only items and discs to their structures",
+      "by": "proposal",
+      "date": "2026-11-21"
+    },
+    "minecraft:dragon_breath": {
+      "decision": "exclude",
+      "reason": "the Ender Dragon and End exploration work on Peaceful (owner decision 2026-11-21; brief section 5)",
+      "by": "owner",
+      "date": "2026-11-21"
+    },
+    "minecraft:dragon_egg": {
+      "decision": "exclude",
+      "reason": "the Ender Dragon and End exploration work on Peaceful (owner decision 2026-11-21; brief section 5)",
+      "by": "owner",
+      "date": "2026-11-21"
+    },
+    "minecraft:elytra": {
+      "decision": "exclude",
+      "reason": "the Ender Dragon and End exploration work on Peaceful (owner decision 2026-11-21; brief section 5)",
+      "by": "owner",
+      "date": "2026-11-21"
+    },
+    "minecraft:string": {
+      "decision": "include",
+      "reason": "owner exception: string matters early, but its only early EASY source is killing cats (breedable); striders come with the Nether and cobwebs are LIMITED",
+      "by": "owner",
+      "date": "2026-11-21"
+    },
+    "minecraft:wet_sponge": {
+      "decision": "exclude",
+      "reason": "owner: the main source is the ocean monument sponge rooms (structure blocks, about 30 per room); the elder guardian drop is minor and elder guardians cannot be farmed even in normal play, so the machine would only duplicate structure loot",
+      "by": "owner",
+      "date": "2026-11-21"
+    }
+  },
+  "price_overrides": {
+    "_doc": "item -> {price (total emeralds, max 128), quantity (optional, default 1), reason, ref, by, date}. Replaces the formula price; the report shows the formula value next to it. Owner round 2, 2026-11-21.",
+    "minecraft:skull": {
+      "price": 16,
+      "reason": "decorative only on Peaceful (the Wither cannot be summoned); charged-creeper heads are rare, so one price for all heads",
+      "ref": "docs/peaceful-machine.md Owner decisions (round 2, 2026-11-21)",
+      "by": "owner",
+      "date": "2026-11-21"
+    },
+    "minecraft:skull:1": {
+      "price": 16,
+      "reason": "decorative only on Peaceful (the Wither cannot be summoned); charged-creeper heads are rare, so one price for all heads",
+      "ref": "docs/peaceful-machine.md Owner decisions (round 2, 2026-11-21)",
+      "by": "owner",
+      "date": "2026-11-21"
+    },
+    "minecraft:skull:2": {
+      "price": 16,
+      "reason": "decorative only on Peaceful (the Wither cannot be summoned); charged-creeper heads are rare, so one price for all heads",
+      "ref": "docs/peaceful-machine.md Owner decisions (round 2, 2026-11-21)",
+      "by": "owner",
+      "date": "2026-11-21"
+    },
+    "minecraft:skull:4": {
+      "price": 16,
+      "reason": "decorative only on Peaceful (the Wither cannot be summoned); charged-creeper heads are rare, so one price for all heads",
+      "ref": "docs/peaceful-machine.md Owner decisions (round 2, 2026-11-21)",
+      "by": "owner",
+      "date": "2026-11-21"
+    },
+    "minecraft:skull:6": {
+      "price": 16,
+      "reason": "decorative only on Peaceful (the Wither cannot be summoned); charged-creeper heads are rare, so one price for all heads",
+      "ref": "docs/peaceful-machine.md Owner decisions (round 2, 2026-11-21)",
+      "by": "owner",
+      "date": "2026-11-21"
+    },
+    "minecraft:breeze_rod": {
+      "price": 5,
+      "reason": "equal value to blaze_rod (5 emeralds), owner decision",
+      "ref": "docs/peaceful-machine.md Owner decisions (round 2, 2026-11-21)",
+      "by": "owner",
+      "date": "2026-11-21"
+    },
+    "minecraft:nether_star": {
+      "price": 128,
+      "reason": "the maximum price; must stay the most expensive item",
+      "ref": "docs/peaceful-machine.md Owner decisions (round 2, 2026-11-21)",
+      "by": "owner",
+      "date": "2026-11-21"
+    },
+    "minecraft:trident": {
+      "price": 32,
+      "reason": "owner: keep the trident rare; in normal play about 1 drowned in 190 drops one (formula per trident holder gives 12)",
+      "ref": "docs/peaceful-machine.md Owner decisions (round 3, 2026-11-21)",
+      "by": "owner",
+      "date": "2026-11-21"
+    }
+  }
+}

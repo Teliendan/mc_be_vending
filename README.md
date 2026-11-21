@@ -43,6 +43,9 @@ the shared RP files are wrong until the whole order has run.
 - `gen_extra_machines.py` - the non-villager feature packs (wandering trader, shulker),
   built from the villager templates; a new feature is an entry in its MACHINES.
   `--blocks-only` refreshes block definitions only.
+- `gen_peaceful_catalog.py` (+ `peaceful_sources.py`) - evaluates the Peaceful machines' catalogue from
+  `peaceful_rules.json` and the game data; writes `peaceful_catalog.json` and `docs/peaceful-catalog.md`
+  (`--check` = stale test). Not part of `build.py` yet. See [docs/peaceful-machine.md](docs/peaceful-machine.md).
 - Art: `make_machine_textures.py`, `vm_make_upgraded_textures.py`, `make_pack_icon.py`.
 - `machine_catalog.py` is the shared source for the 13 villager machines' displayed
   goods and recipe signature ingredients. Accepted art and item choices:

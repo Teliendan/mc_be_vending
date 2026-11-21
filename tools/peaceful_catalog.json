@@ -1,0 +1,1031 @@
+{
+  "excluded": {
+    "minecraft:arrow": "sold",
+    "minecraft:banner": "sold",
+    "minecraft:book": "sold",
+    "minecraft:bow": "sold",
+    "minecraft:carrot": "easy",
+    "minecraft:chainmail_helmet": "sold",
+    "minecraft:clownfish": "decision",
+    "minecraft:coal": "crafted",
+    "minecraft:copper_helmet": "crafted",
+    "minecraft:copper_ingot": "crafted",
+    "minecraft:crossbow": "sold",
+    "minecraft:diamond_helmet": "sold",
+    "minecraft:disc_fragment_5": "decision",
+    "minecraft:dragon_breath": "decision",
+    "minecraft:dragon_egg": "decision",
+    "minecraft:echo_shard": "decision",
+    "minecraft:elytra": "decision",
+    "minecraft:emerald": "sold",
+    "minecraft:ender_pearl": "sold",
+    "minecraft:fish": "decision",
+    "minecraft:fishing_rod": "sold",
+    "minecraft:glass_bottle": "crafted",
+    "minecraft:glowstone_dust": "easy",
+    "minecraft:gold_ingot": "crafted",
+    "minecraft:gold_nugget": "crafted",
+    "minecraft:golden_axe": "crafted",
+    "minecraft:golden_helmet": "crafted",
+    "minecraft:golden_spear": "crafted",
+    "minecraft:golden_sword": "crafted",
+    "minecraft:gunpowder": "sold",
+    "minecraft:heavy_core": "decision",
+    "minecraft:iron_axe": "sold",
+    "minecraft:iron_boots": "sold",
+    "minecraft:iron_chestplate": "sold",
+    "minecraft:iron_helmet": "sold",
+    "minecraft:iron_ingot": "crafted",
+    "minecraft:iron_leggings": "sold",
+    "minecraft:iron_pickaxe": "sold",
+    "minecraft:iron_shovel": "sold",
+    "minecraft:iron_spear": "crafted",
+    "minecraft:iron_sword": "sold",
+    "minecraft:leather_helmet": "sold",
+    "minecraft:magma_cream": "crafted",
+    "minecraft:music_disc_bounce": "decision",
+    "minecraft:music_disc_creator": "decision",
+    "minecraft:music_disc_creator_music_box": "decision",
+    "minecraft:music_disc_otherside": "decision",
+    "minecraft:music_disc_pigstep": "decision",
+    "minecraft:music_disc_precipice": "decision",
+    "minecraft:music_disc_relic": "decision",
+    "minecraft:nautilus_shell": "sold",
+    "minecraft:potato": "easy",
+    "minecraft:pufferfish": "decision",
+    "minecraft:rabbit_foot": "easy",
+    "minecraft:red_mushroom": "sold",
+    "minecraft:redstone": "sold",
+    "minecraft:saddle": "sold",
+    "minecraft:salmon": "decision",
+    "minecraft:sculk_catalyst": "easy",
+    "minecraft:slime_ball": "sold",
+    "minecraft:stick": "crafted",
+    "minecraft:stone_sword": "crafted",
+    "minecraft:sugar": "crafted",
+    "minecraft:warped_fungus_on_a_stick": "crafted",
+    "minecraft:wet_sponge": "decision"
+  },
+  "game_version": "vanilla_1.26.60",
+  "included": [
+    {
+      "attempt": "one bogged kill (loot table entities/bogged.json)",
+      "class": "common_mob",
+      "item": "minecraft:bone",
+      "price": 1,
+      "quantity": 1,
+      "replaces": "drop of bogged, parched, skeleton, skeleton_horse, stray, wither_skeleton",
+      "stage": "overworld",
+      "upgraded_price": 1,
+      "upgraded_wants": [
+        {
+          "item": "minecraft:emerald",
+          "quantity": 1
+        }
+      ],
+      "wants": [
+        {
+          "item": "minecraft:emerald",
+          "quantity": 1
+        }
+      ],
+      "yield": 1.0
+    },
+    {
+      "attempt": "one creeper killed by a skeleton, stray, bogged or parched (gives one of the 12 creeper discs)",
+      "class": "music_disc",
+      "item": "minecraft:music_disc_11",
+      "price": 8,
+      "quantity": 1,
+      "replaces": "drop of creeper",
+      "stage": "overworld",
+      "upgraded_price": 6,
+      "upgraded_wants": [
+        {
+          "item": "minecraft:emerald",
+          "quantity": 6
+        }
+      ],
+      "wants": [
+        {
+          "item": "minecraft:emerald",
+          "quantity": 8
+        }
+      ],
+      "yield": 1.0
+    },
+    {
+      "attempt": "one creeper killed by a skeleton, stray, bogged or parched (gives one of the 12 creeper discs)",
+      "class": "music_disc",
+      "item": "minecraft:music_disc_13",
+      "price": 8,
+      "quantity": 1,
+      "replaces": "drop of creeper",
+      "stage": "overworld",
+      "upgraded_price": 6,
+      "upgraded_wants": [
+        {
+          "item": "minecraft:emerald",
+          "quantity": 6
+        }
+      ],
+      "wants": [
+        {
+          "item": "minecraft:emerald",
+          "quantity": 8
+        }
+      ],
+      "yield": 1.0
+    },
+    {
+      "attempt": "one creeper killed by a skeleton, stray, bogged or parched (gives one of the 12 creeper discs)",
+      "class": "music_disc",
+      "item": "minecraft:music_disc_blocks",
+      "price": 8,
+      "quantity": 1,
+      "replaces": "drop of creeper",
+      "stage": "overworld",
+      "upgraded_price": 6,
+      "upgraded_wants": [
+        {
+          "item": "minecraft:emerald",
+          "quantity": 6
+        }
+      ],
+      "wants": [
+        {
+          "item": "minecraft:emerald",
+          "quantity": 8
+        }
+      ],
+      "yield": 1.0
+    },
+    {
+      "attempt": "one creeper killed by a skeleton, stray, bogged or parched (gives one of the 12 creeper discs)",
+      "class": "music_disc",
+      "item": "minecraft:music_disc_cat",
+      "price": 8,
+      "quantity": 1,
+      "replaces": "drop of creeper",
+      "stage": "overworld",
+      "upgraded_price": 6,
+      "upgraded_wants": [
+        {
+          "item": "minecraft:emerald",
+          "quantity": 6
+        }
+      ],
+      "wants": [
+        {
+          "item": "minecraft:emerald",
+          "quantity": 8
+        }
+      ],
+      "yield": 1.0
+    },
+    {
+      "attempt": "one creeper killed by a skeleton, stray, bogged or parched (gives one of the 12 creeper discs)",
+      "class": "music_disc",
+      "item": "minecraft:music_disc_chirp",
+      "price": 8,
+      "quantity": 1,
+      "replaces": "drop of creeper",
+      "stage": "overworld",
+      "upgraded_price": 6,
+      "upgraded_wants": [
+        {
+          "item": "minecraft:emerald",
+          "quantity": 6
+        }
+      ],
+      "wants": [
+        {
+          "item": "minecraft:emerald",
+          "quantity": 8
+        }
+      ],
+      "yield": 1.0
+    },
+    {
+      "attempt": "one creeper killed by a skeleton, stray, bogged or parched (gives one of the 12 creeper discs)",
+      "class": "music_disc",
+      "item": "minecraft:music_disc_far",
+      "price": 8,
+      "quantity": 1,
+      "replaces": "drop of creeper",
+      "stage": "overworld",
+      "upgraded_price": 6,
+      "upgraded_wants": [
+        {
+          "item": "minecraft:emerald",
+          "quantity": 6
+        }
+      ],
+      "wants": [
+        {
+          "item": "minecraft:emerald",
+          "quantity": 8
+        }
+      ],
+      "yield": 1.0
+    },
+    {
+      "attempt": "one baby zombie or husk riding a chicken (chicken jockey) killed by a player",
+      "class": "music_disc",
+      "item": "minecraft:music_disc_lava_chicken",
+      "price": 8,
+      "quantity": 1,
+      "replaces": "drop of husk, zombie, zombie_villager, zombie_villager_v2",
+      "stage": "overworld",
+      "upgraded_price": 6,
+      "upgraded_wants": [
+        {
+          "item": "minecraft:emerald",
+          "quantity": 6
+        }
+      ],
+      "wants": [
+        {
+          "item": "minecraft:emerald",
+          "quantity": 8
+        }
+      ],
+      "yield": 1.0
+    },
+    {
+      "attempt": "one creeper killed by a skeleton, stray, bogged or parched (gives one of the 12 creeper discs)",
+      "class": "music_disc",
+      "item": "minecraft:music_disc_mall",
+      "price": 8,
+      "quantity": 1,
+      "replaces": "drop of creeper",
+      "stage": "overworld",
+      "upgraded_price": 6,
+      "upgraded_wants": [
+        {
+          "item": "minecraft:emerald",
+          "quantity": 6
+        }
+      ],
+      "wants": [
+        {
+          "item": "minecraft:emerald",
+          "quantity": 8
+        }
+      ],
+      "yield": 1.0
+    },
+    {
+      "attempt": "one creeper killed by a skeleton, stray, bogged or parched (gives one of the 12 creeper discs)",
+      "class": "music_disc",
+      "item": "minecraft:music_disc_mellohi",
+      "price": 8,
+      "quantity": 1,
+      "replaces": "drop of creeper",
+      "stage": "overworld",
+      "upgraded_price": 6,
+      "upgraded_wants": [
+        {
+          "item": "minecraft:emerald",
+          "quantity": 6
+        }
+      ],
+      "wants": [
+        {
+          "item": "minecraft:emerald",
+          "quantity": 8
+        }
+      ],
+      "yield": 1.0
+    },
+    {
+      "attempt": "one creeper killed by a skeleton, stray, bogged or parched (gives one of the 12 creeper discs)",
+      "class": "music_disc",
+      "item": "minecraft:music_disc_stal",
+      "price": 8,
+      "quantity": 1,
+      "replaces": "drop of creeper",
+      "stage": "overworld",
+      "upgraded_price": 6,
+      "upgraded_wants": [
+        {
+          "item": "minecraft:emerald",
+          "quantity": 6
+        }
+      ],
+      "wants": [
+        {
+          "item": "minecraft:emerald",
+          "quantity": 8
+        }
+      ],
+      "yield": 1.0
+    },
+    {
+      "attempt": "one creeper killed by a skeleton, stray, bogged or parched (gives one of the 12 creeper discs)",
+      "class": "music_disc",
+      "item": "minecraft:music_disc_strad",
+      "price": 8,
+      "quantity": 1,
+      "replaces": "drop of creeper",
+      "stage": "overworld",
+      "upgraded_price": 6,
+      "upgraded_wants": [
+        {
+          "item": "minecraft:emerald",
+          "quantity": 6
+        }
+      ],
+      "wants": [
+        {
+          "item": "minecraft:emerald",
+          "quantity": 8
+        }
+      ],
+      "yield": 1.0
+    },
+    {
+      "attempt": "one creeper killed by a skeleton, stray, bogged or parched (gives one of the 12 creeper discs)",
+      "class": "music_disc",
+      "item": "minecraft:music_disc_wait",
+      "price": 8,
+      "quantity": 1,
+      "replaces": "drop of creeper",
+      "stage": "overworld",
+      "upgraded_price": 6,
+      "upgraded_wants": [
+        {
+          "item": "minecraft:emerald",
+          "quantity": 6
+        }
+      ],
+      "wants": [
+        {
+          "item": "minecraft:emerald",
+          "quantity": 8
+        }
+      ],
+      "yield": 1.0
+    },
+    {
+      "attempt": "one creeper killed by a skeleton, stray, bogged or parched (gives one of the 12 creeper discs)",
+      "class": "music_disc",
+      "item": "minecraft:music_disc_ward",
+      "price": 8,
+      "quantity": 1,
+      "replaces": "drop of creeper",
+      "stage": "overworld",
+      "upgraded_price": 6,
+      "upgraded_wants": [
+        {
+          "item": "minecraft:emerald",
+          "quantity": 6
+        }
+      ],
+      "wants": [
+        {
+          "item": "minecraft:emerald",
+          "quantity": 8
+        }
+      ],
+      "yield": 1.0
+    },
+    {
+      "attempt": "one phantom kill (loot table entities/phantom.json)",
+      "class": "common_mob",
+      "item": "minecraft:phantom_membrane",
+      "price": 2,
+      "quantity": 1,
+      "replaces": "drop of phantom",
+      "stage": "overworld",
+      "upgraded_price": 1,
+      "upgraded_wants": [
+        {
+          "item": "minecraft:emerald",
+          "quantity": 1
+        }
+      ],
+      "wants": [
+        {
+          "item": "minecraft:emerald",
+          "quantity": 2
+        }
+      ],
+      "yield": 0.5
+    },
+    {
+      "attempt": "one guardian kill (loot table entities/guardian.json)",
+      "class": "common_mob",
+      "item": "minecraft:prismarine_crystals",
+      "price": 3,
+      "quantity": 1,
+      "replaces": "drop of elder_guardian, guardian",
+      "stage": "overworld",
+      "upgraded_price": 2,
+      "upgraded_wants": [
+        {
+          "item": "minecraft:emerald",
+          "quantity": 2
+        }
+      ],
+      "wants": [
+        {
+          "item": "minecraft:emerald",
+          "quantity": 3
+        }
+      ],
+      "yield": 0.4
+    },
+    {
+      "attempt": "one elder_guardian kill (loot table entities/elder_guardian.json)",
+      "class": "common_mob",
+      "item": "minecraft:prismarine_shard",
+      "price": 1,
+      "quantity": 1,
+      "replaces": "drop of elder_guardian, guardian",
+      "stage": "overworld",
+      "upgraded_price": 1,
+      "upgraded_wants": [
+        {
+          "item": "minecraft:emerald",
+          "quantity": 1
+        }
+      ],
+      "wants": [
+        {
+          "item": "minecraft:emerald",
+          "quantity": 1
+        }
+      ],
+      "yield": 1.0
+    },
+    {
+      "attempt": "one hit on a creaking (2-3 clumps)",
+      "class": "common_mob",
+      "item": "minecraft:resin_clump",
+      "price": 2,
+      "quantity": 3,
+      "replaces": "hitting a creaking at night makes its heart place 2-3 resin clumps (5 s cooldown)",
+      "stage": "overworld",
+      "upgraded_price": 1,
+      "upgraded_wants": [
+        {
+          "item": "minecraft:emerald",
+          "quantity": 1
+        }
+      ],
+      "wants": [
+        {
+          "item": "minecraft:emerald",
+          "quantity": 2
+        }
+      ],
+      "yield": 2.5
+    },
+    {
+      "attempt": "one zombie kill (0-2)",
+      "class": "junk_drop",
+      "item": "minecraft:rotten_flesh",
+      "price": 1,
+      "quantity": 4,
+      "replaces": "drop of camel_husk, drowned, husk, zoglin, zombie, zombie_horse, zombie_pigman, zombie_villager, zombie_villager_v2",
+      "stage": "overworld",
+      "upgraded_price": 1,
+      "upgraded_wants": [
+        {
+          "item": "minecraft:emerald",
+          "quantity": 1
+        }
+      ],
+      "wants": [
+        {
+          "item": "minecraft:emerald",
+          "quantity": 1
+        }
+      ],
+      "yield": 1.0
+    },
+    {
+      "attempt": "one mob killed by a charged-creeper explosion (Bedrock: every mob it kills drops a head; the one-head-per-explosion limit is Java only)",
+      "class": "rare_mob",
+      "item": "minecraft:skull",
+      "price": 16,
+      "quantity": 1,
+      "replaces": "a charged creeper explosion kills a skeleton (skeleton skull)",
+      "stage": "overworld",
+      "upgraded_price": 11,
+      "upgraded_wants": [
+        {
+          "item": "minecraft:emerald",
+          "quantity": 11
+        }
+      ],
+      "wants": [
+        {
+          "item": "minecraft:emerald",
+          "quantity": 16
+        }
+      ],
+      "yield": 1.0
+    },
+    {
+      "attempt": "one mob killed by a charged-creeper explosion (Bedrock: every mob it kills drops a head; the one-head-per-explosion limit is Java only)",
+      "class": "rare_mob",
+      "item": "minecraft:skull:2",
+      "price": 16,
+      "quantity": 1,
+      "replaces": "a charged creeper explosion kills a zombie (zombie head)",
+      "stage": "overworld",
+      "upgraded_price": 11,
+      "upgraded_wants": [
+        {
+          "item": "minecraft:emerald",
+          "quantity": 11
+        }
+      ],
+      "wants": [
+        {
+          "item": "minecraft:emerald",
+          "quantity": 16
+        }
+      ],
+      "yield": 1.0
+    },
+    {
+      "attempt": "one mob killed by a charged-creeper explosion (Bedrock: every mob it kills drops a head; the one-head-per-explosion limit is Java only)",
+      "class": "rare_mob",
+      "item": "minecraft:skull:4",
+      "price": 16,
+      "quantity": 1,
+      "replaces": "a charged creeper explosion kills a creeper (creeper head)",
+      "stage": "overworld",
+      "upgraded_price": 11,
+      "upgraded_wants": [
+        {
+          "item": "minecraft:emerald",
+          "quantity": 11
+        }
+      ],
+      "wants": [
+        {
+          "item": "minecraft:emerald",
+          "quantity": 16
+        }
+      ],
+      "yield": 1.0
+    },
+    {
+      "attempt": "one cave_spider kill (loot table entities/spider.json)",
+      "class": "common_mob",
+      "item": "minecraft:spider_eye",
+      "price": 2,
+      "quantity": 1,
+      "replaces": "drop of cave_spider, spider, witch",
+      "stage": "overworld",
+      "upgraded_price": 1,
+      "upgraded_wants": [
+        {
+          "item": "minecraft:emerald",
+          "quantity": 1
+        }
+      ],
+      "wants": [
+        {
+          "item": "minecraft:emerald",
+          "quantity": 2
+        }
+      ],
+      "yield": 0.5
+    },
+    {
+      "attempt": "one cave_spider kill (loot table entities/spider.json)",
+      "class": "common_mob",
+      "item": "minecraft:string",
+      "price": 1,
+      "quantity": 1,
+      "replaces": "drop of cave_spider, spider",
+      "stage": "overworld",
+      "upgraded_price": 1,
+      "upgraded_wants": [
+        {
+          "item": "minecraft:emerald",
+          "quantity": 1
+        }
+      ],
+      "wants": [
+        {
+          "item": "minecraft:emerald",
+          "quantity": 1
+        }
+      ],
+      "yield": 1.0
+    },
+    {
+      "attempt": "one elder_guardian kill (loot table entities/elder_guardian.json)",
+      "class": "rare_mob",
+      "item": "minecraft:tide_armor_trim_smithing_template",
+      "price": 40,
+      "quantity": 1,
+      "replaces": "drop of elder_guardian",
+      "stage": "overworld",
+      "upgraded_price": 28,
+      "upgraded_wants": [
+        {
+          "item": "minecraft:emerald",
+          "quantity": 28
+        }
+      ],
+      "wants": [
+        {
+          "item": "minecraft:emerald",
+          "quantity": 40
+        }
+      ],
+      "yield": 0.2
+    },
+    {
+      "attempt": "one kill of a drowned that visibly holds a trident",
+      "class": "common_mob",
+      "item": "minecraft:trident",
+      "price": 32,
+      "quantity": 1,
+      "replaces": "drop of drowned",
+      "stage": "overworld",
+      "upgraded_price": 22,
+      "upgraded_wants": [
+        {
+          "item": "minecraft:emerald",
+          "quantity": 22
+        }
+      ],
+      "wants": [
+        {
+          "item": "minecraft:emerald",
+          "quantity": 32
+        }
+      ],
+      "yield": 0.085
+    },
+    {
+      "attempt": "one blaze kill (loot table entities/blaze.json)",
+      "class": "nether_mob",
+      "item": "minecraft:blaze_rod",
+      "price": 5,
+      "quantity": 1,
+      "replaces": "drop of blaze",
+      "stage": "nether",
+      "upgraded_price": 4,
+      "upgraded_wants": [
+        {
+          "item": "minecraft:emerald",
+          "quantity": 4
+        }
+      ],
+      "wants": [
+        {
+          "item": "minecraft:emerald",
+          "quantity": 5
+        }
+      ],
+      "yield": 0.5
+    },
+    {
+      "attempt": "one ghast kill (loot table entities/ghast.json)",
+      "class": "nether_mob",
+      "item": "minecraft:ghast_tear",
+      "price": 5,
+      "quantity": 1,
+      "replaces": "drop of ghast",
+      "stage": "nether",
+      "upgraded_price": 4,
+      "upgraded_wants": [
+        {
+          "item": "minecraft:emerald",
+          "quantity": 4
+        }
+      ],
+      "wants": [
+        {
+          "item": "minecraft:emerald",
+          "quantity": 5
+        }
+      ],
+      "yield": 0.5
+    },
+    {
+      "attempt": "one ghast killed by its own fireball reflected by a player",
+      "class": "music_disc",
+      "item": "minecraft:music_disc_tears",
+      "price": 10,
+      "quantity": 1,
+      "replaces": "drop of ghast",
+      "stage": "nether",
+      "upgraded_price": 7,
+      "upgraded_wants": [
+        {
+          "item": "minecraft:emerald",
+          "quantity": 7
+        }
+      ],
+      "wants": [
+        {
+          "item": "minecraft:emerald",
+          "quantity": 10
+        }
+      ],
+      "yield": 1.0
+    },
+    {
+      "attempt": "one tiny magma cube eaten by a frog",
+      "class": "nether_mob",
+      "item": "minecraft:ochre_froglight",
+      "price": 3,
+      "quantity": 1,
+      "replaces": "a temperate frog eats a tiny magma cube",
+      "stage": "nether",
+      "upgraded_price": 2,
+      "upgraded_wants": [
+        {
+          "item": "minecraft:emerald",
+          "quantity": 2
+        }
+      ],
+      "wants": [
+        {
+          "item": "minecraft:emerald",
+          "quantity": 3
+        }
+      ],
+      "yield": 1.0
+    },
+    {
+      "attempt": "one tiny magma cube eaten by a frog",
+      "class": "nether_mob",
+      "item": "minecraft:pearlescent_froglight",
+      "price": 3,
+      "quantity": 1,
+      "replaces": "a warm frog eats a tiny magma cube",
+      "stage": "nether",
+      "upgraded_price": 2,
+      "upgraded_wants": [
+        {
+          "item": "minecraft:emerald",
+          "quantity": 2
+        }
+      ],
+      "wants": [
+        {
+          "item": "minecraft:emerald",
+          "quantity": 3
+        }
+      ],
+      "yield": 1.0
+    },
+    {
+      "attempt": "one wither_skeleton kill (loot table entities/wither_skeleton.json)",
+      "class": "nether_mob",
+      "item": "minecraft:skull:1",
+      "price": 16,
+      "quantity": 1,
+      "replaces": "drop of wither_skeleton",
+      "stage": "nether",
+      "upgraded_price": 11,
+      "upgraded_wants": [
+        {
+          "item": "minecraft:emerald",
+          "quantity": 11
+        }
+      ],
+      "wants": [
+        {
+          "item": "minecraft:emerald",
+          "quantity": 16
+        }
+      ],
+      "yield": 0.025
+    },
+    {
+      "attempt": "one mob killed by a charged-creeper explosion (Bedrock: every mob it kills drops a head; the one-head-per-explosion limit is Java only)",
+      "class": "rare_mob",
+      "item": "minecraft:skull:6",
+      "price": 16,
+      "quantity": 1,
+      "replaces": "a charged creeper explosion kills a piglin (piglin head)",
+      "stage": "nether",
+      "upgraded_price": 11,
+      "upgraded_wants": [
+        {
+          "item": "minecraft:emerald",
+          "quantity": 11
+        }
+      ],
+      "wants": [
+        {
+          "item": "minecraft:emerald",
+          "quantity": 16
+        }
+      ],
+      "yield": 1.0
+    },
+    {
+      "attempt": "one tiny magma cube eaten by a frog",
+      "class": "nether_mob",
+      "item": "minecraft:verdant_froglight",
+      "price": 3,
+      "quantity": 1,
+      "replaces": "a cold frog eats a tiny magma cube",
+      "stage": "nether",
+      "upgraded_price": 2,
+      "upgraded_wants": [
+        {
+          "item": "minecraft:emerald",
+          "quantity": 2
+        }
+      ],
+      "wants": [
+        {
+          "item": "minecraft:emerald",
+          "quantity": 3
+        }
+      ],
+      "yield": 1.0
+    },
+    {
+      "attempt": "one breeze kill (loot table entities/breeze.json)",
+      "class": "trial_mob",
+      "item": "minecraft:breeze_rod",
+      "price": 5,
+      "quantity": 1,
+      "replaces": "drop of breeze",
+      "stage": "trial",
+      "upgraded_price": 4,
+      "upgraded_wants": [
+        {
+          "item": "minecraft:emerald",
+          "quantity": 4
+        }
+      ],
+      "wants": [
+        {
+          "item": "minecraft:emerald",
+          "quantity": 5
+        }
+      ],
+      "yield": 1.5
+    },
+    {
+      "attempt": "one pillager kill (loot table entities/pillager_captain.json)",
+      "class": "common_mob",
+      "item": "minecraft:ominous_bottle",
+      "price": 2,
+      "quantity": 1,
+      "replaces": "drop of pillager, vindicator",
+      "stage": "trial",
+      "upgraded_price": 1,
+      "upgraded_wants": [
+        {
+          "item": "minecraft:emerald",
+          "quantity": 1
+        }
+      ],
+      "wants": [
+        {
+          "item": "minecraft:emerald",
+          "quantity": 2
+        }
+      ],
+      "yield": 1.0
+    },
+    {
+      "attempt": "one completed ominous trial spawner (per player)",
+      "class": "trial_reward",
+      "item": "minecraft:ominous_trial_key",
+      "price": 15,
+      "quantity": 1,
+      "replaces": "an ominous trial spawner ejects an ominous trial key (30 %)",
+      "stage": "trial",
+      "upgraded_price": 10,
+      "upgraded_wants": [
+        {
+          "item": "minecraft:emerald",
+          "quantity": 10
+        }
+      ],
+      "wants": [
+        {
+          "item": "minecraft:emerald",
+          "quantity": 15
+        }
+      ],
+      "yield": 0.3
+    },
+    {
+      "attempt": "one evocation_illager kill (loot table entities/evocation_illager.json)",
+      "class": "rare_mob",
+      "item": "minecraft:totem",
+      "price": 12,
+      "quantity": 1,
+      "replaces": "drop of evocation_illager",
+      "stage": "trial",
+      "upgraded_price": 8,
+      "upgraded_wants": [
+        {
+          "item": "minecraft:emerald",
+          "quantity": 8
+        }
+      ],
+      "wants": [
+        {
+          "item": "minecraft:emerald",
+          "quantity": 12
+        }
+      ],
+      "yield": 1.0
+    },
+    {
+      "attempt": "one completed trial spawner (per player)",
+      "class": "trial_reward",
+      "item": "minecraft:trial_key",
+      "price": 9,
+      "quantity": 1,
+      "replaces": "a trial spawner ejects its reward after its mobs are defeated (key 50 %, else food or a potion)",
+      "stage": "trial",
+      "upgraded_price": 6,
+      "upgraded_wants": [
+        {
+          "item": "minecraft:emerald",
+          "quantity": 6
+        }
+      ],
+      "wants": [
+        {
+          "item": "minecraft:emerald",
+          "quantity": 9
+        }
+      ],
+      "yield": 0.5
+    },
+    {
+      "attempt": "one wither kill (loot table entities/wither_boss.json)",
+      "class": "boss",
+      "item": "minecraft:nether_star",
+      "price": 128,
+      "quantity": 1,
+      "replaces": "drop of wither",
+      "stage": "end_boss",
+      "upgraded_price": 90,
+      "upgraded_wants": [
+        {
+          "item": "minecraft:emerald",
+          "quantity": 45
+        },
+        {
+          "item": "minecraft:emerald",
+          "quantity": 45
+        }
+      ],
+      "wants": [
+        {
+          "item": "minecraft:emerald",
+          "quantity": 64
+        },
+        {
+          "item": "minecraft:emerald",
+          "quantity": 64
+        }
+      ],
+      "yield": 1.0
+    },
+    {
+      "attempt": "one mob killed by the Wither",
+      "class": "boss_byproduct",
+      "item": "minecraft:wither_rose",
+      "price": 1,
+      "quantity": 1,
+      "replaces": "a mob or player killed by the Wither leaves a wither rose",
+      "stage": "end_boss",
+      "upgraded_price": 1,
+      "upgraded_wants": [
+        {
+          "item": "minecraft:emerald",
+          "quantity": 1
+        }
+      ],
+      "wants": [
+        {
+          "item": "minecraft:emerald",
+          "quantity": 1
+        }
+      ],
+      "yield": 1.0
+    }
+  ],
+  "review": [],
+  "rules_game_version": "1.26.63",
+  "stages": [
+    "overworld",
+    "nether",
+    "trial",
+    "end_boss"
+  ]
+}
