@@ -59,5 +59,21 @@
   "vm:machine_shulker": {
     "sound": "iron",
     "textures": "vm_machine_body"
+  },
+  "vm:machine_loot_overworld": {
+    "sound": "iron",
+    "textures": "vm_machine_body"
+  },
+  "vm:machine_loot_nether": {
+    "sound": "iron",
+    "textures": "vm_machine_body"
+  },
+  "vm:machine_loot_trial": {
+    "sound": "iron",
+    "textures": "vm_machine_body"
+  },
+  "vm:machine_loot_end": {
+    "sound": "iron",
+    "textures": "vm_machine_body"
   }
 }

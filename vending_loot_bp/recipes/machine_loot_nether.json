@@ -1,0 +1,42 @@
+{
+    "format_version": "1.20.10",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "vm:machine_loot_nether_recipe"
+        },
+        "tags": [
+            "crafting_table"
+        ],
+        "pattern": [
+            "GTG",
+            "IWI",
+            "EEE"
+        ],
+        "key": {
+            "I": {
+                "item": "minecraft:iron_block"
+            },
+            "G": {
+                "item": "minecraft:gold_block"
+            },
+            "T": {
+                "item": "minecraft:magma"
+            },
+            "E": {
+                "item": "minecraft:emerald_block"
+            },
+            "W": {
+                "item": "minecraft:nether_wart_block"
+            }
+        },
+        "unlock": [
+            {
+                "item": "minecraft:nether_wart_block"
+            }
+        ],
+        "result": {
+            "item": "vm:machine_loot_nether",
+            "count": 1
+        }
+    }
+}

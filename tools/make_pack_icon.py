@@ -31,6 +31,7 @@ PACK_DESIGNS = {
     "vending_villagers_bp": ("Villagers", "librarian", False, "green"),
     "vending_wandering_bp": ("Wandering Trader", "wandering_trader", False, "blue"),
     "vending_shulker_bp": ("Shulker", "shulker", False, "purple"),
+    "vending_loot_bp": ("Loot", "loot_end", False, "amber"),
 }
 BLOCKS = os.path.join(RP, "textures", "blocks")
 EMERALD = r"C:\mcmods\reference\vanilla\current\resource_packs\vanilla\textures\items\emerald.png"
@@ -45,6 +46,7 @@ BG_PALETTES = {
     "green": [(38, 64, 58), (31, 53, 48), (25, 43, 39), (20, 34, 31)],
     "blue": [(36, 60, 83), (29, 49, 69), (23, 40, 56), (18, 31, 44)],
     "purple": [(65, 45, 75), (54, 36, 63), (44, 29, 51), (34, 23, 40)],
+    "amber": [(84, 62, 32), (70, 51, 26), (57, 41, 21), (44, 32, 16)],
 }
 CELL = 8
 
@@ -163,7 +165,7 @@ def main():
         ap.error("--head requires --preview; shipped icons use the pack-specific designs")
     images = {pack: build(pack) for pack in PACK_DESIGNS}
     assert images["vending_bp"].tobytes() == images["vending_rp"].tobytes(), "Core and Resources must share the group icon"
-    assert len({img.tobytes() for img in images.values()}) == 4, "feature icons must differ from each other and the group"
+    assert len({img.tobytes() for img in images.values()}) == 5, "feature icons must differ from each other and the group"
     targets = [(args.preview, build(args.pack, args.head))] if args.preview else [
         (os.path.join(MOD, pack, "pack_icon.png"), img) for pack, img in images.items()]
     for path, img in targets:

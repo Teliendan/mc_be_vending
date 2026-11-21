@@ -1,0 +1,42 @@
+{
+    "format_version": "1.20.10",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "vm:machine_loot_end_recipe"
+        },
+        "tags": [
+            "crafting_table"
+        ],
+        "pattern": [
+            "GTG",
+            "IWI",
+            "EEE"
+        ],
+        "key": {
+            "I": {
+                "item": "minecraft:iron_block"
+            },
+            "G": {
+                "item": "minecraft:gold_block"
+            },
+            "T": {
+                "item": "minecraft:end_crystal"
+            },
+            "E": {
+                "item": "minecraft:emerald_block"
+            },
+            "W": {
+                "item": "minecraft:shulker_shell"
+            }
+        },
+        "unlock": [
+            {
+                "item": "minecraft:shulker_shell"
+            }
+        ],
+        "result": {
+            "item": "vm:machine_loot_end",
+            "count": 1
+        }
+    }
+}

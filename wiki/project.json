@@ -6,6 +6,7 @@
   "adapter": "bedrock",
   "behaviorPacks": [
     "vending_bp",
+    "vending_loot_bp",
     "vending_shulker_bp",
     "vending_villagers_bp",
     "vending_wandering_bp"

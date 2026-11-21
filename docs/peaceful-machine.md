@@ -31,6 +31,26 @@ The brief below is a starting point written by ChatGPT, not a literal spec. Thes
   Prismarine shards and crystals stay: ordinary guardians respawn.
 - The reasons per item go into the player wiki in Part 2, generated from the rules file.
 
+Part 2 decisions (owner, 2026-11-21, Bedrock 1.26.63):
+
+- Player-facing name: "Loot Machine", in the existing "<X> Machine" pattern: Overworld / Nether / Trial / End
+  Loot Machine. Internal IDs follow it: `vm:machine_loot_<stage>`, pack `vending_loot_bp`. "Peaceful" stays the
+  design motivation and the name of the catalogue tools.
+- One feature pack with all four machines; the same body as the other machines, only the glass item differs.
+- Glass item: Overworld = bone, Nether = blaze rod, Trial = breeze rod, End = nether star.
+- Recipe keeps the shared GTG / IWI / EEE shape. T points to what the machine sells and is not sold anywhere;
+  W is the stage proof: Overworld T carved pumpkin, W bone block; Nether T magma block, W nether wart block;
+  Trial T copper grate, W trial key (found in chamber chests and pots; the machine also sells keys);
+  End T end crystal, W shulker shell.
+- After the in-game check: the wither rose costs 16 (was 1; very hard to get normally); resin clumps are
+  9 for 1 emerald, one block of resin (was 3 for 2; a building material needs several per block).
+  Offers are sorted the same in every machine: ordinary loot first, cheapest first, then mob heads, then
+  music discs; families (prismarine, trial keys, froglights) stay together at their cheapest member's price
+  (`loot_offer_order`, `LOOT_FAMILIES` in `tools/gen_extra_machines.py`).
+- Czech names keep the Bedrock term "zkušební komory" for Trial Chambers (owner, 2026-11-21).
+- Verified in game (owner, 1.26.63, 2026-11-21): the nether star trade takes 64 emeralds in each of the two
+  payment slots and charges both.
+
 ## Status and files (2026-11-21)
 
 Part 1, the catalogue, is done; Part 2 builds the machines from it.

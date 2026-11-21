@@ -1,10 +1,14 @@
-r"""Generate the two non-villager vending machines: Wandering Trader and Shulker.
+r"""Generate the non-villager vending machines: Wandering Trader, Shulker and the four Loot Machines.
 
 Each lives in its own feature behaviour pack, so a world gets it only when that
 pack is active:
 
     vending_wandering_bp   vm:machine_wandering_trader  (+ vm:trader_wandering_trader)
     vending_shulker_bp     vm:machine_shulker           (+ vm:trader_shulker, vm:shulker_core)
+    vending_loot_bp        vm:machine_loot_overworld|nether|trial|end (+ vm:trader_loot_<stage>)
+
+The four Loot Machines (the Peaceful catalogue, tools/peaceful_catalog.json) sell the mob loot
+a Peaceful world cannot produce; their trade tables are read from that catalogue.
 
 The block, the trader entity and the client entity are NOT built from scratch.
 They are copied from the farmer machine with the name swapped, so the
@@ -48,7 +52,23 @@ MACHINES = {
                 "goods": "minecraft:chest", "core": "vm:shulker_core"},
 }
 
+# One Loot Machine per catalogue stage. `goods` is the glass display item, `recipe_goods` the recipe's
+# T slot (a display good can be a SOLD item, a recipe ingredient must not be), `core` the stage proof (W).
+LOOT_STAGES = {
+    "overworld": {"catalog_stage": "overworld", "goods": "minecraft:bone",
+                  "recipe_goods": "minecraft:carved_pumpkin", "core": "minecraft:bone_block"},
+    "nether": {"catalog_stage": "nether", "goods": "minecraft:blaze_rod",
+               "recipe_goods": "minecraft:magma", "core": "minecraft:nether_wart_block"},  # magma = magma block
+    "trial": {"catalog_stage": "trial", "goods": "minecraft:breeze_rod",
+              "recipe_goods": "minecraft:copper_grate", "core": "minecraft:trial_key"},
+    "end": {"catalog_stage": "end_boss", "goods": "minecraft:nether_star",
+            "recipe_goods": "minecraft:end_crystal", "core": "minecraft:shulker_shell"},
+}
+for _stage, _spec in LOOT_STAGES.items():
+    MACHINES["loot_" + _stage] = dict(_spec, pack="vending_loot_bp", name=_stage.capitalize() + " Loot")
+
 MAX_USES = 9999999
+CATALOG = os.path.join(MOD, "tools", "peaceful_catalog.json")
 
 def base_price(quantity):
     """Dearer emerald cost, with upgraded price exactly matching vanilla."""
@@ -105,7 +125,53 @@ def shulker_table(upgraded, root=None):
     ]}
 
 
+# Items sold side by side (owner, 2026-11-21): a family sorts at its cheapest member's price.
+LOOT_FAMILIES = {"prismarine_shard": "prismarine", "prismarine_crystals": "prismarine",
+                 "trial_key": "trial_key", "ominous_trial_key": "trial_key",
+                 "ochre_froglight": "froglight", "pearlescent_froglight": "froglight",
+                 "verdant_froglight": "froglight"}
+
+
+def loot_offer_order(entry, included=None):
+    """Owner (2026-11-21): ordinary loot first, cheapest first, then mob heads, then music discs last;
+    a family (LOOT_FAMILIES) stays together at its cheapest member's price, members cheapest first."""
+    def short(e):
+        return e["item"].split(":", 1)[1]
+
+    def price(e):
+        return sum(line["quantity"] for line in e["wants"])
+
+    item = short(entry)
+    if item.startswith("music_disc_"):
+        group = 2
+    elif item.endswith("_head") or item.endswith("_skull"):
+        group = 1
+    else:
+        group = 0
+    family = LOOT_FAMILIES.get(item, item)
+    members = [e for e in (included or [entry]) if LOOT_FAMILIES.get(short(e), short(e)) == family] or [entry]
+    return (group, min(price(e) for e in members), family, price(entry), item)
+
+
+def loot_table(machine, upgraded):
+    """One tier, one singleton group per catalogue item of the machine's stage, paid in emeralds."""
+    stage = MACHINES[machine]["catalog_stage"]
+    with open(CATALOG, encoding="utf-8") as fh:
+        included = json.load(fh)["included"]
+    key = "upgraded_wants" if upgraded else "wants"
+    groups = []
+    for entry in sorted((e for e in included if e["stage"] == stage), key=lambda e: loot_offer_order(e, included)):
+        offer = {"wants": [dict(line) for line in entry[key]],
+                 "gives": [{"item": entry["item"], "quantity": entry["quantity"]}],
+                 "trader_exp": 0, "max_uses": MAX_USES, "reward_exp": True}
+        groups.append({"num_to_select": 1, "trades": [offer]})
+    return {"tiers": [{"total_exp_required": 0, "groups": groups}]}
+
+
 TABLES = {"wandering_trader": wandering_table, "shulker": shulker_table}
+for _machine in MACHINES:
+    if _machine.startswith("loot_"):
+        TABLES[_machine] = (lambda machine: lambda upgraded, root=None: loot_table(machine, upgraded))(_machine)
 
 
 def machine_recipe(machine, spec):
@@ -115,7 +181,7 @@ def machine_recipe(machine, spec):
         "pattern": ["GTG", "IWI", "EEE"],
         "key": {"I": {"item": "minecraft:iron_block"},
                 "G": {"item": "minecraft:gold_block"},
-                "T": {"item": spec["goods"]},
+                "T": {"item": spec.get("recipe_goods", spec["goods"])},
                 "E": {"item": "minecraft:emerald_block"},
                 "W": {"item": spec["core"]}},
         "unlock": [{"item": spec["core"]}],

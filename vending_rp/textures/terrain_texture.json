@@ -103,6 +103,30 @@
     },
     "vm_machine_head_shulker_upgraded": {
       "textures": "textures/blocks/vm_machine_head_shulker_upgraded"
+    },
+    "vm_machine_head_loot_overworld": {
+      "textures": "textures/blocks/vm_machine_head_loot_overworld"
+    },
+    "vm_machine_head_loot_overworld_upgraded": {
+      "textures": "textures/blocks/vm_machine_head_loot_overworld_upgraded"
+    },
+    "vm_machine_head_loot_nether": {
+      "textures": "textures/blocks/vm_machine_head_loot_nether"
+    },
+    "vm_machine_head_loot_nether_upgraded": {
+      "textures": "textures/blocks/vm_machine_head_loot_nether_upgraded"
+    },
+    "vm_machine_head_loot_trial": {
+      "textures": "textures/blocks/vm_machine_head_loot_trial"
+    },
+    "vm_machine_head_loot_trial_upgraded": {
+      "textures": "textures/blocks/vm_machine_head_loot_trial_upgraded"
+    },
+    "vm_machine_head_loot_end": {
+      "textures": "textures/blocks/vm_machine_head_loot_end"
+    },
+    "vm_machine_head_loot_end_upgraded": {
+      "textures": "textures/blocks/vm_machine_head_loot_end_upgraded"
     }
   }
 }

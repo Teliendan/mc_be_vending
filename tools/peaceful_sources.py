@@ -25,7 +25,7 @@ Loot maths (expected count of an item per roll set of a table):
     an approximation); bonus_rolls without tiers is Luck and ignored
   - set_count: number or {min,max} average; `add: true` adds to the stack of 1
   - set_data / random_aux_value select the item variant (a range splits evenly);
-    a variant keeps its data value in the id, e.g. minecraft:skull:1
+    a variant keeps its data value in the id, e.g. minecraft:dye:4
   - random_chance and random_chance_with_looting use the BASE chance (looting ignored);
     random_difficulty_chance uses the Normal value (`normal`, else `default_chance`)
   - nested loot_table entries are evaluated recursively; `empty` entries only take weight
@@ -37,7 +37,8 @@ Loot maths (expected count of an item per roll set of a table):
   - unknown functions are listed in "unknown" as fn:<name>
 
 Item ids are normalised to `minecraft:<name>` with a data value only where it is not
-0 (`minecraft:skull:1`); legacy names are mapped (netherStar, record_*, muttonRaw ...)
+0 (`minecraft:dye:4`); legacy skull data values become the current ids
+(`minecraft:skull:1` is `minecraft:wither_skeleton_skull`, as trade tables need); legacy names are mapped (netherStar, record_*, muttonRaw ...)
 and `legacy_note()` explains each mapping.
 
 Run directly for a quick dump:  python -I mods\vending\tools\peaceful_sources.py [loot-table-key]
@@ -64,13 +65,12 @@ ALIASES = {  # legacy or alternative name -> name this tool uses
     "muttonRaw": "mutton",
     "muttonCooked": "cooked_mutton",
     "cod": "fish",  # minecraft:fish is raw cod in the data files
+    "totem": "totem_of_undying",  # the loot tables still use the legacy name; the item id is the long one
 }
-SKULL_NAMES = {0: "skeleton skull", 1: "wither skeleton skull", 2: "zombie head", 3: "player head",
-               4: "creeper head", 5: "dragon head", 6: "piglin head"}
-SKULL_ALIASES = {  # friendly name -> id with data, accepted in the rules file
-    "skeleton_skull": "minecraft:skull", "wither_skeleton_skull": "minecraft:skull:1",
-    "zombie_head": "minecraft:skull:2", "player_head": "minecraft:skull:3",
-    "creeper_head": "minecraft:skull:4", "dragon_head": "minecraft:skull:5", "piglin_head": "minecraft:skull:6",
+SKULL_IDS = {  # legacy minecraft:skull data value -> current item id (trade tables need the current id)
+    0: "minecraft:skeleton_skull", 1: "minecraft:wither_skeleton_skull", 2: "minecraft:zombie_head",
+    3: "minecraft:player_head", 4: "minecraft:creeper_head", 5: "minecraft:dragon_head",
+    6: "minecraft:piglin_head",
 }
 DATA_NAMES = {"minecraft:coal:1": "charcoal"}
 ID_PATTERN = re.compile(r"^(?:(?P<ns>[a-z0-9_.]+):)?(?P<name>[A-Za-z0-9_.]+)(?::(?P<data>-?\d+))?$")
@@ -95,8 +95,8 @@ def normalise_id(raw, data=None):
     name = ALIASES.get(name, name)
     if namespace == "minecraft" and name.startswith("record_"):
         name = "music_disc_" + name[len("record_"):]
-    if namespace == "minecraft" and name in SKULL_ALIASES and data is None:
-        return SKULL_ALIASES[name]
+    if namespace == "minecraft" and name == "skull" and data in (None, -1, *SKULL_IDS):
+        return SKULL_IDS[0 if data in (None, -1) else int(data)]
     ident = f"{namespace}:{name}"
     return ident if data in (None, 0, -1) else f"{ident}:{int(data)}"
 
@@ -116,9 +116,6 @@ def display_id(item):
     """The id plus a plain name where the data value hides it (skull variants, charcoal)."""
     if item in DATA_NAMES:
         return f"{item} ({DATA_NAMES[item]})"
-    match = re.fullmatch(r"minecraft:skull(?::(\d+))?", item)
-    if match and int(match.group(1) or 0) in SKULL_NAMES:
-        return f"{item} ({SKULL_NAMES[int(match.group(1) or 0)]})"
     return item
 
 
@@ -482,6 +479,8 @@ def read_sold(root, notes):
     for path in sorted(glob.glob(os.path.join(MOD, "vending_*_bp", "trading", "vm", "*.json"))):
         if path.endswith("_cured.json"):
             continue  # same goods as the basic table at another price
+        if os.sep + "vending_loot_bp" + os.sep in path:
+            continue  # the Loot Machines sell this tool's own catalogue; counting them would exclude every item
         pack = os.path.basename(os.path.dirname(os.path.dirname(os.path.dirname(path))))
         for item in _trade_gives(read_json_file(path)):
             sold[item].add(f"machine:{pack.removeprefix('vending_').removesuffix('_bp')}/{os.path.basename(path)[:-5]}")

@@ -177,5 +177,49 @@
       "adapter": "vending-machine",
       "blockId": "vm:machine_wandering_trader"
     }
+  },
+  {
+    "id": "vm:machine_loot_overworld/icon",
+    "featureId": "vm:machine_loot_overworld",
+    "source": "vending_rp/textures/blocks/vm_machine_head_loot_overworld.png",
+    "kind": "texture",
+    "alt": "Overworld Loot Machine",
+    "render": {
+      "adapter": "vending-machine",
+      "blockId": "vm:machine_loot_overworld"
+    }
+  },
+  {
+    "id": "vm:machine_loot_nether/icon",
+    "featureId": "vm:machine_loot_nether",
+    "source": "vending_rp/textures/blocks/vm_machine_head_loot_nether.png",
+    "kind": "texture",
+    "alt": "Nether Loot Machine",
+    "render": {
+      "adapter": "vending-machine",
+      "blockId": "vm:machine_loot_nether"
+    }
+  },
+  {
+    "id": "vm:machine_loot_trial/icon",
+    "featureId": "vm:machine_loot_trial",
+    "source": "vending_rp/textures/blocks/vm_machine_head_loot_trial.png",
+    "kind": "texture",
+    "alt": "Trial Loot Machine",
+    "render": {
+      "adapter": "vending-machine",
+      "blockId": "vm:machine_loot_trial"
+    }
+  },
+  {
+    "id": "vm:machine_loot_end/icon",
+    "featureId": "vm:machine_loot_end",
+    "source": "vending_rp/textures/blocks/vm_machine_head_loot_end.png",
+    "kind": "texture",
+    "alt": "End Loot Machine",
+    "render": {
+      "adapter": "vending-machine",
+      "blockId": "vm:machine_loot_end"
+    }
   }
 ]

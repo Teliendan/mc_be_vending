@@ -1,0 +1,197 @@
+{
+  "schema_version": 1,
+  "blocks": {
+    "vm:machine_loot_overworld": {
+      "profile": "metal_machine",
+      "reason": "Preserve deliberate protected trader lifecycle: mining 8, resistance 1200, upper half cannot be mined independently.",
+      "overrides": {
+        "minecraft:destructible_by_mining": {
+          "seconds_to_destroy": 8
+        },
+        "minecraft:destructible_by_explosion": {
+          "explosion_resistance": 1200
+        }
+      },
+      "permutations": {
+        "q.block_state('vm:half') == 1": {
+          "reason": "Only the base owns loot; the upper half is not independently mineable.",
+          "overrides": {
+            "minecraft:destructible_by_mining": false
+          }
+        }
+      },
+      "harvest": "One native base-owned machine item; upper half has empty loot. Upper-only survivor cleanup uses native support-loss context; Creative cleanup drops nothing. Owner 2026-10-10: collect with any tool or hand; no required tool.",
+      "property_checks": {
+        "RP:sound": {
+          "counterpart": "minecraft:iron_block",
+          "expected": "iron",
+          "source": "reference/vanilla/current/resource_packs/vanilla_1.21.60/blocks.json"
+        },
+        "minecraft:instrument_sound": {
+          "counterpart": "minecraft:iron_block",
+          "expected": {
+            "up": "note.iron_xylophone"
+          },
+          "source": "Block of Iron: a note block placed ON this block plays iron xylophone. Vanilla data-driven blocks (vanilla_1.26.50 concrete) key it as \"up\"."
+        }
+      },
+      "loot_checks": {
+        "loot_tables/blocks/machine_loot_overworld.json": {
+          "counterpart": "minecraft:iron_block",
+          "source": "references/harvest-explosion-loot.md: native explosion_decay; one placed item owns the base, paired upper is empty. docs/VANILLA_PARITY.md.",
+          "explosion_decay": true
+        },
+        "loot_tables/blocks/machine_upper_empty.json": {
+          "counterpart": "minecraft:wooden_door",
+          "source": "Paired-block one-item ownership; docs/VANILLA_PARITY.md. Native vertical multi_block migration is outside this repair.",
+          "reason": "Existing manually paired machine lifecycle: only the base owns the placed item; upper-only loss destroys surviving base natively.",
+          "explosion_decay": false
+        }
+      }
+    },
+    "vm:machine_loot_nether": {
+      "profile": "metal_machine",
+      "reason": "Preserve deliberate protected trader lifecycle: mining 8, resistance 1200, upper half cannot be mined independently.",
+      "overrides": {
+        "minecraft:destructible_by_mining": {
+          "seconds_to_destroy": 8
+        },
+        "minecraft:destructible_by_explosion": {
+          "explosion_resistance": 1200
+        }
+      },
+      "permutations": {
+        "q.block_state('vm:half') == 1": {
+          "reason": "Only the base owns loot; the upper half is not independently mineable.",
+          "overrides": {
+            "minecraft:destructible_by_mining": false
+          }
+        }
+      },
+      "harvest": "One native base-owned machine item; upper half has empty loot. Upper-only survivor cleanup uses native support-loss context; Creative cleanup drops nothing. Owner 2026-10-10: collect with any tool or hand; no required tool.",
+      "property_checks": {
+        "RP:sound": {
+          "counterpart": "minecraft:iron_block",
+          "expected": "iron",
+          "source": "reference/vanilla/current/resource_packs/vanilla_1.21.60/blocks.json"
+        },
+        "minecraft:instrument_sound": {
+          "counterpart": "minecraft:iron_block",
+          "expected": {
+            "up": "note.iron_xylophone"
+          },
+          "source": "Block of Iron: a note block placed ON this block plays iron xylophone. Vanilla data-driven blocks (vanilla_1.26.50 concrete) key it as \"up\"."
+        }
+      },
+      "loot_checks": {
+        "loot_tables/blocks/machine_loot_nether.json": {
+          "counterpart": "minecraft:iron_block",
+          "source": "references/harvest-explosion-loot.md: native explosion_decay; one placed item owns the base, paired upper is empty. docs/VANILLA_PARITY.md.",
+          "explosion_decay": true
+        },
+        "loot_tables/blocks/machine_upper_empty.json": {
+          "counterpart": "minecraft:wooden_door",
+          "source": "Paired-block one-item ownership; docs/VANILLA_PARITY.md. Native vertical multi_block migration is outside this repair.",
+          "reason": "Existing manually paired machine lifecycle: only the base owns the placed item; upper-only loss destroys surviving base natively.",
+          "explosion_decay": false
+        }
+      }
+    },
+    "vm:machine_loot_trial": {
+      "profile": "metal_machine",
+      "reason": "Preserve deliberate protected trader lifecycle: mining 8, resistance 1200, upper half cannot be mined independently.",
+      "overrides": {
+        "minecraft:destructible_by_mining": {
+          "seconds_to_destroy": 8
+        },
+        "minecraft:destructible_by_explosion": {
+          "explosion_resistance": 1200
+        }
+      },
+      "permutations": {
+        "q.block_state('vm:half') == 1": {
+          "reason": "Only the base owns loot; the upper half is not independently mineable.",
+          "overrides": {
+            "minecraft:destructible_by_mining": false
+          }
+        }
+      },
+      "harvest": "One native base-owned machine item; upper half has empty loot. Upper-only survivor cleanup uses native support-loss context; Creative cleanup drops nothing. Owner 2026-10-10: collect with any tool or hand; no required tool.",
+      "property_checks": {
+        "RP:sound": {
+          "counterpart": "minecraft:iron_block",
+          "expected": "iron",
+          "source": "reference/vanilla/current/resource_packs/vanilla_1.21.60/blocks.json"
+        },
+        "minecraft:instrument_sound": {
+          "counterpart": "minecraft:iron_block",
+          "expected": {
+            "up": "note.iron_xylophone"
+          },
+          "source": "Block of Iron: a note block placed ON this block plays iron xylophone. Vanilla data-driven blocks (vanilla_1.26.50 concrete) key it as \"up\"."
+        }
+      },
+      "loot_checks": {
+        "loot_tables/blocks/machine_loot_trial.json": {
+          "counterpart": "minecraft:iron_block",
+          "source": "references/harvest-explosion-loot.md: native explosion_decay; one placed item owns the base, paired upper is empty. docs/VANILLA_PARITY.md.",
+          "explosion_decay": true
+        },
+        "loot_tables/blocks/machine_upper_empty.json": {
+          "counterpart": "minecraft:wooden_door",
+          "source": "Paired-block one-item ownership; docs/VANILLA_PARITY.md. Native vertical multi_block migration is outside this repair.",
+          "reason": "Existing manually paired machine lifecycle: only the base owns the placed item; upper-only loss destroys surviving base natively.",
+          "explosion_decay": false
+        }
+      }
+    },
+    "vm:machine_loot_end": {
+      "profile": "metal_machine",
+      "reason": "Preserve deliberate protected trader lifecycle: mining 8, resistance 1200, upper half cannot be mined independently.",
+      "overrides": {
+        "minecraft:destructible_by_mining": {
+          "seconds_to_destroy": 8
+        },
+        "minecraft:destructible_by_explosion": {
+          "explosion_resistance": 1200
+        }
+      },
+      "permutations": {
+        "q.block_state('vm:half') == 1": {
+          "reason": "Only the base owns loot; the upper half is not independently mineable.",
+          "overrides": {
+            "minecraft:destructible_by_mining": false
+          }
+        }
+      },
+      "harvest": "One native base-owned machine item; upper half has empty loot. Upper-only survivor cleanup uses native support-loss context; Creative cleanup drops nothing. Owner 2026-10-10: collect with any tool or hand; no required tool.",
+      "property_checks": {
+        "RP:sound": {
+          "counterpart": "minecraft:iron_block",
+          "expected": "iron",
+          "source": "reference/vanilla/current/resource_packs/vanilla_1.21.60/blocks.json"
+        },
+        "minecraft:instrument_sound": {
+          "counterpart": "minecraft:iron_block",
+          "expected": {
+            "up": "note.iron_xylophone"
+          },
+          "source": "Block of Iron: a note block placed ON this block plays iron xylophone. Vanilla data-driven blocks (vanilla_1.26.50 concrete) key it as \"up\"."
+        }
+      },
+      "loot_checks": {
+        "loot_tables/blocks/machine_loot_end.json": {
+          "counterpart": "minecraft:iron_block",
+          "source": "references/harvest-explosion-loot.md: native explosion_decay; one placed item owns the base, paired upper is empty. docs/VANILLA_PARITY.md.",
+          "explosion_decay": true
+        },
+        "loot_tables/blocks/machine_upper_empty.json": {
+          "counterpart": "minecraft:wooden_door",
+          "source": "Paired-block one-item ownership; docs/VANILLA_PARITY.md. Native vertical multi_block migration is outside this repair.",
+          "reason": "Existing manually paired machine lifecycle: only the base owns the placed item; upper-only loss destroys surviving base natively.",
+          "explosion_decay": false
+        }
+      }
+    }
+  }
+}

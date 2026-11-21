@@ -1,0 +1,42 @@
+{
+    "format_version": "1.20.10",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "vm:machine_loot_trial_recipe"
+        },
+        "tags": [
+            "crafting_table"
+        ],
+        "pattern": [
+            "GTG",
+            "IWI",
+            "EEE"
+        ],
+        "key": {
+            "I": {
+                "item": "minecraft:iron_block"
+            },
+            "G": {
+                "item": "minecraft:gold_block"
+            },
+            "T": {
+                "item": "minecraft:copper_grate"
+            },
+            "E": {
+                "item": "minecraft:emerald_block"
+            },
+            "W": {
+                "item": "minecraft:trial_key"
+            }
+        },
+        "unlock": [
+            {
+                "item": "minecraft:trial_key"
+            }
+        ],
+        "result": {
+            "item": "vm:machine_loot_trial",
+            "count": 1
+        }
+    }
+}

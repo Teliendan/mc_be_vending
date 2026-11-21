@@ -1,11 +1,12 @@
 """Regenerate every generated JSON file of the mod, in the one order that works.
 
-    python tools/build.py          # the six JSON generators
+    python tools/build.py          # the seven JSON generators
     python tools/build.py --art    # also the texture and pack icon generators
 
 Order matters: gen_machine_models.py rewrites three shared RP files with villager
-entries only, and gen_extra_machines.py (wandering, shulker) reads the farmer
-machine's generated block and entity files, so it must come after both.
+entries only, and gen_extra_machines.py (wandering, shulker, loot) reads the farmer
+machine's generated block and entity files, so it must come after both, and gen_peaceful_catalog.py (the Loot Machine tables'
+source) before it.
 """
 import subprocess
 import sys
@@ -18,6 +19,7 @@ JSON_STEPS = [
     ['gen_machine_entities.py', '--force'],
     ['gen_machine_recipes.py', '--force'],
     ['gen_machine_models.py', '--force'],
+    ['gen_peaceful_catalog.py'],  # peaceful_catalog.json feeds the Loot Machine trade tables
     ['gen_extra_machines.py'],
     ['gen_trade_tables.py', '--write'],
 ]

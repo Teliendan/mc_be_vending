@@ -26,6 +26,7 @@ Pricing inputs (proposals until the owner approves):
 | Item | Quantity | Price | Upgraded | Stage | Class | Replaces |
 |---|---|---|---|---|---|---|
 | `minecraft:bone` | 1 | 1 | 1 | overworld | common_mob | drop of bogged, parched, skeleton, skeleton_horse, stray, wither_skeleton |
+| `minecraft:creeper_head` | 1 | 16 | 11 | overworld | rare_mob | a charged creeper explosion kills a creeper (creeper head) |
 | `minecraft:music_disc_11` | 1 | 8 | 6 | overworld | music_disc | drop of creeper |
 | `minecraft:music_disc_13` | 1 | 8 | 6 | overworld | music_disc | drop of creeper |
 | `minecraft:music_disc_blocks` | 1 | 8 | 6 | overworld | music_disc | drop of creeper |
@@ -42,30 +43,29 @@ Pricing inputs (proposals until the owner approves):
 | `minecraft:phantom_membrane` | 1 | 2 | 1 | overworld | common_mob | drop of phantom |
 | `minecraft:prismarine_crystals` | 1 | 3 | 2 | overworld | common_mob | drop of elder_guardian, guardian |
 | `minecraft:prismarine_shard` | 1 | 1 | 1 | overworld | common_mob | drop of elder_guardian, guardian |
-| `minecraft:resin_clump` | 3 | 2 | 1 | overworld | common_mob | hitting a creaking at night makes its heart place 2-3 resin clumps (5 s cooldown) |
+| `minecraft:resin_clump` | 9 | 1 | 1 | overworld | common_mob | hitting a creaking at night makes its heart place 2-3 resin clumps (5 s cooldown) |
 | `minecraft:rotten_flesh` | 4 | 1 | 1 | overworld | junk_drop | drop of camel_husk, drowned, husk, zoglin, zombie, zombie_horse, zombie_pigman, zombie_villager, zombie_villager_v2 |
-| `minecraft:skull` | 1 | 16 | 11 | overworld | rare_mob | a charged creeper explosion kills a skeleton (skeleton skull) |
-| `minecraft:skull:2` | 1 | 16 | 11 | overworld | rare_mob | a charged creeper explosion kills a zombie (zombie head) |
-| `minecraft:skull:4` | 1 | 16 | 11 | overworld | rare_mob | a charged creeper explosion kills a creeper (creeper head) |
+| `minecraft:skeleton_skull` | 1 | 16 | 11 | overworld | rare_mob | a charged creeper explosion kills a skeleton (skeleton skull) |
 | `minecraft:spider_eye` | 1 | 2 | 1 | overworld | common_mob | drop of cave_spider, spider, witch |
 | `minecraft:string` | 1 | 1 | 1 | overworld | common_mob | drop of cave_spider, spider |
 | `minecraft:tide_armor_trim_smithing_template` | 1 | 40 | 28 | overworld | rare_mob | drop of elder_guardian |
 | `minecraft:trident` | 1 | 32 | 22 | overworld | common_mob | drop of drowned |
+| `minecraft:zombie_head` | 1 | 16 | 11 | overworld | rare_mob | a charged creeper explosion kills a zombie (zombie head) |
 | `minecraft:blaze_rod` | 1 | 5 | 4 | nether | nether_mob | drop of blaze |
 | `minecraft:ghast_tear` | 1 | 5 | 4 | nether | nether_mob | drop of ghast |
 | `minecraft:music_disc_tears` | 1 | 10 | 7 | nether | music_disc | drop of ghast |
 | `minecraft:ochre_froglight` | 1 | 3 | 2 | nether | nether_mob | a temperate frog eats a tiny magma cube |
 | `minecraft:pearlescent_froglight` | 1 | 3 | 2 | nether | nether_mob | a warm frog eats a tiny magma cube |
-| `minecraft:skull:1` | 1 | 16 | 11 | nether | nether_mob | drop of wither_skeleton |
-| `minecraft:skull:6` | 1 | 16 | 11 | nether | rare_mob | a charged creeper explosion kills a piglin (piglin head) |
+| `minecraft:piglin_head` | 1 | 16 | 11 | nether | rare_mob | a charged creeper explosion kills a piglin (piglin head) |
 | `minecraft:verdant_froglight` | 1 | 3 | 2 | nether | nether_mob | a cold frog eats a tiny magma cube |
+| `minecraft:wither_skeleton_skull` | 1 | 16 | 11 | nether | nether_mob | drop of wither_skeleton |
 | `minecraft:breeze_rod` | 1 | 5 | 4 | trial | trial_mob | drop of breeze |
 | `minecraft:ominous_bottle` | 1 | 2 | 1 | trial | common_mob | drop of pillager, vindicator |
 | `minecraft:ominous_trial_key` | 1 | 15 | 10 | trial | trial_reward | an ominous trial spawner ejects an ominous trial key (30 %) |
-| `minecraft:totem` | 1 | 12 | 8 | trial | rare_mob | drop of evocation_illager |
+| `minecraft:totem_of_undying` | 1 | 12 | 8 | trial | rare_mob | drop of evocation_illager |
 | `minecraft:trial_key` | 1 | 9 | 6 | trial | trial_reward | a trial spawner ejects its reward after its mobs are defeated (key 50 %, else food or a potion) |
 | `minecraft:nether_star` | 1 | 128 | 90 | end_boss | boss | drop of wither |
-| `minecraft:wither_rose` | 1 | 1 | 1 | end_boss | boss_byproduct | a mob or player killed by the Wither leaves a wither rose |
+| `minecraft:wither_rose` | 1 | 16 | 11 | end_boss | boss_byproduct | a mob or player killed by the Wither leaves a wither rose |
 
 ## Needs owner review
 
@@ -87,8 +87,8 @@ Pricing inputs (proposals until the owner approves):
 Items without a known source whose every recipe needs an unreachable item (or another tainted item). They become
 accessible when the machine sells the item they need (the craft check counts that).
 
-- `minecraft:banner_pattern`: needs `minecraft:skull:4`
-- `minecraft:banner_pattern:1`: needs `minecraft:skull:1`
+- `minecraft:banner_pattern`: needs `minecraft:creeper_head`
+- `minecraft:banner_pattern:1`: needs `minecraft:wither_skeleton_skull`
 - `minecraft:blaze_powder`: needs `minecraft:blaze_rod`
 - `minecraft:brewing_stand`: needs `minecraft:blaze_rod`
 - `minecraft:chiseled_resin_bricks`: needs `minecraft:resin_brick_slab`, `minecraft:resin_bricks`
@@ -198,6 +198,21 @@ accessible when the machine sells the item they need (the craft check counts tha
 - Stage: trial (owner: trial chamber stage (renamed from deep))
 - Formula: ceil(2 x 1.5 / 1.5) = 2 emeralds per item, quantity 1, 2 emeralds
 - Price: 5 emeralds for 1 = wants 5; upgraded 4 = 4 (price_overrides (owner 2026-11-21): equal value to blaze_rod (5 emeralds), owner decision)
+
+### minecraft:creeper_head
+
+- Decision: **include** (automatic: include)
+- Reason chain:
+  - special mechanic: a charged creeper explosion kills a creeper (creeper head) (unavailable because: no creepers on Peaceful, so no charged creepers)
+  - automatic: include (no seller, no EASY source and no craftable recipe from accessible items)
+- Sources:
+  - none found in the data or the rules
+- Craft check: no recipe exists
+- Yield: 1 per attempt (one mob killed by a charged-creeper explosion (Bedrock: every mob it kills drops a head; the one-head-per-explosion limit is Java only); special: a charged creeper explosion kills a creeper (creeper head))
+- Class: rare_mob (special[minecraft:creeper_head].acquisition_class)
+- Stage: overworld (special[minecraft:creeper_head].stage)
+- Formula: ceil(8 x 1 / 1) = 8 emeralds per item, quantity 1, 8 emeralds
+- Price: 16 emeralds for 1 = wants 16; upgraded 11 = 11 (price_overrides (owner 2026-11-21): decorative only on Peaceful (the Wither cannot be summoned); charged-creeper heads are rare, so one price for all heads)
 
 ### minecraft:ghast_tear
 
@@ -523,6 +538,21 @@ accessible when the machine sells the item they need (the craft check counts tha
 - Formula: ceil(1 x 1 / 0.5) = 2 emeralds per item, quantity 1, 2 emeralds
 - Price: 2 emeralds for 1 = wants 2; upgraded 1 = 1
 
+### minecraft:piglin_head
+
+- Decision: **include** (automatic: include)
+- Reason chain:
+  - special mechanic: a charged creeper explosion kills a piglin (piglin head) (unavailable because: no creepers on Peaceful, so no charged creepers; piglins remain but nothing can make the explosion)
+  - automatic: include (no seller, no EASY source and no craftable recipe from accessible items)
+- Sources:
+  - none found in the data or the rules
+- Craft check: no recipe exists
+- Yield: 1 per attempt (one mob killed by a charged-creeper explosion (Bedrock: every mob it kills drops a head; the one-head-per-explosion limit is Java only); special: a charged creeper explosion kills a piglin (piglin head))
+- Class: rare_mob (special[minecraft:piglin_head].acquisition_class)
+- Stage: nether (special[minecraft:piglin_head].stage)
+- Formula: ceil(8 x 1.25 / 1) = 10 emeralds per item, quantity 1, 10 emeralds
+- Price: 16 emeralds for 1 = wants 16; upgraded 11 = 11 (price_overrides (owner 2026-11-21): decorative only on Peaceful (the Wither cannot be summoned); charged-creeper heads are rare, so one price for all heads)
+
 ### minecraft:prismarine_crystals
 
 - Decision: **include** (automatic: include)
@@ -570,7 +600,7 @@ accessible when the machine sells the item they need (the craft check counts tha
 - Class: common_mob (special[minecraft:resin_clump].acquisition_class)
 - Stage: overworld (special[minecraft:resin_clump].stage)
 - Formula: ceil(1 x 1 / 2.5) = 0.4 emeralds per item, quantity 3, 2 emeralds
-- Price: 2 emeralds for 3 = wants 2; upgraded 1 = 1
+- Price: 1 emeralds for 9 = wants 1; upgraded 1 = 1 (price_overrides (owner 2026-11-21): owner, after the in-game check: resin is a building material and needs several clumps per block, so 2 emeralds for 3 was too dear; a creaking heart gives 2-3 clumps every 5 s in normal play; 9 clumps = one block of resin)
 
 ### minecraft:rotten_flesh
 
@@ -592,9 +622,7 @@ accessible when the machine sells the item they need (the craft check counts tha
 - Formula: ceil(0.25 x 1 / 1) = 0.25 emeralds per item, quantity 4, 1 emeralds
 - Price: 1 emeralds for 4 = wants 1; upgraded 1 = 1
 
-### minecraft:skull
-
-Name: skeleton skull
+### minecraft:skeleton_skull
 
 - Decision: **include** (automatic: include)
 - Reason chain:
@@ -604,79 +632,9 @@ Name: skeleton skull
   - LIMITED environment (rules): skeleton skulls placed in ancient cities - finite structure blocks [Minecraft Wiki 'Head' Natural generation]
 - Craft check: no recipe exists
 - Yield: 1 per attempt (one mob killed by a charged-creeper explosion (Bedrock: every mob it kills drops a head; the one-head-per-explosion limit is Java only); special: a charged creeper explosion kills a skeleton (skeleton skull))
-- Class: rare_mob (special[minecraft:skull].acquisition_class)
-- Stage: overworld (special[minecraft:skull].stage)
+- Class: rare_mob (special[minecraft:skeleton_skull].acquisition_class)
+- Stage: overworld (special[minecraft:skeleton_skull].stage)
 - Formula: ceil(8 x 1 / 1) = 8 emeralds per item, quantity 1, 8 emeralds
-- Price: 16 emeralds for 1 = wants 16; upgraded 11 = 11 (price_overrides (owner 2026-11-21): decorative only on Peaceful (the Wither cannot be summoned); charged-creeper heads are rare, so one price for all heads)
-
-### minecraft:skull:1
-
-Name: wither skeleton skull
-
-- Decision: **include** (automatic: include)
-- Reason chain:
-  - drops from Peaceful-absent mobs: wither_skeleton
-  - automatic: include (no seller, no EASY source and no craftable recipe from accessible items)
-  - decision include by owner 2026-11-21: owner: wither skeleton skull is sold (decorative on Peaceful; the Wither cannot be summoned)
-- Sources:
-  - UNAVAILABLE mob_loot: wither_skeleton: entities/wither_skeleton.json (0.025) [assumes killed_by_player]
-- Craft check: no recipe exists
-- Yield: 0.025 per attempt (one wither_skeleton kill (loot table entities/wither_skeleton.json); loot table expected value)
-  - note: assumes killed_by_player
-- Class: nether_mob (acquisition_class[minecraft:skull:1]: wither skeleton kill, 2.5 % (killed_by_player))
-- Stage: nether (Nether mob drop; blaze rods unlock brewing and eyes of ender (End access))
-- Formula: ceil(2 x 1.25 / 0.025) = 100 emeralds per item, quantity 1, 100 emeralds
-- Price: 16 emeralds for 1 = wants 16; upgraded 11 = 11 (price_overrides (owner 2026-11-21): decorative only on Peaceful (the Wither cannot be summoned); charged-creeper heads are rare, so one price for all heads)
-
-### minecraft:skull:2
-
-Name: zombie head
-
-- Decision: **include** (automatic: include)
-- Reason chain:
-  - special mechanic: a charged creeper explosion kills a zombie (zombie head) (unavailable because: no creepers on Peaceful, so no charged creepers)
-  - automatic: include (no seller, no EASY source and no craftable recipe from accessible items)
-- Sources:
-  - none found in the data or the rules
-- Craft check: no recipe exists
-- Yield: 1 per attempt (one mob killed by a charged-creeper explosion (Bedrock: every mob it kills drops a head; the one-head-per-explosion limit is Java only); special: a charged creeper explosion kills a zombie (zombie head))
-- Class: rare_mob (special[minecraft:skull:2].acquisition_class)
-- Stage: overworld (special[minecraft:skull:2].stage)
-- Formula: ceil(8 x 1 / 1) = 8 emeralds per item, quantity 1, 8 emeralds
-- Price: 16 emeralds for 1 = wants 16; upgraded 11 = 11 (price_overrides (owner 2026-11-21): decorative only on Peaceful (the Wither cannot be summoned); charged-creeper heads are rare, so one price for all heads)
-
-### minecraft:skull:4
-
-Name: creeper head
-
-- Decision: **include** (automatic: include)
-- Reason chain:
-  - special mechanic: a charged creeper explosion kills a creeper (creeper head) (unavailable because: no creepers on Peaceful, so no charged creepers)
-  - automatic: include (no seller, no EASY source and no craftable recipe from accessible items)
-- Sources:
-  - none found in the data or the rules
-- Craft check: no recipe exists
-- Yield: 1 per attempt (one mob killed by a charged-creeper explosion (Bedrock: every mob it kills drops a head; the one-head-per-explosion limit is Java only); special: a charged creeper explosion kills a creeper (creeper head))
-- Class: rare_mob (special[minecraft:skull:4].acquisition_class)
-- Stage: overworld (special[minecraft:skull:4].stage)
-- Formula: ceil(8 x 1 / 1) = 8 emeralds per item, quantity 1, 8 emeralds
-- Price: 16 emeralds for 1 = wants 16; upgraded 11 = 11 (price_overrides (owner 2026-11-21): decorative only on Peaceful (the Wither cannot be summoned); charged-creeper heads are rare, so one price for all heads)
-
-### minecraft:skull:6
-
-Name: piglin head
-
-- Decision: **include** (automatic: include)
-- Reason chain:
-  - special mechanic: a charged creeper explosion kills a piglin (piglin head) (unavailable because: no creepers on Peaceful, so no charged creepers; piglins remain but nothing can make the explosion)
-  - automatic: include (no seller, no EASY source and no craftable recipe from accessible items)
-- Sources:
-  - none found in the data or the rules
-- Craft check: no recipe exists
-- Yield: 1 per attempt (one mob killed by a charged-creeper explosion (Bedrock: every mob it kills drops a head; the one-head-per-explosion limit is Java only); special: a charged creeper explosion kills a piglin (piglin head))
-- Class: rare_mob (special[minecraft:skull:6].acquisition_class)
-- Stage: nether (special[minecraft:skull:6].stage)
-- Formula: ceil(8 x 1.25 / 1) = 10 emeralds per item, quantity 1, 10 emeralds
 - Price: 16 emeralds for 1 = wants 16; upgraded 11 = 11 (price_overrides (owner 2026-11-21): decorative only on Peaceful (the Wither cannot be summoned); charged-creeper heads are rare, so one price for all heads)
 
 ### minecraft:spider_eye
@@ -735,7 +693,7 @@ Name: piglin head
 - Formula: ceil(8 x 1 / 0.2) = 40 emeralds per item, quantity 1, 40 emeralds
 - Price: 40 emeralds for 1 = wants 40; upgraded 28 = 28
 
-### minecraft:totem
+### minecraft:totem_of_undying
 
 - Decision: **include** (automatic: include)
 - Reason chain:
@@ -745,6 +703,7 @@ Name: piglin head
   - UNAVAILABLE mob_loot: evocation_illager: entities/evocation_illager.json (1)
 - Craft check: no recipe exists
 - Yield: 1 per attempt (one evocation_illager kill (loot table entities/evocation_illager.json); loot table expected value)
+  - note: legacy name minecraft:totem is minecraft:totem_of_undying
 - Class: rare_mob (acquisition_class[evocation_illager]: one per structure or raid; anchored on the leatherworker saddle (6 em) = one ravager kill)
 - Stage: trial (owner: trial chamber stage (renamed from deep))
 - Formula: ceil(8 x 1.5 / 1) = 12 emeralds per item, quantity 1, 12 emeralds
@@ -812,7 +771,39 @@ Name: piglin head
 - Class: boss_byproduct (special[minecraft:wither_rose].acquisition_class)
 - Stage: end_boss (special[minecraft:wither_rose].stage)
 - Formula: ceil(0.5 x 2 / 1) = 1 emeralds per item, quantity 1, 1 emeralds
-- Price: 1 emeralds for 1 = wants 1; upgraded 1 = 1
+- Price: 16 emeralds for 1 = wants 16; upgraded 11 = 11 (price_overrides (owner 2026-11-21): owner, after the in-game check: wither roses are very hard to get normally (one per mob the Wither kills), so 1 emerald was far too cheap; priced like the heads)
+
+### minecraft:wither_skeleton_skull
+
+- Decision: **include** (automatic: include)
+- Reason chain:
+  - drops from Peaceful-absent mobs: wither_skeleton
+  - automatic: include (no seller, no EASY source and no craftable recipe from accessible items)
+  - decision include by owner 2026-11-21: owner: wither skeleton skull is sold (decorative on Peaceful; the Wither cannot be summoned)
+- Sources:
+  - UNAVAILABLE mob_loot: wither_skeleton: entities/wither_skeleton.json (0.025) [assumes killed_by_player]
+- Craft check: no recipe exists
+- Yield: 0.025 per attempt (one wither_skeleton kill (loot table entities/wither_skeleton.json); loot table expected value)
+  - note: assumes killed_by_player
+- Class: nether_mob (acquisition_class[wither_skeleton]: Nether hostile mob kill (fortress or lava ocean))
+- Stage: nether (Nether mob drop; blaze rods unlock brewing and eyes of ender (End access))
+- Formula: ceil(2 x 1.25 / 0.025) = 100 emeralds per item, quantity 1, 100 emeralds
+- Price: 16 emeralds for 1 = wants 16; upgraded 11 = 11 (price_overrides (owner 2026-11-21): decorative only on Peaceful (the Wither cannot be summoned); charged-creeper heads are rare, so one price for all heads)
+
+### minecraft:zombie_head
+
+- Decision: **include** (automatic: include)
+- Reason chain:
+  - special mechanic: a charged creeper explosion kills a zombie (zombie head) (unavailable because: no creepers on Peaceful, so no charged creepers)
+  - automatic: include (no seller, no EASY source and no craftable recipe from accessible items)
+- Sources:
+  - none found in the data or the rules
+- Craft check: no recipe exists
+- Yield: 1 per attempt (one mob killed by a charged-creeper explosion (Bedrock: every mob it kills drops a head; the one-head-per-explosion limit is Java only); special: a charged creeper explosion kills a zombie (zombie head))
+- Class: rare_mob (special[minecraft:zombie_head].acquisition_class)
+- Stage: overworld (special[minecraft:zombie_head].stage)
+- Formula: ceil(8 x 1 / 1) = 8 emeralds per item, quantity 1, 8 emeralds
+- Price: 16 emeralds for 1 = wants 16; upgraded 11 = 11 (price_overrides (owner 2026-11-21): decorative only on Peaceful (the Wither cannot be summoned); charged-creeper heads are rare, so one price for all heads)
 
 ### minecraft:arrow
 

@@ -24,6 +24,13 @@ def diff(a, b, found):
 
 
 def main():
+    # The Loot Machine tables are built from tools/peaceful_catalog.json; a stale catalogue must fail here.
+    fresh = subprocess.run([sys.executable, '-I', str(MOD / 'tools/gen_peaceful_catalog.py'), '--check'],
+                           capture_output=True, text=True)
+    if fresh.returncode:
+        print('peaceful catalogue is stale (run tools/build.py):')
+        print(os.linesep.join((fresh.stdout + fresh.stderr).splitlines()[-5:]))
+        return 1
     if SCRATCH.exists():
         shutil.rmtree(SCRATCH)
     copy = SCRATCH / 'mods/vending'

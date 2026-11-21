@@ -125,7 +125,7 @@ class Catalogs(unittest.TestCase):
 
     def test_no_random_element_in_shipped_tables(self):
         shipped = list(MOD.glob('*_bp/trading/vm/*.json'))
-        self.assertEqual(len(shipped), 30)
+        self.assertEqual(len(shipped), 38)
         enchanted = 0
         for path in shipped:
             self.assertEqual(trades.random_parts(read(path)), [], path.name)
@@ -152,11 +152,40 @@ class Catalogs(unittest.TestCase):
 
     def test_shipped_tables_match_the_generator(self):
         tables, sources_used, notes = trades.build_all()
-        self.assertEqual(len(tables), 30)
+        self.assertEqual(len(tables), 38)
         self.assertFalse([note for note in notes if 'FALLBACK' in note or 'NEW' in note], notes)
         for rel, table in tables.items():
             self.assertEqual(read(MOD / rel), table, rel)
         self.assertIn('All tables are up to date.', trades.report(tables, sources_used, notes))
+
+    def test_loot_machines_sell_the_catalogue_with_current_item_ids(self):
+        included = read(MOD / 'tools/peaceful_catalog.json')['included']
+        known = set((MOD.parents[1] / '.claude/skills/bedrock-lookup/reference/vanilla_item_ids.txt').read_text(encoding='utf-8').split())
+        stage_of = {'loot_overworld': 'overworld', 'loot_nether': 'nether', 'loot_trial': 'trial', 'loot_end': 'end_boss'}
+        sold = []
+        for machine, stage in stage_of.items():
+            for suffix, key in (('', 'wants'), ('_cured', 'upgraded_wants')):
+                shipped = read(MOD / f'vending_loot_bp/trading/vm/{machine}{suffix}.json')
+                expected = [(e['item'], e['quantity'], e[key])
+                            for e in sorted((e for e in included if e['stage'] == stage), key=lambda e: extra.loot_offer_order(e, included))]
+                actual = [(o['gives'][0]['item'], o['gives'][0]['quantity'], o['wants']) for o in offers(shipped)]
+                self.assertEqual(actual, expected, machine + suffix)
+                self.assertEqual(len(shipped['tiers']), 1)
+                for group in shipped['tiers'][0]['groups']:
+                    self.assertEqual((group['num_to_select'], len(group['trades'])), (1, 1))
+                    offer = group['trades'][0]
+                    self.assertEqual((offer['max_uses'], offer['trader_exp'], offer['reward_exp']), (9999999, 0, True))
+                    self.assertTrue({w['item'] for w in offer['wants']} == {'minecraft:emerald'})
+                    self.assertLessEqual(max(w['quantity'] for w in offer['wants']), 64)
+                if not suffix:
+                    sold += [item for item, _, _ in actual]
+        self.assertEqual(sorted(sold), sorted(e['item'] for e in included))  # every item once, none lost
+        self.assertEqual(len(sold), len(set(sold)))
+        for item in sold:
+            self.assertIn(item, known, item)  # current ids: no minecraft:skull:N, no legacy minecraft:totem
+        star = [o for o in offers(read(MOD / 'vending_loot_bp/trading/vm/loot_end.json'))
+                if o['gives'][0]['item'] == 'minecraft:nether_star']
+        self.assertEqual([o['wants'] for o in star], [[{'item': 'minecraft:emerald', 'quantity': 64}] * 2])
 
     def test_every_variant_once(self):
         tier = {'trades': [
@@ -198,7 +227,7 @@ class Catalogs(unittest.TestCase):
     def test_all_machine_bindings_and_internal_actor_descriptions(self):
         blocks = list(MOD.glob('*_bp/blocks/machine_*.json'))
         entities = list(MOD.glob('*_bp/entities/trader_*.json'))
-        self.assertEqual(len(blocks), 15); self.assertEqual(len(entities), 15)
+        self.assertEqual(len(blocks), 19); self.assertEqual(len(entities), 19)
         for path in blocks:
             block = read(path)['minecraft:block']
             self.assertEqual(block['components']['vm:machine'], {})

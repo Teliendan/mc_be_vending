@@ -1,0 +1,144 @@
+{
+  "format_version": "1.26.50",
+  "minecraft:block": {
+    "description": {
+      "identifier": "vm:machine_loot_nether",
+      "menu_category": {
+        "category": "items"
+      },
+      "states": {
+        "vm:half": [
+          0,
+          1
+        ],
+        "vm:upgraded": [
+          false,
+          true
+        ],
+        "vm:build_mode": [
+          false,
+          true
+        ]
+      }
+    },
+    "components": {
+      "vm:machine": {},
+      "minecraft:tags": [
+        "minecraft:is_pickaxe_item_destructible"
+      ],
+      "minecraft:flammable": false,
+      "minecraft:liquid_detection": {
+        "detection_rules": [
+          {
+            "liquid_type": "water",
+            "can_contain_liquid": false,
+            "on_liquid_touches": "blocking"
+          }
+        ]
+      },
+      "minecraft:destructible_by_mining": {
+        "seconds_to_destroy": 8
+      },
+      "minecraft:destructible_by_explosion": {
+        "explosion_resistance": 1200
+      },
+      "minecraft:movable": {
+        "movement_type": "immovable"
+      },
+      "minecraft:loot": "loot_tables/blocks/machine_loot_nether.json",
+      "minecraft:map_color": "#8f8f8f",
+      "minecraft:geometry": "minecraft:geometry.full_block",
+      "minecraft:redstone_conductivity": {
+        "redstone_conductor": true
+      },
+      "minecraft:instrument_sound": {
+        "up": "note.iron_xylophone"
+      },
+      "minecraft:material_instances": {
+        "*": {
+          "texture": "vm_machine_body",
+          "render_method": "opaque"
+        }
+      },
+      "minecraft:item_visual": {
+        "geometry": {
+          "identifier": "minecraft:geometry.full_block"
+        },
+        "material_instances": {
+          "*": {
+            "texture": "vm_machine_head_loot_nether",
+            "render_method": "opaque"
+          }
+        }
+      }
+    },
+    "permutations": [
+      {
+        "condition": "q.block_state('vm:half') == 1",
+        "components": {
+          "minecraft:selection_box": false,
+          "minecraft:destructible_by_mining": false,
+          "minecraft:loot": "loot_tables/blocks/machine_upper_empty.json"
+        }
+      },
+      {
+        "condition": "q.block_state('vm:half') == 1 && q.block_state('vm:build_mode')",
+        "components": {
+          "minecraft:selection_box": {
+            "origin": [
+              -8,
+              0,
+              -8
+            ],
+            "size": [
+              16,
+              16,
+              16
+            ]
+          }
+        }
+      },
+      {
+        "condition": "q.block_state('vm:half') == 0 && q.block_state('vm:upgraded')",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "vm_machine_body_upgraded",
+              "render_method": "opaque"
+            }
+          }
+        }
+      },
+      {
+        "condition": "q.block_state('vm:half') == 1 && !q.block_state('vm:upgraded')",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "vm_machine_head_loot_nether",
+              "render_method": "opaque"
+            },
+            "up": {
+              "texture": "vm_machine_top",
+              "render_method": "opaque"
+            }
+          }
+        }
+      },
+      {
+        "condition": "q.block_state('vm:half') == 1 && q.block_state('vm:upgraded')",
+        "components": {
+          "minecraft:material_instances": {
+            "*": {
+              "texture": "vm_machine_head_loot_nether_upgraded",
+              "render_method": "opaque"
+            },
+            "up": {
+              "texture": "vm_machine_top_upgraded",
+              "render_method": "opaque"
+            }
+          }
+        }
+      }
+    ]
+  }
+}

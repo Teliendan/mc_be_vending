@@ -1451,6 +1451,21 @@
       "ref": "docs/peaceful-machine.md Owner decisions (round 3, 2026-11-21)",
       "by": "owner",
       "date": "2026-11-21"
+    },
+    "minecraft:resin_clump": {
+      "price": 1,
+      "quantity": 9,
+      "reason": "owner, after the in-game check: resin is a building material and needs several clumps per block, so 2 emeralds for 3 was too dear; a creaking heart gives 2-3 clumps every 5 s in normal play; 9 clumps = one block of resin",
+      "ref": "docs/peaceful-machine.md Part 2 decisions (2026-11-21)",
+      "by": "owner",
+      "date": "2026-11-21"
+    },
+    "minecraft:wither_rose": {
+      "price": 16,
+      "reason": "owner, after the in-game check: wither roses are very hard to get normally (one per mob the Wither kills), so 1 emerald was far too cheap; priced like the heads",
+      "ref": "docs/peaceful-machine.md Part 2 decisions (2026-11-21)",
+      "by": "owner",
+      "date": "2026-11-21"
     }
   }
 }

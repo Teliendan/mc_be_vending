@@ -75,6 +75,11 @@ PROFESSION_GOODS.update({
     # No vanilla sprite reads as a shulker box: its only block face is a flat
     # purple square. The good is drawn instead -- see shulker_box_sprite().
     "shulker": (None, "shulker_box"),
+    # Loot Machines: the glass shows the stage's signature loot. Breeze rod is only in the 1.21.90 layer.
+    "loot_overworld": (ITEMS_SRC, "bone"),
+    "loot_nether": (ITEMS_SRC, "blaze_rod"),
+    "loot_trial": (os.path.normpath(os.path.join(VANILLA_ROOT, os.pardir, os.pardir, "vanilla_1.21.90", "textures", "items")), "breeze_rod"),
+    "loot_end": (ITEMS_SRC, "nether_star"),
 })
 
 # Accepted 2026-10-05 graphical-manual pass. Keep these material ramps consistent

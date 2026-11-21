@@ -226,7 +226,7 @@ def build_all(root=None):
     if wandering.note:
         notes.append(f"wandering_trader: {wandering.note}")
     stripped = Counter()
-    for machine, pack in (("wandering_trader", "vending_wandering_bp"), ("shulker", "vending_shulker_bp")):
+    for machine, pack in ((m, spec["pack"]) for m, spec in extra.MACHINES.items()):
         for suffix, upgraded in (("", False), ("_cured", True)):
             build = extra.TABLES[machine]
             table = build(upgraded, root, stripped) if machine == "wandering_trader" and upgraded else build(upgraded, root)

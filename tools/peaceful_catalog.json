@@ -92,6 +92,29 @@
       "yield": 1.0
     },
     {
+      "attempt": "one mob killed by a charged-creeper explosion (Bedrock: every mob it kills drops a head; the one-head-per-explosion limit is Java only)",
+      "class": "rare_mob",
+      "item": "minecraft:creeper_head",
+      "price": 16,
+      "quantity": 1,
+      "replaces": "a charged creeper explosion kills a creeper (creeper head)",
+      "stage": "overworld",
+      "upgraded_price": 11,
+      "upgraded_wants": [
+        {
+          "item": "minecraft:emerald",
+          "quantity": 11
+        }
+      ],
+      "wants": [
+        {
+          "item": "minecraft:emerald",
+          "quantity": 16
+        }
+      ],
+      "yield": 1.0
+    },
+    {
       "attempt": "one creeper killed by a skeleton, stray, bogged or parched (gives one of the 12 creeper discs)",
       "class": "music_disc",
       "item": "minecraft:music_disc_11",
@@ -463,8 +486,8 @@
       "attempt": "one hit on a creaking (2-3 clumps)",
       "class": "common_mob",
       "item": "minecraft:resin_clump",
-      "price": 2,
-      "quantity": 3,
+      "price": 1,
+      "quantity": 9,
       "replaces": "hitting a creaking at night makes its heart place 2-3 resin clumps (5 s cooldown)",
       "stage": "overworld",
       "upgraded_price": 1,
@@ -477,7 +500,7 @@
       "wants": [
         {
           "item": "minecraft:emerald",
-          "quantity": 2
+          "quantity": 1
         }
       ],
       "yield": 2.5
@@ -508,56 +531,10 @@
     {
       "attempt": "one mob killed by a charged-creeper explosion (Bedrock: every mob it kills drops a head; the one-head-per-explosion limit is Java only)",
       "class": "rare_mob",
-      "item": "minecraft:skull",
+      "item": "minecraft:skeleton_skull",
       "price": 16,
       "quantity": 1,
       "replaces": "a charged creeper explosion kills a skeleton (skeleton skull)",
-      "stage": "overworld",
-      "upgraded_price": 11,
-      "upgraded_wants": [
-        {
-          "item": "minecraft:emerald",
-          "quantity": 11
-        }
-      ],
-      "wants": [
-        {
-          "item": "minecraft:emerald",
-          "quantity": 16
-        }
-      ],
-      "yield": 1.0
-    },
-    {
-      "attempt": "one mob killed by a charged-creeper explosion (Bedrock: every mob it kills drops a head; the one-head-per-explosion limit is Java only)",
-      "class": "rare_mob",
-      "item": "minecraft:skull:2",
-      "price": 16,
-      "quantity": 1,
-      "replaces": "a charged creeper explosion kills a zombie (zombie head)",
-      "stage": "overworld",
-      "upgraded_price": 11,
-      "upgraded_wants": [
-        {
-          "item": "minecraft:emerald",
-          "quantity": 11
-        }
-      ],
-      "wants": [
-        {
-          "item": "minecraft:emerald",
-          "quantity": 16
-        }
-      ],
-      "yield": 1.0
-    },
-    {
-      "attempt": "one mob killed by a charged-creeper explosion (Bedrock: every mob it kills drops a head; the one-head-per-explosion limit is Java only)",
-      "class": "rare_mob",
-      "item": "minecraft:skull:4",
-      "price": 16,
-      "quantity": 1,
-      "replaces": "a charged creeper explosion kills a creeper (creeper head)",
       "stage": "overworld",
       "upgraded_price": 11,
       "upgraded_wants": [
@@ -665,6 +642,29 @@
         }
       ],
       "yield": 0.085
+    },
+    {
+      "attempt": "one mob killed by a charged-creeper explosion (Bedrock: every mob it kills drops a head; the one-head-per-explosion limit is Java only)",
+      "class": "rare_mob",
+      "item": "minecraft:zombie_head",
+      "price": 16,
+      "quantity": 1,
+      "replaces": "a charged creeper explosion kills a zombie (zombie head)",
+      "stage": "overworld",
+      "upgraded_price": 11,
+      "upgraded_wants": [
+        {
+          "item": "minecraft:emerald",
+          "quantity": 11
+        }
+      ],
+      "wants": [
+        {
+          "item": "minecraft:emerald",
+          "quantity": 16
+        }
+      ],
+      "yield": 1.0
     },
     {
       "attempt": "one blaze kill (loot table entities/blaze.json)",
@@ -782,32 +782,9 @@
       "yield": 1.0
     },
     {
-      "attempt": "one wither_skeleton kill (loot table entities/wither_skeleton.json)",
-      "class": "nether_mob",
-      "item": "minecraft:skull:1",
-      "price": 16,
-      "quantity": 1,
-      "replaces": "drop of wither_skeleton",
-      "stage": "nether",
-      "upgraded_price": 11,
-      "upgraded_wants": [
-        {
-          "item": "minecraft:emerald",
-          "quantity": 11
-        }
-      ],
-      "wants": [
-        {
-          "item": "minecraft:emerald",
-          "quantity": 16
-        }
-      ],
-      "yield": 0.025
-    },
-    {
       "attempt": "one mob killed by a charged-creeper explosion (Bedrock: every mob it kills drops a head; the one-head-per-explosion limit is Java only)",
       "class": "rare_mob",
-      "item": "minecraft:skull:6",
+      "item": "minecraft:piglin_head",
       "price": 16,
       "quantity": 1,
       "replaces": "a charged creeper explosion kills a piglin (piglin head)",
@@ -849,6 +826,29 @@
         }
       ],
       "yield": 1.0
+    },
+    {
+      "attempt": "one wither_skeleton kill (loot table entities/wither_skeleton.json)",
+      "class": "nether_mob",
+      "item": "minecraft:wither_skeleton_skull",
+      "price": 16,
+      "quantity": 1,
+      "replaces": "drop of wither_skeleton",
+      "stage": "nether",
+      "upgraded_price": 11,
+      "upgraded_wants": [
+        {
+          "item": "minecraft:emerald",
+          "quantity": 11
+        }
+      ],
+      "wants": [
+        {
+          "item": "minecraft:emerald",
+          "quantity": 16
+        }
+      ],
+      "yield": 0.025
     },
     {
       "attempt": "one breeze kill (loot table entities/breeze.json)",
@@ -922,7 +922,7 @@
     {
       "attempt": "one evocation_illager kill (loot table entities/evocation_illager.json)",
       "class": "rare_mob",
-      "item": "minecraft:totem",
+      "item": "minecraft:totem_of_undying",
       "price": 12,
       "quantity": 1,
       "replaces": "drop of evocation_illager",
@@ -1000,21 +1000,21 @@
       "attempt": "one mob killed by the Wither",
       "class": "boss_byproduct",
       "item": "minecraft:wither_rose",
-      "price": 1,
+      "price": 16,
       "quantity": 1,
       "replaces": "a mob or player killed by the Wither leaves a wither rose",
       "stage": "end_boss",
-      "upgraded_price": 1,
+      "upgraded_price": 11,
       "upgraded_wants": [
         {
           "item": "minecraft:emerald",
-          "quantity": 1
+          "quantity": 11
         }
       ],
       "wants": [
         {
           "item": "minecraft:emerald",
-          "quantity": 1
+          "quantity": 16
         }
       ],
       "yield": 1.0
