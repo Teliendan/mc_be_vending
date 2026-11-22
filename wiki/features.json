@@ -81,7 +81,7 @@
     {
       "id": "vm:machine_shulker",
       "slug": "machine_shulker",
-      "name": "Machine Shulker",
+      "name": "Shulker Machine",
       "kind": "block",
       "aliases": [],
       "nativeIds": [
@@ -119,7 +119,7 @@
     {
       "id": "vm:machine_armorer",
       "slug": "machine_armorer",
-      "name": "Machine Armorer",
+      "name": "Armorer Machine",
       "kind": "block",
       "aliases": [],
       "nativeIds": [
@@ -157,7 +157,7 @@
     {
       "id": "vm:machine_butcher",
       "slug": "machine_butcher",
-      "name": "Machine Butcher",
+      "name": "Butcher Machine",
       "kind": "block",
       "aliases": [],
       "nativeIds": [
@@ -195,7 +195,7 @@
     {
       "id": "vm:machine_cartographer",
       "slug": "machine_cartographer",
-      "name": "Machine Cartographer",
+      "name": "Cartographer Machine",
       "kind": "block",
       "aliases": [],
       "nativeIds": [
@@ -233,7 +233,7 @@
     {
       "id": "vm:machine_cleric",
       "slug": "machine_cleric",
-      "name": "Machine Cleric",
+      "name": "Cleric Machine",
       "kind": "block",
       "aliases": [],
       "nativeIds": [
@@ -271,7 +271,7 @@
     {
       "id": "vm:machine_farmer",
       "slug": "machine_farmer",
-      "name": "Machine Farmer",
+      "name": "Farmer Machine",
       "kind": "block",
       "aliases": [],
       "nativeIds": [
@@ -309,7 +309,7 @@
     {
       "id": "vm:machine_fisherman",
       "slug": "machine_fisherman",
-      "name": "Machine Fisherman",
+      "name": "Fisherman Machine",
       "kind": "block",
       "aliases": [],
       "nativeIds": [
@@ -347,7 +347,7 @@
     {
       "id": "vm:machine_fletcher",
       "slug": "machine_fletcher",
-      "name": "Machine Fletcher",
+      "name": "Fletcher Machine",
       "kind": "block",
       "aliases": [],
       "nativeIds": [
@@ -385,7 +385,7 @@
     {
       "id": "vm:machine_leather_worker",
       "slug": "machine_leather_worker",
-      "name": "Machine Leather Worker",
+      "name": "Leather Worker Machine",
       "kind": "block",
       "aliases": [],
       "nativeIds": [
@@ -423,7 +423,7 @@
     {
       "id": "vm:machine_librarian",
       "slug": "machine_librarian",
-      "name": "Machine Librarian",
+      "name": "Librarian Machine",
       "kind": "block",
       "aliases": [],
       "nativeIds": [
@@ -461,7 +461,7 @@
     {
       "id": "vm:machine_shepherd",
       "slug": "machine_shepherd",
-      "name": "Machine Shepherd",
+      "name": "Shepherd Machine",
       "kind": "block",
       "aliases": [],
       "nativeIds": [
@@ -499,7 +499,7 @@
     {
       "id": "vm:machine_stone_mason",
       "slug": "machine_stone_mason",
-      "name": "Machine Stone Mason",
+      "name": "Stone Mason Machine",
       "kind": "block",
       "aliases": [],
       "nativeIds": [
@@ -537,7 +537,7 @@
     {
       "id": "vm:machine_tool_smith",
       "slug": "machine_tool_smith",
-      "name": "Machine Tool Smith",
+      "name": "Tool Smith Machine",
       "kind": "block",
       "aliases": [],
       "nativeIds": [
@@ -575,7 +575,7 @@
     {
       "id": "vm:machine_weapon_smith",
       "slug": "machine_weapon_smith",
-      "name": "Machine Weapon Smith",
+      "name": "Weapon Smith Machine",
       "kind": "block",
       "aliases": [],
       "nativeIds": [
@@ -613,7 +613,7 @@
     {
       "id": "vm:machine_wandering_trader",
       "slug": "machine_wandering_trader",
-      "name": "Machine Wandering Trader",
+      "name": "Wandering Trader Machine",
       "kind": "block",
       "aliases": [],
       "nativeIds": [

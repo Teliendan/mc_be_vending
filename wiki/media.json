@@ -18,7 +18,7 @@
     "featureId": "vm:machine_shulker",
     "source": "vending_rp/textures/blocks/vm_machine_head_shulker.png",
     "kind": "texture",
-    "alt": "Machine Shulker",
+    "alt": "Shulker Machine",
     "render": {
       "adapter": "vending-machine",
       "blockId": "vm:machine_shulker"
@@ -29,7 +29,7 @@
     "featureId": "vm:machine_armorer",
     "source": "vending_rp/textures/blocks/vm_machine_head_armorer.png",
     "kind": "texture",
-    "alt": "Machine Armorer",
+    "alt": "Armorer Machine",
     "render": {
       "adapter": "vending-machine",
       "blockId": "vm:machine_armorer"
@@ -40,7 +40,7 @@
     "featureId": "vm:machine_butcher",
     "source": "vending_rp/textures/blocks/vm_machine_head_butcher.png",
     "kind": "texture",
-    "alt": "Machine Butcher",
+    "alt": "Butcher Machine",
     "render": {
       "adapter": "vending-machine",
       "blockId": "vm:machine_butcher"
@@ -51,7 +51,7 @@
     "featureId": "vm:machine_cartographer",
     "source": "vending_rp/textures/blocks/vm_machine_head_cartographer.png",
     "kind": "texture",
-    "alt": "Machine Cartographer",
+    "alt": "Cartographer Machine",
     "render": {
       "adapter": "vending-machine",
       "blockId": "vm:machine_cartographer"
@@ -62,7 +62,7 @@
     "featureId": "vm:machine_cleric",
     "source": "vending_rp/textures/blocks/vm_machine_head_cleric.png",
     "kind": "texture",
-    "alt": "Machine Cleric",
+    "alt": "Cleric Machine",
     "render": {
       "adapter": "vending-machine",
       "blockId": "vm:machine_cleric"
@@ -73,7 +73,7 @@
     "featureId": "vm:machine_farmer",
     "source": "vending_rp/textures/blocks/vm_machine_head_farmer.png",
     "kind": "texture",
-    "alt": "Machine Farmer",
+    "alt": "Farmer Machine",
     "render": {
       "adapter": "vending-machine",
       "blockId": "vm:machine_farmer"
@@ -84,7 +84,7 @@
     "featureId": "vm:machine_fisherman",
     "source": "vending_rp/textures/blocks/vm_machine_head_fisherman.png",
     "kind": "texture",
-    "alt": "Machine Fisherman",
+    "alt": "Fisherman Machine",
     "render": {
       "adapter": "vending-machine",
       "blockId": "vm:machine_fisherman"
@@ -95,7 +95,7 @@
     "featureId": "vm:machine_fletcher",
     "source": "vending_rp/textures/blocks/vm_machine_head_fletcher.png",
     "kind": "texture",
-    "alt": "Machine Fletcher",
+    "alt": "Fletcher Machine",
     "render": {
       "adapter": "vending-machine",
       "blockId": "vm:machine_fletcher"
@@ -106,7 +106,7 @@
     "featureId": "vm:machine_leather_worker",
     "source": "vending_rp/textures/blocks/vm_machine_head_leather_worker.png",
     "kind": "texture",
-    "alt": "Machine Leather Worker",
+    "alt": "Leather Worker Machine",
     "render": {
       "adapter": "vending-machine",
       "blockId": "vm:machine_leather_worker"
@@ -117,7 +117,7 @@
     "featureId": "vm:machine_librarian",
     "source": "vending_rp/textures/blocks/vm_machine_head_librarian.png",
     "kind": "texture",
-    "alt": "Machine Librarian",
+    "alt": "Librarian Machine",
     "render": {
       "adapter": "vending-machine",
       "blockId": "vm:machine_librarian"
@@ -128,7 +128,7 @@
     "featureId": "vm:machine_shepherd",
     "source": "vending_rp/textures/blocks/vm_machine_head_shepherd.png",
     "kind": "texture",
-    "alt": "Machine Shepherd",
+    "alt": "Shepherd Machine",
     "render": {
       "adapter": "vending-machine",
       "blockId": "vm:machine_shepherd"
@@ -139,7 +139,7 @@
     "featureId": "vm:machine_stone_mason",
     "source": "vending_rp/textures/blocks/vm_machine_head_stone_mason.png",
     "kind": "texture",
-    "alt": "Machine Stone Mason",
+    "alt": "Stone Mason Machine",
     "render": {
       "adapter": "vending-machine",
       "blockId": "vm:machine_stone_mason"
@@ -150,7 +150,7 @@
     "featureId": "vm:machine_tool_smith",
     "source": "vending_rp/textures/blocks/vm_machine_head_tool_smith.png",
     "kind": "texture",
-    "alt": "Machine Tool Smith",
+    "alt": "Tool Smith Machine",
     "render": {
       "adapter": "vending-machine",
       "blockId": "vm:machine_tool_smith"
@@ -161,7 +161,7 @@
     "featureId": "vm:machine_weapon_smith",
     "source": "vending_rp/textures/blocks/vm_machine_head_weapon_smith.png",
     "kind": "texture",
-    "alt": "Machine Weapon Smith",
+    "alt": "Weapon Smith Machine",
     "render": {
       "adapter": "vending-machine",
       "blockId": "vm:machine_weapon_smith"
@@ -172,7 +172,7 @@
     "featureId": "vm:machine_wandering_trader",
     "source": "vending_rp/textures/blocks/vm_machine_head_wandering_trader.png",
     "kind": "texture",
-    "alt": "Machine Wandering Trader",
+    "alt": "Wandering Trader Machine",
     "render": {
       "adapter": "vending-machine",
       "blockId": "vm:machine_wandering_trader"
