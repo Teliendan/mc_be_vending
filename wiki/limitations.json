@@ -25,7 +25,7 @@
   {
     "featureId": "vm:machine_wandering_trader",
     "id": "vm:machine_wandering_trader/minimum-buyback",
-    "text": "A few goods the machine buys for one emerald, such as a Water Bottle, still pay one emerald after the upgrade: the price cannot go below one.",
+    "text": "A few goods the machine buys for one emerald, such as a Water Bottle, still pay one emerald after the upgrade.",
     "evidence": [
       {
         "path": "docs/INTERACTIONS.md",
