@@ -2,4 +2,4 @@
 ## Context: Pack title or description for vending_bp. BP means behavior pack; RP means resource pack. Keep mod brands unchanged.
 pack.name=Vending Machines — Core
 ## Context: Pack title or description for vending_bp. BP means behavior pack; RP means resource pack. Keep mod brands unchanged.
-pack.description=v0.9.0 · Vending Machines core: shared scripts and Upgrade Kit. Add feature packs for the machines you want.
+pack.description=v0.9.1 · Vending Machines core: shared scripts and Upgrade Kit. Add feature packs for the machines you want.

@@ -2,4 +2,4 @@
 ## Context: Pack title or description for vending_villagers_bp. BP means behavior pack; RP means resource pack. Keep mod brands unchanged.
 pack.name=Vending Machines — Villagers
 ## Context: Pack title or description for vending_villagers_bp. BP means behavior pack; RP means resource pack. Keep mod brands unchanged.
-pack.description=v0.9.0 · Villager profession machines. Requires Vending Machines core.
+pack.description=v0.9.1 · Villager profession machines. Requires Vending Machines core.

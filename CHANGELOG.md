@@ -2,6 +2,12 @@
 
 Player-facing changes of each published release, newest first.
 
+## 0.9.1 (2026-11-22)
+
+### Fixed
+
+- **Nether Loot Machine**: The Nether Loot Machine recipe now needs red nether bricks in the middle instead of a nether wart block. Nether wart blocks also grow in crimson forests, so they did not prove a fortress visit; red nether bricks need nether wart, which only grows in fortresses and bastions.
+
 ## 0.9.0 (2026-11-22)
 
 ### Initial release

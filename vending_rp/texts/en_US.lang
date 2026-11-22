@@ -70,7 +70,7 @@ vending.message.upgrade=§aUpgraded — this machine now trades at a discount.
 ## Context: Pack title or description for vending_rp. BP means behavior pack; RP means resource pack. Keep mod brands unchanged.
 pack.name=Vending Machines — Resource Pack
 ## Context: Pack title or description for vending_rp. BP means behavior pack; RP means resource pack. Keep mod brands unchanged.
-pack.description=v0.9.0 · Vending Machines resource pack: textures, models and text for every machine.
+pack.description=v0.9.1 · Vending Machines resource pack: textures, models and text for every machine.
 ## Context: Overworld Loot Machine: an automated trade shop that sells the mob loot of the Overworld stage for emeralds, for players whose world cannot produce it (Peaceful difficulty). Block and hidden trading entity share the same display name. "Loot Machine" is the machine, not a person; do not translate as a worker or a thief.
 tile.vm:machine_loot_overworld.name=Overworld Loot Machine
 ## Context: Overworld Loot Machine: an automated trade shop that sells the mob loot of the Overworld stage for emeralds, for players whose world cannot produce it (Peaceful difficulty). Block and hidden trading entity share the same display name. "Loot Machine" is the machine, not a person; do not translate as a worker or a thief.
