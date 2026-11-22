@@ -13,7 +13,7 @@
         {
           "id": "vm:upgrade_kit/obtain",
           "kind": "crafting",
-          "text": "Craft using the recipe for this machine or material.",
+          "text": "Craft it at a crafting table; the recipe is below.",
           "related": []
         }
       ],
@@ -58,7 +58,7 @@
         {
           "id": "vm:shulker_core/obtain",
           "kind": "crafting",
-          "text": "Craft using the recipe for this machine or material.",
+          "text": "Craft it at a crafting table from nine Shulker Shells.",
           "related": []
         }
       ],
@@ -92,7 +92,7 @@
         {
           "id": "vm:machine_shulker/obtain",
           "kind": "crafting",
-          "text": "Craft using the recipe for this machine or material.",
+          "text": "Craft it at a crafting table around a Shulker Core; the recipe is below.",
           "related": []
         }
       ],
@@ -130,7 +130,7 @@
         {
           "id": "vm:machine_armorer/obtain",
           "kind": "crafting",
-          "text": "Craft using the recipe for this machine or material.",
+          "text": "Craft it at a crafting table; the recipe is below.",
           "related": []
         }
       ],
@@ -168,7 +168,7 @@
         {
           "id": "vm:machine_butcher/obtain",
           "kind": "crafting",
-          "text": "Craft using the recipe for this machine or material.",
+          "text": "Craft it at a crafting table; the recipe is below.",
           "related": []
         }
       ],
@@ -206,7 +206,7 @@
         {
           "id": "vm:machine_cartographer/obtain",
           "kind": "crafting",
-          "text": "Craft using the recipe for this machine or material.",
+          "text": "Craft it at a crafting table; the recipe is below.",
           "related": []
         }
       ],
@@ -244,7 +244,7 @@
         {
           "id": "vm:machine_cleric/obtain",
           "kind": "crafting",
-          "text": "Craft using the recipe for this machine or material.",
+          "text": "Craft it at a crafting table; the recipe is below.",
           "related": []
         }
       ],
@@ -282,7 +282,7 @@
         {
           "id": "vm:machine_farmer/obtain",
           "kind": "crafting",
-          "text": "Craft using the recipe for this machine or material.",
+          "text": "Craft it at a crafting table; the recipe is below.",
           "related": []
         }
       ],
@@ -320,7 +320,7 @@
         {
           "id": "vm:machine_fisherman/obtain",
           "kind": "crafting",
-          "text": "Craft using the recipe for this machine or material.",
+          "text": "Craft it at a crafting table; the recipe is below.",
           "related": []
         }
       ],
@@ -358,7 +358,7 @@
         {
           "id": "vm:machine_fletcher/obtain",
           "kind": "crafting",
-          "text": "Craft using the recipe for this machine or material.",
+          "text": "Craft it at a crafting table; the recipe is below.",
           "related": []
         }
       ],
@@ -396,7 +396,7 @@
         {
           "id": "vm:machine_leather_worker/obtain",
           "kind": "crafting",
-          "text": "Craft using the recipe for this machine or material.",
+          "text": "Craft it at a crafting table; the recipe is below.",
           "related": []
         }
       ],
@@ -434,7 +434,7 @@
         {
           "id": "vm:machine_librarian/obtain",
           "kind": "crafting",
-          "text": "Craft using the recipe for this machine or material.",
+          "text": "Craft it at a crafting table; the recipe is below.",
           "related": []
         }
       ],
@@ -472,7 +472,7 @@
         {
           "id": "vm:machine_shepherd/obtain",
           "kind": "crafting",
-          "text": "Craft using the recipe for this machine or material.",
+          "text": "Craft it at a crafting table; the recipe is below.",
           "related": []
         }
       ],
@@ -510,7 +510,7 @@
         {
           "id": "vm:machine_stone_mason/obtain",
           "kind": "crafting",
-          "text": "Craft using the recipe for this machine or material.",
+          "text": "Craft it at a crafting table; the recipe is below.",
           "related": []
         }
       ],
@@ -548,7 +548,7 @@
         {
           "id": "vm:machine_tool_smith/obtain",
           "kind": "crafting",
-          "text": "Craft using the recipe for this machine or material.",
+          "text": "Craft it at a crafting table; the recipe is below.",
           "related": []
         }
       ],
@@ -586,7 +586,7 @@
         {
           "id": "vm:machine_weapon_smith/obtain",
           "kind": "crafting",
-          "text": "Craft using the recipe for this machine or material.",
+          "text": "Craft it at a crafting table; the recipe is below.",
           "related": []
         }
       ],
@@ -624,7 +624,7 @@
         {
           "id": "vm:machine_wandering_trader/obtain",
           "kind": "crafting",
-          "text": "Craft using the recipe for this machine or material.",
+          "text": "Craft it at a crafting table; the recipe is below.",
           "related": []
         }
       ],
@@ -662,7 +662,7 @@
         {
           "id": "vm:machine_loot_overworld/obtain",
           "kind": "crafting",
-          "text": "Craft using the recipe for this machine or material.",
+          "text": "Craft it at a crafting table; the recipe is below.",
           "related": []
         }
       ],
@@ -696,7 +696,7 @@
         {
           "id": "vm:machine_loot_nether/obtain",
           "kind": "crafting",
-          "text": "Craft using the recipe for this machine or material.",
+          "text": "Craft it at a crafting table; the recipe is below.",
           "related": []
         }
       ],
@@ -730,7 +730,7 @@
         {
           "id": "vm:machine_loot_trial/obtain",
           "kind": "crafting",
-          "text": "Craft using the recipe for this machine or material.",
+          "text": "Craft it at a crafting table; the recipe is below.",
           "related": []
         }
       ],
@@ -764,7 +764,7 @@
         {
           "id": "vm:machine_loot_end/obtain",
           "kind": "crafting",
-          "text": "Craft using the recipe for this machine or material.",
+          "text": "Craft it at a crafting table; the recipe is below.",
           "related": []
         }
       ],

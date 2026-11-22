@@ -2,6 +2,40 @@
   {
     "evidence": [
       {
+        "path": "vending_loot_bp/blocks/machine_loot_overworld.json",
+        "sha256": "e5d364a73e190c0627ff2989ce800fe9d1f085d6bacda2dc2ce1d61b39fe97c1"
+      },
+      {
+        "path": "vending_loot_bp/entities/trader_loot_overworld.json",
+        "sha256": "cc2404619cc3ab4041af31bbc69b32455a0015c16d7be571b0f5fd0ea0ea5260"
+      }
+    ],
+    "featureId": "vm:machine_loot_overworld",
+    "id": "vm:machine_loot_overworld/trade",
+    "text": "Use the machine to open its trade screen. Every offer is there from the start, and its stock never runs out."
+  },
+  {
+    "evidence": [
+      {
+        "path": "vending_bp/scripts/main.js",
+        "sha256": "203a5ad7a20416c6bd4aba3633cbf50b7d109533d2aaa5da18aa61db669558b1"
+      },
+      {
+        "path": "vending_loot_bp/blocks/machine_loot_overworld.json",
+        "sha256": "e5d364a73e190c0627ff2989ce800fe9d1f085d6bacda2dc2ce1d61b39fe97c1"
+      },
+      {
+        "path": "vending_loot_bp/entities/trader_loot_overworld.json",
+        "sha256": "cc2404619cc3ab4041af31bbc69b32455a0015c16d7be571b0f5fd0ea0ea5260"
+      }
+    ],
+    "featureId": "vm:machine_loot_overworld",
+    "id": "vm:machine_loot_overworld/build",
+    "text": "To place blocks or torches against the upper block, crouch while aiming at it (hold Sneak while flying in Creative), then stand up again to trade. If a click right after crouching does nothing, click again."
+  },
+  {
+    "evidence": [
+      {
         "path": "vending_bp/scripts/main.js",
         "sha256": "203a5ad7a20416c6bd4aba3633cbf50b7d109533d2aaa5da18aa61db669558b1"
       },
@@ -16,22 +50,7 @@
     ],
     "featureId": "vm:machine_loot_overworld",
     "id": "vm:machine_loot_overworld/place",
-    "text": "Place on a floor with a completely empty block above. Machines can stand directly side-by-side or diagonally. The machine is two blocks tall. In Survival, mine the base to collect the machine; the upper half cannot be mined. Breaking and replacing it resets any trading progress and removes any installed upgrade. The recovered item places a base machine; train and upgrade it again after moving."
-  },
-  {
-    "evidence": [
-      {
-        "path": "vending_loot_bp/blocks/machine_loot_overworld.json",
-        "sha256": "e5d364a73e190c0627ff2989ce800fe9d1f085d6bacda2dc2ce1d61b39fe97c1"
-      },
-      {
-        "path": "vending_loot_bp/entities/trader_loot_overworld.json",
-        "sha256": "cc2404619cc3ab4041af31bbc69b32455a0015c16d7be571b0f5fd0ea0ea5260"
-      }
-    ],
-    "featureId": "vm:machine_loot_overworld",
-    "id": "vm:machine_loot_overworld/trade",
-    "text": "Stand to trade. Crouch and aim at the upper half to build against it; while flying in Creative, hold Sneak. Offers stay in stock, and every offer is paid in emeralds. Anyone can craft and use it, in any difficulty."
+    "text": "The machine is two blocks tall: place it on a floor with empty air above. Short grass or a snow layer in that space blocks it, so clear it first. Machines can stand right next to each other. Breaking a machine resets it: it loses its trade progress and its upgrade. In Survival, mine the lower block (any tool or your hand) to get the machine back; the upper block cannot be mined."
   },
   {
     "evidence": [
@@ -46,7 +65,41 @@
     ],
     "featureId": "vm:machine_loot_overworld",
     "id": "vm:machine_loot_overworld/upgrade",
-    "text": "Use an Upgrade Kit on the base to cut its prices by about 30% until the machine is broken. Survival consumes the kit once; using a kit on an already upgraded machine costs nothing."
+    "text": "Use an Upgrade Kit on the lower block to cut its prices by about 30% until the machine is broken. Survival uses up the kit; a machine that is already upgraded says so and keeps your kit."
+  },
+  {
+    "evidence": [
+      {
+        "path": "vending_loot_bp/blocks/machine_loot_nether.json",
+        "sha256": "a09468c3e785433c789ca12499b03961a6b9878921d1a45b000cd27574c9cf5a"
+      },
+      {
+        "path": "vending_loot_bp/entities/trader_loot_nether.json",
+        "sha256": "7a9893c987e98ee628894ee10f5a52e3d0fd9667b0e7af1c4d6866c1b5e1e8a9"
+      }
+    ],
+    "featureId": "vm:machine_loot_nether",
+    "id": "vm:machine_loot_nether/trade",
+    "text": "Use the machine to open its trade screen. Every offer is there from the start, and its stock never runs out."
+  },
+  {
+    "evidence": [
+      {
+        "path": "vending_bp/scripts/main.js",
+        "sha256": "203a5ad7a20416c6bd4aba3633cbf50b7d109533d2aaa5da18aa61db669558b1"
+      },
+      {
+        "path": "vending_loot_bp/blocks/machine_loot_nether.json",
+        "sha256": "a09468c3e785433c789ca12499b03961a6b9878921d1a45b000cd27574c9cf5a"
+      },
+      {
+        "path": "vending_loot_bp/entities/trader_loot_nether.json",
+        "sha256": "7a9893c987e98ee628894ee10f5a52e3d0fd9667b0e7af1c4d6866c1b5e1e8a9"
+      }
+    ],
+    "featureId": "vm:machine_loot_nether",
+    "id": "vm:machine_loot_nether/build",
+    "text": "To place blocks or torches against the upper block, crouch while aiming at it (hold Sneak while flying in Creative), then stand up again to trade. If a click right after crouching does nothing, click again."
   },
   {
     "evidence": [
@@ -65,22 +118,7 @@
     ],
     "featureId": "vm:machine_loot_nether",
     "id": "vm:machine_loot_nether/place",
-    "text": "Place on a floor with a completely empty block above. Machines can stand directly side-by-side or diagonally. The machine is two blocks tall. In Survival, mine the base to collect the machine; the upper half cannot be mined. Breaking and replacing it resets any trading progress and removes any installed upgrade. The recovered item places a base machine; train and upgrade it again after moving."
-  },
-  {
-    "evidence": [
-      {
-        "path": "vending_loot_bp/blocks/machine_loot_nether.json",
-        "sha256": "a09468c3e785433c789ca12499b03961a6b9878921d1a45b000cd27574c9cf5a"
-      },
-      {
-        "path": "vending_loot_bp/entities/trader_loot_nether.json",
-        "sha256": "7a9893c987e98ee628894ee10f5a52e3d0fd9667b0e7af1c4d6866c1b5e1e8a9"
-      }
-    ],
-    "featureId": "vm:machine_loot_nether",
-    "id": "vm:machine_loot_nether/trade",
-    "text": "Stand to trade. Crouch and aim at the upper half to build against it; while flying in Creative, hold Sneak. Offers stay in stock, and every offer is paid in emeralds. Anyone can craft and use it, in any difficulty."
+    "text": "The machine is two blocks tall: place it on a floor with empty air above. Short grass or a snow layer in that space blocks it, so clear it first. Machines can stand right next to each other. Breaking a machine resets it: it loses its trade progress and its upgrade. In Survival, mine the lower block (any tool or your hand) to get the machine back; the upper block cannot be mined."
   },
   {
     "evidence": [
@@ -95,7 +133,41 @@
     ],
     "featureId": "vm:machine_loot_nether",
     "id": "vm:machine_loot_nether/upgrade",
-    "text": "Use an Upgrade Kit on the base to cut its prices by about 30% until the machine is broken. Survival consumes the kit once; using a kit on an already upgraded machine costs nothing."
+    "text": "Use an Upgrade Kit on the lower block to cut its prices by about 30% until the machine is broken. Survival uses up the kit; a machine that is already upgraded says so and keeps your kit."
+  },
+  {
+    "evidence": [
+      {
+        "path": "vending_loot_bp/blocks/machine_loot_trial.json",
+        "sha256": "3d38ca06fc5d515d594b4727eefe79091bfed3c87e882442b01680219d9a1d8b"
+      },
+      {
+        "path": "vending_loot_bp/entities/trader_loot_trial.json",
+        "sha256": "b47f2349bc91a8119ea66e349da0bafc1fa6e28c57e34cfd010502424ac0b45e"
+      }
+    ],
+    "featureId": "vm:machine_loot_trial",
+    "id": "vm:machine_loot_trial/trade",
+    "text": "Use the machine to open its trade screen. Every offer is there from the start, and its stock never runs out."
+  },
+  {
+    "evidence": [
+      {
+        "path": "vending_bp/scripts/main.js",
+        "sha256": "203a5ad7a20416c6bd4aba3633cbf50b7d109533d2aaa5da18aa61db669558b1"
+      },
+      {
+        "path": "vending_loot_bp/blocks/machine_loot_trial.json",
+        "sha256": "3d38ca06fc5d515d594b4727eefe79091bfed3c87e882442b01680219d9a1d8b"
+      },
+      {
+        "path": "vending_loot_bp/entities/trader_loot_trial.json",
+        "sha256": "b47f2349bc91a8119ea66e349da0bafc1fa6e28c57e34cfd010502424ac0b45e"
+      }
+    ],
+    "featureId": "vm:machine_loot_trial",
+    "id": "vm:machine_loot_trial/build",
+    "text": "To place blocks or torches against the upper block, crouch while aiming at it (hold Sneak while flying in Creative), then stand up again to trade. If a click right after crouching does nothing, click again."
   },
   {
     "evidence": [
@@ -114,22 +186,7 @@
     ],
     "featureId": "vm:machine_loot_trial",
     "id": "vm:machine_loot_trial/place",
-    "text": "Place on a floor with a completely empty block above. Machines can stand directly side-by-side or diagonally. The machine is two blocks tall. In Survival, mine the base to collect the machine; the upper half cannot be mined. Breaking and replacing it resets any trading progress and removes any installed upgrade. The recovered item places a base machine; train and upgrade it again after moving."
-  },
-  {
-    "evidence": [
-      {
-        "path": "vending_loot_bp/blocks/machine_loot_trial.json",
-        "sha256": "3d38ca06fc5d515d594b4727eefe79091bfed3c87e882442b01680219d9a1d8b"
-      },
-      {
-        "path": "vending_loot_bp/entities/trader_loot_trial.json",
-        "sha256": "b47f2349bc91a8119ea66e349da0bafc1fa6e28c57e34cfd010502424ac0b45e"
-      }
-    ],
-    "featureId": "vm:machine_loot_trial",
-    "id": "vm:machine_loot_trial/trade",
-    "text": "Stand to trade. Crouch and aim at the upper half to build against it; while flying in Creative, hold Sneak. Offers stay in stock, and every offer is paid in emeralds. Anyone can craft and use it, in any difficulty."
+    "text": "The machine is two blocks tall: place it on a floor with empty air above. Short grass or a snow layer in that space blocks it, so clear it first. Machines can stand right next to each other. Breaking a machine resets it: it loses its trade progress and its upgrade. In Survival, mine the lower block (any tool or your hand) to get the machine back; the upper block cannot be mined."
   },
   {
     "evidence": [
@@ -144,7 +201,56 @@
     ],
     "featureId": "vm:machine_loot_trial",
     "id": "vm:machine_loot_trial/upgrade",
-    "text": "Use an Upgrade Kit on the base to cut its prices by about 30% until the machine is broken. Survival consumes the kit once; using a kit on an already upgraded machine costs nothing."
+    "text": "Use an Upgrade Kit on the lower block to cut its prices by about 30% until the machine is broken. Survival uses up the kit; a machine that is already upgraded says so and keeps your kit."
+  },
+  {
+    "evidence": [
+      {
+        "path": "vending_loot_bp/blocks/machine_loot_end.json",
+        "sha256": "993dd728ea42966c231a49237c5f1fbb1a291c2e873b0b50a49d840a12f1813e"
+      },
+      {
+        "path": "vending_loot_bp/entities/trader_loot_end.json",
+        "sha256": "2f7ff712d593914edd26655198c2c80363574118407f628c9a849609d315500b"
+      }
+    ],
+    "featureId": "vm:machine_loot_end",
+    "id": "vm:machine_loot_end/trade",
+    "text": "Use the machine to open its trade screen. Every offer is there from the start, and its stock never runs out."
+  },
+  {
+    "evidence": [
+      {
+        "path": "vending_loot_bp/blocks/machine_loot_end.json",
+        "sha256": "993dd728ea42966c231a49237c5f1fbb1a291c2e873b0b50a49d840a12f1813e"
+      },
+      {
+        "path": "vending_loot_bp/entities/trader_loot_end.json",
+        "sha256": "2f7ff712d593914edd26655198c2c80363574118407f628c9a849609d315500b"
+      }
+    ],
+    "featureId": "vm:machine_loot_end",
+    "id": "vm:machine_loot_end/nether-star",
+    "text": "The Nether Star costs two full stacks of emeralds, so put one stack in each payment slot of the trade screen."
+  },
+  {
+    "evidence": [
+      {
+        "path": "vending_bp/scripts/main.js",
+        "sha256": "203a5ad7a20416c6bd4aba3633cbf50b7d109533d2aaa5da18aa61db669558b1"
+      },
+      {
+        "path": "vending_loot_bp/blocks/machine_loot_end.json",
+        "sha256": "993dd728ea42966c231a49237c5f1fbb1a291c2e873b0b50a49d840a12f1813e"
+      },
+      {
+        "path": "vending_loot_bp/entities/trader_loot_end.json",
+        "sha256": "2f7ff712d593914edd26655198c2c80363574118407f628c9a849609d315500b"
+      }
+    ],
+    "featureId": "vm:machine_loot_end",
+    "id": "vm:machine_loot_end/build",
+    "text": "To place blocks or torches against the upper block, crouch while aiming at it (hold Sneak while flying in Creative), then stand up again to trade. If a click right after crouching does nothing, click again."
   },
   {
     "evidence": [
@@ -163,22 +269,7 @@
     ],
     "featureId": "vm:machine_loot_end",
     "id": "vm:machine_loot_end/place",
-    "text": "Place on a floor with a completely empty block above. Machines can stand directly side-by-side or diagonally. The machine is two blocks tall. In Survival, mine the base to collect the machine; the upper half cannot be mined. Breaking and replacing it resets any trading progress and removes any installed upgrade. The recovered item places a base machine; train and upgrade it again after moving."
-  },
-  {
-    "evidence": [
-      {
-        "path": "vending_loot_bp/blocks/machine_loot_end.json",
-        "sha256": "993dd728ea42966c231a49237c5f1fbb1a291c2e873b0b50a49d840a12f1813e"
-      },
-      {
-        "path": "vending_loot_bp/entities/trader_loot_end.json",
-        "sha256": "2f7ff712d593914edd26655198c2c80363574118407f628c9a849609d315500b"
-      }
-    ],
-    "featureId": "vm:machine_loot_end",
-    "id": "vm:machine_loot_end/trade",
-    "text": "Stand to trade. Crouch and aim at the upper half to build against it; while flying in Creative, hold Sneak. Offers stay in stock, and every offer is paid in emeralds. Anyone can craft and use it, in any difficulty."
+    "text": "The machine is two blocks tall: place it on a floor with empty air above. Short grass or a snow layer in that space blocks it, so clear it first. Machines can stand right next to each other. Breaking a machine resets it: it loses its trade progress and its upgrade. In Survival, mine the lower block (any tool or your hand) to get the machine back; the upper block cannot be mined."
   },
   {
     "evidence": [
@@ -193,21 +284,6 @@
     ],
     "featureId": "vm:machine_loot_end",
     "id": "vm:machine_loot_end/upgrade",
-    "text": "Use an Upgrade Kit on the base to cut its prices by about 30% until the machine is broken. Survival consumes the kit once; using a kit on an already upgraded machine costs nothing."
-  },
-  {
-    "evidence": [
-      {
-        "path": "vending_loot_bp/blocks/machine_loot_end.json",
-        "sha256": "993dd728ea42966c231a49237c5f1fbb1a291c2e873b0b50a49d840a12f1813e"
-      },
-      {
-        "path": "vending_loot_bp/entities/trader_loot_end.json",
-        "sha256": "2f7ff712d593914edd26655198c2c80363574118407f628c9a849609d315500b"
-      }
-    ],
-    "featureId": "vm:machine_loot_end",
-    "id": "vm:machine_loot_end/nether-star",
-    "text": "The Nether Star costs two full stacks of emeralds, so put one stack in each payment slot of the trade screen."
+    "text": "Use an Upgrade Kit on the lower block to cut its prices by about 30% until the machine is broken. Survival uses up the kit; a machine that is already upgraded says so and keeps your kit."
   }
 ]

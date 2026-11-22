@@ -2,7 +2,7 @@
   {
     "featureId": "vm:machine_leather_worker",
     "id": "vm:machine_leather_worker/undyed",
-    "text": "Leather armour is sold undyed.",
+    "text": "Leather armour is sold undyed, unlike a leather worker villager’s coloured pieces. Dye it yourself after buying it.",
     "evidence": [
       {
         "path": "docs/INTERACTIONS.md",
@@ -25,7 +25,7 @@
   {
     "featureId": "vm:machine_wandering_trader",
     "id": "vm:machine_wandering_trader/minimum-buyback",
-    "text": "An offer that already pays one emerald can pay the same amount before and after an upgrade.",
+    "text": "A few goods the machine buys for one emerald, such as a Water Bottle, still pay one emerald after the upgrade: the price cannot go below one.",
     "evidence": [
       {
         "path": "docs/INTERACTIONS.md",

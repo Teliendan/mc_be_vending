@@ -49,6 +49,31 @@ MOB_PLURALS = {
     'zombie_villager': 'zombie villagers',
 }
 MOB_ALIAS = {'zombie_villager_v2': 'zombie_villager'}
+
+# One wording per mechanic on every machine page (player-wiki skill, rule 8). The hand-owned records in
+# behavior/player-actions.json use these same sentences; keep them equal when you change one.
+OBTAIN_TEXT = 'Craft it at a crafting table; the recipe is below.'
+TRADE_LEVELS_TEXT = ('Use the machine to open its trade screen and trade as with a villager. Its stock never runs out. '
+                     'Each trade earns the machine trading XP, which unlocks its next level of offers; '
+                     'the table below shows how much each trade gives.')
+TRADE_ALL_TEXT = 'Use the machine to open its trade screen. Every offer is there from the start, and its stock never runs out.'
+BUILD_TEXT = ('To place blocks or torches against the upper block, crouch while aiming at it (hold Sneak while flying in Creative), '
+              'then stand up again to trade. If a click right after crouching does nothing, click again.')
+PLACE_TEXT = ('The machine is two blocks tall: place it on a floor with empty air above. Short grass or a snow layer in that space '
+              'blocks it, so clear it first. Machines can stand right next to each other. '
+              'Breaking a machine resets it: it loses its trade progress and its upgrade. In Survival, mine the lower block '
+              '(any tool or your hand) to get the machine back; the upper block cannot be mined.')
+UPGRADE_TEXT = ('Use an Upgrade Kit on the lower block to cut its prices by about 30% until the machine is broken. '
+                'Survival uses up the kit; a machine that is already upgraded says so and keeps your kit.')
+UPGRADE_WANDERING_TEXT = ('Use an Upgrade Kit on the lower block to cut its prices by about 30% and make it pay more for the goods it '
+                          'buys, until the machine is broken. Survival uses up the kit; a machine that is already upgraded says so '
+                          'and keeps your kit.')
+KIT_TEXT = ('Use it on the lower block of any machine to upgrade that machine: its prices drop by about 30%, never below one item. '
+            'The Wandering Trader Machine also pays more for the goods it buys. On a villager machine the kit stands in for '
+            'curing a zombie villager. The upgrade lasts until the machine is broken; a machine that is already upgraded '
+            'says so and keeps your kit.')
+LOOT_SUMMARY = ('Sells mob loot for emeralds. It is made for Peaceful worlds, where these mobs never appear, and also saves you '
+                'farming them on other difficulties. Anyone can craft and use it, on any difficulty.')
 HEAD_MOB = {'creeper_head': 'creeper', 'skeleton_skull': 'skeleton', 'zombie_head': 'zombie', 'piglin_head': 'piglin'}
 
 def sha(path):
@@ -153,25 +178,19 @@ def build():
             'id': fid, 'slug': 'machine_loot_' + suffix, 'name': name, 'kind': 'block',
             'aliases': [], 'nativeIds': ['vm:machine_loot_' + suffix, 'vm:trader_loot_' + suffix],
             'obtaining': [{'id': fid + '/obtain', 'kind': 'crafting',
-                           'text': 'Craft using the recipe for this machine or material.', 'related': []}],
+                           'text': OBTAIN_TEXT, 'related': []}],
             'relations': [], 'evidence': pin(*shipped, recipe),
         })
         ev = pin(*shipped)
-        behavior += [
-            {'evidence': pin(*shipped, 'vending_bp/scripts/main.js'), 'featureId': fid, 'id': fid + '/place',
-             'text': 'Place on a floor with a completely empty block above. Machines can stand directly side-by-side or diagonally. '
-                     'The machine is two blocks tall. In Survival, mine the base to collect the machine; the upper half cannot be mined. '
-                     'Breaking and replacing it resets any trading progress and removes any installed upgrade. '
-                     'The recovered item places a base machine; train and upgrade it again after moving.'},
-            {'evidence': ev, 'featureId': fid, 'id': fid + '/trade',
-             'text': 'Stand to trade. Crouch and aim at the upper half to build against it; while flying in Creative, hold Sneak. '
-                     'Offers stay in stock, and every offer is paid in emeralds. Anyone can craft and use it, in any difficulty.'},
-            {'evidence': ev, 'featureId': fid, 'id': fid + '/upgrade',
-             'text': 'Use an Upgrade Kit on the base to cut its prices by about 30% until the machine is broken. '
-                     'Survival consumes the kit once; using a kit on an already upgraded machine costs nothing.'},
+        place_ev = pin(*shipped, 'vending_bp/scripts/main.js')
+        behavior += [  # trade first, then building against it, moving it, upgrading it
+            {'evidence': ev, 'featureId': fid, 'id': fid + '/trade', 'text': TRADE_ALL_TEXT},
+            {'evidence': place_ev, 'featureId': fid, 'id': fid + '/build', 'text': BUILD_TEXT},
+            {'evidence': place_ev, 'featureId': fid, 'id': fid + '/place', 'text': PLACE_TEXT},
+            {'evidence': ev, 'featureId': fid, 'id': fid + '/upgrade', 'text': UPGRADE_TEXT},
         ]
         if suffix == 'end':
-            behavior.append({'evidence': ev, 'featureId': fid, 'id': fid + '/nether-star',
+            behavior.insert(len(behavior) - 3, {'evidence': ev, 'featureId': fid, 'id': fid + '/nether-star',
                              'text': 'The Nether Star costs two full stacks of emeralds, so put one stack in each payment slot of the trade screen.'})
         media.append({'id': fid + '/icon', 'featureId': fid,
                       'source': 'vending_rp/textures/blocks/vm_machine_head_loot_%s.png' % suffix,
@@ -187,17 +206,16 @@ def build():
                 continue
             text = sentence(entry, absent, decisions)
             if entry['item'] == 'minecraft:string':
-                text += ' It is sold as a deliberate exception: string matters early, and its only early source on Peaceful is a cat gift.'
+                text += ' It is sold because you need string early, and on Peaceful a cat’s gift is otherwise its only early source.'
             sections.append({'title': item_name(entry['item']), 'text': text})
         if discs:
             inner = [d[len('Music Disc ('):-1] for d in discs]
-            sections.append({'title': 'Music Discs (creeper)',
+            sections.append({'title': 'Creeper music discs',
                              'text': 'The twelve discs a creeper drops when a skeleton-type mob kills it: ' + join_words(inner) +
                                      '. Creepers and skeletons do not appear on Peaceful.'})
         if suffix == 'overworld':
             sections.append({'title': 'Not sold: wet sponge',
-                             'text': 'Wet sponge is left out. Its main source is the sponge rooms of ocean monuments, and elder guardians '
-                                     'cannot be farmed even in normal play, so the machine would only duplicate that structure loot.'})
+                             'text': 'Find it in the sponge rooms of ocean monuments instead.'})
         if suffix == 'trial':
             sections.append({'title': 'Trial keys instead of spawner rewards',
                              'text': 'Trial spawners do not spawn mobs on Peaceful, so the machine sells their trial and ominous trial keys '
@@ -206,7 +224,7 @@ def build():
         player.append({
             'featureId': fid,
             'details': {
-                'summary': 'Sells mob loot for emeralds, for worlds where the mob that drops it never appears.',
+                'summary': LOOT_SUMMARY,
                 'sections': sections,
             },
             'evidence': pin(*shipped, 'tools/peaceful_catalog.json', 'tools/peaceful_rules.json'),

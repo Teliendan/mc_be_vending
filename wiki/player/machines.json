@@ -1,0 +1,362 @@
+[
+  {
+    "featureId": "vm:machine_armorer",
+    "details": {
+      "summary": "Trades like an armorer villager: every offer an armorer can have, at vanilla prices."
+    },
+    "evidence": [
+      {
+        "path": "docs/INTERACTIONS.md",
+        "sha256": "ec29db847e8200557d2898c8d38688ee91043e2af4abb89d00ea2980225ba836"
+      },
+      {
+        "path": "docs/VANILLA_PARITY.md",
+        "sha256": "bd06675a24a5e17c1313510164661ce8a205f881945e439f4098f3b83ef18065"
+      },
+      {
+        "path": "vending_villagers_bp/blocks/machine_armorer.json",
+        "sha256": "a727cd915e56a292cc879f5f14ae33e4583075149743e829a6f2737fbface715"
+      },
+      {
+        "path": "vending_villagers_bp/entities/trader_armorer.json",
+        "sha256": "b28895399526a6b7e5f0b5242cca13a83a32bd0a23de43ed96f05bba9f685152"
+      }
+    ]
+  },
+  {
+    "featureId": "vm:machine_butcher",
+    "details": {
+      "summary": "Trades like a butcher villager: every offer a butcher can have, at vanilla prices."
+    },
+    "evidence": [
+      {
+        "path": "docs/INTERACTIONS.md",
+        "sha256": "ec29db847e8200557d2898c8d38688ee91043e2af4abb89d00ea2980225ba836"
+      },
+      {
+        "path": "docs/VANILLA_PARITY.md",
+        "sha256": "bd06675a24a5e17c1313510164661ce8a205f881945e439f4098f3b83ef18065"
+      },
+      {
+        "path": "vending_villagers_bp/blocks/machine_butcher.json",
+        "sha256": "2c166334c0e2dca5b606d98f84731c812fac9b149b1d9cf974b9c7216774f3e9"
+      },
+      {
+        "path": "vending_villagers_bp/entities/trader_butcher.json",
+        "sha256": "ef3e4bc6b01e408c4463ed3d99933bc505c2eba03af3fdf25097bb5373b05297"
+      }
+    ]
+  },
+  {
+    "featureId": "vm:machine_cartographer",
+    "details": {
+      "summary": "Trades like a cartographer villager: every offer a cartographer can have, at vanilla prices."
+    },
+    "evidence": [
+      {
+        "path": "docs/INTERACTIONS.md",
+        "sha256": "ec29db847e8200557d2898c8d38688ee91043e2af4abb89d00ea2980225ba836"
+      },
+      {
+        "path": "docs/VANILLA_PARITY.md",
+        "sha256": "bd06675a24a5e17c1313510164661ce8a205f881945e439f4098f3b83ef18065"
+      },
+      {
+        "path": "vending_villagers_bp/blocks/machine_cartographer.json",
+        "sha256": "824d995ad5dbf43918a4546abf44dbcdf7975af615a49f95c08920d7a8ff4cb5"
+      },
+      {
+        "path": "vending_villagers_bp/entities/trader_cartographer.json",
+        "sha256": "a8e4e77a33b9c044573d9ba15e3651050f304a0ea740a5b9d18da6bbb6529019"
+      }
+    ]
+  },
+  {
+    "featureId": "vm:machine_cleric",
+    "details": {
+      "summary": "Trades like a cleric villager: every offer a cleric can have, at vanilla prices."
+    },
+    "evidence": [
+      {
+        "path": "docs/INTERACTIONS.md",
+        "sha256": "ec29db847e8200557d2898c8d38688ee91043e2af4abb89d00ea2980225ba836"
+      },
+      {
+        "path": "docs/VANILLA_PARITY.md",
+        "sha256": "bd06675a24a5e17c1313510164661ce8a205f881945e439f4098f3b83ef18065"
+      },
+      {
+        "path": "vending_villagers_bp/blocks/machine_cleric.json",
+        "sha256": "4b5cbab44c04ce47ae07b3652282803922327c0e1a738ff0cfe5c437e16d4d92"
+      },
+      {
+        "path": "vending_villagers_bp/entities/trader_cleric.json",
+        "sha256": "675b932899fe46c3cbd21a1285d21f66b26f933dde4b5b19cd4f2958684cebd5"
+      }
+    ]
+  },
+  {
+    "featureId": "vm:machine_farmer",
+    "details": {
+      "summary": "Trades like a farmer villager: every offer a farmer can have, at vanilla prices."
+    },
+    "evidence": [
+      {
+        "path": "docs/INTERACTIONS.md",
+        "sha256": "ec29db847e8200557d2898c8d38688ee91043e2af4abb89d00ea2980225ba836"
+      },
+      {
+        "path": "docs/VANILLA_PARITY.md",
+        "sha256": "bd06675a24a5e17c1313510164661ce8a205f881945e439f4098f3b83ef18065"
+      },
+      {
+        "path": "vending_villagers_bp/blocks/machine_farmer.json",
+        "sha256": "91c9c6b2837bc71ecd0fd1fbfaae44e173b6724b5808b10e9cf5a709f621acda"
+      },
+      {
+        "path": "vending_villagers_bp/entities/trader_farmer.json",
+        "sha256": "b282d2d031af50ce92508a0396b00967ac9f881dc24e29112e03cb6d6af44911"
+      }
+    ]
+  },
+  {
+    "featureId": "vm:machine_fisherman",
+    "details": {
+      "summary": "Trades like a fisherman villager: every offer a fisherman can have, at vanilla prices."
+    },
+    "evidence": [
+      {
+        "path": "docs/INTERACTIONS.md",
+        "sha256": "ec29db847e8200557d2898c8d38688ee91043e2af4abb89d00ea2980225ba836"
+      },
+      {
+        "path": "docs/VANILLA_PARITY.md",
+        "sha256": "bd06675a24a5e17c1313510164661ce8a205f881945e439f4098f3b83ef18065"
+      },
+      {
+        "path": "vending_villagers_bp/blocks/machine_fisherman.json",
+        "sha256": "91190ca5e882e8efae1e5b1fbf9aa73e1e7bf12ad0e986a920c8896d2665fc85"
+      },
+      {
+        "path": "vending_villagers_bp/entities/trader_fisherman.json",
+        "sha256": "3ba57ccfd11e973053c6921af3e7da0475c671eb959ab62bd46b47ad734e22ef"
+      }
+    ]
+  },
+  {
+    "featureId": "vm:machine_fletcher",
+    "details": {
+      "summary": "Trades like a fletcher villager: every offer a fletcher can have, at vanilla prices."
+    },
+    "evidence": [
+      {
+        "path": "docs/INTERACTIONS.md",
+        "sha256": "ec29db847e8200557d2898c8d38688ee91043e2af4abb89d00ea2980225ba836"
+      },
+      {
+        "path": "docs/VANILLA_PARITY.md",
+        "sha256": "bd06675a24a5e17c1313510164661ce8a205f881945e439f4098f3b83ef18065"
+      },
+      {
+        "path": "vending_villagers_bp/blocks/machine_fletcher.json",
+        "sha256": "249e837c9e66ba5301a624076886b2ebe50b0e614368020cf6638d2efc399227"
+      },
+      {
+        "path": "vending_villagers_bp/entities/trader_fletcher.json",
+        "sha256": "4666ae405734e474f361248b7d7e43537857b92e54e32a82e753b587b5ff11a6"
+      }
+    ]
+  },
+  {
+    "featureId": "vm:machine_leather_worker",
+    "details": {
+      "summary": "Trades like a leather worker villager: every offer a leather worker can have, at vanilla prices."
+    },
+    "evidence": [
+      {
+        "path": "docs/INTERACTIONS.md",
+        "sha256": "ec29db847e8200557d2898c8d38688ee91043e2af4abb89d00ea2980225ba836"
+      },
+      {
+        "path": "docs/VANILLA_PARITY.md",
+        "sha256": "bd06675a24a5e17c1313510164661ce8a205f881945e439f4098f3b83ef18065"
+      },
+      {
+        "path": "vending_villagers_bp/blocks/machine_leather_worker.json",
+        "sha256": "8689cf6d5334a87f164d441eeec16473c88f47458e3240f9240d56cdfd45f125"
+      },
+      {
+        "path": "vending_villagers_bp/entities/trader_leather_worker.json",
+        "sha256": "83a9d8002a59dfe0e719bd1d59ac7aadf8a39b375813ed851029d59e63651e5f"
+      }
+    ]
+  },
+  {
+    "featureId": "vm:machine_librarian",
+    "details": {
+      "summary": "Trades like a librarian villager, at vanilla prices, and also sells one enchanted book at the highest level of every enchantment except curses."
+    },
+    "evidence": [
+      {
+        "path": "docs/INTERACTIONS.md",
+        "sha256": "ec29db847e8200557d2898c8d38688ee91043e2af4abb89d00ea2980225ba836"
+      },
+      {
+        "path": "docs/VANILLA_PARITY.md",
+        "sha256": "bd06675a24a5e17c1313510164661ce8a205f881945e439f4098f3b83ef18065"
+      },
+      {
+        "path": "vending_villagers_bp/blocks/machine_librarian.json",
+        "sha256": "b64a5717c4ecbfe9c4d396832210f0862d6734cebbb62b401dfd89ca395b7599"
+      },
+      {
+        "path": "vending_villagers_bp/entities/trader_librarian.json",
+        "sha256": "295847afb1ef5878c9d99e7177151165fd144f3e321d970eb7731d2dc2b834f4"
+      }
+    ]
+  },
+  {
+    "featureId": "vm:machine_shepherd",
+    "details": {
+      "summary": "Trades like a shepherd villager: every offer a shepherd can have, at vanilla prices."
+    },
+    "evidence": [
+      {
+        "path": "docs/INTERACTIONS.md",
+        "sha256": "ec29db847e8200557d2898c8d38688ee91043e2af4abb89d00ea2980225ba836"
+      },
+      {
+        "path": "docs/VANILLA_PARITY.md",
+        "sha256": "bd06675a24a5e17c1313510164661ce8a205f881945e439f4098f3b83ef18065"
+      },
+      {
+        "path": "vending_villagers_bp/blocks/machine_shepherd.json",
+        "sha256": "8b6bd65572787787464fed1f50cab3073b6f912204c541f26f1f468fda9aa2b4"
+      },
+      {
+        "path": "vending_villagers_bp/entities/trader_shepherd.json",
+        "sha256": "0ebb5a4409bcc6d39c296a37d9816c0b04bdccef414687ae9c30e44251adc006"
+      }
+    ]
+  },
+  {
+    "featureId": "vm:machine_stone_mason",
+    "details": {
+      "summary": "Trades like a stone mason villager: every offer a stone mason can have, at vanilla prices."
+    },
+    "evidence": [
+      {
+        "path": "docs/INTERACTIONS.md",
+        "sha256": "ec29db847e8200557d2898c8d38688ee91043e2af4abb89d00ea2980225ba836"
+      },
+      {
+        "path": "docs/VANILLA_PARITY.md",
+        "sha256": "bd06675a24a5e17c1313510164661ce8a205f881945e439f4098f3b83ef18065"
+      },
+      {
+        "path": "vending_villagers_bp/blocks/machine_stone_mason.json",
+        "sha256": "a31a8ead2dd4161fb8d82efe7149bfa7cbce8cf7796fda2a306217c2bb1c22b6"
+      },
+      {
+        "path": "vending_villagers_bp/entities/trader_stone_mason.json",
+        "sha256": "48d0545f48961adde038230b79504b1d4a89925bd5e89b70c244fa61a1f56299"
+      }
+    ]
+  },
+  {
+    "featureId": "vm:machine_tool_smith",
+    "details": {
+      "summary": "Trades like a tool smith villager: every offer a tool smith can have, at vanilla prices."
+    },
+    "evidence": [
+      {
+        "path": "docs/INTERACTIONS.md",
+        "sha256": "ec29db847e8200557d2898c8d38688ee91043e2af4abb89d00ea2980225ba836"
+      },
+      {
+        "path": "docs/VANILLA_PARITY.md",
+        "sha256": "bd06675a24a5e17c1313510164661ce8a205f881945e439f4098f3b83ef18065"
+      },
+      {
+        "path": "vending_villagers_bp/blocks/machine_tool_smith.json",
+        "sha256": "dcbc5666ade3da93a2b983455ce23a52fc65afa1ec02dfba648071c3d34f2a6e"
+      },
+      {
+        "path": "vending_villagers_bp/entities/trader_tool_smith.json",
+        "sha256": "f9ee636795f47a214ed30caba39be109fe307052fe4141921563ee5a25a01152"
+      }
+    ]
+  },
+  {
+    "featureId": "vm:machine_weapon_smith",
+    "details": {
+      "summary": "Trades like a weapon smith villager: every offer a weapon smith can have, at vanilla prices."
+    },
+    "evidence": [
+      {
+        "path": "docs/INTERACTIONS.md",
+        "sha256": "ec29db847e8200557d2898c8d38688ee91043e2af4abb89d00ea2980225ba836"
+      },
+      {
+        "path": "docs/VANILLA_PARITY.md",
+        "sha256": "bd06675a24a5e17c1313510164661ce8a205f881945e439f4098f3b83ef18065"
+      },
+      {
+        "path": "vending_villagers_bp/blocks/machine_weapon_smith.json",
+        "sha256": "0ae4e2290a17c454c933c6b874d4d4cc6090de937e3c2eb45673120496c4a233"
+      },
+      {
+        "path": "vending_villagers_bp/entities/trader_weapon_smith.json",
+        "sha256": "2b88af4935d4f02fbafb4f4d7c98ce8d2489ff436cc586ba2dd36c2ab0431561"
+      }
+    ]
+  },
+  {
+    "featureId": "vm:machine_wandering_trader",
+    "details": {
+      "summary": "Has every wandering trader offer available all the time, so you no longer wait for him to show up. Until you upgrade it, it charges more than a real wandering trader."
+    },
+    "evidence": [
+      {
+        "path": "docs/INTERACTIONS.md",
+        "sha256": "ec29db847e8200557d2898c8d38688ee91043e2af4abb89d00ea2980225ba836"
+      },
+      {
+        "path": "docs/VANILLA_PARITY.md",
+        "sha256": "bd06675a24a5e17c1313510164661ce8a205f881945e439f4098f3b83ef18065"
+      },
+      {
+        "path": "vending_wandering_bp/blocks/machine_wandering_trader.json",
+        "sha256": "6072095620b167b9be84d0121b800c650f4728e1f6b71c6ec368af55c1e42ae9"
+      },
+      {
+        "path": "vending_wandering_bp/entities/trader_wandering_trader.json",
+        "sha256": "1f2e8c7489c54188830f4953b58e9e3ef05f05ce747959fc5af75a807b4509b4"
+      }
+    ]
+  },
+  {
+    "featureId": "vm:machine_shulker",
+    "details": {
+      "summary": "Sells shulker shells, and shulker boxes once you have bought five shells from it. A box costs twice as much as a shell, plus a chest."
+    },
+    "evidence": [
+      {
+        "path": "docs/INTERACTIONS.md",
+        "sha256": "ec29db847e8200557d2898c8d38688ee91043e2af4abb89d00ea2980225ba836"
+      },
+      {
+        "path": "docs/VANILLA_PARITY.md",
+        "sha256": "bd06675a24a5e17c1313510164661ce8a205f881945e439f4098f3b83ef18065"
+      },
+      {
+        "path": "vending_shulker_bp/blocks/machine_shulker.json",
+        "sha256": "f66d72e89f2adedc1f78a0d84433252e36191e2155dbc03bc7be7ca1d39280e4"
+      },
+      {
+        "path": "vending_shulker_bp/entities/trader_shulker.json",
+        "sha256": "55bedaebc317d58d553fd50f8febc81638020e699cb873bf46b7065b83c7b5cc"
+      }
+    ]
+  }
+]

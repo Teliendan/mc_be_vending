@@ -2,7 +2,7 @@
   {
     "featureId": "vm:machine_loot_overworld",
     "details": {
-      "summary": "Sells mob loot for emeralds, for worlds where the mob that drops it never appears.",
+      "summary": "Sells mob loot for emeralds. It is made for Peaceful worlds, where these mobs never appear, and also saves you farming them on other difficulties. Anyone can craft and use it, on any difficulty.",
       "sections": [
         {
           "title": "Bone",
@@ -46,7 +46,7 @@
         },
         {
           "title": "String",
-          "text": "Normally dropped by cave spiders and spiders; they do not appear on Peaceful. It is sold as a deliberate exception: string matters early, and its only early source on Peaceful is a cat gift."
+          "text": "Normally dropped by cave spiders and spiders; they do not appear on Peaceful. It is sold because you need string early, and on Peaceful a cat’s gift is otherwise its only early source."
         },
         {
           "title": "Tide Armor Trim Smithing Template",
@@ -61,12 +61,12 @@
           "text": "Normally dropped by a zombie killed in a charged creeper explosion; creepers do not appear on Peaceful."
         },
         {
-          "title": "Music Discs (creeper)",
+          "title": "Creeper music discs",
           "text": "The twelve discs a creeper drops when a skeleton-type mob kills it: 11, 13, Blocks, Cat, Chirp, Far, Mall, Mellohi, Stal, Strad, Wait and Ward. Creepers and skeletons do not appear on Peaceful."
         },
         {
           "title": "Not sold: wet sponge",
-          "text": "Wet sponge is left out. Its main source is the sponge rooms of ocean monuments, and elder guardians cannot be farmed even in normal play, so the machine would only duplicate that structure loot."
+          "text": "Find it in the sponge rooms of ocean monuments instead."
         }
       ]
     },
@@ -92,7 +92,7 @@
   {
     "featureId": "vm:machine_loot_nether",
     "details": {
-      "summary": "Sells mob loot for emeralds, for worlds where the mob that drops it never appears.",
+      "summary": "Sells mob loot for emeralds. It is made for Peaceful worlds, where these mobs never appear, and also saves you farming them on other difficulties. Anyone can craft and use it, on any difficulty.",
       "sections": [
         {
           "title": "Blaze Rod",
@@ -150,7 +150,7 @@
   {
     "featureId": "vm:machine_loot_trial",
     "details": {
-      "summary": "Sells mob loot for emeralds, for worlds where the mob that drops it never appears.",
+      "summary": "Sells mob loot for emeralds. It is made for Peaceful worlds, where these mobs never appear, and also saves you farming them on other difficulties. Anyone can craft and use it, on any difficulty.",
       "sections": [
         {
           "title": "Breeze Rod",
@@ -200,7 +200,7 @@
   {
     "featureId": "vm:machine_loot_end",
     "details": {
-      "summary": "Sells mob loot for emeralds, for worlds where the mob that drops it never appears.",
+      "summary": "Sells mob loot for emeralds. It is made for Peaceful worlds, where these mobs never appear, and also saves you farming them on other difficulties. Anyone can craft and use it, on any difficulty.",
       "sections": [
         {
           "title": "Nether Star",
