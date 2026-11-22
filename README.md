@@ -1,66 +1,62 @@
-# Vending Machines
+# Vending Machines for Minecraft Bedrock
 
-Villager-style vending machines (engine-levelled trade tables on fixture entities).
+Craftable machines that trade like villagers, the wandering trader and a shulker, or sell mob loot. No trading hall needed. Place one and trade with it like with a villager; its stock never runs out.
 
-Packs - one Core plus one data-only pack per feature, all sharing `vending_rp/`:
+> **Status: Test version.** Things may still change before the public release, so back up any world you care about. Download: [Releases page](https://github.com/Teliendan/mc_be_vending/releases).
 
-| Pack | Content |
-|---|---|
-| `vending_bp` | Core: `scripts/main.js` + Upgrade Kit. Every feature pack depends on it. |
-| `vending_villagers_bp` | the 13 villager profession machines |
-| `vending_wandering_bp` | wandering trader machine |
-| `vending_shulker_bp` | shulker machine + `vm:shulker_core` |
-| `vending_loot_bp` | the four Loot Machines (Overworld, Nether, Trial, End): mob loot a Peaceful world cannot produce |
-| `vending_rp` | shared resources |
+**Project page:** [teliendan.com](https://teliendan.com/mods/vending/?utm_source=github&utm_medium=referral&utm_campaign=profile&utm_content=readme) · **Wiki:** [every machine, recipe and trade](https://teliendan.com/wiki/vending/?utm_source=github&utm_medium=referral&utm_campaign=profile&utm_content=readme)
 
-A new feature = a new small BP depending on Core + an entry in `tools/gen_extra_machines.py`.
-Deploy with `mods deploy vending`.
-Download the add-on from the repo's GitHub Releases page, https://github.com/Teliendan/mc_be_vending/releases, or build it locally with `.\mods package vending` from the workspace root.
+## Features
 
-Crouch and aim at the upper block to place blocks or attach torches using native
-Minecraft placement. Stand up to trade. If a standing player aims at the same
-machine, trade access takes priority because the selection box is shared.
-See [interaction notes](docs/INTERACTIONS.md) for implementation and test status.
+- **Villager machines:** one for each profession: Armorer, Butcher, Cartographer, Cleric, Farmer, Fisherman, Fletcher, Leather Worker, Librarian, Shepherd, Stone Mason, Tool Smith and Weapon Smith. They charge vanilla prices and keep vanilla's five trade levels. Every trade a villager of that profession can offer is there, with unlimited stock. The Librarian sells one book at the highest level of each enchantment that is not a curse.
+- **Wandering Trader machine:** keeps every wandering trader offer available all the time, so you no longer wait for him to show up. It charges more than vanilla until you upgrade it.
+- **Shulker machine:** sells shulker shells and shulker boxes. There is no shortcut to it: its Shulker Core is crafted from nine shulker shells, so you need to fight shulkers first.
+- **Loot machines:** four of them (Overworld, Nether, Trial and End) sell mob loot such as bone, blaze rods and nether stars. They are made for Peaceful worlds, where those mobs never appear, and also save you from farming mobs. Anyone can craft and use them on any difficulty.
+- **Upgrade Kit:** use one on the lower block of a machine to lower its prices: a villager machine's by 30%, the Wandering Trader machine's down to vanilla prices, and the Shulker machine's too. A machine that is already upgraded says so and keeps your kit untouched. Craft it from two blaze powder, two gold ingots, a golden apple, two emeralds and a fermented spider eye.
+- **Crafting:** each machine takes three emerald blocks, two iron blocks, two gold blocks and two items of its own; a villager machine uses its profession's workstation and the good it shows in its window.
+- **Building around it:** a machine is two blocks tall. Crouch and aim at the upper block to place blocks or attach torches to it; stand up to trade. In Survival, any tool or your hand breaks it and gives the machine back.
+- **Pick your packs:** Core plus one small pack per machine family (Villagers, Wandering Trader, Shulker, Loot). Turn on only the ones you want.
+- **Languages:** English, Czech, German, French, Polish, Spanish (Spain and Mexico) and Portuguese (Portugal and Brazil). The translations are AI drafts; corrections are welcome.
 
-## Generators (`tools/`)
+## Install
 
-Run from anywhere; generators locate packs relative to this repo.
+1. Download the `.mcaddon` from the [Releases page](https://github.com/Teliendan/mc_be_vending/releases).
+2. Open the file with Minecraft; it imports all the packs.
+3. In the world's Behavior Packs settings, turn on **Vending Machines — Core** plus the machine packs you want. Turning on Core also turns on the resource pack. Each machine pack needs Core, but none needs another.
 
-`python tools/build.py` runs the six JSON generators in the one order that works
-(`--art` adds the texture and pack icon generators); suite `generated` checks that this
-reproduces the shipped files exactly. Run single generators only for a quick look:
-the shared RP files are wrong until the whole order has run.
+Requirements: tested on Minecraft Bedrock 1.26.63. No experimental toggles are needed. It works on its own and needs none of my other add-ons.
 
-- `gen_trade_tables.py` - every trade table (13 villagers, wandering trader, shulker;
-  basic + `_cured`/upgraded) from the installed game. Without `--write` it only prints
-  what would change. See "How to update trades" in [docs/VANILLA_PARITY.md](docs/VANILLA_PARITY.md).
-  It uses `trade_sources.py` (game data), `gen_book_trades.py` + `enchantments.json`
-  (librarian books) and the wandering/shulker rules in `gen_extra_machines.py`.
-- `gen_machine_blocks.py`, `gen_machine_entities.py`, `gen_machine_recipes.py` - the
-  13 villager machines (blocks carry the `vm:upgraded` state for the Upgrade Kit).
-- `gen_machine_models.py` - their RP side: the empty trader model, client entities,
-  `blocks.json`, atlases and lang. It rewrites those shared files with the villager
-  entries only; `build.py` runs `gen_extra_machines.py` after it.
-- `gen_extra_machines.py` - the non-villager feature packs (wandering trader, shulker),
-  built from the villager templates; a new feature is an entry in its MACHINES.
-  `--blocks-only` refreshes block definitions only.
-- `gen_peaceful_catalog.py` (+ `peaceful_sources.py`) - evaluates the Peaceful machines' catalogue from
-  `peaceful_rules.json` and the game data; writes `peaceful_catalog.json` and `docs/peaceful-catalog.md`
-  (`--check` = stale test). `build.py` runs it before `gen_extra_machines.py`, which turns the catalogue into the
-  Loot Machines' trade tables; suite `generated` runs `--check`. `gen_loot_wiki.py` writes their wiki records. See [docs/peaceful-machine.md](docs/peaceful-machine.md).
-- Art: `make_machine_textures.py`, `vm_make_upgraded_textures.py`, `make_pack_icon.py`.
-- `machine_catalog.py` is the shared source for the 13 villager machines' displayed
-  goods and recipe signature ingredients. Accepted art and item choices:
-  [graphics notes](docs/GRAPHICS_CONCEPT.md).
+## Known issues
 
-Villager machines charge vanilla prices; the Upgrade Kit cuts every price 30%.
-Wandering machines charge more than vanilla until upgraded. Shulker prices are the
-mod's own (12/24 emeralds, 8/16 upgraded).
+- A machine needs empty air above it. Unlike a door, it cannot be placed where the upper block holds grass or a snow layer.
+- Machines trade directly: they have no storage and do not work with hoppers.
+- Leather armour is sold undyed.
+- If you crouch and click the upper block at once, the click may need repeating.
 
-Tests: `node tests/run.mjs`; select with `--suite upgrades`, `--suite placement`,
-`--suite catalogs`, `--suite lifecycle` or `--suite build-mode`.
-Design, decisions and open game checks: [docs/VANILLA_PARITY.md](docs/VANILLA_PARITY.md).
+## Feedback
 
-## Localization
+Found a bug or have an idea? Tell me through the [report form](https://teliendan.com/contact/?project=vending&utm_source=github&utm_medium=referral&utm_campaign=profile&utm_content=readme#report).
 
-Nine locales use a mod-scoped contextual catalog. See [the localization notes](docs/LOCALIZATION.md) before adding or changing player-facing text.
+## Credits
+
+Made by [Teliendan](https://teliendan.com/?utm_source=github&utm_medium=referral&utm_campaign=profile&utm_content=readme).
+
+- Code written with AI coding agents, directed and tested by Teliendan.
+- The machine textures are drawn by scripts written for this mod. The goods in each display window are Minecraft's own item sprites.
+- Trades are generated from Minecraft's own villager and wandering trader trade data.
+
+## Disclaimer
+
+Unofficial add-on for Minecraft. Not affiliated with or endorsed by Mojang Studios or Microsoft. "Minecraft" is a trademark of Mojang Studios / Microsoft. Anything derived from vanilla Minecraft files remains Mojang's.
+
+## Licence
+
+See [LICENSE.md](LICENSE.md).
+
+## For developers
+
+Pack layout, generators, tests and design notes: [docs/DEVELOPMENT.md](docs/DEVELOPMENT.md).
+
+## What's new
+
+See [CHANGELOG.md](CHANGELOG.md) and the [Releases page](https://github.com/Teliendan/mc_be_vending/releases).
