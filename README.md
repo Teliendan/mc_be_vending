@@ -1,6 +1,6 @@
 # Vending Machines for Minecraft Bedrock
 
-Craftable machines that trade like villagers, the wandering trader and a shulker, or sell mob loot. No trading hall needed. Place one and trade with it like with a villager; its stock never runs out.
+Craftable machines that trade like villagers and the wandering trader, or sell shulker boxes and mob loot. No trading hall needed. Place one and trade with it like with a villager; its stock never runs out.
 
 > **Status: Test version.** Things may still change before the public release, so back up any world you care about. Download: [Releases page](https://github.com/Teliendan/mc_be_vending/releases).
 
