@@ -4,7 +4,7 @@ Vending Machines adds craftable blocks that trade like villagers, the wandering 
 
 The add-on comes in modules; turn on only the ones you want:
 
-- **Vending Machines — Core** (required): shared scripts and the Upgrade Kit. It brings in the **Resource Pack**; if machines look untextured, turn that on under Resource Packs.
+- **Vending Machines — Core** (required): shared scripts and the Upgrade Kit. Turning it on also turns on the **Resource Pack**.
 - **Villagers**, **Wandering Trader**, **Shulker** and **Loot** (optional): one machine group each. Each needs Core, none needs another.
 
 The .mcaddon imports every pack; turn them on in the world's Behavior Packs settings. The add-on works on its own and needs none of the author's other add-ons.
