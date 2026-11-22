@@ -31,7 +31,6 @@ Requirements: tested on Minecraft Bedrock 1.26.63. No experimental toggles are n
 ## Known issues
 
 - A machine needs empty air above it. Unlike a door, it cannot be placed where the upper block holds grass or a snow layer.
-- Machines trade directly: they have no storage and do not work with hoppers.
 - Leather armour is sold undyed.
 - If you crouch and click the upper block at once, the click may need repeating.
 
