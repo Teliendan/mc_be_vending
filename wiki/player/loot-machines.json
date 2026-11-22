@@ -73,7 +73,7 @@
     "evidence": [
       {
         "path": "tools/peaceful_catalog.json",
-        "sha256": "10b9af939491c49ec76f25e616e3eb38f623245bf50e58aade9ea4da834b5494"
+        "sha256": "827645ffec8230f8f116e94b269c1b076bf4a4e05d27a7a7b84c1420abca7a63"
       },
       {
         "path": "tools/peaceful_rules.json",
@@ -131,7 +131,7 @@
     "evidence": [
       {
         "path": "tools/peaceful_catalog.json",
-        "sha256": "10b9af939491c49ec76f25e616e3eb38f623245bf50e58aade9ea4da834b5494"
+        "sha256": "827645ffec8230f8f116e94b269c1b076bf4a4e05d27a7a7b84c1420abca7a63"
       },
       {
         "path": "tools/peaceful_rules.json",
@@ -181,7 +181,7 @@
     "evidence": [
       {
         "path": "tools/peaceful_catalog.json",
-        "sha256": "10b9af939491c49ec76f25e616e3eb38f623245bf50e58aade9ea4da834b5494"
+        "sha256": "827645ffec8230f8f116e94b269c1b076bf4a4e05d27a7a7b84c1420abca7a63"
       },
       {
         "path": "tools/peaceful_rules.json",
@@ -215,7 +215,7 @@
     "evidence": [
       {
         "path": "tools/peaceful_catalog.json",
-        "sha256": "10b9af939491c49ec76f25e616e3eb38f623245bf50e58aade9ea4da834b5494"
+        "sha256": "827645ffec8230f8f116e94b269c1b076bf4a4e05d27a7a7b84c1420abca7a63"
       },
       {
         "path": "tools/peaceful_rules.json",
