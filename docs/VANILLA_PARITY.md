@@ -61,7 +61,9 @@ enchantment (`enchantments.json` = level/treasure/tier policy). Wandering trader
 every native offer in one tier; upgraded = vanilla prices, basic = dearer sales and
 -30% buyback payouts (minimum 1, bucket/bottle inputs stay native). Shulker:
 custom 12/24 basic, 8/16 upgraded. Cartographer keeps `in_overworld`, drops
-`is_mark_variant` (the fixture has no biome variant).
+`is_mark_variant` (the fixture has no biome variant) and sells all 16 banner colours:
+`OWNER_COLOUR_SETS` adds Light Gray (`banner:7`), which no vanilla village type sells,
+as a copy of the last banner offer (same tier, prices, XP, stock), next to the others.
 
 ### How to update trades
 
@@ -74,7 +76,8 @@ binary-only source (MCB: since 1.26 every trade file without item functions
 ships binary) is read from Mojang's bedrock-samples JSON
 (`python -B tools/fetch_bedrock_samples.py` first), else from the same slice in an
 old launcher install, both only if item IDs equal the binary's, else an older slice
-(FALLBACK: missing trades); a NEW enchantment is sold at level 1 on tier 4 until `enchantments.json`
+(FALLBACK: missing trades); "added beyond vanilla" names the owner's extra colours
+(cartographer `banner:7`; it raises if vanilla drops the banner offers); a NEW enchantment is sold at level 1 on tier 4 until `enchantments.json`
 gets its values. Never compare against the unversioned `behavior_packs/vanilla/` trade files: that
 is the lowest layer, the pre-1.14 economy (tiers 0/10/60/160/310, `banner:0`-`:15` at 3 emeralds),
 which every newer `vanilla_<version>` slice overrides; Mojang's merged bedrock-samples pack equals the
@@ -90,6 +93,7 @@ equal the generator output; `--suite generated` does the same for every generate
 - 2026-10-23: orphan traders are removed on load (minimal check, no scanning).
 - 2026-10-23: trades follow current vanilla via the regenerating generator, new enchantments included.
 - 2026-10-23: fixed catalogue; leather undyed; vanilla random enchanting (`enchant_with_levels`) kept as the one exception.
+- 2026-11-23: Cartographer sells all 16 banner colours, including Light Gray, which no vanilla village type sells; kept on regeneration (`OWNER_COLOUR_SETS`, test `test_cartographer_sells_all_16_banner_colours`).
 
 ## Known limits
 

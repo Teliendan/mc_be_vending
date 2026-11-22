@@ -80,6 +80,7 @@ class Catalogs(unittest.TestCase):
         destinations = set()
         for cured in [False, True]:
             generated = trades.build_table(native, cured)
+            trades.complete_colour_sets('cartographer', generated)
             name = 'cartographer_cured.json' if cured else 'cartographer.json'
             self.assertEqual(read(MOD/'vending_villagers_bp/trading/vm'/name), generated)
             for offer in offers(generated):
@@ -92,6 +93,23 @@ class Catalogs(unittest.TestCase):
                             self.assertNotIn('is_mark_variant', encoded)
         self.assertEqual(destinations, {'monument', 'mansion', 'trial_chambers', 'jungle_temple', 'swamp_hut',
             'village_taiga', 'village_desert', 'village_plains', 'village_snowy', 'village_savanna'})
+
+    def test_cartographer_sells_all_16_banner_colours(self):
+        # Owner, 2026-11-23: Light Gray (banner:7) is sold although no vanilla village type sells it.
+        colours = ['minecraft:banner'] + [f'minecraft:banner:{n}' for n in range(1, 16)]
+        for name in ['cartographer.json', 'cartographer_cured.json']:
+            table = read(MOD/'vending_villagers_bp/trading/vm'/name)
+            tier = next((t for t in table['tiers'] if any(o['gives'][0]['item'] == 'minecraft:banner:7'
+                                                        for o in trades._tier_trades(t))), None)
+            self.assertIsNotNone(tier, f'{name}: Light Gray banner (banner:7) missing')
+            items = [o['gives'][0]['item'] for o in trades._tier_trades(tier)]
+            banners = [i for i, item in enumerate(items) if item in colours]
+            self.assertEqual(sorted(items[i] for i in banners), sorted(colours), name)
+            self.assertEqual(banners, list(range(banners[0], banners[-1] + 1)), f'{name}: colours not together')
+            by_item = {o['gives'][0]['item']: o for o in trades._tier_trades(tier)}
+            light_gray, black = by_item['minecraft:banner:7'], by_item['minecraft:banner']
+            self.assertEqual({k: v for k, v in light_gray.items() if k != 'gives'},
+                             {k: v for k, v in black.items() if k != 'gives'}, name)
 
     def test_binary_source_uses_verified_readable_copy_or_flagged_fallback(self):
         trades_file = 'trading/economy_trades/fixture_trades.json'

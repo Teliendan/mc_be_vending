@@ -7,7 +7,7 @@
       },
       {
         "path": "docs/VANILLA_PARITY.md",
-        "sha256": "bd06675a24a5e17c1313510164661ce8a205f881945e439f4098f3b83ef18065"
+        "sha256": "c6b8113b566811ddc46f36b33fa28d54a47e7e41013bc83b240fefaaca3cf680"
       },
       {
         "path": "vending_bp/items/upgrade_kit.json",
@@ -38,7 +38,7 @@
       },
       {
         "path": "docs/VANILLA_PARITY.md",
-        "sha256": "bd06675a24a5e17c1313510164661ce8a205f881945e439f4098f3b83ef18065"
+        "sha256": "c6b8113b566811ddc46f36b33fa28d54a47e7e41013bc83b240fefaaca3cf680"
       },
       {
         "path": "vending_shulker_bp/items/shulker_core.json",
@@ -57,7 +57,7 @@
       },
       {
         "path": "docs/VANILLA_PARITY.md",
-        "sha256": "bd06675a24a5e17c1313510164661ce8a205f881945e439f4098f3b83ef18065"
+        "sha256": "c6b8113b566811ddc46f36b33fa28d54a47e7e41013bc83b240fefaaca3cf680"
       },
       {
         "path": "vending_shulker_bp/blocks/machine_shulker.json",
@@ -83,7 +83,7 @@
       },
       {
         "path": "docs/VANILLA_PARITY.md",
-        "sha256": "bd06675a24a5e17c1313510164661ce8a205f881945e439f4098f3b83ef18065"
+        "sha256": "c6b8113b566811ddc46f36b33fa28d54a47e7e41013bc83b240fefaaca3cf680"
       },
       {
         "path": "vending_shulker_bp/blocks/machine_shulker.json",
@@ -107,7 +107,7 @@
       },
       {
         "path": "docs/VANILLA_PARITY.md",
-        "sha256": "bd06675a24a5e17c1313510164661ce8a205f881945e439f4098f3b83ef18065"
+        "sha256": "c6b8113b566811ddc46f36b33fa28d54a47e7e41013bc83b240fefaaca3cf680"
       },
       {
         "path": "vending_shulker_bp/blocks/machine_shulker.json",
@@ -134,7 +134,7 @@
       },
       {
         "path": "docs/VANILLA_PARITY.md",
-        "sha256": "bd06675a24a5e17c1313510164661ce8a205f881945e439f4098f3b83ef18065"
+        "sha256": "c6b8113b566811ddc46f36b33fa28d54a47e7e41013bc83b240fefaaca3cf680"
       },
       {
         "path": "vending_shulker_bp/blocks/machine_shulker.json",
@@ -157,7 +157,7 @@
       },
       {
         "path": "docs/VANILLA_PARITY.md",
-        "sha256": "bd06675a24a5e17c1313510164661ce8a205f881945e439f4098f3b83ef18065"
+        "sha256": "c6b8113b566811ddc46f36b33fa28d54a47e7e41013bc83b240fefaaca3cf680"
       },
       {
         "path": "vending_villagers_bp/blocks/machine_armorer.json",
@@ -183,7 +183,7 @@
       },
       {
         "path": "docs/VANILLA_PARITY.md",
-        "sha256": "bd06675a24a5e17c1313510164661ce8a205f881945e439f4098f3b83ef18065"
+        "sha256": "c6b8113b566811ddc46f36b33fa28d54a47e7e41013bc83b240fefaaca3cf680"
       },
       {
         "path": "vending_villagers_bp/blocks/machine_armorer.json",
@@ -207,7 +207,7 @@
       },
       {
         "path": "docs/VANILLA_PARITY.md",
-        "sha256": "bd06675a24a5e17c1313510164661ce8a205f881945e439f4098f3b83ef18065"
+        "sha256": "c6b8113b566811ddc46f36b33fa28d54a47e7e41013bc83b240fefaaca3cf680"
       },
       {
         "path": "vending_villagers_bp/blocks/machine_armorer.json",
@@ -234,7 +234,7 @@
       },
       {
         "path": "docs/VANILLA_PARITY.md",
-        "sha256": "bd06675a24a5e17c1313510164661ce8a205f881945e439f4098f3b83ef18065"
+        "sha256": "c6b8113b566811ddc46f36b33fa28d54a47e7e41013bc83b240fefaaca3cf680"
       },
       {
         "path": "vending_villagers_bp/blocks/machine_armorer.json",
@@ -257,7 +257,7 @@
       },
       {
         "path": "docs/VANILLA_PARITY.md",
-        "sha256": "bd06675a24a5e17c1313510164661ce8a205f881945e439f4098f3b83ef18065"
+        "sha256": "c6b8113b566811ddc46f36b33fa28d54a47e7e41013bc83b240fefaaca3cf680"
       },
       {
         "path": "vending_villagers_bp/blocks/machine_butcher.json",
@@ -283,7 +283,7 @@
       },
       {
         "path": "docs/VANILLA_PARITY.md",
-        "sha256": "bd06675a24a5e17c1313510164661ce8a205f881945e439f4098f3b83ef18065"
+        "sha256": "c6b8113b566811ddc46f36b33fa28d54a47e7e41013bc83b240fefaaca3cf680"
       },
       {
         "path": "vending_villagers_bp/blocks/machine_butcher.json",
@@ -307,7 +307,7 @@
       },
       {
         "path": "docs/VANILLA_PARITY.md",
-        "sha256": "bd06675a24a5e17c1313510164661ce8a205f881945e439f4098f3b83ef18065"
+        "sha256": "c6b8113b566811ddc46f36b33fa28d54a47e7e41013bc83b240fefaaca3cf680"
       },
       {
         "path": "vending_villagers_bp/blocks/machine_butcher.json",
@@ -334,7 +334,7 @@
       },
       {
         "path": "docs/VANILLA_PARITY.md",
-        "sha256": "bd06675a24a5e17c1313510164661ce8a205f881945e439f4098f3b83ef18065"
+        "sha256": "c6b8113b566811ddc46f36b33fa28d54a47e7e41013bc83b240fefaaca3cf680"
       },
       {
         "path": "vending_villagers_bp/blocks/machine_butcher.json",
@@ -357,7 +357,7 @@
       },
       {
         "path": "docs/VANILLA_PARITY.md",
-        "sha256": "bd06675a24a5e17c1313510164661ce8a205f881945e439f4098f3b83ef18065"
+        "sha256": "c6b8113b566811ddc46f36b33fa28d54a47e7e41013bc83b240fefaaca3cf680"
       },
       {
         "path": "vending_villagers_bp/blocks/machine_cartographer.json",
@@ -383,7 +383,7 @@
       },
       {
         "path": "docs/VANILLA_PARITY.md",
-        "sha256": "bd06675a24a5e17c1313510164661ce8a205f881945e439f4098f3b83ef18065"
+        "sha256": "c6b8113b566811ddc46f36b33fa28d54a47e7e41013bc83b240fefaaca3cf680"
       },
       {
         "path": "vending_villagers_bp/blocks/machine_cartographer.json",
@@ -407,7 +407,7 @@
       },
       {
         "path": "docs/VANILLA_PARITY.md",
-        "sha256": "bd06675a24a5e17c1313510164661ce8a205f881945e439f4098f3b83ef18065"
+        "sha256": "c6b8113b566811ddc46f36b33fa28d54a47e7e41013bc83b240fefaaca3cf680"
       },
       {
         "path": "vending_villagers_bp/blocks/machine_cartographer.json",
@@ -434,7 +434,7 @@
       },
       {
         "path": "docs/VANILLA_PARITY.md",
-        "sha256": "bd06675a24a5e17c1313510164661ce8a205f881945e439f4098f3b83ef18065"
+        "sha256": "c6b8113b566811ddc46f36b33fa28d54a47e7e41013bc83b240fefaaca3cf680"
       },
       {
         "path": "vending_villagers_bp/blocks/machine_cartographer.json",
@@ -457,7 +457,7 @@
       },
       {
         "path": "docs/VANILLA_PARITY.md",
-        "sha256": "bd06675a24a5e17c1313510164661ce8a205f881945e439f4098f3b83ef18065"
+        "sha256": "c6b8113b566811ddc46f36b33fa28d54a47e7e41013bc83b240fefaaca3cf680"
       },
       {
         "path": "vending_villagers_bp/blocks/machine_cleric.json",
@@ -483,7 +483,7 @@
       },
       {
         "path": "docs/VANILLA_PARITY.md",
-        "sha256": "bd06675a24a5e17c1313510164661ce8a205f881945e439f4098f3b83ef18065"
+        "sha256": "c6b8113b566811ddc46f36b33fa28d54a47e7e41013bc83b240fefaaca3cf680"
       },
       {
         "path": "vending_villagers_bp/blocks/machine_cleric.json",
@@ -507,7 +507,7 @@
       },
       {
         "path": "docs/VANILLA_PARITY.md",
-        "sha256": "bd06675a24a5e17c1313510164661ce8a205f881945e439f4098f3b83ef18065"
+        "sha256": "c6b8113b566811ddc46f36b33fa28d54a47e7e41013bc83b240fefaaca3cf680"
       },
       {
         "path": "vending_villagers_bp/blocks/machine_cleric.json",
@@ -534,7 +534,7 @@
       },
       {
         "path": "docs/VANILLA_PARITY.md",
-        "sha256": "bd06675a24a5e17c1313510164661ce8a205f881945e439f4098f3b83ef18065"
+        "sha256": "c6b8113b566811ddc46f36b33fa28d54a47e7e41013bc83b240fefaaca3cf680"
       },
       {
         "path": "vending_villagers_bp/blocks/machine_cleric.json",
@@ -557,7 +557,7 @@
       },
       {
         "path": "docs/VANILLA_PARITY.md",
-        "sha256": "bd06675a24a5e17c1313510164661ce8a205f881945e439f4098f3b83ef18065"
+        "sha256": "c6b8113b566811ddc46f36b33fa28d54a47e7e41013bc83b240fefaaca3cf680"
       },
       {
         "path": "vending_villagers_bp/blocks/machine_farmer.json",
@@ -583,7 +583,7 @@
       },
       {
         "path": "docs/VANILLA_PARITY.md",
-        "sha256": "bd06675a24a5e17c1313510164661ce8a205f881945e439f4098f3b83ef18065"
+        "sha256": "c6b8113b566811ddc46f36b33fa28d54a47e7e41013bc83b240fefaaca3cf680"
       },
       {
         "path": "vending_villagers_bp/blocks/machine_farmer.json",
@@ -607,7 +607,7 @@
       },
       {
         "path": "docs/VANILLA_PARITY.md",
-        "sha256": "bd06675a24a5e17c1313510164661ce8a205f881945e439f4098f3b83ef18065"
+        "sha256": "c6b8113b566811ddc46f36b33fa28d54a47e7e41013bc83b240fefaaca3cf680"
       },
       {
         "path": "vending_villagers_bp/blocks/machine_farmer.json",
@@ -634,7 +634,7 @@
       },
       {
         "path": "docs/VANILLA_PARITY.md",
-        "sha256": "bd06675a24a5e17c1313510164661ce8a205f881945e439f4098f3b83ef18065"
+        "sha256": "c6b8113b566811ddc46f36b33fa28d54a47e7e41013bc83b240fefaaca3cf680"
       },
       {
         "path": "vending_villagers_bp/blocks/machine_farmer.json",
@@ -657,7 +657,7 @@
       },
       {
         "path": "docs/VANILLA_PARITY.md",
-        "sha256": "bd06675a24a5e17c1313510164661ce8a205f881945e439f4098f3b83ef18065"
+        "sha256": "c6b8113b566811ddc46f36b33fa28d54a47e7e41013bc83b240fefaaca3cf680"
       },
       {
         "path": "vending_villagers_bp/blocks/machine_fisherman.json",
@@ -683,7 +683,7 @@
       },
       {
         "path": "docs/VANILLA_PARITY.md",
-        "sha256": "bd06675a24a5e17c1313510164661ce8a205f881945e439f4098f3b83ef18065"
+        "sha256": "c6b8113b566811ddc46f36b33fa28d54a47e7e41013bc83b240fefaaca3cf680"
       },
       {
         "path": "vending_villagers_bp/blocks/machine_fisherman.json",
@@ -707,7 +707,7 @@
       },
       {
         "path": "docs/VANILLA_PARITY.md",
-        "sha256": "bd06675a24a5e17c1313510164661ce8a205f881945e439f4098f3b83ef18065"
+        "sha256": "c6b8113b566811ddc46f36b33fa28d54a47e7e41013bc83b240fefaaca3cf680"
       },
       {
         "path": "vending_villagers_bp/blocks/machine_fisherman.json",
@@ -734,7 +734,7 @@
       },
       {
         "path": "docs/VANILLA_PARITY.md",
-        "sha256": "bd06675a24a5e17c1313510164661ce8a205f881945e439f4098f3b83ef18065"
+        "sha256": "c6b8113b566811ddc46f36b33fa28d54a47e7e41013bc83b240fefaaca3cf680"
       },
       {
         "path": "vending_villagers_bp/blocks/machine_fisherman.json",
@@ -757,7 +757,7 @@
       },
       {
         "path": "docs/VANILLA_PARITY.md",
-        "sha256": "bd06675a24a5e17c1313510164661ce8a205f881945e439f4098f3b83ef18065"
+        "sha256": "c6b8113b566811ddc46f36b33fa28d54a47e7e41013bc83b240fefaaca3cf680"
       },
       {
         "path": "vending_villagers_bp/blocks/machine_fletcher.json",
@@ -783,7 +783,7 @@
       },
       {
         "path": "docs/VANILLA_PARITY.md",
-        "sha256": "bd06675a24a5e17c1313510164661ce8a205f881945e439f4098f3b83ef18065"
+        "sha256": "c6b8113b566811ddc46f36b33fa28d54a47e7e41013bc83b240fefaaca3cf680"
       },
       {
         "path": "vending_villagers_bp/blocks/machine_fletcher.json",
@@ -807,7 +807,7 @@
       },
       {
         "path": "docs/VANILLA_PARITY.md",
-        "sha256": "bd06675a24a5e17c1313510164661ce8a205f881945e439f4098f3b83ef18065"
+        "sha256": "c6b8113b566811ddc46f36b33fa28d54a47e7e41013bc83b240fefaaca3cf680"
       },
       {
         "path": "vending_villagers_bp/blocks/machine_fletcher.json",
@@ -834,7 +834,7 @@
       },
       {
         "path": "docs/VANILLA_PARITY.md",
-        "sha256": "bd06675a24a5e17c1313510164661ce8a205f881945e439f4098f3b83ef18065"
+        "sha256": "c6b8113b566811ddc46f36b33fa28d54a47e7e41013bc83b240fefaaca3cf680"
       },
       {
         "path": "vending_villagers_bp/blocks/machine_fletcher.json",
@@ -857,7 +857,7 @@
       },
       {
         "path": "docs/VANILLA_PARITY.md",
-        "sha256": "bd06675a24a5e17c1313510164661ce8a205f881945e439f4098f3b83ef18065"
+        "sha256": "c6b8113b566811ddc46f36b33fa28d54a47e7e41013bc83b240fefaaca3cf680"
       },
       {
         "path": "vending_villagers_bp/blocks/machine_leather_worker.json",
@@ -883,7 +883,7 @@
       },
       {
         "path": "docs/VANILLA_PARITY.md",
-        "sha256": "bd06675a24a5e17c1313510164661ce8a205f881945e439f4098f3b83ef18065"
+        "sha256": "c6b8113b566811ddc46f36b33fa28d54a47e7e41013bc83b240fefaaca3cf680"
       },
       {
         "path": "vending_villagers_bp/blocks/machine_leather_worker.json",
@@ -907,7 +907,7 @@
       },
       {
         "path": "docs/VANILLA_PARITY.md",
-        "sha256": "bd06675a24a5e17c1313510164661ce8a205f881945e439f4098f3b83ef18065"
+        "sha256": "c6b8113b566811ddc46f36b33fa28d54a47e7e41013bc83b240fefaaca3cf680"
       },
       {
         "path": "vending_villagers_bp/blocks/machine_leather_worker.json",
@@ -934,7 +934,7 @@
       },
       {
         "path": "docs/VANILLA_PARITY.md",
-        "sha256": "bd06675a24a5e17c1313510164661ce8a205f881945e439f4098f3b83ef18065"
+        "sha256": "c6b8113b566811ddc46f36b33fa28d54a47e7e41013bc83b240fefaaca3cf680"
       },
       {
         "path": "vending_villagers_bp/blocks/machine_leather_worker.json",
@@ -957,7 +957,7 @@
       },
       {
         "path": "docs/VANILLA_PARITY.md",
-        "sha256": "bd06675a24a5e17c1313510164661ce8a205f881945e439f4098f3b83ef18065"
+        "sha256": "c6b8113b566811ddc46f36b33fa28d54a47e7e41013bc83b240fefaaca3cf680"
       },
       {
         "path": "vending_villagers_bp/blocks/machine_librarian.json",
@@ -983,7 +983,7 @@
       },
       {
         "path": "docs/VANILLA_PARITY.md",
-        "sha256": "bd06675a24a5e17c1313510164661ce8a205f881945e439f4098f3b83ef18065"
+        "sha256": "c6b8113b566811ddc46f36b33fa28d54a47e7e41013bc83b240fefaaca3cf680"
       },
       {
         "path": "vending_villagers_bp/blocks/machine_librarian.json",
@@ -1007,7 +1007,7 @@
       },
       {
         "path": "docs/VANILLA_PARITY.md",
-        "sha256": "bd06675a24a5e17c1313510164661ce8a205f881945e439f4098f3b83ef18065"
+        "sha256": "c6b8113b566811ddc46f36b33fa28d54a47e7e41013bc83b240fefaaca3cf680"
       },
       {
         "path": "vending_villagers_bp/blocks/machine_librarian.json",
@@ -1034,7 +1034,7 @@
       },
       {
         "path": "docs/VANILLA_PARITY.md",
-        "sha256": "bd06675a24a5e17c1313510164661ce8a205f881945e439f4098f3b83ef18065"
+        "sha256": "c6b8113b566811ddc46f36b33fa28d54a47e7e41013bc83b240fefaaca3cf680"
       },
       {
         "path": "vending_villagers_bp/blocks/machine_librarian.json",
@@ -1057,7 +1057,7 @@
       },
       {
         "path": "docs/VANILLA_PARITY.md",
-        "sha256": "bd06675a24a5e17c1313510164661ce8a205f881945e439f4098f3b83ef18065"
+        "sha256": "c6b8113b566811ddc46f36b33fa28d54a47e7e41013bc83b240fefaaca3cf680"
       },
       {
         "path": "vending_villagers_bp/blocks/machine_shepherd.json",
@@ -1083,7 +1083,7 @@
       },
       {
         "path": "docs/VANILLA_PARITY.md",
-        "sha256": "bd06675a24a5e17c1313510164661ce8a205f881945e439f4098f3b83ef18065"
+        "sha256": "c6b8113b566811ddc46f36b33fa28d54a47e7e41013bc83b240fefaaca3cf680"
       },
       {
         "path": "vending_villagers_bp/blocks/machine_shepherd.json",
@@ -1107,7 +1107,7 @@
       },
       {
         "path": "docs/VANILLA_PARITY.md",
-        "sha256": "bd06675a24a5e17c1313510164661ce8a205f881945e439f4098f3b83ef18065"
+        "sha256": "c6b8113b566811ddc46f36b33fa28d54a47e7e41013bc83b240fefaaca3cf680"
       },
       {
         "path": "vending_villagers_bp/blocks/machine_shepherd.json",
@@ -1134,7 +1134,7 @@
       },
       {
         "path": "docs/VANILLA_PARITY.md",
-        "sha256": "bd06675a24a5e17c1313510164661ce8a205f881945e439f4098f3b83ef18065"
+        "sha256": "c6b8113b566811ddc46f36b33fa28d54a47e7e41013bc83b240fefaaca3cf680"
       },
       {
         "path": "vending_villagers_bp/blocks/machine_shepherd.json",
@@ -1157,7 +1157,7 @@
       },
       {
         "path": "docs/VANILLA_PARITY.md",
-        "sha256": "bd06675a24a5e17c1313510164661ce8a205f881945e439f4098f3b83ef18065"
+        "sha256": "c6b8113b566811ddc46f36b33fa28d54a47e7e41013bc83b240fefaaca3cf680"
       },
       {
         "path": "vending_villagers_bp/blocks/machine_stone_mason.json",
@@ -1183,7 +1183,7 @@
       },
       {
         "path": "docs/VANILLA_PARITY.md",
-        "sha256": "bd06675a24a5e17c1313510164661ce8a205f881945e439f4098f3b83ef18065"
+        "sha256": "c6b8113b566811ddc46f36b33fa28d54a47e7e41013bc83b240fefaaca3cf680"
       },
       {
         "path": "vending_villagers_bp/blocks/machine_stone_mason.json",
@@ -1207,7 +1207,7 @@
       },
       {
         "path": "docs/VANILLA_PARITY.md",
-        "sha256": "bd06675a24a5e17c1313510164661ce8a205f881945e439f4098f3b83ef18065"
+        "sha256": "c6b8113b566811ddc46f36b33fa28d54a47e7e41013bc83b240fefaaca3cf680"
       },
       {
         "path": "vending_villagers_bp/blocks/machine_stone_mason.json",
@@ -1234,7 +1234,7 @@
       },
       {
         "path": "docs/VANILLA_PARITY.md",
-        "sha256": "bd06675a24a5e17c1313510164661ce8a205f881945e439f4098f3b83ef18065"
+        "sha256": "c6b8113b566811ddc46f36b33fa28d54a47e7e41013bc83b240fefaaca3cf680"
       },
       {
         "path": "vending_villagers_bp/blocks/machine_stone_mason.json",
@@ -1257,7 +1257,7 @@
       },
       {
         "path": "docs/VANILLA_PARITY.md",
-        "sha256": "bd06675a24a5e17c1313510164661ce8a205f881945e439f4098f3b83ef18065"
+        "sha256": "c6b8113b566811ddc46f36b33fa28d54a47e7e41013bc83b240fefaaca3cf680"
       },
       {
         "path": "vending_villagers_bp/blocks/machine_tool_smith.json",
@@ -1283,7 +1283,7 @@
       },
       {
         "path": "docs/VANILLA_PARITY.md",
-        "sha256": "bd06675a24a5e17c1313510164661ce8a205f881945e439f4098f3b83ef18065"
+        "sha256": "c6b8113b566811ddc46f36b33fa28d54a47e7e41013bc83b240fefaaca3cf680"
       },
       {
         "path": "vending_villagers_bp/blocks/machine_tool_smith.json",
@@ -1307,7 +1307,7 @@
       },
       {
         "path": "docs/VANILLA_PARITY.md",
-        "sha256": "bd06675a24a5e17c1313510164661ce8a205f881945e439f4098f3b83ef18065"
+        "sha256": "c6b8113b566811ddc46f36b33fa28d54a47e7e41013bc83b240fefaaca3cf680"
       },
       {
         "path": "vending_villagers_bp/blocks/machine_tool_smith.json",
@@ -1334,7 +1334,7 @@
       },
       {
         "path": "docs/VANILLA_PARITY.md",
-        "sha256": "bd06675a24a5e17c1313510164661ce8a205f881945e439f4098f3b83ef18065"
+        "sha256": "c6b8113b566811ddc46f36b33fa28d54a47e7e41013bc83b240fefaaca3cf680"
       },
       {
         "path": "vending_villagers_bp/blocks/machine_tool_smith.json",
@@ -1357,7 +1357,7 @@
       },
       {
         "path": "docs/VANILLA_PARITY.md",
-        "sha256": "bd06675a24a5e17c1313510164661ce8a205f881945e439f4098f3b83ef18065"
+        "sha256": "c6b8113b566811ddc46f36b33fa28d54a47e7e41013bc83b240fefaaca3cf680"
       },
       {
         "path": "vending_villagers_bp/blocks/machine_weapon_smith.json",
@@ -1383,7 +1383,7 @@
       },
       {
         "path": "docs/VANILLA_PARITY.md",
-        "sha256": "bd06675a24a5e17c1313510164661ce8a205f881945e439f4098f3b83ef18065"
+        "sha256": "c6b8113b566811ddc46f36b33fa28d54a47e7e41013bc83b240fefaaca3cf680"
       },
       {
         "path": "vending_villagers_bp/blocks/machine_weapon_smith.json",
@@ -1407,7 +1407,7 @@
       },
       {
         "path": "docs/VANILLA_PARITY.md",
-        "sha256": "bd06675a24a5e17c1313510164661ce8a205f881945e439f4098f3b83ef18065"
+        "sha256": "c6b8113b566811ddc46f36b33fa28d54a47e7e41013bc83b240fefaaca3cf680"
       },
       {
         "path": "vending_villagers_bp/blocks/machine_weapon_smith.json",
@@ -1434,7 +1434,7 @@
       },
       {
         "path": "docs/VANILLA_PARITY.md",
-        "sha256": "bd06675a24a5e17c1313510164661ce8a205f881945e439f4098f3b83ef18065"
+        "sha256": "c6b8113b566811ddc46f36b33fa28d54a47e7e41013bc83b240fefaaca3cf680"
       },
       {
         "path": "vending_villagers_bp/blocks/machine_weapon_smith.json",
@@ -1457,7 +1457,7 @@
       },
       {
         "path": "docs/VANILLA_PARITY.md",
-        "sha256": "bd06675a24a5e17c1313510164661ce8a205f881945e439f4098f3b83ef18065"
+        "sha256": "c6b8113b566811ddc46f36b33fa28d54a47e7e41013bc83b240fefaaca3cf680"
       },
       {
         "path": "vending_wandering_bp/blocks/machine_wandering_trader.json",
@@ -1483,7 +1483,7 @@
       },
       {
         "path": "docs/VANILLA_PARITY.md",
-        "sha256": "bd06675a24a5e17c1313510164661ce8a205f881945e439f4098f3b83ef18065"
+        "sha256": "c6b8113b566811ddc46f36b33fa28d54a47e7e41013bc83b240fefaaca3cf680"
       },
       {
         "path": "vending_wandering_bp/blocks/machine_wandering_trader.json",
@@ -1507,7 +1507,7 @@
       },
       {
         "path": "docs/VANILLA_PARITY.md",
-        "sha256": "bd06675a24a5e17c1313510164661ce8a205f881945e439f4098f3b83ef18065"
+        "sha256": "c6b8113b566811ddc46f36b33fa28d54a47e7e41013bc83b240fefaaca3cf680"
       },
       {
         "path": "vending_wandering_bp/blocks/machine_wandering_trader.json",
@@ -1534,7 +1534,7 @@
       },
       {
         "path": "docs/VANILLA_PARITY.md",
-        "sha256": "bd06675a24a5e17c1313510164661ce8a205f881945e439f4098f3b83ef18065"
+        "sha256": "c6b8113b566811ddc46f36b33fa28d54a47e7e41013bc83b240fefaaca3cf680"
       },
       {
         "path": "vending_wandering_bp/blocks/machine_wandering_trader.json",

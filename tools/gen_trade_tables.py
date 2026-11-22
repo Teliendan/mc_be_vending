@@ -18,6 +18,8 @@ Rules kept from the design:
 - Wandering trader: one tier, every native offer; the upgraded table is vanilla, the
   basic one charges more emeralds and pays fewer on buybacks (gen_extra_machines).
 - Shulker: the mod's own fixed balance (gen_extra_machines).
+- Owner additions beyond vanilla (OWNER_COLOUR_SETS): the cartographer sells all 16
+  banner colours, including Light Gray, which no vanilla village type sells.
 """
 
 import argparse
@@ -202,6 +204,57 @@ def build_table(data, cured, stripped=None):
     return {"tiers": tiers}
 
 
+# Owner additions beyond vanilla: colour sets a machine completes, as {profession:
+# {item base: (data values, owner date, reason)}}. A missing colour is cloned from the
+# set's last offer in the same tier (same price, upgraded price, XP and stock) and
+# inserted right after it, so the colours stay together. Vanilla sells banners by
+# village type (is_mark_variant) and no type sells Light Gray (7); the machine has
+# no village type and sells every colour (owner, 2026-11-23).
+OWNER_COLOUR_SETS = {
+    "cartographer": {
+        "minecraft:banner": (range(16), "2026-11-23", "no vanilla village type sells it"),
+    },
+}
+
+
+def _colour(item, base):
+    """Data value of `item` within the colour set `base` ("minecraft:banner" = 0), else None."""
+    if item == base:
+        return 0
+    prefix, _, data = item.rpartition(":")
+    return int(data) if prefix == base and data.isdigit() else None
+
+
+def complete_colour_sets(profession, table):
+    """Add the owner's missing colours (OWNER_COLOUR_SETS) to a built table; return report notes."""
+    notes = []
+    for base, (values, date, reason) in OWNER_COLOUR_SETS.get(profession, {}).items():
+        added, found = [], False
+        for tier in table["tiers"]:
+            groups = tier["groups"]
+            members = [i for i, group in enumerate(groups)
+                       if _colour(group["trades"][0]["gives"][0]["item"], base) is not None]
+            if not members:
+                continue
+            found = True
+            have = {_colour(groups[i]["trades"][0]["gives"][0]["item"], base) for i in members}
+            insert = members[-1] + 1
+            for value in values:
+                if value in have:
+                    continue
+                group = copy.deepcopy(groups[members[-1]])
+                group["trades"][0]["gives"][0]["item"] = base if value == 0 else f"{base}:{value}"
+                groups.insert(insert, group)
+                insert += 1
+                added.append(f"{_short(base)}:{value}")
+        if not found:
+            raise ValueError(f"{profession}: no {base} offers left to complete; vanilla changed, decide the owner rule again")
+        if added:
+            notes.append(f"{profession}: {len(added)} offer(s) added beyond vanilla, {reason}: "
+                         f"{', '.join(added)} [owner, {date}]")
+    return notes
+
+
 def build_all(root=None):
     """Return ({path relative to the mod: table}, [source lines], [notes])."""
     import gen_extra_machines as extra  # imports this module; load it lazily
@@ -219,6 +272,9 @@ def build_all(root=None):
             table = build_table(source.data, suffix == "_cured", None if suffix else stripped)
             if profession == "librarian":
                 books._patch(table, enchants, suffix == "_cured")
+            colour_notes = complete_colour_sets(profession, table)
+            if not suffix:
+                notes += colour_notes
             tables[f"vending_villagers_bp/trading/vm/{profession}{suffix}.json"] = table
         notes += _stripped_notes(profession, stripped)
     wandering = load_trade_source("wandering_trader", root)

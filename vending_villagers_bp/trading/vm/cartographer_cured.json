@@ -856,6 +856,29 @@
               "reward_exp": true
             }
           ]
+        },
+        {
+          "num_to_select": 1,
+          "trades": [
+            {
+              "wants": [
+                {
+                  "item": "minecraft:emerald",
+                  "quantity": 1,
+                  "price_multiplier": 0.05
+                }
+              ],
+              "gives": [
+                {
+                  "item": "minecraft:banner:7",
+                  "quantity": 1
+                }
+              ],
+              "trader_exp": 15,
+              "max_uses": 9999999,
+              "reward_exp": true
+            }
+          ]
         }
       ]
     },
