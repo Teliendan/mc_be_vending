@@ -58,7 +58,7 @@ LOOT_STAGES = {
     "overworld": {"catalog_stage": "overworld", "goods": "minecraft:bone",
                   "recipe_goods": "minecraft:carved_pumpkin", "core": "minecraft:bone_block"},
     "nether": {"catalog_stage": "nether", "goods": "minecraft:blaze_rod",
-               "recipe_goods": "minecraft:magma", "core": "minecraft:nether_wart_block"},  # magma = magma block
+               "recipe_goods": "minecraft:magma", "core": "minecraft:red_nether_brick"},  # magma = magma block; red nether bricks need fortress-only wart
     "trial": {"catalog_stage": "trial", "goods": "minecraft:breeze_rod",
               "recipe_goods": "minecraft:copper_grate", "core": "minecraft:trial_key"},
     "end": {"catalog_stage": "end_boss", "goods": "minecraft:nether_star",

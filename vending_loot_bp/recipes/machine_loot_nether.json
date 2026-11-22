@@ -26,12 +26,12 @@
                 "item": "minecraft:emerald_block"
             },
             "W": {
-                "item": "minecraft:nether_wart_block"
+                "item": "minecraft:red_nether_brick"
             }
         },
         "unlock": [
             {
-                "item": "minecraft:nether_wart_block"
+                "item": "minecraft:red_nether_brick"
             }
         ],
         "result": {

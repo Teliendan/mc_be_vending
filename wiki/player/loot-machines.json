@@ -77,7 +77,7 @@
       },
       {
         "path": "tools/peaceful_rules.json",
-        "sha256": "209b748ba56d8f9379216097dcd3667b5ea565ea425219f139279be6c5ee8a90"
+        "sha256": "237732300d1959b385cc2a240467226d4ee147d4e5123a51c80ca8b3dbb65cae"
       },
       {
         "path": "vending_loot_bp/blocks/machine_loot_overworld.json",
@@ -135,7 +135,7 @@
       },
       {
         "path": "tools/peaceful_rules.json",
-        "sha256": "209b748ba56d8f9379216097dcd3667b5ea565ea425219f139279be6c5ee8a90"
+        "sha256": "237732300d1959b385cc2a240467226d4ee147d4e5123a51c80ca8b3dbb65cae"
       },
       {
         "path": "vending_loot_bp/blocks/machine_loot_nether.json",
@@ -185,7 +185,7 @@
       },
       {
         "path": "tools/peaceful_rules.json",
-        "sha256": "209b748ba56d8f9379216097dcd3667b5ea565ea425219f139279be6c5ee8a90"
+        "sha256": "237732300d1959b385cc2a240467226d4ee147d4e5123a51c80ca8b3dbb65cae"
       },
       {
         "path": "vending_loot_bp/blocks/machine_loot_trial.json",
@@ -219,7 +219,7 @@
       },
       {
         "path": "tools/peaceful_rules.json",
-        "sha256": "209b748ba56d8f9379216097dcd3667b5ea565ea425219f139279be6c5ee8a90"
+        "sha256": "237732300d1959b385cc2a240467226d4ee147d4e5123a51c80ca8b3dbb65cae"
       },
       {
         "path": "vending_loot_bp/blocks/machine_loot_end.json",

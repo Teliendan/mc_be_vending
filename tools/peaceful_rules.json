@@ -812,8 +812,10 @@
         "reason": "renewable on Peaceful (composter bone meal, fossils); thematic for missing skeletons"
       },
       "nether": {
-        "item": "minecraft:nether_wart_block",
-        "reason": "nether wart grows only in fortresses / bastions: proves a fortress visit; needs no blaze item (no circularity)"
+        "item": "minecraft:red_nether_brick",
+        "reason": "red nether bricks are crafted from nether wart, which grows only in fortresses / bastions: proves a fortress visit; needs no blaze item (no circularity). Replaced nether wart block, which also generates in crimson forests",
+        "by": "owner",
+        "date": "2026-11-22"
       },
       "trial": {
         "item": "minecraft:trial_key",

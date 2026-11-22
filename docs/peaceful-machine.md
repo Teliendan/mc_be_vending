@@ -26,7 +26,7 @@ The original design brief (written by ChatGPT, a starting point, not a spec) is 
 - Trial spawners do not spawn mobs on Peaceful (owner): the machine sells trial keys and ominous trial keys
   in place of their rewards. The ominous bottle is sold (decorative use).
 - Stages, one machine each: overworld, nether, trial, end. The proof each machine recipe needs:
-  bone block, nether wart block, trial key, shulker shell (proposals, final in Part 2).
+  bone block, red nether bricks, trial key, shulker shell (proposals, final in Part 2).
 - String is an owner exception: sold in the overworld machine, because its only early EASY source is killing cats.
 - Wet sponge is excluded: its main source is monument sponge rooms; elder guardians cannot be farmed.
   Prismarine shards and crystals stay: ordinary guardians respawn.
@@ -40,7 +40,7 @@ Part 2 decisions (owner, 2026-11-21, Bedrock 1.26.63):
 - One feature pack with all four machines; the same body as the other machines, only the glass item differs.
 - Glass item: Overworld = bone, Nether = blaze rod, Trial = breeze rod, End = nether star.
 - Recipe keeps the shared GTG / IWI / EEE shape. T points to what the machine sells and is not sold anywhere;
-  W is the stage proof: Overworld T carved pumpkin, W bone block; Nether T magma block, W nether wart block;
+  W is the stage proof: Overworld T carved pumpkin, W bone block; Nether T magma block, W red nether bricks (nether wart block also grows in crimson forests, owner fix 2026-11-22);
   Trial T copper grate, W trial key (found in chamber chests and pots; the machine also sells keys);
   End T end crystal, W shulker shell.
 - After the in-game check: the totem costs 32 (was 12; strong, rare, priced like the trident); the wither rose costs 16 (was 1; very hard to get normally); resin clumps are

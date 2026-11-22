@@ -130,7 +130,7 @@ Stages (kept the four names) and proposed stage-proof core ingredient (obtainabl
 | Stage | Items | Proof (core) | Why |
 |---|---|---|---|
 | overworld | common overworld + ocean drops, heads, discs, resin | bone block | composter bone meal or fossils; thematic |
-| nether | blaze rod, ghast tear, froglights, tears, piglin head, wither skull | nether wart block | wart grows only in fortresses/bastions; no blaze item, so no circularity |
+| nether | blaze rod, ghast tear, froglights, tears, piglin head, wither skull | red nether bricks | crafted from wart, which grows only in fortresses/bastions (nether wart block was dropped: it also generates in crimson forests); no blaze item, so no circularity |
 | deep | breeze rod, trial keys, ominous bottle, totem | echo shard | ancient city chests, safe on Peaceful; alternative: a trial key from pots/entrance chests (chancy) |
 | end_boss | nether star, wither rose | shulker shell | End city, only after the dragon; alternatives dragon head, Dragon's Breath |
 
