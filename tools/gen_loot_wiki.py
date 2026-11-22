@@ -1,8 +1,9 @@
 """Generate the player-wiki records of the four Loot Machines.
 
-Owns, inside mods/vending/wiki/: the `vm:machine_loot_*` entries of features.json, media.json and
-limitations.json (other entries are kept byte for byte), plus behavior/loot-machines.json and
-player/loot-machines.json. The per-item "why is this sold" sentences come from
+Owns, inside mods/vending/wiki/: the `vm:machine_loot_*` entries of features.json and media.json
+(other entries are kept byte for byte), plus behavior/loot-machines.json and
+player/loot-machines.json. Loot Machines have no limitations: no storage and blocking water are
+intended machine behaviour, not limitations (owner, 2026-11-22; docs/wiki.md). The per-item "why is this sold" sentences come from
 tools/peaceful_catalog.json (`replaces`, `class`, `stage`) and tools/peaceful_rules.json
 (`peaceful_mobs.absent`, `decisions`), never from hand-typed per-item prose.
 
@@ -142,7 +143,7 @@ def build():
     for key in ('minecraft:wet_sponge', 'minecraft:string', 'minecraft:trial_key'):
         assert key in decisions, key  # the exclusion/exception sections below restate these decisions
 
-    features, behavior, limitations, media, player = [], [], [], [], []
+    features, behavior, media, player = [], [], [], []
     for stage, suffix, name in STAGES:
         fid = 'vm:machine_loot_' + suffix
         pack = 'vending_loot_bp/'
@@ -166,18 +167,12 @@ def build():
              'text': 'Stand to trade. Crouch and aim at the upper half to build against it; while flying in Creative, hold Sneak. '
                      'Offers stay in stock, and every offer is paid in emeralds. Anyone can craft and use it, in any difficulty.'},
             {'evidence': ev, 'featureId': fid, 'id': fid + '/upgrade',
-             'text': 'Use an Upgrade Kit on the base to lower its prices until the machine is broken. '
+             'text': 'Use an Upgrade Kit on the base to cut its prices by about 30% until the machine is broken. '
                      'Survival consumes the kit once; using a kit on an already upgraded machine costs nothing.'},
         ]
         if suffix == 'end':
             behavior.append({'evidence': ev, 'featureId': fid, 'id': fid + '/nether-star',
                              'text': 'The Nether Star costs two full stacks of emeralds, so put one stack in each payment slot of the trade screen.'})
-        for part in ('storage', 'water'):
-            limitations.append({
-                'featureId': fid, 'id': fid + '/' + part,
-                'text': 'The machine trades directly; it has no storage inventory or hopper input/output.' if part == 'storage'
-                else 'The machine blocks water and cannot be waterlogged.',
-                'evidence': ev})
         media.append({'id': fid + '/icon', 'featureId': fid,
                       'source': 'vending_rp/textures/blocks/vm_machine_head_loot_%s.png' % suffix,
                       'kind': 'texture', 'alt': name,
@@ -217,7 +212,7 @@ def build():
             'evidence': pin(*shipped, 'tools/peaceful_catalog.json', 'tools/peaceful_rules.json'),
         })
         assert count == len([e for e in catalog['included'] if e['stage'] == stage])
-    return features, behavior, limitations, media, player
+    return features, behavior, media, player
 
 
 def dumps(data):
@@ -237,11 +232,10 @@ def merge(path, new, key, prefix, section=None):
 
 
 def outputs():
-    features, behavior, limitations, media, player = build()
+    features, behavior, media, player = build()
     return {
         'features.json': dumps(merge('features.json', features, 'id', 'vm:machine_loot_', 'features')),
         'media.json': dumps(merge('media.json', media, 'id', 'vm:machine_loot_')),
-        'limitations.json': dumps(merge('limitations.json', limitations, 'id', 'vm:machine_loot_')),
         'behavior/loot-machines.json': dumps(behavior),
         'player/loot-machines.json': dumps(player),
     }
