@@ -58,7 +58,7 @@ the shared RP files are wrong until the whole order has run.
 
 ## Prices
 
-Villager machines charge vanilla prices; the Upgrade Kit cuts every price 30%.
+Villager machines charge vanilla prices; the Upgrade Kit is their "cure" and cuts every wanted quantity 30% (floor 1).
 Wandering machines charge more than vanilla until upgraded. Shulker prices are the
 mod's own (12/24 emeralds, 8/16 upgraded).
 
