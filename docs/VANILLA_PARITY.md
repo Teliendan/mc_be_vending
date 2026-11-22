@@ -75,7 +75,10 @@ ships binary) is read from Mojang's bedrock-samples JSON
 (`python -B tools/fetch_bedrock_samples.py` first), else from the same slice in an
 old launcher install, both only if item IDs equal the binary's, else an older slice
 (FALLBACK: missing trades); a NEW enchantment is sold at level 1 on tier 4 until `enchantments.json`
-gets its values. `node tests/run.mjs --suite catalogs` checks the shipped tables
+gets its values. Never compare against the unversioned `behavior_packs/vanilla/` trade files: that
+is the lowest layer, the pre-1.14 economy (tiers 0/10/60/160/310, `banner:0`-`:15` at 3 emeralds),
+which every newer `vanilla_<version>` slice overrides; Mojang's merged bedrock-samples pack equals the
+newest slices (checked 1.26.65, 2026-11-23). `node tests/run.mjs --suite catalogs` checks the shipped tables
 equal the generator output; `--suite generated` does the same for every generated pack file (`tools/build.py`).
 
 ## Owner decisions

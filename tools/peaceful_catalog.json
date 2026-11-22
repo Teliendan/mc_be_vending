@@ -66,7 +66,7 @@
     "minecraft:warped_fungus_on_a_stick": "crafted",
     "minecraft:wet_sponge": "decision"
   },
-  "game_version": "vanilla_1.26.60",
+  "game_version": "vanilla_1.26.65",
   "included": [
     {
       "attempt": "one bogged kill (loot table entities/bogged.json)",
