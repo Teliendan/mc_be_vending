@@ -12,7 +12,7 @@ Craftable machines that trade like villagers, the wandering trader and a shulker
 - **Wandering Trader machine:** keeps every wandering trader offer available all the time, so you no longer wait for him to show up. It charges more than vanilla until you upgrade it.
 - **Shulker machine:** sells shulker shells and shulker boxes. There is no shortcut to it: its Shulker Core is crafted from nine shulker shells, so you need to fight shulkers first.
 - **Loot machines:** four of them (Overworld, Nether, Trial and End) sell mob loot such as bone, blaze rods and nether stars. They are made for Peaceful worlds, where those mobs never appear, and also save you from farming mobs. Anyone can craft and use them on any difficulty.
-- **Upgrade Kit:** use one on the lower block of a machine to lower its prices: a villager machine's by 30%, the Wandering Trader machine's down to vanilla prices, and the Shulker machine's too. A machine that is already upgraded says so and keeps your kit untouched. Craft it from two blaze powder, two gold ingots, a golden apple, two emeralds and a fermented spider eye.
+- **Upgrade Kit:** use one on the lower block of a machine to cut its prices by 30%. A machine that is already upgraded says so and keeps your kit untouched. Craft it from two blaze powder, two gold ingots, a golden apple, two emeralds and a fermented spider eye.
 - **Crafting:** each machine takes three emerald blocks, two iron blocks, two gold blocks and two items of its own; a villager machine uses its profession's workstation and the good it shows in its window.
 - **Building around it:** a machine is two blocks tall. Crouch and aim at the upper block to place blocks or attach torches to it; stand up to trade. In Survival, any tool or your hand breaks it and gives the machine back.
 - **Pick your packs:** Core plus one small pack per machine family (Villagers, Wandering Trader, Shulker, Loot). Turn on only the ones you want.
@@ -21,8 +21,10 @@ Craftable machines that trade like villagers, the wandering trader and a shulker
 ## Install
 
 1. Download the `.mcaddon` from the [Releases page](https://github.com/Teliendan/mc_be_vending/releases).
-2. Open the file with Minecraft; it imports all the packs.
+2. Open the file with Minecraft on Windows, Android or iPhone/iPad; it imports all the packs.
 3. In the world's Behavior Packs settings, turn on **Vending Machines — Core** plus the machine packs you want. Turning on Core also turns on the resource pack. Each machine pack needs Core, but none needs another.
+
+Xbox, PlayStation and Switch can't import add-on files directly, but console players can join a world that already has them.
 
 Requirements: tested on Minecraft Bedrock 1.26.63. No experimental toggles are needed. It works on its own and needs none of my other add-ons.
 
