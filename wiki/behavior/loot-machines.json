@@ -46,7 +46,7 @@
     ],
     "featureId": "vm:machine_loot_overworld",
     "id": "vm:machine_loot_overworld/upgrade",
-    "text": "Use an Upgrade Kit on the base to lower its prices until the machine is broken. Survival consumes the kit once; using a kit on an already upgraded machine costs nothing."
+    "text": "Use an Upgrade Kit on the base to cut its prices by about 30% until the machine is broken. Survival consumes the kit once; using a kit on an already upgraded machine costs nothing."
   },
   {
     "evidence": [
@@ -95,7 +95,7 @@
     ],
     "featureId": "vm:machine_loot_nether",
     "id": "vm:machine_loot_nether/upgrade",
-    "text": "Use an Upgrade Kit on the base to lower its prices until the machine is broken. Survival consumes the kit once; using a kit on an already upgraded machine costs nothing."
+    "text": "Use an Upgrade Kit on the base to cut its prices by about 30% until the machine is broken. Survival consumes the kit once; using a kit on an already upgraded machine costs nothing."
   },
   {
     "evidence": [
@@ -144,7 +144,7 @@
     ],
     "featureId": "vm:machine_loot_trial",
     "id": "vm:machine_loot_trial/upgrade",
-    "text": "Use an Upgrade Kit on the base to lower its prices until the machine is broken. Survival consumes the kit once; using a kit on an already upgraded machine costs nothing."
+    "text": "Use an Upgrade Kit on the base to cut its prices by about 30% until the machine is broken. Survival consumes the kit once; using a kit on an already upgraded machine costs nothing."
   },
   {
     "evidence": [
@@ -193,7 +193,7 @@
     ],
     "featureId": "vm:machine_loot_end",
     "id": "vm:machine_loot_end/upgrade",
-    "text": "Use an Upgrade Kit on the base to lower its prices until the machine is broken. Survival consumes the kit once; using a kit on an already upgraded machine costs nothing."
+    "text": "Use an Upgrade Kit on the base to cut its prices by about 30% until the machine is broken. Survival consumes the kit once; using a kit on an already upgraded machine costs nothing."
   },
   {
     "evidence": [

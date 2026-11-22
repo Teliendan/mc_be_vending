@@ -28,7 +28,7 @@
     ],
     "featureId": "vm:upgrade_kit",
     "id": "vm:upgrade_kit/use",
-    "text": "Use on the base of a machine to upgrade it. Villager machine prices fall by 30%, with a minimum cost of one; wandering and shulker machines use their own improved prices."
+    "text": "Use on the base of a machine to upgrade it. Its prices fall by about 30%, with a minimum cost of one. The Wandering Trader Machine also pays more for the goods it buys."
   },
   {
     "evidence": [
@@ -120,7 +120,7 @@
     ],
     "featureId": "vm:machine_shulker",
     "id": "vm:machine_shulker/upgrade",
-    "text": "Use an Upgrade Kit on the base to improve its prices until the machine is broken. Survival consumes the kit once; using a kit on an already upgraded machine costs nothing."
+    "text": "Use an Upgrade Kit on the base to cut its prices by about 30% until the machine is broken. Survival consumes the kit once; using a kit on an already upgraded machine costs nothing."
   },
   {
     "evidence": [
@@ -193,7 +193,7 @@
     ],
     "featureId": "vm:machine_armorer",
     "id": "vm:machine_armorer/upgrade",
-    "text": "Use an Upgrade Kit on the base to improve its prices until the machine is broken. Survival consumes the kit once; using a kit on an already upgraded machine costs nothing."
+    "text": "Use an Upgrade Kit on the base to cut its prices by about 30% until the machine is broken. Survival consumes the kit once; using a kit on an already upgraded machine costs nothing."
   },
   {
     "evidence": [
@@ -266,7 +266,7 @@
     ],
     "featureId": "vm:machine_butcher",
     "id": "vm:machine_butcher/upgrade",
-    "text": "Use an Upgrade Kit on the base to improve its prices until the machine is broken. Survival consumes the kit once; using a kit on an already upgraded machine costs nothing."
+    "text": "Use an Upgrade Kit on the base to cut its prices by about 30% until the machine is broken. Survival consumes the kit once; using a kit on an already upgraded machine costs nothing."
   },
   {
     "evidence": [
@@ -339,7 +339,7 @@
     ],
     "featureId": "vm:machine_cartographer",
     "id": "vm:machine_cartographer/upgrade",
-    "text": "Use an Upgrade Kit on the base to improve its prices until the machine is broken. Survival consumes the kit once; using a kit on an already upgraded machine costs nothing."
+    "text": "Use an Upgrade Kit on the base to cut its prices by about 30% until the machine is broken. Survival consumes the kit once; using a kit on an already upgraded machine costs nothing."
   },
   {
     "evidence": [
@@ -412,7 +412,7 @@
     ],
     "featureId": "vm:machine_cleric",
     "id": "vm:machine_cleric/upgrade",
-    "text": "Use an Upgrade Kit on the base to improve its prices until the machine is broken. Survival consumes the kit once; using a kit on an already upgraded machine costs nothing."
+    "text": "Use an Upgrade Kit on the base to cut its prices by about 30% until the machine is broken. Survival consumes the kit once; using a kit on an already upgraded machine costs nothing."
   },
   {
     "evidence": [
@@ -485,7 +485,7 @@
     ],
     "featureId": "vm:machine_farmer",
     "id": "vm:machine_farmer/upgrade",
-    "text": "Use an Upgrade Kit on the base to improve its prices until the machine is broken. Survival consumes the kit once; using a kit on an already upgraded machine costs nothing."
+    "text": "Use an Upgrade Kit on the base to cut its prices by about 30% until the machine is broken. Survival consumes the kit once; using a kit on an already upgraded machine costs nothing."
   },
   {
     "evidence": [
@@ -558,7 +558,7 @@
     ],
     "featureId": "vm:machine_fisherman",
     "id": "vm:machine_fisherman/upgrade",
-    "text": "Use an Upgrade Kit on the base to improve its prices until the machine is broken. Survival consumes the kit once; using a kit on an already upgraded machine costs nothing."
+    "text": "Use an Upgrade Kit on the base to cut its prices by about 30% until the machine is broken. Survival consumes the kit once; using a kit on an already upgraded machine costs nothing."
   },
   {
     "evidence": [
@@ -631,7 +631,7 @@
     ],
     "featureId": "vm:machine_fletcher",
     "id": "vm:machine_fletcher/upgrade",
-    "text": "Use an Upgrade Kit on the base to improve its prices until the machine is broken. Survival consumes the kit once; using a kit on an already upgraded machine costs nothing."
+    "text": "Use an Upgrade Kit on the base to cut its prices by about 30% until the machine is broken. Survival consumes the kit once; using a kit on an already upgraded machine costs nothing."
   },
   {
     "evidence": [
@@ -704,7 +704,7 @@
     ],
     "featureId": "vm:machine_leather_worker",
     "id": "vm:machine_leather_worker/upgrade",
-    "text": "Use an Upgrade Kit on the base to improve its prices until the machine is broken. Survival consumes the kit once; using a kit on an already upgraded machine costs nothing."
+    "text": "Use an Upgrade Kit on the base to cut its prices by about 30% until the machine is broken. Survival consumes the kit once; using a kit on an already upgraded machine costs nothing."
   },
   {
     "evidence": [
@@ -777,7 +777,7 @@
     ],
     "featureId": "vm:machine_librarian",
     "id": "vm:machine_librarian/upgrade",
-    "text": "Use an Upgrade Kit on the base to improve its prices until the machine is broken. Survival consumes the kit once; using a kit on an already upgraded machine costs nothing."
+    "text": "Use an Upgrade Kit on the base to cut its prices by about 30% until the machine is broken. Survival consumes the kit once; using a kit on an already upgraded machine costs nothing."
   },
   {
     "evidence": [
@@ -850,7 +850,7 @@
     ],
     "featureId": "vm:machine_shepherd",
     "id": "vm:machine_shepherd/upgrade",
-    "text": "Use an Upgrade Kit on the base to improve its prices until the machine is broken. Survival consumes the kit once; using a kit on an already upgraded machine costs nothing."
+    "text": "Use an Upgrade Kit on the base to cut its prices by about 30% until the machine is broken. Survival consumes the kit once; using a kit on an already upgraded machine costs nothing."
   },
   {
     "evidence": [
@@ -923,7 +923,7 @@
     ],
     "featureId": "vm:machine_stone_mason",
     "id": "vm:machine_stone_mason/upgrade",
-    "text": "Use an Upgrade Kit on the base to improve its prices until the machine is broken. Survival consumes the kit once; using a kit on an already upgraded machine costs nothing."
+    "text": "Use an Upgrade Kit on the base to cut its prices by about 30% until the machine is broken. Survival consumes the kit once; using a kit on an already upgraded machine costs nothing."
   },
   {
     "evidence": [
@@ -996,7 +996,7 @@
     ],
     "featureId": "vm:machine_tool_smith",
     "id": "vm:machine_tool_smith/upgrade",
-    "text": "Use an Upgrade Kit on the base to improve its prices until the machine is broken. Survival consumes the kit once; using a kit on an already upgraded machine costs nothing."
+    "text": "Use an Upgrade Kit on the base to cut its prices by about 30% until the machine is broken. Survival consumes the kit once; using a kit on an already upgraded machine costs nothing."
   },
   {
     "evidence": [
@@ -1069,7 +1069,7 @@
     ],
     "featureId": "vm:machine_weapon_smith",
     "id": "vm:machine_weapon_smith/upgrade",
-    "text": "Use an Upgrade Kit on the base to improve its prices until the machine is broken. Survival consumes the kit once; using a kit on an already upgraded machine costs nothing."
+    "text": "Use an Upgrade Kit on the base to cut its prices by about 30% until the machine is broken. Survival consumes the kit once; using a kit on an already upgraded machine costs nothing."
   },
   {
     "evidence": [
@@ -1142,6 +1142,6 @@
     ],
     "featureId": "vm:machine_wandering_trader",
     "id": "vm:machine_wandering_trader/upgrade",
-    "text": "Use an Upgrade Kit on the base to improve its prices until the machine is broken. Survival consumes the kit once; using a kit on an already upgraded machine costs nothing."
+    "text": "Use an Upgrade Kit on the base to cut its prices by about 30% and raise what it pays for goods, until the machine is broken. Survival consumes the kit once; using a kit on an already upgraded machine costs nothing."
   }
 ]
