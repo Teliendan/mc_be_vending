@@ -1,0 +1,1635 @@
+{
+ "schema": 1,
+ "rp": "vending_rp",
+ "palettes": {
+  "STEEL": [
+   "#292f36",
+   "#414b54",
+   "#5d6b75",
+   "#88959b",
+   "#afbbb9"
+  ],
+  "GOLD": [
+   "#97612c",
+   "#ca963e",
+   "#efd25b",
+   "#fff09b"
+  ],
+  "EMERALD": [
+   "#15553c",
+   "#228353",
+   "#44bd72",
+   "#a1e498"
+  ],
+  "GLASS": [
+   "#182027",
+   "#222e36",
+   "#30414a",
+   "#425962"
+  ]
+ },
+ "textures": {
+  "blocks/vm_machine_body": {
+   "regions": [
+    {
+     "select": {
+      "palette": "GLASS"
+     },
+     "like": "blocks/glass"
+    },
+    {
+     "select": {
+      "palette": "GOLD"
+     },
+     "like": "blocks/gold_block"
+    },
+    {
+     "select": {
+      "palette": "EMERALD",
+      "rect": [
+       2,
+       2,
+       14,
+       14
+      ]
+     },
+     "like": "blocks/emerald_block",
+     "emissive": {
+      "like": "blocks/vault_side_on",
+      "like_select": "mers:E>0"
+     }
+    },
+    {
+     "select": "rest",
+     "like": "blocks/vault_side_off"
+    }
+   ]
+  },
+  "blocks/vm_machine_top": {
+   "regions": [
+    {
+     "select": {
+      "palette": "GLASS"
+     },
+     "like": "blocks/glass"
+    },
+    {
+     "select": {
+      "palette": "GOLD"
+     },
+     "like": "blocks/gold_block"
+    },
+    {
+     "select": {
+      "palette": "EMERALD",
+      "rect": [
+       2,
+       2,
+       14,
+       14
+      ]
+     },
+     "like": "blocks/emerald_block",
+     "emissive": {
+      "like": "blocks/vault_side_on",
+      "like_select": "mers:E>0"
+     }
+    },
+    {
+     "select": "rest",
+     "like": "blocks/vault_top"
+    }
+   ]
+  },
+  "blocks/vm_machine_body_upgraded": {
+   "regions": [
+    {
+     "select": {
+      "palette": "GOLD"
+     },
+     "like": "blocks/gold_block"
+    },
+    {
+     "select": {
+      "palette": "EMERALD",
+      "rect": [
+       2,
+       2,
+       14,
+       14
+      ]
+     },
+     "like": "blocks/emerald_block",
+     "emissive": {
+      "like": "blocks/vault_side_on",
+      "like_select": "mers:E>0"
+     }
+    },
+    {
+     "select": {
+      "palette": "EMERALD"
+     },
+     "like": "blocks/emerald_block"
+    },
+    {
+     "select": "rest",
+     "like": "blocks/vault_side_off"
+    }
+   ]
+  },
+  "blocks/vm_machine_top_upgraded": {
+   "regions": [
+    {
+     "select": {
+      "palette": "GLASS"
+     },
+     "like": "blocks/glass"
+    },
+    {
+     "select": {
+      "palette": "GOLD"
+     },
+     "like": "blocks/gold_block"
+    },
+    {
+     "select": {
+      "palette": "EMERALD",
+      "rect": [
+       2,
+       2,
+       14,
+       14
+      ]
+     },
+     "like": "blocks/emerald_block",
+     "emissive": {
+      "like": "blocks/vault_side_on",
+      "like_select": "mers:E>0"
+     }
+    },
+    {
+     "select": {
+      "palette": "EMERALD"
+     },
+     "like": "blocks/emerald_block"
+    },
+    {
+     "select": "rest",
+     "like": "blocks/vault_top"
+    }
+   ]
+  },
+  "blocks/vm_machine_head_armorer": {
+   "regions": [
+    {
+     "select": {
+      "rect": [
+       1,
+       1,
+       15,
+       15
+      ]
+     },
+     "copy": "items/iron_chestplate",
+     "at": [
+      0,
+      0
+     ]
+    },
+    {
+     "select": {
+      "palette": "GLASS"
+     },
+     "like": "blocks/glass"
+    },
+    {
+     "select": {
+      "palette": "GOLD"
+     },
+     "like": "blocks/gold_block"
+    },
+    {
+     "select": "rest",
+     "like": "blocks/vault_side_off"
+    }
+   ]
+  },
+  "blocks/vm_machine_head_armorer_upgraded": {
+   "regions": [
+    {
+     "select": {
+      "rect": [
+       1,
+       1,
+       15,
+       15
+      ]
+     },
+     "copy": "items/iron_chestplate",
+     "at": [
+      0,
+      0
+     ]
+    },
+    {
+     "select": {
+      "palette": "GLASS"
+     },
+     "like": "blocks/glass"
+    },
+    {
+     "select": {
+      "palette": "GOLD"
+     },
+     "like": "blocks/gold_block"
+    },
+    {
+     "select": {
+      "palette": "EMERALD"
+     },
+     "like": "blocks/emerald_block"
+    },
+    {
+     "select": "rest",
+     "like": "blocks/vault_side_off"
+    }
+   ]
+  },
+  "blocks/vm_machine_head_butcher": {
+   "regions": [
+    {
+     "select": {
+      "rect": [
+       1,
+       1,
+       15,
+       15
+      ]
+     },
+     "copy": "items/porkchop_cooked",
+     "at": [
+      -1,
+      -1
+     ]
+    },
+    {
+     "select": {
+      "palette": "GLASS"
+     },
+     "like": "blocks/glass"
+    },
+    {
+     "select": {
+      "palette": "GOLD"
+     },
+     "like": "blocks/gold_block"
+    },
+    {
+     "select": "rest",
+     "like": "blocks/vault_side_off"
+    }
+   ]
+  },
+  "blocks/vm_machine_head_butcher_upgraded": {
+   "regions": [
+    {
+     "select": {
+      "rect": [
+       1,
+       1,
+       15,
+       15
+      ]
+     },
+     "copy": "items/porkchop_cooked",
+     "at": [
+      -1,
+      -1
+     ]
+    },
+    {
+     "select": {
+      "palette": "GLASS"
+     },
+     "like": "blocks/glass"
+    },
+    {
+     "select": {
+      "palette": "GOLD"
+     },
+     "like": "blocks/gold_block"
+    },
+    {
+     "select": {
+      "palette": "EMERALD"
+     },
+     "like": "blocks/emerald_block"
+    },
+    {
+     "select": "rest",
+     "like": "blocks/vault_side_off"
+    }
+   ]
+  },
+  "blocks/vm_machine_head_cartographer": {
+   "regions": [
+    {
+     "select": {
+      "rect": [
+       1,
+       1,
+       15,
+       15
+      ]
+     },
+     "copy": "items/map_empty",
+     "at": [
+      0,
+      0
+     ]
+    },
+    {
+     "select": {
+      "palette": "GLASS"
+     },
+     "like": "blocks/glass"
+    },
+    {
+     "select": {
+      "palette": "GOLD"
+     },
+     "like": "blocks/gold_block"
+    },
+    {
+     "select": "rest",
+     "like": "blocks/vault_side_off"
+    }
+   ]
+  },
+  "blocks/vm_machine_head_cartographer_upgraded": {
+   "regions": [
+    {
+     "select": {
+      "rect": [
+       1,
+       1,
+       15,
+       15
+      ]
+     },
+     "copy": "items/map_empty",
+     "at": [
+      0,
+      0
+     ]
+    },
+    {
+     "select": {
+      "palette": "GOLD"
+     },
+     "like": "blocks/gold_block"
+    },
+    {
+     "select": {
+      "palette": "EMERALD"
+     },
+     "like": "blocks/emerald_block"
+    },
+    {
+     "select": "rest",
+     "like": "blocks/vault_side_off"
+    }
+   ]
+  },
+  "blocks/vm_machine_head_cleric": {
+   "regions": [
+    {
+     "select": {
+      "rect": [
+       1,
+       1,
+       15,
+       15
+      ]
+     },
+     "copy": "items/ender_pearl",
+     "at": [
+      0,
+      0
+     ]
+    },
+    {
+     "select": {
+      "palette": "GLASS"
+     },
+     "like": "blocks/glass"
+    },
+    {
+     "select": {
+      "palette": "GOLD"
+     },
+     "like": "blocks/gold_block"
+    },
+    {
+     "select": "rest",
+     "like": "blocks/vault_side_off"
+    }
+   ]
+  },
+  "blocks/vm_machine_head_cleric_upgraded": {
+   "regions": [
+    {
+     "select": {
+      "rect": [
+       1,
+       1,
+       15,
+       15
+      ]
+     },
+     "copy": "items/ender_pearl",
+     "at": [
+      0,
+      0
+     ]
+    },
+    {
+     "select": {
+      "palette": "GLASS"
+     },
+     "like": "blocks/glass"
+    },
+    {
+     "select": {
+      "palette": "GOLD"
+     },
+     "like": "blocks/gold_block"
+    },
+    {
+     "select": {
+      "palette": "EMERALD"
+     },
+     "like": "blocks/emerald_block"
+    },
+    {
+     "select": "rest",
+     "like": "blocks/vault_side_off"
+    }
+   ]
+  },
+  "blocks/vm_machine_head_farmer": {
+   "regions": [
+    {
+     "select": {
+      "rect": [
+       1,
+       1,
+       15,
+       15
+      ]
+     },
+     "copy": "items/bread",
+     "at": [
+      0,
+      0
+     ]
+    },
+    {
+     "select": {
+      "palette": "GLASS"
+     },
+     "like": "blocks/glass"
+    },
+    {
+     "select": {
+      "palette": "GOLD"
+     },
+     "like": "blocks/gold_block"
+    },
+    {
+     "select": "rest",
+     "like": "blocks/vault_side_off"
+    }
+   ]
+  },
+  "blocks/vm_machine_head_farmer_upgraded": {
+   "regions": [
+    {
+     "select": {
+      "rect": [
+       1,
+       1,
+       15,
+       15
+      ]
+     },
+     "copy": "items/bread",
+     "at": [
+      0,
+      0
+     ]
+    },
+    {
+     "select": {
+      "palette": "GLASS"
+     },
+     "like": "blocks/glass"
+    },
+    {
+     "select": {
+      "palette": "GOLD"
+     },
+     "like": "blocks/gold_block"
+    },
+    {
+     "select": {
+      "palette": "EMERALD"
+     },
+     "like": "blocks/emerald_block"
+    },
+    {
+     "select": "rest",
+     "like": "blocks/vault_side_off"
+    }
+   ]
+  },
+  "blocks/vm_machine_head_fisherman": {
+   "regions": [
+    {
+     "select": {
+      "rect": [
+       1,
+       1,
+       15,
+       15
+      ]
+     },
+     "copy": "items/fishing_rod_uncast",
+     "at": [
+      -1,
+      0
+     ]
+    },
+    {
+     "select": {
+      "palette": "GLASS"
+     },
+     "like": "blocks/glass"
+    },
+    {
+     "select": {
+      "palette": "GOLD"
+     },
+     "like": "blocks/gold_block"
+    },
+    {
+     "select": "rest",
+     "like": "blocks/vault_side_off"
+    }
+   ]
+  },
+  "blocks/vm_machine_head_fisherman_upgraded": {
+   "regions": [
+    {
+     "select": {
+      "rect": [
+       1,
+       1,
+       15,
+       15
+      ]
+     },
+     "copy": "items/fishing_rod_uncast",
+     "at": [
+      -1,
+      0
+     ]
+    },
+    {
+     "select": {
+      "palette": "GLASS"
+     },
+     "like": "blocks/glass"
+    },
+    {
+     "select": {
+      "palette": "GOLD"
+     },
+     "like": "blocks/gold_block"
+    },
+    {
+     "select": {
+      "palette": "EMERALD"
+     },
+     "like": "blocks/emerald_block"
+    },
+    {
+     "select": "rest",
+     "like": "blocks/vault_side_off"
+    }
+   ]
+  },
+  "blocks/vm_machine_head_fletcher": {
+   "regions": [
+    {
+     "select": {
+      "rect": [
+       1,
+       1,
+       15,
+       15
+      ]
+     },
+     "copy": "items/arrow",
+     "at": [
+      -1,
+      0
+     ]
+    },
+    {
+     "select": {
+      "palette": "GLASS"
+     },
+     "like": "blocks/glass"
+    },
+    {
+     "select": {
+      "palette": "GOLD"
+     },
+     "like": "blocks/gold_block"
+    },
+    {
+     "select": "rest",
+     "like": "blocks/vault_side_off"
+    }
+   ]
+  },
+  "blocks/vm_machine_head_fletcher_upgraded": {
+   "regions": [
+    {
+     "select": {
+      "rect": [
+       1,
+       1,
+       15,
+       15
+      ]
+     },
+     "copy": "items/arrow",
+     "at": [
+      -1,
+      0
+     ]
+    },
+    {
+     "select": {
+      "palette": "GLASS"
+     },
+     "like": "blocks/glass"
+    },
+    {
+     "select": {
+      "palette": "GOLD"
+     },
+     "like": "blocks/gold_block"
+    },
+    {
+     "select": {
+      "palette": "EMERALD"
+     },
+     "like": "blocks/emerald_block"
+    },
+    {
+     "select": "rest",
+     "like": "blocks/vault_side_off"
+    }
+   ]
+  },
+  "blocks/vm_machine_head_leather_worker": {
+   "regions": [
+    {
+     "select": {
+      "rect": [
+       1,
+       1,
+       15,
+       15
+      ]
+     },
+     "copy": "items/leather_chestplate",
+     "at": [
+      0,
+      0
+     ],
+     "match": "alpha"
+    },
+    {
+     "select": {
+      "palette": "GLASS"
+     },
+     "like": "blocks/glass"
+    },
+    {
+     "select": {
+      "palette": "GOLD"
+     },
+     "like": "blocks/gold_block"
+    },
+    {
+     "select": "rest",
+     "like": "blocks/vault_side_off"
+    }
+   ]
+  },
+  "blocks/vm_machine_head_leather_worker_upgraded": {
+   "regions": [
+    {
+     "select": {
+      "rect": [
+       1,
+       1,
+       15,
+       15
+      ]
+     },
+     "copy": "items/leather_chestplate",
+     "at": [
+      0,
+      0
+     ],
+     "match": "alpha"
+    },
+    {
+     "select": {
+      "palette": "GLASS"
+     },
+     "like": "blocks/glass"
+    },
+    {
+     "select": {
+      "palette": "GOLD"
+     },
+     "like": "blocks/gold_block"
+    },
+    {
+     "select": {
+      "palette": "EMERALD"
+     },
+     "like": "blocks/emerald_block"
+    },
+    {
+     "select": "rest",
+     "like": "blocks/vault_side_off"
+    }
+   ]
+  },
+  "blocks/vm_machine_head_librarian": {
+   "regions": [
+    {
+     "select": {
+      "rect": [
+       1,
+       1,
+       15,
+       15
+      ]
+     },
+     "copy": "items/book_normal",
+     "at": [
+      0,
+      0
+     ]
+    },
+    {
+     "select": {
+      "palette": "GLASS"
+     },
+     "like": "blocks/glass"
+    },
+    {
+     "select": {
+      "palette": "GOLD"
+     },
+     "like": "blocks/gold_block"
+    },
+    {
+     "select": "rest",
+     "like": "blocks/vault_side_off"
+    }
+   ]
+  },
+  "blocks/vm_machine_head_librarian_upgraded": {
+   "regions": [
+    {
+     "select": {
+      "rect": [
+       1,
+       1,
+       15,
+       15
+      ]
+     },
+     "copy": "items/book_normal",
+     "at": [
+      0,
+      0
+     ]
+    },
+    {
+     "select": {
+      "palette": "GLASS"
+     },
+     "like": "blocks/glass"
+    },
+    {
+     "select": {
+      "palette": "GOLD"
+     },
+     "like": "blocks/gold_block"
+    },
+    {
+     "select": {
+      "palette": "EMERALD"
+     },
+     "like": "blocks/emerald_block"
+    },
+    {
+     "select": "rest",
+     "like": "blocks/vault_side_off"
+    }
+   ]
+  },
+  "blocks/vm_machine_head_loot_end": {
+   "regions": [
+    {
+     "select": {
+      "rect": [
+       1,
+       1,
+       15,
+       15
+      ]
+     },
+     "copy": "items/nether_star",
+     "at": [
+      0,
+      0
+     ]
+    },
+    {
+     "select": {
+      "palette": "GLASS"
+     },
+     "like": "blocks/glass"
+    },
+    {
+     "select": {
+      "palette": "GOLD"
+     },
+     "like": "blocks/gold_block"
+    },
+    {
+     "select": "rest",
+     "like": "blocks/vault_side_off"
+    }
+   ]
+  },
+  "blocks/vm_machine_head_loot_end_upgraded": {
+   "regions": [
+    {
+     "select": {
+      "rect": [
+       1,
+       1,
+       15,
+       15
+      ]
+     },
+     "copy": "items/nether_star",
+     "at": [
+      0,
+      0
+     ]
+    },
+    {
+     "select": {
+      "palette": "GLASS"
+     },
+     "like": "blocks/glass"
+    },
+    {
+     "select": {
+      "palette": "GOLD"
+     },
+     "like": "blocks/gold_block"
+    },
+    {
+     "select": {
+      "palette": "EMERALD"
+     },
+     "like": "blocks/emerald_block"
+    },
+    {
+     "select": "rest",
+     "like": "blocks/vault_side_off"
+    }
+   ]
+  },
+  "blocks/vm_machine_head_loot_nether": {
+   "regions": [
+    {
+     "select": {
+      "rect": [
+       1,
+       1,
+       15,
+       15
+      ]
+     },
+     "copy": "items/blaze_rod",
+     "at": [
+      0,
+      0
+     ]
+    },
+    {
+     "select": {
+      "palette": "GLASS"
+     },
+     "like": "blocks/glass"
+    },
+    {
+     "select": {
+      "palette": "GOLD"
+     },
+     "like": "blocks/gold_block"
+    },
+    {
+     "select": "rest",
+     "like": "blocks/vault_side_off"
+    }
+   ]
+  },
+  "blocks/vm_machine_head_loot_nether_upgraded": {
+   "regions": [
+    {
+     "select": {
+      "rect": [
+       1,
+       1,
+       15,
+       15
+      ]
+     },
+     "copy": "items/blaze_rod",
+     "at": [
+      0,
+      0
+     ]
+    },
+    {
+     "select": {
+      "palette": "GLASS"
+     },
+     "like": "blocks/glass"
+    },
+    {
+     "select": {
+      "palette": "GOLD"
+     },
+     "like": "blocks/gold_block"
+    },
+    {
+     "select": {
+      "palette": "EMERALD"
+     },
+     "like": "blocks/emerald_block"
+    },
+    {
+     "select": "rest",
+     "like": "blocks/vault_side_off"
+    }
+   ]
+  },
+  "blocks/vm_machine_head_loot_overworld": {
+   "regions": [
+    {
+     "select": {
+      "rect": [
+       1,
+       1,
+       15,
+       15
+      ]
+     },
+     "copy": "items/bone",
+     "at": [
+      0,
+      0
+     ]
+    },
+    {
+     "select": {
+      "palette": "GLASS"
+     },
+     "like": "blocks/glass"
+    },
+    {
+     "select": {
+      "palette": "GOLD"
+     },
+     "like": "blocks/gold_block"
+    },
+    {
+     "select": "rest",
+     "like": "blocks/vault_side_off"
+    }
+   ]
+  },
+  "blocks/vm_machine_head_loot_overworld_upgraded": {
+   "regions": [
+    {
+     "select": {
+      "rect": [
+       1,
+       1,
+       15,
+       15
+      ]
+     },
+     "copy": "items/bone",
+     "at": [
+      0,
+      0
+     ]
+    },
+    {
+     "select": {
+      "palette": "GLASS"
+     },
+     "like": "blocks/glass"
+    },
+    {
+     "select": {
+      "palette": "GOLD"
+     },
+     "like": "blocks/gold_block"
+    },
+    {
+     "select": {
+      "palette": "EMERALD"
+     },
+     "like": "blocks/emerald_block"
+    },
+    {
+     "select": "rest",
+     "like": "blocks/vault_side_off"
+    }
+   ]
+  },
+  "blocks/vm_machine_head_loot_trial": {
+   "regions": [
+    {
+     "select": {
+      "rect": [
+       1,
+       1,
+       15,
+       15
+      ]
+     },
+     "copy": "items/breeze_rod",
+     "at": [
+      0,
+      0
+     ]
+    },
+    {
+     "select": {
+      "palette": "GLASS"
+     },
+     "like": "blocks/glass"
+    },
+    {
+     "select": {
+      "palette": "GOLD"
+     },
+     "like": "blocks/gold_block"
+    },
+    {
+     "select": "rest",
+     "like": "blocks/vault_side_off"
+    }
+   ]
+  },
+  "blocks/vm_machine_head_loot_trial_upgraded": {
+   "regions": [
+    {
+     "select": {
+      "rect": [
+       1,
+       1,
+       15,
+       15
+      ]
+     },
+     "copy": "items/breeze_rod",
+     "at": [
+      0,
+      0
+     ]
+    },
+    {
+     "select": {
+      "palette": "GLASS"
+     },
+     "like": "blocks/glass"
+    },
+    {
+     "select": {
+      "palette": "GOLD"
+     },
+     "like": "blocks/gold_block"
+    },
+    {
+     "select": {
+      "palette": "EMERALD"
+     },
+     "like": "blocks/emerald_block"
+    },
+    {
+     "select": "rest",
+     "like": "blocks/vault_side_off"
+    }
+   ]
+  },
+  "blocks/vm_machine_head_shepherd": {
+   "regions": [
+    {
+     "select": {
+      "rect": [
+       1,
+       1,
+       15,
+       15
+      ]
+     },
+     "copy": "blocks/wool_colored_white",
+     "at": [
+      0,
+      0
+     ]
+    },
+    {
+     "select": {
+      "palette": "GLASS"
+     },
+     "like": "blocks/glass"
+    },
+    {
+     "select": {
+      "palette": "GOLD"
+     },
+     "like": "blocks/gold_block"
+    },
+    {
+     "select": "rest",
+     "like": "blocks/vault_side_off"
+    }
+   ]
+  },
+  "blocks/vm_machine_head_shepherd_upgraded": {
+   "regions": [
+    {
+     "select": {
+      "rect": [
+       1,
+       1,
+       15,
+       15
+      ]
+     },
+     "copy": "blocks/wool_colored_white",
+     "at": [
+      0,
+      0
+     ]
+    },
+    {
+     "select": {
+      "palette": "GOLD"
+     },
+     "like": "blocks/gold_block"
+    },
+    {
+     "select": {
+      "palette": "EMERALD"
+     },
+     "like": "blocks/emerald_block"
+    },
+    {
+     "select": "rest",
+     "like": "blocks/vault_side_off"
+    }
+   ]
+  },
+  "blocks/vm_machine_head_shulker": {
+   "regions": [
+    {
+     "select": {
+      "palette": "GLASS"
+     },
+     "like": "blocks/glass"
+    },
+    {
+     "select": {
+      "palette": "GOLD"
+     },
+     "like": "blocks/gold_block"
+    },
+    {
+     "select": {
+      "palette": "STEEL"
+     },
+     "like": "blocks/vault_side_off"
+    },
+    {
+     "select": "rest",
+     "like": "items/shulker_shell"
+    }
+   ]
+  },
+  "blocks/vm_machine_head_shulker_upgraded": {
+   "regions": [
+    {
+     "select": {
+      "palette": "GLASS"
+     },
+     "like": "blocks/glass"
+    },
+    {
+     "select": {
+      "palette": "GOLD"
+     },
+     "like": "blocks/gold_block"
+    },
+    {
+     "select": {
+      "palette": "EMERALD"
+     },
+     "like": "blocks/emerald_block"
+    },
+    {
+     "select": {
+      "palette": "STEEL"
+     },
+     "like": "blocks/vault_side_off"
+    },
+    {
+     "select": "rest",
+     "like": "items/shulker_shell"
+    }
+   ]
+  },
+  "blocks/vm_machine_head_stone_mason": {
+   "regions": [
+    {
+     "select": {
+      "rect": [
+       1,
+       1,
+       15,
+       15
+      ]
+     },
+     "copy": "items/brick",
+     "at": [
+      0,
+      0
+     ]
+    },
+    {
+     "select": {
+      "palette": "GLASS"
+     },
+     "like": "blocks/glass"
+    },
+    {
+     "select": {
+      "palette": "GOLD"
+     },
+     "like": "blocks/gold_block"
+    },
+    {
+     "select": "rest",
+     "like": "blocks/vault_side_off"
+    }
+   ]
+  },
+  "blocks/vm_machine_head_stone_mason_upgraded": {
+   "regions": [
+    {
+     "select": {
+      "rect": [
+       1,
+       1,
+       15,
+       15
+      ]
+     },
+     "copy": "items/brick",
+     "at": [
+      0,
+      0
+     ]
+    },
+    {
+     "select": {
+      "palette": "GLASS"
+     },
+     "like": "blocks/glass"
+    },
+    {
+     "select": {
+      "palette": "GOLD"
+     },
+     "like": "blocks/gold_block"
+    },
+    {
+     "select": {
+      "palette": "EMERALD"
+     },
+     "like": "blocks/emerald_block"
+    },
+    {
+     "select": "rest",
+     "like": "blocks/vault_side_off"
+    }
+   ]
+  },
+  "blocks/vm_machine_head_tool_smith": {
+   "regions": [
+    {
+     "select": {
+      "rect": [
+       1,
+       1,
+       15,
+       15
+      ]
+     },
+     "copy": "items/iron_pickaxe",
+     "at": [
+      -1,
+      0
+     ]
+    },
+    {
+     "select": {
+      "palette": "GLASS"
+     },
+     "like": "blocks/glass"
+    },
+    {
+     "select": {
+      "palette": "GOLD"
+     },
+     "like": "blocks/gold_block"
+    },
+    {
+     "select": "rest",
+     "like": "blocks/vault_side_off"
+    }
+   ]
+  },
+  "blocks/vm_machine_head_tool_smith_upgraded": {
+   "regions": [
+    {
+     "select": {
+      "rect": [
+       1,
+       1,
+       15,
+       15
+      ]
+     },
+     "copy": "items/iron_pickaxe",
+     "at": [
+      -1,
+      0
+     ]
+    },
+    {
+     "select": {
+      "palette": "GLASS"
+     },
+     "like": "blocks/glass"
+    },
+    {
+     "select": {
+      "palette": "GOLD"
+     },
+     "like": "blocks/gold_block"
+    },
+    {
+     "select": {
+      "palette": "EMERALD"
+     },
+     "like": "blocks/emerald_block"
+    },
+    {
+     "select": "rest",
+     "like": "blocks/vault_side_off"
+    }
+   ]
+  },
+  "blocks/vm_machine_head_wandering_trader": {
+   "regions": [
+    {
+     "select": {
+      "rect": [
+       1,
+       1,
+       15,
+       15
+      ]
+     },
+     "copy": "items/lead",
+     "at": [
+      -1,
+      0
+     ]
+    },
+    {
+     "select": {
+      "palette": "GLASS"
+     },
+     "like": "blocks/glass"
+    },
+    {
+     "select": {
+      "palette": "GOLD"
+     },
+     "like": "blocks/gold_block"
+    },
+    {
+     "select": "rest",
+     "like": "blocks/vault_side_off"
+    }
+   ]
+  },
+  "blocks/vm_machine_head_wandering_trader_upgraded": {
+   "regions": [
+    {
+     "select": {
+      "rect": [
+       1,
+       1,
+       15,
+       15
+      ]
+     },
+     "copy": "items/lead",
+     "at": [
+      -1,
+      0
+     ]
+    },
+    {
+     "select": {
+      "palette": "GLASS"
+     },
+     "like": "blocks/glass"
+    },
+    {
+     "select": {
+      "palette": "GOLD"
+     },
+     "like": "blocks/gold_block"
+    },
+    {
+     "select": {
+      "palette": "EMERALD"
+     },
+     "like": "blocks/emerald_block"
+    },
+    {
+     "select": "rest",
+     "like": "blocks/vault_side_off"
+    }
+   ]
+  },
+  "blocks/vm_machine_head_weapon_smith": {
+   "regions": [
+    {
+     "select": {
+      "rect": [
+       1,
+       1,
+       15,
+       15
+      ]
+     },
+     "copy": "items/iron_sword",
+     "at": [
+      0,
+      0
+     ]
+    },
+    {
+     "select": {
+      "palette": "GLASS"
+     },
+     "like": "blocks/glass"
+    },
+    {
+     "select": {
+      "palette": "GOLD"
+     },
+     "like": "blocks/gold_block"
+    },
+    {
+     "select": "rest",
+     "like": "blocks/vault_side_off"
+    }
+   ]
+  },
+  "blocks/vm_machine_head_weapon_smith_upgraded": {
+   "regions": [
+    {
+     "select": {
+      "rect": [
+       1,
+       1,
+       15,
+       15
+      ]
+     },
+     "copy": "items/iron_sword",
+     "at": [
+      0,
+      0
+     ]
+    },
+    {
+     "select": {
+      "palette": "GLASS"
+     },
+     "like": "blocks/glass"
+    },
+    {
+     "select": {
+      "palette": "GOLD"
+     },
+     "like": "blocks/gold_block"
+    },
+    {
+     "select": {
+      "palette": "EMERALD"
+     },
+     "like": "blocks/emerald_block"
+    },
+    {
+     "select": "rest",
+     "like": "blocks/vault_side_off"
+    }
+   ]
+  },
+  "items/vm_shulker_core": {
+   "regions": [
+    {
+     "select": {
+      "colors": [
+       "#c4cc60",
+       "#f6f096"
+      ]
+     },
+     "like": "items/glow_berries",
+     "like_select": "mers:E>0"
+    },
+    {
+     "select": "rest",
+     "like": "items/shulker_shell"
+    }
+   ]
+  },
+  "items/vm_upgrade_kit": {
+   "regions": [
+    {
+     "select": {
+      "hue": [
+       110,
+       170
+      ],
+      "sat_min": 0.3
+     },
+     "like": "items/emerald"
+    },
+    {
+     "select": "rest",
+     "like": "items/gold_ingot"
+    }
+   ]
+  }
+ }
+}

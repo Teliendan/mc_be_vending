@@ -16,6 +16,7 @@ Craftable machines that trade like villagers and the wandering trader, or sell s
 - **Crafting:** each machine takes three emerald blocks, two iron blocks, two gold blocks and two items of its own; a villager machine uses its profession's workstation and the good it shows in its window.
 - **Building around it:** a machine is two blocks tall. Crouch and aim at the upper block to place blocks or attach torches to it; stand up to trade. In Survival, any tool or your hand breaks it and gives the machine back.
 - **Pick your packs:** Core plus one small pack per machine family (Villagers, Wandering Trader, Shulker, Loot). Turn on only the ones you want.
+- **Vibrant Visuals:** with Vibrant Visuals on, the machines have shiny steel, gold trim and glass, and their small emerald lights glow.
 - **Languages:** English, Czech, German, French, Polish, Spanish (Spain and Mexico) and Portuguese (Portugal and Brazil). The translations are AI drafts; corrections are welcome.
 
 ## Install

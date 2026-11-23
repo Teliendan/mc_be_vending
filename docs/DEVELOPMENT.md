@@ -52,6 +52,12 @@ the shared RP files are wrong until the whole order has run.
   into the Loot Machines' trade tables; suite `generated` runs `--check`. `gen_loot_wiki.py` writes their
   wiki records. See [peaceful-machine.md](peaceful-machine.md).
 - Art: `make_machine_textures.py`, `vm_make_upgraded_textures.py`, `make_pack_icon.py`.
+- PBR (Vibrant Visuals): `tools/pbr_spec.json` is the source of every `*.texture_set.json` and `*_mers.tga` in
+  `vending_rp/textures/` (chassis like the vanilla vault, gold trim like gold block, glass like vanilla glass, display
+  goods copy their vanilla item's MERS; emerald lights and the Shulker Core glow). Rebuild with
+  `python -I .claude/skills/bedrock-art/scripts/pbr_mers.py build mods/vending/tools/pbr_spec.json` from the workspace
+  root; **rerun it after any colour-texture change** (a moved good or a new colour breaks the selectors), and
+  `build ... --check` must report 0 differences. Do not edit the sets by hand.
 - `machine_catalog.py` is the shared source for the 13 villager machines' displayed
   goods and recipe signature ingredients. Accepted art and item choices:
   [GRAPHICS_CONCEPT.md](GRAPHICS_CONCEPT.md).
