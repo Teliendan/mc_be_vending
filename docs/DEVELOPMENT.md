@@ -54,7 +54,8 @@ the shared RP files are wrong until the whole order has run.
 - Art: `make_machine_textures.py`, `vm_make_upgraded_textures.py`, `make_pack_icon.py`.
 - PBR (Vibrant Visuals): `tools/pbr_spec.json` is the source of every `*.texture_set.json` and `*_mers.tga` in
   `vending_rp/textures/` (chassis like the vanilla vault, gold trim like gold block, glass like vanilla glass, display
-  goods copy their vanilla item's MERS; emerald lights and the Shulker Core glow). Rebuild with
+  goods copy their vanilla item's MERS with `"E": 0`; owner 2026-11-24: heads never glow, only the emerald
+  status lights on body/top and the Shulker Core). Rebuild with
   `python -I .claude/skills/bedrock-art/scripts/pbr_mers.py build mods/vending/tools/pbr_spec.json` from the workspace
   root; **rerun it after any colour-texture change** (a moved good or a new colour breaks the selectors), and
   `build ... --check` must report 0 differences. Do not edit the sets by hand.

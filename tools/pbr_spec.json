@@ -194,23 +194,27 @@
      "at": [
       0,
       0
-     ]
+     ],
+     "E": 0
     },
     {
      "select": {
       "palette": "GLASS"
      },
-     "like": "blocks/glass"
+     "like": "blocks/glass",
+     "E": 0
     },
     {
      "select": {
       "palette": "GOLD"
      },
-     "like": "blocks/gold_block"
+     "like": "blocks/gold_block",
+     "E": 0
     },
     {
      "select": "rest",
-     "like": "blocks/vault_side_off"
+     "like": "blocks/vault_side_off",
+     "E": 0
     }
    ]
   },
@@ -229,29 +233,34 @@
      "at": [
       0,
       0
-     ]
+     ],
+     "E": 0
     },
     {
      "select": {
       "palette": "GLASS"
      },
-     "like": "blocks/glass"
+     "like": "blocks/glass",
+     "E": 0
     },
     {
      "select": {
       "palette": "GOLD"
      },
-     "like": "blocks/gold_block"
+     "like": "blocks/gold_block",
+     "E": 0
     },
     {
      "select": {
       "palette": "EMERALD"
      },
-     "like": "blocks/emerald_block"
+     "like": "blocks/emerald_block",
+     "E": 0
     },
     {
      "select": "rest",
-     "like": "blocks/vault_side_off"
+     "like": "blocks/vault_side_off",
+     "E": 0
     }
    ]
   },
@@ -270,23 +279,27 @@
      "at": [
       -1,
       -1
-     ]
+     ],
+     "E": 0
     },
     {
      "select": {
       "palette": "GLASS"
      },
-     "like": "blocks/glass"
+     "like": "blocks/glass",
+     "E": 0
     },
     {
      "select": {
       "palette": "GOLD"
      },
-     "like": "blocks/gold_block"
+     "like": "blocks/gold_block",
+     "E": 0
     },
     {
      "select": "rest",
-     "like": "blocks/vault_side_off"
+     "like": "blocks/vault_side_off",
+     "E": 0
     }
    ]
   },
@@ -305,29 +318,34 @@
      "at": [
       -1,
       -1
-     ]
+     ],
+     "E": 0
     },
     {
      "select": {
       "palette": "GLASS"
      },
-     "like": "blocks/glass"
+     "like": "blocks/glass",
+     "E": 0
     },
     {
      "select": {
       "palette": "GOLD"
      },
-     "like": "blocks/gold_block"
+     "like": "blocks/gold_block",
+     "E": 0
     },
     {
      "select": {
       "palette": "EMERALD"
      },
-     "like": "blocks/emerald_block"
+     "like": "blocks/emerald_block",
+     "E": 0
     },
     {
      "select": "rest",
-     "like": "blocks/vault_side_off"
+     "like": "blocks/vault_side_off",
+     "E": 0
     }
    ]
   },
@@ -346,23 +364,27 @@
      "at": [
       0,
       0
-     ]
+     ],
+     "E": 0
     },
     {
      "select": {
       "palette": "GLASS"
      },
-     "like": "blocks/glass"
+     "like": "blocks/glass",
+     "E": 0
     },
     {
      "select": {
       "palette": "GOLD"
      },
-     "like": "blocks/gold_block"
+     "like": "blocks/gold_block",
+     "E": 0
     },
     {
      "select": "rest",
-     "like": "blocks/vault_side_off"
+     "like": "blocks/vault_side_off",
+     "E": 0
     }
    ]
   },
@@ -381,23 +403,27 @@
      "at": [
       0,
       0
-     ]
+     ],
+     "E": 0
     },
     {
      "select": {
       "palette": "GOLD"
      },
-     "like": "blocks/gold_block"
+     "like": "blocks/gold_block",
+     "E": 0
     },
     {
      "select": {
       "palette": "EMERALD"
      },
-     "like": "blocks/emerald_block"
+     "like": "blocks/emerald_block",
+     "E": 0
     },
     {
      "select": "rest",
-     "like": "blocks/vault_side_off"
+     "like": "blocks/vault_side_off",
+     "E": 0
     }
    ]
   },
@@ -416,23 +442,27 @@
      "at": [
       0,
       0
-     ]
+     ],
+     "E": 0
     },
     {
      "select": {
       "palette": "GLASS"
      },
-     "like": "blocks/glass"
+     "like": "blocks/glass",
+     "E": 0
     },
     {
      "select": {
       "palette": "GOLD"
      },
-     "like": "blocks/gold_block"
+     "like": "blocks/gold_block",
+     "E": 0
     },
     {
      "select": "rest",
-     "like": "blocks/vault_side_off"
+     "like": "blocks/vault_side_off",
+     "E": 0
     }
    ]
   },
@@ -451,29 +481,34 @@
      "at": [
       0,
       0
-     ]
+     ],
+     "E": 0
     },
     {
      "select": {
       "palette": "GLASS"
      },
-     "like": "blocks/glass"
+     "like": "blocks/glass",
+     "E": 0
     },
     {
      "select": {
       "palette": "GOLD"
      },
-     "like": "blocks/gold_block"
+     "like": "blocks/gold_block",
+     "E": 0
     },
     {
      "select": {
       "palette": "EMERALD"
      },
-     "like": "blocks/emerald_block"
+     "like": "blocks/emerald_block",
+     "E": 0
     },
     {
      "select": "rest",
-     "like": "blocks/vault_side_off"
+     "like": "blocks/vault_side_off",
+     "E": 0
     }
    ]
   },
@@ -492,23 +527,27 @@
      "at": [
       0,
       0
-     ]
+     ],
+     "E": 0
     },
     {
      "select": {
       "palette": "GLASS"
      },
-     "like": "blocks/glass"
+     "like": "blocks/glass",
+     "E": 0
     },
     {
      "select": {
       "palette": "GOLD"
      },
-     "like": "blocks/gold_block"
+     "like": "blocks/gold_block",
+     "E": 0
     },
     {
      "select": "rest",
-     "like": "blocks/vault_side_off"
+     "like": "blocks/vault_side_off",
+     "E": 0
     }
    ]
   },
@@ -527,29 +566,34 @@
      "at": [
       0,
       0
-     ]
+     ],
+     "E": 0
     },
     {
      "select": {
       "palette": "GLASS"
      },
-     "like": "blocks/glass"
+     "like": "blocks/glass",
+     "E": 0
     },
     {
      "select": {
       "palette": "GOLD"
      },
-     "like": "blocks/gold_block"
+     "like": "blocks/gold_block",
+     "E": 0
     },
     {
      "select": {
       "palette": "EMERALD"
      },
-     "like": "blocks/emerald_block"
+     "like": "blocks/emerald_block",
+     "E": 0
     },
     {
      "select": "rest",
-     "like": "blocks/vault_side_off"
+     "like": "blocks/vault_side_off",
+     "E": 0
     }
    ]
   },
@@ -568,23 +612,27 @@
      "at": [
       -1,
       0
-     ]
+     ],
+     "E": 0
     },
     {
      "select": {
       "palette": "GLASS"
      },
-     "like": "blocks/glass"
+     "like": "blocks/glass",
+     "E": 0
     },
     {
      "select": {
       "palette": "GOLD"
      },
-     "like": "blocks/gold_block"
+     "like": "blocks/gold_block",
+     "E": 0
     },
     {
      "select": "rest",
-     "like": "blocks/vault_side_off"
+     "like": "blocks/vault_side_off",
+     "E": 0
     }
    ]
   },
@@ -603,29 +651,34 @@
      "at": [
       -1,
       0
-     ]
+     ],
+     "E": 0
     },
     {
      "select": {
       "palette": "GLASS"
      },
-     "like": "blocks/glass"
+     "like": "blocks/glass",
+     "E": 0
     },
     {
      "select": {
       "palette": "GOLD"
      },
-     "like": "blocks/gold_block"
+     "like": "blocks/gold_block",
+     "E": 0
     },
     {
      "select": {
       "palette": "EMERALD"
      },
-     "like": "blocks/emerald_block"
+     "like": "blocks/emerald_block",
+     "E": 0
     },
     {
      "select": "rest",
-     "like": "blocks/vault_side_off"
+     "like": "blocks/vault_side_off",
+     "E": 0
     }
    ]
   },
@@ -644,23 +697,27 @@
      "at": [
       -1,
       0
-     ]
+     ],
+     "E": 0
     },
     {
      "select": {
       "palette": "GLASS"
      },
-     "like": "blocks/glass"
+     "like": "blocks/glass",
+     "E": 0
     },
     {
      "select": {
       "palette": "GOLD"
      },
-     "like": "blocks/gold_block"
+     "like": "blocks/gold_block",
+     "E": 0
     },
     {
      "select": "rest",
-     "like": "blocks/vault_side_off"
+     "like": "blocks/vault_side_off",
+     "E": 0
     }
    ]
   },
@@ -679,29 +736,34 @@
      "at": [
       -1,
       0
-     ]
+     ],
+     "E": 0
     },
     {
      "select": {
       "palette": "GLASS"
      },
-     "like": "blocks/glass"
+     "like": "blocks/glass",
+     "E": 0
     },
     {
      "select": {
       "palette": "GOLD"
      },
-     "like": "blocks/gold_block"
+     "like": "blocks/gold_block",
+     "E": 0
     },
     {
      "select": {
       "palette": "EMERALD"
      },
-     "like": "blocks/emerald_block"
+     "like": "blocks/emerald_block",
+     "E": 0
     },
     {
      "select": "rest",
-     "like": "blocks/vault_side_off"
+     "like": "blocks/vault_side_off",
+     "E": 0
     }
    ]
   },
@@ -721,23 +783,27 @@
       0,
       0
      ],
-     "match": "alpha"
+     "match": "alpha",
+     "E": 0
     },
     {
      "select": {
       "palette": "GLASS"
      },
-     "like": "blocks/glass"
+     "like": "blocks/glass",
+     "E": 0
     },
     {
      "select": {
       "palette": "GOLD"
      },
-     "like": "blocks/gold_block"
+     "like": "blocks/gold_block",
+     "E": 0
     },
     {
      "select": "rest",
-     "like": "blocks/vault_side_off"
+     "like": "blocks/vault_side_off",
+     "E": 0
     }
    ]
   },
@@ -757,29 +823,34 @@
       0,
       0
      ],
-     "match": "alpha"
+     "match": "alpha",
+     "E": 0
     },
     {
      "select": {
       "palette": "GLASS"
      },
-     "like": "blocks/glass"
+     "like": "blocks/glass",
+     "E": 0
     },
     {
      "select": {
       "palette": "GOLD"
      },
-     "like": "blocks/gold_block"
+     "like": "blocks/gold_block",
+     "E": 0
     },
     {
      "select": {
       "palette": "EMERALD"
      },
-     "like": "blocks/emerald_block"
+     "like": "blocks/emerald_block",
+     "E": 0
     },
     {
      "select": "rest",
-     "like": "blocks/vault_side_off"
+     "like": "blocks/vault_side_off",
+     "E": 0
     }
    ]
   },
@@ -798,23 +869,27 @@
      "at": [
       0,
       0
-     ]
+     ],
+     "E": 0
     },
     {
      "select": {
       "palette": "GLASS"
      },
-     "like": "blocks/glass"
+     "like": "blocks/glass",
+     "E": 0
     },
     {
      "select": {
       "palette": "GOLD"
      },
-     "like": "blocks/gold_block"
+     "like": "blocks/gold_block",
+     "E": 0
     },
     {
      "select": "rest",
-     "like": "blocks/vault_side_off"
+     "like": "blocks/vault_side_off",
+     "E": 0
     }
    ]
   },
@@ -833,29 +908,34 @@
      "at": [
       0,
       0
-     ]
+     ],
+     "E": 0
     },
     {
      "select": {
       "palette": "GLASS"
      },
-     "like": "blocks/glass"
+     "like": "blocks/glass",
+     "E": 0
     },
     {
      "select": {
       "palette": "GOLD"
      },
-     "like": "blocks/gold_block"
+     "like": "blocks/gold_block",
+     "E": 0
     },
     {
      "select": {
       "palette": "EMERALD"
      },
-     "like": "blocks/emerald_block"
+     "like": "blocks/emerald_block",
+     "E": 0
     },
     {
      "select": "rest",
-     "like": "blocks/vault_side_off"
+     "like": "blocks/vault_side_off",
+     "E": 0
     }
    ]
   },
@@ -874,23 +954,27 @@
      "at": [
       0,
       0
-     ]
+     ],
+     "E": 0
     },
     {
      "select": {
       "palette": "GLASS"
      },
-     "like": "blocks/glass"
+     "like": "blocks/glass",
+     "E": 0
     },
     {
      "select": {
       "palette": "GOLD"
      },
-     "like": "blocks/gold_block"
+     "like": "blocks/gold_block",
+     "E": 0
     },
     {
      "select": "rest",
-     "like": "blocks/vault_side_off"
+     "like": "blocks/vault_side_off",
+     "E": 0
     }
    ]
   },
@@ -909,29 +993,34 @@
      "at": [
       0,
       0
-     ]
+     ],
+     "E": 0
     },
     {
      "select": {
       "palette": "GLASS"
      },
-     "like": "blocks/glass"
+     "like": "blocks/glass",
+     "E": 0
     },
     {
      "select": {
       "palette": "GOLD"
      },
-     "like": "blocks/gold_block"
+     "like": "blocks/gold_block",
+     "E": 0
     },
     {
      "select": {
       "palette": "EMERALD"
      },
-     "like": "blocks/emerald_block"
+     "like": "blocks/emerald_block",
+     "E": 0
     },
     {
      "select": "rest",
-     "like": "blocks/vault_side_off"
+     "like": "blocks/vault_side_off",
+     "E": 0
     }
    ]
   },
@@ -950,23 +1039,27 @@
      "at": [
       0,
       0
-     ]
+     ],
+     "E": 0
     },
     {
      "select": {
       "palette": "GLASS"
      },
-     "like": "blocks/glass"
+     "like": "blocks/glass",
+     "E": 0
     },
     {
      "select": {
       "palette": "GOLD"
      },
-     "like": "blocks/gold_block"
+     "like": "blocks/gold_block",
+     "E": 0
     },
     {
      "select": "rest",
-     "like": "blocks/vault_side_off"
+     "like": "blocks/vault_side_off",
+     "E": 0
     }
    ]
   },
@@ -985,29 +1078,34 @@
      "at": [
       0,
       0
-     ]
+     ],
+     "E": 0
     },
     {
      "select": {
       "palette": "GLASS"
      },
-     "like": "blocks/glass"
+     "like": "blocks/glass",
+     "E": 0
     },
     {
      "select": {
       "palette": "GOLD"
      },
-     "like": "blocks/gold_block"
+     "like": "blocks/gold_block",
+     "E": 0
     },
     {
      "select": {
       "palette": "EMERALD"
      },
-     "like": "blocks/emerald_block"
+     "like": "blocks/emerald_block",
+     "E": 0
     },
     {
      "select": "rest",
-     "like": "blocks/vault_side_off"
+     "like": "blocks/vault_side_off",
+     "E": 0
     }
    ]
   },
@@ -1026,23 +1124,27 @@
      "at": [
       0,
       0
-     ]
+     ],
+     "E": 0
     },
     {
      "select": {
       "palette": "GLASS"
      },
-     "like": "blocks/glass"
+     "like": "blocks/glass",
+     "E": 0
     },
     {
      "select": {
       "palette": "GOLD"
      },
-     "like": "blocks/gold_block"
+     "like": "blocks/gold_block",
+     "E": 0
     },
     {
      "select": "rest",
-     "like": "blocks/vault_side_off"
+     "like": "blocks/vault_side_off",
+     "E": 0
     }
    ]
   },
@@ -1061,29 +1163,34 @@
      "at": [
       0,
       0
-     ]
+     ],
+     "E": 0
     },
     {
      "select": {
       "palette": "GLASS"
      },
-     "like": "blocks/glass"
+     "like": "blocks/glass",
+     "E": 0
     },
     {
      "select": {
       "palette": "GOLD"
      },
-     "like": "blocks/gold_block"
+     "like": "blocks/gold_block",
+     "E": 0
     },
     {
      "select": {
       "palette": "EMERALD"
      },
-     "like": "blocks/emerald_block"
+     "like": "blocks/emerald_block",
+     "E": 0
     },
     {
      "select": "rest",
-     "like": "blocks/vault_side_off"
+     "like": "blocks/vault_side_off",
+     "E": 0
     }
    ]
   },
@@ -1102,23 +1209,27 @@
      "at": [
       0,
       0
-     ]
+     ],
+     "E": 0
     },
     {
      "select": {
       "palette": "GLASS"
      },
-     "like": "blocks/glass"
+     "like": "blocks/glass",
+     "E": 0
     },
     {
      "select": {
       "palette": "GOLD"
      },
-     "like": "blocks/gold_block"
+     "like": "blocks/gold_block",
+     "E": 0
     },
     {
      "select": "rest",
-     "like": "blocks/vault_side_off"
+     "like": "blocks/vault_side_off",
+     "E": 0
     }
    ]
   },
@@ -1137,29 +1248,34 @@
      "at": [
       0,
       0
-     ]
+     ],
+     "E": 0
     },
     {
      "select": {
       "palette": "GLASS"
      },
-     "like": "blocks/glass"
+     "like": "blocks/glass",
+     "E": 0
     },
     {
      "select": {
       "palette": "GOLD"
      },
-     "like": "blocks/gold_block"
+     "like": "blocks/gold_block",
+     "E": 0
     },
     {
      "select": {
       "palette": "EMERALD"
      },
-     "like": "blocks/emerald_block"
+     "like": "blocks/emerald_block",
+     "E": 0
     },
     {
      "select": "rest",
-     "like": "blocks/vault_side_off"
+     "like": "blocks/vault_side_off",
+     "E": 0
     }
    ]
   },
@@ -1178,23 +1294,27 @@
      "at": [
       0,
       0
-     ]
+     ],
+     "E": 0
     },
     {
      "select": {
       "palette": "GLASS"
      },
-     "like": "blocks/glass"
+     "like": "blocks/glass",
+     "E": 0
     },
     {
      "select": {
       "palette": "GOLD"
      },
-     "like": "blocks/gold_block"
+     "like": "blocks/gold_block",
+     "E": 0
     },
     {
      "select": "rest",
-     "like": "blocks/vault_side_off"
+     "like": "blocks/vault_side_off",
+     "E": 0
     }
    ]
   },
@@ -1213,23 +1333,27 @@
      "at": [
       0,
       0
-     ]
+     ],
+     "E": 0
     },
     {
      "select": {
       "palette": "GOLD"
      },
-     "like": "blocks/gold_block"
+     "like": "blocks/gold_block",
+     "E": 0
     },
     {
      "select": {
       "palette": "EMERALD"
      },
-     "like": "blocks/emerald_block"
+     "like": "blocks/emerald_block",
+     "E": 0
     },
     {
      "select": "rest",
-     "like": "blocks/vault_side_off"
+     "like": "blocks/vault_side_off",
+     "E": 0
     }
    ]
   },
@@ -1239,23 +1363,27 @@
      "select": {
       "palette": "GLASS"
      },
-     "like": "blocks/glass"
+     "like": "blocks/glass",
+     "E": 0
     },
     {
      "select": {
       "palette": "GOLD"
      },
-     "like": "blocks/gold_block"
+     "like": "blocks/gold_block",
+     "E": 0
     },
     {
      "select": {
       "palette": "STEEL"
      },
-     "like": "blocks/vault_side_off"
+     "like": "blocks/vault_side_off",
+     "E": 0
     },
     {
      "select": "rest",
-     "like": "items/shulker_shell"
+     "like": "items/shulker_shell",
+     "E": 0
     }
    ]
   },
@@ -1265,29 +1393,34 @@
      "select": {
       "palette": "GLASS"
      },
-     "like": "blocks/glass"
+     "like": "blocks/glass",
+     "E": 0
     },
     {
      "select": {
       "palette": "GOLD"
      },
-     "like": "blocks/gold_block"
+     "like": "blocks/gold_block",
+     "E": 0
     },
     {
      "select": {
       "palette": "EMERALD"
      },
-     "like": "blocks/emerald_block"
+     "like": "blocks/emerald_block",
+     "E": 0
     },
     {
      "select": {
       "palette": "STEEL"
      },
-     "like": "blocks/vault_side_off"
+     "like": "blocks/vault_side_off",
+     "E": 0
     },
     {
      "select": "rest",
-     "like": "items/shulker_shell"
+     "like": "items/shulker_shell",
+     "E": 0
     }
    ]
   },
@@ -1306,23 +1439,27 @@
      "at": [
       0,
       0
-     ]
+     ],
+     "E": 0
     },
     {
      "select": {
       "palette": "GLASS"
      },
-     "like": "blocks/glass"
+     "like": "blocks/glass",
+     "E": 0
     },
     {
      "select": {
       "palette": "GOLD"
      },
-     "like": "blocks/gold_block"
+     "like": "blocks/gold_block",
+     "E": 0
     },
     {
      "select": "rest",
-     "like": "blocks/vault_side_off"
+     "like": "blocks/vault_side_off",
+     "E": 0
     }
    ]
   },
@@ -1341,29 +1478,34 @@
      "at": [
       0,
       0
-     ]
+     ],
+     "E": 0
     },
     {
      "select": {
       "palette": "GLASS"
      },
-     "like": "blocks/glass"
+     "like": "blocks/glass",
+     "E": 0
     },
     {
      "select": {
       "palette": "GOLD"
      },
-     "like": "blocks/gold_block"
+     "like": "blocks/gold_block",
+     "E": 0
     },
     {
      "select": {
       "palette": "EMERALD"
      },
-     "like": "blocks/emerald_block"
+     "like": "blocks/emerald_block",
+     "E": 0
     },
     {
      "select": "rest",
-     "like": "blocks/vault_side_off"
+     "like": "blocks/vault_side_off",
+     "E": 0
     }
    ]
   },
@@ -1382,23 +1524,27 @@
      "at": [
       -1,
       0
-     ]
+     ],
+     "E": 0
     },
     {
      "select": {
       "palette": "GLASS"
      },
-     "like": "blocks/glass"
+     "like": "blocks/glass",
+     "E": 0
     },
     {
      "select": {
       "palette": "GOLD"
      },
-     "like": "blocks/gold_block"
+     "like": "blocks/gold_block",
+     "E": 0
     },
     {
      "select": "rest",
-     "like": "blocks/vault_side_off"
+     "like": "blocks/vault_side_off",
+     "E": 0
     }
    ]
   },
@@ -1417,29 +1563,34 @@
      "at": [
       -1,
       0
-     ]
+     ],
+     "E": 0
     },
     {
      "select": {
       "palette": "GLASS"
      },
-     "like": "blocks/glass"
+     "like": "blocks/glass",
+     "E": 0
     },
     {
      "select": {
       "palette": "GOLD"
      },
-     "like": "blocks/gold_block"
+     "like": "blocks/gold_block",
+     "E": 0
     },
     {
      "select": {
       "palette": "EMERALD"
      },
-     "like": "blocks/emerald_block"
+     "like": "blocks/emerald_block",
+     "E": 0
     },
     {
      "select": "rest",
-     "like": "blocks/vault_side_off"
+     "like": "blocks/vault_side_off",
+     "E": 0
     }
    ]
   },
@@ -1458,23 +1609,27 @@
      "at": [
       -1,
       0
-     ]
+     ],
+     "E": 0
     },
     {
      "select": {
       "palette": "GLASS"
      },
-     "like": "blocks/glass"
+     "like": "blocks/glass",
+     "E": 0
     },
     {
      "select": {
       "palette": "GOLD"
      },
-     "like": "blocks/gold_block"
+     "like": "blocks/gold_block",
+     "E": 0
     },
     {
      "select": "rest",
-     "like": "blocks/vault_side_off"
+     "like": "blocks/vault_side_off",
+     "E": 0
     }
    ]
   },
@@ -1493,29 +1648,34 @@
      "at": [
       -1,
       0
-     ]
+     ],
+     "E": 0
     },
     {
      "select": {
       "palette": "GLASS"
      },
-     "like": "blocks/glass"
+     "like": "blocks/glass",
+     "E": 0
     },
     {
      "select": {
       "palette": "GOLD"
      },
-     "like": "blocks/gold_block"
+     "like": "blocks/gold_block",
+     "E": 0
     },
     {
      "select": {
       "palette": "EMERALD"
      },
-     "like": "blocks/emerald_block"
+     "like": "blocks/emerald_block",
+     "E": 0
     },
     {
      "select": "rest",
-     "like": "blocks/vault_side_off"
+     "like": "blocks/vault_side_off",
+     "E": 0
     }
    ]
   },
@@ -1534,23 +1694,27 @@
      "at": [
       0,
       0
-     ]
+     ],
+     "E": 0
     },
     {
      "select": {
       "palette": "GLASS"
      },
-     "like": "blocks/glass"
+     "like": "blocks/glass",
+     "E": 0
     },
     {
      "select": {
       "palette": "GOLD"
      },
-     "like": "blocks/gold_block"
+     "like": "blocks/gold_block",
+     "E": 0
     },
     {
      "select": "rest",
-     "like": "blocks/vault_side_off"
+     "like": "blocks/vault_side_off",
+     "E": 0
     }
    ]
   },
@@ -1569,29 +1733,34 @@
      "at": [
       0,
       0
-     ]
+     ],
+     "E": 0
     },
     {
      "select": {
       "palette": "GLASS"
      },
-     "like": "blocks/glass"
+     "like": "blocks/glass",
+     "E": 0
     },
     {
      "select": {
       "palette": "GOLD"
      },
-     "like": "blocks/gold_block"
+     "like": "blocks/gold_block",
+     "E": 0
     },
     {
      "select": {
       "palette": "EMERALD"
      },
-     "like": "blocks/emerald_block"
+     "like": "blocks/emerald_block",
+     "E": 0
     },
     {
      "select": "rest",
-     "like": "blocks/vault_side_off"
+     "like": "blocks/vault_side_off",
+     "E": 0
     }
    ]
   },
